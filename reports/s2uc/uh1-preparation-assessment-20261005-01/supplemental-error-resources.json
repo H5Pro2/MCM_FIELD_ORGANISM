@@ -1,0 +1,67 @@
+{
+  "constructor_peak": 3617,
+  "cases": [
+    {
+      "method": "vector",
+      "phase": 1,
+      "cleanup": true,
+      "own_heap_peak": 5535
+    },
+    {
+      "method": "vector",
+      "phase": 2,
+      "cleanup": true,
+      "own_heap_peak": 5193
+    },
+    {
+      "method": "vector",
+      "phase": 3,
+      "cleanup": true,
+      "own_heap_peak": 5193
+    },
+    {
+      "method": "vector",
+      "phase": 4,
+      "cleanup": true,
+      "own_heap_peak": 5193
+    },
+    {
+      "method": "copy",
+      "phase": 2,
+      "cleanup": true,
+      "own_heap_peak": 5193
+    },
+    {
+      "method": "copy",
+      "phase": 3,
+      "cleanup": true,
+      "own_heap_peak": 5193
+    },
+    {
+      "method": "put",
+      "phase": 1,
+      "cleanup": true,
+      "own_heap_peak": 5481
+    },
+    {
+      "method": "put",
+      "phase": 2,
+      "cleanup": true,
+      "own_heap_peak": 5481
+    },
+    {
+      "method": "put",
+      "phase": 3,
+      "cleanup": true,
+      "own_heap_peak": 5193
+    },
+    {
+      "method": "put",
+      "phase": 4,
+      "cleanup": true,
+      "own_heap_peak": 5481
+    }
+  ],
+  "research_replays": 0,
+  "full_size_runs": 0
+}

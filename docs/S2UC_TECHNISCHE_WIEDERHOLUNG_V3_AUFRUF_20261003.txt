@@ -1,0 +1,36 @@
+V3: qualifizierter Sample-Blattbeobachter in separater V2-Ausfuehrungshuelle.
+
+Vorbereitung: C:/Python314/python.exe -m tools.s2uc_repeat_prepare_v3 prepare
+Einmalige neutrale Integration: C:/Python314/python.exe -m tools.s2uc_repeat_prepare_v3 qualify
+
+Genau N1/N2 x U/M/E/K/P x80 gespeicherte JSON-Positionen. Keine Rastermaterialisierung.
+Der echte worker ruft dieselbe execute-Huelle und denselben eingefrorenen Engine-Code
+auf wie ein spaeterer technischer Wiederholungslauf. Nur Quellenlieferant,
+Quellenvalidator und neutraler Zwei-Fall-Aggregator werden nach Zielpfad gewaehlt.
+Originale Einzelbelegpruefung bleibt aktiv. Keine Test-/Mock-Dispatchrahmen im Replay.
+patch.object tauscht die Observer-Methode vor dem Aufruf aus; es ist kein Mock-Wrapper.
+Vollstaendige bisherige Traceabdeckung einschliesslich unveraenderter originaler
+Ausnahme fuer die isolierte Heapmessung; U verwendet seinen bisherigen Meter.
+
+900s gesamte neutrale Qualifikation,16MiB neue Belege inklusive Code und Dokumenten.
+15MiB hartes Ledger-Budget fuer den Worker,1MiB fuer Vorbereitung/Abschluss reserviert.
+V2-Watchdog unveraendert uebernommen; historische Normal-/Abbruch-/Fehlernachweise
+werden durch AST-Gleichheit und Bindungen uebernommen, nicht erneut ausgefuehrt.
+Quellenverarbeitung,Replay je Arm (Wall/CPU),Einzelbelegpruefung,Export separat.
+Tatsaechlicher Workerabschluss mit Prozessende,Dateiinventar,Abschlussdatei und Hash
+im lifecycle.jsonl. Eigener letzter Zeitmarker kann seinen Schreibvorgang nicht messen.
+
+Einziger Laufzeitplan: pro Baselinearm der langsamere direkt integrierte N1/N2-Wert
+mal32 Faelle mal1,25; alle Faelle mit80 statt teils48 Positionen angesetzt.
+Unveraenderte Zuschlaege:180s Administration,30s U,60s Abschluss.
+Historische Zeiten bleiben Vergleich,keine verkettete Beschleunigungshochrechnung.
+time_reserve_demonstrated=false im geerbten Autorisierungsformat behauptet weiterhin
+keinen bewiesenen Worst Case; praktische Empfehlung und Planung stehen in time-plan.json.
+
+Raster32 bleibt geschlossen/global NOT_EVALUABLE. Keine Verschmelzung alter/neuer Arme.
+KEINE operative Autorisierung in diesem Paket. Nach gesonderter ausdruecklicher
+Freigabe kann die erzeugte PENDING-Vorlage als neue separate Datei mit exakt
+status AUTHORIZED_ONCE vorgelegt werden. Erst dann:
+C:/Python314/python.exe -m tools.s2uc_repeat_prepare_v3 run --authorization <separate-Datei>
+Bestehendes Zielverzeichnis sperrt Wiederholung. Gesamt3600s,Worker3540s,Abschluss60s.
+Keine automatische Fortsetzung und keine weitere Optimierungsserie.

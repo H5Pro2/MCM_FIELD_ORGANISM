@@ -1,0 +1,74 @@
+"""Fixed source descriptions; research materialization only inside authorized worker."""
+import hashlib
+import json
+from pathlib import Path
+from tools.s2uc_t1_prepare_v2 import decode, restore, encode
+from tools._s2uc_ema_stock_observer import digest
+
+ROOT=Path(__file__).resolve().parents[1]
+OLD=ROOT/'reports/s2uc/t1-transfer-20261003-02'
+SEQUENCES=(
+ 'A B A C A B A C A B A C A B A C',
+ 'A B B C A B B C A B B C A B B C',
+ 'A D E E C B A D E E C B A D E E',
+ 'A B C D E F A B C D E F A B C D',
+ 'A A B A A C A A B A A C A A B A',
+ 'A B A B A B A B A B A B A B A B',
+ 'A D F D E F A D F D E F A D F D',
+ 'A A B B C C A A B B C C A A B B')
+BLOCKS=dict(A=[0,1,2,3],B=[4,5,6,7],C=[8,9,10,11],D=[0,1,2,12],E=[0,1,0,14],F=[0,1,2,15])
+
+
+def read(p):return json.loads(Path(p).read_text(encoding='utf-8'))
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+
+
+def plan():
+    manifest=read(OLD/'manifest.json');cases=[]
+    for entry in manifest['entries']:
+        s=entry['spec']
+        cases.append(s|dict(group='T1',source=dict(kind='SAVED_T1',
+            values_path=(OLD/entry['source_file']).relative_to(ROOT).as_posix(),values_sha256=entry['source_sha256'],
+            provenance_path=(OLD/entry['provenance_file']).relative_to(ROOT).as_posix(),provenance_sha256=entry['provenance_sha256'],profile=entry['profile']),
+            diagnosis_targets=[t for p in s['phases'][1:] if not p['negative_control'] for t in p['targets']]))
+    for i,seq in enumerate(SEQUENCES,1):
+        cases.append(dict(id=f'F{i}',group='F',frames=64,phases=[],stable=False,replicate=None,diagnosis_targets=[],
+            masks=dict(G=list(range(3,64,2)),G_w=[]),source=dict(kind='FORMULA',blocks=seq.split(),
+                block_indices=BLOCKS,formula='1/2+(i+1)/128+j/8192',width=48)))
+    assert len(cases)==24 and sum(len(s['diagnosis_targets']) for s in cases)==324
+    return dict(cases=cases,arms=['U','K1'],source_positions=1792,admissions=3584,reference_advances=3584,
+        targets=872,limits=dict(total_seconds=3600,worker_seconds=3540,closure_seconds=60,export_bytes=64*1048576,
+        preparation_bytes=8*1048576,closure_reserve=1048576,original_frames=18,outputs=2,combined=20,bank=416,
+        additional_heap=16384,receipt=16384,utf8=32768),criteria=dict(mechanism='T1_MODAL_WARM_STRICT_624',
+        benefit='T1_STRICT_AND_F_NONWORSE_AND_ALL24_STRICT',damage='ALL_CASE_DELTA_LE_1/32_AND_T1_GW_NONWORSE',
+        adaptation=dict(total=26,denominator=52,per_group=4,group_denominator=13,negative_controls=20)),
+        scope='KNOWN_DEVELOPMENT_ONLY',F_materialization='AUTHORIZED_WORKER_ONLY')
+
+
+def materialize(spec, *, authorized=False, neutral=False):
+    if neutral:
+        # Substitute data, never call the F formula or decode a research source.
+        patterns=((0,0,0,1)*2+(0,0,0,2)*2+(0,0,0,3)*2+(4,5,6,7)*2,
+                  (0,1,2,3,0,1,2,12,0,1,0,14), (0,1,0,1)*2+(0,1,2,3)+(0,1,0,1)*2)
+        p=patterns[sum(spec['id'].encode())%3]
+        values=[[.1875+(p[i%len(p)]+1)/512+j/131072 for j in range(48)] for i in range(spec['frames'])]
+        return dict(values=values,modal=values,neutral_only=True)
+    if not authorized:raise PermissionError('RESEARCH_SOURCE_NOT_AUTHORIZED')
+    src=spec['source']
+    if src['kind']=='SAVED_T1':
+        for kind in ('values','provenance'):
+            if sha(ROOT/src[kind+'_path'])!=src[kind+'_sha256']:raise ValueError('SAVED_SOURCE_CHANGED')
+        bundle=restore(decode(read(ROOT/src['values_path'])),read(ROOT/src['provenance_path']))
+        if digest(bundle['values'])!=src['profile']:raise ValueError('SAVED_PROFILE_CHANGED')
+        return bundle
+    if src['kind']!='FORMULA':raise ValueError('SOURCE_KIND')
+    values=[[.5+(i+1)/128+j/8192 for j in range(48)] for b in src['blocks'] for i in src['block_indices'][b]]
+    return dict(values=values,modal=values,neutral_only=False)
+
+
+def record(bundle):
+    return dict(values=encode(bundle['values']),modal=bundle['modal'],neutral_only=bundle.get('neutral_only',False))
+
+
+def restore_record(raw):
+    return dict(values=decode(raw['values']),modal=raw['modal'],neutral_only=raw['neutral_only'])

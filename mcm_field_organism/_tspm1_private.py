@@ -20,6 +20,7 @@ from ._ppb1_reference import (
     PPB1StepResult,
     _validate_state as _validate_ppb1_state,
     advance_ppb1_bank,
+    advance_ppb1_bank_identity_preserving,
     initial_ppb1_bank_state,
     normalized_mean_l1_distance,
 )
@@ -33,6 +34,8 @@ from .receptor_contract import technical_identifier
 TSPM1_SCHEMA_VERSION = "tspm1.private.v1"
 TSPM1_HALF_SCHEMA = "tspm1.private.audio-half.v2"
 HISTORICAL_RANK = "historical-joint-rank.v1"
+PPB_UPDATE_HISTORICAL = "historical.v1"
+PPB_UPDATE_IDENTITY_PRESERVING = "identity-preserving.v1"
 HALF_RANK = "audio-half-historical-joint-rank.v2"
 TSPM1_ARCHITECTURE_ID = "tspm1"
 TSPM1_S2DE_CONTRACT_DIGEST = (
@@ -2145,6 +2148,8 @@ class TSPM1StepResult:
     receipt: TSPM1TransitionReceipt
     owner_poststate: TSPM1CoordinatorOwnerSnapshot
     result_digest: str
+    auditory_ppb1_readout: PPB1Readout | None = None
+    visual_ppb1_readout: PPB1Readout | None = None
 
     def __post_init__(self) -> None:
         if (
@@ -2164,6 +2169,16 @@ class TSPM1StepResult:
             or self.receipt.composite_poststate_digest
             != self.poststate.composite_state_digest
             or self.result_digest != _digest(self.payload_without_digest())
+            or (
+                self.auditory_ppb1_readout is not None
+                and self.auditory_ppb1_readout.digest()
+                != self.receipt.auditory_ppb1_readout_digest
+            )
+            or (
+                self.visual_ppb1_readout is not None
+                and self.visual_ppb1_readout.digest()
+                != self.receipt.visual_ppb1_readout_digest
+            )
         ):
             raise TSPM1Error(
                 TSPM1_ATOMIC_RESULT_REQUIRED,
@@ -2428,6 +2443,7 @@ class TSPM1CoordinatorOwner:
         authorized_config_binding_digest: str,
         authorized_composite_prestate_digest: str,
         authorized_exposure_digest: str,
+        ppb_update_mode: str = PPB_UPDATE_HISTORICAL,
     ) -> None:
         self._owner_id = _identifier(owner_id, "owner_id", TSPM1_INVALID_TYPE_OR_SCHEMA)
         self._authorization_id = _identifier(
@@ -2450,11 +2466,20 @@ class TSPM1CoordinatorOwner:
                 TSPM1_OWNER_AUTHORIZATION_MISMATCH,
                 "owner authorization requires three digests",
             )
+        if ppb_update_mode not in {
+            PPB_UPDATE_HISTORICAL,
+            PPB_UPDATE_IDENTITY_PRESERVING,
+        }:
+            raise TSPM1Error(
+                TSPM1_INVALID_TYPE_OR_SCHEMA,
+                "unknown PPB update mode",
+            )
         self._authorized_config_binding_digest = authorized_config_binding_digest
         self._authorized_composite_prestate_digest = (
             authorized_composite_prestate_digest
         )
         self._authorized_exposure_digest = authorized_exposure_digest
+        self._ppb_update_mode = ppb_update_mode
         self._status = "AUTHORIZED"
         self._attempt_count = 0
         self._use_count = 0
@@ -2536,12 +2561,17 @@ class TSPM1CoordinatorOwner:
                 auditory_result = None
                 visual_result = None
                 if candidate.consolidation_eligible:
-                    auditory_result = advance_ppb1_bank(
+                    advance_ppb = (
+                        advance_ppb1_bank_identity_preserving
+                        if self._ppb_update_mode == PPB_UPDATE_IDENTITY_PRESERVING
+                        else advance_ppb1_bank
+                    )
+                    auditory_result = advance_ppb(
                         binding.profile.auditory_config,
                         state.auditory_ppb1_state,
                         exposure.auditory.timed_frame.frame,
                     )
-                    visual_result = advance_ppb1_bank(
+                    visual_result = advance_ppb(
                         binding.profile.visual_config,
                         state.visual_ppb1_state,
                         exposure.visual.timed_frame.frame,
@@ -2682,6 +2712,8 @@ class TSPM1CoordinatorOwner:
                     receipt,
                     owner_poststate,
                     result_digest,
+                    auditory_readout,
+                    visual_readout,
                 )
                 return _validate_step_result_relations(
                     binding,

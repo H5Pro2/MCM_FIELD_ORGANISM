@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "operative_version": "V4 assessment repair; identical V3 worker/engine/observer/gates",
+  "binding_sha256": "121cb259d4747949722a332c8f4f9f04e8fdfee05a8c7eb235da7de48513cae2",
+  "new_tests": [
+    "J01",
+    "J02",
+    "J03",
+    "J04",
+    "J05",
+    "J06",
+    "J07"
+  ],
+  "new_tests_passed": 7,
+  "reused_tests": [
+    "V01-V08",
+    "S01-S10",
+    "V2 I01-I07",
+    "Raster32 R01-R25"
+  ],
+  "new_replays": 10,
+  "positions": 800,
+  "reference_advances": 800,
+  "functional_equal": 10,
+  "structural_resources_equal": 10,
+  "full_resource_equal": 5,
+  "max_heap": 5184,
+  "baseline_maxima": {
+    "frame_peak": 12,
+    "output_slots_peak": 2,
+    "combined_peak": 13,
+    "receipt_bytes_peak": 454,
+    "receipt_transient_utf8_bytes_peak": 908,
+    "transient_reference_frames_peak": 12
+  },
+  "U_maxima": {
+    "original_frames_upper_bound": 12,
+    "combined_upper_bound": 14,
+    "packed": 416,
+    "receipt_bytes_peak": 752,
+    "utf8_upper": 1504
+  },
+  "timings": {
+    "phases_wall_seconds": {
+      "U_replay": 0.205507,
+      "aggregation": 1.12e-05,
+      "baseline_replay": 104.6419077,
+      "case_assessment": 0.6292292,
+      "export": 0.0646481,
+      "manifest": 0.0061535,
+      "materialization": 0.0022832,
+      "resource_check": 4.99e-05,
+      "source_hash": 0.0292909,
+      "source_read": 0.0022992,
+      "source_validation": 0.0082503
+    },
+    "source_processing_seconds": 0.0482771,
+    "worker_lifecycle_seconds": 106.3078658,
+    "engine_seconds": 105.5968454,
+    "worker_closure_seconds": 0.2421543,
+    "matrix_complete_seconds": 106.5507086,
+    "qualification_including_assessment_repair_seconds": 324.3738864,
+    "comparison_seconds": 0.0667948,
+    "unclassified_engine_seconds": 0.007215200000004529
+  },
+  "plan": {
+    "assumptions": [
+      "All32 cases charged80 positions, including16 actual48-position cases",
+      "Each baseline uses its slower N1/N2 direct integrated wall time, then25percent allowance",
+      "U charged30 seconds; direct32-case maximum extrapolation recorded separately",
+      "Administration180 seconds includes input/hash, evidence, export, binding verification, process overhead",
+      "One planning approach; no chained speed ratios and no selection between models"
+    ],
+    "checks": {
+      "U_extrapolation_seconds": 3.6603136
+    },
+    "consequence": "Recommend separately authorized technical repeat only if margin positive; unchanged3540s worker deadline and60s closure. A timeout yields incomplete technical evidence, never a completed original evaluation.",
+    "extrapolation": {
+      "U_seconds": 30,
+      "administration_seconds": 180,
+      "baseline_seconds": 2439.087488,
+      "closure_seconds": 60,
+      "contingency_factor": 1.25,
+      "limit": 3600,
+      "reserve_seconds": 890.9125119999999,
+      "total_seconds": 2709.087488
+    },
+    "historical_comparison": {
+      "old_v2_projection_seconds": 6330.087716,
+      "original_run_seconds": 3602.419874,
+      "relevance": "Historical timings include the old Sample traversal and/or test/mock stack overhead. Retained as context, not multiplied by neutral speed ratios. Frozen policy/source and old NOT_EVALUABLE verdict unchanged."
+    },
+    "measurement": {
+      "per_arm_maximum_80_positions_seconds": {
+        "E": 15.4645643,
+        "K": 14.7776805,
+        "M": 15.8223801,
+        "P": 14.9125623,
+        "U": 0.1143848
+      }
+    },
+    "recommendation": "SEPARATE_TECHNICAL_REPEAT_RECOMMENDED",
+    "status": "FEASIBLE_WITH_HARD_STOP",
+    "uncertainty": "Neutral N1/N2 do not prove a worst-case bound for every known contextual trajectory or host load;25percent plus full80 charging and remaining margin are planning safeguards, not a guarantee."
+  },
+  "pending_gate_result": "EXPLICIT_SEPARATE_AUTHORIZATION_REQUIRED",
+  "preparation_reference_bytes": 5461852,
+  "preparation_reference_limit": 8388608,
+  "raw_failure_preserved": "reports\\s2uc\\technical-repeat-preparation-20261003-03\\closure.json",
+  "raster_executed": false,
+  "raster_status": "NOT_EVALUABLE"
+}

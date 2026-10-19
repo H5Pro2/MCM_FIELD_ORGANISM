@@ -1,0 +1,1145 @@
+{
+  "R0": {
+    "rows": {
+      "exact_retrieval": {
+        "case_id": "R0",
+        "target": 11,
+        "positive": true,
+        "origin_category": "CORRECT",
+        "assigned_root": "AN-EVAL/A",
+        "true_root": "AN-EVAL/A",
+        "role": "retained",
+        "assignment_covered": true,
+        "correct_rejection": false,
+        "prediction_status": "PREDICTED_RETAINED",
+        "context_covered": true,
+        "persistence_mae": 0.0018343037947557322,
+        "context_mae": 0.0,
+        "paired_delta": 0.0018343037947557322,
+        "observer_hybrid_mae": 0.0,
+        "full_delta": 0.0018343037947557322
+      },
+      "signal_approx_retrieval": {
+        "case_id": "R0",
+        "target": 11,
+        "positive": true,
+        "origin_category": "CORRECT",
+        "assigned_root": "AN-EVAL/A",
+        "true_root": "AN-EVAL/A",
+        "role": "retained",
+        "assignment_covered": true,
+        "correct_rejection": false,
+        "prediction_status": "PREDICTED_RETAINED",
+        "context_covered": true,
+        "persistence_mae": 0.0018343037947557322,
+        "context_mae": 0.0,
+        "paired_delta": 0.0018343037947557322,
+        "observer_hybrid_mae": 0.0,
+        "full_delta": 0.0018343037947557322
+      }
+    },
+    "receipts": {
+      "exact_retrieval": {
+        "status": "CONFIRMED_RETAINED_MATCH",
+        "stream": "stream",
+        "owner": "owner",
+        "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+        "input_indices": [
+          9,
+          10
+        ],
+        "source_intervals": [
+          [
+            38400,
+            43200
+          ],
+          [
+            43200,
+            48000
+          ]
+        ],
+        "read_revision": 10,
+        "matches": [
+          {
+            "role": "retained",
+            "generation": 1,
+            "formation": "p1",
+            "ordinals": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "offset": 0,
+            "factors": [
+              1.0
+            ]
+          }
+        ]
+      },
+      "signal_approx_retrieval": {
+        "status": "CONFIRMED_RETAINED_MATCH",
+        "stream": "stream",
+        "owner": "owner",
+        "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+        "input_indices": [
+          9,
+          10
+        ],
+        "source_intervals": [
+          [
+            38400,
+            43200
+          ],
+          [
+            43200,
+            48000
+          ]
+        ],
+        "read_revision": 10,
+        "matches": [
+          {
+            "role": "retained",
+            "generation": 1,
+            "formation": "p1",
+            "ordinals": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "offset": 0,
+            "factors": [
+              1.0
+            ],
+            "match_quality": "EXACT"
+          }
+        ],
+        "retrieval": {
+          "policy": "signal_approx_v1",
+          "epsilon": 3.3647428814553505e-05,
+          "tau": 0.03125,
+          "exact_match_count": 1,
+          "signal_lost_exact_single": false
+        }
+      }
+    }
+  },
+  "R1": {
+    "rows": {
+      "exact_retrieval": {
+        "case_id": "R1",
+        "target": 11,
+        "positive": true,
+        "origin_category": "ABSTAIN",
+        "assigned_root": null,
+        "true_root": "AN-EVAL/A",
+        "role": null,
+        "assignment_covered": false,
+        "correct_rejection": false,
+        "prediction_status": "ABSTAIN_NO_CONTEXT",
+        "context_covered": false,
+        "persistence_mae": 0.0018484613305405366,
+        "context_mae": null,
+        "paired_delta": null,
+        "observer_hybrid_mae": 0.0018484613305405366,
+        "full_delta": 0.0
+      },
+      "signal_approx_retrieval": {
+        "case_id": "R1",
+        "target": 11,
+        "positive": true,
+        "origin_category": "CORRECT",
+        "assigned_root": "AN-EVAL/A",
+        "true_root": "AN-EVAL/A",
+        "role": "retained",
+        "assignment_covered": true,
+        "correct_rejection": false,
+        "prediction_status": "PREDICTED_RETAINED",
+        "context_covered": true,
+        "persistence_mae": 0.0018484613305405366,
+        "context_mae": 0.0,
+        "paired_delta": 0.0018484613305405366,
+        "observer_hybrid_mae": 0.0,
+        "full_delta": 0.0018484613305405366
+      }
+    },
+    "receipts": {
+      "exact_retrieval": {
+        "status": "ABSTAIN_NO_MATCH",
+        "stream": "stream",
+        "owner": "owner",
+        "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+        "input_indices": [
+          9,
+          10
+        ],
+        "source_intervals": [
+          [
+            38400,
+            43200
+          ],
+          [
+            43200,
+            48000
+          ]
+        ],
+        "read_revision": 10,
+        "matches": []
+      },
+      "signal_approx_retrieval": {
+        "status": "APPROXIMATE_SINGLE_MATCH",
+        "stream": "stream",
+        "owner": "owner",
+        "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+        "input_indices": [
+          9,
+          10
+        ],
+        "source_intervals": [
+          [
+            38400,
+            43200
+          ],
+          [
+            43200,
+            48000
+          ]
+        ],
+        "read_revision": 10,
+        "matches": [
+          {
+            "role": "retained",
+            "generation": 1,
+            "formation": "p1",
+            "ordinals": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "offset": 0,
+            "factors": [
+              1.0
+            ],
+            "match_quality": "APPROXIMATE",
+            "distance": 0.009415627176807594
+          }
+        ],
+        "retrieval": {
+          "policy": "signal_approx_v1",
+          "epsilon": 3.3647428814553505e-05,
+          "tau": 0.03125,
+          "exact_match_count": 0,
+          "signal_lost_exact_single": false
+        }
+      }
+    }
+  },
+  "R2": {
+    "rows": {
+      "exact_retrieval": {
+        "case_id": "R2",
+        "target": 11,
+        "positive": true,
+        "origin_category": "ABSTAIN",
+        "assigned_root": null,
+        "true_root": "AN-EVAL/A",
+        "role": null,
+        "assignment_covered": false,
+        "correct_rejection": false,
+        "prediction_status": "ABSTAIN_NO_CONTEXT",
+        "context_covered": false,
+        "persistence_mae": 0.0018626394719222304,
+        "context_mae": null,
+        "paired_delta": null,
+        "observer_hybrid_mae": 0.0018626394719222304,
+        "full_delta": 0.0
+      },
+      "signal_approx_retrieval": {
+        "case_id": "R2",
+        "target": 11,
+        "positive": true,
+        "origin_category": "CORRECT",
+        "assigned_root": "AN-EVAL/A",
+        "true_root": "AN-EVAL/A",
+        "role": "retained",
+        "assignment_covered": true,
+        "correct_rejection": false,
+        "prediction_status": "PREDICTED_RETAINED",
+        "context_covered": true,
+        "persistence_mae": 0.0018626394719222304,
+        "context_mae": 0.0,
+        "paired_delta": 0.0018626394719222304,
+        "observer_hybrid_mae": 0.0,
+        "full_delta": 0.0018626394719222304
+      }
+    },
+    "receipts": {
+      "exact_retrieval": {
+        "status": "ABSTAIN_NO_MATCH",
+        "stream": "stream",
+        "owner": "owner",
+        "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+        "input_indices": [
+          9,
+          10
+        ],
+        "source_intervals": [
+          [
+            38400,
+            43200
+          ],
+          [
+            43200,
+            48000
+          ]
+        ],
+        "read_revision": 10,
+        "matches": []
+      },
+      "signal_approx_retrieval": {
+        "status": "APPROXIMATE_SINGLE_MATCH",
+        "stream": "stream",
+        "owner": "owner",
+        "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+        "input_indices": [
+          9,
+          10
+        ],
+        "source_intervals": [
+          [
+            38400,
+            43200
+          ],
+          [
+            43200,
+            48000
+          ]
+        ],
+        "read_revision": 10,
+        "matches": [
+          {
+            "role": "retained",
+            "generation": 1,
+            "formation": "p1",
+            "ordinals": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "offset": 0,
+            "factors": [
+              1.0
+            ],
+            "match_quality": "APPROXIMATE",
+            "distance": 0.018734022616112476
+          }
+        ],
+        "retrieval": {
+          "policy": "signal_approx_v1",
+          "epsilon": 3.3647428814553505e-05,
+          "tau": 0.03125,
+          "exact_match_count": 0,
+          "signal_lost_exact_single": false
+        }
+      }
+    }
+  },
+  "R3": {
+    "rows": {
+      "exact_retrieval": {
+        "case_id": "R3",
+        "target": 11,
+        "positive": true,
+        "origin_category": "ABSTAIN",
+        "assigned_root": null,
+        "true_root": "AN-EVAL/A",
+        "role": null,
+        "assignment_covered": false,
+        "correct_rejection": false,
+        "prediction_status": "ABSTAIN_NO_CONTEXT",
+        "context_covered": false,
+        "persistence_mae": 0.0,
+        "context_mae": null,
+        "paired_delta": null,
+        "observer_hybrid_mae": 0.0,
+        "full_delta": 0.0
+      },
+      "signal_approx_retrieval": {
+        "case_id": "R3",
+        "target": 11,
+        "positive": true,
+        "origin_category": "CORRECT",
+        "assigned_root": "AN-EVAL/A",
+        "true_root": "AN-EVAL/A",
+        "role": "retained",
+        "assignment_covered": true,
+        "correct_rejection": false,
+        "prediction_status": "PREDICTED_RETAINED",
+        "context_covered": true,
+        "persistence_mae": 0.0,
+        "context_mae": 0.0018484613305405366,
+        "paired_delta": -0.0018484613305405366,
+        "observer_hybrid_mae": 0.0018484613305405366,
+        "full_delta": -0.0018484613305405366
+      }
+    },
+    "receipts": {
+      "exact_retrieval": {
+        "status": "ABSTAIN_NO_MATCH",
+        "stream": "stream",
+        "owner": "owner",
+        "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+        "input_indices": [
+          9,
+          10
+        ],
+        "source_intervals": [
+          [
+            38400,
+            43200
+          ],
+          [
+            43200,
+            48000
+          ]
+        ],
+        "read_revision": 10,
+        "matches": []
+      },
+      "signal_approx_retrieval": {
+        "status": "APPROXIMATE_SINGLE_MATCH",
+        "stream": "stream",
+        "owner": "owner",
+        "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+        "input_indices": [
+          9,
+          10
+        ],
+        "source_intervals": [
+          [
+            38400,
+            43200
+          ],
+          [
+            43200,
+            48000
+          ]
+        ],
+        "read_revision": 10,
+        "matches": [
+          {
+            "role": "retained",
+            "generation": 1,
+            "formation": "p1",
+            "ordinals": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "offset": 0,
+            "factors": [
+              1.0
+            ],
+            "match_quality": "APPROXIMATE",
+            "distance": 0.009415627176807594
+          }
+        ],
+        "retrieval": {
+          "policy": "signal_approx_v1",
+          "epsilon": 3.3647428814553505e-05,
+          "tau": 0.03125,
+          "exact_match_count": 0,
+          "signal_lost_exact_single": false
+        }
+      }
+    }
+  },
+  "N1": {
+    "rows": {
+      "exact_retrieval": {
+        "case_id": "N1",
+        "target": 11,
+        "positive": false,
+        "origin_category": "ABSTAIN",
+        "assigned_root": null,
+        "true_root": "AN-EVAL/B",
+        "role": null,
+        "assignment_covered": false,
+        "correct_rejection": true,
+        "prediction_status": "ABSTAIN_NO_CONTEXT",
+        "context_covered": false,
+        "persistence_mae": 0.0028377442794115123,
+        "context_mae": null,
+        "paired_delta": null,
+        "observer_hybrid_mae": 0.0028377442794115123,
+        "full_delta": 0.0
+      },
+      "signal_approx_retrieval": {
+        "case_id": "N1",
+        "target": 11,
+        "positive": false,
+        "origin_category": "ABSTAIN",
+        "assigned_root": null,
+        "true_root": "AN-EVAL/B",
+        "role": null,
+        "assignment_covered": false,
+        "correct_rejection": true,
+        "prediction_status": "ABSTAIN_NO_CONTEXT",
+        "context_covered": false,
+        "persistence_mae": 0.0028377442794115123,
+        "context_mae": null,
+        "paired_delta": null,
+        "observer_hybrid_mae": 0.0028377442794115123,
+        "full_delta": 0.0
+      }
+    },
+    "receipts": {
+      "exact_retrieval": {
+        "status": "ABSTAIN_NO_MATCH",
+        "stream": "stream",
+        "owner": "owner",
+        "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+        "input_indices": [
+          9,
+          10
+        ],
+        "source_intervals": [
+          [
+            38400,
+            43200
+          ],
+          [
+            43200,
+            48000
+          ]
+        ],
+        "read_revision": 10,
+        "matches": []
+      },
+      "signal_approx_retrieval": {
+        "status": "ABSTAIN_NO_APPROX_CONTEXT",
+        "stream": "stream",
+        "owner": "owner",
+        "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+        "input_indices": [
+          9,
+          10
+        ],
+        "source_intervals": [
+          [
+            38400,
+            43200
+          ],
+          [
+            43200,
+            48000
+          ]
+        ],
+        "read_revision": 10,
+        "matches": [],
+        "retrieval": {
+          "policy": "signal_approx_v1",
+          "epsilon": 3.3647428814553505e-05,
+          "tau": 0.03125,
+          "exact_match_count": 0,
+          "signal_lost_exact_single": false
+        }
+      }
+    }
+  },
+  "N2": {
+    "rows": {
+      "exact_retrieval": {
+        "case_id": "N2",
+        "target": 11,
+        "positive": false,
+        "origin_category": "ABSTAIN",
+        "assigned_root": null,
+        "true_root": "AN-EVAL/C",
+        "role": null,
+        "assignment_covered": false,
+        "correct_rejection": true,
+        "prediction_status": "ABSTAIN_NO_CONTEXT",
+        "context_covered": false,
+        "persistence_mae": 0.0027492745975635315,
+        "context_mae": null,
+        "paired_delta": null,
+        "observer_hybrid_mae": 0.0027492745975635315,
+        "full_delta": 0.0
+      },
+      "signal_approx_retrieval": {
+        "case_id": "N2",
+        "target": 11,
+        "positive": false,
+        "origin_category": "ABSTAIN",
+        "assigned_root": null,
+        "true_root": "AN-EVAL/C",
+        "role": null,
+        "assignment_covered": false,
+        "correct_rejection": true,
+        "prediction_status": "ABSTAIN_NO_CONTEXT",
+        "context_covered": false,
+        "persistence_mae": 0.0027492745975635315,
+        "context_mae": null,
+        "paired_delta": null,
+        "observer_hybrid_mae": 0.0027492745975635315,
+        "full_delta": 0.0
+      }
+    },
+    "receipts": {
+      "exact_retrieval": {
+        "status": "ABSTAIN_NO_MATCH",
+        "stream": "stream",
+        "owner": "owner",
+        "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+        "input_indices": [
+          9,
+          10
+        ],
+        "source_intervals": [
+          [
+            38400,
+            43200
+          ],
+          [
+            43200,
+            48000
+          ]
+        ],
+        "read_revision": 10,
+        "matches": []
+      },
+      "signal_approx_retrieval": {
+        "status": "ABSTAIN_NO_APPROX_CONTEXT",
+        "stream": "stream",
+        "owner": "owner",
+        "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+        "input_indices": [
+          9,
+          10
+        ],
+        "source_intervals": [
+          [
+            38400,
+            43200
+          ],
+          [
+            43200,
+            48000
+          ]
+        ],
+        "read_revision": 10,
+        "matches": [],
+        "retrieval": {
+          "policy": "signal_approx_v1",
+          "epsilon": 3.3647428814553505e-05,
+          "tau": 0.03125,
+          "exact_match_count": 0,
+          "signal_lost_exact_single": false
+        }
+      }
+    }
+  },
+  "N3": {
+    "rows": {
+      "exact_retrieval": {
+        "case_id": "N3",
+        "target": 11,
+        "positive": false,
+        "origin_category": "WRONG",
+        "assigned_root": "AN-EVAL/A",
+        "true_root": "AN-EVAL/D",
+        "role": "retained",
+        "assignment_covered": true,
+        "correct_rejection": false,
+        "prediction_status": "PREDICTED_RETAINED",
+        "context_covered": true,
+        "persistence_mae": 0.003216389531726177,
+        "context_mae": 0.0032021773792433855,
+        "paired_delta": 1.4212152482791576e-05,
+        "observer_hybrid_mae": 0.0032021773792433855,
+        "full_delta": 1.4212152482791576e-05
+      },
+      "signal_approx_retrieval": {
+        "case_id": "N3",
+        "target": 11,
+        "positive": false,
+        "origin_category": "WRONG",
+        "assigned_root": "AN-EVAL/A",
+        "true_root": "AN-EVAL/D",
+        "role": "retained",
+        "assignment_covered": true,
+        "correct_rejection": false,
+        "prediction_status": "PREDICTED_RETAINED",
+        "context_covered": true,
+        "persistence_mae": 0.003216389531726177,
+        "context_mae": 0.0032021773792433855,
+        "paired_delta": 1.4212152482791576e-05,
+        "observer_hybrid_mae": 0.0032021773792433855,
+        "full_delta": 1.4212152482791576e-05
+      }
+    },
+    "receipts": {
+      "exact_retrieval": {
+        "status": "CONFIRMED_RETAINED_MATCH",
+        "stream": "stream",
+        "owner": "owner",
+        "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+        "input_indices": [
+          9,
+          10
+        ],
+        "source_intervals": [
+          [
+            38400,
+            43200
+          ],
+          [
+            43200,
+            48000
+          ]
+        ],
+        "read_revision": 10,
+        "matches": [
+          {
+            "role": "retained",
+            "generation": 1,
+            "formation": "p1",
+            "ordinals": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "offset": 0,
+            "factors": [
+              1.0
+            ]
+          }
+        ]
+      },
+      "signal_approx_retrieval": {
+        "status": "CONFIRMED_RETAINED_MATCH",
+        "stream": "stream",
+        "owner": "owner",
+        "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+        "input_indices": [
+          9,
+          10
+        ],
+        "source_intervals": [
+          [
+            38400,
+            43200
+          ],
+          [
+            43200,
+            48000
+          ]
+        ],
+        "read_revision": 10,
+        "matches": [
+          {
+            "role": "retained",
+            "generation": 1,
+            "formation": "p1",
+            "ordinals": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "offset": 0,
+            "factors": [
+              1.0
+            ],
+            "match_quality": "EXACT"
+          }
+        ],
+        "retrieval": {
+          "policy": "signal_approx_v1",
+          "epsilon": 3.3647428814553505e-05,
+          "tau": 0.03125,
+          "exact_match_count": 1,
+          "signal_lost_exact_single": false
+        }
+      }
+    }
+  },
+  "N4": {
+    "rows": {
+      "exact_retrieval": {
+        "case_id": "N4",
+        "target": 19,
+        "positive": false,
+        "origin_category": "ABSTAIN",
+        "assigned_root": null,
+        "true_root": "AN-EVAL/M",
+        "role": null,
+        "assignment_covered": false,
+        "correct_rejection": true,
+        "prediction_status": "ABSTAIN_NO_CONTEXT",
+        "context_covered": false,
+        "persistence_mae": 0.0022133905676856636,
+        "context_mae": null,
+        "paired_delta": null,
+        "observer_hybrid_mae": 0.0022133905676856636,
+        "full_delta": 0.0
+      },
+      "signal_approx_retrieval": {
+        "case_id": "N4",
+        "target": 19,
+        "positive": false,
+        "origin_category": "ABSTAIN",
+        "assigned_root": null,
+        "true_root": "AN-EVAL/M",
+        "role": null,
+        "assignment_covered": false,
+        "correct_rejection": true,
+        "prediction_status": "ABSTAIN_NO_CONTEXT",
+        "context_covered": false,
+        "persistence_mae": 0.0022133905676856636,
+        "context_mae": null,
+        "paired_delta": null,
+        "observer_hybrid_mae": 0.0022133905676856636,
+        "full_delta": 0.0
+      }
+    },
+    "receipts": {
+      "exact_retrieval": {
+        "status": "ABSTAIN_NO_MATCH",
+        "stream": "stream",
+        "owner": "owner",
+        "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+        "input_indices": [
+          17,
+          18
+        ],
+        "source_intervals": [
+          [
+            76800,
+            81600
+          ],
+          [
+            81600,
+            86400
+          ]
+        ],
+        "read_revision": 20,
+        "matches": []
+      },
+      "signal_approx_retrieval": {
+        "status": "ABSTAIN_NO_APPROX_CONTEXT",
+        "stream": "stream",
+        "owner": "owner",
+        "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+        "input_indices": [
+          17,
+          18
+        ],
+        "source_intervals": [
+          [
+            76800,
+            81600
+          ],
+          [
+            81600,
+            86400
+          ]
+        ],
+        "read_revision": 20,
+        "matches": [],
+        "retrieval": {
+          "policy": "signal_approx_v1",
+          "epsilon": 3.3647428814553505e-05,
+          "tau": 0.03125,
+          "exact_match_count": 0,
+          "signal_lost_exact_single": false
+        }
+      }
+    }
+  },
+  "Z0": {
+    "rows": {
+      "exact_retrieval": {
+        "case_id": "Z0",
+        "target": 11,
+        "positive": false,
+        "origin_category": "ABSTAIN",
+        "assigned_root": null,
+        "true_root": "AN-EVAL/ZERO",
+        "role": null,
+        "assignment_covered": false,
+        "correct_rejection": true,
+        "prediction_status": "ABSTAIN_NO_CONTEXT",
+        "context_covered": false,
+        "persistence_mae": 0.0,
+        "context_mae": null,
+        "paired_delta": null,
+        "observer_hybrid_mae": 0.0,
+        "full_delta": 0.0
+      },
+      "signal_approx_retrieval": {
+        "case_id": "Z0",
+        "target": 11,
+        "positive": false,
+        "origin_category": "ABSTAIN",
+        "assigned_root": null,
+        "true_root": "AN-EVAL/ZERO",
+        "role": null,
+        "assignment_covered": false,
+        "correct_rejection": true,
+        "prediction_status": "ABSTAIN_NO_CONTEXT",
+        "context_covered": false,
+        "persistence_mae": 0.0,
+        "context_mae": null,
+        "paired_delta": null,
+        "observer_hybrid_mae": 0.0,
+        "full_delta": 0.0
+      }
+    },
+    "receipts": {
+      "exact_retrieval": {
+        "status": "ABSTAIN_NO_MATCH",
+        "stream": "stream",
+        "owner": "owner",
+        "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+        "input_indices": [
+          9,
+          10
+        ],
+        "source_intervals": [
+          [
+            38400,
+            43200
+          ],
+          [
+            43200,
+            48000
+          ]
+        ],
+        "read_revision": 10,
+        "matches": []
+      },
+      "signal_approx_retrieval": {
+        "status": "ABSTAIN_LOW_SIGNAL",
+        "stream": "stream",
+        "owner": "owner",
+        "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+        "input_indices": [
+          9,
+          10
+        ],
+        "source_intervals": [
+          [
+            38400,
+            43200
+          ],
+          [
+            43200,
+            48000
+          ]
+        ],
+        "read_revision": 10,
+        "matches": [],
+        "retrieval": {
+          "policy": "signal_approx_v1",
+          "epsilon": 3.3647428814553505e-05,
+          "tau": 0.03125,
+          "exact_match_count": 0,
+          "signal_lost_exact_single": false
+        }
+      }
+    }
+  },
+  "Z1": {
+    "rows": {
+      "exact_retrieval": {
+        "case_id": "Z1",
+        "target": 11,
+        "positive": false,
+        "origin_category": "ABSTAIN",
+        "assigned_root": null,
+        "true_root": "AN-EVAL/NOISE",
+        "role": null,
+        "assignment_covered": false,
+        "correct_rejection": true,
+        "prediction_status": "ABSTAIN_NO_CONTEXT",
+        "context_covered": false,
+        "persistence_mae": 4.508594758029951e-06,
+        "context_mae": null,
+        "paired_delta": null,
+        "observer_hybrid_mae": 4.508594758029951e-06,
+        "full_delta": 0.0
+      },
+      "signal_approx_retrieval": {
+        "case_id": "Z1",
+        "target": 11,
+        "positive": false,
+        "origin_category": "ABSTAIN",
+        "assigned_root": null,
+        "true_root": "AN-EVAL/NOISE",
+        "role": null,
+        "assignment_covered": false,
+        "correct_rejection": true,
+        "prediction_status": "ABSTAIN_NO_CONTEXT",
+        "context_covered": false,
+        "persistence_mae": 4.508594758029951e-06,
+        "context_mae": null,
+        "paired_delta": null,
+        "observer_hybrid_mae": 4.508594758029951e-06,
+        "full_delta": 0.0
+      }
+    },
+    "receipts": {
+      "exact_retrieval": {
+        "status": "ABSTAIN_NO_MATCH",
+        "stream": "stream",
+        "owner": "owner",
+        "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+        "input_indices": [
+          9,
+          10
+        ],
+        "source_intervals": [
+          [
+            38400,
+            43200
+          ],
+          [
+            43200,
+            48000
+          ]
+        ],
+        "read_revision": 10,
+        "matches": []
+      },
+      "signal_approx_retrieval": {
+        "status": "ABSTAIN_LOW_SIGNAL",
+        "stream": "stream",
+        "owner": "owner",
+        "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+        "input_indices": [
+          9,
+          10
+        ],
+        "source_intervals": [
+          [
+            38400,
+            43200
+          ],
+          [
+            43200,
+            48000
+          ]
+        ],
+        "read_revision": 10,
+        "matches": [],
+        "retrieval": {
+          "policy": "signal_approx_v1",
+          "epsilon": 3.3647428814553505e-05,
+          "tau": 0.03125,
+          "exact_match_count": 0,
+          "signal_lost_exact_single": false
+        }
+      }
+    }
+  },
+  "P0": {
+    "rows": {
+      "exact_retrieval": {
+        "case_id": "P0",
+        "target": 11,
+        "positive": true,
+        "origin_category": "ABSTAIN",
+        "assigned_root": null,
+        "true_root": "AN-EVAL/A",
+        "role": null,
+        "assignment_covered": false,
+        "correct_rejection": false,
+        "prediction_status": "ABSTAIN_NO_CONTEXT",
+        "context_covered": false,
+        "persistence_mae": 4.4782807489153617e-07,
+        "context_mae": null,
+        "paired_delta": null,
+        "observer_hybrid_mae": 4.4782807489153617e-07,
+        "full_delta": 0.0
+      },
+      "signal_approx_retrieval": {
+        "case_id": "P0",
+        "target": 11,
+        "positive": true,
+        "origin_category": "ABSTAIN",
+        "assigned_root": null,
+        "true_root": "AN-EVAL/A",
+        "role": null,
+        "assignment_covered": false,
+        "correct_rejection": false,
+        "prediction_status": "ABSTAIN_NO_CONTEXT",
+        "context_covered": false,
+        "persistence_mae": 4.4782807489153617e-07,
+        "context_mae": null,
+        "paired_delta": null,
+        "observer_hybrid_mae": 4.4782807489153617e-07,
+        "full_delta": 0.0
+      }
+    },
+    "receipts": {
+      "exact_retrieval": {
+        "status": "ABSTAIN_NO_MATCH",
+        "stream": "stream",
+        "owner": "owner",
+        "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+        "input_indices": [
+          9,
+          10
+        ],
+        "source_intervals": [
+          [
+            38400,
+            43200
+          ],
+          [
+            43200,
+            48000
+          ]
+        ],
+        "read_revision": 10,
+        "matches": []
+      },
+      "signal_approx_retrieval": {
+        "status": "ABSTAIN_LOW_SIGNAL",
+        "stream": "stream",
+        "owner": "owner",
+        "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+        "input_indices": [
+          9,
+          10
+        ],
+        "source_intervals": [
+          [
+            38400,
+            43200
+          ],
+          [
+            43200,
+            48000
+          ]
+        ],
+        "read_revision": 10,
+        "matches": [],
+        "retrieval": {
+          "policy": "signal_approx_v1",
+          "epsilon": 3.3647428814553505e-05,
+          "tau": 0.03125,
+          "exact_match_count": 0,
+          "signal_lost_exact_single": false
+        }
+      }
+    }
+  }
+}

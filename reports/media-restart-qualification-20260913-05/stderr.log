@@ -1,0 +1,13 @@
+test_01_all_positions_same_reservation_basis (tests.test_media_restart_measured.Measured.test_01_all_positions_same_reservation_basis) ... ok
+test_02_boundary_and_reserved_primary (tests.test_media_restart_measured.Measured.test_02_boundary_and_reserved_primary) ... ok
+test_03_reservation_binding_and_overrun (tests.test_media_restart_measured.Measured.test_03_reservation_binding_and_overrun) ... ok
+test_04_native_stages (tests.test_media_restart_measured.Measured.test_04_native_stages) ... ok
+test_05_early_all_comparisons (tests.test_media_restart_measured.Measured.test_05_early_all_comparisons) ... ok
+test_06_late_all_comparisons (tests.test_media_restart_measured.Measured.test_06_late_all_comparisons) ... ok
+test_07_bounded_canonical_and_reference_expansion (tests.test_media_restart_measured.Measured.test_07_bounded_canonical_and_reference_expansion) ... ok
+test_08_native_budget_failure_preserves_progress (tests.test_media_restart_measured.Measured.test_08_native_budget_failure_preserves_progress) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 188.731s
+
+OK

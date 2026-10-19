@@ -1,0 +1,59 @@
+Paket 1: Quellenvergleichsvorbereitung, 30.09.2026
+
+Paket umgesetzt. Vorbereitung bleibt PREPARATION_ONLY; keine Laufautoritaet, keine Quellenproduktion.
+Neue Ressourcenbindung: s2uc.preparation-resources.p1; Codeobergrenze 868340 Byte. Historische V9-Grenze unveraendert 851968 Byte.
+Neue Vorbereitungsbindung: s2uc.comparison-preparation.p1.
+
+Neue Dateien (alle vollstaendig im Codekonto):
+tests/test_s2uc_comparison_preparation.py: 6255 Byte; SHA256 82551094b44c17a76dde640dee4ad7cff1233394242cc4b73fe61a2e4500b821
+tools/_s2uc_comparison_preparation.py: 7687 Byte; SHA256 f183859e33f7289864f77ccc967be9caac86f44a013a6f99b8603dbd9d8ae240
+tools/_s2uc_preparation_resources.py: 766 Byte; SHA256 1319595c0f2077bf92eaf01c6efb1ebc701363bea3f97817bf807c27faaa584a
+tools/s2uc_preparation_check.py: 1784 Byte; SHA256 d57e70fc381984b5e088e0daa81fdfb3fb35190782cd54e3316e7e94952c22fd
+
+Gesamt: 66 Dateien, 868332 Byte; Nettozuwachs 16492 Byte; Rest 8 Byte.
+Alle bisherigen 62 Dateien sind bytegleich. Ihre 184 Testnachweise werden nur fuer diesen unveraenderten Bestand weiterverwendet.
+Die vier neuen Paketpruefungen decken die erweiterte Vorbereitung ab. Drei bestehende Grenzpruefungen wurden zusaetzlich ausgefuehrt.
+Keine Behauptung einer gemeinsamen 188er-Testausfuehrung oder unabhaengigen Gesamtabnahme.
+
+Neue ausgefuehrte Tests:
+tests.test_s2uc_comparison_preparation.PreparationTests.test_bound_file_mutations PASS
+tests.test_s2uc_comparison_preparation.PreparationTests.test_code_runtime_and_resource_boundaries PASS
+tests.test_s2uc_comparison_preparation.PreparationTests.test_complete_preparation_and_closed_starters PASS
+tests.test_s2uc_comparison_preparation.PreparationTests.test_missing_failed_duplicate_and_stale_original_evidence PASS
+
+Zusaetzliche bestehende Regressionen:
+tests.test_s2uc_source_execution.SourceExecutionTests.test_public_real_entry_unconditionally_closed PASS
+tests.test_s2uc_source_execution.SourceExecutionTests.test_source_preparation_reader_has_no_authority PASS
+tests.test_s2uc_source_execution.SourceExecutionTests.test_qualification_fixture_and_mutations_never_authorize PASS
+
+4/4 neue Tests, 3/3 gezielte bestehende Regressionen: keine Fehler, Fehlschlaege oder Skips in den erfolgreichen Ausfuehrungen.
+boundary-regression.log dokumentiert den vorherigen fehlerhaften CLI-Aufruf mit falschem Klassennamen; der korrigierte Aufruf ist separat erhalten.
+Die neuen Tests pruefen Quellenzugriff mit einem abbrechenden Mock und assert_not_called. Der echte Vorbereitungsleser wurde anschliessend ohne Testpatches erfolgreich ausgefuehrt.
+Negativfaelle: geaenderte Originalbytes, alte Code-/Runtimehashes, fehlende/doppelte/fehlgeschlagene Testnachweise, falsche Inventarzuordnung, gemischte Laufidentitaet/Ausgabe, behauptete Laufautoritaet, geaenderte Ziele/Auswertungsfassung/Ressourcen, Protokollueberlauf, Ledgerunterzaehlung und unbekannte Dateien.
+
+Vollstaendige operative Vorbereitungsbilanz:
+code: 868332 / 868340 Byte
+error: 0 / 16384 Byte
+metadata: 52629 / 65536 Byte
+minimal: 0 / 16384 Byte
+record: 0 / 262144 Byte
+staging: 0 / 245760 Byte
+static_shared: 196221 / 196608 Byte
+terminal: 0 / 16384 Byte
+verification: 0 / 262144 Byte
+shared: 196221 / 262144 Byte
+total: 1117182 / 4194304 Byte
+protocol.json: 16427 / 32768 Byte
+Aktives Inventar: 13909 / 16384 Byte
+
+Alle eingelesenen Originalresultate und Originalinventare sind mit ihren tatsaechlichen Bytes in static_shared enthalten. Das historische formatiert gespeicherte Inventar wird als Originalnachweis gezaehlt; das aktive Inventar haelt die unveraenderte 16384-Byte-Einzelgrenze ein.
+Protokollformat: jede Zeile [Praefixindex, Methodenname, Ausfuehrungsgruppenindex, Resultat]. Vollstaendige ID = prefixes[index] + Punkt + Methodenname. Jede Gruppe bindet Originalresultat und Originalinventar durch Projektpfad, Bytezahl und SHA256; Ergebnisfundstelle /results/<vollstaendige ID>.
+188 eindeutige Pflichten in drei Gruppen: 79 + 105 + 4. Die drei gezielten Wiederholungen sind Zusatzbelege und werden nicht als neue Pflichten gezaehlt.
+Die Ledgerdatei zaehlt sich selbst ueber eine gepruefte Groessenfixierung. Der Produkt-/Observer-/Herkunftsnachtragsablauf ist noch nicht Teil dieses Vorbereitungspakets; seine operative Bilanz muss Paket 2 binden.
+Auditdateien und Testprotokolle dieses Entwicklungsauftrags ausserhalb der geladenen Vorbereitung werden separat in delivery-hashes.json ausgewiesen; sie werden vom Vorbereitungsleser nicht als Eingaben konsumiert.
+
+Historische Erhaltung: 2296 Belegdateien bytegleich, keine veraendert.
+640 MiB gelten ausschliesslich fuer den bestehenden Produktkindprozess. Dieser Auftrag startet keinen Produktkindprozess und begrenzt den Elternprozess nicht.
+Die verletzte Erwartung g1/24, die unterschiedlichen Speicheraufteilungen und alle Memoryregeln bleiben unveraendert.
+
+Naechster Schritt: Projektleiter prueft Paket 1 und entscheidet ueber Paket 2. Dessen zusaetzlicher Code- und Artefaktbedarf ist wegen 8 freien Codebytes und 387 freien static_shared-Bytes vor Umsetzung gesondert zu bilanzieren. Keine Quellenoeffnung aus diesem Abschluss.

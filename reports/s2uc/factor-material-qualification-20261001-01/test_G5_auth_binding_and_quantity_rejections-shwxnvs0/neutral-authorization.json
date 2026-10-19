@@ -1,0 +1,8 @@
+{
+  "status": "AUTHORIZED_ONCE",
+  "action": "PRODUCE_FACTOR_PARTITION",
+  "partition": "FC-NEUTRAL",
+  "binding_sha256": "ce048e72a5f88f34cf7bb0e0b27f582b32a85ed1d4ba7efe975f48c6794536a9",
+  "plan_sha256": "165db77f962e5eef829645e635467d595ef1af7b5d689f2692edfd20812d6e84",
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]"
+}

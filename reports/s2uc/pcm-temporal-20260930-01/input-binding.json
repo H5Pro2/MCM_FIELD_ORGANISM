@@ -1,0 +1,82 @@
+{
+  "source": {
+    "scope": "SYNTHETIC_LOCAL_TEMPORAL_TEST_ONLY; no original source run",
+    "source": "sources/s2uc/temporal-chirp-v1/sequence.pcm",
+    "sha256": "4774f24ad52ec7e431c360ec1f2d18c663584d1ed3fbffa83fa0f4fe3d5442a6",
+    "bytes": 76800,
+    "samples": 19200,
+    "format": "mono-float32-le",
+    "sample_rate": 48000,
+    "preregistration_sha256": "c12574ccde982966fd6c1cdf7fb5baf73e8f7123ca0bdcdb01a720285830f1dc",
+    "windows": [
+      {
+        "samples": [
+          0,
+          4800
+        ],
+        "sha256": "1a7e55861a9aac4264a083703738bc2de08e311af2dd9783fe65edbfca69cb71"
+      },
+      {
+        "samples": [
+          4800,
+          9600
+        ],
+        "sha256": "798c3008f8f813d6c8c38bc377bc2d9e4c1faaaa69efe1d4f02b5b4fa2072f3c"
+      },
+      {
+        "samples": [
+          9600,
+          14400
+        ],
+        "sha256": "0d01e9d24f1b9a9474b9603faa10457f09fcf2efdbc9adec5c3ee8b24e6bba3b"
+      },
+      {
+        "samples": [
+          14400,
+          19200
+        ],
+        "sha256": "8725f88dcfe3ff894d687fff4c95ea4878ae51f7a9f22ab401cd7a6b0988cd10"
+      }
+    ]
+  },
+  "derivations": [
+    {
+      "window": 2,
+      "parent_sha256": "798c3008f8f813d6c8c38bc377bc2d9e4c1faaaa69efe1d4f02b5b4fa2072f3c",
+      "checks": {
+        "length_valid": true,
+        "values_valid": true,
+        "underflow_indices": [],
+        "half_subnormal_indices": [],
+        "roundtrip_mismatch_indices": [],
+        "roundtrip_bit_equal": true,
+        "nonzero_samples": 4800,
+        "half_sha256": "a5a0110c47d8945d1eb946805255fc9daa826603455f7ebd3c4482cb883d46ac"
+      },
+      "cost": {
+        "elapsed_ns": 36667900,
+        "incremental_python_peak_bytes": 519936,
+        "net_python_bytes": 19841
+      }
+    },
+    {
+      "window": 3,
+      "parent_sha256": "0d01e9d24f1b9a9474b9603faa10457f09fcf2efdbc9adec5c3ee8b24e6bba3b",
+      "checks": {
+        "length_valid": true,
+        "values_valid": true,
+        "underflow_indices": [],
+        "half_subnormal_indices": [],
+        "roundtrip_mismatch_indices": [],
+        "roundtrip_bit_equal": true,
+        "nonzero_samples": 4800,
+        "half_sha256": "b533eebd8a8a357ba365800b617f4cfb95686f1731b7fade5ea0531eda5b12d9"
+      },
+      "cost": {
+        "elapsed_ns": 36918100,
+        "incremental_python_peak_bytes": 519737,
+        "net_python_bytes": 19642
+      }
+    }
+  ]
+}

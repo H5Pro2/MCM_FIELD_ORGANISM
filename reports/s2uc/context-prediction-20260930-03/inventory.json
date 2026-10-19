@@ -1,0 +1,34 @@
+{
+  "reports/s2uc/context-prediction-20260930-03/eviction-resources.json": {
+    "bytes": 1397,
+    "sha256": "6279a82743a0d83545a161990cb0d4825c762e6fd0db13839f37050097c5ffc4"
+  },
+  "reports/s2uc/context-prediction-20260930-03/preregistration.json": {
+    "bytes": 7978,
+    "sha256": "583ffd1aac0768addce244d9f9deb3d322d029100ff5894124bd6da5fda3243a"
+  },
+  "reports/s2uc/context-prediction-20260930-03/REPORT.txt": {
+    "bytes": 8708,
+    "sha256": "0b7754f02d25a016f9651b32a2ba0aa06336534b789730e7f308fdc65d0faf4f"
+  },
+  "reports/s2uc/context-prediction-20260930-03/result.json": {
+    "bytes": 241484,
+    "sha256": "4514042d4c5896af4ae3041cc195f6dbb576e77120456ca35147024c98518b1a"
+  },
+  "reports/s2uc/context-prediction-20260930-03/tests.txt": {
+    "bytes": 2377,
+    "sha256": "c93870f8a628f349f24f15d77b30f1ce74454562fdd3e65130bf8800664cd597"
+  },
+  "tools/_s2uc_continuation_adapter.py": {
+    "bytes": 3852,
+    "sha256": "b9d04587f8fd63081515f855f89390d4a584b06ecbd5f101c1dfdbd9157c43cb"
+  },
+  "tools/s2uc_context_prediction_check.py": {
+    "bytes": 8274,
+    "sha256": "79a4c8d3fa547556077da3c7161e1bfce16b6ee02a06238c4aa322ced461c5db"
+  },
+  "tests/test_s2uc_continuation_adapter.py": {
+    "bytes": 4097,
+    "sha256": "d217d3ccd99f304b138d2c22715732dd15a2aa73f20320146b6a83419b68c816"
+  }
+}

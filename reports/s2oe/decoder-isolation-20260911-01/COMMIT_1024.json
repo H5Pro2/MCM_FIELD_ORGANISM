@@ -1,0 +1,110 @@
+{
+  "arm": {
+    "job": 1073741824,
+    "name": "COMMIT_1024",
+    "process": 1073741824
+  },
+  "binding_sha256": "97ce7b1480c5e107964fc2a109a787e6e31d6ee8fdd498b3a94d31ae9518bcfd",
+  "counters": {
+    "audio_frames": 5,
+    "audio_samples": 5120,
+    "container_read_bytes": 171256136,
+    "packets": 12,
+    "passes": 1,
+    "selected_windows": 1,
+    "video_frames": 3
+  },
+  "decoder_calls": 1,
+  "gates_opened": false,
+  "host_before": {
+    "available_commit_bytes": 13087711232,
+    "commit_limit_bytes": 29784133632,
+    "physical_available_bytes": 7201476608
+  },
+  "next_pts": 2002,
+  "output_bytes": [
+    19200,
+    6220800
+  ],
+  "output_sha256": [
+    "3962713468fb0c379baf084596870a446a4ef2aa3130962e5d8fe14d15432e60",
+    "9801f276b2c56af300f50c291e68aa23d5465d91e727661a51228b4708826a35"
+  ],
+  "phase": {
+    "kind": "phase",
+    "operation": "write_shared_slot",
+    "phase": "OUTPUT",
+    "sequence": 2
+  },
+  "pts": 1001,
+  "resources": {
+    "active_process_limit": 1,
+    "decoder_versions": {
+      "ffmpeg": "8.0.1",
+      "libraries": {
+        "libavcodec": [
+          62,
+          11,
+          100
+        ],
+        "libavdevice": [
+          62,
+          1,
+          100
+        ],
+        "libavfilter": [
+          11,
+          4,
+          100
+        ],
+        "libavformat": [
+          62,
+          3,
+          100
+        ],
+        "libavutil": [
+          60,
+          8,
+          100
+        ],
+        "libswresample": [
+          6,
+          1,
+          100
+        ],
+        "libswscale": [
+          9,
+          1,
+          100
+        ]
+      },
+      "pyav": "16.1.0"
+    },
+    "diagnostic_arm": "COMMIT_1024",
+    "flags": 8968,
+    "isolation_version": "s2oe.decoder-isolation.v1",
+    "job_commit_limit": 1073741824,
+    "job_confirmed_before_media": true,
+    "memory_limit_messages": [],
+    "memory_limit_notification": false,
+    "native_log_bytes": 0,
+    "native_log_overflow": false,
+    "native_logs": [],
+    "peak_job_commit": 569888768,
+    "peak_process_commit": 563306496,
+    "process_commit_limit": 1073741824,
+    "queue_capacity": 1,
+    "read_counters_complete": true,
+    "request_seconds": 30.0,
+    "slot_bytes": 6240000,
+    "version": "s2oe.decoder-job.v2-phase-diagnostic",
+    "worker_closed": true,
+    "worker_exit_code": 1
+  },
+  "selection": {
+    "repeat": 1,
+    "window": 0
+  },
+  "status": "DECODER_WINDOW_COMPLETE",
+  "system_calls": 0
+}

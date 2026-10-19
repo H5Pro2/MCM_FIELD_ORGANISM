@@ -1,0 +1,22 @@
+test_01_sections (tests.test_checkpoint_authorization.AuthorizationTests.test_01_sections) ... ok
+test_02_missing (tests.test_checkpoint_authorization.AuthorizationTests.test_02_missing) ... ok
+test_03_changed_section (tests.test_checkpoint_authorization.AuthorizationTests.test_03_changed_section) ... ok
+test_04_foreign_run (tests.test_checkpoint_authorization.AuthorizationTests.test_04_foreign_run) ... ok
+test_05_code_binding (tests.test_checkpoint_authorization.AuthorizationTests.test_05_code_binding) ... ok
+test_06_consumed_role (tests.test_checkpoint_authorization.AuthorizationTests.test_06_consumed_role) ... ok
+test_07_parent_consumption (tests.test_checkpoint_authorization.AuthorizationTests.test_07_parent_consumption) ... ok
+test_08_foreign_output (tests.test_checkpoint_authorization.AuthorizationTests.test_08_foreign_output) ... ok
+test_09_gate_before_factory (tests.test_checkpoint_authorization.AuthorizationTests.test_09_gate_before_factory) ... ok
+test_10_metadata_not_limit (tests.test_checkpoint_authorization.AuthorizationTests.test_10_metadata_not_limit) ... ok
+test_11_full_format_contributions (tests.test_checkpoint_authorization.AuthorizationTests.test_11_full_format_contributions) ... ok
+test_12_boundary (tests.test_checkpoint_authorization.AuthorizationTests.test_12_boundary) ... ok
+test_13_private_publication (tests.test_checkpoint_authorization.AuthorizationTests.test_13_private_publication) ... ok
+test_14_publication_overflow (tests.test_checkpoint_authorization.AuthorizationTests.test_14_publication_overflow) ... ok
+test_15_invalid_role (tests.test_checkpoint_authorization.AuthorizationTests.test_15_invalid_role) ... ok
+test_16_authorized_gate (tests.test_checkpoint_authorization.AuthorizationTests.test_16_authorized_gate) ... ok
+test_17_private_checkpoint_route (tests.test_checkpoint_authorization.AuthorizationTests.test_17_private_checkpoint_route) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.160s
+
+OK

@@ -1,0 +1,14 @@
+{
+  "material_bytes": 124571,
+  "observer_bytes_before_ledger_inventory": 4094045,
+  "peaks": {
+    "frame_peak": 12,
+    "output_slots_peak": 2,
+    "combined_peak": 13,
+    "receipt_bytes_peak": 548,
+    "receipt_transient_utf8_bytes_peak": 961,
+    "temporary_numeric_vectors_peak": 0,
+    "match_metadata_peak": 1
+  },
+  "hard_process_ram_measured": false
+}

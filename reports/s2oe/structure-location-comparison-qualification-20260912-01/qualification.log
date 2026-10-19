@@ -1,0 +1,17 @@
+test_arithmetic_independent (tests.test_structure_comparison.Tests.test_arithmetic_independent) ... ok
+test_budget_boundaries (tests.test_structure_comparison.Tests.test_budget_boundaries) ... ok
+test_direct_mismatch (tests.test_structure_comparison.Tests.test_direct_mismatch) ... ok
+test_evaluation_gate (tests.test_structure_comparison.Tests.test_evaluation_gate) ... ok
+test_full_native_and_budget (tests.test_structure_comparison.Tests.test_full_native_and_budget) ... ok
+test_hash_failure_once (tests.test_structure_comparison.Tests.test_hash_failure_once) ... ok
+test_missing_form (tests.test_structure_comparison.Tests.test_missing_form) ... ok
+test_missing_pair (tests.test_structure_comparison.Tests.test_missing_pair) ... ok
+test_mutated_pair (tests.test_structure_comparison.Tests.test_mutated_pair) ... ok
+test_mutated_source (tests.test_structure_comparison.Tests.test_mutated_source) ... ok
+test_strict_negative_and_tie (tests.test_structure_comparison.Tests.test_strict_negative_and_tie) ... ok
+test_verifier_read_only (tests.test_structure_comparison.Tests.test_verifier_read_only) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.287s
+
+OK

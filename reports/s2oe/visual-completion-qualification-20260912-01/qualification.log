@@ -1,0 +1,13 @@
+test_01_native_four_workers (tests.test_s2oe_visual_completion.Completion.test_01_native_four_workers) ... ok
+test_02_native_error_forwarding (tests.test_s2oe_visual_completion.Completion.test_02_native_error_forwarding) ... ok
+test_03_all_envelopes (tests.test_s2oe_visual_completion.Completion.test_03_all_envelopes) ... ok
+test_04_envelope_overflow (tests.test_s2oe_visual_completion.Completion.test_04_envelope_overflow) ... ok
+test_05_exact_joint_boundary (tests.test_s2oe_visual_completion.Completion.test_05_exact_joint_boundary) ... ok
+test_06_joint_overflow_and_precheck (tests.test_s2oe_visual_completion.Completion.test_06_joint_overflow_and_precheck) ... ok
+test_07_early_stop_and_failure (tests.test_s2oe_visual_completion.Completion.test_07_early_stop_and_failure) ... ok
+test_08_child_remaining_limit (tests.test_s2oe_visual_completion.Completion.test_08_child_remaining_limit) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 13.046s
+
+OK

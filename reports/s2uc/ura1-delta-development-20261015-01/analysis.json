@@ -1,0 +1,94 @@
+{
+  "D_hand_case": {
+    "gzip_bytes": 23491,
+    "encoded_bytes": 339990,
+    "node_bytes": 337128,
+    "node_category_bytes": {
+      "other_scalars": 10419,
+      "bank_hex_scalars": 98865,
+      "array_nodes": 13580,
+      "other_objects": 20431,
+      "stock_objects": 11574,
+      "state_objects": 131125,
+      "event_objects": 45496,
+      "frame_objects": 5638
+    },
+    "node_category_counts": {
+      "other_scalars": 498,
+      "bank_hex_scalars": 117,
+      "array_nodes": 370,
+      "other_objects": 186,
+      "stock_objects": 86,
+      "state_objects": 498,
+      "event_objects": 880,
+      "frame_objects": 64
+    },
+    "object_key_string_bytes_included_above": 112765,
+    "state_field_change_counts": {
+      "accepted": 190,
+      "intervals": 254,
+      "next_index": 190,
+      "pair": 254,
+      "admitted": 192,
+      "bank": 582,
+      "forming_frames": 224,
+      "forming_segment": 128,
+      "pframe": 256,
+      "revision": 224,
+      "stock": 252,
+      "frozen": 112,
+      "closed": 2,
+      "hint_segment": 128,
+      "hints": 128
+    },
+    "bank_transitions": 582,
+    "bank_hex_chars_changed": 2508,
+    "bank_hex_chars_if_replaced": 484224
+  },
+  "lifecycle_trace": {
+    "gzip_bytes": 19210,
+    "encoded_bytes": 267066,
+    "node_bytes": 264724,
+    "node_category_bytes": {
+      "other_scalars": 9802,
+      "bank_hex_scalars": 81120,
+      "array_nodes": 11055,
+      "other_objects": 16516,
+      "stock_objects": 9059,
+      "state_objects": 98515,
+      "event_objects": 34440,
+      "frame_objects": 4217
+    },
+    "node_category_counts": {
+      "other_scalars": 457,
+      "bank_hex_scalars": 96,
+      "array_nodes": 310,
+      "other_objects": 157,
+      "stock_objects": 68,
+      "state_objects": 376,
+      "event_objects": 667,
+      "frame_objects": 48
+    },
+    "object_key_string_bytes_included_above": 85935,
+    "state_field_change_counts": {
+      "accepted": 142,
+      "intervals": 190,
+      "next_index": 142,
+      "pair": 190,
+      "admitted": 144,
+      "bank": 442,
+      "forming_frames": 168,
+      "forming_segment": 96,
+      "pframe": 192,
+      "revision": 168,
+      "stock": 188,
+      "frozen": 72,
+      "closed": 2,
+      "hint_segment": 96,
+      "hints": 96
+    },
+    "bank_transitions": 442,
+    "bank_hex_chars_changed": 2064,
+    "bank_hex_chars_if_replaced": 367744
+  }
+}

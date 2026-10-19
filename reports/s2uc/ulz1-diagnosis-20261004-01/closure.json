@@ -1,0 +1,37 @@
+{
+  "status": "COMPLETE_ARCHIVE_DIAGNOSIS",
+  "files": {
+    "categories.csv": {
+      "bytes": 3361,
+      "sha256": "527e7c7564214bd4e9430cbe97a45b1166a89bd115937c9162671f6b1aaa958e"
+    },
+    "EINORDNUNG.md": {
+      "bytes": 8823,
+      "sha256": "6ec45feff0754ae0b9021f3d465ae32d02f8229a8b7564a9627823f17129cf6a"
+    },
+    "examples.json": {
+      "bytes": 714904,
+      "sha256": "4635e4149b24d52ebb2faffd851110edfe8492ce7de45ca65fb71d39d0f5ea92"
+    },
+    "lifecycle.json": {
+      "bytes": 842921,
+      "sha256": "3644a9727ae0719894f3b614dffed879229d9600c3bb878686e56219a90c5a4c"
+    },
+    "maximum-harms.csv": {
+      "bytes": 22981,
+      "sha256": "4a58ec1fd87ce0da9975fad22c67eaa4c5c64f7cbfd50c102f46a5d55e91912e"
+    },
+    "REPORT.md": {
+      "bytes": 32315,
+      "sha256": "ac84a3b43e3428bc779ee770ff2b082fdcc9832d29dda42571875e0ac6880ec8"
+    },
+    "targets.csv": {
+      "bytes": 1165395,
+      "sha256": "5b805e4950c94d33016af86e9743870bf01653d19a6c41a7e42229300141d850"
+    },
+    "verification.json": {
+      "bytes": 2481,
+      "sha256": "075c34531135597d37b8fd6c73fb700a2ca719d87df89f06260f93262c428c4c"
+    }
+  }
+}

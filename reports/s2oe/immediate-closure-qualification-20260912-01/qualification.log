@@ -1,0 +1,9 @@
+test_01_regular_closure (tests.test_s2oe_immediate_closure.ClosureTests.test_01_regular_closure) ... ok
+test_02_before_formation (tests.test_s2oe_immediate_closure.ClosureTests.test_02_before_formation) ... ok
+test_03_after_formation (tests.test_s2oe_immediate_closure.ClosureTests.test_03_after_formation) ... ok
+test_04_budget_prestart (tests.test_s2oe_immediate_closure.ClosureTests.test_04_budget_prestart) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.456s
+
+OK

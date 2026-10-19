@@ -19,16 +19,47 @@ Vor jeder neuen Aufgabe sind mindestens `AKTUELLER_FORSCHUNGSWEG.md`,
 lesen. Der aktuelle Forschungsweg hat fuer neue Arbeiten Vorrang vor
 historischen Plaenen und aelteren Architekturabschnitten.
 
-Die fachliche Richtung steht ausserdem in:
+Historische Grundlagen und Aussagegrenzen stehen ausserdem in:
 
 - `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`
 - `docs/S1HH_DYNAMISCHER_SUBSTRAT_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG.md`
+
+Die dortigen damaligen "aktuellen" Freigaben sind keine heutigen Auftraege.
+Fuer den belegten S2-Grundpfad gilt die oberste Standseinordnung im
+Forschungsweg; ein alter S1-Substratvertrag startet keinen neuen Zweig.
 
 Aeltere Richtungs-, Bauplan- und Prioritaetsdokumente sind historische
 Forschungsprotokolle. Sie begruenden keine aktuelle Projektfaehigkeit und
 haben fuer neue Arbeiten keinen Vorrang.
 
+Bei konzeptionellen Richtungsentscheidungen zusaetzlich
+`docs/KONZEPTNOTIZ_WAHRNEHMUNGSVERLAEUFE_PRAEGUNG_UND_INNERKONTEXT.md`
+lesen. Sie bewahrt die vom Benutzer festgehaltenen spaeteren Fragen zu
+Verlaufserfahrung, Praegung und biologischer Modulation, ist aber keine
+operative Freigabe. Der aktuelle Gedaechtnisauftrag bleibt vorrangig; keine
+Emotions-, Hormon- oder Feld-Memory-Implementierung daraus ableiten.
+
 ## Manueller MCM-Arbeitsmodus
+
+### Synchronisation nach Chatweitergabe
+
+Vor weitergeleiteten Auftraegen zuerst den obersten aktuellen Arbeitsauftrag
+in `AKTUELLER_FORSCHUNGSWEG.md` und den Repository-Stand abgleichen.
+Aeltere Abschnitte mit "Aktuell" oder "Vorrangig" sind historische
+Zeitstaende, keine parallel geltenden Freigaben. Das gilt auch fuer alte
+Dateien unter `.codex-orchestrator` und veraltete Chat-Zusammenfassungen.
+
+Ein Forscherbericht, `WEITER`, eine automatische Wiederzustellung oder eine
+bereits erledigte Freigabe starten keine neue Arbeit. Auftrag, Bezugscommit,
+Artefakt und erlaubte Handlung muessen zum aktuellen Stand passen.
+Identische Rueckmeldungen nicht erneut als offene Entscheidung behandeln.
+Eine verbrauchte Einmallauffreigabe wird durch erneute Zustellung nicht erneuert.
+
+Der Analyst uebergibt einen aktuellen Auftrag direkt an den benannten
+Forscher. Ein Weiterleiter darf ihn transportieren, aber weder erweitern,
+neu freigeben noch aus Ergebnisberichten selbst Folgeauftraege erzeugen.
+Bei widerspruechlicher Weitergabe bleibt operative Ausfuehrung gesperrt;
+der Forscher meldet einmal den konkreten abweichenden Stand.
 
 Die Forschungsrichtung wird im Analysten-Hauptchat durch den Benutzer und
 den beratenden Codex festgelegt. Analyst und ausfuehrender Forscher haben
@@ -87,11 +118,41 @@ Die Analystenbeschraenkung ist keine pauschale Sperre dieses Forscherchats.
 
 ## Rueckmeldung und Abschluss
 
-Kann die Arbeit normal fortgesetzt werden, endet die Rueckmeldung mit:
+### Verbindliche Fortsetzung nach Teilabschluss (Benutzerauftrag 2026-09-30)
 
-```text
-WEITER: Am besten geht es jetzt mit ... weiter.
-```
+Der Abschluss eines Teilauftrags beendet nicht die fachliche Arbeitsfolge.
+Der Analyst verarbeitet Ergebnisuebergaben, trifft die anstehende fachliche
+Entscheidung und formuliert den naechsten begruendeten, begrenzten Auftrag
+mit Empfaenger, Ergebnis und Abnahmekriterium. Liegt der naechste Schritt
+beim Analysten, bearbeitet er ihn selbst innerhalb seiner lesenden Rolle,
+statt den Entwickler um weitere Bestaetigungen zu bitten.
+"Abnahme offen" allein ist kein bearbeitbarer Auftrag und kein begruendeter
+Stillstand. Ein echter Blocker benennt fehlenden Nachweis oder Entscheidung,
+Zustaendigkeit, betroffenen Schritt und erlaubte unabhaengige Fortsetzung.
+Keine kuenstlichen Folgeauftraege, Dokumentations- oder Testwiederholungen
+nur zum Fortsetzen der Kommunikation. Keine Sackgassen durch Abschlussformeln
+ohne fachliche Anschlussentscheidung. Dies aendert keine Workflow-Technik,
+Rollen, Einmallauffreigaben oder Grenzen realer Versuche.
+
+Auf Benutzerauftrag vom 20.09.2026 gilt: Ein freigegebenes Entwicklerpaket
+wird bis zu seinen Abnahmekriterien bearbeitet. Noch offene Implementierung
+ist kein Freigabeblocker. Neutrale Entwicklungstests innerhalb dieses Pakets
+duerfen wiederholt und Fehler eigenstaendig korrigiert werden. Dies erneuert
+keine formale Qualifikation und keine Freigabe fuer reale Versuchslaeufe.
+
+Die bisherige Pflicht zu einer abschliessenden WEITER-Nachricht entfaellt.
+Normale Arbeitszwischenstaende sind keine Analystenentscheidungen und sollen
+keine wechselseitige Bestaetigungsschleife erzeugen. Eine fachliche Uebergabe
+enthaelt geaenderte Dateien, konkret ausgefuehrte Test-IDs und Ergebnisse oder
+ein tatsaechliches Hindernis mit betroffenem Arbeitsschritt. "Noch offen",
+"verstanden" und "kein technisches Hindernis" sind keine Ergebnisuebergaben.
+
+Der Analyst haelt den Abnahmeumfang waehrend eines Pakets stabil. Er prueft
+gelieferte Artefakte; er beantwortet identische Leermeldungen nicht mit immer
+neuen fachlichen Auftraegen. Bei echter Unterbrechung wird der konkrete
+Fortsetzungspunkt gesichert, ohne eine neue Forschungsfreigabe zu behaupten.
+Diese Regeln sind Projektanweisungen, keine technisch implementierte
+Transportfilterung der externen Workflow-Steuerung.
 
 Fehlt eine zwingende fachliche Entscheidung oder eine ausdrueckliche
 Einmallauffreigabe, wird sie mit `RUECKMELDUNG ERFORDERLICH` gekennzeichnet.
@@ -136,9 +197,12 @@ Jedes Ergebnis trennt:
 
 Vorzustandswirkung, Nachhall, Persistenz, Snapshot, Reproduzierbarkeit,
 Zustandsweitergabe oder feste Adapterwirkung sind nur technische Befunde.
-`Memory` bleibt eine offene Forschungsrichtung und keine vorhandene
-Projektfaehigkeit. Groessere psychologische, intelligente oder
-lebensbezogene Eigenschaften werden nicht behauptet.
+Memory als eigene Organisation des Feldes bleibt eine offene Forschungsfrage.
+Die getrennte private A/B-Software-Memory darf nur im konkret bestaetigten
+S2-Umfang als vorhandene Funktion bezeichnet werden, nicht als Nachweis
+feldinterner Memory, allgemeiner Identitaet oder Semantik. Groessere
+psychologische, intelligente oder lebensbezogene Eigenschaften werden
+nicht behauptet.
 
 ## Verbotene Vorprogrammierung
 

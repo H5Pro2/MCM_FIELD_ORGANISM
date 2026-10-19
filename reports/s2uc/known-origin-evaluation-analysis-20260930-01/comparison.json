@@ -1,0 +1,195 @@
+{
+  "development": {
+    "test_targets": {
+      "total": 8,
+      "origin_counts": {
+        "CORRECT": 3,
+        "ABSTAIN": 3,
+        "WRONG": 1,
+        "AMBIGUOUS": 1
+      },
+      "positive_origin_counts": {
+        "CORRECT": 3,
+        "ABSTAIN": 1,
+        "AMBIGUOUS": 1
+      },
+      "negative_origin_counts": {
+        "ABSTAIN": 2,
+        "WRONG": 1
+      },
+      "assignment_coverage": 0.5,
+      "context_coverage": 0.375,
+      "positive_correct_fraction": 0.6,
+      "negative_wrong_fraction": 0.3333333333333333,
+      "correct_rejections": 2,
+      "roles": {
+        "retained": 4
+      },
+      "prediction_abstentions": {
+        "FACTOR_CONTINUATION_NOT_SPECIFIED": 1,
+        "ABSTAIN_NO_CONTEXT": 3,
+        "AMBIGUOUS_CONTEXT": 1
+      },
+      "paired": {
+        "count": 3,
+        "persistence_mae": 0.0021854682828815956,
+        "context_mae": 0.0013441559631764263,
+        "delta": 0.000841312319705169,
+        "better": 3,
+        "equal": 0,
+        "worse": 0
+      },
+      "full_coverage": {
+        "count": 8,
+        "persistence_mae": 0.0022482798320158158,
+        "observer_hybrid_mae": 0.0019327877121263772,
+        "delta": 0.0003154921198894384
+      },
+      "harm_rows": []
+    },
+    "learning_targets": {
+      "total": 36,
+      "origin_counts": {
+        "ABSTAIN": 17,
+        "CORRECT": 13,
+        "WRONG": 5,
+        "AMBIGUOUS": 1
+      },
+      "positive_origin_counts": {
+        "CORRECT": 13,
+        "AMBIGUOUS": 1
+      },
+      "negative_origin_counts": {
+        "ABSTAIN": 17,
+        "WRONG": 5
+      },
+      "assignment_coverage": 0.5,
+      "context_coverage": 0.25,
+      "positive_correct_fraction": 0.9285714285714286,
+      "negative_wrong_fraction": 0.22727272727272727,
+      "correct_rejections": 17,
+      "roles": {
+        "candidate": 17,
+        "retained": 1
+      },
+      "prediction_abstentions": {
+        "ABSTAIN_NO_CONTEXT": 17,
+        "ABSTAIN_NO_SUCCESSOR": 9,
+        "AMBIGUOUS_CONTEXT": 1
+      },
+      "paired": {
+        "count": 9,
+        "persistence_mae": 0.0018604692845559786,
+        "context_mae": 0.0003578390665890154,
+        "delta": 0.0015026302179669633,
+        "better": 9,
+        "equal": 0,
+        "worse": 0
+      },
+      "full_coverage": {
+        "count": 36,
+        "persistence_mae": 0.002537938125161855,
+        "observer_hybrid_mae": 0.002162280570670114,
+        "delta": 0.0003756575544917408
+      },
+      "harm_rows": []
+    }
+  },
+  "evaluation": {
+    "test_targets": {
+      "total": 8,
+      "origin_counts": {
+        "CORRECT": 3,
+        "ABSTAIN": 3,
+        "WRONG": 1,
+        "AMBIGUOUS": 1
+      },
+      "positive_origin_counts": {
+        "CORRECT": 3,
+        "ABSTAIN": 1,
+        "AMBIGUOUS": 1
+      },
+      "negative_origin_counts": {
+        "ABSTAIN": 2,
+        "WRONG": 1
+      },
+      "assignment_coverage": 0.5,
+      "context_coverage": 0.375,
+      "positive_correct_fraction": 0.6,
+      "negative_wrong_fraction": 0.3333333333333333,
+      "correct_rejections": 2,
+      "roles": {
+        "retained": 4
+      },
+      "prediction_abstentions": {
+        "FACTOR_CONTINUATION_NOT_SPECIFIED": 1,
+        "ABSTAIN_NO_CONTEXT": 3,
+        "AMBIGUOUS_CONTEXT": 1
+      },
+      "paired": {
+        "count": 3,
+        "persistence_mae": 0.0022393748366446105,
+        "context_mae": 0.0013327400177908318,
+        "delta": 0.0009066348188537786,
+        "better": 3,
+        "equal": 0,
+        "worse": 0
+      },
+      "full_coverage": {
+        "count": 8,
+        "persistence_mae": 0.0022584352964549878,
+        "observer_hybrid_mae": 0.0019184472393848208,
+        "delta": 0.000339988057070167
+      },
+      "harm_rows": []
+    },
+    "learning_targets": {
+      "total": 36,
+      "origin_counts": {
+        "ABSTAIN": 17,
+        "CORRECT": 13,
+        "WRONG": 5,
+        "AMBIGUOUS": 1
+      },
+      "positive_origin_counts": {
+        "CORRECT": 13,
+        "AMBIGUOUS": 1
+      },
+      "negative_origin_counts": {
+        "ABSTAIN": 17,
+        "WRONG": 5
+      },
+      "assignment_coverage": 0.5,
+      "context_coverage": 0.25,
+      "positive_correct_fraction": 0.9285714285714286,
+      "negative_wrong_fraction": 0.22727272727272727,
+      "correct_rejections": 17,
+      "roles": {
+        "candidate": 17,
+        "retained": 1
+      },
+      "prediction_abstentions": {
+        "ABSTAIN_NO_CONTEXT": 17,
+        "ABSTAIN_NO_SUCCESSOR": 9,
+        "AMBIGUOUS_CONTEXT": 1
+      },
+      "paired": {
+        "count": 9,
+        "persistence_mae": 0.002048014486354839,
+        "context_mae": 0.0003553136009719104,
+        "delta": 0.001692700885382929,
+        "better": 9,
+        "equal": 0,
+        "worse": 0
+      },
+      "full_coverage": {
+        "count": 36,
+        "persistence_mae": 0.0026225485724242856,
+        "observer_hybrid_mae": 0.002199373351078553,
+        "delta": 0.00042317522134573224
+      },
+      "harm_rows": []
+    }
+  },
+  "pooled": false
+}

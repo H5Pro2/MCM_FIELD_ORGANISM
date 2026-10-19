@@ -1,0 +1,77 @@
+S2UC Vierarmvergleich - neutraler Entwicklungsabschluss 2026-09-30
+
+Umfang: gespeicherte synthetische P2-Vektoren, keine Quellenproduktion.
+I2/B1 unveraenderte Referenzklassen; I1 ein Erhaltungsplatz, B2 zwei Erhaltungsplaetze.
+B-Arme halten weiterhin genau einen nicht abrufbaren Kandidaten. Dessen eigener Einfluss ist nicht isoliert.
+
+PRUEFUNGEN
+25/25 PASS, keine Fehler/Skips: 9 neue Tests + 11 Kandidatenregressionen (tests.txt);
+5 TU/TW-Regressionen (reference-regression.txt). Replay Exit 0.
+I2 und B1: je 100 bestandene Abgleiche gegen gespeicherte Ereignisreceipts,
+Erhaltungsinventare, vollstaendige Hinweiszustandsbilder und Besitzerabschluss.
+69 identische Ereignisse je Arm, 58 Frames, 11 Abschluesse; frische Besitzer je Arm/Geschichte.
+Alle Eingabe-, Referenz- und Codec-Hashbindungen unveraendert.
+Vorregistrierung SHA256: ba9e1f76c19b80ce79f598d594e91db2bb6ab3ee37fc715de646dfd652a11e26
+Alle 28 vorregistrierten Vorhersagen bestaetigt, 0 verletzt. Historische g1/24-Mehrdeutigkeitserwartung bleibt verletzt.
+
+ALLE SIEBEN HINWEISE: Treffer = Ursprungsformation @ Nullbasisoffset; - = ABSTAIN_NO_RETAINED_TRACE
+Hinweis | I1 | I2 | B1 | B2
+g1/12 | g1-p1 @1 | g1-p1 @1 | g1-p1 @1 | g1-p1 @1
+g1/24 | - | - | g1-p1 @2 | g1-p1 @2
+g1/26 | - | g1-p3 @0 | - | -
+g2/38 | - | g2-p1 @1 | - | -
+g3/60 | - | g3-p1 @2 | g3-p1 @2 | g3-p1 @2
+g3/67 | - | g3-p1 @2 | - | g3-p1 @2
+g3/69 | g3-p3 @0 | g3-p3 @0 | g3-p3 @0 | g3-p3 @0
+
+HERKUNFT UND UEBERGANGSURSACHEN
+g1/12: A aus g1-p1; B-Arme bestaetigen durch g1-p2 bei Abschluss10. Alle treffen.
+g1/24: A aus g1-p1 bleibt in B1/B2 erhalten. I1 verliert A bei Aufnahme B (Abschluss17), I2 bei Aufnahme C (22).
+g1/26: B aus g1-p3 bleibt nur in I2. I1 ersetzt B durch C (22); B1/B2 ersetzen B-Kandidat durch C (22), ohne B je abrufbar zu machen.
+g2/38: A aus g2-p1 bleibt nur in I2. I1 verdrangt A bei konkurrierender Aufnahme (36); B1/B2 ersetzen den unbestaetigten A-Kandidaten (36), Erhaltung bleibt leer.
+g3/60: A aus g3-p1, bestaetigt durch g3-p2 bei53; I1 verliert A bereits bei erster Aufnahme B (58). I2/B1/B2 treffen A.
+g3/67: Bestaetigung von B durch g3-p4 bei65 ersetzt A in B1; B2 erhaelt A und B. I2 behaelt A, I1 hatte A schon bei58 verloren.
+g3/69: B stammt in allen Armen aus g3-p3. In B1/B2 Promotion durch g3-p4 bei65; I-Arme bestaetigen B ohne FIFO-Verjuengung.
+
+RESSOURCEN
+Kapazitaeten: I1=8, I2=12, B1=12, B2=16 Spurframes; zusaetzlich jeweils maximal2 Hinweisframes.
+Gemessene Spitzen nach Aufrufrueckkehr: Arm | Bildung | Kandidat | Erhaltung | Gesamtspuren
+I1 | 4 | 0 | 4 | 8
+I2 | 4 | 0 | 8 | 12
+B1 | 4 | 4 | 4 | 12
+B2 | 4 | 4 | 8 | 12
+Rollenmaxima treten nicht notwendig gleichzeitig auf; sie duerfen nicht addiert werden.
+Temporaere eindeutige Frame-Identitaeten in Speicherzustand und aktiven Speicherfunktions-Lokalen:
+Arm | Spurmaximum | Hinweismaximum | gemeinsames Maximum | Beobachter-Callback ms | Wiedergabe ms | sonstige Beobachtung ms
+I1 | 8 | 2 | 8 | 417.318 | 12.104 | 4.242
+I2 | 12 | 2 | 12 | 494.628 | 13.706 | 29.612
+B1 | 12 | 2 | 12 | 207.449 | 12.181 | 17.465
+B2 | 12 | 2 | 12 | 219.337 | 14.097 | 2.637
+Der Grenztest test_temporary_observer_sees_python_frame_locals erreicht 16+2=18 Frames in B2.
+Der gespeicherte Hauptdatensatz nutzt diese volle B2-Kapazitaet nicht aus.
+384 Byte numerische Nutzlast je Frame (48 Binary64), keine RAM-Messung.
+Kapazitaetsnutzlast inkl. Hinweisreserve: I1 3840, I2/B1 5376, B2 6912 Byte.
+Tatsaechliches gemeinsames Nutzlastmaximum im Replay: I1 3072, I2/B1/B2 4608 Byte.
+Python tracemalloc: Laden/Decodieren {'elapsed_ns': 44025000, 'traced_net_bytes': 845434, 'traced_incremental_peak_bytes': 1146266};
+Wiedergabe einschliesslich Beobachtung {'elapsed_ns': 1655656200, 'traced_net_bytes': 227144, 'traced_incremental_peak_bytes': 250776};
+Serialisierungsprobe {'elapsed_ns': 8480100, 'traced_net_bytes': 111010, 'traced_incremental_peak_bytes': 221868, 'serialized_probe_bytes': 110817}.
+Phasenpeaks sind inkrementelle Python-Allokationen oberhalb ihres jeweiligen Startbestands, nicht additiv und kein Prozess-RAM.
+Die Wiedergabezeiten enthalten Frameaufbau und Eingabehash; Beobachtung umfasst Referenzabgleich und Berichtsdaten.
+Speicheraufrufzeiten enthalten Tracing; gemessene Callbackzeiten sind keine vollstaendige Abtrennung des Tracingaufwands.
+Die temporaere Zaehlung erfolgt an Python-Tracegrenzen, nicht als native Allokationsvollerfassung.
+Decodiertes Archiv und Beobachter-Snapshots liegen nur im Harness. Keine Armreferenz darauf und kein Archivabruf.
+
+MESSKORREKTUR
+Die erste Wiedergabe bestaetigte dieselben Vorhersagen, meldete aber ungueltige Nullwerte fuer temporaere Frames.
+Ursache: Python3.14 f_locals ist ein Mapping-Proxy, kein dict. Korrigiert auf Mapping; gezielter 16+2-Grenztest bestanden.
+Erstausgabe unveraendert erhalten als result-initial-invalid-measurement.json und replay-console-initial.txt.
+Nur result.json enthaelt die korrigierte Messung. Vorhersagen und Speicherregeln wurden nicht angepasst.
+
+GESTUETZTE ENTSCHEIDUNG UND NAECHSTER VORSCHLAG
+Der zweite Erhaltungsplatz verhindert unter bestaetigter Aufnahme den konkreten Verlust g3/67.
+Er beseitigt die erstmalige Abrufsperre g1/26 und g2/38 nicht. Kandidatenhaltung bleibt Bestandteil dieser Aufnahmebedingung.
+B2 ist damit eine geeignete lokale Entwicklungsbasis fuer bestaetigte Erfahrungserhaltung, keine Produktfreigabe.
+Naechster vorgeschlagener Fachschritt: begrenzten Vertrag fuer vorlaeufigen read-only Kandidatenabruf entwerfen,
+mit getrennter Kennzeichnung gegen bestaetigte Erhaltung, Konflikt-/Mehrdeutigkeitsregel und gleichem 16+2-Budget.
+Dies ist noch nicht implementiert und wird durch diese Gegenprobe nicht als erfolgreich nachgewiesen.
+Keine feldinterne Memory, allgemeine Lernfaehigkeit, Semantik oder Originalquellenwirksamkeit nachgewiesen.

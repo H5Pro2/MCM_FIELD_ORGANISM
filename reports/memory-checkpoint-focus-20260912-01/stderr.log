@@ -1,0 +1,9 @@
+test_evidence_unchanged (tests.test_checkpoint_roundtrip_focus.RoundtripControls.test_evidence_unchanged) ... ok
+test_field_canonical_roundtrip (tests.test_checkpoint_roundtrip_focus.RoundtripControls.test_field_canonical_roundtrip) ... ok
+test_memory_canonical_roundtrip (tests.test_checkpoint_roundtrip_focus.RoundtripControls.test_memory_canonical_roundtrip) ... ok
+test_native_types (tests.test_checkpoint_roundtrip_focus.RoundtripControls.test_native_types) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 1.689s
+
+OK

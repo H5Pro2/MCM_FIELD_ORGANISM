@@ -1,0 +1,1 @@
+{"active_pair":2,"cleanup":"CONFIRMED","completed_pairs":[1],"executions":{"archive_reference_completed":8,"extra_policy_measurement":0,"live_reference_completed":8,"policy_completed":8,"policy_started":8},"first_failure":"ValueError:PAIR_INCOMPLETE","research":false,"status":"TECHNICAL_ABORT"}

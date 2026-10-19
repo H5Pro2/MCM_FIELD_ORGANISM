@@ -1,0 +1,10 @@
+{
+  "pid": 20088,
+  "observer_pid": 11924,
+  "exit_code": 1,
+  "admitted": true,
+  "final_handshake": false,
+  "samples": 23,
+  "errors": [],
+  "product_result_present": false
+}

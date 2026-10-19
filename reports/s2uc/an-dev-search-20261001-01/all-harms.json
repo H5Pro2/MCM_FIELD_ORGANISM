@@ -1,0 +1,378 @@
+{
+  "0.0": {
+    "primary": {},
+    "learning": {}
+  },
+  "0.00390625": {
+    "primary": {},
+    "learning": {}
+  },
+  "0.0078125": {
+    "primary": {},
+    "learning": {}
+  },
+  "0.015625": {
+    "primary": {
+      "approx_vs_persistence": [
+        {
+          "case": "R3",
+          "target": 11,
+          "mae_increase": 0.0023763522335992263,
+          "exact": {
+            "case_id": "R3",
+            "target": 11,
+            "positive": true,
+            "origin_category": "ABSTAIN",
+            "assigned_root": null,
+            "true_root": "AN-DEV/A",
+            "role": null,
+            "assignment_covered": false,
+            "correct_rejection": false,
+            "prediction_status": "ABSTAIN_NO_CONTEXT",
+            "context_covered": false,
+            "persistence_mae": 0.0,
+            "context_mae": null,
+            "paired_delta": null,
+            "observer_hybrid_mae": 0.0,
+            "full_delta": 0.0
+          },
+          "approx": {
+            "case_id": "R3",
+            "target": 11,
+            "positive": true,
+            "origin_category": "CORRECT",
+            "assigned_root": "AN-DEV/A",
+            "true_root": "AN-DEV/A",
+            "role": "retained",
+            "assignment_covered": true,
+            "correct_rejection": false,
+            "prediction_status": "PREDICTED_RETAINED",
+            "context_covered": true,
+            "persistence_mae": 0.0,
+            "context_mae": 0.0023763522335992263,
+            "paired_delta": -0.0023763522335992263,
+            "observer_hybrid_mae": 0.0023763522335992263,
+            "full_delta": -0.0023763522335992263
+          }
+        }
+      ],
+      "approx_vs_exact": [
+        {
+          "case": "R3",
+          "target": 11,
+          "mae_increase": 0.0023763522335992263,
+          "exact": {
+            "case_id": "R3",
+            "target": 11,
+            "positive": true,
+            "origin_category": "ABSTAIN",
+            "assigned_root": null,
+            "true_root": "AN-DEV/A",
+            "role": null,
+            "assignment_covered": false,
+            "correct_rejection": false,
+            "prediction_status": "ABSTAIN_NO_CONTEXT",
+            "context_covered": false,
+            "persistence_mae": 0.0,
+            "context_mae": null,
+            "paired_delta": null,
+            "observer_hybrid_mae": 0.0,
+            "full_delta": 0.0
+          },
+          "approx": {
+            "case_id": "R3",
+            "target": 11,
+            "positive": true,
+            "origin_category": "CORRECT",
+            "assigned_root": "AN-DEV/A",
+            "true_root": "AN-DEV/A",
+            "role": "retained",
+            "assignment_covered": true,
+            "correct_rejection": false,
+            "prediction_status": "PREDICTED_RETAINED",
+            "context_covered": true,
+            "persistence_mae": 0.0,
+            "context_mae": 0.0023763522335992263,
+            "paired_delta": -0.0023763522335992263,
+            "observer_hybrid_mae": 0.0023763522335992263,
+            "full_delta": -0.0023763522335992263
+          }
+        }
+      ]
+    },
+    "learning": {}
+  },
+  "0.03125": {
+    "primary": {
+      "approx_vs_persistence": [
+        {
+          "case": "R3",
+          "target": 11,
+          "mae_increase": 0.0023763522335992263,
+          "exact": {
+            "case_id": "R3",
+            "target": 11,
+            "positive": true,
+            "origin_category": "ABSTAIN",
+            "assigned_root": null,
+            "true_root": "AN-DEV/A",
+            "role": null,
+            "assignment_covered": false,
+            "correct_rejection": false,
+            "prediction_status": "ABSTAIN_NO_CONTEXT",
+            "context_covered": false,
+            "persistence_mae": 0.0,
+            "context_mae": null,
+            "paired_delta": null,
+            "observer_hybrid_mae": 0.0,
+            "full_delta": 0.0
+          },
+          "approx": {
+            "case_id": "R3",
+            "target": 11,
+            "positive": true,
+            "origin_category": "CORRECT",
+            "assigned_root": "AN-DEV/A",
+            "true_root": "AN-DEV/A",
+            "role": "retained",
+            "assignment_covered": true,
+            "correct_rejection": false,
+            "prediction_status": "PREDICTED_RETAINED",
+            "context_covered": true,
+            "persistence_mae": 0.0,
+            "context_mae": 0.0023763522335992263,
+            "paired_delta": -0.0023763522335992263,
+            "observer_hybrid_mae": 0.0023763522335992263,
+            "full_delta": -0.0023763522335992263
+          }
+        }
+      ],
+      "approx_vs_exact": [
+        {
+          "case": "R3",
+          "target": 11,
+          "mae_increase": 0.0023763522335992263,
+          "exact": {
+            "case_id": "R3",
+            "target": 11,
+            "positive": true,
+            "origin_category": "ABSTAIN",
+            "assigned_root": null,
+            "true_root": "AN-DEV/A",
+            "role": null,
+            "assignment_covered": false,
+            "correct_rejection": false,
+            "prediction_status": "ABSTAIN_NO_CONTEXT",
+            "context_covered": false,
+            "persistence_mae": 0.0,
+            "context_mae": null,
+            "paired_delta": null,
+            "observer_hybrid_mae": 0.0,
+            "full_delta": 0.0
+          },
+          "approx": {
+            "case_id": "R3",
+            "target": 11,
+            "positive": true,
+            "origin_category": "CORRECT",
+            "assigned_root": "AN-DEV/A",
+            "true_root": "AN-DEV/A",
+            "role": "retained",
+            "assignment_covered": true,
+            "correct_rejection": false,
+            "prediction_status": "PREDICTED_RETAINED",
+            "context_covered": true,
+            "persistence_mae": 0.0,
+            "context_mae": 0.0023763522335992263,
+            "paired_delta": -0.0023763522335992263,
+            "observer_hybrid_mae": 0.0023763522335992263,
+            "full_delta": -0.0023763522335992263
+          }
+        }
+      ]
+    },
+    "learning": {}
+  },
+  "0.0625": {
+    "primary": {
+      "approx_vs_persistence": [
+        {
+          "case": "R3",
+          "target": 11,
+          "mae_increase": 0.0023763522335992263,
+          "exact": {
+            "case_id": "R3",
+            "target": 11,
+            "positive": true,
+            "origin_category": "ABSTAIN",
+            "assigned_root": null,
+            "true_root": "AN-DEV/A",
+            "role": null,
+            "assignment_covered": false,
+            "correct_rejection": false,
+            "prediction_status": "ABSTAIN_NO_CONTEXT",
+            "context_covered": false,
+            "persistence_mae": 0.0,
+            "context_mae": null,
+            "paired_delta": null,
+            "observer_hybrid_mae": 0.0,
+            "full_delta": 0.0
+          },
+          "approx": {
+            "case_id": "R3",
+            "target": 11,
+            "positive": true,
+            "origin_category": "CORRECT",
+            "assigned_root": "AN-DEV/A",
+            "true_root": "AN-DEV/A",
+            "role": "retained",
+            "assignment_covered": true,
+            "correct_rejection": false,
+            "prediction_status": "PREDICTED_RETAINED",
+            "context_covered": true,
+            "persistence_mae": 0.0,
+            "context_mae": 0.0023763522335992263,
+            "paired_delta": -0.0023763522335992263,
+            "observer_hybrid_mae": 0.0023763522335992263,
+            "full_delta": -0.0023763522335992263
+          }
+        }
+      ],
+      "approx_vs_exact": [
+        {
+          "case": "R3",
+          "target": 11,
+          "mae_increase": 0.0023763522335992263,
+          "exact": {
+            "case_id": "R3",
+            "target": 11,
+            "positive": true,
+            "origin_category": "ABSTAIN",
+            "assigned_root": null,
+            "true_root": "AN-DEV/A",
+            "role": null,
+            "assignment_covered": false,
+            "correct_rejection": false,
+            "prediction_status": "ABSTAIN_NO_CONTEXT",
+            "context_covered": false,
+            "persistence_mae": 0.0,
+            "context_mae": null,
+            "paired_delta": null,
+            "observer_hybrid_mae": 0.0,
+            "full_delta": 0.0
+          },
+          "approx": {
+            "case_id": "R3",
+            "target": 11,
+            "positive": true,
+            "origin_category": "CORRECT",
+            "assigned_root": "AN-DEV/A",
+            "true_root": "AN-DEV/A",
+            "role": "retained",
+            "assignment_covered": true,
+            "correct_rejection": false,
+            "prediction_status": "PREDICTED_RETAINED",
+            "context_covered": true,
+            "persistence_mae": 0.0,
+            "context_mae": 0.0023763522335992263,
+            "paired_delta": -0.0023763522335992263,
+            "observer_hybrid_mae": 0.0023763522335992263,
+            "full_delta": -0.0023763522335992263
+          }
+        }
+      ]
+    },
+    "learning": {}
+  },
+  "0.125": {
+    "primary": {
+      "approx_vs_persistence": [
+        {
+          "case": "R3",
+          "target": 11,
+          "mae_increase": 0.0023763522335992263,
+          "exact": {
+            "case_id": "R3",
+            "target": 11,
+            "positive": true,
+            "origin_category": "ABSTAIN",
+            "assigned_root": null,
+            "true_root": "AN-DEV/A",
+            "role": null,
+            "assignment_covered": false,
+            "correct_rejection": false,
+            "prediction_status": "ABSTAIN_NO_CONTEXT",
+            "context_covered": false,
+            "persistence_mae": 0.0,
+            "context_mae": null,
+            "paired_delta": null,
+            "observer_hybrid_mae": 0.0,
+            "full_delta": 0.0
+          },
+          "approx": {
+            "case_id": "R3",
+            "target": 11,
+            "positive": true,
+            "origin_category": "CORRECT",
+            "assigned_root": "AN-DEV/A",
+            "true_root": "AN-DEV/A",
+            "role": "retained",
+            "assignment_covered": true,
+            "correct_rejection": false,
+            "prediction_status": "PREDICTED_RETAINED",
+            "context_covered": true,
+            "persistence_mae": 0.0,
+            "context_mae": 0.0023763522335992263,
+            "paired_delta": -0.0023763522335992263,
+            "observer_hybrid_mae": 0.0023763522335992263,
+            "full_delta": -0.0023763522335992263
+          }
+        }
+      ],
+      "approx_vs_exact": [
+        {
+          "case": "R3",
+          "target": 11,
+          "mae_increase": 0.0023763522335992263,
+          "exact": {
+            "case_id": "R3",
+            "target": 11,
+            "positive": true,
+            "origin_category": "ABSTAIN",
+            "assigned_root": null,
+            "true_root": "AN-DEV/A",
+            "role": null,
+            "assignment_covered": false,
+            "correct_rejection": false,
+            "prediction_status": "ABSTAIN_NO_CONTEXT",
+            "context_covered": false,
+            "persistence_mae": 0.0,
+            "context_mae": null,
+            "paired_delta": null,
+            "observer_hybrid_mae": 0.0,
+            "full_delta": 0.0
+          },
+          "approx": {
+            "case_id": "R3",
+            "target": 11,
+            "positive": true,
+            "origin_category": "CORRECT",
+            "assigned_root": "AN-DEV/A",
+            "true_root": "AN-DEV/A",
+            "role": "retained",
+            "assignment_covered": true,
+            "correct_rejection": false,
+            "prediction_status": "PREDICTED_RETAINED",
+            "context_covered": true,
+            "persistence_mae": 0.0,
+            "context_mae": 0.0023763522335992263,
+            "paired_delta": -0.0023763522335992263,
+            "observer_hybrid_mae": 0.0023763522335992263,
+            "full_delta": -0.0023763522335992263
+          }
+        }
+      ]
+    },
+    "learning": {}
+  }
+}

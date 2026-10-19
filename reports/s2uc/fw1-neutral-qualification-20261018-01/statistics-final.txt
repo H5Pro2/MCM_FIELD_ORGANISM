@@ -1,0 +1,10 @@
+test_06_mixture_not_interaction (experiments.fw1.test_contract.Contract.test_06_mixture_not_interaction) ... ok
+test_07_equal_and_last_reset_information (experiments.fw1.test_contract.Contract.test_07_equal_and_last_reset_information) ... ok
+test_08_incomplete_and_bad_matrix (experiments.fw1.test_contract.Contract.test_08_incomplete_and_bad_matrix) ... ok
+test_09_full_denominator_synthetic_only (experiments.fw1.test_contract.Contract.test_09_full_denominator_synthetic_only) ... ok
+test_16_variable_resampling_and_decisions (experiments.fw1.test_contract.Contract.test_16_variable_resampling_and_decisions) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.467s
+
+OK

@@ -1,0 +1,12 @@
+{
+  "base_preparation_bytes": 6540018,
+  "preparation_dossier_bytes": 59677,
+  "external_report_reserved_bytes": 524288,
+  "charged_bytes": 7123983,
+  "authorization_sha256": "46c53d02928410d6f4e6c51a9f03967a4da69654808e11d2645aa093b4536579",
+  "binding_sha256": "78525e2ff688151cc0dfbb9400a40a4a5732df426d52b89e4d6b5067ddc016f3",
+  "launcher_sha256": "e564352f8cdea8150caa4a15d4996d6a6e32f5b9a4e94a0ccb98d2cd73b7342b",
+  "authorization_only_status_changed": true,
+  "new_qualification": false,
+  "policy_changed": false
+}

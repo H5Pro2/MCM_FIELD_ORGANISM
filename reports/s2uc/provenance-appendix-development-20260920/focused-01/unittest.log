@@ -1,0 +1,26 @@
+test_bounded_process_to_seven_hint_report_with_full_budget (tests.test_s2uc_provenance_appendix.AppendixTests.test_bounded_process_to_seven_hint_report_with_full_budget) ... ok
+test_failed_appendix_rename_counts_staging_preserves_product (tests.test_s2uc_provenance_appendix.AppendixTests.test_failed_appendix_rename_counts_staging_preserves_product) ... ok
+test_incomplete_product_never_calls_evaluator (tests.test_s2uc_provenance_appendix.AppendixTests.test_incomplete_product_never_calls_evaluator) ... ok
+test_input_changed_after_publication_is_rejected_by_reader (tests.test_s2uc_provenance_appendix.AppendixTests.test_input_changed_after_publication_is_rejected_by_reader) ... ok
+test_input_changed_during_publication_invalidates_appendix_only (tests.test_s2uc_provenance_appendix.AppendixTests.test_input_changed_during_publication_invalidates_appendix_only) ... ok
+test_invalid_product_terminal_never_calls_evaluator (tests.test_s2uc_provenance_appendix.AppendixTests.test_invalid_product_terminal_never_calls_evaluator) ... ok
+test_joint_verification_reserve_plus_one_rejects_individually_small_report (tests.test_s2uc_provenance_appendix.AppendixTests.test_joint_verification_reserve_plus_one_rejects_individually_small_report) ... ERROR
+test_observer_metadata_is_counted_and_overflow_blocks_evaluation (tests.test_s2uc_provenance_appendix.AppendixTests.test_observer_metadata_is_counted_and_overflow_blocks_evaluation) ... ok
+test_product_directory_cannot_be_used_as_appendix (tests.test_s2uc_provenance_appendix.AppendixTests.test_product_directory_cannot_be_used_as_appendix) ... ok
+
+======================================================================
+ERROR: test_joint_verification_reserve_plus_one_rejects_individually_small_report (tests.test_s2uc_provenance_appendix.AppendixTests.test_joint_verification_reserve_plus_one_rejects_individually_small_report)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_provenance_appendix.py", line 161, in test_joint_verification_reserve_plus_one_rejects_individually_small_report
+    proof_size = (self.product / 'verification.json').stat().st_size
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\pathlib\__init__.py", line 654, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] Das System kann den angegebenen Pfad nicht finden: 'reports\\s2uc\\provenance-appendix-development-20260920\\focused-01\\cases\\test_joint_verification_reserve_plus_one_rejects_individually_small_report\\S2UC-V9-NEUTRAL-01a61cf8dfe14c42bf5109dad6c40eb9\\verification.json'
+
+----------------------------------------------------------------------
+Ran 9 tests in 273.589s
+
+FAILED (errors=1)

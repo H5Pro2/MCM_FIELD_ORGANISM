@@ -1,0 +1,26 @@
+{
+  "old_prestart_sha256": "0c2f35cf2e6c6a68f6725fe9a71253efb70f757254019ada69f44d777ce05027",
+  "old_file_count": 346,
+  "all_old_files_match": true,
+  "terminal_repair_sha256": "d93693d178f0f52938be9323a01fbaf681210e3fe8b1317b1af44a762faa9dd2",
+  "all_repair_files_match_before_overview_update": true,
+  "overview_snapshot_mapping": {
+    "README.md": "reports/s2uc/ura1-v3-preparation-20261015-01/historical-overviews/README.md",
+    "AKTUELLER_FORSCHUNGSWEG.md": "reports/s2uc/ura1-v3-preparation-20261015-01/historical-overviews/AKTUELLER_FORSCHUNGSWEG.md",
+    "docs/README.md": "reports/s2uc/ura1-v3-preparation-20261015-01/historical-overviews/docs/README.md"
+  },
+  "matrix_sha256": "0b9fbf483e870adac01ded7d2d0d0a651a11474a4ac2e4fbae1c14e793d7d965",
+  "matrix_identical": true,
+  "inherited_tests": [
+    "P01-P08",
+    "O01-O04",
+    "T01-T08",
+    "original terminal process fault probes"
+  ],
+  "not_repeated": [
+    "large policy size run",
+    "archive-only large qualification",
+    "bootstrap selection or regeneration",
+    "full statistics qualification"
+  ]
+}

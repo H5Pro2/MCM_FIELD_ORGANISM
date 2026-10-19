@@ -1,0 +1,6 @@
+{
+  "observation": "A record changed after technical verification could initially be rebound to a new hash and reported as evaluable.",
+  "correction": "Bind record reference to input/verified bytes and terminal verification reference to the exact published proof bytes; reject subsequent differences.",
+  "regression": "tests.test_s2uc_publication_v7.V7PublicationTests.test_changed_verified_bytes_cannot_be_rebound_to_success",
+  "earlier_run": "Interrupted intentionally on discovery; artifacts outside final/ are intermediate development evidence."
+}

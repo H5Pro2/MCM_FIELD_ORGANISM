@@ -1,0 +1,35 @@
+{
+  "status": "COMPLETE",
+  "cases": 4,
+  "frames": 112,
+  "files": {
+    "A-A.json": {
+      "bytes": 88838,
+      "sha256": "bddd06939f9638f5b5f06c70a04aa120de804e1f9e05e32566305075f2cb5537"
+    },
+    "A-B.json": {
+      "bytes": 88844,
+      "sha256": "a05d665fc53a171a258550ce94b16a763df12856a3cfbc11528b9a255920661c"
+    },
+    "B-A.json": {
+      "bytes": 88103,
+      "sha256": "5f06290c08869a56462f10325ea91701d61aa5279790b1015726958a3e477bef"
+    },
+    "B-B.json": {
+      "bytes": 88108,
+      "sha256": "559f40002872cdaa266bcc3fd0fc58f58c9981bb4589360348ae6258fdd7a4df"
+    },
+    "check.py": {
+      "bytes": 4302,
+      "sha256": "26f1e52faa15511e78583cacd256f60ba70d0649f5a0bdf25e551e19a808da17"
+    },
+    "REPORT.md": {
+      "bytes": 5631,
+      "sha256": "c2751c061ba450a206c25c76218ad8ca7423b9809bb68127518476fb104623dc"
+    },
+    "verification.json": {
+      "bytes": 11217,
+      "sha256": "64a8ae9c1a3800f3ed2d20b5ed76f3f8710c4ca433ca3c347124e9925972e05d"
+    }
+  }
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "case": "success",
+    "process": {
+      "pid": 3248,
+      "observer_pid": 13036,
+      "exit_code": 0,
+      "admitted": true,
+      "final_handshake": true,
+      "samples": 749,
+      "errors": [],
+      "product_result_present": true
+    },
+    "valid": true,
+    "native": {
+      "target": {
+        "working_set": 49389568,
+        "private_commit": 442437632,
+        "os_peak_working_set": 70713344,
+        "os_peak_private_commit": 463941632
+      },
+      "observer": {
+        "working_set": 19525632,
+        "private_commit": 13500416,
+        "os_peak_working_set": 19529728,
+        "os_peak_private_commit": 13500416
+      },
+      "job": {
+        "ns": 459640298595700,
+        "member": true,
+        "flags": 8448,
+        "limit": 671088640,
+        "peak_process_commit": 463941632,
+        "peak_job_commit": 470519808
+      }
+    },
+    "sampled_max": {
+      "target": {
+        "working_set": 70139904,
+        "private_commit": 463372288
+      },
+      "observer": {
+        "working_set": 19537920,
+        "private_commit": 13635584
+      }
+    },
+    "warnings": 0,
+    "status": "CLOSED_NEUTRAL_VERIFIED",
+    "primary_error": null,
+    "source": {
+      "attempts": 58,
+      "successes": 58,
+      "status": "COMPLETE",
+      "reached_step": "NJ",
+      "counters": {
+        "pcm_hashes": 58,
+        "audio_analyses": 58,
+        "nj_projections": 58
+      }
+    },
+    "actual": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26931,
+        "static_shared": 96872,
+        "record": 184874,
+        "verification": 2433,
+        "error": 0,
+        "terminal": 1644,
+        "minimal": 0,
+        "staging": 0
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26931,
+        "record": 184874,
+        "verification": 2433,
+        "staging": 0,
+        "shared": 98516
+      },
+      "total_bytes": 1011807,
+      "violations": [],
+      "within_limits": true
+    }
+  },
+  {
+    "case": "memoryerror",
+    "process": {
+      "pid": 17728,
+      "observer_pid": 13036,
+      "exit_code": 0,
+      "admitted": true,
+      "final_handshake": true,
+      "samples": 835,
+      "errors": [],
+      "product_result_present": true
+    },
+    "valid": true,
+    "native": {
+      "target": {
+        "working_set": 51187712,
+        "private_commit": 443125760,
+        "os_peak_working_set": 71114752,
+        "os_peak_private_commit": 463839232
+      },
+      "observer": {
+        "working_set": 19316736,
+        "private_commit": 13549568,
+        "os_peak_working_set": 19546112,
+        "os_peak_private_commit": 13635584
+      },
+      "job": {
+        "ns": 459649097749900,
+        "member": true,
+        "flags": 8448,
+        "limit": 671088640,
+        "peak_process_commit": 463839232,
+        "peak_job_commit": 470417408
+      }
+    },
+    "sampled_max": {
+      "target": {
+        "working_set": 70537216,
+        "private_commit": 463839232
+      },
+      "observer": {
+        "working_set": 19320832,
+        "private_commit": 13549568
+      }
+    },
+    "warnings": 0,
+    "status": "NOT_EVALUABLE",
+    "primary_error": "MemoryError",
+    "source": {
+      "attempts": 58,
+      "successes": 57,
+      "status": "PARTIAL",
+      "reached_step": "NONE",
+      "counters": {
+        "pcm_hashes": 57,
+        "audio_analyses": 57,
+        "nj_projections": 57
+      }
+    },
+    "actual": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26935,
+        "static_shared": 96872,
+        "record": 181114,
+        "verification": 385,
+        "error": 1653,
+        "terminal": 1653,
+        "minimal": 0,
+        "staging": 0
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26935,
+        "record": 181114,
+        "verification": 385,
+        "staging": 0,
+        "shared": 100178
+      },
+      "total_bytes": 1007665,
+      "violations": [],
+      "within_limits": true
+    }
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "order": [
+    [
+      "A",
+      "direct",
+      "shared"
+    ],
+    [
+      "B",
+      "direct",
+      "json"
+    ],
+    [
+      "C",
+      "integrated",
+      "json"
+    ],
+    [
+      "D",
+      "integrated",
+      "shared"
+    ]
+  ],
+  "fixture": "N2",
+  "arm": "M",
+  "frames": 80,
+  "replays": 4,
+  "admissions": 320,
+  "reference_advances": 320,
+  "seconds": 900,
+  "bytes": 16777216,
+  "trace": true,
+  "warmups": 0,
+  "repetitions": 0,
+  "counters_scope": "Basisvisitor: all dispatched trace events; own stack and filename checks; per-callback unique float visits and sample payload identities; Frame leaf hits. Derived visitor costs remain active but not individually counted.",
+  "timing": "Identical inner wrapper immediately around original baseline.replay, after source preparation/profile digest and before export; monotonic wall and process CPU.",
+  "comparisons": "All non-resource fields canonical; all meter fields exact; full resource objects additionally compared with every difference retained, including heap.",
+  "integrated": "Frozen execute bytecode via V2 execute, one N2/M case only. Same checked/active/three Mock dispatchers. Manifest length check adapted2->1; diagnostics do not assess a32-case raster.",
+  "limits": "Existing policy resource limits retained; diagnostic counters are separate observer overhead, not a new resource certification."
+}

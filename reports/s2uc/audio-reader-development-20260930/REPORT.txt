@@ -1,0 +1,101 @@
+BEGRENZTER AUDIO-LESER -- ENTWICKLUNGSABSCHLUSS 2026-09-30
+26/26 Tests PASS,0 Fehler,0 Fehlschlaege,0 Skips; neutral, keine NASA-Dekodierung.
+Abnahmeanfrage im dokumentierten Implementierungs-/Testumfang, keine Realfreigabe.
+Belege: tests-06.json (Test-IDs und OS-/Decoderbefunde), tests-06.txt.
+
+IMPLEMENTIERUNG
+Neu tools/_s2uc_bounded_audio.py: gesperrter Hash-/Quellhandle, gezaehltes I/O,
+Audio-Leser, PTS-pruefender Einfensterassembler, zeitkorrekte bestehende NJ-
+Projektion, reserviertes Ausgabelimit. Kein vollstaendiger PCM-Speicher.
+Neu tools/s2uc_audio_worker.py: Stdlib-Startbarriere, Windows-Job640MiB vor
+Decoderimports, Kindpruefung der Mitgliedschaft/Grenzen, Anfrage- und Gesamt-
+Watchdog, gebundene Einmal-Materialisierung mit reserviertem Fehlerabschluss.
+Wiederverwendet: DecoderJob/ExtendedLimits aus _s2oe_decoder_worker.py und
+load_av aus _s2oe_media_decoder.py; beide Dateien unveraendert. Joblimit wird
+vor Prozessaufnahme auf640MiB gesetzt und Betriebssystemzustand nachgeprueft.
+Neu tools/s2uc_audio_binding.py und tools/s2uc_audio_qualification.py;
+neu tests/test_s2uc_bounded_audio.py. Binding572 Dateien, SHA256 3089947ad40211a66866b9d700a103afc319a7af553fe991a3ff175cd82cae3b.
+Bestehende Rezeptor-, NJ-, Memory- und Prognoseregeln nicht geaendert.
+Neue Dokumente: Laufzeitbindung, PENDING-Autorisierungsvorlage,
+konkreter NASA-Ausfuehrungsauftrag; Forschungsweg aktualisiert.
+
+ECHTE DECODER-/OS-TESTS
+- Neutral-WAV:100 Fenster,480000 akzeptierte Samples,100 Rezeptor-/100NJ-Aufrufe;
+  Quellzeiten fuer jedes Fenster und Snapshotindices0,10,...,990 geprueft.
+  118 Pakete/118 Frames,483328 dekodierte Samples/Kanal inklusive Endueberhang,
+  1998892 Decoder-Lesebyte, separater Hashpass1939244Byte; Fensterbuffer4800Samples.
+- Neutral-AAC im MP4 mit realer elst:100 Fenster; erste dekodierte PTS0,
+  470 Pakete/469 Frames,480256 Samples/Kanal,5610 Decoder-Lesebyte plus Hashpass.
+  Decoder behandelt Edit-List/Codec-Priming; Anwendung zieht keinen Versatz ab.
+- Neutrales NUT mit Video und zwei Audiospuren: nur erste Audiospur(Index1)
+  liefert PCM. Nicht-Audio-Paket wird gezaehlt, aber nicht dekodiert.
+- Reale neutrale NUT-Dateien mit PTS-Luecke bzw. Ueberlappung: Abbruch erkannt.
+- Neutraldatei mit fruehem EOF: kontrollierter Fehler und beendeter Kindprozess.
+- Engere neutrale Lese-/Paket-/Frame-/Sample-/Batch-Limits loesen im selben
+  Decoderpfad aus. Produktionslimits koennen dadurch nicht vergroessert werden.
+- Windows verweigert Schreibzugriff auf die waehrend Hash/Decode geoeffnete
+  Quelldatei und erlaubt ihn erst wieder nach close.
+- Echte Speicherallokation groesser640MiB im Job abgewiesen; OS-Meldung9,
+  memory_limit_notification=true. Kein bloss injizierter MemoryError.
+- Anfragewatchdog mit0,5s und Gesamtwatchdog mit1s neutral verkuerzt geprueft;
+  Gesamtwatchdog beendet Kind auch waehrend Elternprozess wartet. Produktgrenzen
+  bleiben30s/300s. Unzugeordneter Prozess scheitert vor Decoderarbeit.
+
+SIMULIERTE/KERNPRUEFUNGEN -- AUSSAGEGRENZE
+Fehlende/nicht samplegenaue PTS, positiver Anfang, negativer Vorlauf und
+Endueberhang werden mit neutralen Frame-/Zeitdaten am produktiven Assembler
+geprueft. Fehlende PTS/negativer Vorlauf sind damit keine zusaetzlichen echten
+Containerbefunde; der echte AAC-Test belegt die konkrete neutrale Edit-/Priming-
+Variante. PCM-Domaene, Kanalzahl/Layout und falsche Rate werden zurueckgewiesen.
+Ausgabegrenze/Reserve und Exklusivitaet im Ledger geprueft. Erfolgsabschluss
+und Teilfehler nach6 geschriebenen Fenstern mit neutralem Worker-Stub in
+Temp-Verzeichnis geprueft; dabei keine NASA-Datei geoeffnet. Wiederholungsaufruf
+auf denselben Ausgabeordner gesperrt. Ungueltige Freigabe/Runtimebindung/
+Quellenhash blockieren den jeweiligen Einstieg, ohne NASA-Dekodierung.
+
+GRENZEN UND GEMESSENE RESSOURCEN
+Hart:640MiB Prozess- und Job-Commit, ein aktiver Prozess, Kill-on-close.
+Beobachtet WAV+NJ: Prozesspeak463609856Byte/Jobpeak470175744Byte;
+Betriebssystembelege in tests-06.json.
+Keine RSS-Aussage und keine NASA-Verbrauchsprognose.
+Einfensterbuffer19200Byte, plus aktueller Batch, Mono-Konversionsarrays und
+kurzlebige Uebergabekopie; kein versteckter kompletter PCM-Abschnitt. Decoder-
+Batchlimit65536 Samples/Kanal, maximal8Kanaele; Native-Allokationen sind bereits
+vor der nachgelagerten Batchpruefung moeglich und deshalb durch Job begrenzt.
+32MiB Decoder-I/O vor jedem Read, maximal2048 demuxte Pakete ALLER Spuren;
+512 Frames/524288 Samples/Kanal fuer dekodierte Audiobatches. EOF/Flushing-
+Pakete mitgezaehlt. Frames/Batches nach Decode geprueft, nicht als vorgezogene
+native Mengenbegrenzung ausgeben.100 Fenster und100/100 Rezeptor-/NJ-Aufrufe.
+4MiB Ausgabelimit,256KiB Abschlussreserve, IPC-Nachricht maximal65536Byte,
+Antwortqueue Kapazitaet1. Kein Ressourcenfallback, kein automatischer Retry.
+Die Ausgabe-Reserve ist ein logisches Budget, keine Garantie gegen defekten
+Datentraeger/fehlenden freien Speicher. Ein OS-/Hardware-Schreibfehler kann
+auch einen reservierten Fehlerbericht verhindern; Prozess wird dennoch beendet.
+Parent/Beobachter ist nicht im Kindprozess-Commitlimit; dessen Ausgabedaten sind
+separat begrenzt. Keine allgemein harte Prozess-RAM-Garantie fuer den Parent.
+
+KORREKTUR UND HISTORIE
+tests-03.json bewahrt einen Entwicklungsfehler SOURCE_TIME_INVALID: laufender
+Fensterindex wurde irrtuemlich als NJ-Snapshotindex genutzt. Korrigiert auf
+source_start/480, daher0,10,...,990 bei100 nicht ueberlappenden Fenstern.
+Profilhop480 bleibt unveraendert, externer Fensterhop4800. Finale Tests pruefen
+alle100 Quellintervalle. Fruehere Zwischenbelege bleiben erhalten; ausschliesslich
+tests-06 beschreibt den abschliessend geprueften Stand. Keine Fehlergeschichte
+als Quellenbefund umgedeutet. Keine bisherigen neun Vergleichsziele wiederholt.
+
+OFFEN / KONKRETE ENTSCHEIDUNG
+NASA-Datei blieb undekodiert. Offen sind ihre tatsaechliche Zeitkontinuitaet,
+Edit-/Priming-Zuordnung, Decodierbarkeit und Verbrauch im festen Abschnitt.
+Kein Ausweichen bei negativem Befund. Quellheaderdauer allein belegt das nicht.
+Der vorbereitete Ausfuehrungsauftrag bestimmt Quelle, Code-/Decoderbindung,
+Befehl, Ausgabe, Grenzen und einmaligen Fehlerabschluss vollstaendig.
+PENDING-Vorlage ist keine Freigabe; nur eine ausdrueckliche neue Beauftragung
+berechtigt zur Materialisierung. Kein49-Ziele-Vergleich in diesem Einstieg.
+
+NAECHSTER VORSCHLAG
+Entwicklungspaket im genannten Umfang abnehmen und ueber genau einen
+NASA[0,10)-Materialisierungsversuch gemaess
+ docs/S2UC_NASA_100_FENSTER_AUSFUEHRUNGSAUFTRAG_20260930.txt entscheiden.
+Erst bei vollstaendigem gebundenem100-Fenster-Bestand die49-Ziele-Integration
+beauftragen. Null Abdeckung bleibt spaeter gueltig; keine Regelaenderung oder
+Abschnittssuche aus den bisherigen negativen Ergebnissen ableiten.

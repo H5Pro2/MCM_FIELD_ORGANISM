@@ -1,0 +1,16 @@
+{
+  "files": {
+    "tools/_s2uc_ura1_direct_archive.py": "6a315508e710b018bc8c67f4e7281496fb5aafaa0b14e57ba148afebaba690e0",
+    "tools/_s2uc_ura1_direct_neutral.py": "1ad3c822f757ecbaf1b7ccfdf21c00b4737c3c11c4354248d26d823c73dfe542",
+    "tools/s2uc_ura1_direct_qualify.py": "f4618f055ef032b6528ad2ed1be6f2bce6b7504c680b819dc5332a41b3523a20",
+    "tests/test_s2uc_ura1_direct_archive.py": "0c4d9061ecd72b9141cc0fe1111e6011fe5fc5ba86b492a4e4e0abd4bb034623",
+    "docs/S2UC_URA1_DIREKTERFASSUNG_GRENZEN_20261015.md": "b63476f8c696901927512d01888c052d92c843d29023c72fe3d9b6a9d1922a26"
+  },
+  "predecessor_closures": {
+    "ura1-neutral-development-20261014-01": "880dfdf72c8aa0d4cdc02c001a5dd063e1d379d0dccff01c5ec40cc87aa638e5",
+    "ura1-codec-development-20261014-01": "4e8e4e88647981b06ebde1e64cc52375d403cf6114c1659cb2cd8d8b1aab88b5",
+    "ura1-resource-development-20261014-01": "62aa7a25610156fe69bf119c9c7d05d072937b2d553ffc6b8980d086e0829a76"
+  },
+  "research_ready": false,
+  "large_run_executed": false
+}

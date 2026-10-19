@@ -1,0 +1,469 @@
+{
+  "scope": "Static analysis only; no project code execution, payload generation, receptor or memory execution. All future artifact sizes are estimates, not qualification evidence.",
+  "baseline_source_bytes": 477802,
+  "baseline_files": [
+    {
+      "path": "mcm_field_organism/__init__.py",
+      "bytes": 940,
+      "sha256": "43bb1a27f4d4d373ec2af17ca128f35df6453fee86723160466543fb603704b6"
+    },
+    {
+      "path": "mcm_field_organism/broadband_hearing_path.py",
+      "bytes": 7983,
+      "sha256": "a20456b24c04d099ba5ee2da6250e3d83dc657392603c41d816b13ca68a37fb7"
+    },
+    {
+      "path": "mcm_field_organism/carrier_baselines.py",
+      "bytes": 3572,
+      "sha256": "dc891f4f263b17acf7b7b50c7c135d9a3d028cb1b9bdb72c342d72d24f1337ab"
+    },
+    {
+      "path": "mcm_field_organism/controlled_audio_source.py",
+      "bytes": 1237,
+      "sha256": "46744d3b377f1bcd54b7b8128dbd2a264683d45a534273031869aa127b80bd70"
+    },
+    {
+      "path": "mcm_field_organism/log_spectral_receptor.py",
+      "bytes": 7024,
+      "sha256": "26a6bd8f2d190db60c75ad29f275b3bd8b09b6d26d4ad54e4396176c4a36d2b0"
+    },
+    {
+      "path": "mcm_field_organism/root_lazy_exports.py",
+      "bytes": 258911,
+      "sha256": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+    },
+    {
+      "path": "reports/s2nd/seal_inventory.py",
+      "bytes": 17470,
+      "sha256": "9f72d2a9fc9676235cf69b23ea690d25f0a782222c54393ecf5b44107f0ce91c"
+    },
+    {
+      "path": "tools/_s2nj_private_auditory_output_projection.py",
+      "bytes": 7700,
+      "sha256": "e052cc76cf4c9678e11673d95390dea21634bba8082187567a760faaaf4904e5"
+    },
+    {
+      "path": "tools/_s2np_private_source_binding.py",
+      "bytes": 15138,
+      "sha256": "004ea7c8841e5f0b68fe9191604b0a0a7337ac568af2205dca900dd2ae874b12"
+    },
+    {
+      "path": "tools/_s2nu_private_source_binding.py",
+      "bytes": 13635,
+      "sha256": "8e0fa79f3ce66ce4228f46a52252de5d207c6cee29fefc42f957aa41dc56bce6"
+    },
+    {
+      "path": "tools/_s2ts_temporal_trace.py",
+      "bytes": 5001,
+      "sha256": "64d1e7f9ff54d898996974d960bfb58ac7386165846aeec0ea253079e0a8e6d8"
+    },
+    {
+      "path": "tools/_s2ts_temporal_trace_run.py",
+      "bytes": 10468,
+      "sha256": "e084f2aa6806337587284df6873068b6366e88eea2f02fc11bc981c143f8387a"
+    },
+    {
+      "path": "tools/_s2tu_retained_trace.py",
+      "bytes": 3846,
+      "sha256": "bf530380f93c8a1bf0eeae5a4169e81bc99aee10050872e3e5ddc7bfdb88f3f6"
+    },
+    {
+      "path": "tools/_s2tw_exact_confirmation.py",
+      "bytes": 1283,
+      "sha256": "90470980a329d0424bec9ba430adbbccaf72bb82145edfefd6e491b6fcec7be9"
+    },
+    {
+      "path": "tools/_s2ty_audio_materialization.py",
+      "bytes": 4090,
+      "sha256": "c332b1eccff35aefc0dbea27c4db78e5b97524ed2f46ab7a6461e3bcc522db72"
+    },
+    {
+      "path": "tools/_s2ty_resource_ledger.py",
+      "bytes": 5207,
+      "sha256": "9c39435dd15db76fbb41090e4073cd2e608d911772595ea123b40eba92e731f1"
+    },
+    {
+      "path": "tools/_s2ub_candidate_confirmation.py",
+      "bytes": 9869,
+      "sha256": "4178198b43fbbefd3cd550307ec114540c2167a3ae066e22bde01f5223f0ca8a"
+    },
+    {
+      "path": "tools/_s2ub_candidate_verification.py",
+      "bytes": 3075,
+      "sha256": "1c25a3afee15c8ada624c93fa81bbfbece1a1b7407502b029798fec84a00cc30"
+    },
+    {
+      "path": "tools/_s2uc_dependencies.py",
+      "bytes": 4937,
+      "sha256": "57e38a7cac23976e2d16274907e9528afb986961e051475362ea0f7b8f65aaf2"
+    },
+    {
+      "path": "tools/_s2uc_evaluation.py",
+      "bytes": 2341,
+      "sha256": "50f458bb1e9693227b119a87b0cf0e71ec1076d0f64427c93426397e33125e7a"
+    },
+    {
+      "path": "tools/_s2uc_neutral_connection.py",
+      "bytes": 8749,
+      "sha256": "25138be284998b37a59661690c9d291881708b47c7eccc7101799b045ee611da"
+    },
+    {
+      "path": "tools/_s2uc_record_codec.py",
+      "bytes": 8529,
+      "sha256": "43f5532064b11e130535c47afe50a48be418255a054e694253c412c6783ad70f"
+    },
+    {
+      "path": "tools/_s2uc_resource_ledger.py",
+      "bytes": 2705,
+      "sha256": "43e3fe248be3b70d2cd05fe0db4a15d20d88272a7761a9a93204837c3ef110be"
+    },
+    {
+      "path": "tools/_s2uc_run_binding.py",
+      "bytes": 34644,
+      "sha256": "2d2b359078ffbdd89edf36103f41d99ba33fcbdf0e31b4a34b40cc94fe75f591"
+    },
+    {
+      "path": "tools/_s2uc_run_entry.py",
+      "bytes": 13581,
+      "sha256": "1005335a67c6bf089dbc2399fb0b874d062924537b7522982f4c73f030778349"
+    },
+    {
+      "path": "tools/_s2uc_source_adapter.py",
+      "bytes": 1442,
+      "sha256": "011b75a724fab21dd12b66f02e2fb6a4626e7f1d4450ac4612d31fb53e4abead"
+    },
+    {
+      "path": "tools/_s2uc_source_binding.py",
+      "bytes": 6058,
+      "sha256": "3758b0b3291ae9f04d91f704548ae0a77f7bc56be87d189fa89ba48c2e735e78"
+    },
+    {
+      "path": "tools/_s2uc_verification.py",
+      "bytes": 17086,
+      "sha256": "1af8a9e2de68acf29b7ae2755f82330e959e96505867c81b4ba263d0b2f81626"
+    },
+    {
+      "path": "tools/s2uc_run_bound_once.py",
+      "bytes": 1281,
+      "sha256": "bcdd6537958e019bd8ef713e89bba4e10e567d6285852f3725d5cdedd83d0e0e"
+    }
+  ],
+  "removed_in_optimistic_model": [
+    "mcm_field_organism/root_lazy_exports.py",
+    "tools/_s2ts_temporal_trace.py",
+    "tools/_s2ts_temporal_trace_run.py",
+    "tools/_s2ty_resource_ledger.py"
+  ],
+  "retained_floor_before_new_modules": 198215,
+  "unused_import_bytes": 49,
+  "source_reader_extracted_text_bytes_lf": 976,
+  "compatibility_and_separation_allowance_estimated": 2048,
+  "modeled_source_files": [
+    {
+      "path": "mcm_field_organism/__init__.py",
+      "bytes": 940,
+      "sha256": "43bb1a27f4d4d373ec2af17ca128f35df6453fee86723160466543fb603704b6"
+    },
+    {
+      "path": "mcm_field_organism/broadband_hearing_path.py",
+      "bytes": 7983,
+      "sha256": "a20456b24c04d099ba5ee2da6250e3d83dc657392603c41d816b13ca68a37fb7"
+    },
+    {
+      "path": "mcm_field_organism/carrier_baselines.py",
+      "bytes": 3572,
+      "sha256": "dc891f4f263b17acf7b7b50c7c135d9a3d028cb1b9bdb72c342d72d24f1337ab"
+    },
+    {
+      "path": "mcm_field_organism/controlled_audio_source.py",
+      "bytes": 1237,
+      "sha256": "46744d3b377f1bcd54b7b8128dbd2a264683d45a534273031869aa127b80bd70"
+    },
+    {
+      "path": "mcm_field_organism/log_spectral_receptor.py",
+      "bytes": 7024,
+      "sha256": "26a6bd8f2d190db60c75ad29f275b3bd8b09b6d26d4ad54e4396176c4a36d2b0"
+    },
+    {
+      "path": "reports/s2nd/seal_inventory.py",
+      "bytes": 17470,
+      "sha256": "9f72d2a9fc9676235cf69b23ea690d25f0a782222c54393ecf5b44107f0ce91c"
+    },
+    {
+      "path": "tools/_s2nj_private_auditory_output_projection.py",
+      "bytes": 7700,
+      "sha256": "e052cc76cf4c9678e11673d95390dea21634bba8082187567a760faaaf4904e5"
+    },
+    {
+      "path": "tools/_s2np_private_source_binding.py",
+      "bytes": 15138,
+      "sha256": "004ea7c8841e5f0b68fe9191604b0a0a7337ac568af2205dca900dd2ae874b12"
+    },
+    {
+      "path": "tools/_s2nu_private_source_binding.py",
+      "bytes": 13635,
+      "sha256": "8e0fa79f3ce66ce4228f46a52252de5d207c6cee29fefc42f957aa41dc56bce6"
+    },
+    {
+      "path": "tools/_s2tu_retained_trace.py",
+      "bytes": 3846,
+      "sha256": "bf530380f93c8a1bf0eeae5a4169e81bc99aee10050872e3e5ddc7bfdb88f3f6"
+    },
+    {
+      "path": "tools/_s2tw_exact_confirmation.py",
+      "bytes": 1283,
+      "sha256": "90470980a329d0424bec9ba430adbbccaf72bb82145edfefd6e491b6fcec7be9"
+    },
+    {
+      "path": "tools/_s2ty_audio_materialization.py",
+      "bytes": 4090,
+      "sha256": "c332b1eccff35aefc0dbea27c4db78e5b97524ed2f46ab7a6461e3bcc522db72"
+    },
+    {
+      "path": "tools/_s2ub_candidate_confirmation.py",
+      "bytes": 9869,
+      "sha256": "4178198b43fbbefd3cd550307ec114540c2167a3ae066e22bde01f5223f0ca8a"
+    },
+    {
+      "path": "tools/_s2ub_candidate_verification.py",
+      "bytes": 3075,
+      "sha256": "1c25a3afee15c8ada624c93fa81bbfbece1a1b7407502b029798fec84a00cc30"
+    },
+    {
+      "path": "tools/_s2uc_dependencies.py",
+      "bytes": 4937,
+      "sha256": "57e38a7cac23976e2d16274907e9528afb986961e051475362ea0f7b8f65aaf2"
+    },
+    {
+      "path": "tools/_s2uc_evaluation.py",
+      "bytes": 2341,
+      "sha256": "50f458bb1e9693227b119a87b0cf0e71ec1076d0f64427c93426397e33125e7a"
+    },
+    {
+      "path": "tools/_s2uc_neutral_connection.py",
+      "bytes": 8749,
+      "sha256": "25138be284998b37a59661690c9d291881708b47c7eccc7101799b045ee611da"
+    },
+    {
+      "path": "tools/_s2uc_record_codec.py",
+      "bytes": 8529,
+      "sha256": "43f5532064b11e130535c47afe50a48be418255a054e694253c412c6783ad70f"
+    },
+    {
+      "path": "tools/_s2uc_resource_ledger.py",
+      "bytes": 2656,
+      "sha256": "43e3fe248be3b70d2cd05fe0db4a15d20d88272a7761a9a93204837c3ef110be"
+    },
+    {
+      "path": "tools/_s2uc_run_binding.py",
+      "bytes": 34644,
+      "sha256": "2d2b359078ffbdd89edf36103f41d99ba33fcbdf0e31b4a34b40cc94fe75f591"
+    },
+    {
+      "path": "tools/_s2uc_run_entry.py",
+      "bytes": 13581,
+      "sha256": "1005335a67c6bf089dbc2399fb0b874d062924537b7522982f4c73f030778349"
+    },
+    {
+      "path": "tools/_s2uc_source_adapter.py",
+      "bytes": 1442,
+      "sha256": "011b75a724fab21dd12b66f02e2fb6a4626e7f1d4450ac4612d31fb53e4abead"
+    },
+    {
+      "path": "tools/_s2uc_source_binding.py",
+      "bytes": 6058,
+      "sha256": "3758b0b3291ae9f04d91f704548ae0a77f7bc56be87d189fa89ba48c2e735e78"
+    },
+    {
+      "path": "tools/_s2uc_verification.py",
+      "bytes": 17086,
+      "sha256": "1af8a9e2de68acf29b7ae2755f82330e959e96505867c81b4ba263d0b2f81626"
+    },
+    {
+      "path": "tools/s2uc_run_bound_once.py",
+      "bytes": 1281,
+      "sha256": "bcdd6537958e019bd8ef713e89bba4e10e567d6285852f3725d5cdedd83d0e0e"
+    },
+    {
+      "path": "tools/_s2uc_source_plan.py",
+      "bytes": 976,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "path": "MODEL_ONLY/import_separation_and_compatibility.py",
+      "bytes": 2048,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "modeled_source_bytes": 201190,
+  "active_reserve": 131072,
+  "active_excess": 70118,
+  "shared_items_estimated": {
+    "active_dependency_sources": 201190,
+    "frozen_source_binding": 19210,
+    "dependency_inventory": 5082,
+    "qualification_summary": 4265,
+    "qualification_protocol": 12538,
+    "qualification_budget": 1060,
+    "qualification_result": 640,
+    "budget_ledger": 1318,
+    "terminal_reserve": 16384
+  },
+  "shared_total_estimated": 261687,
+  "shared_limit": 262144,
+  "shared_excess_estimated": -457,
+  "metadata_estimated": 28759,
+  "final_binding_estimated": 4319,
+  "test_ids_for_size_model_only": [
+    "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_manifest_binds_all_three_shapes_and_has_no_evaluation_labels",
+    "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_complete_neutral_connection_materializes_once_per_endpoint_and_verifies",
+    "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_failure_between_stories_preserves_completed_story_and_marks_remaining",
+    "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_common_ledger_uses_alternative_closures_and_rejects_overflow",
+    "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_file_entry_rejects_closed_gate_without_invoking_materializer",
+    "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_verifier_rejects_missing_swapped_and_snapshot_manipulations",
+    "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_failure_between_arm_calls_has_independent_progress_verification",
+    "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_first_owner_close_failure_does_not_prevent_second_owner_close",
+    "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_owner_close_failure_after_complete_story_stops_without_next_story",
+    "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_failure_verifier_rejects_prior_and_prefix_receipt_manipulations",
+    "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_entry_resets_gate_after_manifest_failure",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_static_run_binding_covers_sources_uses_and_all_expectations",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_prepared_run_identity_is_accepted_and_unknown_identity_is_rejected",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_final_binding_accepts_only_the_prepared_identity_and_resolved_artifacts",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_validation_rejects_undercounted_single_item_with_current_digests",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_validation_rejects_actual_final_file_above_bound_reserve",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_validation_rejects_inconsistent_branch_contributions_with_current_digests",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_validation_rejects_missing_or_extra_branches_and_contribution_keys",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_validation_rejects_duplicate_negative_missing_and_noninteger_items",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_validation_rejects_changed_reserves_and_qualification_artifact_sizes",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_validation_rejects_empty_qualification_artifacts",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_validation_rejects_mismatched_qualification_ids_results_tests_and_code",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_real_starter_rejects_synthetic_qualification",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_real_starter_rejects_matching_but_incomplete_dependencies",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_real_starter_rejects_complete_but_oversized_dependencies",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_dependency_closure_includes_transitive_delayed_and_package_imports",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_dependency_scanner_follows_nested_relative_and_delayed_imports",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_real_starter_rejects_omitted_delayed_transitive_and_package_files",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_real_starter_rejects_structurally_valid_legacy_binding",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_source_adapter_uses_all_bound_positions_without_deduplication",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_verifier_rejects_missing_and_manipulated_source_completion",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_last_endpoint_failure_preserves_attempt_and_success_difference",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_authorization_gate_and_isolated_neutral_execution",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_starter_rejects_code_binding_before_supplier",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_final_binding_validates_referenced_qualification_and_budget_before_supplier",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_neutral_materialization_roundtrip_and_reloaded_verification",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_materialization_failure_in_second_story_roundtrips_and_verifies_prefix",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_reloaded_record_rejects_manipulated_materialization_origin",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_owner_close_error_after_neutral_materialization_stops_and_roundtrips",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_entry_serializes_reloads_verifies_and_only_then_evaluates",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_existing_output_directory_is_never_modified",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_evaluation_rejects_missing_and_duplicate_expected_receipts",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_entry_verification_failure_publishes_terminal_and_blocks_evaluation",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_failure_budget_counts_error_receipt_and_terminal_separately",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_codec_failure_after_connection_retains_completed_progress_and_blocks_evaluation",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_unbudgetable_error_terminal_publishes_bounded_minimal_evidence",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_terminal_write_failure_preserves_primary_codec_error",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_entry_failure_blocks_evaluation_and_resets_gate",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_entry_rejects_actual_reserve_overflow_and_resets_gate",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v2_codec_keeps_binary64_values_and_separate_frame_identities",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_codec_keeps_historical_v1_record_form_readable",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v3_codec_references_event_values_hex_without_losing_long_binary64_forms",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_record_preflight_rejects_oversized_metadata_before_publication",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v2_codec_worst_case_distinct_vectors_stays_within_its_bound",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v2_codec_full_neutral_structure_with_distinct_vectors_fits_record_reserve",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_record_write_failure_preserves_primary_error_and_closes_gate",
+    "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_ledger_separates_record_reserve_from_absolute_record_limit"
+  ],
+  "external": [
+    {
+      "module": "__future__",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "ast",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "dataclasses",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "enum",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "hashlib",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "importlib",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "json",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "math",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "numpy",
+      "kind": "third-party",
+      "version": "2.4.4"
+    },
+    {
+      "module": "os",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "pathlib",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "re",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "struct",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "sys",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "types",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "typing",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    }
+  ],
+  "assumptions": [
+    "Removal of root_lazy_exports is hypothetical: delaying its import does NOT remove it from the existing conservative scanner.",
+    "Source plan frozen binding size uses historical reference, not a new generated binding. New signatures and path lengths require remeasurement.",
+    "The 2048-byte allowance is an estimate for import separation/compatibility/scanner changes, not implemented code.",
+    "Retained floor is conditional on these four removals; not a global mathematical minimum for arbitrary architecture refactoring."
+  ],
+  "small_proposal_source_estimate": 458309,
+  "small_proposal_edit_allowance": 256,
+  "conditional_retained_floor_after_unused_import": 198166,
+  "ledger_base_load_references": 0,
+  "product_hashes_unchanged": true
+}

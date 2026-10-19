@@ -1,0 +1,126 @@
+{
+  "bindings": {
+    "reports/s2uc/pcm-temporal-20260930-01/band-comparisons.csv": "a5b68b31b9753741381cee58f2067a8552dcd7b6895729df6e446b3ffdcb6a95",
+    "reports/s2uc/pcm-temporal-20260930-01/half-W2.pcm": "a5a0110c47d8945d1eb946805255fc9daa826603455f7ebd3c4482cb883d46ac",
+    "reports/s2uc/pcm-temporal-20260930-01/half-W3.pcm": "b533eebd8a8a357ba365800b617f4cfb95686f1731b7fade5ea0531eda5b12d9",
+    "reports/s2uc/pcm-temporal-20260930-01/input-binding.json": "c4e0503a950476d3f782470f9a774c131c5568c3552bdefdc23ea37e5b8f4a48",
+    "reports/s2uc/pcm-temporal-20260930-01/preregistration.json": "c12574ccde982966fd6c1cdf7fb5baf73e8f7123ca0bdcdb01a720285830f1dc",
+    "reports/s2uc/pcm-temporal-20260930-01/REPORT.txt": "787e68a93707791cd825e1a4b36f9402989846102ae93601bee743a620a10ac5",
+    "reports/s2uc/pcm-temporal-20260930-01/result.json": "280e4d8f613794077c62624a7996343db76790f6805a0ec8ae93caf21376fc25",
+    "reports/s2uc/pcm-temporal-20260930-01/run-console.txt": "2e9d0944599f89c8937ce156a9b86f3d8e1cba93894dbfdd116ead8df25fb64d",
+    "reports/s2uc/pcm-temporal-20260930-01/tests.txt": "0dbcc42c9054d3cb5f96117474a4ae173f7f8768e765acb8726bf41c88c2738a",
+    "tools/s2uc_pcm_temporal_check.py": "f975af4fac222ac6c3c005351c76d872ba26ec6fd538129c7bd3b02d78298ea5",
+    "tests/test_s2uc_pcm_temporal.py": "f899c21811886295ae16d90107055c63f3db7eca77052d79118ea26b67a6968f",
+    "sources/s2uc/temporal-chirp-v1/sequence.pcm": "4774f24ad52ec7e431c360ec1f2d18c663584d1ed3fbffa83fa0f4fe3d5442a6",
+    "sources/s2uc/temporal-chirp-v1/provenance.json": "af9452e92cbfe2a515063d996811f13982bded4d83ee81e01b1617e904613fd8",
+    "tools/_s2tu_retained_trace.py": "bf530380f93c8a1bf0eeae5a4169e81bc99aee10050872e3e5ddc7bfdb88f3f6",
+    "tools/_s2tw_exact_confirmation.py": "90470980a329d0424bec9ba430adbbccaf72bb82145edfefd6e491b6fcec7be9",
+    "tools/_s2ub_candidate_confirmation.py": "4178198b43fbbefd3cd550307ec114540c2167a3ae066e22bde01f5223f0ca8a",
+    "tools/_s2uc_four_arm.py": "214805475c8794663026798b95f88f4b6e5cd6455d474a4eb75b1ee2c5e5a16b",
+    "tools/_s2uc_provisional_hint.py": "3fcf1c358548c85ddbec462028a43a96e3ec24a6bffd2948ad87da502f802c8e",
+    "tools/_s2uc_two_candidates.py": "e75da4a1e63ff1b844f8b9e8de62922cea4fa5f549f6b8b37d7a2774f291995e",
+    "tools/_s2uc_record_codec.py": "43f5532064b11e130535c47afe50a48be418255a054e694253c412c6783ad70f",
+    "tools/s2uc_four_arm_check.py": "ba0566f18f54790b5d9e57deb1e067eb38a6b21f2fcb4dc5d4521a7e6c2afc67",
+    "tools/s2uc_b2v_check.py": "446e999e309d807acf3ac0e50e7778b8ab43ad4ea8e6032d65b81f8a71eaa593",
+    "tools/s2uc_k2_check.py": "5773fca13edac4b2a82201167d31d640b465f11cd1b6538173f2ab49de550c1d",
+    "tools/_s2uc_factor_hint.py": "f1fdd62043d7939cd7b144eae797f84c94ff3196979d1028798d2af546220e19",
+    "tools/_s2uc_allocation.py": "e333866a96d5924672d9e71d1abb67a23e18578babc56f01583e3b17fcbbebd1",
+    "tools/s2uc_allocation_check.py": "9b403df9d6f2a2f4186c78e1d74e2298f023f8b0a420860995112333398bd4e8",
+    "tools/s2uc_factor_hint_check.py": "f765ba126a9c9d8a9de80c42865a09428628fbe048dab7532bd71f94284649ec",
+    "tools/s2uc_pcm_half_check.py": "2c3b8649b9b65d466b4c7a92a655c4c93e90c89d974891d47c477dae627eefa0",
+    "mcm_field_organism/root_lazy_exports.py": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016",
+    "mcm_field_organism/__init__.py": "43bb1a27f4d4d373ec2af17ca128f35df6453fee86723160466543fb603704b6",
+    "mcm_field_organism/carrier_baselines.py": "dc891f4f263b17acf7b7b50c7c135d9a3d028cb1b9bdb72c342d72d24f1337ab",
+    "mcm_field_organism/log_spectral_receptor.py": "26a6bd8f2d190db60c75ad29f275b3bd8b09b6d26d4ad54e4396176c4a36d2b0",
+    "mcm_field_organism/controlled_audio_source.py": "46744d3b377f1bcd54b7b8128dbd2a264683d45a534273031869aa127b80bd70",
+    "mcm_field_organism/broadband_hearing_path.py": "a20456b24c04d099ba5ee2da6250e3d83dc657392603c41d816b13ca68a37fb7",
+    "tools/_s2nj_private_auditory_output_projection.py": "e052cc76cf4c9678e11673d95390dea21634bba8082187567a760faaaf4904e5",
+    "docs/S2UC_PCM_ZEITSEQUENZ_SIGNALENTWURF_20260930.txt": "6e008a112b5e38d911f8d4f534c5ca0a4995062d320a2acefed4ac24177a68e6",
+    "reports/s2uc/perception-recency-20260930-02/preregistration.json": "850b0e4773342a1f1635e811f823eb379ccb656cf924374285e563cabab2b7d8",
+    "reports/s2uc/perception-recency-20260930-02/REPORT.txt": "724d410574b0d053126974c568b86cc6700ff8f4652ec67198ce357952d339fa",
+    "reports/s2uc/perception-recency-20260930-02/result.json": "e3c66266cafe376c01be2e705d308323d5747792aeadca4e8faecd8dbc268fa3",
+    "reports/s2uc/perception-recency-20260930-02/tests.txt": "1436eafa66c67757134b4b1f521283ecab12f4926003f3df56ec52ef47839c45",
+    "tools/_s2uc_perception_recency.py": "816d0eebfe1815764ddcbcd4b47ccb57584005ca973bde74be7eb2d7ae2ae86c",
+    "tools/s2uc_perception_recency_check.py": "15e4b3ee05bc3a133a1989c474727474060ab6109388edf087be251091d4a2d3",
+    "tests/test_s2uc_perception_recency.py": "8fc6905f3d6d27a35f65563de38023c3c2e884e79153d5076e982ab072691e4b",
+    "tools/_s2tx_recency_confirmation.py": "e9499681361a365974f142c5df6fde1fcfdcdffa178d4aad463f062aee18c7c8",
+    "tools/_s2uc_factor_recency.py": "0eba81b522edbb628507d372091829e657ce5ee1bb20f44a0f78e34ef80c06e1",
+    "tools/s2uc_factor_recency_check.py": "1abab1a41cd2d1e6f5841524cb67abfaf536de1f3644e0c3251b2772fdbf3ab3",
+    "tests/test_s2uc_factor_recency.py": "ea741414cfccc69c1ba8029f56806a9d554ebc65b9b8be3b973983c6d2e7df78"
+  },
+  "scope": "LOCAL_INTEGRATION_STORED_VECTORS_ONLY",
+  "cases": [
+    "half_hint",
+    "exact_observation",
+    "half_observation",
+    "ambiguous_hint"
+  ],
+  "expected_final": {
+    "half_hint": {
+      "F": [
+        2,
+        3
+      ],
+      "P": [
+        2,
+        3
+      ],
+      "C": [
+        2,
+        3
+      ]
+    },
+    "exact_observation": {
+      "F": [
+        2,
+        3
+      ],
+      "P": [
+        1,
+        3
+      ],
+      "C": [
+        1,
+        3
+      ]
+    },
+    "half_observation": {
+      "F": [
+        2,
+        3
+      ],
+      "P": [
+        2,
+        3
+      ],
+      "C": [
+        2,
+        3
+      ]
+    },
+    "ambiguous_hint": {
+      "F": [
+        2,
+        3
+      ],
+      "P": [
+        2,
+        3
+      ],
+      "C": [
+        2,
+        3
+      ]
+    }
+  },
+  "predictions": [
+    "half HA: F/C A@0 factor .5, P no match; state unchanged",
+    "exact A: P/C refresh original A, F no refresh; candidate unchanged",
+    "full half A: candidate created, no refresh, marks unchanged; Z replaces this candidate",
+    "half BC: F/C A@1,D@1 ambiguous; P no match",
+    "original BC: all A@1,D@1 ambiguous",
+    "full occupancy: 16 trace + 2 hint simultaneously; pending forming not searchable"
+  ],
+  "runtime": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "created_ns": 1790790641619655800
+}

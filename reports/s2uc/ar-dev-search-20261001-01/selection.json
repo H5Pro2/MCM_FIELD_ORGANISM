@@ -1,0 +1,59 @@
+{
+  "epsilon": 0.0009765625,
+  "status": "DEVELOPMENT_CANDIDATE_ONLY",
+  "selected_tau": 0.015625,
+  "evaluation_selection_allowed": true,
+  "evaluation_execution_authorized": false,
+  "assessments": [
+    {
+      "tau": 0.0,
+      "eligible": true,
+      "additional_wrong": [],
+      "correct_R1_R2": 0,
+      "gain_R1_R2": 0
+    },
+    {
+      "tau": 0.00390625,
+      "eligible": true,
+      "additional_wrong": [],
+      "correct_R1_R2": 0,
+      "gain_R1_R2": 0
+    },
+    {
+      "tau": 0.0078125,
+      "eligible": true,
+      "additional_wrong": [],
+      "correct_R1_R2": 1,
+      "gain_R1_R2": 1
+    },
+    {
+      "tau": 0.015625,
+      "eligible": true,
+      "additional_wrong": [],
+      "correct_R1_R2": 2,
+      "gain_R1_R2": 2
+    },
+    {
+      "tau": 0.03125,
+      "eligible": true,
+      "additional_wrong": [],
+      "correct_R1_R2": 2,
+      "gain_R1_R2": 2
+    },
+    {
+      "tau": 0.0625,
+      "eligible": true,
+      "additional_wrong": [],
+      "correct_R1_R2": 2,
+      "gain_R1_R2": 2
+    },
+    {
+      "tau": 0.125,
+      "eligible": true,
+      "additional_wrong": [],
+      "correct_R1_R2": 2,
+      "gain_R1_R2": 2
+    }
+  ],
+  "scope": "Development only, not robustness evidence; no AR-EVAL execution"
+}

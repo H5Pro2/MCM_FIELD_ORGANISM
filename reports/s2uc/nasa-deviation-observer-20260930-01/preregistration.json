@@ -1,0 +1,510 @@
+{
+  "formulas": "MAE=fsum(abs(x-y))/N; MAX=max(abs(x-y)); MEAN_ABS_X/Y=fsum(abs(x/y))/N",
+  "persistence_targets": [
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21,
+    23,
+    25,
+    27,
+    29,
+    31,
+    33,
+    35,
+    37,
+    39,
+    41,
+    43,
+    45,
+    47,
+    49,
+    51,
+    53,
+    55,
+    57,
+    59,
+    61,
+    63,
+    65,
+    67,
+    69,
+    71,
+    73,
+    75,
+    77,
+    79,
+    81,
+    83,
+    85,
+    87,
+    89,
+    91,
+    93,
+    95,
+    97,
+    99
+  ],
+  "candidate_transitions": 24,
+  "threshold": null,
+  "files": [
+    {
+      "path": "docs/S2UC_NASA_ABWEICHUNGSVERTRAG_20260930.txt",
+      "sha256": "9964ca110c0a28f97bd014027981dd9196f890cf830136386bda4417afd5e2bf"
+    },
+    {
+      "path": "reports/s2uc/nasa-context-comparison-20260930-01/completion-check.json",
+      "sha256": "9597ec20f33486720fbb61414950b34a0b18b1641ce72a148fd2bbd2f86481c1"
+    },
+    {
+      "path": "reports/s2uc/nasa-context-comparison-20260930-01/inventory.json",
+      "sha256": "94954b6d4da09353fdc884f4e40d77167f6c4d600537e7856ab0784250a1e4c7"
+    },
+    {
+      "path": "reports/s2uc/nasa-context-comparison-20260930-01/REPORT.txt",
+      "sha256": "cf6f367f2f0d3e68b8f980b3dea3faebb581ed0e583a8b41a7e913d808613202"
+    },
+    {
+      "path": "reports/s2uc/nasa-context-comparison-20260930-01/result.json",
+      "sha256": "c34f2d4ce75df11506a54319adb11d3cb9d39ae4ea63988cc31c1156e07206eb"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/binding.json",
+      "sha256": "f439becea424b0a7c7534be4d4a7b8a0c02a133193090de82fa13d019af3fc13"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/claim.json",
+      "sha256": "e238c24e49675149a284955f4a1f358eaad94746785dd7457faf1878ef72d2bf"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/closure.json",
+      "sha256": "a93d95ba92454f3a0351607c8264aa1cfd3f2a128a9e7e917406a361527aa541"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/inventory.json",
+      "sha256": "f675ebaffa330ef64a6f1689e0fcd23cba3e76263bcfc6cb23c70e71507f0baa"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/REPORT.txt",
+      "sha256": "4751cc16103474f6354178a0f4451149d10f3e6bc69d081d820749a8986bcddc"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/verification.json",
+      "sha256": "ebc5fb6578e760185e03fa5abfb704f01c7259bc360eb8a9409c256f9d117c6f"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-001.json",
+      "sha256": "e45c6f3ecb2658d61889b6a14a446e078cda67a0d5458456386c101b3dfab0b0"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-002.json",
+      "sha256": "f3382fc97886dd5e978c3945bea37c8b489f3b25cfb095b75a2bcf56f4bf23ba"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-003.json",
+      "sha256": "0e3def2b78701a58cd8443be438677e644421413dcf3f5d93b5a6fc2e6a87f4b"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-004.json",
+      "sha256": "5bf93530a3c93fe278dd92fa00aa79ec8a7a876918a48372b7bc33ec40342eda"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-005.json",
+      "sha256": "1baabe522184e9b81b32070ced13a203b4a1bd93fd50c5e3f91fe56a574a7a56"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-006.json",
+      "sha256": "f7e466624ed96e7d3d685754d0317d0a714b01a49f7604147cbbde4901356960"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-007.json",
+      "sha256": "da3e761ffb7c3654d617327cad30c6729ec19c12cc69b8a9d86850587fd9adb2"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-008.json",
+      "sha256": "6a1cc44aaa061e7d5cbdac723ef419a64e7c0f300338da1d9d08c5d080062b30"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-009.json",
+      "sha256": "37560c3b5e060ec3c2a309650ac2bc385d951c49a6523f5dcb8a7a1077cebfbe"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-010.json",
+      "sha256": "00e5bba3b492e1cf91e42a00fe7fe348a13fb4f924a38d66d75a55e91af12ad9"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-011.json",
+      "sha256": "ee747c4f2c80d5a95909b2c3119d26c7dea8634bbebf33eaf1f9f083ea4a8292"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-012.json",
+      "sha256": "9a0543bcd9b5d617d989c27658bd2b65f34c6ca6224a412a0314b9072b57fd0b"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-013.json",
+      "sha256": "31f1f815cb1a348759feff334646c6ce862374cd67eadab01d39fef6d70d3d02"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-014.json",
+      "sha256": "bac903797a22202486d21d077b4c907ee6016a01b86063e1f0865408ae3f7d30"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-015.json",
+      "sha256": "43f98304fe5602109db458e519738d798fd5b1345f1abf017fcb5c9eb6184090"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-016.json",
+      "sha256": "5fcc7bfdc8087f742bed9b96e3fea1d8e874e23d39e0aaa6d3e130044091d32f"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-017.json",
+      "sha256": "c1f660a161f8aebdebd71ca3e327d12501060be287ca031d98085865e2b2a1bc"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-018.json",
+      "sha256": "3a31355ad471fdd88e8183235d82071f02cf8420d50896f7f69f56bd5375d5a4"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-019.json",
+      "sha256": "51668f59d3b66bc35a6db84ab552f38d70072809ef1bef25bd231071152f045c"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-020.json",
+      "sha256": "75863aee9c52e2942ba964c3955feafa17d25bdb0ac8abc3dfee9bf52af86412"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-021.json",
+      "sha256": "120e667f55909b04bb96928f8a025ea6b1e42c914152871f1895b5da2b064735"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-022.json",
+      "sha256": "7877f2f4f45cf9adac52cd7eefa84528e215639559039eb2c440f1578b79436c"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-023.json",
+      "sha256": "f1e3601400158415f7602070d270dc0a36f745f29560258ba591967b8b6c7fba"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-024.json",
+      "sha256": "ea1b89a95cd84d07da270aa4b846c75c29af18a05c588d17b3f1b9e59a76b821"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-025.json",
+      "sha256": "dc172984f984acdfbd08a6e4992ee8af0d62758f3d1ebbf70ba98a813a06ee94"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-026.json",
+      "sha256": "13acbe3051b0674803a3b7e75ad869a732ce6719c0216c56ef64c92b6dd82b59"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-027.json",
+      "sha256": "65726bc0eca50b541b3612bc7a6207cd623128e1b8361f15b1b64cc01ec7a6bf"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-028.json",
+      "sha256": "c68d288ab1a9e880d16428db1fae6621043fb4313752fd9c45c2117a7682dffa"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-029.json",
+      "sha256": "b06cb2eaddb987ee240e57ad422813d15ba9764df14789d3d9acc1a40164d478"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-030.json",
+      "sha256": "9e7989bab3e9db0f1b740d25f43c74c477e8b52ecd4d0778ecdb147f10d10545"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-031.json",
+      "sha256": "01ef20ea860496223244e1b91dd45f0a0c7099f0ae5b69572f4e4fe63096828a"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-032.json",
+      "sha256": "afd451ed0ee128114e946fcf4d33f08f49b2651c70bd937b59c5780575db69c7"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-033.json",
+      "sha256": "6b01cf162e270ab15ee5a7c3b4b4e883001ed9f3f2229c44398af603f2f9f3b0"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-034.json",
+      "sha256": "e705aaff24f87f59474955e759c3d2c53c8c7615d85797897a1212703a276b52"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-035.json",
+      "sha256": "a17c2d8e257f8059dbddae043ea190102bdb0c0db30af555cd51bb280ebb802d"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-036.json",
+      "sha256": "aa95f212101d846f2116187766d318652d96b114f5fcae2a21562f836f69ea14"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-037.json",
+      "sha256": "ae8fc4a013bfede5f1560836eada368a518b46691dd415e42c7852231d6c1865"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-038.json",
+      "sha256": "acfcde64adc06429f7328e4132557b906490bfd23eb9a90ae3922e7c40da2052"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-039.json",
+      "sha256": "a6d9ccef5989b368dc30297e5faf619b76656a87fc1e4a288577b2f5c827a4b3"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-040.json",
+      "sha256": "e6abb5053b895061c9c27246cea57b834a0e9c33c3722a1e1c5738d62dfb5dcd"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-041.json",
+      "sha256": "a1a1bc4eaaadb69800efeb68c6c032d6fbda6cdfa4592fa71c31822245179044"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-042.json",
+      "sha256": "cb73aff3e591c9ebf494ab689af4cad1982f46e4c29681312b25d0503db80230"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-043.json",
+      "sha256": "1ae91c8018fa9142414d464734b24197b286fe699cbe7d369cee08d46e69cc66"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-044.json",
+      "sha256": "8ea6a55eedc0e5bb52549c21b52f5a4640a9c842791fbcb4816d56d5e382c277"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-045.json",
+      "sha256": "3590cb1aad83951f05b9eb8ebb31dee479dffe5c99c95f7299a1c543021113d8"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-046.json",
+      "sha256": "fd17351fc4e063bcb3d9f1c9d629a9bba9e54ec22becd67a6f101eb36330f870"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-047.json",
+      "sha256": "4ea61b2bf7f0530c313b9fc3167e95738631242618ae712bd811022fe223d1f5"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-048.json",
+      "sha256": "764b9abdbc31705aa41d71328ec91a51d997aab2006eb216845406211b76651b"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-049.json",
+      "sha256": "2aabf9b7fc064192867c212375a89c75ff4ab087b62f7de1ffe874c356aeae4a"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-050.json",
+      "sha256": "96e6837f8faf0be5ae9be729ddf40cace969de59ef7e1979967876df09bf9598"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-051.json",
+      "sha256": "41b667de9d295c3e986c089560f42f2a52a0a23eb27bac575b7f2e22b6ca9c45"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-052.json",
+      "sha256": "af3df510e427a9600ff988902f0b7ca809c0be3d0056652d96a4e98d65e4a88c"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-053.json",
+      "sha256": "7956f6a895c626551825edb12ca1e8a4c14012f29c5910e590daf8ed42878fc2"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-054.json",
+      "sha256": "73e949225538ce40558356bcd29b1560df2067447d38ab6f0cdb3129eca64997"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-055.json",
+      "sha256": "cae896135b932bd98e64125fcf8a66e5da8da4000cbcc6b68a5032f1a0c4a45f"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-056.json",
+      "sha256": "8842b33b67a551f1070bd68266d8495deef33605c7913c7c121ae48b9df239f8"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-057.json",
+      "sha256": "f725966269f828b5ac6c3056102d3ed86557762252a107c9a44b6f84e822a5bb"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-058.json",
+      "sha256": "8f588a881a34f77161c2e02254dd8fd5bc2b5d39ea6a9d350d45a028725be86f"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-059.json",
+      "sha256": "d6cf2b8439f9a23df944683bd406248e5283c24b192108d6edc0e6415bdf1f0f"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-060.json",
+      "sha256": "21699d33d36c4ce82209f3eb38026a8ecde01fdfae37152066767578439304a3"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-061.json",
+      "sha256": "55245328ef142787c67d16a218635418beef5f8c1d7a9e3e0afc7a25479d47a7"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-062.json",
+      "sha256": "72df7dc42cca802a321b4841eda39b7157b3befccbbffc97d15958bef6bd9512"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-063.json",
+      "sha256": "290a5062b3ccb3825947cf4d9945877c6e04c5df67a03d3b2e24ea003609bbb3"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-064.json",
+      "sha256": "004bbfa5276fc1ea9ba964225a0f0b27977d470aac532e6c5b963b1b9acc7818"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-065.json",
+      "sha256": "ad728f295910fdff6bad7d4064f579cb413cdadc9cb97730d4cd4f2a8e6145af"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-066.json",
+      "sha256": "516435c88700be6c3db8fa57702bea8c695d2fccbec12577df4472be2d7c2e17"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-067.json",
+      "sha256": "ee0eb04cd98646f075dcb166045aa9bcc82f65328595946f7961e2ae1eca405d"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-068.json",
+      "sha256": "576f0d2ac6ba8249300868d5d071a67f7f8d1c6b90a31cbb0f119dee2593289f"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-069.json",
+      "sha256": "00b921ef0a8a1fa35300af2b0d486e6483503e8e07eacae51474b8ea432942f0"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-070.json",
+      "sha256": "f993c1b22c7b4e31672ab94407e4b8bc63cc6c0147359b6a1a7178c1d5116572"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-071.json",
+      "sha256": "0f15b2b76e3e9447006463bf46ec7d0df8989bc9ce2ba27bd33aa2fd702507de"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-072.json",
+      "sha256": "d2f5a21cecb98931e91b59a4ea315d95f41e7b0a441d4c6526e244513059ccfb"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-073.json",
+      "sha256": "f4a919a17e9d151ae742be621832528a788bc4abfaea1de0e1eecbb5d2b8cdff"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-074.json",
+      "sha256": "4c3575eec4cb89856c9ff631a5e66b429dc9725703270f91244dddeebc999b73"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-075.json",
+      "sha256": "fb7e9b488942397070dca25e6930dd2605fbdf43a8d6cfe9648ec9d79d7438ad"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-076.json",
+      "sha256": "f713c5067c6fa66bcbb84ac426577c8578246587173b9adbd64525c36dc19dac"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-077.json",
+      "sha256": "80309778ada22d1dad6fd62d5b52ceec78c550a99e286a5b9288e734488aac59"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-078.json",
+      "sha256": "335b8659508b313607226e4e9ea23c7c781fb2898b303b388428406331c66186"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-079.json",
+      "sha256": "c56f89e182fc001784311dc32625aa50aca9e7d80a9fd3b525725e018f99a977"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-080.json",
+      "sha256": "ed1f81e6a1d288a5911ea4d08cb6348bd4d4eb91bd9dfa351910dc53311b3870"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-081.json",
+      "sha256": "79cb072e68f43ab4b5b4b11691a5895e52126b8fa0b5631db6c4bfad52dd1f70"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-082.json",
+      "sha256": "38b199d731904abe68f105f1bc5d992c7363e583c7a43235d95872ff425572bd"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-083.json",
+      "sha256": "cc99f6900706ad5c8d35cdbe8c3b1c3b319d1841978be5dae4d42ee30d9c66e5"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-084.json",
+      "sha256": "72c767e221da3b13e348f825fba39e509b423ffdab0b2e7bcc8abddcda79bd99"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-085.json",
+      "sha256": "1a34d2b8ca3cb5b6a8162511fa28577195bd2d16d0c37d531ac7de862994b94c"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-086.json",
+      "sha256": "e18fbcfe06161fa78c64d4083f26673a38a7aa501b4dc9a3c04da57d26ed6217"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-087.json",
+      "sha256": "94c72eea4391d1fd8ede8429464bf855ed82dbf4619d3da7b0a8d2f3c72e1929"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-088.json",
+      "sha256": "7fd3a258b3f3a5d575da9472810cb27152b4fdbea0abdcbfb4e34fa51bac9c27"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-089.json",
+      "sha256": "fb17411e3462e5b2fcbc16fd00d2818aa8d1244b2e4517b2c5101c5923c5c907"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-090.json",
+      "sha256": "2f4d15b0cd0ae251891cd472b0671cdb8dce14ede3a76283d5505a919528d98e"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-091.json",
+      "sha256": "372098d9c54c46e5f5442ca225de1172e12cb242bf589c9438dec03348607f79"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-092.json",
+      "sha256": "d703e6481e5fe7178c6eafc04ee4aec7f2c9a51311bf93a2b2a631c68dc07ae0"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-093.json",
+      "sha256": "03ca47d68f8be8785d6cc03631abca649bc9060fd68bcbd88ae74e2f76d39807"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-094.json",
+      "sha256": "600f678bd5ae7dd4b1983dd43f5af87b60b33284530a7a774a3178c21ad38f48"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-095.json",
+      "sha256": "aa530ff4b88143037d878eab91912a7b1a37baa1a217b66de98787715621b45d"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-096.json",
+      "sha256": "723e7680ccc1fdc3731f2f1746e198f89e7992a31c5f50782c6f6bd888d64a1f"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-097.json",
+      "sha256": "20024ca5c80be635d0b3e1bcba3667602e80c453435eb4b0b75cc0c4a7a0e943"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-098.json",
+      "sha256": "7d683ffc3e3144bf0ac677b00bdd5a09bf0a9f7699d891f55ec15c2a0ab1ead1"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-099.json",
+      "sha256": "fd40c8e3fd2ebb7e09a15f3005c780bfa09ee905923d5970de3cc6b0faf46074"
+    },
+    {
+      "path": "reports/s2uc/nasa-contiguous-materialization-20260930-01/window-100.json",
+      "sha256": "ad2321a0888a37f136a2b73dfda7cbb9d025a894dc16676212ce6b42ffb24851"
+    },
+    {
+      "path": "tests/test_s2uc_deviation_observer.py",
+      "sha256": "80717c280fc65a930a6438c325001883f087d433f8f42b677105ce1fe8a077d3"
+    },
+    {
+      "path": "tools/s2uc_deviation_observer.py",
+      "sha256": "0920acaa365cd45427b7ec653771a20e44ac9b09dc5b746a71a97da135592101"
+    }
+  ]
+}

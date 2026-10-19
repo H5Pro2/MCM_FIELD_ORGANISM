@@ -1,0 +1,549 @@
+{
+  "version": "s2uc.an.material.v1",
+  "status": "PLAN_ONLY",
+  "partitions": {
+    "AN-DEV": {
+      "partition": "AN-DEV",
+      "kind": "DEV",
+      "episodes": {
+        "A": {
+          "seed": 1210001,
+          "frequencies_hz": [
+            340,
+            580,
+            820,
+            1180
+          ],
+          "root": "AN-DEV/A",
+          "source_stream": "AN-DEV/AC",
+          "source_start_sample": 0,
+          "copy_prefix_from": null
+        },
+        "B": {
+          "seed": 1210007,
+          "frequencies_hz": [
+            460,
+            920,
+            700,
+            1540
+          ],
+          "root": "AN-DEV/B",
+          "source_stream": "AN-DEV/B",
+          "source_start_sample": 0,
+          "copy_prefix_from": null
+        },
+        "C": {
+          "seed": 1210013,
+          "frequencies_hz": [
+            640,
+            1060,
+            1420,
+            880
+          ],
+          "root": "AN-DEV/C",
+          "source_stream": "AN-DEV/AC",
+          "source_start_sample": 19200,
+          "copy_prefix_from": null
+        },
+        "D": {
+          "seed": 1210019,
+          "frequencies_hz": [
+            340,
+            580,
+            1780,
+            2060
+          ],
+          "root": "AN-DEV/D",
+          "source_stream": "AN-DEV/D",
+          "source_start_sample": 0,
+          "copy_prefix_from": "A"
+        }
+      },
+      "noise_R": {
+        "seed": 1210031,
+        "samples": 9600,
+        "amplitude": 0.000244140625
+      },
+      "noise_Z": {
+        "seed": 1210037,
+        "samples": 14400,
+        "amplitude": 0.00048828125
+      },
+      "calibration": {
+        "seed": 1210043,
+        "windows": 8,
+        "amplitudes": [
+          0.000244140625,
+          0.000244140625,
+          0.000244140625,
+          0.000244140625,
+          0.00048828125,
+          0.00048828125,
+          0.00048828125,
+          0.00048828125
+        ]
+      },
+      "small_signal_gain": 0.000244140625,
+      "cases": {
+        "R0": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "truth": "AN-DEV/A",
+          "positive": true,
+          "test_index": 11,
+          "query_start_samples": [
+            0,
+            4800,
+            9600
+          ],
+          "operation": "R0"
+        },
+        "R1": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "truth": "AN-DEV/A",
+          "positive": true,
+          "test_index": 11,
+          "query_start_samples": [
+            0,
+            4800,
+            9600
+          ],
+          "operation": "R1"
+        },
+        "R2": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "truth": "AN-DEV/A",
+          "positive": true,
+          "test_index": 11,
+          "query_start_samples": [
+            0,
+            4800,
+            9600
+          ],
+          "operation": "R2"
+        },
+        "R3": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "truth": "AN-DEV/A",
+          "positive": true,
+          "test_index": 11,
+          "query_start_samples": [
+            0,
+            4800,
+            9600
+          ],
+          "operation": "R3"
+        },
+        "N1": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "truth": "AN-DEV/B",
+          "positive": false,
+          "test_index": 11,
+          "query_start_samples": [
+            0,
+            4800,
+            9600
+          ],
+          "operation": "N1"
+        },
+        "N2": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "truth": "AN-DEV/C",
+          "positive": false,
+          "test_index": 11,
+          "query_start_samples": [
+            0,
+            4800,
+            9600
+          ],
+          "operation": "N2"
+        },
+        "N3": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "truth": "AN-DEV/D",
+          "positive": false,
+          "test_index": 11,
+          "query_start_samples": [
+            0,
+            4800,
+            9600
+          ],
+          "operation": "N3"
+        },
+        "N4": {
+          "learn": [
+            "A",
+            "A",
+            "B",
+            "B"
+          ],
+          "truth": "AN-DEV/M",
+          "positive": false,
+          "test_index": 19,
+          "query_start_samples": [
+            0,
+            4800,
+            9600
+          ],
+          "operation": "N4"
+        },
+        "Z0": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "truth": "AN-DEV/ZERO",
+          "positive": false,
+          "test_index": 11,
+          "query_start_samples": [
+            0,
+            4800,
+            9600
+          ],
+          "operation": "Z0"
+        },
+        "Z1": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "truth": "AN-DEV/NOISE",
+          "positive": false,
+          "test_index": 11,
+          "query_start_samples": [
+            0,
+            4800,
+            9600
+          ],
+          "operation": "Z1"
+        },
+        "P0": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "truth": "AN-DEV/A",
+          "positive": true,
+          "test_index": 11,
+          "query_start_samples": [
+            0,
+            4800,
+            9600
+          ],
+          "operation": "P0"
+        }
+      },
+      "output_directory": "reports/s2uc/audio-nj-material-an-dev-01",
+      "windows": 57,
+      "pcm_bytes": 1094400
+    },
+    "AN-EVAL": {
+      "partition": "AN-EVAL",
+      "kind": "EVAL",
+      "episodes": {
+        "A": {
+          "seed": 1310001,
+          "frequencies_hz": [
+            490,
+            760,
+            1120,
+            1620
+          ],
+          "root": "AN-EVAL/A",
+          "source_stream": "AN-EVAL/AC",
+          "source_start_sample": 0,
+          "copy_prefix_from": null
+        },
+        "B": {
+          "seed": 1310007,
+          "frequencies_hz": [
+            670,
+            1320,
+            970,
+            1860
+          ],
+          "root": "AN-EVAL/B",
+          "source_stream": "AN-EVAL/B",
+          "source_start_sample": 0,
+          "copy_prefix_from": null
+        },
+        "C": {
+          "seed": 1310013,
+          "frequencies_hz": [
+            790,
+            1480,
+            1960,
+            1080
+          ],
+          "root": "AN-EVAL/C",
+          "source_stream": "AN-EVAL/AC",
+          "source_start_sample": 19200,
+          "copy_prefix_from": null
+        },
+        "D": {
+          "seed": 1310019,
+          "frequencies_hz": [
+            490,
+            760,
+            2160,
+            2420
+          ],
+          "root": "AN-EVAL/D",
+          "source_stream": "AN-EVAL/D",
+          "source_start_sample": 0,
+          "copy_prefix_from": "A"
+        }
+      },
+      "noise_R": {
+        "seed": 1310031,
+        "samples": 9600,
+        "amplitude": 0.000244140625
+      },
+      "noise_Z": {
+        "seed": 1310037,
+        "samples": 14400,
+        "amplitude": 0.00048828125
+      },
+      "calibration": null,
+      "small_signal_gain": 0.000244140625,
+      "cases": {
+        "R0": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "truth": "AN-EVAL/A",
+          "positive": true,
+          "test_index": 11,
+          "query_start_samples": [
+            0,
+            4800,
+            9600
+          ],
+          "operation": "R0"
+        },
+        "R1": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "truth": "AN-EVAL/A",
+          "positive": true,
+          "test_index": 11,
+          "query_start_samples": [
+            0,
+            4800,
+            9600
+          ],
+          "operation": "R1"
+        },
+        "R2": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "truth": "AN-EVAL/A",
+          "positive": true,
+          "test_index": 11,
+          "query_start_samples": [
+            0,
+            4800,
+            9600
+          ],
+          "operation": "R2"
+        },
+        "R3": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "truth": "AN-EVAL/A",
+          "positive": true,
+          "test_index": 11,
+          "query_start_samples": [
+            0,
+            4800,
+            9600
+          ],
+          "operation": "R3"
+        },
+        "N1": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "truth": "AN-EVAL/B",
+          "positive": false,
+          "test_index": 11,
+          "query_start_samples": [
+            0,
+            4800,
+            9600
+          ],
+          "operation": "N1"
+        },
+        "N2": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "truth": "AN-EVAL/C",
+          "positive": false,
+          "test_index": 11,
+          "query_start_samples": [
+            0,
+            4800,
+            9600
+          ],
+          "operation": "N2"
+        },
+        "N3": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "truth": "AN-EVAL/D",
+          "positive": false,
+          "test_index": 11,
+          "query_start_samples": [
+            0,
+            4800,
+            9600
+          ],
+          "operation": "N3"
+        },
+        "N4": {
+          "learn": [
+            "A",
+            "A",
+            "B",
+            "B"
+          ],
+          "truth": "AN-EVAL/M",
+          "positive": false,
+          "test_index": 19,
+          "query_start_samples": [
+            0,
+            4800,
+            9600
+          ],
+          "operation": "N4"
+        },
+        "Z0": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "truth": "AN-EVAL/ZERO",
+          "positive": false,
+          "test_index": 11,
+          "query_start_samples": [
+            0,
+            4800,
+            9600
+          ],
+          "operation": "Z0"
+        },
+        "Z1": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "truth": "AN-EVAL/NOISE",
+          "positive": false,
+          "test_index": 11,
+          "query_start_samples": [
+            0,
+            4800,
+            9600
+          ],
+          "operation": "Z1"
+        },
+        "P0": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "truth": "AN-EVAL/A",
+          "positive": true,
+          "test_index": 11,
+          "query_start_samples": [
+            0,
+            4800,
+            9600
+          ],
+          "operation": "P0"
+        }
+      },
+      "output_directory": "reports/s2uc/audio-nj-material-an-eval-01",
+      "windows": 49,
+      "pcm_bytes": 940800
+    }
+  },
+  "profile": {
+    "profile_id": "s2nj.auditory.hann48.output-half.v1",
+    "geometry_id": "auditory.log48.50-18000.w4800.h480.half.v1",
+    "raw_profile_digest": "5c6b2b19281a44023497b435a96b1051905af4bbac493cae7e699ea1320392c7",
+    "factor_hex": "0x1.0000000000000p-1",
+    "operation": "binary64-multiply-once-after-raw-reduction",
+    "output_domain": "finite-0-through-1-inclusive",
+    "rounding": "qualified-binary64-nearest-even",
+    "subnormal_policy": "preserve-native-rounded-result-report-underflow-no-flush-or-clamp",
+    "max_output_bytes": 16384
+  },
+  "profile_digest": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+  "pcm": {
+    "format": "mono-float32-le",
+    "sample_rate": 48000,
+    "window": 4800,
+    "external_hop": 4800
+  },
+  "recipe": {
+    "base": "s2uc_known_origin_material_plan.synthesize_partition; derivatives empty",
+    "perturbation": "stored float32 -> binary64 arithmetic -> one float32 rounding; reject nonfinite/outside[-1,1]",
+    "R1": "A[0:9600]+bipolar(noise_R); clean A[9600:14400]",
+    "R2": "A[0:9600]+2*bipolar(noise_R); clean A[9600:14400]",
+    "R3": "R1[0:9600] followed by R1[4800:9600]",
+    "N4": "float32((binary64(A[0:14400])+binary64(B[0:14400]))/2)",
+    "P0": "float32(binary64(A[0:14400])*2^-12)",
+    "calibration": "8 continuous PRNG PCM windows; max(mean(abs(NJ)))",
+    "genealogy": "labels from recipe, not NJ matches; D prefix copied from A"
+  },
+  "max_material_bytes": 4194304,
+  "closure_reserve_bytes": 262144,
+  "replay": {
+    "frames_per_arm": 129,
+    "primary_targets": 11,
+    "learning_targets": 48,
+    "continuation": "legacy_v1",
+    "tau_grid": [
+      0.0,
+      0.00390625,
+      0.0078125,
+      0.015625,
+      0.03125,
+      0.0625,
+      0.125
+    ]
+  }
+}

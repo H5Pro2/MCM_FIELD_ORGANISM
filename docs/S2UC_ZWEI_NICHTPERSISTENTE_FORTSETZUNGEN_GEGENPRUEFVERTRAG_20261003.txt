@@ -1,0 +1,243 @@
+MCM-KI -- Gegenpruefvertrag: Auswahl X -> Y -> X ohne Persistenzersatz
+2026-10-03 | NUR KONZEPT | KEINE IMPLEMENTIERUNG ODER AUSFUEHRUNG
+
+1. Forschungsfrage und Abnahmegegenstand
+
+Kann die unveraenderte multi_error_exact_v1 bei regulaerer Aufnahme zwischen
+zwei verschiedenen,jeweils nichtpersistenten Fortsetzungen wechseln und
+nach Rueckkehr wieder die erste waehlen,begruendet durch vorheriges Feedback?
+Der abgenommene48er-Befund bleibt gueltig,hatte aber Y=P. Er belegt diese
+neue Auswahlfrage nicht. Genau eine neue Folge wird hier vorab festgelegt.
+Die offengelegte Konstruktion bleibt Entwicklungsmaterial; unabhaengiger
+Evaluationsnutzen bleibt NICHT_GEPRUEFT,auch bei vollstaendig positivem Befund.
+
+Heute ausschliesslich statische Lektuere und algebraische Ableitung aus dem
+bestehenden Code. Keine numerischen Quellenframes erzeugt,keine Adapter,
+Simulationen,Tests oder Vergleiche ausgefuehrt. Kein neuer Laufstand.
+
+2. Genau eine feste Quelle und ihre Begruendung
+
+V(x) bezeichnet einen48-Komponenten-Vektor mit jeweils float(x).
+X=[V(3/16),V(5/16),V(13/16),V(15/16)].
+Y=[V(3/16),V(5/16),V(9/16),V(15/16)].
+Einzige Folge: X,X,X,X,Y,Y,Y,Y,X,X,X,X; genau48 Quellpositionen.
+
+Die bisherige Laenge,Phasendauer,Hintwerte und Endwerte werden beibehalten.
+Einzige Rezeptaenderung gegen das abgenommene Material ist der dritte
+Y-Wert:9/16 statt5/16.9/16 ist der feste arithmetische Mittelpunkt zwischen
+dem bisherigen P=5/16 und X=13/16. Keine Auswahl aus getesteten Alternativen,
+keine Suche nach anderen Abstaenden,Phasenlaengen oder Erfolgskriterien.
+
+Am wiederkehrenden Hinweis [V(3/16),V(5/16)] gilt:
+P=V(5/16),C_X=V(13/16),C_Y=V(9/16).
+Alle drei paarweise verschieden. mae48(C_X,C_Y)=1/4,
+mae48(C_Y,P)=1/4,mae48(C_X,P)=1/2.
+Diese Gleichheit von zwei Abstaenden bedeutet KEINE Gleichheit der Ausgaben.
+In der Wechselphase kann eine richtige Persistenz deshalb nicht als Y-Wahl
+erscheinen: P hat dort Fehler1/4,wahre Y-Fortsetzung Fehler0.
+
+Ein Owner/Profil/Stream-Scope,start_sample=0,first_ordinal=1,
+hop=window=4800. Alle48 Positionen in unveraenderter Reihenfolge und
+regulaerer Aufnahme; keine Schutzspuren,Injektionen,Zwischenresets oder
+ausgelassenen Positionen. X/Y/Phase/Zielmengen sind ausschliesslich
+Beobachterbegriffe. Der Systemeingang enthaelt nur die numerische Wahrnehmung
+mit den bisherigen technischen Scope-/Zeitangaben.
+
+3. Unveraenderte Policy und exakt fuenf Vergleichsarme
+
+U: multi_error_exact_v1 mit bestehender direkter Promotionsmitnahme.
+M: bisherige Mitnahme-EMA mit Eindeutigkeitsgate.
+E: bisherige Reset-EMA mit Eindeutigkeitsgate.
+K: eindeutiger Kontext,sonst Persistenz.
+P: stets Persistenz.
+
+Alle Arme getrennte Zustaende,identische Quelle/Aufnahme. exact_v1,legacy_v1,
+mae48 und alpha=1/2 unveraendert. Fuer U gewinnt ausschliesslich das eindeutig
+kleinste negative eigene d=EC-EP unter warmen berechtigten Hypothesen.
+Kalte Hypothesen werden mitbewertet,aber nicht gewaehlt. Bei fehlendem
+negativem Minimum oder Gleichstand bleibt P. Keine neue Policy-,Mitnahme-,
+Schwellen-,Gewichtungs- oder Tie-break-Variante.
+Alle Treffer bleiben sichtbar; Prognosewahl behauptet keine eindeutige
+Herkunft. Eingefrorene Originalfortsetzungen und Feedback auch fuer nicht
+ausgewaehlte Hypothesen bleiben kausal an das vorhandene Ticket gebunden.
+Keine Ticketumleitung nach Promotion oder Wiederbelebung verlorener Keys.
+Bestehende Defaults bleiben deaktiviert.
+
+4. Statische Bestands- und Abrufpruefung
+
+Massgebliche unveraenderte Funktionen:
+- tools/_s2uc_factor_hint.py:FactorHintArm.hint,alle Spuren und Offsets.
+- tools/_s2uc_four_arm.py:CandidateTwoArm.close_segment,regulaere Aufnahme.
+- tools/_s2uc_perception_recency.py:close_segment,Bestaetigung/Aktualitaet.
+- tools/_s2uc_multi_error.py:_receipt,consume_feedback,_promote.
+
+Die folgende Tabelle ist eine statische Erwartung,kein neuer Messbefund:
+Position4: X:c1 entsteht aus Originalpositionen1..4.
+Position8: zweite volle X-Aufnahme promoviert c1->r1; Originalframes bleiben.
+Position12/16: X:r1 regulaer bestaetigt; kein zusaetzlicher Kandidat.
+Position20: erste volle Y-Aufnahme erzeugt Y:c2 aus Originalpositionen17..20.
+Position24: zweite volle Y-Aufnahme promoviert c2->r2. Ein freier retained-
+Slot besteht; keine Verdraengung von X:r1. Y-Feedback23 wird mitgenommen.
+Position28/32: Y:r2 bestaetigt,beide retained-Spuren bleiben vorhanden.
+Position36/40/44/48: X:r1 bestaetigt; Y:r2 bleibt vorhanden.
+Nach36 kann die Reihenfolge der beiden retained-Spuren wechseln. Die
+Identitaet X/Y ist deshalb aus Originalframes und Keys zu belegen,nicht
+aus einem fest angenommenen Ticketindex1 oder2.
+
+Der gemeinsame Hinweis passt an Offset0 beider Spuren exakt mit Faktor1.
+Andere Offsets erzeugen fuer diesen Hinweis keine zusaetzliche berechtigte
+Hypothese. Insbesondere hat Y-Offset2 das Paar(9/16,15/16),also den Faktor3
+gegen den Hinweis;3 und1/3 liegen ausserhalb der bestehenden Faktoren1/2,1,2.
+Y-Offset1=(5/16,9/16),X-Offset1=(5/16,13/16) sind keine skalierten Kopien
+des Hinweises. X-Offset2=(13/16,15/16) ebenfalls nicht.
+Die am Blockende verwendeten Zweierhinweise haben im jeweiligen eigenen
+Block nur Offset2 ohne Nachfolger. Sie erzeugen keine weitere berechtigte
+Fehlerzelle fuer Offset0. Alle uebrigen Ziele bleiben trotzdem in G/N.
+
+X ist ab7 als Kandidat verfuegbar und ab11 warm/retained. Y ist erstmals
+an23 als kalter Kandidat verfuegbar,ab27 als warmer retained-Kontext.
+Ab23 sind beide Fortsetzungen berechtigt; ihre gleichzeitige Verfuegbarkeit
+bleibt durch Rueckkehr und Laufende erhalten. Der Bestand wird nicht
+kuenstlich geschuetzt: es kommen schlicht nur die beiden festgelegten
+Viererfolgen vor. Normale Aufnahmeregeln werden an keinem Punkt umgangen.
+
+5. Statische Fehlerableitung und erwartete Fehlgriffe
+
+Je Paar (EC,EP),ausschliesslich fuer den Hinweisoffset0 und EXACT.
+Unter X ist das rohe Paar fuer C_X=(0,1/2),fuer C_Y=(1/4,1/2).
+Unter Y ist das rohe Paar fuer C_X=(1/4,1/4),fuer C_Y=(0,1/4).
+Erstes Feedback direkt,danach unveraendert halb alt+halb neu. Die angegebenen
+dyadischen Werte sind in diesem Wertebereich mit mae48 exakt darstellbar.
+
+Ziel | X vor -> nach Feedback        | Y vor -> nach Feedback       | U erwartet
+7    | KALT -> (0,1/2)              | nicht vorhanden              | P,kalt
+11   | (0,1/2) -> (0,1/2)          | nicht vorhanden              | C_X
+15   | (0,1/2) -> (0,1/2)          | nicht vorhanden              | C_X
+19   | (0,1/2) -> (1/8,3/8)        | nicht vorhanden              | C_X,falsch
+23   | (1/8,3/8) -> (3/16,5/16)    | KALT -> (0,1/4)              | C_X,falsch
+27   | (3/16,5/16) -> (7/32,9/32)  | (0,1/4) -> (0,1/4)          | C_Y
+31   | (7/32,9/32) -> (15/64,17/64)| (0,1/4) -> (0,1/4)          | C_Y
+35   | (15/64,17/64)->(15/128,49/128)| (0,1/4)->(1/8,3/8)        | C_Y,falsch
+39   | (15/128,49/128)->(15/256,113/256)| (1/8,3/8)->(3/16,7/16) | C_X
+43   | (15/256,113/256)->(15/512,241/512)| (3/16,7/16)->(7/32,15/32)| C_X
+47   | (15/512,241/512)->(15/1024,497/1024)| (7/32,15/32)->(15/64,31/64)| C_X
+
+An19 kann der erste Wechsel nicht vorweggenommen werden. X verursacht1/4
+Fehler. Danach bleibt sein d=-1/4 negativ. An23 ist Y noch kalt: U muss
+nach bestehender Regel weiter X waehlen und nochmals1/4 Fehler hinnehmen.
+Dieser erwartete Fehlgriff bleibt in A_W,H,G und darf nicht entfernt werden.
+
+Nach Feedback23 hat X d=-1/8,Y d=-1/4. Beide sind warm; ab27 soll Y wegen
+seines strikt kleineren d gewinnen. Das ist eine echte Wahl ZWISCHEN zwei
+negativ gegen P bewerteten Kontexten,nicht nur eine Abwahl zugunsten P.
+
+Vor35 gilt X d=-1/32,Y d=-1/4; U erwartet Y und erleidet beim ersten
+Rueckkehrziel1/4 Fehler. Feedback35 aendert X zu d=-17/64,Y zu d=-1/4.
+Damit gewinnt X an39 um den festen Abstand1/64. Kein nachtraegliches
+Epsilon oder Gleichstands-Tie-break. Nichtauswahl hat X-Updates27/31/35
+nicht verhindert. An43/47 soll X weiter gewinnen.
+
+Statische Gesamtbewertung: kein Bestands- oder Auswahlhindernis fuer das
+unten definierte X->Y->X-Kriterium erkannt. Erwartete Fehler7,19,23,35
+sind offengelegt. Ein spaeteres Nichterfuellen wird nicht durch Aenderung
+von Quelle,Abstand,Laenge,Frist oder Kriterien beseitigt.
+
+6. Feste Zielmengen und getrennte Abnahmekriterien
+
+G={3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47}.
+H={7,11,15,19,23,27,31,35,39,43,47}.
+N={3,5,9,13,17,21,25,29,33,37,41,45};H/N partitionieren G.
+S={11,15}: stabiler erfahrungsabhaengiger X-Auswahlbeleg.
+F={19,35}: erste Wechsel-/Rueckkehrverluste,separat und weiter in H/G.
+A_W={23,27,31}; A_R={39,43,47}. Diese Diagnosen ueberlappen H,nicht addieren.
+Endziel49 ausschliesslich zensiert,kein kuenstliches Feedback.
+
+Kriterium AUSWAHL_X_Y_X:
+a) Beide Ziele in S: tatsaechlich vor Ziel eingefrorene Auswahl C_X mit
+   warmer Bewertung aus vorherigem regulaerem Feedback.
+b) Wechsel: spaetestens am zweiten Ziel von A_W,also27,C_Y; danach an31
+   weiterhin C_Y. Ab23 beide Kontexte vollstaendig im Ticket. C_Y-Auswahl
+   begruendet durch vorangehendes Y-Phasenfeedback,insbesondere23.
+c) Rueckkehr: spaetestens am zweiten Ziel von A_R,also43,C_X; danach an47
+   weiterhin C_X. Beide Kontexte im Ticket. C_X-Auswahl begruendet durch
+   vorangehendes Rueckkehrfeedback. Die statische Erwartung ist bereits39,
+   aber die vorab festgelegte Abnahmefrist bleibt43.
+d) Jede gewertete Wahl hat SELECTED_BY_ERROR,lebenden warmen Key,ein
+   eindeutig kleinstes negatives d und die entsprechende eingefrorene
+   Originalfortsetzung. Numerischer Treffer allein reicht nicht.
+
+P,Kaltwahl,Gleichstand oder fehlende Berechtigung erfuellen dieses
+Auswahlkriterium niemals. Eine korrekt sichtbare mehrdeutige Herkunft
+verhindert eine gueltige Prognosewahl dagegen nicht. Eine gewaehlte andere
+Herkunft mit zufaellig gleichen Ausgabewerten ersetzt den geforderten
+Originalfortsetzungs-/Keynachweis nicht.
+
+Kausalbeleg: alle tatsaechlichen Fehlerpaare vor/nach jedem Feedback mit
+ausgewaehlten UND nicht ausgewaehlten Hypothesen zeigen. Die an27/31
+entscheidende Rangfolge muss aus Feedback vor diesen Zielen stammen;
+ebenso die Rueckkehrwahl. Gespeicherte Paare vor dem jeweiligen Wechsel
+und die danach beobachteten Vorzeichen/Rangfolgen gegenueberstellen.
+Dies darf spaeter rein rechnerisch aus vorhandenen Belegen erfolgen,ohne
+Adapter-Replay,Zustandsaustausch oder Einspeisen von Zukunftswerten.
+
+NETTONUTZEN getrennt: auf H muss U strikt kleinere MAE als JEDE Baseline
+M/E/K/P besitzen. Gleichstand mit einer Baseline genuegt nicht. G separat
+vollstaendig berichten; kein Uebertragen eines H-Befunds auf andere Mengen.
+Zusaetzlicher strikter Gesamtnutzen auf G nur,wenn auch dort U unter allen
+vier Baselines liegt. Auswahl_X_Y_X kann ohne Nettonutzen bestehen und
+Nettonutzen ohne den geforderten Auswahl-/Kausalnachweis ersetzt diesen nicht.
+
+Fuer JEDE Menge G,H,N,S,F,A_W,A_R und jeden Arm: Anzahl,Fehlersumme,MAE,
+fehlende Ziele und Kontextverfuegbarkeit. Jede U-M/U-E/U-K/U-P-Differenz
+auf jedem G-Ziel mit Gewinn,Schaden oder Gleichstand ausweisen. Erste
+Fehlgriffe und kalte Ziele bleiben enthalten; keine nachtraeglichen Gewichte.
+Insbesondere23 nicht als weitere unvorhersehbare Erstabweichung verstecken.
+
+Falsifikation: technisch korrektes Verfehlen mindestens einer Bedingung
+von a-d bedeutet AUSWAHL_X_Y_X=NICHT_NACHGEWIESEN. Unvollstaendige oder
+technisch ungueltige Belege bedeuten NOT_EVALUABLE,nicht Erfolg und nicht
+automatisch einen fachlichen Gegenbeweis. Abweichungen von obiger statischer
+Tabelle gesondert analysieren: Vorhersagefehler der Konzeption und Fehler
+der Implementierung unterscheiden. Keine Reparatur oder Ersatzfolge im Lauf.
+
+7. Unveraenderte Grenzen und spaeterer Ausfuehrungsrahmen
+
+Maximal2 retained+1 candidate,6 berechtigte Hypothesen,416 gepackte Bytes
+einschliesslich Ticket und Staging.18 Originalframes,2 Ausgabeplaetze,
+gemeinsam20;16384 Byte zusaetzlicher Python-Heap einschliesslich aller
+Halter,Systemtransienten und Fehlerbereinigung. Receipt<=16384 Byte,
+transiente UTF8<=32768 Byte. Keine Auslagerung in den Beobachter.
+Eine kontrollierte Originalframe-Obergrenze ist als Obergrenze zu benennen;
+unbefuellte Tracingzaehler sind keine gemessenen Nullverbraeuche. Keine
+neue Verbrauchsmessung oder Behauptung eines Framepeaks aus diesem Konzept.
+
+Spaeter hoechstens48 Quellpositionen in fuenf Armen=240 Arm-Aufnahmen,
+zusaetzlich240 interne Referenzfortschreibungen separat. Genau eine Folge,
+keine Wiederholung,Zusatzquelle oder automatische Optimierung.
+Gesamtes zugehoeriges Exportpaket einschliesslich weiterverwendeter
+Qualifikationsbelege und neuer Vorbereitung/Auswertung<=4194304 Byte;
+262144 Byte Abschlussreserve. Bereits vorhandene Qualifikation549025 Byte
+in diese gemeinsame Bilanz einbeziehen. Alte Vergleichsexporte unveraendert
+erhalten; ihre verbrauchten Freigaben gelten nicht fuer diese neue Quelle.
+
+Vor einer spaeteren Materialisierung sind ein neuer Rezept-/Maskenplan,
+neue Laufbindung und separate Einmalautorisierung erforderlich. Der alte
+S2UC_MULTI_PLAN_20261003 und sein vorbereiteter Aufruf sind auf die bereits
+ausgefuehrte Y=P-Quelle gebunden und DUERFEN NICHT fuer diesen neuen Vergleich
+umgedeutet oder erneut ausgefuehrt werden. Die Policy bleibt unveraendert;
+nur eine separat gebundene Vergleichsvorbereitung darf das neue Rezept tragen.
+Exklusive Ausgabe vor Materialisierung; bei Fehler Teilbestand/Abschluss
+erhalten,keine Fortsetzung als neuer Versuch oder Wiederholung.
+
+8. Abschluss dieses Konzeptauftrags
+
+Genau eine unterscheidende Folge,feste Arme,Zielmengen,Fristen und negative
+Abnahmefaelle sind vorab festgelegt. Statisch ist X->Y->X unter regulaerem
+Bestand moeglich; die erwarteten Erst- und Verzoegerungsverluste bleiben
+sichtbar. Kein bereits erbrachter Auswahl-,Nettonutzen- oder Evaluationsbeleg.
+
+Genau ein naechster Vorschlag: nach Abnahme dieses Vertrags eine separate
+Laufvorbereitung fuer diese feste Rezeptur und ihre Auswertung binden,
+ohne die Policy zu aendern. Die eigentliche Ausfuehrung bleibt bis zu einer
+gesonderten Einmallauffreigabe geschlossen. Heute keine neue Laufbindung,
+Autorisierung,Implementierung oder Materialerzeugung.

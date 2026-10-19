@@ -1,0 +1,345 @@
+{
+  "implementation_bindings": {
+    "tools/_s2uc_bounded_audio.py": "d71cab9b5daef66710316084939e6d39d14d16bc32306f41dbd605f3be7c2519",
+    "tools/_s2nj_private_auditory_output_projection.py": "e052cc76cf4c9678e11673d95390dea21634bba8082187567a760faaaf4904e5",
+    "mcm_field_organism/log_spectral_receptor.py": "26a6bd8f2d190db60c75ad29f275b3bd8b09b6d26d4ad54e4396176c4a36d2b0",
+    "mcm_field_organism/broadband_hearing_path.py": "a20456b24c04d099ba5ee2da6250e3d83dc657392603c41d816b13ca68a37fb7"
+  },
+  "python_runtime": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "python_executable_sha256": "7ca24f26d6e3f463419ee4f537ddd3acd312c38fe45e678cce08572f26a8bd1a",
+  "version": "s2uc.known-origin.material.v1",
+  "status": "PLAN_ONLY",
+  "sample_rate": 48000,
+  "samples_per_episode": 19200,
+  "window": 4800,
+  "external_hop": 4800,
+  "profile": "s2nj.auditory.hann48.output-half.v1",
+  "partitions": {
+    "development": {
+      "episodes": {
+        "A": {
+          "seed": 104729,
+          "frequencies_hz": [
+            310,
+            530,
+            790,
+            1130
+          ],
+          "root": "development/A",
+          "copy_prefix_from": null,
+          "source_stream": "development/AC",
+          "source_start_sample": 0
+        },
+        "B": {
+          "seed": 130363,
+          "frequencies_hz": [
+            430,
+            890,
+            670,
+            1490
+          ],
+          "root": "development/B",
+          "copy_prefix_from": null,
+          "source_stream": "development/B",
+          "source_start_sample": 0
+        },
+        "C": {
+          "seed": 155921,
+          "frequencies_hz": [
+            590,
+            1010,
+            1370,
+            830
+          ],
+          "root": "development/C",
+          "copy_prefix_from": null,
+          "source_stream": "development/AC",
+          "source_start_sample": 19200
+        },
+        "D": {
+          "seed": 181081,
+          "frequencies_hz": [
+            310,
+            530,
+            1730,
+            1970
+          ],
+          "root": "development/D",
+          "copy_prefix_from": "A",
+          "source_stream": "development/D",
+          "source_start_sample": 0
+        }
+      },
+      "derivatives": {
+        "A_half": {
+          "root": "development/A",
+          "base": "A",
+          "operation": "gain_all",
+          "gain": 0.5
+        },
+        "A_noise": {
+          "root": "development/A",
+          "base": "A",
+          "operation": "noise",
+          "amplitude": 0.000244140625,
+          "seed": 205019
+        },
+        "A_tailhalf": {
+          "root": "development/A",
+          "base": "A",
+          "operation": "gain_window_3",
+          "gain": 0.5
+        }
+      },
+      "cases": {
+        "T0": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "query": "A",
+          "truth": "development/A",
+          "positive": true
+        },
+        "P1": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "query": "A_half",
+          "truth": "development/A",
+          "positive": true
+        },
+        "P2": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "query": "A_noise",
+          "truth": "development/A",
+          "positive": true
+        },
+        "P3": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "query": "A_tailhalf",
+          "truth": "development/A",
+          "positive": true
+        },
+        "N1": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "query": "B",
+          "truth": "development/B",
+          "positive": false
+        },
+        "N2": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "query": "C",
+          "truth": "development/C",
+          "positive": false
+        },
+        "N3": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "query": "D",
+          "truth": "development/D",
+          "positive": false
+        },
+        "N4": {
+          "learn": [
+            "A",
+            "A",
+            "D",
+            "D"
+          ],
+          "query": "D",
+          "truth": "development/D",
+          "positive": true,
+          "expected_identifiability": "AMBIGUOUS"
+        }
+      }
+    },
+    "evaluation": {
+      "episodes": {
+        "A": {
+          "seed": 324161,
+          "frequencies_hz": [
+            470,
+            710,
+            1090,
+            1570
+          ],
+          "root": "evaluation/A",
+          "copy_prefix_from": null,
+          "source_stream": "evaluation/AC",
+          "source_start_sample": 0
+        },
+        "B": {
+          "seed": 350377,
+          "frequencies_hz": [
+            610,
+            1270,
+            910,
+            1810
+          ],
+          "root": "evaluation/B",
+          "copy_prefix_from": null,
+          "source_stream": "evaluation/B",
+          "source_start_sample": 0
+        },
+        "C": {
+          "seed": 376127,
+          "frequencies_hz": [
+            730,
+            1430,
+            1910,
+            1030
+          ],
+          "root": "evaluation/C",
+          "copy_prefix_from": null,
+          "source_stream": "evaluation/AC",
+          "source_start_sample": 19200
+        },
+        "D": {
+          "seed": 402581,
+          "frequencies_hz": [
+            470,
+            710,
+            2110,
+            2330
+          ],
+          "root": "evaluation/D",
+          "copy_prefix_from": "A",
+          "source_stream": "evaluation/D",
+          "source_start_sample": 0
+        }
+      },
+      "derivatives": {
+        "A_half": {
+          "root": "evaluation/A",
+          "base": "A",
+          "operation": "gain_all",
+          "gain": 0.5
+        },
+        "A_noise": {
+          "root": "evaluation/A",
+          "base": "A",
+          "operation": "noise",
+          "amplitude": 0.000244140625,
+          "seed": 428759
+        },
+        "A_tailhalf": {
+          "root": "evaluation/A",
+          "base": "A",
+          "operation": "gain_window_3",
+          "gain": 0.5
+        }
+      },
+      "cases": {
+        "T0": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "query": "A",
+          "truth": "evaluation/A",
+          "positive": true
+        },
+        "P1": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "query": "A_half",
+          "truth": "evaluation/A",
+          "positive": true
+        },
+        "P2": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "query": "A_noise",
+          "truth": "evaluation/A",
+          "positive": true
+        },
+        "P3": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "query": "A_tailhalf",
+          "truth": "evaluation/A",
+          "positive": true
+        },
+        "N1": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "query": "B",
+          "truth": "evaluation/B",
+          "positive": false
+        },
+        "N2": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "query": "C",
+          "truth": "evaluation/C",
+          "positive": false
+        },
+        "N3": {
+          "learn": [
+            "A",
+            "A"
+          ],
+          "query": "D",
+          "truth": "evaluation/D",
+          "positive": false
+        },
+        "N4": {
+          "learn": [
+            "A",
+            "A",
+            "D",
+            "D"
+          ],
+          "query": "D",
+          "truth": "evaluation/D",
+          "positive": true,
+          "expected_identifiability": "AMBIGUOUS"
+        }
+      }
+    }
+  },
+  "bounds": {
+    "partitions_per_call": 1,
+    "sequences_per_partition": 7,
+    "pcm_bytes_per_partition": 537600,
+    "pcm_hex_bytes_per_partition": 1075200,
+    "windows_per_partition": 28,
+    "max_outputs_bytes_per_partition": 4194304,
+    "closure_reserve_bytes": 262144
+  },
+  "recipe": {
+    "prng": "xorshift32: x^=(x<<13)&0xffffffff; x^=x>>17; x^=(x<<5)&0xffffffff; mask32 each step; initial nonzero seed",
+    "base": "two phase draws u=x/2**32; phase=2*pi*u; each window frequency f[k], continuous accumulated cycles; y=(sin(2*pi*cycles+phase1)+sin(2*pi*1.5*cycles+phase2))/16; quantize once float32-le",
+    "shared_prefix": "D first9600 samples copied bit-for-bit from same-partition A; D tail from own seeded recipe",
+    "variants": "transform stored float32 A samples in binary64 then round float32 once; noise draws +/-2**-12 by low PRNG bit; never clip; reject nonfinite/outside[-1,1]",
+    "timing": "A then C are distinct scripted episodes in joint AC source timeline; C starts19200; B and D independent scripted episodes; D has explicitly shared prefix ancestry",
+    "comparison": "learn complete4-frame sequences as listed; query first3 frames; evaluate target11 except N4 target19; all other reachable targets learning-only; cold start each case; paired phase from1"
+  },
+  "qualification": "Synthetic controlled identity only; different seeds/recipes do not prove general independence; no natural-world or held-out success claim from known regression material"
+}

@@ -1,0 +1,32 @@
+from __future__ import annotations
+import hashlib
+import json
+from pathlib import Path
+from typing import Any
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+SOURCE_PLAN = ROOT / "reports/s2nu/s2nu-source-preseal-20260909-01/execution-plan.json"
+
+
+SOURCE_PLAN_SHA256 = "6e64fbd5b7e86f16156b6d68bd5f7dbda3fefa8f223b2a31114bf3293eaa5f10"
+
+
+class S2TSRunError(ValueError):
+    def __init__(self, code: str) -> None:
+        self.code = code
+        super().__init__(code)
+
+
+def need(ok: bool, code: str) -> None:
+    if not ok:
+        raise S2TSRunError(code)
+
+
+def source_rows() -> tuple[dict[str, Any], dict[str, Any]]:
+    need(hashlib.sha256(SOURCE_PLAN.read_bytes()).hexdigest() == SOURCE_PLAN_SHA256, "SOURCE_PLAN_CHANGED")
+    plan = json.loads(SOURCE_PLAN.read_bytes())
+    need(plan["execution_digest"] == "1d2787da42fe01e6bb960ad545bcfbf96a3e4abd036ce91033b325c450d7f2c7", "SOURCE_EXECUTION_INVALID")
+    return {row["source_id"]: row for row in plan["sources"]}, plan
+

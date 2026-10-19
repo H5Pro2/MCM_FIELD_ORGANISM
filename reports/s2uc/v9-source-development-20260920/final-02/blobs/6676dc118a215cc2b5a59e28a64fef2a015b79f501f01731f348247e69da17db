@@ -1,0 +1,1 @@
+{"authority":"candidate until successful terminal; errors invalidate use","evaluation":null,"record":{"bytes":2396,"path":"record.json","sha256":"498a7a6042c8884f48480d3099246aeb76c432de8126412fbf75f0bce7af6502"},"scope":"NEUTRAL_DEVELOPMENT_ONLY","technical":{"failed_ordinal":1,"phase":"EVENT","status":"VERIFIED_FAILURE","story":"g1"},"version":"s2uc.verification-evaluation.v8"}

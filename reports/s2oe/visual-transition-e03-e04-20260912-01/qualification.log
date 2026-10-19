@@ -1,0 +1,17 @@
+test_above_threshold (tests.test_s2oe_visual_transition_diagnostic.DiagnosticTests.test_above_threshold) ... ok
+test_all_slots_and_creation (tests.test_s2oe_visual_transition_diagnostic.DiagnosticTests.test_all_slots_and_creation) ... ok
+test_exact_threshold (tests.test_s2oe_visual_transition_diagnostic.DiagnosticTests.test_exact_threshold) ... ok
+test_expiry (tests.test_s2oe_visual_transition_diagnostic.DiagnosticTests.test_expiry) ... ok
+test_full_replacement (tests.test_s2oe_visual_transition_diagnostic.DiagnosticTests.test_full_replacement) ... ok
+test_independent_and_immutable (tests.test_s2oe_visual_transition_diagnostic.DiagnosticTests.test_independent_and_immutable) ... ok
+test_manipulated_term (tests.test_s2oe_visual_transition_diagnostic.DiagnosticTests.test_manipulated_term) ... ok
+test_missing_candidate (tests.test_s2oe_visual_transition_diagnostic.DiagnosticTests.test_missing_candidate) ... ok
+test_missing_values (tests.test_s2oe_visual_transition_diagnostic.DiagnosticTests.test_missing_values) ... ok
+test_nonfinite (tests.test_s2oe_visual_transition_diagnostic.DiagnosticTests.test_nonfinite) ... ok
+test_tie_slot_order (tests.test_s2oe_visual_transition_diagnostic.DiagnosticTests.test_tie_slot_order) ... ok
+test_wrong_recorded_transition (tests.test_s2oe_visual_transition_diagnostic.DiagnosticTests.test_wrong_recorded_transition) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.017s
+
+OK

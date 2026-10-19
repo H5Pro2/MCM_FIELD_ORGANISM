@@ -1,0 +1,1 @@
+{"boundary":"Immediate retrieval of frozen perception only; no new receptor measurement.","decisions":[{"actual":"ABSTAIN_NO_CONTEXT","agrees":true,"expected":"ABSTAIN_NO_CONTEXT","position":0},{"actual":"ADMIT_SINGLE_CONTEXT","agrees":true,"expected":"ADMIT_SINGLE_CONTEXT","position":2}],"version":"s2oe.immediate-evaluation.v1"}

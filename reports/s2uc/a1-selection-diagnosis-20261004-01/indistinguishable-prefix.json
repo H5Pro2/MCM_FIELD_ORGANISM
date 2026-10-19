@@ -1,0 +1,17 @@
+{
+  "cases": [
+    "F3",
+    "F7"
+  ],
+  "prediction_target": 11,
+  "identical_observed_frames": 10,
+  "prefix_bytes": 3840,
+  "prefix_sha256": "237bd11e04195e2687bcb4f83a57502bae7e4cd14adb16d0cb2d2b1ad7463c85",
+  "receipts_equal_except_profile": true,
+  "prior_feedback_rows_equal": true,
+  "stock_events_equal": true,
+  "first_target_bytes_different": true,
+  "exception": "Profiles are distinct whole-story scope digests, not semantic or permitted forecasting features.",
+  "F3_delta": 0.0078125,
+  "F7_delta": -0.0078125
+}

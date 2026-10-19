@@ -1,0 +1,135 @@
+LOKALE SYNTHETISCHE PCM-ZEITSEQUENZ -- STATISCHER ENTWURF
+Stand 2026-09-30. Keine Erzeugung, keine Rezeptorverarbeitung, keine Tests.
+Ergaenzt S2UC_PCM_ZEITVERLAUF_BESTAND_UND_PLAN_20260930.txt.
+Status: ENTWURF; Umsetzung und Ausfuehrung noch nicht beauftragt.
+
+1. SIGNAL UND HERKUNFT
+Eine einzige lokale synthetische Testsequenz, kein Originalquellenlauf.
+N=19200, Fs=48000 Hz, Dauer T=N/Fs=0.4 s, mono.
+Globaler Sampleindex n=0,...,19199; t_n=n/Fs.
+Amplitude A=1/8; Anfangsphase phi_0=0 rad.
+Anfangsfrequenz f_0=400 Hz, Steigung k=9000 Hz/s.
+f(t)=400+9000*t fuer 0 <= t < 0.4 s.
+phi(t)=2*pi*(400*t+4500*t*t).
+x[n]=Float32_RNE((1/8)*sin(phi(t_n))).
+
+Linearer Chirp, eine Formel ueber die gesamte Datei. Keine Fensterrezepte,
+keine Wiederholung und kein Phasenreset an n=4800,9600,14400.
+Analytische Momentanfrequenz: 400 Hz bis unter 4000 Hz, am letzten Sample
+3999.8125 Hz. Grenzen bei t=0,0.1,0.2,0.3,0.4 s: 400,1300,2200,3100,4000 Hz.
+Diese Angaben beschreiben den definierten Verlauf, keine gemessenen FFT-Werte.
+
+Begruendung der vorab festgelegten Parameter:
+- 400..4000 Hz liegt deutlich innerhalb des Rezeptorbereichs 50..18000 Hz
+  und unter Nyquist 24000 Hz. Der Verlauf wechselt kontinuierlich ueber Zeit.
+- |x[n]| <= 0.125: Faktor 8 Abstand zur Eingabegrenze 1, rund 18 dB Headroom.
+  Keine Normalisierung, kein Clipping, kein Dither und keine Pegelautomatik.
+- Konstante Amplitude trennt Frequenzveraenderung von der spaeteren Halbierung.
+- Die Parameter sind hier vor Ergebnissen festgelegt; keine Kandidatensuche,
+  kein Frequenzscan und kein Nachstellen nach E/F-Treffern.
+- Endliche Dauer und Fensterung verursachen spektrale Verbreiterung. Der
+  Bereich der Momentanfrequenz ist keine Behauptung strikter Bandbegrenzung.
+  Keine zusaetzliche Ein-/Ausblendung; der bestehende Rezeptor fenstert selbst.
+
+2. NUMERISCHER VERTRAG UND SPAETERE DATEIBINDUNG
+Geplant: Python-Standardbibliothek math.sin/math.pi und struct.pack('<f',...).
+Alle Zwischenwerte IEEE-754 Binary64; Float32-Ausgabe round-to-nearest,
+ ties-to-even. Festgelegte skalare Operationsfolge je globalem n:
+ t = float(n) / 48000.0
+ a = 400.0 * t
+ b = 4500.0 * t
+ c = b * t
+ d = a + c
+ e = 2.0 * math.pi
+ phase = e * d
+ sample64 = 0.125 * math.sin(phase)
+ samplebytes = struct.pack('<f', sample64)
+Die Zeilen sind eine Spezifikation, hier nicht ausgefuehrt.
+Keine rekursive Phasenakkumulation, kein modulo und kein FMA-Ersatz.
+Float32 wird einmal am Ausgang gerundet; 19200 Samples ergeben 76800 Byte,
+headerlos, mono, little-endian, ohne Padding oder weitere Metadaten im PCM.
+
+Determinismus gilt fuer den gebundenen Generator und seine Laufzeit.
+math.sin muss nicht auf allen Plattformen identische letzte Bits liefern.
+Deshalb spaeter festhalten: Generatorpfad und SHA256, diesen Entwurfsstand,
+Parameter/Operationsfolge, Python-Version und Executable-SHA256, Betriebssystem,
+Architektur und math-Modul-/Laufzeitbindung soweit verfuegbar. Die erzeugten
+Dateibytes und ihr SHA256 sind die verbindliche Auswertungseingabe; keine
+plattformuebergreifende Bitgleichheit allein aus der Formel behaupten.
+Geplanter relativer Zielpfad:
+ sources/s2uc/temporal-chirp-v1/sequence.pcm
+ Herkunftsmanifest daneben: provenance.json
+Beide Dateien existieren aus diesem Auftrag noch nicht; SHA256 ist OFFEN,
+nicht vorgetaeuscht. Keine existierende Datei ueberschreiben.
+Manifest: SYNTHETIC_LOCAL_TEMPORAL_TEST_ONLY, kein Mikrofon/Medienmitschnitt,
+keine Originalquellenautorisierung, N/Fs/Format/Formel/Parameter/Zeitursprung,
+Generator-/Laufzeitbindung, t_end_exclusive=0.4, Dateigroesse und SHA256.
+
+3. FESTE FENSTER UND HINWEISE
+W1 Samples [0,4800), Byte [0,19200), Zeit [0,0.1) s
+W2 Samples [4800,9600), Byte [19200,38400), Zeit [0.1,0.2) s
+W3 Samples [9600,14400), Byte [38400,57600), Zeit [0.2,0.3) s
+W4 Samples [14400,19200), Byte [57600,76800), Zeit [0.3,0.4) s
+Nicht ueberlappend; globale Zeitbindung bleibt beim Ausschneiden erhalten.
+Hinweis A: W2,W3; B: aus halbiertem PCM W2,W3; C: W3,W2 im Originalpegel.
+Fuer B gespeicherte Float32-Samples lesen, exakt nach Binary64 erweitern,
+mit 0.5 multiplizieren, einmal Float32 little-endian packen. Nicht die Formel
+mit anderer Amplitude neu erzeugen, nicht fertige NJ-Vektoren skalieren.
+Jede spaetere Ableitung erhaelt Parent-SHA256, Sampleintervall, Regel und eigenen
+SHA256. Bytebindung der vier Originalfenster ebenfalls vor Auswertung sichern.
+
+4. KLEINSTER SPAETERER ERZEUGUNGS- UND PRUEFABLAUF
+Nur nach begrenzter Beauftragung:
+1. Kleinen separaten Generator nach Abschnitt 2 implementieren und binden.
+   Keine Aenderung von Rezeptor, NJ oder E/F. Ein einziges festes Signal erzeugen.
+2. Datei zuruecklesen: 76800 Byte/19200 Samples, Format, endliche Werte,
+   |x|<=0.125, Vollstaendigkeit und Bytehash pruefen. Globale Indexfolge und
+   phasenresetfreie Formel statisch gegen Generator pruefen; ein kleiner
+   Sampleunterschied an einer Grenze ist allein kein Kontinuitaetsbeweis.
+   Zweite Erzeugung in derselben gebundenen Laufzeit muss bytegleich sein;
+   sie ist eine Reproduzierbarkeitspruefung, keine neue Signalvariante.
+3. W2/W3-Halbableitungen binden. Numerische Halbierung, Bit-Rueckverdopplung,
+   Unterlauf und Subnormalfaelle getrennt protokollieren. Keine Ersetzung
+   problematischer Samples, kein Nachstellen der Signalparameter.
+4. Falls Rezeptorvergleich mitbeauftragt: genau vier Original- plus zwei
+   Halbfenster verarbeiten, jeweils frischer direkter Rezeptor; Konfiguration
+   Fs=48000, window=4800, hop=480, 48 Baender, 50..18000 Hz. Bestehende
+   NJ-Projektion unveraendert. Keine rollende Verarbeitung behaupten.
+5. Vier Originalausgaben als Erfahrung in E/F identisch exakt bestaetigen;
+   technische Wiederholung der vier Vektoren, keine zweite unabhaengige
+   Wahrnehmung. Drei Hinweise jeweils zweimal, wie im bestehenden Plan.
+   Alle Offsets 0,1,2, Rollen/Herkuenfte/Generationen/Faktoren berichten;
+   Zustand vor/nach Hinweisen gleich, 16+2-Frame-Grenze unveraendert.
+   Unabhaengige direkte Treffermengenpruefung ohne Regelanpassung.
+
+5. GETRENNTE ERWARTUNGEN UND NICHTNACHWEISE
+Faktorbeziehung:
+Der reelle lineare FFT-/Betrags-/Normpfad legt positive Homogenitaet nahe.
+Das ist keine Garantie bitexakter endlicher Arithmetik. Fuer W2/W3 Rohrezeptor
+und NJ getrennt mit 0.5*Original vergleichen: exakte Werte, Bitmuster,
+Absolut- und ULP-Abweichungen. Keine Toleranz zum E/F-Matching hinzufuegen.
+Scheitert Bitgleichheit, bleibt dies ein gueltiger Nichtnachweis exakter
+Faktorerhaltung; die gespeicherten Ausgaben werden nicht korrigiert.
+
+Zeitliche Unterscheidbarkeit:
+Der Chirp motiviert unterschiedliche Bandverteilungen, garantiert sie aber
+nicht. Alle sechs Paare der vier Originalvektoren auf exakte Gleichheit und
+Proportionalitaet unter den zugelassenen Faktoren pruefen; Rohrezeptor/NJ
+getrennt berichten. Entscheidend fuer den Abruf sind vollstaendige geordnete
+Zweiframe-Treffermengen, nicht nur unterschiedliche PCM-Bytes oder Einzelvektoren.
+Originalhinweis soll Offset 1 enthalten; Eindeutigkeit bleibt offen.
+Umgekehrter Hinweis kann bei kollabierenden/symmetrischen Ausgaben treffen.
+Kein automatischer Fehlalarm oder Ausschluss des Materials wegen dieses Befunds.
+
+Moeglicher Nichtnachweis:
+Mehrere Positionen => Mehrdeutigkeit, kein selektiver zeitlicher Abruf.
+Halbhinweis ohne exakte Faktorbeziehung => keine garantierte F-Wiedererkennung.
+Original am Ziel fehlend trotz identisch gespeicherter Werte => Aufbau-/
+Vergleichsinkonsistenz untersuchen, kein Signal nachoptimieren.
+Selbst eindeutiger F-Zieltreffer waere nur ein Befund fuer diesen synthetischen
+Verlauf und die gebundene Laufzeit, keine allgemeine zeitliche Identitaet.
+
+Abnahme dieses Auftrags: Signal und Ablauf spezifiziert, keine Messung behauptet.
+Naechster Vorschlag: genau diesen Generator samt Eingabepruefung und der
+bereits geplanten neutralen E/F-Gegenprobe begrenzt beauftragen, ohne Signalsuche.
+Registry, neue Freigabeplattform und Originalquellenlauf bleiben ausgeschlossen.

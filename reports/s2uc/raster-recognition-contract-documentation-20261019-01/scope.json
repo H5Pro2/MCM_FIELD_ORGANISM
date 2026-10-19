@@ -1,0 +1,16 @@
+{
+  "historical_consumption": "UNPROVEN",
+  "kind": "DOCUMENTATION_ONLY",
+  "neutral_permission": "CONSUMED",
+  "neutral_runs": 0,
+  "new_sources": 0,
+  "nj_calls": 0,
+  "note": "Only text creation, file reads, hashes and lossless documentation snapshots in this order; no experiment module imported.",
+  "own_chat": "01a0beeb-9c11-7510-95a7-f0d1409eadc7",
+  "policy_admissions": 0,
+  "receptor_calls": 0,
+  "research_permission": false,
+  "research_runs": 0,
+  "tests": 0,
+  "workflow": "48dfa109-2aec-51dc-91e1-271f3198a127"
+}

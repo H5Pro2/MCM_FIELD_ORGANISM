@@ -1,0 +1,140 @@
+"""ER1 admitted E/F single-pass measurement and capture, independent per-arm reference, unmasked states."""
+from tools._s2uc_ura1_delta_encode import collection
+CHECKPOINT=lambda *args:None
+VALIDATE=lambda values: (_ for _ in ()).throw(ValueError("SIZE_ENTRY_NOT_ARMED"))
+import gzip,hashlib,json,struct,sys
+from .adapter import ResetAdapter
+from tools._s2uc_multi_error import REASONS as C_REASONS
+from tools._s2uc_multi_error import MultiErrorAdapter,HEAD,ENTRY,POLICY
+from tools._s2uc_factor_recency import FactorRecencyArm
+from tools._s2uc_pair_context_adapter import PerceptionSample
+from tools._s2uc_k1_probe import snapshot,cellmap
+from tools._s2uc_ulz1_resources import Meter,deep
+from .reference import Reference,mae
+
+PROFILE='4309cfc91eb99fc2a999fdac99c5a7f1807ee654996e019ec0d94e3900bcbd4b'
+def raw(v):return (json.dumps(v,sort_keys=True,separators=(',',':'),allow_nan=False)+'\n').encode()
+def need(ok,why):
+    if not ok:raise ValueError(why)
+def create(mode):
+    need(mode in ('KEEP','RESET'), 'MODE')
+    cls, arm = (MultiErrorAdapter if mode=='KEEP' else ResetAdapter), FactorRecencyArm
+    return cls(arm(PROFILE,'comparison'),'stream',multi_policy=POLICY)
+def vector(x):return tuple(x+j/4096 for j in range(48))
+def blocks(items):
+    """Explicit hand blocks only; no pseudorandomness or namespace access."""
+    return [vector(x) for cue,target in items for x in (cue,.5,target,.0625)]
+
+def common(a):
+    bank=bytearray(a.bank) # ER1 compares every byte; no masking
+    frame=lambda f:None if f is None else dict(ordinal=f.ordinal,values=f.values,segment=f.segment,profile=f.profile,owner=f.owner)
+    return dict(stock=snapshot(a.arm),bank=bank.hex(),pair=[frame(f) for f in a.pair],
+        intervals=list(a.intervals),hints=[frame(f) for f in a.arm._hints],
+        forming_frames=[frame(f) for f in a.arm._forming],
+        forming_segment=a.arm._forming_segment,hint_segment=a.arm._hint_segment,
+        frozen=[frame(f) for f in a._frozen],pframe=frame(a._pframe),
+        next_index=a.next_index,accepted=a.accepted,admitted=a.admitted,
+        revision=a.revision,closed=a.closed)
+
+def equal_events(u,r):
+    need(len(u)==len(r),'PAIRED_EVENT_COUNT')
+    for n,(left,right) in enumerate(zip(u,r,strict=True)):
+        need(raw(left)==raw(right),f'PAIRED_STATE_EVENT:{n}')
+
+class ResourceMeter(Meter):
+    def __init__(self,a):
+        super().__init__(a);self.whole=[]
+    def measure_full(self,name,fn,sample=None):
+        before=deep((self.a,sample))
+        try:return self.measure(name,fn)
+        finally:
+            after=deep((self.a,sample));c=self.calls[-1]
+            self.whole.append(dict(operation=name,whole_before=before,whole_after=after,
+                traced_transient=c['transient'],whole_conservative=max(before+c['transient'],after),
+                input_object_bytes=deep(sample),additional_total=c['total']))
+
+def run_arm(values,mode,*,trace=False,fault=None):
+    need(mode in ('KEEP','RESET'),'MODE')
+    need(0 < len(values) <= 1024 and len(values)%4 == 0, "ER1_FRAME_SIZE")
+    VALIDATE(values)
+    if len(values)>128:raise PermissionError("RESEARCH_NOT_ADMITTED")
+    a=create(mode);ref=Reference(mode);meter=ResourceMeter(a);events=collection();internal=collection();forecasts=collection();rows=collection()
+    wanted={'_admit','_promote','_prune','form','close_segment','hint','consume_feedback','_release','close_owner'}
+    oldprofile=sys.getprofile()
+    def profile(frame,event,arg):
+        if event not in ('call','return') or frame.f_code.co_name not in wanted:return
+        obj=frame.f_locals.get('self')
+        if obj is a or obj is a.arm:
+            internal.append(dict(method=frame.f_code.co_name,event=event,state=common(a)))
+    def operation(name,fn,sample=None):
+        events.append(dict(stage=name+':before',state=common(a)))
+        if trace:
+            sys.setprofile(profile)
+            try:result=fn()
+            finally:sys.setprofile(oldprofile)
+        else:result=meter.measure_full(name,fn,sample)
+        events.append(dict(stage=name+':after',state=common(a)))
+        return result
+    try:
+        for i,value in enumerate(values,1):
+            CHECKPOINT(a,mode,i,'frame_before')
+            sample=PerceptionSample(tuple(value),PROFILE,'comparison','stream',i,(i-1)*4800,i*4800)
+            if a.pending_prediction:
+                need(struct.pack('<48d',*a.selected_values)==struct.pack('<48d',*ref.pending['output']),'REFERENCE_FROZEN_OUTPUT')
+                measured=mae(a.selected_values,value);expected=ref.feedback(i,value)
+                operation('feedback',lambda:a.consume_feedback(sample),sample)
+                if fault=='feedback' and i==7:
+                    # Deliberate live feedback corruption, not a policy alternative.
+                    a.bank[8]^=1
+                need(cellmap(a)==ref.cells,'REFERENCE_FEEDBACK_CELLS')
+                need(measured==expected['error'],'REFERENCE_ERROR')
+                rows.append(dict(target=i,error=measured,updates=expected['updates']))
+            receipt=operation('perception',lambda:a.accept_perception(sample),sample)
+            expected=ref.perceive(i,value)
+            if fault=='stock' and i==8:a.arm._observation_end[999]=i
+            need(raw(snapshot(a.arm))==raw(ref.stock.snapshot()),'REFERENCE_STOCK')
+            need(cellmap(a)==ref.cells,'REFERENCE_PROMOTION_CELLS')
+            if expected:
+                f=json.loads(receipt.json_text)
+                actual=[dict(key=({'retained':0,'candidate':1}[m['role']],m['generation'],m['offset']),ordinals=m['ordinals'],factors=m['factors']) for m in f['matches']]
+                need(actual==expected['matches'],'REFERENCE_MATCHES')
+                hs=[(m,h) for m,h in zip(f['matches'],f['hypotheses'],strict=True) if h['eligible']]
+                need(len(hs)==len(expected['hypotheses']),'REFERENCE_ELIGIBILITY')
+                for j,((m,h),e) in enumerate(zip(hs,expected['hypotheses'],strict=True)):
+                    need((None if h['ec'] is None else (h['ec'],h['ep']))==e['before'],'REFERENCE_PRE_CELLS')
+                    need(h['ticket']==j and ENTRY.unpack_from(a.bank,208+16*j)[:3]==(e['key'][1],e['key'][0],e['key'][2]),'REFERENCE_TICKET')
+                    need(a._frozen[j].ordinal==e['original'] and a._frozen[j].values==e['values'],'REFERENCE_ORIGINAL')
+                selected=None if not f['choice'] else expected['hypotheses'][f['choice']-1]['key']
+                need(selected==expected['chosen'],'REFERENCE_CHOICE')
+                need(f['decision']==expected['decision'], 'REFERENCE_DECISION')
+                target, active, count, choice, reason = HEAD.unpack_from(a.bank,192)
+                need((target,active,count,choice)==(i+1,1,len(hs),f['choice']), 'REFERENCE_HEAD')
+                need(0<=reason<len(C_REASONS) and C_REASONS[reason]==f['decision'], 'REFERENCE_REASON_BYTE')
+                need(tuple(a.selected_values)==expected['output'],'REFERENCE_OUTPUT')
+                need(f['input_indices']==[i-1,i] and f['source_intervals']==[[(i-2)*4800,(i-1)*4800],[(i-1)*4800,i*4800]],'REFERENCE_INPUT')
+                need(f['profile']==PROFILE and f['owner']=='comparison' and f['stream']=='stream','REFERENCE_SCOPE')
+                need(a.pending_prediction.provenance_json==receipt.json_text,'REFERENCE_RECEIPT')
+                meter.receipt=max(meter.receipt,len(receipt.json_text.encode()))
+                meter.slots=max(meter.slots,1+int(a.pending_prediction.context_values is not None))
+                need(meter.receipt<=16384 and meter.slots<=2,'OUTPUT_RESOURCE')
+                forecasts.append(dict(index=i,receipt=f,output=list(a.selected_values),selected=selected,
+                    originals=[dict(key=e['key'],ordinal=e['original']) for e in expected['hypotheses']]))
+            CHECKPOINT(a,mode,i,'frame_verified')
+        operation('finish',a.finish_story);ref.finish()
+        need(a.closed and not any(a.bank) and not any(a._frozen) and not a.arm._forming and not a.arm._candidate and not a.arm._retained_many,'CLEANUP')
+        return dict(mode=mode,neutral_only=len(values)<=128,frames=len(values),events=events,internal=internal,
+            forecasts=forecasts,rows=rows,resets=ref.resets,cleanup=True,reference_equal=True,
+            resources=None if trace else resource_summary(meter),
+            censored_target=len(values)+1)
+    finally:
+        sys.setprofile(oldprofile)
+        if not a.closed:a._terminate()
+        CHECKPOINT(a,mode,a.accepted,"arm_cleanup")
+
+
+def resource_summary(meter):
+    result=meter.snapshot()
+    result={k:v for k,v in result.items() if k not in ('calls','allocation_boundaries')}
+    result['measured_operations']=len(meter.calls)
+    result['whole_conservative_peak']=max((x['whole_conservative'] for x in meter.whole),default=0)
+    return result

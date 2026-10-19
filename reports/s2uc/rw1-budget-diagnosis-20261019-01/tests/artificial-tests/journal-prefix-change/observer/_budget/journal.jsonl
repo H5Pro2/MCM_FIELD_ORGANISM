@@ -1,0 +1,2 @@
+{"append":false,"bytes":1,"kind":"BEGIN","name":"observer/x","previous":"0000000000000000000000000000000000000000000000000000000000000000","role":"Worker","seq":1}
+{"kind":"COMMIT","previous":"558e55cfefd8943821feec3c27d51f66ba8b0acce32468e3791b1967ee347b3f","seq":1,"stamp":{"bytes":1,"mtime":1792432065301225500}}

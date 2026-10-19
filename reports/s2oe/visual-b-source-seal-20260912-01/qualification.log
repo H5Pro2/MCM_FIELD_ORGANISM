@@ -1,0 +1,32 @@
+test_01_inclusive_boundary (tests.test_visual_b_binding.VisualB.test_01_inclusive_boundary) ... ok
+test_02_binary64_terms_and_order (tests.test_visual_b_binding.VisualB.test_02_binary64_terms_and_order) ... ok
+test_03_complete_scans (tests.test_visual_b_binding.VisualB.test_03_complete_scans) ... ok
+test_04_unstable_and_empty (tests.test_visual_b_binding.VisualB.test_04_unstable_and_empty) ... ok
+test_05_historical_exact (tests.test_visual_b_binding.VisualB.test_05_historical_exact) ... ERROR
+test_06_a_and_public_resolution_unchanged (tests.test_visual_b_binding.VisualB.test_06_a_and_public_resolution_unchanged) ... ok
+test_07_independent_direct (tests.test_visual_b_binding.VisualB.test_07_independent_direct) ... ok
+test_08_readonly_and_hidden_values (tests.test_visual_b_binding.VisualB.test_08_readonly_and_hidden_values) ... ok
+test_09_invalid_values_independent (tests.test_visual_b_binding.VisualB.test_09_invalid_values_independent) ... ok
+test_10_source_order_and_times (tests.test_visual_b_binding.VisualB.test_10_source_order_and_times) ... ok
+test_11_occlusion_and_level_order (tests.test_visual_b_binding.VisualB.test_11_occlusion_and_level_order) ... ok
+test_12_invalid_geometry_and_no_clipping (tests.test_visual_b_binding.VisualB.test_12_invalid_geometry_and_no_clipping) ... ok
+test_13_losses_not_netting_gains (tests.test_visual_b_binding.VisualB.test_13_losses_not_netting_gains) ... ok
+test_14_binding_verifier_without_generator (tests.test_visual_b_binding.VisualB.test_14_binding_verifier_without_generator) ... ok
+test_15_binding_manipulations_independent (tests.test_visual_b_binding.VisualB.test_15_binding_manipulations_independent) ... ok
+test_16_budgets_independent (tests.test_visual_b_binding.VisualB.test_16_budgets_independent) ... ok
+test_17_frozen_and_evaluation_binding (tests.test_visual_b_binding.VisualB.test_17_frozen_and_evaluation_binding) ... ok
+test_18_missing_and_reordered_sources (tests.test_visual_b_binding.VisualB.test_18_missing_and_reordered_sources) ... ok
+
+======================================================================
+ERROR: test_05_historical_exact (tests.test_visual_b_binding.VisualB.test_05_historical_exact)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_visual_b_binding.py", line 74, in test_05_historical_exact
+    record,_=d.historical._slot_record('B_STABLE_VISUAL','slot.000','c'*64,(0.0,)*288,3,fixture)
+             ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: _slot_record() takes 0 positional arguments but 6 were given
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.016s
+
+FAILED (errors=1)

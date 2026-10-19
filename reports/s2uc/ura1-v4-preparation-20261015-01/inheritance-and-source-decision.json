@@ -1,0 +1,25 @@
+{
+  "accepted_correction_sha256": "a1bdca305b43ceba1e5755cd70557d1eec7b4b0b31352c0425d87902004face4",
+  "all_580_inherited_files_match": true,
+  "new_namespace": "MCM-URA1/source/v4",
+  "new_exclusive_target": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\ura1-comparison-v4-consistent16h",
+  "old_v3_sources_reuse": false,
+  "new_research_sources_generated": false,
+  "matrix_sha256": "0b9fbf483e870adac01ded7d2d0d0a651a11474a4ac2e4fbae1c14e793d7d965",
+  "matrix_bytes": 320000,
+  "recipe": "unchanged except namespace/admission",
+  "stories": 32,
+  "frames_per_story": 1024,
+  "policies": "unchanged U/R",
+  "statistics": "unchanged primary D:U-R; 10000 fixed stratified bootstrap samples; nominal 95% interval",
+  "new_authorization_absent": true,
+  "new_target_absent": true,
+  "inherited_qualifications": [
+    "F01-F14",
+    "V3 N01-N06/I01-I04",
+    "P01-P08",
+    "O01-O04",
+    "T01-T08"
+  ],
+  "large_qualifications_repeated": false
+}

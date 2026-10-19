@@ -1,0 +1,370 @@
+test_appendix_write_failure_preserves_product (tests.test_s2uc_p2.P2Tests.test_appendix_write_failure_preserves_product) ... ERROR
+test_atomic_staging_failure_and_primary_preserved (tests.test_s2uc_p2.P2Tests.test_atomic_staging_failure_and_primary_preserved) ... ERROR
+test_binding_and_input_mutations (tests.test_s2uc_p2.P2Tests.test_binding_and_input_mutations) ... ERROR
+test_budget_boundaries_and_reservations (tests.test_s2uc_p2.P2Tests.test_budget_boundaries_and_reservations) ... ok
+test_child_requires_job_before_supplier (tests.test_s2uc_p2.P2Tests.test_child_requires_job_before_supplier) ... ERROR
+test_exclusive_claim_and_no_restart_retry (tests.test_s2uc_p2.P2Tests.test_exclusive_claim_and_no_restart_retry) ... ERROR
+test_external_abort_consumes_claim (tests.test_s2uc_p2.P2Tests.test_external_abort_consumes_claim) ... ERROR
+test_late_supplier_failure_is_not_evaluable (tests.test_s2uc_p2.P2Tests.test_late_supplier_failure_is_not_evaluable) ... ERROR
+test_parent_job_setup_failure_consumes_claim (tests.test_s2uc_p2.P2Tests.test_parent_job_setup_failure_consumes_claim) ... ERROR
+test_preparation_and_closed_productive_entry (tests.test_s2uc_p2.P2Tests.test_preparation_and_closed_productive_entry) ... ERROR
+test_simultaneous_retained_files_count (tests.test_s2uc_p2.P2Tests.test_simultaneous_retained_files_count) ... ERROR
+test_success_appendix_and_original_byte_mutations (tests.test_s2uc_p2.P2Tests.test_success_appendix_and_original_byte_mutations) ... ERROR
+test_unclassified_alias_and_inventory_overflow (tests.test_s2uc_p2.P2Tests.test_unclassified_alias_and_inventory_overflow) ... ERROR
+test_wrong_source_hash_stops_before_analysis (tests.test_s2uc_p2.P2Tests.test_wrong_source_hash_stops_before_analysis) ... ERROR
+
+======================================================================
+ERROR: test_appendix_write_failure_preserves_product (tests.test_s2uc_p2.P2Tests.test_appendix_write_failure_preserves_product)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 151, in test_appendix_write_failure_preserves_product
+    path=self.prepare();result=process.run_neutral(path)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 31, in prepare
+    def prepare(self): return e.prepare(self.root/'case',self.q)
+                              ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 69, in prepare
+    load(folder/'binding.json')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 93, in load
+    ledger=resources.Ledger(inv,[q],value['inputs']);ledger.admit()
+                                                     ~~~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 90, in admit
+    result=self.snapshot()
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 73, in snapshot
+    for ref in self.inv['files']: add(inventory.ROOT,ref['path'],'code',ref)
+                                  ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 67, in add
+    if expected is not None: need(ref==expected,'P2_INPUT_CHANGED:'+name)
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_resource_contract_v7.py", line 38, in _need
+    raise V7LedgerError(code)
+tools._s2uc_resource_contract_v7.V7LedgerError: P2_INPUT_CHANGED:mcm_field_organism/__init__.py
+
+======================================================================
+ERROR: test_atomic_staging_failure_and_primary_preserved (tests.test_s2uc_p2.P2Tests.test_atomic_staging_failure_and_primary_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 96, in test_atomic_staging_failure_and_primary_preserved
+    path=self.prepare();_,ledger=e.load(path);folder=path.parent/'product';folder.mkdir()
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 31, in prepare
+    def prepare(self): return e.prepare(self.root/'case',self.q)
+                              ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 69, in prepare
+    load(folder/'binding.json')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 93, in load
+    ledger=resources.Ledger(inv,[q],value['inputs']);ledger.admit()
+                                                     ~~~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 90, in admit
+    result=self.snapshot()
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 73, in snapshot
+    for ref in self.inv['files']: add(inventory.ROOT,ref['path'],'code',ref)
+                                  ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 67, in add
+    if expected is not None: need(ref==expected,'P2_INPUT_CHANGED:'+name)
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_resource_contract_v7.py", line 38, in _need
+    raise V7LedgerError(code)
+tools._s2uc_resource_contract_v7.V7LedgerError: P2_INPUT_CHANGED:mcm_field_organism/__init__.py
+
+======================================================================
+ERROR: test_binding_and_input_mutations (tests.test_s2uc_p2.P2Tests.test_binding_and_input_mutations)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 60, in test_binding_and_input_mutations
+    path=self.prepare();raw=path.read_bytes();value=json.loads(raw)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 31, in prepare
+    def prepare(self): return e.prepare(self.root/'case',self.q)
+                              ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 69, in prepare
+    load(folder/'binding.json')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 93, in load
+    ledger=resources.Ledger(inv,[q],value['inputs']);ledger.admit()
+                                                     ~~~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 90, in admit
+    result=self.snapshot()
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 73, in snapshot
+    for ref in self.inv['files']: add(inventory.ROOT,ref['path'],'code',ref)
+                                  ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 67, in add
+    if expected is not None: need(ref==expected,'P2_INPUT_CHANGED:'+name)
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_resource_contract_v7.py", line 38, in _need
+    raise V7LedgerError(code)
+tools._s2uc_resource_contract_v7.V7LedgerError: P2_INPUT_CHANGED:mcm_field_organism/__init__.py
+
+======================================================================
+ERROR: test_child_requires_job_before_supplier (tests.test_s2uc_p2.P2Tests.test_child_requires_job_before_supplier)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 108, in test_child_requires_job_before_supplier
+    path=self.prepare();value,ledger=e.load(path);e.claim(path,value,ledger)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 31, in prepare
+    def prepare(self): return e.prepare(self.root/'case',self.q)
+                              ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 69, in prepare
+    load(folder/'binding.json')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 93, in load
+    ledger=resources.Ledger(inv,[q],value['inputs']);ledger.admit()
+                                                     ~~~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 90, in admit
+    result=self.snapshot()
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 73, in snapshot
+    for ref in self.inv['files']: add(inventory.ROOT,ref['path'],'code',ref)
+                                  ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 67, in add
+    if expected is not None: need(ref==expected,'P2_INPUT_CHANGED:'+name)
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_resource_contract_v7.py", line 38, in _need
+    raise V7LedgerError(code)
+tools._s2uc_resource_contract_v7.V7LedgerError: P2_INPUT_CHANGED:mcm_field_organism/__init__.py
+
+======================================================================
+ERROR: test_exclusive_claim_and_no_restart_retry (tests.test_s2uc_p2.P2Tests.test_exclusive_claim_and_no_restart_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 72, in test_exclusive_claim_and_no_restart_retry
+    path=self.prepare();value,ledger=e.load(path);e.claim(path,value,ledger)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 31, in prepare
+    def prepare(self): return e.prepare(self.root/'case',self.q)
+                              ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 69, in prepare
+    load(folder/'binding.json')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 93, in load
+    ledger=resources.Ledger(inv,[q],value['inputs']);ledger.admit()
+                                                     ~~~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 90, in admit
+    result=self.snapshot()
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 73, in snapshot
+    for ref in self.inv['files']: add(inventory.ROOT,ref['path'],'code',ref)
+                                  ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 67, in add
+    if expected is not None: need(ref==expected,'P2_INPUT_CHANGED:'+name)
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_resource_contract_v7.py", line 38, in _need
+    raise V7LedgerError(code)
+tools._s2uc_resource_contract_v7.V7LedgerError: P2_INPUT_CHANGED:mcm_field_organism/__init__.py
+
+======================================================================
+ERROR: test_external_abort_consumes_claim (tests.test_s2uc_p2.P2Tests.test_external_abort_consumes_claim)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 144, in test_external_abort_consumes_claim
+    path=self.prepare();result=process.run_neutral(path,case='abort')
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 31, in prepare
+    def prepare(self): return e.prepare(self.root/'case',self.q)
+                              ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 69, in prepare
+    load(folder/'binding.json')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 93, in load
+    ledger=resources.Ledger(inv,[q],value['inputs']);ledger.admit()
+                                                     ~~~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 90, in admit
+    result=self.snapshot()
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 73, in snapshot
+    for ref in self.inv['files']: add(inventory.ROOT,ref['path'],'code',ref)
+                                  ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 67, in add
+    if expected is not None: need(ref==expected,'P2_INPUT_CHANGED:'+name)
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_resource_contract_v7.py", line 38, in _need
+    raise V7LedgerError(code)
+tools._s2uc_resource_contract_v7.V7LedgerError: P2_INPUT_CHANGED:mcm_field_organism/__init__.py
+
+======================================================================
+ERROR: test_late_supplier_failure_is_not_evaluable (tests.test_s2uc_p2.P2Tests.test_late_supplier_failure_is_not_evaluable)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 129, in test_late_supplier_failure_is_not_evaluable
+    path=self.prepare();result=process.run_neutral(path,case='memoryerror')
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 31, in prepare
+    def prepare(self): return e.prepare(self.root/'case',self.q)
+                              ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 69, in prepare
+    load(folder/'binding.json')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 93, in load
+    ledger=resources.Ledger(inv,[q],value['inputs']);ledger.admit()
+                                                     ~~~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 90, in admit
+    result=self.snapshot()
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 73, in snapshot
+    for ref in self.inv['files']: add(inventory.ROOT,ref['path'],'code',ref)
+                                  ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 67, in add
+    if expected is not None: need(ref==expected,'P2_INPUT_CHANGED:'+name)
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_resource_contract_v7.py", line 38, in _need
+    raise V7LedgerError(code)
+tools._s2uc_resource_contract_v7.V7LedgerError: P2_INPUT_CHANGED:mcm_field_organism/__init__.py
+
+======================================================================
+ERROR: test_parent_job_setup_failure_consumes_claim (tests.test_s2uc_p2.P2Tests.test_parent_job_setup_failure_consumes_claim)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 164, in test_parent_job_setup_failure_consumes_claim
+    path=self.prepare();real_runpy=process.runpy.run_path
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 31, in prepare
+    def prepare(self): return e.prepare(self.root/'case',self.q)
+                              ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 69, in prepare
+    load(folder/'binding.json')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 93, in load
+    ledger=resources.Ledger(inv,[q],value['inputs']);ledger.admit()
+                                                     ~~~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 90, in admit
+    result=self.snapshot()
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 73, in snapshot
+    for ref in self.inv['files']: add(inventory.ROOT,ref['path'],'code',ref)
+                                  ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 67, in add
+    if expected is not None: need(ref==expected,'P2_INPUT_CHANGED:'+name)
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_resource_contract_v7.py", line 38, in _need
+    raise V7LedgerError(code)
+tools._s2uc_resource_contract_v7.V7LedgerError: P2_INPUT_CHANGED:mcm_field_organism/__init__.py
+
+======================================================================
+ERROR: test_preparation_and_closed_productive_entry (tests.test_s2uc_p2.P2Tests.test_preparation_and_closed_productive_entry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 49, in test_preparation_and_closed_productive_entry
+    path=self.prepare();value,ledger=e.load(path)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 31, in prepare
+    def prepare(self): return e.prepare(self.root/'case',self.q)
+                              ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 69, in prepare
+    load(folder/'binding.json')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 93, in load
+    ledger=resources.Ledger(inv,[q],value['inputs']);ledger.admit()
+                                                     ~~~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 90, in admit
+    result=self.snapshot()
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 73, in snapshot
+    for ref in self.inv['files']: add(inventory.ROOT,ref['path'],'code',ref)
+                                  ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 67, in add
+    if expected is not None: need(ref==expected,'P2_INPUT_CHANGED:'+name)
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_resource_contract_v7.py", line 38, in _need
+    raise V7LedgerError(code)
+tools._s2uc_resource_contract_v7.V7LedgerError: P2_INPUT_CHANGED:mcm_field_organism/__init__.py
+
+======================================================================
+ERROR: test_simultaneous_retained_files_count (tests.test_s2uc_p2.P2Tests.test_simultaneous_retained_files_count)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 87, in test_simultaneous_retained_files_count
+    path=self.prepare();_,ledger=e.load(path)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 31, in prepare
+    def prepare(self): return e.prepare(self.root/'case',self.q)
+                              ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 69, in prepare
+    load(folder/'binding.json')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 93, in load
+    ledger=resources.Ledger(inv,[q],value['inputs']);ledger.admit()
+                                                     ~~~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 90, in admit
+    result=self.snapshot()
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 73, in snapshot
+    for ref in self.inv['files']: add(inventory.ROOT,ref['path'],'code',ref)
+                                  ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 67, in add
+    if expected is not None: need(ref==expected,'P2_INPUT_CHANGED:'+name)
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_resource_contract_v7.py", line 38, in _need
+    raise V7LedgerError(code)
+tools._s2uc_resource_contract_v7.V7LedgerError: P2_INPUT_CHANGED:mcm_field_organism/__init__.py
+
+======================================================================
+ERROR: test_success_appendix_and_original_byte_mutations (tests.test_s2uc_p2.P2Tests.test_success_appendix_and_original_byte_mutations)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 114, in test_success_appendix_and_original_byte_mutations
+    path=self.prepare();result=process.run_neutral(path)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 31, in prepare
+    def prepare(self): return e.prepare(self.root/'case',self.q)
+                              ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 69, in prepare
+    load(folder/'binding.json')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 93, in load
+    ledger=resources.Ledger(inv,[q],value['inputs']);ledger.admit()
+                                                     ~~~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 90, in admit
+    result=self.snapshot()
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 73, in snapshot
+    for ref in self.inv['files']: add(inventory.ROOT,ref['path'],'code',ref)
+                                  ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 67, in add
+    if expected is not None: need(ref==expected,'P2_INPUT_CHANGED:'+name)
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_resource_contract_v7.py", line 38, in _need
+    raise V7LedgerError(code)
+tools._s2uc_resource_contract_v7.V7LedgerError: P2_INPUT_CHANGED:mcm_field_organism/__init__.py
+
+======================================================================
+ERROR: test_unclassified_alias_and_inventory_overflow (tests.test_s2uc_p2.P2Tests.test_unclassified_alias_and_inventory_overflow)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 78, in test_unclassified_alias_and_inventory_overflow
+    path=self.prepare();_,ledger=e.load(path)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 31, in prepare
+    def prepare(self): return e.prepare(self.root/'case',self.q)
+                              ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 69, in prepare
+    load(folder/'binding.json')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 93, in load
+    ledger=resources.Ledger(inv,[q],value['inputs']);ledger.admit()
+                                                     ~~~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 90, in admit
+    result=self.snapshot()
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 73, in snapshot
+    for ref in self.inv['files']: add(inventory.ROOT,ref['path'],'code',ref)
+                                  ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 67, in add
+    if expected is not None: need(ref==expected,'P2_INPUT_CHANGED:'+name)
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_resource_contract_v7.py", line 38, in _need
+    raise V7LedgerError(code)
+tools._s2uc_resource_contract_v7.V7LedgerError: P2_INPUT_CHANGED:mcm_field_organism/__init__.py
+
+======================================================================
+ERROR: test_wrong_source_hash_stops_before_analysis (tests.test_s2uc_p2.P2Tests.test_wrong_source_hash_stops_before_analysis)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 137, in test_wrong_source_hash_stops_before_analysis
+    path=self.prepare();result=process.run_neutral(path,case='bad_hash')
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 31, in prepare
+    def prepare(self): return e.prepare(self.root/'case',self.q)
+                              ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 69, in prepare
+    load(folder/'binding.json')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_execution.py", line 93, in load
+    ledger=resources.Ledger(inv,[q],value['inputs']);ledger.admit()
+                                                     ~~~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 90, in admit
+    result=self.snapshot()
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 73, in snapshot
+    for ref in self.inv['files']: add(inventory.ROOT,ref['path'],'code',ref)
+                                  ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_resources.py", line 67, in add
+    if expected is not None: need(ref==expected,'P2_INPUT_CHANGED:'+name)
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_resource_contract_v7.py", line 38, in _need
+    raise V7LedgerError(code)
+tools._s2uc_resource_contract_v7.V7LedgerError: P2_INPUT_CHANGED:mcm_field_organism/__init__.py
+
+----------------------------------------------------------------------
+Ran 14 tests in 58.242s
+
+FAILED (errors=13)

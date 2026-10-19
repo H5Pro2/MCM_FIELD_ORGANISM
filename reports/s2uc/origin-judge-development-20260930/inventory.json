@@ -1,0 +1,40 @@
+{
+  "files": [
+    {
+      "path": "tools/_s2uc_origin_judge.py",
+      "sha256": "15cf646a09b0110f526b07ed9fa02b5576c157dd87bf66ad2230ff899e49f70f"
+    },
+    {
+      "path": "tools/s2uc_known_origin_material_plan.py",
+      "sha256": "7e74ebf59c0ba1bc8b7ee96a5a155f3e61196403787ddbfd6672dcd1ac2bd804"
+    },
+    {
+      "path": "tests/test_s2uc_origin_judge.py",
+      "sha256": "17ed8789406bc38c1c431cd9c76f3ab3a08f46d6520d56a88767fbd35ae6acb9"
+    },
+    {
+      "path": "docs/S2UC_HERKUNFT_MATERIALPLAN_20260930.json",
+      "sha256": "81c7edb0ece7716789f414ca9ebb02a060080f0e8bc56e4bc0c36a76a253cba7"
+    },
+    {
+      "path": "docs/S2UC_HERKUNFT_MATERIALPLAN_20260930.txt",
+      "sha256": "e4316d2f70d561e39f92adb66fce993d79b4256fb4004c06c9be905812394021"
+    },
+    {
+      "path": "tools/_s2uc_pair_context_adapter.py",
+      "sha256": "791b9a60b18426626d5e9761dcb122733ca5f73853a7b6201725fc332d9f3ab1"
+    },
+    {
+      "path": "tools/_s2uc_continuation_adapter.py",
+      "sha256": "b9d04587f8fd63081515f855f89390d4a584b06ecbd5f101c1dfdbd9157c43cb"
+    },
+    {
+      "path": "tools/_s2uc_factor_hint.py",
+      "sha256": "f1fdd62043d7939cd7b144eae797f84c94ff3196979d1028798d2af546220e19"
+    },
+    {
+      "path": "tools/_s2uc_perception_recency.py",
+      "sha256": "816d0eebfe1815764ddcbcd4b47ccb57584005ca973bde74be7eb2d7ae2ae86c"
+    }
+  ]
+}

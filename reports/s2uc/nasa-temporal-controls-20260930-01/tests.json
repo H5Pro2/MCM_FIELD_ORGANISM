@@ -1,0 +1,49 @@
+{
+  "tests_run": 10,
+  "failures": 0,
+  "errors": 0,
+  "exit_code": 0,
+  "source": "Observed unittest output; IDs loaded without repeating tests",
+  "tests": [
+    {
+      "id": "tests.test_s2uc_temporal_controls.TemporalTests.test_exact_indices",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_temporal_controls.TemporalTests.test_known_delta_and_signs",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_temporal_controls.TemporalTests.test_origin_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_temporal_controls.TemporalTests.test_zero_and_positionwise_192",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_deviation_observer.DeviationTests.test_equal_48",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_deviation_observer.DeviationTests.test_known_192",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_deviation_observer.DeviationTests.test_position_and_provenance",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_deviation_observer.DeviationTests.test_wrong_dimension_and_nonfinite",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_deviation_observer.DeviationTests.test_zero_both",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_deviation_observer.DeviationTests.test_zero_one_side",
+      "status": "PASS"
+    }
+  ]
+}

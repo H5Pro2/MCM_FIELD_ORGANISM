@@ -1,0 +1,60 @@
+{
+  "allocation_rejected": true,
+  "cases": [],
+  "membership": true,
+  "mode": "memory",
+  "phases": [
+    {
+      "end_process": {
+        "lifetime_peak_commit": 37347328,
+        "private_bytes": 35635200,
+        "working_set": 42319872
+      },
+      "name": "imports_and_initialization",
+      "python_current": 9781478,
+      "python_peak": 12617076,
+      "seconds": 1.579381900000044,
+      "start_process": {
+        "lifetime_peak_commit": 12857344,
+        "private_bytes": 12660736,
+        "working_set": 18649088
+      }
+    },
+    {
+      "end_process": {
+        "lifetime_peak_commit": 666009600,
+        "private_bytes": 35635200,
+        "working_set": 42323968
+      },
+      "name": "native_memory_rejection",
+      "python_current": 9797047,
+      "python_peak": 9797679,
+      "seconds": 0.0013332999997146544,
+      "start_process": {
+        "lifetime_peak_commit": 37347328,
+        "private_bytes": 35635200,
+        "working_set": 42323968
+      }
+    },
+    {
+      "end_process": {
+        "lifetime_peak_commit": 666009600,
+        "private_bytes": 35635200,
+        "working_set": 42323968
+      },
+      "name": "final_cleanup",
+      "python_current": 9736002,
+      "python_peak": 9801742,
+      "seconds": 0.014017400000739144,
+      "start_process": {
+        "lifetime_peak_commit": 666009600,
+        "private_bytes": 35635200,
+        "working_set": 42323968
+      }
+    }
+  ],
+  "seconds": 1.6126638999994611,
+  "status": "PASS",
+  "windows_error": 1455,
+  "worker_pid": 11140
+}

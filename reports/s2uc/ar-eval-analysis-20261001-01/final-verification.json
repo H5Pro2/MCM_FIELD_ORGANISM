@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "development_preserved_files": 38,
+  "runner_frozen": true,
+  "material_unchanged": true,
+  "code_plan_runtime_bindings_verified": true,
+  "settings": 1,
+  "evaluation_calibration": false,
+  "parameter_search": false,
+  "default_retrieval": "exact_v1",
+  "default_continuation": "legacy_v1"
+}

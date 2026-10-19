@@ -1,0 +1,29 @@
+test_counter_limits (tests.test_s2uc_bounded_audio.AudioCoreTests.test_counter_limits) ... ok
+test_gaps_overlaps_and_early_eof (tests.test_s2uc_bounded_audio.AudioCoreTests.test_gaps_overlaps_and_early_eof) ... ok
+test_limits_cannot_be_enlarged (tests.test_s2uc_bounded_audio.AudioCoreTests.test_limits_cannot_be_enlarged) ... ok
+test_missing_fractional_pts_and_positive_start (tests.test_s2uc_bounded_audio.AudioCoreTests.test_missing_fractional_pts_and_positive_start) ... ok
+test_negative_preroll_no_double_shift (tests.test_s2uc_bounded_audio.AudioCoreTests.test_negative_preroll_no_double_shift) ... ok
+test_output_reserve_and_exclusive_write (tests.test_s2uc_bounded_audio.AudioCoreTests.test_output_reserve_and_exclusive_write) ... ok
+test_pcm_rate_and_layout_rejection (tests.test_s2uc_bounded_audio.AudioCoreTests.test_pcm_rate_and_layout_rejection) ... ok
+test_read_hash_budget_and_close (tests.test_s2uc_bounded_audio.AudioCoreTests.test_read_hash_budget_and_close) ... ok
+test_reader_requires_job_before_open (tests.test_s2uc_bounded_audio.AudioCoreTests.test_reader_requires_job_before_open) ... ok
+test_source_locked_until_close (tests.test_s2uc_bounded_audio.AudioCoreTests.test_source_locked_until_close) ... ok
+test_zero_contiguous_and_end_overhang (tests.test_s2uc_bounded_audio.AudioCoreTests.test_zero_contiguous_and_end_overhang) ... ok
+test_aac_edit_list_and_priming (tests.test_s2uc_bounded_audio.ProcessTests.test_aac_edit_list_and_priming) ... ok
+test_changed_runtime_binding_rejected (tests.test_s2uc_bounded_audio.ProcessTests.test_changed_runtime_binding_rejected) ... ok
+test_eof_closes_child (tests.test_s2uc_bounded_audio.ProcessTests.test_eof_closes_child) ... ok
+test_memory_limit_real_allocation (tests.test_s2uc_bounded_audio.ProcessTests.test_memory_limit_real_allocation) ... ok
+test_only_first_audio_stream (tests.test_s2uc_bounded_audio.ProcessTests.test_only_first_audio_stream) ... ok
+test_pending_authorization_cannot_open_nasa (tests.test_s2uc_bounded_audio.ProcessTests.test_pending_authorization_cannot_open_nasa) ... ok
+test_real_container_gap_and_overlap (tests.test_s2uc_bounded_audio.ProcessTests.test_real_container_gap_and_overlap) ... ok
+test_real_decoder_tight_budgets (tests.test_s2uc_bounded_audio.ProcessTests.test_real_decoder_tight_budgets) ... ok
+test_real_wav_reader (tests.test_s2uc_bounded_audio.ProcessTests.test_real_wav_reader) ... ok
+test_request_watchdog (tests.test_s2uc_bounded_audio.ProcessTests.test_request_watchdog) ... ok
+test_total_watchdog_while_parent_idle (tests.test_s2uc_bounded_audio.ProcessTests.test_total_watchdog_while_parent_idle) ... ok
+test_unadmitted_child_cannot_start (tests.test_s2uc_bounded_audio.ProcessTests.test_unadmitted_child_cannot_start) ... ok
+test_wrong_source_hash_before_decoder (tests.test_s2uc_bounded_audio.ProcessTests.test_wrong_source_hash_before_decoder) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 17.229s
+
+OK

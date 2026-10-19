@@ -1,0 +1,11 @@
+test_difference_reporting (tests.test_structure_ppb_table.Tests.test_difference_reporting) ... ok
+test_inclusive_and_adjacent (tests.test_structure_ppb_table.Tests.test_inclusive_and_adjacent) ... ok
+test_missing_vector_and_parent (tests.test_structure_ppb_table.Tests.test_missing_vector_and_parent) ... ok
+test_native_rule (tests.test_structure_ppb_table.Tests.test_native_rule) ... ok
+test_pair_completeness (tests.test_structure_ppb_table.Tests.test_pair_completeness) ... ok
+test_table_and_independent_check (tests.test_structure_ppb_table.Tests.test_table_and_independent_check) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.015s
+
+OK

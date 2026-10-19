@@ -1,0 +1,67 @@
+{
+  "status": "COMPLETE_PREPARATION",
+  "research_authorized": false,
+  "research_replays": 0,
+  "full_neutral_size_runs": 1,
+  "prestart_sha256": "49c8118f34cd4b7e13f0de720d3521e164ac3a35cca761d023ca830fe55becc7",
+  "qualification_files_verified": 173,
+  "prestart_check": "PASS_UH1_PRESTART_NO_RESEARCH",
+  "files": {
+    "reports/s2uc/uh1-preparation-assessment-20261005-01/packaging-qualification.json": {
+      "bytes": 797,
+      "sha256": "73f2a2ab384e1cc224006fa1b18d79647b202765d9b1b98611c81eafee86ae97"
+    },
+    "reports/s2uc/uh1-preparation-assessment-20261005-01/reference-census.json": {
+      "bytes": 224,
+      "sha256": "755ed2c7bbd25b948120c193bd133838a2ab4926046aa52aa4d973e7dc333a32"
+    },
+    "reports/s2uc/uh1-preparation-assessment-20261005-01/REPORT.md": {
+      "bytes": 10772,
+      "sha256": "18b55bbc90ec750c55f31f0783c075e3f7f10e24fb95262dde5218e4385ca663"
+    },
+    "reports/s2uc/uh1-preparation-assessment-20261005-01/supplemental-edge-tests.json": {
+      "bytes": 260,
+      "sha256": "22b03ca69ed04684dabc00ab29d1f5b660e60806bef416b32c92bfae5c00cd4a"
+    },
+    "reports/s2uc/uh1-preparation-assessment-20261005-01/supplemental-error-resources.json": {
+      "bytes": 1227,
+      "sha256": "eab2c906383d24abd79142b9cf29cee376aaecdb5586c863fa383fd229483a8f"
+    },
+    "reports/s2uc/uh1-preparation-assessment-20261005-01/verification.json": {
+      "bytes": 4901,
+      "sha256": "d4cb55ba852eb8e6d6faf1dc34584f56d3ad3c38c80de4330b5f2430104430dd"
+    },
+    "docs/S2UC_UH1_V1_20261005_START.md": {
+      "bytes": 2170,
+      "sha256": "453f6166c9fadae5d4b6980cbd79157aca2b03604f9949ebf8bbccab5c8fa954"
+    },
+    "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/S2UC_UH1_V1_20261005_VORSTARTBINDUNG.json": {
+      "bytes": 1903,
+      "sha256": "49c8118f34cd4b7e13f0de720d3521e164ac3a35cca761d023ca830fe55becc7"
+    },
+    "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/S2UC_UH1_V1_20261005_CODEBINDUNG.json": {
+      "bytes": 15558,
+      "sha256": "be97c28b0c26facd4b22eef3f351b1d07c46d115709260b4eb717a36cd88778e"
+    },
+    "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/S2UC_UH1_V1_20261005_AUTORISIERUNG_VORLAGE.json": {
+      "bytes": 475,
+      "sha256": "dc85961791ef8f0d8c44de75b2425f9cd7319556cbc792a8f8d2290fa6470457"
+    },
+    "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/uh1-neutral-20261005-01/closure.json": {
+      "bytes": 21776,
+      "sha256": "f957bd387e44e6d13bcc44b269815885594151fb1db6c21de499abc59da7a3e2"
+    },
+    "README.md": {
+      "bytes": 103671,
+      "sha256": "e18e097c9fe47824cdb20c307a215809e706986ff70301d7f7aa1cfa84f86df5"
+    },
+    "AKTUELLER_FORSCHUNGSWEG.md": {
+      "bytes": 1461482,
+      "sha256": "c9727982ff8232685c7db3f92274f2f7953e158b21d63d8abefc25c06b818085"
+    },
+    "docs/README.md": {
+      "bytes": 201527,
+      "sha256": "6eed620d10d3b9d84822b95164f0da385e5f2e0458caa64d57e0d811490cfb31"
+    }
+  }
+}

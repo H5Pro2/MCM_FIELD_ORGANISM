@@ -1,0 +1,17 @@
+{
+  "status": "COMPLETE_STATIC_ANALYSIS",
+  "files": {
+    "analysis.json": {
+      "bytes": 7976,
+      "sha256": "1bb82b306a59b87b54e3b642bd2de9817c262087093d0d55353f2064cd04f916"
+    },
+    "REPORT.md": {
+      "bytes": 9567,
+      "sha256": "0dc017a8d819ec405ddebd8d6736296835c34577557b7faa1ebed54603c757ba"
+    },
+    "verification.json": {
+      "bytes": 1920,
+      "sha256": "f5b6dc2c1a80e43ee29b7441164f40956725b25d78731ca733290f83d5b24bd1"
+    }
+  }
+}

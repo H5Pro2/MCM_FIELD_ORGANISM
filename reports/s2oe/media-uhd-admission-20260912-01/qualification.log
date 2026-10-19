@@ -1,0 +1,11 @@
+test_actual_resource_binding (test_s2oe_uhd_admission.AdmissionTests.test_actual_resource_binding) ... ok
+test_attestation_must_be_available (test_s2oe_uhd_admission.AdmissionTests.test_attestation_must_be_available) ... ok
+test_full_valid_admission (test_s2oe_uhd_admission.AdmissionTests.test_full_valid_admission) ... ok
+test_mixed_run_and_source_bindings (test_s2oe_uhd_admission.AdmissionTests.test_mixed_run_and_source_bindings) ... ok
+test_private_budget_and_default (test_s2oe_uhd_admission.AdmissionTests.test_private_budget_and_default) ... ok
+test_wrong_limits_rejected_before_initialization (test_s2oe_uhd_admission.AdmissionTests.test_wrong_limits_rejected_before_initialization) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 7.100s
+
+OK

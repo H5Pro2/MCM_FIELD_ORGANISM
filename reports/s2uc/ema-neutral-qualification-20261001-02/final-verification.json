@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "tests": {
+    "tests": 12,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "success": true,
+    "code_unchanged": true,
+    "failure_details": [],
+    "error_details": [],
+    "counterprobe_executed": false
+  },
+  "plan_sha256": "36e12eb361be0b88811a82e692fdd23ffceb8d2fbb9d65b27b55458358714e13",
+  "binding_sha256": "721da476a3bfce6f4e69265b76a7f4462db7559bda7348cc642cc06951ae5347",
+  "code_files_bound": 42,
+  "existing_AN_bindings_valid": true,
+  "default_policy_unchanged": true,
+  "counterprobe_output_absent": true,
+  "planned_constant_story_executed": false,
+  "planned_switch_story_executed": false,
+  "neutral_200_stream_executed": true,
+  "neutral_200_recipe": "component=.003+i/2048, i0..199, all48 components equal",
+  "extra_python_bytes_measured": 5518,
+  "extra_python_bytes_cap": 16384,
+  "packed_state_bytes": 416
+}

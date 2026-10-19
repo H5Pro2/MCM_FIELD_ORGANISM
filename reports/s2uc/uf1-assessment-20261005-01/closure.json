@@ -1,0 +1,48 @@
+{
+  "status": "PASS_UF1_ASSESSMENT_COMPLETE",
+  "date": "2026-10-14",
+  "verdict": "F_VORTEIL_BELEGT",
+  "files": {
+    "build_report.py": {
+      "bytes": 20568,
+      "sha256": "b0aea31f139f99facd1e2a5b4b59cc04fcdf677120372d317fd6fd27ae7e94a9"
+    },
+    "REPORT.md": {
+      "bytes": 25910,
+      "sha256": "6b2907bfc5fa84e6b12f59382bd55fd9bae7235e626a71e1bef294cce421fcdb"
+    },
+    "verification.json": {
+      "bytes": 119255,
+      "sha256": "33a2fefabb51232cdcc4c5745c88175deebb123012b90fb347d1a4a66b586618"
+    },
+    "verify_archive.py": {
+      "bytes": 23237,
+      "sha256": "b818b5698c58f602ca0b7d5644267fa866092cb35c741ff735d943dd07def216"
+    },
+    "export-accounting.json": {
+      "bytes": 1291,
+      "sha256": "7e1146acea6ebb690ce5db523ea33c9ce175d8f44fe37b0e1f5095694a79bb92"
+    }
+  },
+  "research_closure_sha256": "c45ae3b7908cec60ccfa34d125e258776ec4394b9e5f48391a56550eed556489",
+  "authorization_consumed": true,
+  "research_attempts": 1,
+  "new_research_attempts_in_this_assignment": 0,
+  "policy_replays": 0,
+  "source_materializations": 0,
+  "overview_files": {
+    "README.md": {
+      "sha256": "705500703a83ee118ea0e014a5c9b99c75d1497093b0a991a40ad4de07ca411a",
+      "new_text_bytes": 1612
+    },
+    "AKTUELLER_FORSCHUNGSWEG.md": {
+      "sha256": "29e070abd52cd06002ec905c3e474a03f4f19cac47624b1068dfa763c259bbe4",
+      "new_text_bytes": 1612
+    },
+    "docs/README.md": {
+      "sha256": "88b2fadbfc302f3a57bd45e90ea3dba3faa6fe9c2f2cfe286b467d5deb28aad3",
+      "new_text_bytes": 1621
+    }
+  },
+  "proposed_next_step_executed": false
+}

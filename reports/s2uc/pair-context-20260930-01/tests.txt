@@ -1,0 +1,11 @@
+test_gap_terminates_no_cross_pair (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_gap_terminates_no_cross_pair) ... ok
+test_no_self_match_and_admission_once (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_no_self_match_and_admission_once) ... ok
+test_receipt_has_no_payload (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_receipt_has_no_payload) ... ok
+test_receipt_not_input (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_receipt_not_input) ... ok
+test_remainder_and_reset (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_remainder_and_reset) ... ok
+test_scope_and_time_errors (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_scope_and_time_errors) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK

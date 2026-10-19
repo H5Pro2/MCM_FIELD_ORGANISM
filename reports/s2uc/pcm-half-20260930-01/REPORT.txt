@@ -1,0 +1,148 @@
+PCM-Halbierung durch unveraenderten Rezeptor/NJ-Pfad: Abschluss
+
+17/17 Entwicklungs- und Regressionstests PASS (5 neue,12 bestehende), keine Fehler/Skips. Replay Exit0.
+Vorregistrierung SHA256 532326f6a2ba601af2ec2898d850c0eed6f1a3b168de4d09502a4a6922ac5ccb
+Original sources/s2ob/caller-av-basic/window.pcm,19200Byte,4800 mono Float32-Samples bei48000Hz.
+Original SHA256 f1080644e18dac7583d73cd300f9b0dda45ad123c96ba66f4740a5a17a1e6df4
+Halbableitung half-test-derivative.pcm,19200Byte; SHA256 ccd56ad1aec6e20ab290db83289d004a8e28bfd307557e68cac2288c6ef0242e
+Vorbedingungen: alle4800 Samples endlich/in[-1,1],4799 Nichtnullsamples; keine Unterlaeufe oder subnormalen Halbwerte;
+alle4800 Float32-Werte durch Verdoppelung bitgenau zurueckfuehrbar, keine Rundtripabweichungen.
+Keine erneute Signalerzeugung. Ableitung wurde aus vorhandenen Bytes berechnet und gesondert gekennzeichnet.
+Genau2 Rezeptoranalysen und2 NJ-Projektionen; jeweils frischer Rezeptor mit identischer Konfiguration.
+Konfiguration {"sample_rate": 48000, "window_size": 4800, "hop_size": 480, "min_frequency": 50.0, "max_frequency": 18000.0, "band_count": 48}
+Runtime {"python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]", "executable": "C:\\Python314\\python.exe"}; NumPy 2.4.4
+PCM-Bytes und Rohzustaende waehrend Verarbeitung unveraendert. Alle Code-/Quellenhashbindungen nach Abschluss unveraendert.
+
+VOLLSTAENDIGER BANDVERGLEICH
+Hexadezimale Binary64-Darstellung ist verlustfrei. Reale Dezimalwerte stehen zusaetzlich in result.json.
+Band | Kanal | Stufe | Original | Erwartet=Original/2 | Tatsachlich aus halbiertem PCM | numerisch gleich | bitgleich | Absolutabweichung | ULP-Abstand
+0 | auditory.log_hz.50.000000 | receptor | 0x1.192c19ec366b4p-30 | 0x1.192c19ec366b4p-31 | 0x1.192c19ec366b4p-31 | True | True | 0.0 | 0
+0 | auditory.log_hz.50.000000 | nj | 0x1.192c19ec366b4p-31 | 0x1.192c19ec366b4p-32 | 0x1.192c19ec366b4p-32 | True | True | 0.0 | 0
+1 | auditory.log_hz.56.670810 | receptor | 0x1.7eb6bd8047bd3p-31 | 0x1.7eb6bd8047bd3p-32 | 0x1.7eb6bd8047bd3p-32 | True | True | 0.0 | 0
+1 | auditory.log_hz.56.670810 | nj | 0x1.7eb6bd8047bd3p-32 | 0x1.7eb6bd8047bd3p-33 | 0x1.7eb6bd8047bd3p-33 | True | True | 0.0 | 0
+2 | auditory.log_hz.64.231614 | receptor | 0x1.9178b9cd7b809p-31 | 0x1.9178b9cd7b809p-32 | 0x1.9178b9cd7b809p-32 | True | True | 0.0 | 0
+2 | auditory.log_hz.64.231614 | nj | 0x1.9178b9cd7b809p-32 | 0x1.9178b9cd7b809p-33 | 0x1.9178b9cd7b809p-33 | True | True | 0.0 | 0
+3 | auditory.log_hz.72.801152 | receptor | 0x1.2a7db860d3ea6p-30 | 0x1.2a7db860d3ea6p-31 | 0x1.2a7db860d3ea6p-31 | True | True | 0.0 | 0
+3 | auditory.log_hz.72.801152 | nj | 0x1.2a7db860d3ea6p-31 | 0x1.2a7db860d3ea6p-32 | 0x1.2a7db860d3ea6p-32 | True | True | 0.0 | 0
+4 | auditory.log_hz.82.514004 | receptor | 0x1.7fa2ef408b1f7p-30 | 0x1.7fa2ef408b1f7p-31 | 0x1.7fa2ef408b1f7p-31 | True | True | 0.0 | 0
+4 | auditory.log_hz.82.514004 | nj | 0x1.7fa2ef408b1f7p-31 | 0x1.7fa2ef408b1f7p-32 | 0x1.7fa2ef408b1f7p-32 | True | True | 0.0 | 0
+5 | auditory.log_hz.93.522709 | receptor | 0x1.d3f0452e81662p-30 | 0x1.d3f0452e81662p-31 | 0x1.d3f0452e81662p-31 | True | True | 0.0 | 0
+5 | auditory.log_hz.93.522709 | nj | 0x1.d3f0452e81662p-31 | 0x1.d3f0452e81662p-32 | 0x1.d3f0452e81662p-32 | True | True | 0.0 | 0
+6 | auditory.log_hz.106.000153 | receptor | 0x1.22909e09f68b3p-29 | 0x1.22909e09f68b3p-30 | 0x1.22909e09f68b3p-30 | True | True | 0.0 | 0
+6 | auditory.log_hz.106.000153 | nj | 0x1.22909e09f68b3p-30 | 0x1.22909e09f68b3p-31 | 0x1.22909e09f68b3p-31 | True | True | 0.0 | 0
+7 | auditory.log_hz.120.142291 | receptor | 0x1.a77722ff512e2p-29 | 0x1.a77722ff512e2p-30 | 0x1.a77722ff512e2p-30 | True | True | 0.0 | 0
+7 | auditory.log_hz.120.142291 | nj | 0x1.a77722ff512e2p-30 | 0x1.a77722ff512e2p-31 | 0x1.a77722ff512e2p-31 | True | True | 0.0 | 0
+8 | auditory.log_hz.136.171218 | receptor | 0x1.d6b71c9cfb605p-29 | 0x1.d6b71c9cfb605p-30 | 0x1.d6b71c9cfb605p-30 | True | True | 0.0 | 0
+8 | auditory.log_hz.136.171218 | nj | 0x1.d6b71c9cfb605p-30 | 0x1.d6b71c9cfb605p-31 | 0x1.d6b71c9cfb605p-31 | True | True | 0.0 | 0
+9 | auditory.log_hz.154.338665 | receptor | 0x1.2eb8b4e423173p-28 | 0x1.2eb8b4e423173p-29 | 0x1.2eb8b4e423173p-29 | True | True | 0.0 | 0
+9 | auditory.log_hz.154.338665 | nj | 0x1.2eb8b4e423173p-29 | 0x1.2eb8b4e423173p-30 | 0x1.2eb8b4e423173p-30 | True | True | 0.0 | 0
+10 | auditory.log_hz.174.929943 | receptor | 0x1.8efef0389c85ap-28 | 0x1.8efef0389c85ap-29 | 0x1.8efef0389c85ap-29 | True | True | 0.0 | 0
+10 | auditory.log_hz.174.929943 | nj | 0x1.8efef0389c85ap-29 | 0x1.8efef0389c85ap-30 | 0x1.8efef0389c85ap-30 | True | True | 0.0 | 0
+11 | auditory.log_hz.198.268430 | receptor | 0x1.15ffce5daf501p-27 | 0x1.15ffce5daf501p-28 | 0x1.15ffce5daf501p-28 | True | True | 0.0 | 0
+11 | auditory.log_hz.198.268430 | nj | 0x1.15ffce5daf501p-28 | 0x1.15ffce5daf501p-29 | 0x1.15ffce5daf501p-29 | True | True | 0.0 | 0
+12 | auditory.log_hz.224.720650 | receptor | 0x1.7dcff1b23dfe7p-27 | 0x1.7dcff1b23dfe7p-28 | 0x1.7dcff1b23dfe7p-28 | True | True | 0.0 | 0
+12 | auditory.log_hz.224.720650 | nj | 0x1.7dcff1b23dfe7p-28 | 0x1.7dcff1b23dfe7p-29 | 0x1.7dcff1b23dfe7p-29 | True | True | 0.0 | 0
+13 | auditory.log_hz.254.702025 | receptor | 0x1.1fc13c2b13797p-26 | 0x1.1fc13c2b13797p-27 | 0x1.1fc13c2b13797p-27 | True | True | 0.0 | 0
+13 | auditory.log_hz.254.702025 | nj | 0x1.1fc13c2b13797p-27 | 0x1.1fc13c2b13797p-28 | 0x1.1fc13c2b13797p-28 | True | True | 0.0 | 0
+14 | auditory.log_hz.288.683401 | receptor | 0x1.e9be099d4d0d1p-26 | 0x1.e9be099d4d0d1p-27 | 0x1.e9be099d4d0d1p-27 | True | True | 0.0 | 0
+14 | auditory.log_hz.288.683401 | nj | 0x1.e9be099d4d0d1p-27 | 0x1.e9be099d4d0d1p-28 | 0x1.e9be099d4d0d1p-28 | True | True | 0.0 | 0
+15 | auditory.log_hz.327.198443 | receptor | 0x1.f443e9f51f323p-25 | 0x1.f443e9f51f323p-26 | 0x1.f443e9f51f323p-26 | True | True | 0.0 | 0
+15 | auditory.log_hz.327.198443 | nj | 0x1.f443e9f51f323p-26 | 0x1.f443e9f51f323p-27 | 0x1.f443e9f51f323p-27 | True | True | 0.0 | 0
+16 | auditory.log_hz.370.852015 | receptor | 0x1.f144f8dc5fc91p-23 | 0x1.f144f8dc5fc91p-24 | 0x1.f144f8dc5fc91p-24 | True | True | 0.0 | 0
+16 | auditory.log_hz.370.852015 | nj | 0x1.f144f8dc5fc91p-24 | 0x1.f144f8dc5fc91p-25 | 0x1.f144f8dc5fc91p-25 | True | True | 0.0 | 0
+17 | auditory.log_hz.420.329681 | receptor | 0x1.01a7dd2d20f37p-6 | 0x1.01a7dd2d20f37p-7 | 0x1.01a7dd2d20f37p-7 | True | True | 0.0 | 0
+17 | auditory.log_hz.420.329681 | nj | 0x1.01a7dd2d20f37p-7 | 0x1.01a7dd2d20f37p-8 | 0x1.01a7dd2d20f37p-8 | True | True | 0.0 | 0
+18 | auditory.log_hz.476.408468 | receptor | 0x1.1e92c4bb6322ap-7 | 0x1.1e92c4bb6322ap-8 | 0x1.1e92c4bb6322ap-8 | True | True | 0.0 | 0
+18 | auditory.log_hz.476.408468 | nj | 0x1.1e92c4bb6322ap-8 | 0x1.1e92c4bb6322ap-9 | 0x1.1e92c4bb6322ap-9 | True | True | 0.0 | 0
+19 | auditory.log_hz.539.969075 | receptor | 0x1.e4e33cf09e8b7p-24 | 0x1.e4e33cf09e8b7p-25 | 0x1.e4e33cf09e8b7p-25 | True | True | 0.0 | 0
+19 | auditory.log_hz.539.969075 | nj | 0x1.e4e33cf09e8b7p-25 | 0x1.e4e33cf09e8b7p-26 | 0x1.e4e33cf09e8b7p-26 | True | True | 0.0 | 0
+20 | auditory.log_hz.612.009696 | receptor | 0x1.3a0f8fcd3433dp-25 | 0x1.3a0f8fcd3433dp-26 | 0x1.3a0f8fcd3433dp-26 | True | True | 0.0 | 0
+20 | auditory.log_hz.612.009696 | nj | 0x1.3a0f8fcd3433dp-26 | 0x1.3a0f8fcd3433dp-27 | 0x1.3a0f8fcd3433dp-27 | True | True | 0.0 | 0
+21 | auditory.log_hz.693.661702 | receptor | 0x1.9dfde3b6cc80dp-26 | 0x1.9dfde3b6cc80dp-27 | 0x1.9dfde3b6cc80dp-27 | True | True | 0.0 | 0
+21 | auditory.log_hz.693.661702 | nj | 0x1.9dfde3b6cc80dp-27 | 0x1.9dfde3b6cc80dp-28 | 0x1.9dfde3b6cc80dp-28 | True | True | 0.0 | 0
+22 | auditory.log_hz.786.207409 | receptor | 0x1.c0dbc514d327cp-11 | 0x1.c0dbc514d327cp-12 | 0x1.c0dbc514d327cp-12 | True | True | 0.0 | 0
+22 | auditory.log_hz.786.207409 | nj | 0x1.c0dbc514d327cp-12 | 0x1.c0dbc514d327cp-13 | 0x1.c0dbc514d327cp-13 | True | True | 0.0 | 0
+23 | auditory.log_hz.891.100213 | receptor | 0x1.a55f719757f1ap-8 | 0x1.a55f719757f1ap-9 | 0x1.a55f719757f1ap-9 | True | True | 0.0 | 0
+23 | auditory.log_hz.891.100213 | nj | 0x1.a55f719757f1ap-9 | 0x1.a55f719757f1ap-10 | 0x1.a55f719757f1ap-10 | True | True | 0.0 | 0
+24 | auditory.log_hz.1009.987415 | receptor | 0x1.f24633b3b786fp-25 | 0x1.f24633b3b786fp-26 | 0x1.f24633b3b786fp-26 | True | True | 0.0 | 0
+24 | auditory.log_hz.1009.987415 | nj | 0x1.f24633b3b786fp-26 | 0x1.f24633b3b786fp-27 | 0x1.f24633b3b786fp-27 | True | True | 0.0 | 0
+25 | auditory.log_hz.1144.736095 | receptor | 0x1.155582a767989p-27 | 0x1.155582a767989p-28 | 0x1.155582a767989p-28 | True | True | 0.0 | 0
+25 | auditory.log_hz.1144.736095 | nj | 0x1.155582a767989p-28 | 0x1.155582a767989p-29 | 0x1.155582a767989p-29 | True | True | 0.0 | 0
+26 | auditory.log_hz.1297.462433 | receptor | 0x1.016876d9ac91ep-28 | 0x1.016876d9ac91ep-29 | 0x1.016876d9ac91ep-29 | True | True | 0.0 | 0
+26 | auditory.log_hz.1297.462433 | nj | 0x1.016876d9ac91ep-29 | 0x1.016876d9ac91ep-30 | 0x1.016876d9ac91ep-30 | True | True | 0.0 | 0
+27 | auditory.log_hz.1470.564937 | receptor | 0x1.27e4859034dc0p-29 | 0x1.27e4859034dc0p-30 | 0x1.27e4859034dc0p-30 | True | True | 0.0 | 0
+27 | auditory.log_hz.1470.564937 | nj | 0x1.27e4859034dc0p-30 | 0x1.27e4859034dc0p-31 | 0x1.27e4859034dc0p-31 | True | True | 0.0 | 0
+28 | auditory.log_hz.1666.762120 | receptor | 0x1.74b0dd0b005b7p-30 | 0x1.74b0dd0b005b7p-31 | 0x1.74b0dd0b005b7p-31 | True | True | 0.0 | 0
+28 | auditory.log_hz.1666.762120 | nj | 0x1.74b0dd0b005b7p-31 | 0x1.74b0dd0b005b7p-32 | 0x1.74b0dd0b005b7p-32 | True | True | 0.0 | 0
+29 | auditory.log_hz.1889.135185 | receptor | 0x1.ee4b9cd80f40dp-31 | 0x1.ee4b9cd80f40dp-32 | 0x1.ee4b9cd80f40dp-32 | True | True | 0.0 | 0
+29 | auditory.log_hz.1889.135185 | nj | 0x1.ee4b9cd80f40dp-32 | 0x1.ee4b9cd80f40dp-33 | 0x1.ee4b9cd80f40dp-33 | True | True | 0.0 | 0
+30 | auditory.log_hz.2141.176418 | receptor | 0x1.5303848012ebdp-31 | 0x1.5303848012ebdp-32 | 0x1.5303848012ebdp-32 | True | True | 0.0 | 0
+30 | auditory.log_hz.2141.176418 | nj | 0x1.5303848012ebdp-32 | 0x1.5303848012ebdp-33 | 0x1.5303848012ebdp-33 | True | True | 0.0 | 0
+31 | auditory.log_hz.2426.844035 | receptor | 0x1.d64af76a9b951p-32 | 0x1.d64af76a9b951p-33 | 0x1.d64af76a9b951p-33 | True | True | 0.0 | 0
+31 | auditory.log_hz.2426.844035 | nj | 0x1.d64af76a9b951p-33 | 0x1.d64af76a9b951p-34 | 0x1.d64af76a9b951p-34 | True | True | 0.0 | 0
+32 | auditory.log_hz.2750.624338 | receptor | 0x1.51bc89630cb58p-32 | 0x1.51bc89630cb58p-33 | 0x1.51bc89630cb58p-33 | True | True | 0.0 | 0
+32 | auditory.log_hz.2750.624338 | nj | 0x1.51bc89630cb58p-33 | 0x1.51bc89630cb58p-34 | 0x1.51bc89630cb58p-34 | True | True | 0.0 | 0
+33 | auditory.log_hz.3117.602179 | receptor | 0x1.e5d9404df6d30p-33 | 0x1.e5d9404df6d30p-34 | 0x1.e5d9404df6d30p-34 | True | True | 0.0 | 0
+33 | auditory.log_hz.3117.602179 | nj | 0x1.e5d9404df6d30p-34 | 0x1.e5d9404df6d30p-35 | 0x1.e5d9404df6d30p-35 | True | True | 0.0 | 0
+34 | auditory.log_hz.3533.540808 | receptor | 0x1.7a43f097682dbp-33 | 0x1.7a43f097682dbp-34 | 0x1.7a43f097682dbp-34 | True | True | 0.0 | 0
+34 | auditory.log_hz.3533.540808 | nj | 0x1.7a43f097682dbp-34 | 0x1.7a43f097682dbp-35 | 0x1.7a43f097682dbp-35 | True | True | 0.0 | 0
+35 | auditory.log_hz.4004.972388 | receptor | 0x1.1e3c9b12e2e7cp-33 | 0x1.1e3c9b12e2e7cp-34 | 0x1.1e3c9b12e2e7cp-34 | True | True | 0.0 | 0
+35 | auditory.log_hz.4004.972388 | nj | 0x1.1e3c9b12e2e7cp-34 | 0x1.1e3c9b12e2e7cp-35 | 0x1.1e3c9b12e2e7cp-35 | True | True | 0.0 | 0
+36 | auditory.log_hz.4539.300576 | receptor | 0x1.a8901e0223f72p-34 | 0x1.a8901e0223f72p-35 | 0x1.a8901e0223f72p-35 | True | True | 0.0 | 0
+36 | auditory.log_hz.4539.300576 | nj | 0x1.a8901e0223f72p-35 | 0x1.a8901e0223f72p-36 | 0x1.a8901e0223f72p-36 | True | True | 0.0 | 0
+37 | auditory.log_hz.5144.916799 | receptor | 0x1.d12c0244617bdp-34 | 0x1.d12c0244617bdp-35 | 0x1.d12c0244617bdp-35 | True | True | 0.0 | 0
+37 | auditory.log_hz.5144.916799 | nj | 0x1.d12c0244617bdp-35 | 0x1.d12c0244617bdp-36 | 0x1.d12c0244617bdp-36 | True | True | 0.0 | 0
+38 | auditory.log_hz.5831.332037 | receptor | 0x1.f1cb0a9de498bp-34 | 0x1.f1cb0a9de498bp-35 | 0x1.f1cb0a9de498bp-35 | True | True | 0.0 | 0
+38 | auditory.log_hz.5831.332037 | nj | 0x1.f1cb0a9de498bp-35 | 0x1.f1cb0a9de498bp-36 | 0x1.f1cb0a9de498bp-36 | True | True | 0.0 | 0
+39 | auditory.log_hz.6609.326185 | receptor | 0x1.0cc3629446ee3p-33 | 0x1.0cc3629446ee3p-34 | 0x1.0cc3629446ee3p-34 | True | True | 0.0 | 0
+39 | auditory.log_hz.6609.326185 | nj | 0x1.0cc3629446ee3p-34 | 0x1.0cc3629446ee3p-35 | 0x1.0cc3629446ee3p-35 | True | True | 0.0 | 0
+40 | auditory.log_hz.7491.117355 | receptor | 0x1.bffb35da4b9f4p-34 | 0x1.bffb35da4b9f4p-35 | 0x1.bffb35da4b9f4p-35 | True | True | 0.0 | 0
+40 | auditory.log_hz.7491.117355 | nj | 0x1.bffb35da4b9f4p-35 | 0x1.bffb35da4b9f4p-36 | 0x1.bffb35da4b9f4p-36 | True | True | 0.0 | 0
+41 | auditory.log_hz.8490.553750 | receptor | 0x1.b31333b010ec3p-34 | 0x1.b31333b010ec3p-35 | 0x1.b31333b010ec3p-35 | True | True | 0.0 | 0
+41 | auditory.log_hz.8490.553750 | nj | 0x1.b31333b010ec3p-35 | 0x1.b31333b010ec3p-36 | 0x1.b31333b010ec3p-36 | True | True | 0.0 | 0
+42 | auditory.log_hz.9623.331148 | receptor | 0x1.b6ef424054a17p-34 | 0x1.b6ef424054a17p-35 | 0x1.b6ef424054a17p-35 | True | True | 0.0 | 0
+42 | auditory.log_hz.9623.331148 | nj | 0x1.b6ef424054a17p-35 | 0x1.b6ef424054a17p-36 | 0x1.b6ef424054a17p-36 | True | True | 0.0 | 0
+43 | auditory.log_hz.10907.239400 | receptor | 0x1.0395a659f4299p-33 | 0x1.0395a659f4299p-34 | 0x1.0395a659f4299p-34 | True | True | 0.0 | 0
+43 | auditory.log_hz.10907.239400 | nj | 0x1.0395a659f4299p-34 | 0x1.0395a659f4299p-35 | 0x1.0395a659f4299p-35 | True | True | 0.0 | 0
+44 | auditory.log_hz.12362.441810 | receptor | 0x1.2de8bf8985b00p-33 | 0x1.2de8bf8985b00p-34 | 0x1.2de8bf8985b00p-34 | True | True | 0.0 | 0
+44 | auditory.log_hz.12362.441810 | nj | 0x1.2de8bf8985b00p-34 | 0x1.2de8bf8985b00p-35 | 0x1.2de8bf8985b00p-35 | True | True | 0.0 | 0
+45 | auditory.log_hz.14011.791791 | receptor | 0x1.3f52b2da540d1p-33 | 0x1.3f52b2da540d1p-34 | 0x1.3f52b2da540d1p-34 | True | True | 0.0 | 0
+45 | auditory.log_hz.14011.791791 | nj | 0x1.3f52b2da540d1p-34 | 0x1.3f52b2da540d1p-35 | 0x1.3f52b2da540d1p-35 | True | True | 0.0 | 0
+46 | auditory.log_hz.15881.191777 | receptor | 0x1.31a94951d8965p-33 | 0x1.31a94951d8965p-34 | 0x1.31a94951d8965p-34 | True | True | 0.0 | 0
+46 | auditory.log_hz.15881.191777 | nj | 0x1.31a94951d8965p-34 | 0x1.31a94951d8965p-35 | 0x1.31a94951d8965p-35 | True | True | 0.0 | 0
+47 | auditory.log_hz.18000.000000 | receptor | 0x1.00814d9ef1fb8p-33 | 0x1.00814d9ef1fb8p-34 | 0x1.00814d9ef1fb8p-34 | True | True | 0.0 | 0
+47 | auditory.log_hz.18000.000000 | nj | 0x1.00814d9ef1fb8p-34 | 0x1.00814d9ef1fb8p-35 | 0x1.00814d9ef1fb8p-35 | True | True | 0.0 | 0
+
+ERGEBNIS
+Rezeptor48/48 numerisch gleich,48/48 bitgleich. NJ48/48 numerisch gleich,48/48 bitgleich.
+Alle absoluten Abweichungen und ULP-Abstaende0. Keine Toleranz, Ausgabekorrektur oder Bandauswahl.
+Fuer dieses gespeicherte Fenster und diese gebundene Ausfuehrungsumgebung traegt die exakte Faktorbeziehung1/2.
+
+E/F-TREFFER UND HERKUNFT
+E {"decision": "ABSTAIN_NO_MATCH", "matches": []}
+Wiederholung identisch: True; Zustand unveraendert: True
+F {"decision": "ABSTAIN_AMBIGUOUS", "matches": [{"role": "retained", "generation": 1, "formation": "origin-1", "ordinals": [1, 2, 3, 4], "offset": 0, "factors": [0.5]}, {"role": "retained", "generation": 1, "formation": "origin-1", "ordinals": [1, 2, 3, 4], "offset": 1, "factors": [0.5]}, {"role": "retained", "generation": 1, "formation": "origin-1", "ordinals": [1, 2, 3, 4], "offset": 2, "factors": [0.5]}]}
+Wiederholung identisch: True; Zustand unveraendert: True
+Beide Arme besitzen dieselbe exakt bestaetigte Originalspur: origin-1, Frames1..4, Erhaltungsgeneration1.
+Eine zweite repetitive Bildung mit getrennten Ordinalen bestaetigt diese Spur; der Speicher kopiert nicht die Halbableitung.
+F weist alle drei Positionen0,1,2 mit Faktor0.5 aus. ABSTAIN_AMBIGUOUS ist korrekt; kein eindeutiger Erfahrungsabruf.
+E meldet ABSTAIN_NO_MATCH. Beide Hinweise zweimal ausgefuehrt, keine Speicher-/Generations-/Reihenfolgenaenderung.
+Die vier identischen Originalframes sind eine technische Wiederholung der gemessenen Ausgabe, keine vier unabhaengigen Wahrnehmungen.
+
+PRUEFAUFWAND UND RESSOURCEN
+Ableitung {"elapsed_ns": 39899800, "incremental_python_peak_bytes": 522240, "net_python_bytes": 22217}
+Original/halbierte Verarbeitung {"original": {"elapsed_ns": 1096032200, "incremental_python_peak_bytes": 10657759, "net_python_bytes": 7794851}, "half": {"elapsed_ns": 22516800, "incremental_python_peak_bytes": 2871230, "net_python_bytes": 8946}}
+Speichervergleich einschliesslich Beobachter {"elapsed_ns": 142658200, "incremental_python_peak_bytes": 166393, "net_python_bytes": 54511}
+E Speicher {"whole_trace_comparisons": 1, "hint_positions_checked": 6, "traced_call_ns": 58638500, "roles": {"retained_frames": 4, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 8, "hint_frames": 1}, "temporary_trace": 8, "temporary_hint": 2, "temporary_total": 8, "factor_checks": 0, "scalar_factor_checks": 0, "incremental_python_call_peak_bytes": 26018}
+F Speicher {"whole_trace_comparisons": 1, "hint_positions_checked": 6, "traced_call_ns": 72784800, "roles": {"retained_frames": 4, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 8, "hint_frames": 1}, "temporary_trace": 8, "temporary_hint": 2, "temporary_total": 8, "factor_checks": 18, "scalar_factor_checks": 588, "incremental_python_call_peak_bytes": 9626}
+Speicher beider Arme: maximal8 Spurframes, maximal2 Hinweisframes; gemeinsames temporaeres Maximum8. Grenze16+2 eingehalten.
+F zusaetzlich18 Faktorpruefungen mit588 skalaren Vergleichen fuer beide Hinweiswiederholungen; E/F je6 durchsuchte Positionen.
+Original und Halbableitung je19200Byte; temporaere PCM-Listen, Rezeptorarrays und Beobachter liegen ausserhalb des Speicherbudgets.
+Tracemalloc misst Python-Allokationen einschliesslich Imports/Beobachtung; keine vollstaendige native NumPy-/Prozess-RAM-Messung.
+Der erste Verarbeitungsschritt enthaelt Importinitialisierung; Zeit-/Peakunterschiede belegen keine unterschiedliche Algorithmuseffizienz.
+
+AUSSAGEGRENZE
+Der Erfolg betrifft genau dieses gespeicherte synthetische Zwei-Ton-Fenster, diesen direkten Rezeptor/NJ-Pfad und diese Laufzeit.
+Keine Garantie fuer andere PCM-Fenster, Subnormalfaelle, FFT-Versionen oder rollende Historien.
+Keine Zusammenfuehrung mit skalierter Bestaetigung, keine Originalquellenproduktion und keine Registry-Arbeit.
+Die beauftragte Gegenprobe ist abgeschlossen. Weitere Verallgemeinerung ist durch diesen Einzelbefund nicht abgedeckt.

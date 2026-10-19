@@ -1,0 +1,108 @@
+{
+  "arms": [
+    {
+      "job": 536870912,
+      "name": "COMMIT_512",
+      "process": 536870912
+    },
+    {
+      "job": 1073741824,
+      "name": "COMMIT_1024",
+      "process": 1073741824
+    }
+  ],
+  "code": {
+    "reports/decoder_isolation_once.py": {
+      "bytes": 6684,
+      "sha256": "a43aaebcc846b2a253c045e3af2a1d08880fc2ccad7154311e4a77317f57d15f"
+    },
+    "reports/verify_decoder_isolation.py": {
+      "bytes": 3205,
+      "sha256": "001783466a6172d04dc59715bcc5548791ed3fc2cca149bb2aaf271fb9ae2eeb"
+    },
+    "tests/s2oe_isolation_worker.py": {
+      "bytes": 1242,
+      "sha256": "3e67865bf363631d990c4ed15d94bb6336f782b1acdf27384a02f8e0d274445f"
+    },
+    "tests/test_s2oe_isolation.py": {
+      "bytes": 3872,
+      "sha256": "340bbdb74d5575f39855a102337d17b8e3d3188136c621dc118259684ccd2470"
+    },
+    "tools/_s2oe_decoder_worker.py": {
+      "bytes": 22928,
+      "sha256": "834347e9e6aa1399a7d35907e5cb7fab5b5314da1ef2b408194e5dfe67eacd5a"
+    },
+    "tools/_s2oe_isolation_log.py": {
+      "bytes": 520,
+      "sha256": "cf43d6e5422fa9776f03322c2a8e6446f0c4dc4d2f9445a54ce5b594db029278"
+    },
+    "tools/_s2oe_media_decoder.py": {
+      "bytes": 9560,
+      "sha256": "76a5fc5a2964e55997598cac5523d5d5195a2f228abd2c4f776336e786db52be"
+    }
+  },
+  "common_sha256": "7d306c851a74eeccb00c6aca3b5397372c6d8e450f217cb12a457f08bae5e6d3",
+  "deduplicate_logs": false,
+  "host_before": {
+    "available_commit_bytes": 14001123328,
+    "commit_limit_bytes": 29784133632,
+    "physical_available_bytes": 7193653248
+  },
+  "host_required": {
+    "available_commit_bytes": 3221225472,
+    "physical_available_bytes": 2147483648
+  },
+  "ledger": {
+    "arm_reserves": 131072,
+    "binding_reserve": 8192,
+    "code_bytes": 48011,
+    "common_bytes": 10159,
+    "qualification_reserve": 16384,
+    "report_reserve": 8192,
+    "verification_reserve": 16384
+  },
+  "limits_interpretation": "Overlapping process/job bounds; workers sequential, not additive.",
+  "log_level": "ERROR",
+  "native_log_limit": {
+    "bytes": 32768,
+    "messages": 32
+  },
+  "qualification_id": "decoder-isolation-neutral-20260911-01",
+  "selection": {
+    "repeat": 1,
+    "window": 0
+  },
+  "source": {
+    "audio_stream": 1,
+    "audio_time_base": [
+      1,
+      48000
+    ],
+    "frame_rate": [
+      30000,
+      1001
+    ],
+    "path": "C:\\Users\\TV\\Downloads\\17138816-uhd_3840_2160_30fps.mp4",
+    "sha256": "df0986f384e156c4dfec234e94b6f6baa3d0f8a9cfd7ba81f14aadf0313450aa",
+    "size": 83498438,
+    "video_size": [
+      3840,
+      2160
+    ],
+    "video_stream": 0,
+    "video_time_base": [
+      1,
+      30000
+    ]
+  },
+  "test_inventory": [
+    "default_and_forbidden_stage",
+    "two_native_job_bindings",
+    "original_native_exception_and_message",
+    "abrupt_exit_preserves_native_log",
+    "native_log_bound_is_explicit",
+    "job_message_kinds_remain_distinct"
+  ],
+  "total_reserved": 238394,
+  "version": "s2oe.decoder-isolation.v1"
+}

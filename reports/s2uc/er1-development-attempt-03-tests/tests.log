@@ -1,0 +1,20 @@
+test_01_retention_warm_origin_and_newer_loss (tests.test_s2uc_er1.ER1Policy.test_01_retention_warm_origin_and_newer_loss) ... ok
+test_02_equal_until_reorder_unmasked_and_equal_marks (tests.test_s2uc_er1.ER1Policy.test_02_equal_until_reorder_unmasked_and_equal_marks) ... ok
+test_03_readmission_is_new_origin_and_downstream_cost (tests.test_s2uc_er1.ER1Policy.test_03_readmission_is_new_origin_and_downstream_cost) ... ok
+test_04_corrupt_stock_and_feedback_fail_closed (tests.test_s2uc_er1.ER1Policy.test_04_corrupt_stock_and_feedback_fail_closed) ... ok
+test_05_policy_resource_limits (tests.test_s2uc_er1.ER1Policy.test_05_policy_resource_limits) ... ok
+test_06_long_policy_and_invalid_mode_rejected (tests.test_s2uc_er1.ER1Policy.test_06_long_policy_and_invalid_mode_rejected) ... ok
+test_07_archives_independent_and_tamper (tests.test_s2uc_er1.ER1Policy.test_07_archives_independent_and_tamper) ... ok
+test_08_same_u_methods (tests.test_s2uc_er1.ER1Policy.test_08_same_u_methods) ... ok
+test_13_invalid_entry_initialization (tests.test_s2uc_er1.ER1Policy.test_13_invalid_entry_initialization) ... ok
+test_14_equal_selection_on_identical_stocks (tests.test_s2uc_er1.ER1Policy.test_14_equal_selection_on_identical_stocks) ... ok
+test_09_all_neutral_sources_independent (tests.test_s2uc_er1.ER1SourceStats.test_09_all_neutral_sources_independent) ... ok
+test_10_full_denominator_and_independent_bootstrap (tests.test_s2uc_er1.ER1SourceStats.test_10_full_denominator_and_independent_bootstrap) ... ok
+test_11_decisions_and_empty_groups (tests.test_s2uc_er1.ER1SourceStats.test_11_decisions_and_empty_groups) ... ok
+test_12_missing_targets_cases_orientation_invalid (tests.test_s2uc_er1.ER1SourceStats.test_12_missing_targets_cases_orientation_invalid) ... ok
+test_15_signed_synthetic_complete_aggregates (tests.test_s2uc_er1.ER1SourceStats.test_15_signed_synthetic_complete_aggregates) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 12.319s
+
+OK

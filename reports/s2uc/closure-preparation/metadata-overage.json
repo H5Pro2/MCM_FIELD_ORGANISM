@@ -1,0 +1,26 @@
+{
+  "metadata_limit": 65536,
+  "items": [
+    {
+      "name": "manifest",
+      "bytes": 24440
+    },
+    {
+      "name": "final_binding_reserve",
+      "bytes": 21459
+    },
+    {
+      "name": "qualification_reserve",
+      "bytes": 65536
+    }
+  ],
+  "total": 111435.0,
+  "overage": 45899.0,
+  "qualification_reserve_reason": "UNBOUND: no generated final test protocol exists",
+  "shared": {
+    "inventory_bytes": 108265.0,
+    "terminal_reserve": 16384,
+    "class_total": 124649.0,
+    "limit": 262144
+  }
+}

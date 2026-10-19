@@ -1,0 +1,91 @@
+{
+  "primary": {
+    "approx_vs_persistence": [
+      {
+        "case": "R3",
+        "target": 11,
+        "mae_increase": 0.0018484613305405366,
+        "exact": {
+          "case_id": "R3",
+          "target": 11,
+          "positive": true,
+          "origin_category": "ABSTAIN",
+          "assigned_root": null,
+          "true_root": "AN-EVAL/A",
+          "role": null,
+          "assignment_covered": false,
+          "correct_rejection": false,
+          "prediction_status": "ABSTAIN_NO_CONTEXT",
+          "context_covered": false,
+          "persistence_mae": 0.0,
+          "context_mae": null,
+          "paired_delta": null,
+          "observer_hybrid_mae": 0.0,
+          "full_delta": 0.0
+        },
+        "approx": {
+          "case_id": "R3",
+          "target": 11,
+          "positive": true,
+          "origin_category": "CORRECT",
+          "assigned_root": "AN-EVAL/A",
+          "true_root": "AN-EVAL/A",
+          "role": "retained",
+          "assignment_covered": true,
+          "correct_rejection": false,
+          "prediction_status": "PREDICTED_RETAINED",
+          "context_covered": true,
+          "persistence_mae": 0.0,
+          "context_mae": 0.0018484613305405366,
+          "paired_delta": -0.0018484613305405366,
+          "observer_hybrid_mae": 0.0018484613305405366,
+          "full_delta": -0.0018484613305405366
+        }
+      }
+    ],
+    "approx_vs_exact": [
+      {
+        "case": "R3",
+        "target": 11,
+        "mae_increase": 0.0018484613305405366,
+        "exact": {
+          "case_id": "R3",
+          "target": 11,
+          "positive": true,
+          "origin_category": "ABSTAIN",
+          "assigned_root": null,
+          "true_root": "AN-EVAL/A",
+          "role": null,
+          "assignment_covered": false,
+          "correct_rejection": false,
+          "prediction_status": "ABSTAIN_NO_CONTEXT",
+          "context_covered": false,
+          "persistence_mae": 0.0,
+          "context_mae": null,
+          "paired_delta": null,
+          "observer_hybrid_mae": 0.0,
+          "full_delta": 0.0
+        },
+        "approx": {
+          "case_id": "R3",
+          "target": 11,
+          "positive": true,
+          "origin_category": "CORRECT",
+          "assigned_root": "AN-EVAL/A",
+          "true_root": "AN-EVAL/A",
+          "role": "retained",
+          "assignment_covered": true,
+          "correct_rejection": false,
+          "prediction_status": "PREDICTED_RETAINED",
+          "context_covered": true,
+          "persistence_mae": 0.0,
+          "context_mae": 0.0018484613305405366,
+          "paired_delta": -0.0018484613305405366,
+          "observer_hybrid_mae": 0.0018484613305405366,
+          "full_delta": -0.0018484613305405366
+        }
+      }
+    ]
+  },
+  "learning": {}
+}

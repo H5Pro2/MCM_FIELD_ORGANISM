@@ -1,0 +1,33 @@
+{"event": "baseline", "prior_fw1_executions": "none evidenced; recovered note reports zero", "workflow": "a156629c-6075-41eb-9a27-91eb9f13fd70"}
+{"event": "unit_arm_start", "test": "experiments.fw1.test_contract.Contract.test_02_frozen_relearning_repeated_events", "policy": 1, "live_reference": 1, "archive_state_reference": 1, "frames_limit": 20}
+{"event": "unit_arm_start", "test": "experiments.fw1.test_contract.Contract.test_03_partial_publication_fails_closed", "policy": 1, "live_reference": 1, "archive_state_reference": 1, "frames_limit": 20}
+{"event": "unit_arm_start", "test": "experiments.fw1.test_contract.Contract.test_04_duplicate_input_rejected", "policy": 1, "live_reference": 1, "archive_state_reference": 1, "frames_limit": 20}
+{"event": "neutral_source_unit", "pairs": 2, "blocks": 24, "reconstructions": 2}
+{"event": "construction_only", "policy_histories": 0, "instances": 2}
+{"event": "unit_arm_start", "test": "experiments.fw1.test_contract.Contract.test_02_frozen_relearning_repeated_events", "policy": 1, "live_reference": 1, "archive_state_reference": 1, "frames_limit": 20}
+{"event": "unit_arm_end", "test": "experiments.fw1.test_contract.Contract.test_02_frozen_relearning_repeated_events", "accepted": 12, "cleanup": true}
+{"event": "unit_arm_start", "test": "experiments.fw1.test_contract.Contract.test_03_partial_publication_fails_closed", "policy": 1, "live_reference": 1, "archive_state_reference": 1, "frames_limit": 20}
+{"event": "unit_arm_end", "test": "experiments.fw1.test_contract.Contract.test_03_partial_publication_fails_closed", "accepted": 12, "cleanup": true}
+{"event": "unit_arm_start", "test": "experiments.fw1.test_contract.Contract.test_04_duplicate_input_rejected", "policy": 1, "live_reference": 1, "archive_state_reference": 1, "frames_limit": 20}
+{"event": "unit_arm_end", "test": "experiments.fw1.test_contract.Contract.test_04_duplicate_input_rejected", "accepted": 12, "cleanup": true}
+{"event": "unit_arm_start", "test": "experiments.fw1.test_contract.Contract.test_02_frozen_relearning_repeated_events", "policy": 1, "live_reference": 1, "archive_state_reference": 1, "frames_limit": 20}
+{"event": "unit_arm_end", "test": "experiments.fw1.test_contract.Contract.test_02_frozen_relearning_repeated_events", "accepted": 20, "cleanup": true}
+{"event": "unit_arm_start", "test": "experiments.fw1.test_contract.Contract.test_03_partial_publication_fails_closed", "policy": 1, "live_reference": 1, "archive_state_reference": 1, "frames_limit": 20}
+{"event": "unit_arm_end", "test": "experiments.fw1.test_contract.Contract.test_03_partial_publication_fails_closed", "accepted": 12, "cleanup": true}
+{"event": "unit_arm_start", "test": "experiments.fw1.test_contract.Contract.test_04_duplicate_input_rejected", "policy": 1, "live_reference": 1, "archive_state_reference": 1, "frames_limit": 20}
+{"event": "unit_arm_end", "test": "experiments.fw1.test_contract.Contract.test_04_duplicate_input_rejected", "accepted": 12, "cleanup": true}
+{"event": "unit_arm_start", "test": "experiments.fw1.test_contract.Contract.test_11_internal_stock_identity_and_eviction", "mode": "KEEP", "policy": 1, "frames_limit": 40, "live_reference": 0, "archive_state_reference": 0}
+{"event": "unit_arm_end", "test": "experiments.fw1.test_contract.Contract.test_11_internal_stock_identity_and_eviction", "accepted": 40, "cleanup": true}
+{"event": "unit_arm_start", "test": "experiments.fw1.test_contract.Contract.test_11_internal_stock_identity_and_eviction", "mode": "RESET", "policy": 1, "frames_limit": 40, "live_reference": 0, "archive_state_reference": 0}
+{"event": "unit_arm_end", "test": "experiments.fw1.test_contract.Contract.test_11_internal_stock_identity_and_eviction", "accepted": 40, "cleanup": true}
+{"event": "unit_arm_start", "test": "experiments.fw1.test_contract.Contract.test_12_wrong_event_generation_fail_closed", "policy": 1, "frames_limit": 12, "live_reference": 0, "archive_state_reference": 0}
+{"event": "unit_arm_end", "test": "experiments.fw1.test_contract.Contract.test_12_wrong_event_generation_fail_closed", "accepted": 12, "cleanup": true}
+{"event": "archive_mutation", "fault": "reset", "started": 2, "completed": 1, "policy": 0}
+{"event": "archive_mutation", "fault": "output", "started": 2, "completed": 1, "policy": 0}
+{"event": "archive_mutation", "fault": "stock", "started": 2, "completed": 1, "policy": 0}
+{"event": "archive_mutation", "fault": "ticket", "started": 2, "completed": 1, "policy": 0}
+{"event": "reconciled_unlogged_mutation", "fault": "inactive_ticket", "started": 2, "completed": 2, "source": "evidence-attempt-01.txt; no ValueError was raised", "policy": 0}
+{"event": "integration_reconciliation", "terminals": ["pass01-complete", "pass01-deadline", "pass01-incomplete_pair", "pass01-source_failure", "pass01-write_budget"], "policy": 28, "live_reference": 28, "archive_reference": 28}
+{"event": "statistics_final_recheck", "source": "statistics-final-verification.json", "policy": 0}
+{"event": "unit_arm_start", "test": "experiments.fw1.test_contract.Contract.test_18_old_errors_not_restored", "policy": 1, "live_reference": 1, "archive_state_reference": 1, "frames_limit": 20}
+{"event": "unit_arm_end", "test": "experiments.fw1.test_contract.Contract.test_18_old_errors_not_restored", "accepted": 20, "cleanup": true}

@@ -1,0 +1,28 @@
+{
+  "status": "COMPLETE_ASSESSED",
+  "files": {
+    "facts.json": {
+      "bytes": 84653,
+      "sha256": "7e1f30b353f87b0d19228f0d407d4bc0b2349004792de5793d98fe5f9cb7cf2f"
+    },
+    "REPORT.md": {
+      "bytes": 8122,
+      "sha256": "264c386ebf1ff521f0f6918e39156bedeb4ccfda63f13658d081dcb882ec094f"
+    }
+  },
+  "run_closure_sha256": "52b139b42a86738664d8f9a347b4603a89b55b7dd71280e744975d16c040d6ca",
+  "authorization_consumed": true,
+  "external_closure_elapsed_seconds": 924.1421676,
+  "policy_replays_in_postassessment": 0,
+  "charged_with_report_reserve": 14453566,
+  "export_limit": 67108864,
+  "report_reserve": 524288,
+  "prior_admin_report_bytes": 39770,
+  "synchronized_documents": {
+    "README.md": "99bb4b61a293b383dffabe146d629189733f611ec33ff0a21eaf29d6fba878ed",
+    "AKTUELLER_FORSCHUNGSWEG.md": "b4465d6b7c773d83f3baaf28e09dc81ded7083a96bf4f6d3864bf1ebf063038f"
+  },
+  "this_report_bytes": 93774,
+  "combined_external_reports_bytes": 133544,
+  "actual_total_bytes": 14062822
+}

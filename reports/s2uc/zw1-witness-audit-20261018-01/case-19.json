@@ -1,0 +1,375 @@
+{
+  "archive_sha256": "1ed0ad18674c01ff4e73411c4959f50c5e8046af96ae0dbbb40c0f4bcbdc9d12",
+  "case": 19,
+  "condition": "A",
+  "decoder": {
+    "dictionary_bytes": 993998,
+    "encoded_bytes": 1048270,
+    "gzip_bytes": 177688,
+    "record_indices": 10273,
+    "reference_edges": 133414,
+    "table_entries": 14562
+  },
+  "descriptive": {
+    "E": {
+      "event_gains": 7,
+      "event_harms": 0,
+      "gain_error_sum": 1.75,
+      "harm_error_sum": 0,
+      "multi_assigned_targets": {},
+      "retention_events": 4,
+      "unique_equal_targets": 1,
+      "unique_gain_targets": 7,
+      "unique_harm_targets": 0,
+      "unique_warm_targets": 8,
+      "warm_records": 8
+    },
+    "F": {
+      "event_gains": 7,
+      "event_harms": 6,
+      "gain_error_sum": 1.75,
+      "harm_error_sum": 1.5,
+      "multi_assigned_targets": {},
+      "retention_events": 11,
+      "unique_equal_targets": 2,
+      "unique_gain_targets": 7,
+      "unique_harm_targets": 6,
+      "unique_warm_targets": 15,
+      "warm_records": 15
+    }
+  },
+  "differences": {
+    "duplicate_records": [],
+    "missing": [],
+    "unsupported": []
+  },
+  "examples": {
+    "E/equal": {
+      "keeper": "E",
+      "keeper_error": 0.0,
+      "keeper_victims": [],
+      "last_observation": 328,
+      "local_gain": false,
+      "newer_keeper_victims": [],
+      "offset": 0,
+      "origin": [
+        241,
+        242,
+        243,
+        244
+      ],
+      "other_error": 0.0,
+      "other_victim": [
+        241,
+        242,
+        243,
+        244
+      ],
+      "output_sha256": "b21cdc59d16d5b48bb164a7b15a6a395abbd3e9ed1ab3d81ad414dfb9f1f124d",
+      "prior_live_feedback": [
+        247,
+        251,
+        255,
+        259,
+        263,
+        271,
+        315,
+        319,
+        323,
+        327
+      ],
+      "promotion_end": 336,
+      "stage": "warm_use",
+      "target": 363,
+      "unequal_blocks": [
+        332
+      ]
+    },
+    "E/gain": {
+      "keeper": "E",
+      "keeper_error": 0.0,
+      "keeper_victims": [
+        [
+          53,
+          54,
+          55,
+          56
+        ]
+      ],
+      "last_observation": 68,
+      "local_gain": true,
+      "newer_keeper_victims": [
+        [
+          53,
+          54,
+          55,
+          56
+        ]
+      ],
+      "offset": 0,
+      "origin": [
+        41,
+        42,
+        43,
+        44
+      ],
+      "other_error": 0.25,
+      "other_victim": [
+        41,
+        42,
+        43,
+        44
+      ],
+      "output_sha256": "b21cdc59d16d5b48bb164a7b15a6a395abbd3e9ed1ab3d81ad414dfb9f1f124d",
+      "prior_live_feedback": [
+        47,
+        51,
+        67
+      ],
+      "promotion_end": 80,
+      "stage": "warm_use",
+      "target": 87,
+      "unequal_blocks": [
+        72,
+        76
+      ]
+    },
+    "E/retention": {
+      "keeper": "E",
+      "keeper_victims": [
+        [
+          53,
+          54,
+          55,
+          56
+        ]
+      ],
+      "last_observation": 68,
+      "newer_keeper_victims": [
+        [
+          53,
+          54,
+          55,
+          56
+        ]
+      ],
+      "origin": [
+        41,
+        42,
+        43,
+        44
+      ],
+      "other_victim": [
+        41,
+        42,
+        43,
+        44
+      ],
+      "promotion_end": 80,
+      "stage": "retention",
+      "unequal_blocks": [
+        72,
+        76
+      ]
+    },
+    "F/equal": {
+      "keeper": "F",
+      "keeper_error": 0.0,
+      "keeper_victims": [
+        [
+          41,
+          42,
+          43,
+          44
+        ]
+      ],
+      "last_observation": 64,
+      "local_gain": false,
+      "newer_keeper_victims": [],
+      "offset": 0,
+      "origin": [
+        53,
+        54,
+        55,
+        56
+      ],
+      "other_error": 0.0,
+      "other_victim": [
+        53,
+        54,
+        55,
+        56
+      ],
+      "output_sha256": "b21cdc59d16d5b48bb164a7b15a6a395abbd3e9ed1ab3d81ad414dfb9f1f124d",
+      "prior_live_feedback": [
+        59,
+        63
+      ],
+      "promotion_end": 80,
+      "stage": "warm_use",
+      "target": 103,
+      "unequal_blocks": [
+        68,
+        72,
+        76
+      ]
+    },
+    "F/gain": {
+      "keeper": "F",
+      "keeper_error": 0.0,
+      "keeper_victims": [
+        [
+          41,
+          42,
+          43,
+          44
+        ]
+      ],
+      "last_observation": 64,
+      "local_gain": true,
+      "newer_keeper_victims": [],
+      "offset": 0,
+      "origin": [
+        53,
+        54,
+        55,
+        56
+      ],
+      "other_error": 0.25,
+      "other_victim": [
+        53,
+        54,
+        55,
+        56
+      ],
+      "output_sha256": "b21cdc59d16d5b48bb164a7b15a6a395abbd3e9ed1ab3d81ad414dfb9f1f124d",
+      "prior_live_feedback": [
+        59,
+        63
+      ],
+      "promotion_end": 80,
+      "stage": "warm_use",
+      "target": 95,
+      "unequal_blocks": [
+        68,
+        72,
+        76
+      ]
+    },
+    "F/harm": {
+      "keeper": "F",
+      "keeper_error": 0.5,
+      "keeper_victims": [
+        [
+          89,
+          90,
+          91,
+          92
+        ]
+      ],
+      "last_observation": 136,
+      "local_gain": false,
+      "newer_keeper_victims": [],
+      "offset": 0,
+      "origin": [
+        129,
+        130,
+        131,
+        132
+      ],
+      "other_error": 0.25,
+      "other_victim": [
+        129,
+        130,
+        131,
+        132
+      ],
+      "output_sha256": "b21cdc59d16d5b48bb164a7b15a6a395abbd3e9ed1ab3d81ad414dfb9f1f124d",
+      "prior_live_feedback": [
+        135
+      ],
+      "promotion_end": 152,
+      "stage": "warm_use",
+      "target": 159,
+      "unequal_blocks": [
+        140,
+        144,
+        148
+      ]
+    },
+    "F/retention": {
+      "keeper": "F",
+      "keeper_victims": [
+        [
+          41,
+          42,
+          43,
+          44
+        ]
+      ],
+      "last_observation": 64,
+      "newer_keeper_victims": [],
+      "origin": [
+        53,
+        54,
+        55,
+        56
+      ],
+      "other_victim": [
+        53,
+        54,
+        55,
+        56
+      ],
+      "promotion_end": 80,
+      "stage": "retention",
+      "unequal_blocks": [
+        68,
+        72,
+        76
+      ]
+    }
+  },
+  "expected": {
+    "E": {
+      "local_gains": 7,
+      "multi_assigned_targets": {},
+      "retention_events": 4,
+      "unique_gain_targets": 7,
+      "unique_warm_targets": 8,
+      "warm_uses": 8
+    },
+    "F": {
+      "local_gains": 7,
+      "multi_assigned_targets": {},
+      "retention_events": 11,
+      "unique_gain_targets": 7,
+      "unique_warm_targets": 15,
+      "warm_uses": 15
+    }
+  },
+  "expected_multiset_sha256": "5414faddabe30a53b3ba72d15d0a5ac223f89100bf26f5799fd6791a33154148",
+  "pair": 10,
+  "rejected_candidates": [],
+  "reported": {
+    "E": {
+      "local_gains": 7,
+      "multi_assigned_targets": {},
+      "retention_events": 4,
+      "unique_gain_targets": 7,
+      "unique_warm_targets": 8,
+      "warm_uses": 8
+    },
+    "F": {
+      "local_gains": 7,
+      "multi_assigned_targets": {},
+      "retention_events": 11,
+      "unique_gain_targets": 7,
+      "unique_warm_targets": 15,
+      "warm_uses": 15
+    }
+  },
+  "seconds": 4.481417800008785,
+  "source_sha256": "675562b240f6304fb704d535f68303fcfacf261a823584c1882a316f2bc89527",
+  "status": "PASS"
+}

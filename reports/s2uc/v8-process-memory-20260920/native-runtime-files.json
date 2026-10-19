@@ -1,0 +1,17 @@
+[
+  {
+    "path": "C:\\Windows\\System32\\kernel32.dll",
+    "bytes": 783720,
+    "sha256": "4636f65d449b1353100578c6cb139933cf2b134f5e246119d18968873a058bed"
+  },
+  {
+    "path": "C:\\Windows\\System32\\psapi.dll",
+    "bytes": 20328,
+    "sha256": "8c91fa7e5ee1de667d3cd312d8a40cfdef6db93738c8946f9bf5538d8a609f46"
+  },
+  {
+    "path": "C:\\Python314\\python314.dll",
+    "bytes": 6767440,
+    "sha256": "a07f7d09c3121492bb066535c6d0811df5fbc2090cbca7031a97bb47ce1480c9"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "version": "s2oe.post-report-balance.v1",
+  "run_id": "immediate-visual-retrieval-20260912-01",
+  "technical_balance_unchanged": "reports/s2oe/immediate-visual-retrieval-20260912-01/balance.json",
+  "technical_total": 1625862,
+  "technical_metadata": 43795,
+  "report_bytes": 3951,
+  "balance_file_bytes": 524,
+  "total_with_reporting": 1630337,
+  "metadata_with_reporting": 48270,
+  "limits": {
+    "total": 4194304,
+    "metadata": 65536
+  },
+  "violations": [],
+  "new_verification_calls": 0,
+  "new_scan_calls": 0
+}

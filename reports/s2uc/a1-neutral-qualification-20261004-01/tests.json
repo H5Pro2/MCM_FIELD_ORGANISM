@@ -1,0 +1,7 @@
+{
+  "count": 10,
+  "success": true,
+  "failures": 0,
+  "errors": 0,
+  "output": "test_A01_cycle_warm_retrieval_and_new_candidate (tests.test_s2uc_a1.A1Tests.test_A01_cycle_warm_retrieval_and_new_candidate) ... ok\ntest_A02_ambiguity_even_equal_successors (tests.test_s2uc_a1.A1Tests.test_A02_ambiguity_even_equal_successors) ... ok\ntest_A03_full_confirmation_priority (tests.test_s2uc_a1.A1Tests.test_A03_full_confirmation_priority) ... ok\ntest_A04_self_overlap_and_unqualified_matches (tests.test_s2uc_a1.A1Tests.test_A04_self_overlap_and_unqualified_matches) ... ok\ntest_A05_cells_original_identity_and_victim (tests.test_s2uc_a1.A1Tests.test_A05_cells_original_identity_and_victim) ... ok\ntest_A06_harm_and_warm_victim_loss (tests.test_s2uc_a1.A1Tests.test_A06_harm_and_warm_victim_loss) ... ok\ntest_A07_no_rejuvenation_on_retained_retrieval (tests.test_s2uc_a1.A1Tests.test_A07_no_rejuvenation_on_retained_retrieval) ... ok\ntest_A08_failure_atomicity_closed_empty (tests.test_s2uc_a1.A1Tests.test_A08_failure_atomicity_closed_empty) ... ok\ntest_A09_limits_scope_and_defaults (tests.test_s2uc_a1.A1Tests.test_A09_limits_scope_and_defaults) ... ok\ntest_A11_U_factory_equivalence_and_inherited_methods (tests.test_s2uc_a1.A1Tests.test_A11_U_factory_equivalence_and_inherited_methods) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.132s\n\nOK\n"
+}

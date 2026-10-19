@@ -1,0 +1,1 @@
+{"active_pair":1,"authorization_consumed":false,"cleanup":"CONFIRMED","completed_pairs":[],"executions":{"archive_reference_completed":0,"extra_policy_measurement":0,"live_reference_completed":0,"policy_completed":0,"policy_started":0},"first_failure":"ValueError:SOURCE_CHANGED","research":false,"retry_allowed":false,"status":"TECHNICAL_ABORT"}

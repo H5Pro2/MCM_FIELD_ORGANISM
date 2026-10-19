@@ -1,0 +1,21 @@
+{
+  "existing_changed": [
+    "tools/_s2uc_execution_v8.py"
+  ],
+  "new_python": [
+    "tools/s2uc_source_process_once.py",
+    "tools/s2uc_v9_neutral_check.py",
+    "tools/_s2uc_qualification_v9.py",
+    "tools/_s2uc_resources_v9.py",
+    "tools/_s2uc_source_context_v9.py",
+    "tools/_s2uc_source_execution.py",
+    "tools/_s2uc_source_execution_binding.py",
+    "tests/test_s2uc_source_execution.py",
+    "tests/test_s2uc_source_process_guard.py"
+  ],
+  "missing": [],
+  "historical_report_files_checked": 1852,
+  "historical_report_changes": [],
+  "old_test_files_unchanged": true,
+  "version_note": "Only tools/_s2uc_execution_v8.py changed among preexisting files: +235 bytes. V8 contract/binder, all seven old test files and archived bindings/results remain byte-identical. Current V8 inventory hashes therefore differ from historical inventories; none were rewritten."
+}

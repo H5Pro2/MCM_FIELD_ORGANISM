@@ -1,0 +1,55 @@
+{
+  "overviews": {
+    "AKTUELLER_FORSCHUNGSWEG.md": {
+      "current": {
+        "bytes": 1550491,
+        "sha256": "5e75d87305c4f3afed38509f94b614988a62c173a5de065e58742ad8c809d126"
+      },
+      "edit": "insert_after_first_heading_only",
+      "lossless": true,
+      "previous": {
+        "bytes": 1548911,
+        "sha256": "c32d63ada3acf8ba7b312a87b3bfdb31babe0849a95c8feb155bcd7e76553c5a"
+      },
+      "snapshot": "historical-overviews/AKTUELLER_FORSCHUNGSWEG.md.gz",
+      "snapshot_info": {
+        "bytes": 474195,
+        "sha256": "7d7a304495d9fe836dfa04023b0e514e0926a02289198125b150c0bb189f1562"
+      }
+    },
+    "README.md": {
+      "current": {
+        "bytes": 192680,
+        "sha256": "07dc49a9c19e4872f8df31f1852beb5353faebbb235e854d76213f79788557b6"
+      },
+      "edit": "insert_after_first_heading_only",
+      "lossless": true,
+      "previous": {
+        "bytes": 191100,
+        "sha256": "c66384636bd587d15df1dbf84ff58a680fc581fef53277084987236e548613ef"
+      },
+      "snapshot": "historical-overviews/README.md.gz",
+      "snapshot_info": {
+        "bytes": 58828,
+        "sha256": "a13b8e778ee66bc5cc60102d8afba98ff9358f9fef933a751de6af2e3200f55f"
+      }
+    },
+    "docs/README.md": {
+      "current": {
+        "bytes": 290529,
+        "sha256": "99aa03b8138882547934eee614ae9b5fa47303399f158495ff355f70c7aa0437"
+      },
+      "edit": "insert_after_first_heading_only",
+      "lossless": true,
+      "previous": {
+        "bytes": 288949,
+        "sha256": "83fe737ba786d5efbb0a4002288af8ec08bf3e4e3f0b02335fc0132cda632824"
+      },
+      "snapshot": "historical-overviews/docs/README.md.gz",
+      "snapshot_info": {
+        "bytes": 89956,
+        "sha256": "1f3be6ddc29ce2134400026236e92b58bb33b32695aa4dfa30d533c74421c699"
+      }
+    }
+  }
+}

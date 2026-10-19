@@ -1,0 +1,79 @@
+{
+  "status": "PASS_EXISTING_EVIDENCE",
+  "date": "2026-10-04",
+  "new_memory_probes": 0,
+  "new_full_size_runs": 0,
+  "research_started": false,
+  "production_files_verified": 139,
+  "prestart_check": "PASS_HX1_PRESTART_NO_RESEARCH",
+  "prestart_check_exitcode": 0,
+  "code_binding_sha256": "66dfca57e696747b9125333f58666afab7dd23745c69ba0a78deea7250e1bf1c",
+  "prestart_sha256": "e8cb8f935d28a5624239aafdbab75d0cb8246b665045442afcc9ec4a8931d36e",
+  "probes": [
+    {
+      "file": "reports/s2uc/hx1-memory-clarification-20261004-01/native.json",
+      "status": "PASS_EXISTING_EVIDENCE",
+      "peak_job": 666308608,
+      "pids": [
+        6932,
+        8748
+      ]
+    },
+    {
+      "file": "reports/s2uc/hx1-memory-clarification-20261004-01/python.json",
+      "status": "PASS_EXISTING_EVIDENCE",
+      "peak_job": 668127232,
+      "pids": [
+        6932,
+        13008
+      ]
+    },
+    {
+      "file": "reports/s2uc/hx1-memory-clarification-20261004-01/aggregate.json",
+      "status": "PASS_EXISTING_EVIDENCE",
+      "peak_job": 545259520,
+      "pids": [
+        6932,
+        14740
+      ]
+    },
+    {
+      "file": "reports/s2uc/hx1-memory-clarification-20261004-02/native.json",
+      "status": "PASS_EXISTING_EVIDENCE",
+      "peak_job": 665399296,
+      "pids": [
+        2712,
+        12344
+      ]
+    },
+    {
+      "file": "reports/s2uc/hx1-memory-clarification-20261004-02/python.json",
+      "status": "PASS_EXISTING_EVIDENCE",
+      "peak_job": 666832896,
+      "pids": [
+        2712,
+        8808
+      ]
+    },
+    {
+      "file": "reports/s2uc/hx1-memory-clarification-20261004-02/aggregate.json",
+      "status": "PASS_EXISTING_EVIDENCE",
+      "peak_job": 544894976,
+      "pids": [
+        2712,
+        7552
+      ]
+    }
+  ],
+  "environment_at_readonly_verification": {
+    "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+    "windows": [
+      10,
+      0,
+      19045,
+      2,
+      ""
+    ]
+  },
+  "interpretation": "Raw Windows peak can include rejected commit demand; aggregate supplied-commit limit enforced in tested path. Historical kernel accounting not retrospectively reconstructed."
+}

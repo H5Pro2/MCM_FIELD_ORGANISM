@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "tests": {
+    "G01": {
+      "result": "PASS",
+      "scope": "two 32-frame mirrored continuous C/U hand cases plus independent CR1 archive replay",
+      "policy_frames": 128,
+      "reference_equal": true,
+      "closure_hashes_equal": true,
+      "seconds": 10.65312649999396,
+      "job": {
+        "hard_job_limit": true,
+        "limit_bytes": 536870912,
+        "measurement": "Windows JobObjectExtendedLimitInformation",
+        "members": "supervisor and inherited worker",
+        "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap.",
+        "peak_job_committed_bytes": 53972992,
+        "peak_process_committed_bytes": 37765120
+      }
+    },
+    "G02": {
+      "result": "PASS_EXPECTED_TECHNICAL_ABORT",
+      "scope": "injected administration overflow on case 2",
+      "completed_cases": [
+        1
+      ],
+      "active_case": 2,
+      "cleanup": "CONFIRMED",
+      "worker_ended": true,
+      "seconds": 5.585365400009323,
+      "job": {
+        "hard_job_limit": true,
+        "limit_bytes": 536870912,
+        "measurement": "Windows JobObjectExtendedLimitInformation",
+        "members": "supervisor and inherited worker",
+        "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap.",
+        "peak_job_committed_bytes": 50610176,
+        "peak_process_committed_bytes": 35500032
+      }
+    }
+  },
+  "full_1024_frame_execution": false,
+  "research_authorization_created": false
+}

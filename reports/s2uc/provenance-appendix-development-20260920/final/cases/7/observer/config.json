@@ -1,0 +1,9 @@
+{
+  "binding": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\provenance-appendix-development-20260920\\final\\cases\\7\\bundle\\execution-binding.json",
+  "case": "success",
+  "folder": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\provenance-appendix-development-20260920\\final\\cases\\7\\observer",
+  "inventory_sha256": "d8cfb6213167d818d33c7c7140361730ae6370107081912b99513b41d634d654",
+  "job": "Local\\MCM-V9-88d78e7e1e5f8a4a3d8d8dfbe0e5ac92",
+  "output": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/provenance-appendix-development-20260920/final/cases/7/S2UC-V9-NEUTRAL-47a6867440c0414dbf73fc37f33b6e63",
+  "run_id": "S2UC-V9-NEUTRAL-47a6867440c0414dbf73fc37f33b6e63"
+}

@@ -1,0 +1,138 @@
+{
+  "T1_geometry": "PASS",
+  "T2_actual_neutral_prefix": [
+    {
+      "pattern": [
+        2,
+        2,
+        3,
+        3
+      ],
+      "before_final_promotion": [
+        {
+          "key": [
+            0,
+            1,
+            0
+          ],
+          "values": [
+            0.375,
+            0.25
+          ],
+          "prior_feedback": [
+            7,
+            11,
+            15
+          ]
+        },
+        {
+          "key": [
+            1,
+            2,
+            0
+          ],
+          "values": [
+            0.0,
+            0.25
+          ],
+          "prior_feedback": [
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "pattern": [
+        3,
+        3,
+        2,
+        2
+      ],
+      "before_final_promotion": [
+        {
+          "key": [
+            0,
+            1,
+            0
+          ],
+          "values": [
+            0.375,
+            0.25
+          ],
+          "prior_feedback": [
+            7,
+            11,
+            15
+          ]
+        },
+        {
+          "key": [
+            1,
+            2,
+            0
+          ],
+          "values": [
+            0.0,
+            0.25
+          ],
+          "prior_feedback": [
+            15
+          ]
+        }
+      ]
+    }
+  ],
+  "T3_common_initialization_boundary": "PASS: exact tie, outside fixed prefix",
+  "T4_short_exhaustive": {
+    "sequences": 2046,
+    "maximum_feedbacks": 10,
+    "status": "PASS"
+  },
+  "T5_repeat_switch_alternation": "PASS",
+  "T6_reachable_rounding_boundary": [
+    {
+      "repeated": 0,
+      "repetitions": 54,
+      "float_errors": [
+        0.25,
+        0.25
+      ],
+      "exact_errors": [
+        "72057594037927939/288230376151711744",
+        "18014398509481983/72057594037927936"
+      ],
+      "U": "P",
+      "L": 1
+    },
+    {
+      "repeated": 1,
+      "repetitions": 52,
+      "float_errors": [
+        0.25,
+        0.25
+      ],
+      "exact_errors": [
+        "18014398509481983/72057594037927936",
+        "1/4"
+      ],
+      "U": "P",
+      "L": 0
+    }
+  ],
+  "T7_ulp_subnormal_tie_recovery": "PASS",
+  "T8_persistence_invariant": "PASS",
+  "scope": {
+    "research_sources": 0,
+    "research_replays": 0,
+    "neutral_prefix_fixtures": 2,
+    "neutral_prefix_frames": 32,
+    "scalar_rules_only_after_prefix": true,
+    "production_modified": false
+  },
+  "development_attempts": [
+    "Initial invocation rejected before replay: missing check callback.",
+    "Second invocation rejected on first frame: invalid profile length.",
+    "One successful 16-frame exploratory neutral prefix before this saved check."
+  ],
+  "script_sha256": "b68f00553178e429d4e71ceac171d2be5a4db4a1d6a798bc4c2de4eaff016bb1"
+}

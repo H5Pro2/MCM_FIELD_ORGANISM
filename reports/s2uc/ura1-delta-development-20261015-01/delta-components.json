@@ -1,0 +1,16 @@
+{
+  "D_hand_case": {
+    "values_bytes": 29954,
+    "paths_bytes": 2645,
+    "deltas_bytes": 37852,
+    "sequence_table_bytes": 6047,
+    "full_bank_values": 1
+  },
+  "lifecycle_trace": {
+    "values_bytes": 27557,
+    "paths_bytes": 2198,
+    "deltas_bytes": 28716,
+    "sequence_table_bytes": 4579,
+    "full_bank_values": 1
+  }
+}

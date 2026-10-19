@@ -1,0 +1,9 @@
+test_O01_incremental_oracle_unicode_numbers_and_container_edits (tests.test_s2uc_ura1_delta_fast.FastTests.test_O01_incremental_oracle_unicode_numbers_and_container_edits) ... ok
+test_O02_transient_limit_and_exact_boundary (tests.test_s2uc_ura1_delta_fast.FastTests.test_O02_transient_limit_and_exact_boundary) ... ok
+test_O03_corruption_identical_terminal_reasons (tests.test_s2uc_ura1_delta_fast.FastTests.test_O03_corruption_identical_terminal_reasons) ... ok
+test_O04_fused_hash_and_independent_pair_negative_controls (tests.test_s2uc_ura1_delta_fast.FastTests.test_O04_fused_hash_and_independent_pair_negative_controls) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 10.373s
+
+OK

@@ -1,0 +1,13 @@
+test_complete (test_s2oe_usability.UsabilityTests.test_complete) ... ok
+test_dom_projection (test_s2oe_usability.UsabilityTests.test_dom_projection) ... ok
+test_invalid_stop_cause (test_s2oe_usability.UsabilityTests.test_invalid_stop_cause) ... ok
+test_server_shutdown (test_s2oe_usability.UsabilityTests.test_server_shutdown) ... ok
+test_source_end (test_s2oe_usability.UsabilityTests.test_source_end) ... ok
+test_technical_error (test_s2oe_usability.UsabilityTests.test_technical_error) ... ok
+test_unknown_is_not_user_stop (test_s2oe_usability.UsabilityTests.test_unknown_is_not_user_stop) ... ok
+test_user_stop (test_s2oe_usability.UsabilityTests.test_user_stop) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.211s
+
+OK

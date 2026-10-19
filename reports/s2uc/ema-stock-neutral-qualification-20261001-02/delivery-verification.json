@@ -1,0 +1,21 @@
+{
+  "status": "VERIFIED",
+  "files": {
+    "tools/s2uc_ema_stock.py": "8b53e3711aca653b07e7a3eb8a816a3be442af02b7fe836620d349140ca56e15",
+    "tools/_s2uc_ema_stock_observer.py": "43f10f89e121655de8ce4ad265dc3a330a5cfc5136591342e7603c6861c5b8d4",
+    "tools/_s2uc_ema_stock_assessment.py": "c16590156e616fd00f62235a0024e4b0625b1396e22c0fc27b27192d2f9ff466",
+    "tests/test_s2uc_ema_stock.py": "ddd86d1ef4aed163fc53e47655f1d6fab48b1e737e060427f0f54ce91cad6380",
+    "docs/S2UC_EMA_BESTANDSPLAN_20261001.json": "0f01704800dcb7fa0301444b277a6a2c8c427f03221096496e98234e022195ab",
+    "docs/S2UC_EMA_BESTANDSBINDUNG_20261001.json": "c9a506b34d14da24e5b6ab63a526d3e75a4fa9a401973d4544e8c0b92d2b76dc",
+    "docs/S2UC_EMA_BESTAND_AUTORISIERUNG_VORLAGE_20261001.json": "1568bc7ac646be875fb0b7ebd9f328c2eaa5d254faf3664701b6bf414816b2b4",
+    "docs/S2UC_EMA_BESTAND_VORBEREITETER_AUFRUF_20261001.txt": "3505f3a32fbb2ac3c150a1d8a01fd9932fb8701f0594f3c37673ea2f76737e2b",
+    "AKTUELLER_FORSCHUNGSWEG.md": "af66bc2e6956400ccfbdf64bf9d9c273fea5f195d7bcd675b7329ba72bb3070d",
+    "README.md": "0332065f4a935fa3b23163586f9c62fe8bde5f80c046402a6e4f3faca1860afe"
+  },
+  "report_sha256": "274c935543097275b4c9932acd95c50ebb0cb59e8c96e82f2a9a05c6fca3d72c",
+  "bound_files": 46,
+  "unchanged_legacy_files": 42,
+  "export_bytes": 281530,
+  "real_output_exists": false,
+  "real_authorization_exists": false
+}

@@ -1,0 +1,8 @@
+{
+  "status": "AUTHORIZED_ONCE",
+  "action": "PRODUCE_AR_PARTITION",
+  "partition": "NEUTRAL-DEV",
+  "binding_sha256": "b670111a80ba6a558ae99f0453eea84d4dd303c4a959d87e57af732600dc345c",
+  "plan_sha256": "666278ba2ea3ef7c52f4ab6b1977d6ec055c31e5e02c4e129ce03aca283521e1",
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]"
+}

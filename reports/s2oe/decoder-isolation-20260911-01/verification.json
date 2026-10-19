@@ -1,0 +1,25 @@
+{
+  "actual_before_verification_bytes": 68514,
+  "bound_total_bytes": 238394,
+  "boundary": "Recorded bindings and control flow only; no media regeneration, native allocation reconstruction or numerical AV verification.",
+  "comparison": {
+    "high": "DECODER_WINDOW_COMPLETE",
+    "low": "NOT_EVALUABLE"
+  },
+  "files": {
+    "reports\\s2oe\\decoder-isolation-20260911-01\\COMMIT_1024.json": 2438,
+    "reports\\s2oe\\decoder-isolation-20260911-01\\COMMIT_512.json": 3932,
+    "reports\\s2oe\\decoder-isolation-20260911-01\\binding.json": 2961,
+    "reports\\s2oe\\decoder-isolation-20260911-01\\comparison.claim": 30,
+    "reports\\s2oe\\decoder-isolation-20260911-01\\qualification.claim": 5,
+    "reports\\s2oe\\decoder-isolation-20260911-01\\qualification.json": 158,
+    "reports\\s2oe\\decoder-isolation-20260911-01\\qualification.log": 805,
+    "reports\\s2oe\\decoder-isolation-20260911-01\\verification.claim": 15
+  },
+  "read_only": true,
+  "record_sha256": {
+    "COMMIT_1024": "65a1036bd027e47f5ee4dde263141d9315f1e2b388707b0a37a30df52a09dd77",
+    "COMMIT_512": "5df218d77ff217175a9a0bd077c9d84cd0668cea30dd32ff9bd2a6bb6c448e6c"
+  },
+  "status": "EVIDENCE_VALID"
+}

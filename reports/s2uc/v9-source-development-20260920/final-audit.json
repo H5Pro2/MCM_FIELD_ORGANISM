@@ -1,0 +1,14 @@
+{
+  "archived_files_rehashed": 1059,
+  "archived_reference_occurrences_checked": 3113,
+  "archive_mismatches": [],
+  "current_code_files_rehashed": 55,
+  "historical_files_rechecked": 1852,
+  "existing_files_changed": [
+    "tools/_s2uc_execution_v8.py"
+  ],
+  "missing_existing_files": [],
+  "old_test_files_unchanged": true,
+  "real_execution_authorized": false,
+  "independent_acceptance": "OPEN"
+}

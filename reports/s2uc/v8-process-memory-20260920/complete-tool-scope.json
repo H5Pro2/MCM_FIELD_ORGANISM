@@ -1,0 +1,21 @@
+{
+  "product_code_bytes": 699053,
+  "tool_files": [
+    {
+      "path": "reports/s2uc/v8-process-memory-20260920/measure.py",
+      "bytes": 10811,
+      "sha256": "6dcbed6abb4d79d107dab55b2809119b4d9f34f4f5ccc942030723bfcd0238e6"
+    },
+    {
+      "path": "reports/s2uc/v8-process-memory-20260920/analyze.py",
+      "bytes": 6873,
+      "sha256": "8732c6dae511db39d4a4e77ade3dc51176615207a6170790889a1ac3e6162b5d"
+    }
+  ],
+  "tool_bytes": 17684,
+  "total_code_bytes": 716737,
+  "limit": 720896,
+  "remaining": 4159,
+  "additional_project_dependencies": [],
+  "product_and_tests_unchanged": true
+}

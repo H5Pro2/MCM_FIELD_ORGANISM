@@ -1,0 +1,17 @@
+test_E10_approximate_key_and_output_identity (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E10_approximate_key_and_output_identity) ... ok
+test_E11_active_memory_identity_and_existing_frame_budget (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E11_active_memory_identity_and_existing_frame_budget) ... ok
+test_E12_scoped_integer_limits_and_offset_without_successor (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E12_scoped_integer_limits_and_offset_without_successor) ... ok
+test_E1_explicit_policy_first_choice_shadow_and_delay (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E1_explicit_policy_first_choice_shadow_and_delay) ... ok
+test_E2_tie_ema_and_numerical_order (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E2_tie_ema_and_numerical_order) ... ok
+test_E3_complete_validation_before_atomic_update (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E3_complete_validation_before_atomic_update) ... ok
+test_E4_numerical_failure_no_partial_commit (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E4_numerical_failure_no_partial_commit) ... ok
+test_E5_role_generation_offset_quality_and_promotion (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E5_role_generation_offset_quality_and_promotion) ... ok
+test_E6_evicted_pending_ticket_and_confirmation_lifetime (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E6_evicted_pending_ticket_and_confirmation_lifetime) ... ok
+test_E7_missing_context_end_censorship_and_default_path (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E7_missing_context_end_censorship_and_default_path) ... ok
+test_E8_neutral_continuous_200_and_standard_bound (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E8_neutral_continuous_200_and_standard_bound) ... ok
+test_E9_actual_additional_memory_including_temporaries (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E9_actual_additional_memory_including_temporaries) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 6.039s
+
+OK

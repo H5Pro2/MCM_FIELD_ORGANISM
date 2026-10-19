@@ -1,0 +1,11 @@
+test_binding_rejection (tests.test_structure_source_binding.Tests.test_binding_rejection) ... ok
+test_budget (tests.test_structure_source_binding.Tests.test_budget) ... ok
+test_determinism (tests.test_structure_source_binding.Tests.test_determinism) ... ok
+test_exact_identity_time (tests.test_structure_source_binding.Tests.test_exact_identity_time) ... ok
+test_pairs_criteria (tests.test_structure_source_binding.Tests.test_pairs_criteria) ... ok
+test_separation (tests.test_structure_source_binding.Tests.test_separation) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.003s
+
+OK

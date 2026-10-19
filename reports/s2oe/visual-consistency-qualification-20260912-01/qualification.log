@@ -1,0 +1,17 @@
+test_01_selection_both_points (tests.test_s2oe_visual_consistency.Qualification.test_01_selection_both_points) ... ok
+test_02_shared_routine (tests.test_s2oe_visual_consistency.Qualification.test_02_shared_routine) ... ok
+test_03_independent_states (tests.test_s2oe_visual_consistency.Qualification.test_03_independent_states) ... ok
+test_04_converter (tests.test_s2oe_visual_consistency.Qualification.test_04_converter) ... ok
+test_05_bad_time (tests.test_s2oe_visual_consistency.Qualification.test_05_bad_time) ... ok
+test_06_missing_frame (tests.test_s2oe_visual_consistency.Qualification.test_06_missing_frame) ... ok
+test_07_mask (tests.test_s2oe_visual_consistency.Qualification.test_07_mask) ... ok
+test_08_equal_and_different (tests.test_s2oe_visual_consistency.Qualification.test_08_equal_and_different) ... ok
+test_09_value_errors (tests.test_s2oe_visual_consistency.Qualification.test_09_value_errors) ... ok
+test_10_profile_and_gate (tests.test_s2oe_visual_consistency.Qualification.test_10_profile_and_gate) ... ok
+test_11_native_padding (tests.test_s2oe_visual_consistency.Qualification.test_11_native_padding) ... ok
+test_12_closed_and_bad_point (tests.test_s2oe_visual_consistency.Qualification.test_12_closed_and_bad_point) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.050s
+
+OK

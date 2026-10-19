@@ -1,0 +1,39 @@
+test_01_native_technical_status (tests.test_memory_checkpoint.CheckpointTests.test_01_native_technical_status) ... ok
+test_02_real_process_end (tests.test_memory_checkpoint.CheckpointTests.test_02_real_process_end) ... ok
+test_03_full_continuation_equality (tests.test_memory_checkpoint.CheckpointTests.test_03_full_continuation_equality) ... ok
+test_04_before_first_update (tests.test_memory_checkpoint.CheckpointTests.test_04_before_first_update) ... ok
+test_05_native_roundtrip_and_no_mutation (tests.test_memory_checkpoint.CheckpointTests.test_05_native_roundtrip_and_no_mutation) ... FAIL
+test_06_corrupt_digest (tests.test_memory_checkpoint.CheckpointTests.test_06_corrupt_digest) ... ok
+test_07_profile (tests.test_memory_checkpoint.CheckpointTests.test_07_profile) ... ok
+test_08_code_and_manifest (tests.test_memory_checkpoint.CheckpointTests.test_08_code_and_manifest) ... ok
+test_09_generation (tests.test_memory_checkpoint.CheckpointTests.test_09_generation) ... ok
+test_10_missing_component (tests.test_memory_checkpoint.CheckpointTests.test_10_missing_component) ... ok
+test_11_incomplete_file (tests.test_memory_checkpoint.CheckpointTests.test_11_incomplete_file) ... ok
+test_12_write_failure (tests.test_memory_checkpoint.CheckpointTests.test_12_write_failure) ... ok
+test_13_duplicate_publication (tests.test_memory_checkpoint.CheckpointTests.test_13_duplicate_publication) ... ok
+test_14_consumed_and_gate (tests.test_memory_checkpoint.CheckpointTests.test_14_consumed_and_gate) ... ok
+test_15_boundaries (tests.test_memory_checkpoint.CheckpointTests.test_15_boundaries) ... ok
+test_16_closed_readonly_hypotheses (tests.test_memory_checkpoint.CheckpointTests.test_16_closed_readonly_hypotheses) ... ok
+test_17_field_form (tests.test_memory_checkpoint.CheckpointTests.test_17_field_form) ... ok
+test_18_materializer_accounting (tests.test_memory_checkpoint.CheckpointTests.test_18_materializer_accounting) ... ok
+test_19_order_before_payload (tests.test_memory_checkpoint.CheckpointTests.test_19_order_before_payload) ... ok
+test_20_read_before_analysis_failure (tests.test_memory_checkpoint.CheckpointTests.test_20_read_before_analysis_failure) ... ok
+test_21_partial_publication (tests.test_memory_checkpoint.CheckpointTests.test_21_partial_publication) ... ok
+test_22_reference_integrity (tests.test_memory_checkpoint.CheckpointTests.test_22_reference_integrity) ... ok
+
+======================================================================
+FAIL: test_05_native_roundtrip_and_no_mutation (tests.test_memory_checkpoint.CheckpointTests.test_05_native_roundtrip_and_no_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_memory_checkpoint.py", line 141, in test_05_native_roundtrip_and_no_mutation
+    self.assertEqual(c.b.state_wire.encode(asdict(stream.memory_state)),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.checkpoint["prefix"]["states"][stream.memory_state_digest])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'schema': 's2ob.state.binary64-be.v1', 'na[12765 chars]v1'}} != {'body': {'b4_state': {'accepted_count': 1,[12765 chars].v1'}
+Diff is 22483 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 22 tests in 10.810s
+
+FAILED (failures=1)

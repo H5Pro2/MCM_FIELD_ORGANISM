@@ -1,0 +1,56 @@
+{
+  "archive_sha256": "14259662577832e7556acacaa09e77ba91a8fd873e9d8d1ea94fa86e5017b3b7",
+  "case": 18,
+  "decoder": {
+    "dictionary_bytes": 951557,
+    "encoded_bytes": 1005531,
+    "gzip_bytes": 171987,
+    "record_indices": 10282,
+    "reference_edges": 127140,
+    "table_entries": 14277
+  },
+  "differences": {
+    "duplicate_records": [],
+    "missing": [],
+    "unsupported": []
+  },
+  "expected": {
+    "E": {
+      "local_gains": 8,
+      "multi_assigned_targets": {},
+      "retention_events": 6,
+      "unique_gain_targets": 8,
+      "unique_warm_targets": 19,
+      "warm_uses": 19
+    },
+    "F": {
+      "local_gains": 5,
+      "multi_assigned_targets": {},
+      "retention_events": 10,
+      "unique_gain_targets": 5,
+      "unique_warm_targets": 12,
+      "warm_uses": 12
+    }
+  },
+  "rejected_candidates": [],
+  "reported": {
+    "E": {
+      "local_gains": 8,
+      "multi_assigned_targets": {},
+      "retention_events": 6,
+      "unique_gain_targets": 8,
+      "unique_warm_targets": 19,
+      "warm_uses": 19
+    },
+    "F": {
+      "local_gains": 5,
+      "multi_assigned_targets": {},
+      "retention_events": 10,
+      "unique_gain_targets": 5,
+      "unique_warm_targets": 12,
+      "warm_uses": 12
+    }
+  },
+  "seconds": 4.719282799982466,
+  "status": "PASS"
+}

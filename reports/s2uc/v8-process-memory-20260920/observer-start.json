@@ -1,0 +1,9 @@
+{
+  "pid": 14688,
+  "memory": {
+    "working_set": 18472960,
+    "private_commit": 11595776,
+    "os_peak_working_set": 18477056,
+    "os_peak_private_commit": 11595776
+  }
+}

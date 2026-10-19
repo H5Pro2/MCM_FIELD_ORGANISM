@@ -1,0 +1,13 @@
+test_P01_research_gate_and_neutral_recipe (tests.test_s2uc_ura1_prepare_v2.PreparationTests.test_P01_research_gate_and_neutral_recipe) ... ok
+test_P02_draw_rejection_limit_and_hand_permutation (tests.test_s2uc_ura1_prepare_v2.PreparationTests.test_P02_draw_rejection_limit_and_hand_permutation) ... ok
+test_P03_matrix_orientation_quantiles_and_zero_boundary (tests.test_s2uc_ura1_prepare_v2.PreparationTests.test_P03_matrix_orientation_quantiles_and_zero_boundary) ... ok
+test_P04_complete_targets_and_diagnostic_rejection (tests.test_s2uc_ura1_prepare_v2.PreparationTests.test_P04_complete_targets_and_diagnostic_rejection) ... ok
+test_P05_cumulative_budgets_and_final_deadline (tests.test_s2uc_ura1_prepare_v2.PreparationTests.test_P05_cumulative_budgets_and_final_deadline) ... ok
+test_P06_series_count_abort_and_cleanup (tests.test_s2uc_ura1_prepare_v2.PreparationTests.test_P06_series_count_abort_and_cleanup) ... ok
+test_P07_short_policy_reset_and_terminal_cleanup (tests.test_s2uc_ura1_prepare_v2.PreparationTests.test_P07_short_policy_reset_and_terminal_cleanup) ... ok
+test_P08_binding_admission_and_exclusive_target (tests.test_s2uc_ura1_prepare_v2.PreparationTests.test_P08_binding_admission_and_exclusive_target) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 16.449s
+
+OK

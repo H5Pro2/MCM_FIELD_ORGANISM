@@ -1,0 +1,175 @@
+{
+  "mode": "python",
+  "exitcode": 0,
+  "records": [
+    {
+      "stage": "ready",
+      "pid": 13008,
+      "memory": {
+        "private": 14086144,
+        "pagefile": 14086144,
+        "peak_pagefile": 15634432,
+        "working_set": 19562496
+      },
+      "job": {
+        "flags": 512,
+        "job_limit": 536870912,
+        "process_limit": 0,
+        "peak_job": 30863360,
+        "peak_process": 15634432,
+        "pids": [
+          6932,
+          13008
+        ],
+        "supervisor_member": true,
+        "worker_member": true,
+        "supervisor": {
+          "private": 15228928,
+          "pagefile": 15228928,
+          "peak_pagefile": 15228928,
+          "working_set": 20443136
+        },
+        "worker": {
+          "private": 14086144,
+          "pagefile": 14086144,
+          "peak_pagefile": 15634432,
+          "working_set": 19599360
+        }
+      }
+    },
+    {
+      "stage": "small_committed",
+      "pid": 13008,
+      "memory": {
+        "private": 22491136,
+        "pagefile": 22491136,
+        "peak_pagefile": 22491136,
+        "working_set": 19615744
+      },
+      "region": {
+        "size": 8388608,
+        "state": 4096,
+        "protect": 4,
+        "type": 131072
+      },
+      "job": {
+        "flags": 512,
+        "job_limit": 536870912,
+        "process_limit": 0,
+        "peak_job": 37720064,
+        "peak_process": 22491136,
+        "pids": [
+          6932,
+          13008
+        ],
+        "supervisor_member": true,
+        "worker_member": true,
+        "supervisor": {
+          "private": 15228928,
+          "pagefile": 15228928,
+          "peak_pagefile": 15228928,
+          "working_set": 20463616
+        },
+        "worker": {
+          "private": 22491136,
+          "pagefile": 22491136,
+          "peak_pagefile": 22491136,
+          "working_set": 19615744
+        }
+      }
+    },
+    {
+      "stage": "python_attempt",
+      "pid": 13008,
+      "memory": {
+        "private": 22491136,
+        "pagefile": 22491136,
+        "peak_pagefile": 652898304,
+        "working_set": 19623936
+      },
+      "request": 629145600,
+      "rejected": true,
+      "before": {
+        "private": 22491136,
+        "pagefile": 22491136,
+        "peak_pagefile": 22491136,
+        "working_set": 19623936
+      },
+      "job": {
+        "flags": 512,
+        "job_limit": 536870912,
+        "process_limit": 0,
+        "peak_job": 668127232,
+        "peak_process": 652898304,
+        "pids": [
+          6932,
+          13008
+        ],
+        "supervisor_member": true,
+        "worker_member": true,
+        "supervisor": {
+          "private": 15228928,
+          "pagefile": 15228928,
+          "peak_pagefile": 15228928,
+          "working_set": 20496384
+        },
+        "worker": {
+          "private": 22491136,
+          "pagefile": 22491136,
+          "peak_pagefile": 652898304,
+          "working_set": 19623936
+        }
+      }
+    },
+    {
+      "stage": "released",
+      "pid": 13008,
+      "memory": {
+        "private": 14086144,
+        "pagefile": 14086144,
+        "peak_pagefile": 652898304,
+        "working_set": 19623936
+      },
+      "job": {
+        "flags": 512,
+        "job_limit": 536870912,
+        "process_limit": 0,
+        "peak_job": 668127232,
+        "peak_process": 652898304,
+        "pids": [
+          6932,
+          13008
+        ],
+        "supervisor_member": true,
+        "worker_member": true,
+        "supervisor": {
+          "private": 15228928,
+          "pagefile": 15228928,
+          "peak_pagefile": 15228928,
+          "working_set": 20512768
+        },
+        "worker": {
+          "private": 14086144,
+          "pagefile": 14086144,
+          "peak_pagefile": 652898304,
+          "working_set": 19623936
+        }
+      }
+    }
+  ],
+  "layout": {
+    "extended": 144,
+    "basic": 64,
+    "io": 48,
+    "counters": 80,
+    "region": 48,
+    "offsets": {
+      "basic": 0,
+      "io": 64,
+      "process_limit": 112,
+      "job_limit": 120,
+      "peak_process": 128,
+      "peak_job": 136
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "scope": "STATIC_DOCUMENT_INTEGRITY_ONLY",
+  "changed_read_or_code_files": [],
+  "code_files_compared": 55,
+  "project_modules_imported": false,
+  "tests_executed": false,
+  "records_evaluated": false,
+  "source_generation": false,
+  "real_entry_modified": false,
+  "independent_technical_acceptance": "OPEN",
+  "design": {
+    "path": "reports/s2uc/gain-loss-static-design-20260920/ENTWURF.md",
+    "bytes": 28787,
+    "sha256": "043f1deb3eaa1d15ae3da5becfbd1d1f8b6b4a4a977551317083f37c7c695ac8"
+  }
+}

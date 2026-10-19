@@ -1,0 +1,56 @@
+{
+  "status": "COMPLETE_READ_ONLY_DIAGNOSIS",
+  "transitions": 32,
+  "targets": 324,
+  "new_sources": 0,
+  "policy_replays": 0,
+  "parameter_changes": 0,
+  "files": {
+    "input-binding.json": {
+      "bytes": 5934,
+      "sha256": "541215479440d540d28e41f2e08d6e29141bde06fa482e74cd647f1fca3bf77c"
+    },
+    "lifecycle.json": {
+      "bytes": 83739,
+      "sha256": "a343964bde277bf9e36fcbb0ce68f53b8273c0cef5004abea593050cb4aeb6f0"
+    },
+    "REPORT.md": {
+      "bytes": 14223,
+      "sha256": "da2bd9016dbc74b2f6d7caec7f909471ecee5416abaa5317009aee936f02b26b"
+    },
+    "summary.json": {
+      "bytes": 3314,
+      "sha256": "afbb9ab0f9d117a0bc0d1be732678c3b7ba5daf89958335fca61351c8b6983d1"
+    },
+    "target-map.csv": {
+      "bytes": 77135,
+      "sha256": "485ab8349dcf162cf554056681acaeac9860e3f8c2f62b6802ac3136ba756585"
+    },
+    "targets.json": {
+      "bytes": 940698,
+      "sha256": "183955700b1afe422acf794b298d01e32608c09744bd43666aa95e091e719043"
+    },
+    "transitions.json": {
+      "bytes": 15625,
+      "sha256": "0293eb0975836d6ef2664c8bda36ed6b0a0ce106860a5a34423208dbb3dc2538"
+    },
+    "verification.json": {
+      "bytes": 426,
+      "sha256": "46e6a036c58a51cc3a3a55d74b45dff0602a596a5afcae4ab0e18eca4388efc6"
+    }
+  },
+  "analysis_script": {
+    "path": "tools/s2uc_t1_diagnose.py",
+    "sha256": "e277ce7d2a5283344497ab91ae7b61b0aac0104a87ddc9675482ce079811c84e"
+  },
+  "research_question": "Erhöht eine budgetneutrale längere Erhaltung bereits gebildeter Kandidatenspuren gegenüber der bisherigen Ersetzung den Anteil potenziell prüfbarer Ziele mit einem lebenden modalen Nachfolger und vorziellichem Feedback, wenn Segmentierung, Abruf und Auswahlregel unverändert bleiben?",
+  "verification": {
+    "D01_full_32_transition_and_324_target_mapping": "PASS",
+    "D02_independent_raw_pair_enumeration": "PASS",
+    "D03_live_matches_and_successors_equal_saved_U": "PASS",
+    "D04_first_break_partition_324": "PASS",
+    "D05_both_eligible_keys_no_pre_target_feedback": "PASS",
+    "D06_both_run_archives_unchanged": "PASS"
+  },
+  "run_archives_unchanged": true
+}

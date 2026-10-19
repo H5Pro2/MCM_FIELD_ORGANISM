@@ -1,0 +1,19 @@
+test_g1_24_distinct_values_expectation_conflict_independent (tests.test_s2uc_provenance_evaluation.ProvenanceTests.test_g1_24_distinct_values_expectation_conflict_independent) ... ok
+test_incomplete_failed_hash_and_real_scope_closures_unknown (tests.test_s2uc_provenance_evaluation.ProvenanceTests.test_incomplete_failed_hash_and_real_scope_closures_unknown) ... ok
+test_invalid_receipt_and_incomplete_owner_not_rescued_by_rehash (tests.test_s2uc_provenance_evaluation.ProvenanceTests.test_invalid_receipt_and_incomplete_owner_not_rescued_by_rehash) ... ok
+test_n1_equal_values_do_not_change_stored_origin (tests.test_s2uc_provenance_evaluation.ProvenanceTests.test_n1_equal_values_do_not_change_stored_origin) ... ok
+test_n2_all_matches_kept_gain_is_not_preservation (tests.test_s2uc_provenance_evaluation.ProvenanceTests.test_n2_all_matches_kept_gain_is_not_preservation) ... ok
+test_n2_multiple_offsets_same_generation_remain_ambiguous (tests.test_s2uc_provenance_evaluation.ProvenanceTests.test_n2_multiple_offsets_same_generation_remain_ambiguous) ... ok
+test_n3_missing_origin_despite_success_is_unknown (tests.test_s2uc_provenance_evaluation.ProvenanceTests.test_n3_missing_origin_despite_success_is_unknown) ... ok
+test_n4_owner_namespace_rejected_even_with_same_values_and_generation (tests.test_s2uc_provenance_evaluation.ProvenanceTests.test_n4_owner_namespace_rejected_even_with_same_values_and_generation) ... ok
+test_n4_role_generation_namespace_not_interchangeable (tests.test_s2uc_provenance_evaluation.ProvenanceTests.test_n4_role_generation_namespace_not_interchangeable) ... ok
+test_n5_later_formation_cannot_repair_previous_hint (tests.test_s2uc_provenance_evaluation.ProvenanceTests.test_n5_later_formation_cannot_repair_previous_hint) ... ok
+test_n6_competition_loss_and_new_target_not_netted (tests.test_s2uc_provenance_evaluation.ProvenanceTests.test_n6_competition_loss_and_new_target_not_netted) ... ok
+test_read_closed_fresh_v9_is_read_only_and_rejects_extra_error (tests.test_s2uc_provenance_evaluation.ProvenanceTests.test_read_closed_fresh_v9_is_read_only_and_rejects_extra_error) ... ok
+test_record_manifest_hashes_and_every_pointer_resolve (tests.test_s2uc_provenance_evaluation.ProvenanceTests.test_record_manifest_hashes_and_every_pointer_resolve) ... ok
+test_stored_and_confirming_origins_are_separate (tests.test_s2uc_provenance_evaluation.ProvenanceTests.test_stored_and_confirming_origins_are_separate) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 41.103s
+
+OK

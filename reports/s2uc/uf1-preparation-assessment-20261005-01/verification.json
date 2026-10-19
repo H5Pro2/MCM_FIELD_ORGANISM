@@ -1,0 +1,245 @@
+{
+  "status": "PASS_PREPARATION_NO_RESEARCH",
+  "tests": {
+    "count": 18,
+    "output": "test_G3_statistics (tests.test_s2uc_uf1.FrequencyTests.test_G3_statistics) ... ok\ntest_G4_U_and_reference_corruption (tests.test_s2uc_uf1.FrequencyTests.test_G4_U_and_reference_corruption) ... ok\ntest_G5_supervisor_and_export (tests.test_s2uc_uf1.FrequencyTests.test_G5_supervisor_and_export) ... ok\ntest_G6_analytical_vectors (tests.test_s2uc_uf1.FrequencyTests.test_G6_analytical_vectors) ... ok\ntest_N1_input_and_bits (tests.test_s2uc_uf1.FrequencyTests.test_N1_input_and_bits) ... ok\ntest_N2_freeze_and_feedback (tests.test_s2uc_uf1.FrequencyTests.test_N2_freeze_and_feedback) ... ok\ntest_N3_majority_changes (tests.test_s2uc_uf1.FrequencyTests.test_N3_majority_changes) ... ok\ntest_N4_hint_eviction (tests.test_s2uc_uf1.FrequencyTests.test_N4_hint_eviction) ... ok\ntest_N5_third_value_terminal_before_learning (tests.test_s2uc_uf1.FrequencyTests.test_N5_third_value_terminal_before_learning) ... ok\ntest_N6_invariants_tickets_end_and_faults (tests.test_s2uc_uf1.FrequencyTests.test_N6_invariants_tickets_end_and_faults) ... ok\ntest_N7_full_bank_transients (tests.test_s2uc_uf1.FrequencyTests.test_N7_full_bank_transients) ... ok\ntest_G1a_research_gate_no_hashing (tests.test_s2uc_uf1.RecipeTests.test_G1a_research_gate_no_hashing) ... ok\ntest_G1b_rng_boundaries (tests.test_s2uc_uf1.RecipeTests.test_G1b_rng_boundaries) ... ok\ntest_G1c_independent_neutral_recipe_and_quotas (tests.test_s2uc_uf1.RecipeTests.test_G1c_independent_neutral_recipe_and_quotas) ... ok\ntest_G2a_manifest_seal_and_tamper (tests.test_s2uc_uf1.RecipeTests.test_G2a_manifest_seal_and_tamper) ... ok\ntest_G2b_all_sources_before_first_policy (tests.test_s2uc_uf1.RecipeTests.test_G2b_all_sources_before_first_policy) ... ok\ntest_G3b_null_boundaries_and_pair_mapping (tests.test_s2uc_uf1.RecipeTests.test_G3b_null_boundaries_and_pair_mapping) ... ok\ntest_G5b_archive_roundtrip_and_corruption (tests.test_s2uc_uf1.RecipeTests.test_G5b_archive_roundtrip_and_corruption) ... ok\n\n----------------------------------------------------------------------\nRan 18 tests in 21.344s\n\nOK\n",
+    "success": true
+  },
+  "U_subtests": {
+    "count": 11,
+    "output": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.057s\n\nOK\n"
+  },
+  "one_neutral_full_run": true,
+  "neutral_full_run": {
+    "F_decoded_frames": 65536,
+    "F_outputs_independently_scored": 32704,
+    "F_replacements": 0,
+    "U_outputs_independently_scored": 32704,
+    "admin_bytes": 405949,
+    "availability": {
+      "D:F_known=False": 64,
+      "D:F_known=True": 8128,
+      "D:V0": 108,
+      "D:V1": 72,
+      "D:V2": 2008,
+      "D:V3": 6004,
+      "N:F_known=False": 64,
+      "N:F_known=True": 8128,
+      "N:V0": 108,
+      "N:V1": 72,
+      "N:V2": 2008,
+      "N:V3": 6004
+    },
+    "case_compressed_max": 147445,
+    "case_expanded_max": 1647079,
+    "case_total_bytes": 9083531,
+    "charged_plus_export_bytes": 18285977,
+    "closure_sha256": "fbe23ac75c48d76d2b1709c572dfe26e2bcbef27a58ff0a252c6bd9d86ae4738",
+    "counts": {
+      "Q_targets_per_arm": 16384,
+      "arm_frames": 131072,
+      "arms": 128,
+      "cases": 64,
+      "engine_seconds": 486.12381210003514,
+      "neutral_only": true,
+      "reference_advances": 131072,
+      "source_frames": 65536,
+      "status": "COMPLETE",
+      "targets_per_arm": 32704
+    },
+    "export_bytes": 9897369,
+    "files_verified": 133,
+    "maxima": {
+      "F": {
+        "borrowed_input_object_bytes": 1584,
+        "borrowed_input_payload": 384,
+        "numeric_conservative_upper": 4712,
+        "numeric_limit": 5120,
+        "output_slots": 1,
+        "own_heap_peak": 4839,
+        "packed": 4304,
+        "phase_peaks": {
+          "finish": 4401,
+          "phase0": 4465,
+          "phase1": 4839,
+          "phase2": 4497,
+          "phase3": 4579
+        },
+        "receipt_bytes": 0
+      },
+      "U": {
+        "additional_python_peak": 5371,
+        "boundary_peaks": {
+          "base_arm_bytes": 17151,
+          "original_objects_bytes": 15891,
+          "original_payload_bytes": 5760,
+          "originals": 15,
+          "output_new_payloads": 0,
+          "output_payload_equivalent": 768,
+          "output_slots": 2,
+          "system_reachable_bytes": 20790,
+          "valid_cells": 3
+        },
+        "combined_peak": 0,
+        "combined_upper_bound": 18,
+        "original_frames_peak": 0,
+        "original_frames_upper_bound": 16,
+        "output_slots_peak": 2,
+        "packed": 416,
+        "phase_peaks": {
+          "feedback": {
+            "retained": 2484,
+            "total": 3124,
+            "transient": 688
+          },
+          "finish": {
+            "retained": 2346,
+            "total": 2346,
+            "transient": 56
+          },
+          "perception": {
+            "retained": 1612,
+            "total": 5371,
+            "transient": 3763
+          }
+        },
+        "receipt_bytes_peak": 751,
+        "utf8_upper": 1502
+      },
+      "observer": {
+        "F_trace_bytes": 597460,
+        "U_evidence_bytes": 12164480,
+        "input_object_bytes": 458136,
+        "reference_F_boundary_bytes": 798
+      }
+    },
+    "neutral_only": true,
+    "policy_replays_in_verification": 0,
+    "primary_and_all_secondary_intervals_recomputed": true,
+    "process_memory": {
+      "hard_job_limit": true,
+      "limit_bytes": 536870912,
+      "measurement": "Windows JobObjectExtendedLimitInformation",
+      "members": "supervisor and inherited worker",
+      "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap.",
+      "peak_job_committed_bytes": 126853120,
+      "peak_process_committed_bytes": 86208512
+    },
+    "source_bytes": 391936,
+    "source_materializations": 0,
+    "status": "PASS_ARCHIVE_VERIFICATION",
+    "supervisor_seconds": 487.2577434,
+    "terminal_bytes": 15953
+  },
+  "F_focused_resources": {
+    "bank_bytes": 4304,
+    "numeric_census": {
+      "bank_bytes": 4304,
+      "c_call_scalar_reserve": 32,
+      "conservative_contract_scratch": 408,
+      "conservative_contract_total": 4712,
+      "measured_plus_reserve": 128,
+      "observed_live_scratch_payload": 96,
+      "trace_events": 173340
+    },
+    "numeric_conservative_upper": 4712,
+    "numeric_limit": 5120,
+    "own_heap_peak": 4483,
+    "phase_peaks": {
+      "abort": 4401,
+      "feedback": 4483,
+      "perception": 4473
+    },
+    "short_resources": {
+      "F": {
+        "borrowed_input_object_bytes": 1584,
+        "borrowed_input_payload": 384,
+        "numeric_conservative_upper": 4712,
+        "numeric_limit": 5120,
+        "output_slots": 1,
+        "own_heap_peak": 4579,
+        "packed": 4304,
+        "phase_peaks": {
+          "phase0": 4465,
+          "phase1": 4497,
+          "phase2": 4465,
+          "phase3": 4579,
+          "short_abort": 4401
+        },
+        "receipt_bytes": 0
+      },
+      "U": {
+        "additional_python_peak": 5031,
+        "boundary_peaks": {
+          "base_arm_bytes": 16985,
+          "original_objects_bytes": 15884,
+          "original_payload_bytes": 5760,
+          "originals": 15,
+          "output_new_payloads": 0,
+          "output_payload_equivalent": 768,
+          "output_slots": 2,
+          "system_reachable_bytes": 20431,
+          "valid_cells": 3
+        },
+        "combined_peak": 0,
+        "combined_upper_bound": 18,
+        "limits_note": "Boundary census is not an intra-operation whole-process peak; additional heap includes operation transients.",
+        "original_frames_peak": 0,
+        "original_frames_upper_bound": 16,
+        "output_slots_peak": 2,
+        "packed": 416,
+        "phase_peaks": {
+          "feedback": {
+            "retained": 2364,
+            "total": 2972,
+            "transient": 648
+          },
+          "finish": {
+            "retained": 2282,
+            "total": 2282,
+            "transient": 0
+          },
+          "perception": {
+            "retained": 1580,
+            "total": 5031,
+            "transient": 3451
+          }
+        },
+        "receipt_bytes_peak": 691,
+        "utf8_upper": 1382
+      }
+    },
+    "third_value_error_heap": 6257
+  },
+  "F_error_heaps": {
+    "copy": 6457,
+    "put": 6753,
+    "vector": 6457
+  },
+  "negative_controls": {
+    "invalid": "NOT_EVALUABLE",
+    "fault-start_error": "NOT_EVALUABLE",
+    "fault-crash": "NOT_EVALUABLE",
+    "fault-worker_error": "NOT_EVALUABLE",
+    "fault-export": "NOT_EVALUABLE",
+    "fault-cancel": "NOT_EVALUABLE",
+    "fault-memory": "NOT_EVALUABLE",
+    "timeout": "NOT_EVALUABLE",
+    "pending": "NOT_EVALUABLE"
+  },
+  "inherited_files_unchanged": 159,
+  "code_bound_files": 160,
+  "qualification_files": 173,
+  "code_binding_sha256": "32a61bfa36d3cfaa400154c9ad839ea5f3a6fffcb83d5a6404c2508c7b388f06",
+  "prestart_sha256": "1a2c3bcab967eeed4d6fa422693216f8ba2853bac7aaab389ecc54aa606eb6d7",
+  "bootstrap_bytes": 320000,
+  "bootstrap_sha256": "4d38373dacffbdc2970d1c50ec061f94f3b1e615cea06e4b23cd465b704eadfb",
+  "packed_bytes": 2976721,
+  "packed_sha256": "b994e88e48201134546659f039ee2636aa44e2850a277960cbe21fad4033ece9",
+  "canonical_preparation_bytes_including_future_authorization": 4690185,
+  "research_materializations": 0,
+  "research_replays": 0,
+  "operative_authorization_exists": false,
+  "final_check": "PASS_UF1_PRESTART_NO_RESEARCH",
+  "exact_future_command": "C:/Python314/python.exe -m tools.s2uc_uf1 run --authorization docs/S2UC_UF1_V1_20261005_AUTORISIERUNG.json"
+}

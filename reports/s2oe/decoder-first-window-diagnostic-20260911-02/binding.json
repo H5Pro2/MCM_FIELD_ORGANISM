@@ -1,0 +1,78 @@
+{
+  "code": {
+    "reports/diagnose_media_first_window.py": {
+      "bytes": 5499,
+      "sha256": "3db499b5a71216310419ecddbf1a1b4938d2c88a5102adcf29b90c17bd79c108"
+    },
+    "reports/verify_media_first_window.py": {
+      "bytes": 2824,
+      "sha256": "0c67bfa23e06d2997fc82dc8ef183e4ea291e0512400da1f3341629d1fcd99b1"
+    },
+    "tests/s2oe_diagnostic_worker.py": {
+      "bytes": 809,
+      "sha256": "43b5221d138ffb1152a5cda6ef552899ac27c1b9afe7097e18ce5a2b597a5acf"
+    },
+    "tests/test_s2oe_diagnostic.py": {
+      "bytes": 3368,
+      "sha256": "1180bde455ebdd9b6f34d66d898546ba89e9160648f8715404762dad7d5da4fa"
+    },
+    "tools/_s2oe_decoder_worker.py": {
+      "bytes": 20563,
+      "sha256": "92d8b46e42fa556130c1f0d0ed94a1406e5b8287c2d5ac2b16f490b602175839"
+    },
+    "tools/_s2oe_media_decoder.py": {
+      "bytes": 9560,
+      "sha256": "76a5fc5a2964e55997598cac5523d5d5195a2f228abd2c4f776336e786db52be"
+    }
+  },
+  "commit_bytes": 536870912,
+  "common_sha256": "7d306c851a74eeccb00c6aca3b5397372c6d8e450f217cb12a457f08bae5e6d3",
+  "ledger": {
+    "binding_reserve": 16384,
+    "code_bytes": 42623,
+    "diagnostic_reserve": 16384,
+    "historical_common_bytes": 10159,
+    "qualification_reserve": 16384,
+    "report_reserve": 8192,
+    "verification_reserve": 8192
+  },
+  "no_optimization": true,
+  "no_receptors": true,
+  "qualification_id": "decoder-phase-neutral-20260911-02",
+  "selection": {
+    "repeat": 1,
+    "window": 0
+  },
+  "source": {
+    "audio_stream": 1,
+    "audio_time_base": [
+      1,
+      48000
+    ],
+    "frame_rate": [
+      30000,
+      1001
+    ],
+    "path": "C:\\Users\\TV\\Downloads\\17138816-uhd_3840_2160_30fps.mp4",
+    "sha256": "df0986f384e156c4dfec234e94b6f6baa3d0f8a9cfd7ba81f14aadf0313450aa",
+    "size": 83498438,
+    "video_size": [
+      3840,
+      2160
+    ],
+    "video_stream": 0,
+    "video_time_base": [
+      1,
+      30000
+    ]
+  },
+  "tests": [
+    "original_exception",
+    "allocation_exception",
+    "limit_does_not_erase_original",
+    "abrupt_end_retains_phase_not_exception",
+    "bounded_diagnostics_and_unchanged_limits"
+  ],
+  "total_reserved_bytes": 118318,
+  "version": "s2oe.first-window-diagnostic.v1"
+}

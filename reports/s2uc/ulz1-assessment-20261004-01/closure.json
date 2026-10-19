@@ -1,0 +1,35 @@
+{
+  "status": "COMPLETE_ARCHIVE_ASSESSMENT",
+  "research_replays": 0,
+  "source_closure_sha256": "df4bb51d44eb4e188e4c7a41e30c4d80d56daac1758d5ec41a75df3ae9da036e",
+  "files": {
+    "case-mask-means.csv": {
+      "bytes": 29342,
+      "sha256": "14ad8519559edf64dd96e81df77a62811b269c65b177bb977420f19d2f91f3f6"
+    },
+    "contrasts.csv": {
+      "bytes": 20881,
+      "sha256": "c77d933ad8fc2471588e7a9a85c29739482127bd74064f10c9e28aebdfc5e963"
+    },
+    "cycles.json": {
+      "bytes": 8451328,
+      "sha256": "48bdb6d4aa3c86639d700d34b06ec978faf5458b5b1d19461426c5c38ce8d678"
+    },
+    "harms.csv": {
+      "bytes": 932,
+      "sha256": "fbaed2ac17a6a99dca79b29d69df16ed68d19f9044ecee25937e36207fd5a186"
+    },
+    "REPORT.md": {
+      "bytes": 11820,
+      "sha256": "364f3461aa4ee5532119781e38cbe23832367f710298cd36e015b7205f934b19"
+    },
+    "targets.csv": {
+      "bytes": 3325092,
+      "sha256": "5958c9b007808218736d693ade36cbe6c75ee3681a4ce9ea2743da382603434e"
+    },
+    "verification.json": {
+      "bytes": 8896,
+      "sha256": "1848bb82184366d3832f56368c447cb5f596c0073f980ff666b4d966ccdef15c"
+    }
+  }
+}

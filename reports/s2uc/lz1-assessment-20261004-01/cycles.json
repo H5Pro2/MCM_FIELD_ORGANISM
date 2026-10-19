@@ -1,0 +1,2498 @@
+[
+  {
+    "case": "LZ1-01-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-01-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-01-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-02-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-02-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-02-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-03-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-03-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-03-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-04-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-04-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-04-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-05-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-05-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-05-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-06-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-06-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-06-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-07-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-07-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-07-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-08-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-08-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-08-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-09-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-09-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-09-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-10-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-10-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-10-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-11-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-11-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-11-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-12-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-12-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-12-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-13-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-13-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-13-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-14-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-14-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-14-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-15-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-15-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-15-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-16-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-16-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-16-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-17-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-17-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-17-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-18-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-18-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-18-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-19-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-19-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-19-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-20-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-20-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-20-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-21-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 255,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-21-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 255,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-21-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-22-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-22-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-22-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-23-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-23-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-23-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-24-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-24-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-24-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-25-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-25-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-25-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-26-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-26-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-26-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-27-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-27-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-27-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-28-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-28-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-28-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-29-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-29-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-29-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-30-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-30-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-30-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-31-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-31-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-31-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-32-S",
+    "condition": "S",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-32-W",
+    "condition": "W",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  },
+  {
+    "case": "LZ1-32-N",
+    "condition": "N",
+    "live_feedback": 512,
+    "prefix_originals": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "selected": 256,
+    "targets": 256,
+    "two_live_hypotheses": 256,
+    "warm_hypotheses": 512,
+    "full_confirmations": 258,
+    "U_reference_advances": 1040,
+    "U_cleanup": true
+  }
+]

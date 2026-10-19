@@ -1,0 +1,42 @@
+{
+  "contract": {
+    "bytes": 24353,
+    "sha256": "f8150752bb0008bafef95dad301c25022f4aae83b523c2ed60d3d3f2f7cc2bfe"
+  },
+  "historical_code_checked": 8,
+  "historical_files_checked": 445,
+  "new_code": {
+    "experiments/rw1/audit.py": {
+      "bytes": 12444,
+      "sha256": "e08778750ad9cbd371176c7b89f9c470e6303d0831528c945bfb51a7f07f881f"
+    },
+    "experiments/rw1/common.py": {
+      "bytes": 4798,
+      "sha256": "7d40047c5bae3ff85df55fe047a16022ec805e638c17f71613fb62ba36f099ef"
+    },
+    "experiments/rw1/engine.py": {
+      "bytes": 7603,
+      "sha256": "e1569d9690b92ee2a829cea6cd093a221c81568fa5c879879e986e4136de5129"
+    },
+    "experiments/rw1/entry.py": {
+      "bytes": 925,
+      "sha256": "04d26b9df1452a50f145f26b2359bb9a13b0927395b2863260671fc90bdc3196"
+    },
+    "experiments/rw1/evaluate.py": {
+      "bytes": 5499,
+      "sha256": "e9af50d6bdcab7675026f78d32ce59352d404bd37ecab6e2d81c92d5d9919521"
+    },
+    "experiments/rw1/gateway.py": {
+      "bytes": 10300,
+      "sha256": "d1ec479c66216700ef815eb0c676251341402a4bde7c90ed2b39e1f798da853a"
+    },
+    "experiments/rw1/tests.py": {
+      "bytes": 16178,
+      "sha256": "31665f75a101e1cb5c6b7f556a4c87fc6927efeb5334b7d8f9d5c02acdbc593c"
+    }
+  },
+  "research_authorization_exists": false,
+  "research_consumption_exists": false,
+  "research_target_exists": false,
+  "unchanged": true
+}

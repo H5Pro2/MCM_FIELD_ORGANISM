@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\media_restart_neutral.py", line 102, in <module>
+    session_child(sys.argv[2], int(sys.argv[3]), sys.argv[4])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\media_restart_neutral.py", line 91, in session_child
+    w.require(status["phase"] == ("SUSPENDED" if cut else "RECORDING_COMPLETE"),
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              "NEUTRAL_NATIVE_STATUS", status)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_media_restart_work.py", line 24, in require
+    raise RestartError(code, details)
+tools._media_restart_work.RestartError: NEUTRAL_NATIVE_STATUS

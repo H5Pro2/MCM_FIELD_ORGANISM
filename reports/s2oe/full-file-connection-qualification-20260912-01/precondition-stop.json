@@ -1,0 +1,1 @@
+{"status":"PRECONDITION_BLOCKED","test_calls":0,"totals":{"formations":30720,"generations":30720,"metadata":215530,"nj":20480,"shared":325729,"sources":243809,"total":3539531,"verification":262144},"violations":["qualification:metadata"]}

@@ -1,0 +1,410 @@
+{
+  "archive_sha256": "184f83ad7b867124f93a0f55320527ad8a64890fb2e4c294a8d82a5523687e54",
+  "case": 30,
+  "condition": "B",
+  "decoder": {
+    "dictionary_bytes": 916058,
+    "encoded_bytes": 969292,
+    "gzip_bytes": 168786,
+    "record_indices": 10259,
+    "reference_edges": 123491,
+    "table_entries": 13778
+  },
+  "descriptive": {
+    "E": {
+      "event_gains": 5,
+      "event_harms": 2,
+      "gain_error_sum": 1.25,
+      "harm_error_sum": 0.5,
+      "multi_assigned_targets": {},
+      "retention_events": 6,
+      "unique_equal_targets": 1,
+      "unique_gain_targets": 5,
+      "unique_harm_targets": 2,
+      "unique_warm_targets": 8,
+      "warm_records": 8
+    },
+    "F": {
+      "event_gains": 1,
+      "event_harms": 1,
+      "gain_error_sum": 0.25,
+      "harm_error_sum": 0.25,
+      "multi_assigned_targets": {},
+      "retention_events": 8,
+      "unique_equal_targets": 0,
+      "unique_gain_targets": 1,
+      "unique_harm_targets": 1,
+      "unique_warm_targets": 2,
+      "warm_records": 2
+    }
+  },
+  "differences": {
+    "duplicate_records": [],
+    "missing": [],
+    "unsupported": []
+  },
+  "examples": {
+    "E/equal": {
+      "keeper": "E",
+      "keeper_error": 0.5,
+      "keeper_victims": [
+        [
+          789,
+          790,
+          791,
+          792
+        ]
+      ],
+      "last_observation": 832,
+      "local_gain": false,
+      "newer_keeper_victims": [
+        [
+          789,
+          790,
+          791,
+          792
+        ]
+      ],
+      "offset": 0,
+      "origin": [
+        761,
+        762,
+        763,
+        764
+      ],
+      "other_error": 0.5,
+      "other_victim": [
+        761,
+        762,
+        763,
+        764
+      ],
+      "output_sha256": "babbb57cd7e4be5dcd8773b6f321605e6ca90a8be3199c63a18cce80bf105c18",
+      "prior_live_feedback": [
+        767,
+        771,
+        779,
+        811,
+        827,
+        831
+      ],
+      "promotion_end": 840,
+      "stage": "warm_use",
+      "target": 859,
+      "unequal_blocks": [
+        836
+      ]
+    },
+    "E/gain": {
+      "keeper": "E",
+      "keeper_error": 0.0,
+      "keeper_victims": [
+        [
+          141,
+          142,
+          143,
+          144
+        ]
+      ],
+      "last_observation": 184,
+      "local_gain": true,
+      "newer_keeper_victims": [
+        [
+          141,
+          142,
+          143,
+          144
+        ]
+      ],
+      "offset": 0,
+      "origin": [
+        109,
+        110,
+        111,
+        112
+      ],
+      "other_error": 0.25,
+      "other_victim": [
+        109,
+        110,
+        111,
+        112
+      ],
+      "output_sha256": "babbb57cd7e4be5dcd8773b6f321605e6ca90a8be3199c63a18cce80bf105c18",
+      "prior_live_feedback": [
+        115,
+        147,
+        155,
+        167,
+        171,
+        175,
+        183
+      ],
+      "promotion_end": 196,
+      "stage": "warm_use",
+      "target": 215,
+      "unequal_blocks": [
+        188,
+        192
+      ]
+    },
+    "E/harm": {
+      "keeper": "E",
+      "keeper_error": 0.5,
+      "keeper_victims": [
+        [
+          141,
+          142,
+          143,
+          144
+        ]
+      ],
+      "last_observation": 184,
+      "local_gain": false,
+      "newer_keeper_victims": [
+        [
+          141,
+          142,
+          143,
+          144
+        ]
+      ],
+      "offset": 0,
+      "origin": [
+        109,
+        110,
+        111,
+        112
+      ],
+      "other_error": 0.25,
+      "other_victim": [
+        109,
+        110,
+        111,
+        112
+      ],
+      "output_sha256": "babbb57cd7e4be5dcd8773b6f321605e6ca90a8be3199c63a18cce80bf105c18",
+      "prior_live_feedback": [
+        115,
+        147,
+        155,
+        167,
+        171,
+        175,
+        183
+      ],
+      "promotion_end": 196,
+      "stage": "warm_use",
+      "target": 199,
+      "unequal_blocks": [
+        188,
+        192
+      ]
+    },
+    "E/retention": {
+      "keeper": "E",
+      "keeper_victims": [
+        [
+          141,
+          142,
+          143,
+          144
+        ]
+      ],
+      "last_observation": 184,
+      "newer_keeper_victims": [
+        [
+          141,
+          142,
+          143,
+          144
+        ]
+      ],
+      "origin": [
+        109,
+        110,
+        111,
+        112
+      ],
+      "other_victim": [
+        109,
+        110,
+        111,
+        112
+      ],
+      "promotion_end": 196,
+      "stage": "retention",
+      "unequal_blocks": [
+        188,
+        192
+      ]
+    },
+    "F/gain": {
+      "keeper": "F",
+      "keeper_error": 0.0,
+      "keeper_victims": [
+        [
+          717,
+          718,
+          719,
+          720
+        ]
+      ],
+      "last_observation": 752,
+      "local_gain": true,
+      "newer_keeper_victims": [],
+      "offset": 0,
+      "origin": [
+        737,
+        738,
+        739,
+        740
+      ],
+      "other_error": 0.25,
+      "other_victim": [
+        737,
+        738,
+        739,
+        740
+      ],
+      "output_sha256": "b21cdc59d16d5b48bb164a7b15a6a395abbd3e9ed1ab3d81ad414dfb9f1f124d",
+      "prior_live_feedback": [
+        743,
+        747,
+        751
+      ],
+      "promotion_end": 768,
+      "stage": "warm_use",
+      "target": 775,
+      "unequal_blocks": [
+        756,
+        760,
+        764
+      ]
+    },
+    "F/harm": {
+      "keeper": "F",
+      "keeper_error": 0.5,
+      "keeper_victims": [
+        [
+          717,
+          718,
+          719,
+          720
+        ]
+      ],
+      "last_observation": 752,
+      "local_gain": false,
+      "newer_keeper_victims": [],
+      "offset": 0,
+      "origin": [
+        737,
+        738,
+        739,
+        740
+      ],
+      "other_error": 0.25,
+      "other_victim": [
+        737,
+        738,
+        739,
+        740
+      ],
+      "output_sha256": "b21cdc59d16d5b48bb164a7b15a6a395abbd3e9ed1ab3d81ad414dfb9f1f124d",
+      "prior_live_feedback": [
+        743,
+        747,
+        751
+      ],
+      "promotion_end": 768,
+      "stage": "warm_use",
+      "target": 791,
+      "unequal_blocks": [
+        756,
+        760,
+        764
+      ]
+    },
+    "F/retention": {
+      "keeper": "F",
+      "keeper_victims": [
+        [
+          109,
+          110,
+          111,
+          112
+        ]
+      ],
+      "last_observation": 152,
+      "newer_keeper_victims": [],
+      "origin": [
+        141,
+        142,
+        143,
+        144
+      ],
+      "other_victim": [
+        141,
+        142,
+        143,
+        144
+      ],
+      "promotion_end": 196,
+      "stage": "retention",
+      "unequal_blocks": [
+        156,
+        160,
+        164,
+        168,
+        172,
+        176,
+        180,
+        184,
+        188,
+        192
+      ]
+    }
+  },
+  "expected": {
+    "E": {
+      "local_gains": 5,
+      "multi_assigned_targets": {},
+      "retention_events": 6,
+      "unique_gain_targets": 5,
+      "unique_warm_targets": 8,
+      "warm_uses": 8
+    },
+    "F": {
+      "local_gains": 1,
+      "multi_assigned_targets": {},
+      "retention_events": 8,
+      "unique_gain_targets": 1,
+      "unique_warm_targets": 2,
+      "warm_uses": 2
+    }
+  },
+  "expected_multiset_sha256": "bf9f8b958ccf63b7b432c660a439f35401960501eb7d3e22908f8546fdaf1638",
+  "pair": 15,
+  "rejected_candidates": [],
+  "reported": {
+    "E": {
+      "local_gains": 5,
+      "multi_assigned_targets": {},
+      "retention_events": 6,
+      "unique_gain_targets": 5,
+      "unique_warm_targets": 8,
+      "warm_uses": 8
+    },
+    "F": {
+      "local_gains": 1,
+      "multi_assigned_targets": {},
+      "retention_events": 8,
+      "unique_gain_targets": 1,
+      "unique_warm_targets": 2,
+      "warm_uses": 2
+    }
+  },
+  "seconds": 4.512289000005694,
+  "source_sha256": "547075f19fd22077b6e185dae3fcbb098f4f03535ce53efcae02fe1582e7534a",
+  "status": "PASS"
+}

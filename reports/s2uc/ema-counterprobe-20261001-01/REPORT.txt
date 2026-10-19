@@ -1,0 +1,134 @@
+MCM -- paired_error_ema_v1: gebundene fortlaufende Gegenproben
+2026-10-01
+
+ERGEBNIS
+CONTROLLED_FUNCTION_CRITERIA_MET. Alle vorab festgelegten fachlichen Kriterien erfuellt.
+Ein kontrollierter Funktionsnutzen der eigenen vergangenen Prognosefehler
+ist auf diesen konstruierten Verlaeufen gezeigt. Kein allgemeiner Lernnutzen,
+keine Aenderung der Herkunftserkennung oder der Gedaechtnisbildung.
+Zusatz bleibt standardmaessig disabled.
+
+AUSFUEHRUNG
+constant und switch_return jeweils200 fortlaufende Frames in E/K/P.
+1200 Versuchsarm-Aufnahmen insgesamt,ohne Zwischenreset;Exit0,kein Abbruch
+oder Wiederholungsversuch. Der bereits qualifizierte Replay fuehrt zusaetzlich
+1200 interne Referenz-Fortschreibungen derselben Samples fuer den Zustands-
+vergleich aus. Diese sind Beobachteraufwand,keine zusaetzlichen Versuchsarme
+oder neuen Quellframes. Insgesamt400 unterschiedliche Materialpositionen.
+alpha1/2,exact_v1,legacy_v1 und alle Materialrezepte unveraendert.
+Plan,42 Code-/Testdateien,Pythonruntime und Ausfuehrungsrunner vor Erzeugung
+gebunden. Separate Autorisierung statt Aenderung der historischen Planfreigabe.
+Am Ende alle Bindungen unveraendert bestaetigt.
+
+ARME UND ZIELMASKEN
+E: EMA-Auswahl; K: Kontext wenn verfuegbar,sonst Persistenz; P: reine Persistenz.
+Je Geschichte/Arm24 Hauptziele und75 Nebenziele. Beide Gruppen sowie alle99
+Ziele getrennt ausgewiesen; keine Entfernung von Anfangs- oder Wechselverlusten.
+Ziel201 nur vorzeitig eingefrorene Prognose,kein eingetroffenes Ziel,
+kein Fehlerupdate; Ticket und Vorschlagsslots am Ende freigegeben.
+
+MAE-TABELLE
+Geschichte    | Arm | Hauptziele24 | Nebenziele75 | alle99
+constant      | E | 0.0208333333333333 | 0.3256640625 | 0.251765703914141
+constant      | K | 0 | 0.318997395833333 | 0.241664693813131
+constant      | P | 0.5 | 0.3256640625 | 0.367927320075758
+switch_return | E | 0.0625 | 0.3256640625 | 0.261866714015151
+switch_return | K | 0.166666666666667 | 0.318997395833333 | 0.282068734217172
+switch_return | P | 0.333333333333333 | 0.3256640625 | 0.327523279671717
+MAE je48er-Vektor in allen Armen dieselbe gebundene geordnete binary64-
+Summation. Aggregation ueber die festen Zielmasken mit fsum/Anzahl.
+
+KRITERIEN UND ANPASSUNG
+Wechselgeschichte: Hauptziel-MAE E0.0625<K0.16666666666666666 und
+P0.3333333333333333. Strikter Vorteil gegen beide Baselines.
+Abschnitt1,stabile Kontextfortsetzung: erste Hauptentscheidung Persistenz,
+ab zweiter Kontext bis Abschnittsende; Fehlersumme E0.5,K0,P4.
+Abschnitt2,Wechsel zu Persistenzfortsetzung: erste Hauptentscheidung Kontext,
+ab zweiter Persistenz bis Abschnittsende; Fehlersumme E0.5,K4,P0.
+Abschnitt3,Rueckkehr zur Kontextfortsetzung: erste Hauptentscheidung Persistenz,
+ab zweiter Kontext bis Abschnittsende; Fehlersumme E0.5,K0,P4.
+Damit alle Anpassungen ab Position2,also vor der geforderten Position3.
+Rueckkehr zur Kontextnutzung nach Unterdrueckung nachgewiesen,keine dauerhafte
+Enthaltung als scheinbarer Nutzen. E liefert an allen99 Zielen eine Prognose.
+Stabile Kontrolle: nach erstem auswertbarem retained-Schluesselereignis
+(Ziel15) kein weiterer Mehrfehler gegen K an allen folgenden bewerteten
+Positionen. Anfangsverluste werden trotzdem voll mitgezaehlt; E ist in der
+stabilen Kontrolle insgesamt schlechter als K. Kein allgemeiner Dominanzbefund.
+
+ALLE SCHAEDEN GEGEN DIE BEIDEN BASELINES
+constant:
+- Ziel7 (Nebenziel,neuer candidate): E0.5 gegen K0,Mehrfehler0.5.
+- Ziel15 (Hauptziel,neuer retained-Schluessel nach Promotion): E0.5 gegen K0.
+- Kein Mehrfehler gegen P.
+switch_return:
+- Ziel7 (Nebenziel): E0.5 gegen K0.
+- Ziel15 (Hauptziel,Kaltstart): E0.5 gegen K0.
+- Ziel79 (erstes Hauptziel nach Wechsel): E0.5 gegen P0.
+- Ziel143 (erstes Hauptziel nach Rueckkehr): E0.5 gegen K0.
+Keine weiteren E-Schaeden gegen K/P. All-harms.json erhaelt alle Einzelwerte;
+decisions.json alle Gewinne,Gleichstaende und Schaeden ohne gegenseitige
+Verrechnung. Jede Abschnittsgrenze kostet hier ein verzögertes Hauptziel.
+
+EIGENE FEHLERERFAHRUNG UND KAUSALITAET
+Je E-Geschichte100 eingefrorene Entscheidungen fuer Ziel3..201,
+99 tatsaechlich eingetroffene Ziele3..199. An den99 Rueckmeldungen werden
+Zellen/Ticket,Kontext- und Persistenzfehler sowie Vor-/Nachwerte protokolliert.
+Die Auswahl ist bereits im Receipt-Pfad vor Zielanforderung festgelegt.
+Bei Ankunft stimmen protokollierte Auswahl und Ausgabealias ueberein.
+Keine Labels,Phasen oder Wechselzeitpunkte an Adapter oder Memory uebergeben;
+sie existieren nur im Rezept/Auswerter.
+Jedes gueltige Paarupdate aus Vorwerten und bereits eingetroffenem Ziel
+unabhaengig beobachterseitig nachgerechnet; atomare Paarveroeffentlichung
+bestaetigt. Auch nicht ausgewaehlte Kontexte weiterhin bewertet.
+Keine Aktualisierung beim Endziel201. Keine nichtlebenden Schluessel nach
+Pruning/Admission. Kandidatenfehler werden bei Promotion entfernt; neue
+retained-Erfahrung beginnt getrennt. Ereignisse in cell_lifetime_events.
+Kein stiller Zustandstransfer an neue Generationen.
+
+SPEICHERIDENTITAET UND RESSOURCEN
+Nach jedem der200 Frames vollstaendiger Zustand gegen bisherige interne
+Referenz verglichen. Zusaetzlich200 Zustandsdigests zwischen E/K/P je
+Geschichte bitgleich. Einmalige Aufnahme aller Frameindizes1..200 bestaetigt.
+Alle Vorschlagsslots und EMA-Puffer am Ende freigegeben/geloescht.
+Gemessene Peaks: 12 Frames,
+2 Vorschlagsausgaben,13 gemeinsam.
+Zusaetzliche Python-EMA-Verwaltung inklusive isoliert gemessener temporaerer
+Objekte maximal 4284/16384 Byte.
+Feste Puffer unveraendert416 Byte; Ausgewaehltes nur Referenz auf vorhandenen
+Vorschlag. Beobachterskripte und Ergebnisarchive getrennt von diesem Zusatz-
+Speicherbudget. Kein harter Gesamtprozess-RSS- oder Native-Stack-Beleg.
+Messaufrufe setzen die gebundenen Systemmethoden nicht zurueck und rufen sie
+jeweils genau einmal auf. Ressourcen-/Zustandsbeobachtung aendert keine Regel.
+
+VERSUCHSBEDINGUNG UND AUSSAGEGRENZE
+Die A-Spur bleibt durch bewusst gewaehlte verschiedene Zwischenbloecke und
+Query-Enden abrufbar. Alle24 Hauptziele je Geschichte treffen die retained-
+Spur aus den urspruenglichen Ordinals1..4. Diese A-Erhaltung ist konstruiert,
+nicht durch EMA gelernt. Es gab keine direkte Memoryvorbelegung oder
+Aenderung der normalen Erhaltungs-/Bestaetigungsregeln.
+Der Test isoliert,ob vergangene eigene relative Fehler spaetere Entscheidungen
+bei wechselnder Verlaesslichkeit verbessern. Er belegt weder robuste Auswahl
+bei beliebiger Spurenkonkurrenz/Verdrängung noch allgemeine Audio-/Video-
+Lernfaehigkeit. Vergangene Verlaesslichkeit garantiert die naechste Zukunft
+nicht; die protokollierten Wechselkosten zeigen diese Grenze unmittelbar.
+
+NAECHSTER BEGRENZTER SCHRITT
+Projektleiter: kontrollierten Funktionsbefund im dokumentierten Umfang
+abnehmen; paired_error_ema_v1 explizit experimentell/deaktiviert lassen.
+Als naechstes einen kleinen Gegenprobenvertrag fuer konkurrierende und
+verdraengte Spuren unter normaler Memoryfortschreibung vorbereiten,um die
+kuenstlich gesicherte A-Verfuegbarkeit als Versuchsannahme zu lockern.
+Keine Regel-/Alpha-Anpassung aus diesen Ergebnissen und kein weiterer Lauf
+in diesem Auftrag.
+
+BELEGE
+execution-claim.json/preexecution.json: Autorisierung und Vorbindung.
+constant-material.json/switch_return-material.json: unveraenderte Quellen.
+constant-E/K/P.json,switch_return-E/K/P.json: alle Entscheidungen/Zustandsdigests,
+E zusaetzlich Fehler-Vor-/Nachwerte und Lebensdauerereignisse.
+*-primary-errors.csv: kompakte Hauptziel-Fehlerverlaeufe mit Kaltstart-Leerwerten.
+criteria.json,comparison.json,decisions.json,all-harms.json,phase-trajectories.json:
+Kriterien,volle Masken,Einzelgewinne/-verluste,Wechselverzoegerung.
+resource-ledger.json/final-verification.json: Ressourcen und technische Pruefung.
+execution-closure.json: COMPLETE ohne Wiederholung.
+inventory.json: Hashinventar des Abschlusses.

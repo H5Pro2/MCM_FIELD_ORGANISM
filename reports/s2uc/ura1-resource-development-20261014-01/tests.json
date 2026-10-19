@@ -1,0 +1,39 @@
+{
+  "status": "PASS_SMALL_RESOURCE_QUALIFICATION",
+  "ids": [
+    {
+      "id": "R01",
+      "status": "PASS",
+      "evidence": "normal/supervisor.json"
+    },
+    {
+      "id": "R02",
+      "status": "PASS",
+      "evidence": "memory/supervisor.json"
+    },
+    {
+      "id": "R03",
+      "status": "PASS",
+      "evidence": "encoder/supervisor.json"
+    },
+    {
+      "id": "R04",
+      "status": "PASS",
+      "evidence": "decoder/supervisor.json"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_resource_stream.StreamTests.test_R05_collection_lossless_order_and_cleanup",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_resource_stream.StreamTests.test_R06_record_and_total_bounds_cleanup",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_resource_stream.StreamTests.test_R07_original_and_policy_bindings",
+      "status": "PASS"
+    }
+  ],
+  "component_tests": 3,
+  "component_seconds": 0.069
+}

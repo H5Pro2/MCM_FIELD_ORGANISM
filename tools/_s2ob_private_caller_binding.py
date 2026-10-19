@@ -198,22 +198,26 @@ def code_inventory():
             executable_sha256=hashlib.sha256(Path(sys.executable).read_bytes()).hexdigest(),numpy=np.__version__))
 
 
-def read_payload(p):
+def read_payload(p, *, read_account=None):
     with payload_path(p).open("rb") as f:
         raw=f.read(p.byte_count+1)
+    if read_account is not None:
+        read_account["actual_read_bytes"] += len(raw)
+        read_account["read_operations"] += 1
     require(len(raw)==p.byte_count, "PAYLOAD_SIZE_INVALID")
     require(hashlib.sha256(raw).hexdigest()==p.sha256, "PAYLOAD_HASH_INVALID")
     return raw
 
 
 class Materializer:
-    def __init__(self, manifest):
+    def __init__(self, manifest, *, track_reads=False):
         self.manifest=manifest; self.expected=validate_manifest(manifest)
         self.config=r.nn.profile.build_config()
         r.nn.validate_config(self.config)
         self.audio=r.half.spectral.LogSpectralReceptor(r.nn.LogSpectralConfig())
         self.video=LocalChannelGridReceptor(VisualGridConfig())
         self.counts=dict(payloads=0,audio=0,nj=0,visual=0,materialized_events=0)
+        self.read_account = dict(actual_read_bytes=0, read_operations=0) if track_reads else None
         self.phase="BINDINGS"; self.ordinal=None; self.source_id=None
 
     def next(self, event):
@@ -222,7 +226,9 @@ class Materializer:
         for modality,p in (("auditory",event.pcm),("visual",event.rgb)):
             if p is None: continue
             self.source_id=p.source_id; self.phase="PAYLOAD_READ"
-            self.phase="PAYLOAD_HASH"; payload=read_payload(p)
+            self.phase="PAYLOAD_HASH"
+            payload=(read_payload(p) if self.read_account is None else
+                     read_payload(p, read_account=self.read_account))
             try:
                 self.counts["payloads"]+=1
                 if modality=="auditory":

@@ -1,0 +1,69 @@
+{
+  "status": "FAILED",
+  "duration_seconds": 187.11512450000737,
+  "files": {
+    "binding.json": {
+      "bytes": 899,
+      "sha256": "e138a8c9d9a09042df9c1d7da51721951aa55f5dc77282b5e08a3ef0adc0ac56"
+    },
+    "facts.json": {
+      "bytes": 47521,
+      "sha256": "00aad9e37108dda051819983ed6ab9efefebf8ffe11f1d3bfe4501e0d9aabcbf"
+    },
+    "K04_expiry_K1.json": {
+      "bytes": 362721,
+      "sha256": "13511e60d63b91ce09f2bb3a77263cf9f9ffec289cc8b5f96855d37e3039a57d"
+    },
+    "K04_expiry_U.json": {
+      "bytes": 369323,
+      "sha256": "328d742c81ef3ca9ff5b64eee35606533c96c415faacb15c6b608e9017b736bc"
+    },
+    "K05_pending_expiry.json": {
+      "bytes": 439439,
+      "sha256": "0c26a30443180d63bd1994b1190a0c18aa151bdd52dd99e7781e989968ad3065"
+    },
+    "K05_pending_replacement.json": {
+      "bytes": 184597,
+      "sha256": "9fa91dcb622171f029ee57efccdd72a7b781fd37105ffa5df717c609d1de5fda"
+    },
+    "K06_promotion.json": {
+      "bytes": 141814,
+      "sha256": "c0d3005b45574ae7d71289b75458d5df2a01f1c24633e61cf07e837bd4c275ca"
+    },
+    "K08_full_heap.json": {
+      "bytes": 860188,
+      "sha256": "a6a3b2e47d129b3ab379f4a448e8d4ff8345071f2964783e9cd669cd19f34b38"
+    },
+    "K08_full_trace.json": {
+      "bytes": 854152,
+      "sha256": "e79da69babaa07bb0e30f337747b0e018893bf85ec2ff00d3ca69741d0e44128"
+    },
+    "K09_harm_K1.json": {
+      "bytes": 127500,
+      "sha256": "c83d3ed6f8eeccad825f1f10db0a653f262d75442aa9962e58aa146c3d7624b2"
+    },
+    "K09_harm_U.json": {
+      "bytes": 126799,
+      "sha256": "a58067316c848a79928850262e94f8783db65b88d10a2250db2de4fd223847d7"
+    },
+    "K09_new_lost_K1.json": {
+      "bytes": 124778,
+      "sha256": "ed8df83e4a3c4ba6ba5cd0d46b50682302ff853309ca13922c63f09e776a9fd2"
+    },
+    "K09_new_lost_U.json": {
+      "bytes": 126789,
+      "sha256": "7b7227bf120ba07407f093483c87f12aa36b84bb3b3151fedb4b5b7aaf81cb3b"
+    },
+    "K10_reference_divergence.json": {
+      "bytes": 295588,
+      "sha256": "d9b45b8c551b8f8ff22a41a89904760bc6ac82cdf746c97e24feb3d52911e75d"
+    },
+    "tests.json": {
+      "bytes": 7897,
+      "sha256": "9cd1d8ae52c8540287b70bc05060bd861da1bdddb6e16cfccb9eb2c2ce50a115"
+    }
+  },
+  "reserved_research_cases_generated": 0,
+  "T1_replays": 0,
+  "neutral_probe_completions": 12
+}

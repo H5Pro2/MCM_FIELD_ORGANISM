@@ -1,0 +1,47 @@
+{
+  "mode": "delete",
+  "status": "PASS",
+  "terminal": {
+    "active_case": null,
+    "cleanup": "UNCONFIRMED",
+    "completed_cases": [],
+    "first_failure": null,
+    "followup_failures": [],
+    "retry_allowed": false,
+    "seconds": 0.20785330000217073,
+    "status": "TERMINAL_COMPLETE",
+    "worker_ended": true,
+    "worker_started": true,
+    "worker_exitcode": 0,
+    "partial_files": [],
+    "file_cleanup_confirmed": true
+  },
+  "accepted_inventory": {
+    "files": {
+      "terminal.json": {
+        "bytes": 16384,
+        "category": "closure"
+      }
+    },
+    "groups": {
+      "source": 0,
+      "archive": 0,
+      "admin": 0,
+      "closure": 16384,
+      "temp": 0
+    },
+    "total": 16384,
+    "scans": 3
+  },
+  "handshake_steps": 1,
+  "job": {
+    "limit_bytes": 536870912,
+    "peak_job_committed_bytes": 27250688,
+    "peak_process_committed_bytes": 13758464,
+    "hard_job_limit": true,
+    "members": "supervisor and inherited worker",
+    "measurement": "Windows JobObjectExtendedLimitInformation",
+    "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap."
+  },
+  "neutral_post_probe_removals": []
+}

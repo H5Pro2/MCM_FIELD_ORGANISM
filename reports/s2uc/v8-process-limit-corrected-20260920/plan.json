@@ -1,0 +1,29 @@
+{
+  "cases": [
+    {
+      "case": "success",
+      "folder": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\v8-process-limit-corrected-20260920\\success",
+      "job": "Local\\MCM-V8-04d4bff9f324b39255ed640de7f67b90",
+      "binding": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\v8-process-limit-corrected-20260920\\success\\bundle\\execution-binding.json",
+      "run_id": "S2UC-V8-NEUTRAL-c8c11e06f1f847b08fc4de959e9655d1",
+      "output": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\v8-process-limit-corrected-20260920\\success\\S2UC-V8-NEUTRAL-c8c11e06f1f847b08fc4de959e9655d1"
+    },
+    {
+      "case": "memoryerror",
+      "folder": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\v8-process-limit-corrected-20260920\\memoryerror",
+      "job": "Local\\MCM-V8-a21b613bc09a5e331f80060d7105e851",
+      "binding": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\v8-process-limit-corrected-20260920\\memoryerror\\bundle\\execution-binding.json",
+      "run_id": "S2UC-V8-NEUTRAL-645788995f184b8d81def4b08768c022",
+      "output": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\v8-process-limit-corrected-20260920\\memoryerror\\S2UC-V8-NEUTRAL-645788995f184b8d81def4b08768c022"
+    }
+  ],
+  "limit_bytes": 671088640,
+  "warning_ws_bytes": 100663296,
+  "interval_ms": 10,
+  "runs_per_case": 1,
+  "allocation_chunk": 16777216,
+  "memoryerror_at": 58,
+  "bootstrap": "-S; preimport handshake",
+  "tool_sha256": "9c4cb7ebe57dae107b317ffaef45b6522af26d970cd8a6ee2e08d0954d7b5b12",
+  "created_utc": "2026-09-20T17:21:07Z"
+}

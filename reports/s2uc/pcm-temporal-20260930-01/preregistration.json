@@ -1,0 +1,80 @@
+{
+  "bindings": {
+    "tools/s2uc_pcm_temporal_check.py": "f975af4fac222ac6c3c005351c76d872ba26ec6fd538129c7bd3b02d78298ea5",
+    "tools/_s2tu_retained_trace.py": "bf530380f93c8a1bf0eeae5a4169e81bc99aee10050872e3e5ddc7bfdb88f3f6",
+    "tools/_s2tw_exact_confirmation.py": "90470980a329d0424bec9ba430adbbccaf72bb82145edfefd6e491b6fcec7be9",
+    "tools/_s2ub_candidate_confirmation.py": "4178198b43fbbefd3cd550307ec114540c2167a3ae066e22bde01f5223f0ca8a",
+    "tools/_s2uc_four_arm.py": "214805475c8794663026798b95f88f4b6e5cd6455d474a4eb75b1ee2c5e5a16b",
+    "tools/_s2uc_provisional_hint.py": "3fcf1c358548c85ddbec462028a43a96e3ec24a6bffd2948ad87da502f802c8e",
+    "tools/_s2uc_two_candidates.py": "e75da4a1e63ff1b844f8b9e8de62922cea4fa5f549f6b8b37d7a2774f291995e",
+    "tools/_s2uc_record_codec.py": "43f5532064b11e130535c47afe50a48be418255a054e694253c412c6783ad70f",
+    "tools/s2uc_four_arm_check.py": "ba0566f18f54790b5d9e57deb1e067eb38a6b21f2fcb4dc5d4521a7e6c2afc67",
+    "tools/s2uc_b2v_check.py": "446e999e309d807acf3ac0e50e7778b8ab43ad4ea8e6032d65b81f8a71eaa593",
+    "tools/s2uc_k2_check.py": "5773fca13edac4b2a82201167d31d640b465f11cd1b6538173f2ab49de550c1d",
+    "tools/_s2uc_factor_hint.py": "f1fdd62043d7939cd7b144eae797f84c94ff3196979d1028798d2af546220e19",
+    "tools/_s2uc_allocation.py": "e333866a96d5924672d9e71d1abb67a23e18578babc56f01583e3b17fcbbebd1",
+    "tools/s2uc_allocation_check.py": "9b403df9d6f2a2f4186c78e1d74e2298f023f8b0a420860995112333398bd4e8",
+    "tools/s2uc_factor_hint_check.py": "f765ba126a9c9d8a9de80c42865a09428628fbe048dab7532bd71f94284649ec",
+    "tools/s2uc_pcm_half_check.py": "2c3b8649b9b65d466b4c7a92a655c4c93e90c89d974891d47c477dae627eefa0",
+    "mcm_field_organism/root_lazy_exports.py": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016",
+    "mcm_field_organism/__init__.py": "43bb1a27f4d4d373ec2af17ca128f35df6453fee86723160466543fb603704b6",
+    "mcm_field_organism/carrier_baselines.py": "dc891f4f263b17acf7b7b50c7c135d9a3d028cb1b9bdb72c342d72d24f1337ab",
+    "mcm_field_organism/log_spectral_receptor.py": "26a6bd8f2d190db60c75ad29f275b3bd8b09b6d26d4ad54e4396176c4a36d2b0",
+    "mcm_field_organism/controlled_audio_source.py": "46744d3b377f1bcd54b7b8128dbd2a264683d45a534273031869aa127b80bd70",
+    "mcm_field_organism/broadband_hearing_path.py": "a20456b24c04d099ba5ee2da6250e3d83dc657392603c41d816b13ca68a37fb7",
+    "tools/_s2nj_private_auditory_output_projection.py": "e052cc76cf4c9678e11673d95390dea21634bba8082187567a760faaaf4904e5",
+    "tests/test_s2uc_pcm_temporal.py": "f899c21811886295ae16d90107055c63f3db7eca77052d79118ea26b67a6968f",
+    "docs/S2UC_PCM_ZEITSEQUENZ_SIGNALENTWURF_20260930.txt": "6e008a112b5e38d911f8d4f534c5ca0a4995062d320a2acefed4ac24177a68e6"
+  },
+  "config": {
+    "sample_rate": 48000,
+    "window_size": 4800,
+    "hop_size": 480,
+    "band_count": 48,
+    "min_frequency": 50.0,
+    "max_frequency": 18000.0
+  },
+  "source": "sources/s2uc/temporal-chirp-v1/sequence.pcm",
+  "formula": "Float32((1/8)*sin(2*pi*(400*t+4500*t*t))), t=n/48000; n=0..19199",
+  "computation": "t=n/48000; a=400*t; b=4500*t; c=b*t; d=a+c; e=2*pi; phase=e*d; sample64=.125*sin(phase); pack <f",
+  "windows": [
+    [
+      0,
+      4800
+    ],
+    [
+      4800,
+      9600
+    ],
+    [
+      9600,
+      14400
+    ],
+    [
+      14400,
+      19200
+    ]
+  ],
+  "target_offset": 1,
+  "criteria": [
+    "No signal optimization",
+    "Numeric and bit factor equality reported separately",
+    "All 48 bands for W2/W3 raw and NJ",
+    "All six original window pairs raw and NJ",
+    "Full exact-rational oracle match sets",
+    "Repeated hints readonly",
+    "16+2 frame budget",
+    "Negative factor or uniqueness findings are valid"
+  ],
+  "runtime": {
+    "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Python314\\python.exe",
+    "executable_sha256": "7ca24f26d6e3f463419ee4f537ddd3acd312c38fe45e678cce08572f26a8bd1a",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "numpy": "2.4.4",
+    "math_origin": "built-in",
+    "pi_hex": "0x1.921fb54442d18p+1"
+  },
+  "scope": "SYNTHETIC_LOCAL_TEMPORAL_TEST_ONLY; no original source run",
+  "created_ns": 1790780158858637800
+}

@@ -1,0 +1,114 @@
+MCM-KI -- Technische Vorbereitung des abgenommenen Evaluationsvertrags
+2026-10-03 | KEINE FREIGABE FUER MATERIALISIERUNG ODER EVALUATION
+
+Vertrag: S2UC_EINGEFRORENE_POLICY_EVALUATIONSVERTRAG_20261003.txt.
+Plan: S2UC_RASTER32_V2_PLAN_20261003.json.
+Bindung: S2UC_RASTER32_V2_BINDUNG_20261003.json.
+Entwicklungsindex: S2UC_RASTER32_V2_ENTWICKLUNGSINDEX_20261003.json.
+Qualifikation: reports/s2uc/raster32-preparation-qualification-20261003-02/.
+Verbindliches technisches Ergebnis steht in tests.json und closure.json;
+kein positiver Evaluationsbefund aus neutralen Tests ableiten.
+
+Neue Dateien und Grenzen
+
+tools/_s2uc_eval_source.py: vollstaendige deklarative32-Fall-Liste, Masken,
+separater Generator/Validator; importiert ausschliesslich itertools.
+tools/_s2uc_eval_multi_replay.py und _s2uc_eval_baseline_replay.py:
+separate Replayfunktionen fuer4..80 gerade Positionen, Zeitpruefung vor
+jeder Aufnahme, terminale Freigabe. Wiederverwendung unveraenderter Adapter
+und Ressourcenbeobachter; bisherige Replayfunktionen bleiben bei64.
+tools/_s2uc_eval_evidence.py: generische Pruefung von Originalschluesseln,
+eingefrorenen Entscheidungen, kausalen Fehlerpaaren und Promotionsketten;
+verifiziert auch Baseline-Fehler gegen gespeicherte Originalwerte.
+tools/_s2uc_eval_assessment.py: getrennte Abnahme; exakte rationale Mittel
+aus Fehlersummen/Anzahlen fuer Grenzentscheidungen, gerundete Darstellung
+nur zusaetzlich. Alle32 Faelle und48 Wechsel bleiben in ihren Nennern.
+tools/s2uc_eval_prepare.py: Bindung, Neutralqualifikation, Autorisierung,
+vollstaendige Manifestierung vor Policyaufruf, serielle Ausfuehrung,
+Prozessdeadline, gemeinsame Bilanz und geschlossener Teilabschluss.
+tests/test_s2uc_eval_prepare.py: Tests R01-R25, ausserhalb des Rasters.
+
+Systemgrenzen unveraendert:2 retained+1 candidate;6 Hypothesen;416 gepackte
+Bytes;18 Originalframes+2 Ausgaben,gemeinsam20;16384 Zusatz-Pythonbytes;
+Receipt16384,UTF8-Transienten32768 Bytes. U-Frameobergrenzen bleiben
+Obergrenzen; nicht erhobene Messpeaks als null. Kein Gesamtprozess-RAM-Beleg.
+Quellen/Beobachterdaten sind externe Pruefinfrastruktur, keine ausgelagerten
+Systemhalter. Keine Zustandsweitergabe zwischen Faellen/Armen; leere
+Originalframehalter und Ausgabeslots werden am Replayende geprueft.
+
+Exportgrenzen und Abschluss
+
+Gesamter Deckel67108864 Byte,Abschlussreserve1048576 Byte. Gemeinsamer
+Zaehler ueber alle32 Faelle; kein Budgetreset pro Arm/Fall. Wiederverwendete
+Policyqualifikation549025 und XYX-Vorbereitung49280 Byte werden berechnet.
+Zusaetzlich beide neuen Qualifikationsabschluesse01/02 und die historischen
+Vorbereitungsdokumente01, referenzierte Entwicklungsquellen und
+Plan/Bindung/Index/Vertrag/diese Anleitung/Autorisierungsdokumente; diese Vorbelastung muss
+vor exklusivem Start <=8388608 Byte bleiben, sonst kein Versuchsbeginn.
+
+Erzwungene Dateigrenzen:
+32 Quellen je65536;160 Armexporte je196608;32 Fallauswertungen je524288;
+32 Ressourcenbelege je32768;160 Armstartbelege je1024 Byte.
+Globales Manifest und Gesamtauswertung je524288;Claim und Workerabschluss
+je1024. Teilbeleg hoechstens524288 aus der geschuetzten Reserve; fuer die
+abschliessende Inventarliste bleibt mindestens deren andere Haelfte frei.
+Konservative Summe mit voller Vorbelastung, voller Abschlussreserve UND
+zusaetzlich gezaehltem Teilbeleg:62556160 Byte <67108864 Byte.
+Auch diese konservative Obergrenze ist keine Verbrauchsmessung.
+
+Ueberschreitung einer Datei-/Systemgrenze ist ein technischer Abbruch,
+kein Anlass zum Weglassen von Zielen oder zur Vergroesserung der Grenzen.
+Bei fehlgeschlagenem Export bleiben geschriebene Dateien und aktueller
+Teilbeleg erhalten. Falls ein unerwartet grosser Teilbeleg selbst seine
+halbe Reserve uebersteigt, wird das ausdruecklich als ausgelassene Evidenz
+vermerkt; der Lauf bleibt FAILED/NOT_EVALUABLE und wird nicht fortgesetzt.
+
+60 Minuten ab exklusivem Start, einschliesslich Materialisierung/Export.
+Der Worker prueft vor jeder Aufnahme und zwischen Phasen die monotone
+Deadline. Der Elternprozess beendet ihn unabhaengig davon bei Zeitablauf.
+Nach hartem Prozessabbruch ist keine kooperative Systemfreigabe belegt;
+der Prozessspeicher wird durch Prozessende freigegeben, das Teilinventar
+bleibt dokumentiert. Abschlussverwaltung nach Abbruch ist kein Nachlauf.
+Kein Scoreabbruch; fachliche Fehlschlaege laufen bis zum festen Ende weiter.
+Jeder bereits vorhandene Ausgabeordner sperrt erneuten Start und Fortsetzung.
+
+Entwicklungstrennung und Manifest
+
+Der gebundene Index erfasst vorhandene numerische48-Quellenexporte unter
+reports/s2uc/*/*source*.json zum Vorbereitungszeitpunkt. Er umfasst die
+bekannte direkte Entwicklungslinie, sowohl Array- als auch values-Objektformate; er ist kein vollstaendiger Beweis ueber
+alle historischen Medien, verschachtelten Fixtures oder menschlichen
+Vorversuche. Diese Einschraenkung bleibt im Manifest sichtbar.
+Volltreffer werden WIEDERVERWENDET; bekannte Viererbausteine und gemeinsame
+Praefixe werden ebenfalls ausgewiesen. Niemals einen Fall deswegen ersetzen.
+Ein Volltreffer verhindert den Anspruch eines vollstaendig neuen Satzes.
+
+Nach separater Autorisierung: zuerst alle32 Quellen schreiben/validieren,
+Hash, Masken und Zeitangaben fuer jeden Fall im gemeinsamen Manifest
+versiegeln. Erst danach erster Adapteraufruf. Jeder Armstart referenziert
+denselben Manifesthash; jede Quelldatei wird vor Verwendung erneut geprueft.
+Generator erhaelt weder Policy noch Ergebnisse. Entwicklungsindex, Code,
+Vertrag, Runtime, Qualifikationen und Plan sind vorher unveraenderlich
+gebunden. Keine Rasterpiloten waehrend dieser Vorbereitung.
+
+Vorbereiteter Aufruf -- heute NICHT ausfuehren
+
+Arbeitsverzeichnis: C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace
+C:/Python314/python.exe -m tools.s2uc_eval_prepare run --authorization docs/S2UC_RASTER32_V2_AUTORISIERUNG_20261003.json
+
+Eine operative Autorisierung darf erst nach separater Projektleiterfreigabe
+aus S2UC_RASTER32_V2_AUTORISIERUNG_VORLAGE_20261003.json entstehen. Nur status
+von PENDING_SEPARATE_AUTHORIZATION zu AUTHORIZED_ONCE aendern. Alle anderen
+Felder einschliesslich Qualifikationsabschluss-Hash muessen identisch bleiben.
+Heute existiert nur die ausstehende Vorlage, kein Evaluationsausgabeordner.
+Alte XYX-/MULTI-Freigaben sind verbraucht und gelten hier nicht.
+
+Naechste Entscheidung: technische Vorbereitung abnehmen; danach separat
+ueber genau eine Materialisierung samt vollstaendigem32-Fall-Lauf entscheiden.
+Policy und Defaults unveraendert. Generalisierung ausserhalb der
+konstruierten Aufgabenfamilie bleibt NICHT_GEPRUEFT.
+
+Vorbereitung01 bleibt als historischer Zwischenstand erhalten. Deren Index
+erfasste nur nackte Arrays. Massgeblich ist ausschliesslich V2 mit beiden
+Quellformaten und Qualifikation02. Die alte ausstehende Vorlage ist durch
+den Bindungs-/Qualifikationsvergleich der aktuellen Huelle ungueltig.

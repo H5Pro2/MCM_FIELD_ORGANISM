@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "zw1_neutral_delivery_files": 53,
+  "zw1_neutral_dependencies": "all unchanged",
+  "er1_v2_files": 2979,
+  "er1_v2_qualification": 72,
+  "er1_v1_files": 2967,
+  "er1_v1_qualification": 43,
+  "method": "hash-only; no historical source/archive replay"
+}

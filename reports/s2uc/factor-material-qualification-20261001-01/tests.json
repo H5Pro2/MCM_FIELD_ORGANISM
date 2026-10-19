@@ -1,0 +1,976 @@
+{
+  "status": "PASS",
+  "tests": 7,
+  "errors": 0,
+  "failures": 0,
+  "skips": 0,
+  "test_ids": [
+    "tests.test_s2uc_factor_material.MaterialTests.test_G1_full_path_independent_values_lossless_and_reproducible",
+    "tests.test_s2uc_factor_material.MaterialTests.test_G2_exclusive_claim_no_overwrite",
+    "tests.test_s2uc_factor_material.MaterialTests.test_G3_output_limit_reserved_closure",
+    "tests.test_s2uc_factor_material.MaterialTests.test_G4_partial_export_error_and_reader_closed",
+    "tests.test_s2uc_factor_material.MaterialTests.test_G5_auth_binding_and_quantity_rejections",
+    "tests.test_s2uc_factor_material.MaterialTests.test_G6_export_tamper_detected",
+    "tests.test_s2uc_factor_material.MaterialTests.test_G7_three_arm_export_connection"
+  ],
+  "facts": {
+    "full_path": {
+      "folder": "reports\\s2uc\\factor-material-qualification-20261001-01\\test_G1_full_path_independent_values_lossless_and_reproducible-vbwaiu2y\\material",
+      "base_hashes": {
+        "A": "5ea2324141d46e407cf9882e8f0918cf6dd5ff69218d4173197507f4e70648d6",
+        "B": "835d4b488838e16288bf9312254dedef6ca3468bcb3abd6f4abb10a2a36cc201",
+        "D": "5cf1f3fc5f7fc40f3d3c2b75e8f4643a335c306537d8e93a013ec1f8a96b789e",
+        "Z": "cd27f1720f203ada13dc1efde59a6c6a9914e9ce82d154ed2eb3d7a6d6811c32"
+      },
+      "files": 18,
+      "base_components": 768,
+      "case_frames": 129,
+      "bytes": 113524,
+      "reproducibility": true
+    },
+    "output_limit": {
+      "case_files": 0,
+      "case_frames": 0,
+      "charged_before_closure": 347,
+      "error": "AudioError:OUTPUT_LIMIT",
+      "production_partition": "FC-NEUTRAL",
+      "status": "NOT_EVALUABLE"
+    },
+    "partial_failure": {
+      "case_files": 3,
+      "case_frames": 33,
+      "charged_before_closure": 37370,
+      "error": "OSError:NEUTRAL_INJECTED_WRITE_ERROR",
+      "production_partition": "FC-NEUTRAL",
+      "status": "NOT_EVALUABLE"
+    },
+    "comparison": {
+      "path": "reports\\s2uc\\factor-material-qualification-20261001-01\\test_G7_three_arm_export_connection-i2wl4ool\\neutral-comparison.json",
+      "GP": {
+        "legacy": {
+          "case_id": "GP",
+          "target": 11,
+          "positive": true,
+          "origin_category": "CORRECT",
+          "assigned_root": "FC-NEUTRAL/A",
+          "true_root": "FC-NEUTRAL/A",
+          "role": "retained",
+          "assignment_covered": true,
+          "correct_rejection": false,
+          "prediction_status": "FACTOR_CONTINUATION_NOT_SPECIFIED",
+          "context_covered": false,
+          "persistence_mae": 0.0,
+          "context_mae": null,
+          "paired_delta": null,
+          "observer_hybrid_mae": 0.0,
+          "full_delta": 0.0
+        },
+        "scaled": {
+          "case_id": "GP",
+          "target": 11,
+          "positive": true,
+          "origin_category": "CORRECT",
+          "assigned_root": "FC-NEUTRAL/A",
+          "true_root": "FC-NEUTRAL/A",
+          "role": "retained",
+          "assignment_covered": true,
+          "correct_rejection": false,
+          "prediction_status": "PREDICTED_SCALED_RETAINED",
+          "context_covered": true,
+          "persistence_mae": 0.0,
+          "context_mae": 0.0480804443359375,
+          "paired_delta": -0.0480804443359375,
+          "observer_hybrid_mae": 0.0480804443359375,
+          "full_delta": -0.0480804443359375
+        }
+      },
+      "summary": {
+        "policies": {
+          "legacy": {
+            "origin_and_prediction": {
+              "total": 11,
+              "origin_counts": {
+                "CORRECT": 9,
+                "AMBIGUOUS": 1,
+                "ABSTAIN": 1
+              },
+              "positive_origin_counts": {
+                "CORRECT": 9,
+                "AMBIGUOUS": 1
+              },
+              "negative_origin_counts": {
+                "ABSTAIN": 1
+              },
+              "assignment_coverage": 0.8181818181818182,
+              "context_coverage": 0.09090909090909091,
+              "positive_correct_fraction": 0.9,
+              "negative_wrong_fraction": 0.0,
+              "correct_rejections": 1,
+              "roles": {
+                "retained": 9
+              },
+              "prediction_abstentions": {
+                "FACTOR_CONTINUATION_NOT_SPECIFIED": 8,
+                "AMBIGUOUS_CONTEXT": 1,
+                "ABSTAIN_NO_CONTEXT": 1
+              },
+              "paired": {
+                "count": 1,
+                "persistence_mae": 0.096160888671875,
+                "context_mae": 0.0,
+                "delta": 0.096160888671875,
+                "better": 1,
+                "equal": 0,
+                "worse": 0
+              },
+              "full_coverage": {
+                "count": 11,
+                "persistence_mae": 0.10393061782374527,
+                "observer_hybrid_mae": 0.09518871885357481,
+                "delta": 0.008741898970170454
+              },
+              "harm_rows": []
+            },
+            "total": 11,
+            "context_covered": 1,
+            "assignment_covered": 9,
+            "rows": [
+              {
+                "case_id": "F1",
+                "target": 11,
+                "positive": true,
+                "origin_category": "CORRECT",
+                "assigned_root": "FC-NEUTRAL/A",
+                "true_root": "FC-NEUTRAL/A",
+                "role": "retained",
+                "assignment_covered": true,
+                "correct_rejection": false,
+                "prediction_status": "PREDICTED_RETAINED",
+                "context_covered": true,
+                "persistence_mae": 0.096160888671875,
+                "context_mae": 0.0,
+                "paired_delta": 0.096160888671875,
+                "observer_hybrid_mae": 0.0,
+                "full_delta": 0.096160888671875
+              },
+              {
+                "case_id": "FH",
+                "target": 11,
+                "positive": true,
+                "origin_category": "CORRECT",
+                "assigned_root": "FC-NEUTRAL/A",
+                "true_root": "FC-NEUTRAL/A",
+                "role": "retained",
+                "assignment_covered": true,
+                "correct_rejection": false,
+                "prediction_status": "FACTOR_CONTINUATION_NOT_SPECIFIED",
+                "context_covered": false,
+                "persistence_mae": 0.0480804443359375,
+                "context_mae": null,
+                "paired_delta": null,
+                "observer_hybrid_mae": 0.0480804443359375,
+                "full_delta": 0.0
+              },
+              {
+                "case_id": "FD",
+                "target": 11,
+                "positive": true,
+                "origin_category": "CORRECT",
+                "assigned_root": "FC-NEUTRAL/A",
+                "true_root": "FC-NEUTRAL/A",
+                "role": "retained",
+                "assignment_covered": true,
+                "correct_rejection": false,
+                "prediction_status": "FACTOR_CONTINUATION_NOT_SPECIFIED",
+                "context_covered": false,
+                "persistence_mae": 0.19232177734375,
+                "context_mae": null,
+                "paired_delta": null,
+                "observer_hybrid_mae": 0.19232177734375,
+                "full_delta": 0.0
+              },
+              {
+                "case_id": "GH",
+                "target": 11,
+                "positive": true,
+                "origin_category": "CORRECT",
+                "assigned_root": "FC-NEUTRAL/A",
+                "true_root": "FC-NEUTRAL/A",
+                "role": "retained",
+                "assignment_covered": true,
+                "correct_rejection": false,
+                "prediction_status": "FACTOR_CONTINUATION_NOT_SPECIFIED",
+                "context_covered": false,
+                "persistence_mae": 0.2255706787109375,
+                "context_mae": null,
+                "paired_delta": null,
+                "observer_hybrid_mae": 0.2255706787109375,
+                "full_delta": 0.0
+              },
+              {
+                "case_id": "GD",
+                "target": 11,
+                "positive": true,
+                "origin_category": "CORRECT",
+                "assigned_root": "FC-NEUTRAL/A",
+                "true_root": "FC-NEUTRAL/A",
+                "role": "retained",
+                "assignment_covered": true,
+                "correct_rejection": false,
+                "prediction_status": "FACTOR_CONTINUATION_NOT_SPECIFIED",
+                "context_covered": false,
+                "persistence_mae": 0.18596394856770834,
+                "context_mae": null,
+                "paired_delta": null,
+                "observer_hybrid_mae": 0.18596394856770834,
+                "full_delta": 0.0
+              },
+              {
+                "case_id": "GR",
+                "target": 11,
+                "positive": true,
+                "origin_category": "CORRECT",
+                "assigned_root": "FC-NEUTRAL/A",
+                "true_root": "FC-NEUTRAL/A",
+                "role": "retained",
+                "assignment_covered": true,
+                "correct_rejection": false,
+                "prediction_status": "FACTOR_CONTINUATION_NOT_SPECIFIED",
+                "context_covered": false,
+                "persistence_mae": 0.09619140625,
+                "context_mae": null,
+                "paired_delta": null,
+                "observer_hybrid_mae": 0.09619140625,
+                "full_delta": 0.0
+              },
+              {
+                "case_id": "GP",
+                "target": 11,
+                "positive": true,
+                "origin_category": "CORRECT",
+                "assigned_root": "FC-NEUTRAL/A",
+                "true_root": "FC-NEUTRAL/A",
+                "role": "retained",
+                "assignment_covered": true,
+                "correct_rejection": false,
+                "prediction_status": "FACTOR_CONTINUATION_NOT_SPECIFIED",
+                "context_covered": false,
+                "persistence_mae": 0.0,
+                "context_mae": null,
+                "paired_delta": null,
+                "observer_hybrid_mae": 0.0,
+                "full_delta": 0.0
+              },
+              {
+                "case_id": "AM",
+                "target": 19,
+                "positive": true,
+                "origin_category": "AMBIGUOUS",
+                "assigned_root": null,
+                "true_root": "FC-NEUTRAL/D",
+                "role": null,
+                "assignment_covered": false,
+                "correct_rejection": false,
+                "prediction_status": "AMBIGUOUS_CONTEXT",
+                "context_covered": false,
+                "persistence_mae": 0.04026031494140625,
+                "context_mae": null,
+                "paired_delta": null,
+                "observer_hybrid_mae": 0.04026031494140625,
+                "full_delta": 0.0
+              },
+              {
+                "case_id": "ZF",
+                "target": 11,
+                "positive": true,
+                "origin_category": "CORRECT",
+                "assigned_root": "FC-NEUTRAL/Z",
+                "true_root": "FC-NEUTRAL/Z",
+                "role": "retained",
+                "assignment_covered": true,
+                "correct_rejection": false,
+                "prediction_status": "FACTOR_CONTINUATION_NOT_SPECIFIED",
+                "context_covered": false,
+                "persistence_mae": 0.13217671712239584,
+                "context_mae": null,
+                "paired_delta": null,
+                "observer_hybrid_mae": 0.13217671712239584,
+                "full_delta": 0.0
+              },
+              {
+                "case_id": "EN",
+                "target": 11,
+                "positive": true,
+                "origin_category": "CORRECT",
+                "assigned_root": "FC-NEUTRAL/A",
+                "true_root": "FC-NEUTRAL/A",
+                "role": "retained",
+                "assignment_covered": true,
+                "correct_rejection": false,
+                "prediction_status": "FACTOR_CONTINUATION_NOT_SPECIFIED",
+                "context_covered": false,
+                "persistence_mae": 0.045984903971354164,
+                "context_mae": null,
+                "paired_delta": null,
+                "observer_hybrid_mae": 0.045984903971354164,
+                "full_delta": 0.0
+              },
+              {
+                "case_id": "NM",
+                "target": 11,
+                "positive": false,
+                "origin_category": "ABSTAIN",
+                "assigned_root": null,
+                "true_root": "FC-NEUTRAL/B",
+                "role": null,
+                "assignment_covered": false,
+                "correct_rejection": true,
+                "prediction_status": "ABSTAIN_NO_CONTEXT",
+                "context_covered": false,
+                "persistence_mae": 0.08052571614583333,
+                "context_mae": null,
+                "paired_delta": null,
+                "observer_hybrid_mae": 0.08052571614583333,
+                "full_delta": 0.0
+              }
+            ]
+          },
+          "scaled": {
+            "origin_and_prediction": {
+              "total": 11,
+              "origin_counts": {
+                "CORRECT": 9,
+                "AMBIGUOUS": 1,
+                "ABSTAIN": 1
+              },
+              "positive_origin_counts": {
+                "CORRECT": 9,
+                "AMBIGUOUS": 1
+              },
+              "negative_origin_counts": {
+                "ABSTAIN": 1
+              },
+              "assignment_coverage": 0.8181818181818182,
+              "context_coverage": 0.6363636363636364,
+              "positive_correct_fraction": 0.9,
+              "negative_wrong_fraction": 0.0,
+              "correct_rejections": 1,
+              "roles": {
+                "retained": 9
+              },
+              "prediction_abstentions": {
+                "AMBIGUOUS_CONTEXT": 1,
+                "ABSTAIN_AMBIGUOUS_FACTOR": 1,
+                "ABSTAIN_NO_SUCCESSOR": 1,
+                "ABSTAIN_NO_CONTEXT": 1
+              },
+              "paired": {
+                "count": 7,
+                "persistence_mae": 0.12061273484002977,
+                "context_mae": 0.0759858630952381,
+                "delta": 0.04462687174479167,
+                "better": 5,
+                "equal": 0,
+                "worse": 2
+              },
+              "full_coverage": {
+                "count": 11,
+                "persistence_mae": 0.10393061782374527,
+                "observer_hybrid_mae": 0.07553169944069603,
+                "delta": 0.028398918383049244
+              },
+              "harm_rows": [
+                {
+                  "case_id": "GD",
+                  "target": 11,
+                  "positive": true,
+                  "origin_category": "CORRECT",
+                  "assigned_root": "FC-NEUTRAL/A",
+                  "true_root": "FC-NEUTRAL/A",
+                  "role": "retained",
+                  "assignment_covered": true,
+                  "correct_rejection": false,
+                  "prediction_status": "PREDICTED_SCALED_RETAINED",
+                  "context_covered": true,
+                  "persistence_mae": 0.18596394856770834,
+                  "context_mae": 0.2073516845703125,
+                  "paired_delta": -0.021387736002604157,
+                  "observer_hybrid_mae": 0.2073516845703125,
+                  "full_delta": -0.021387736002604157
+                },
+                {
+                  "case_id": "GP",
+                  "target": 11,
+                  "positive": true,
+                  "origin_category": "CORRECT",
+                  "assigned_root": "FC-NEUTRAL/A",
+                  "true_root": "FC-NEUTRAL/A",
+                  "role": "retained",
+                  "assignment_covered": true,
+                  "correct_rejection": false,
+                  "prediction_status": "PREDICTED_SCALED_RETAINED",
+                  "context_covered": true,
+                  "persistence_mae": 0.0,
+                  "context_mae": 0.0480804443359375,
+                  "paired_delta": -0.0480804443359375,
+                  "observer_hybrid_mae": 0.0480804443359375,
+                  "full_delta": -0.0480804443359375
+                }
+              ]
+            },
+            "total": 11,
+            "context_covered": 7,
+            "assignment_covered": 9,
+            "rows": [
+              {
+                "case_id": "F1",
+                "target": 11,
+                "positive": true,
+                "origin_category": "CORRECT",
+                "assigned_root": "FC-NEUTRAL/A",
+                "true_root": "FC-NEUTRAL/A",
+                "role": "retained",
+                "assignment_covered": true,
+                "correct_rejection": false,
+                "prediction_status": "PREDICTED_RETAINED",
+                "context_covered": true,
+                "persistence_mae": 0.096160888671875,
+                "context_mae": 0.0,
+                "paired_delta": 0.096160888671875,
+                "observer_hybrid_mae": 0.0,
+                "full_delta": 0.096160888671875
+              },
+              {
+                "case_id": "FH",
+                "target": 11,
+                "positive": true,
+                "origin_category": "CORRECT",
+                "assigned_root": "FC-NEUTRAL/A",
+                "true_root": "FC-NEUTRAL/A",
+                "role": "retained",
+                "assignment_covered": true,
+                "correct_rejection": false,
+                "prediction_status": "PREDICTED_SCALED_RETAINED",
+                "context_covered": true,
+                "persistence_mae": 0.0480804443359375,
+                "context_mae": 0.0,
+                "paired_delta": 0.0480804443359375,
+                "observer_hybrid_mae": 0.0,
+                "full_delta": 0.0480804443359375
+              },
+              {
+                "case_id": "FD",
+                "target": 11,
+                "positive": true,
+                "origin_category": "CORRECT",
+                "assigned_root": "FC-NEUTRAL/A",
+                "true_root": "FC-NEUTRAL/A",
+                "role": "retained",
+                "assignment_covered": true,
+                "correct_rejection": false,
+                "prediction_status": "PREDICTED_SCALED_RETAINED",
+                "context_covered": true,
+                "persistence_mae": 0.19232177734375,
+                "context_mae": 0.0,
+                "paired_delta": 0.19232177734375,
+                "observer_hybrid_mae": 0.0,
+                "full_delta": 0.19232177734375
+              },
+              {
+                "case_id": "GH",
+                "target": 11,
+                "positive": true,
+                "origin_category": "CORRECT",
+                "assigned_root": "FC-NEUTRAL/A",
+                "true_root": "FC-NEUTRAL/A",
+                "role": "retained",
+                "assignment_covered": true,
+                "correct_rejection": false,
+                "prediction_status": "PREDICTED_SCALED_RETAINED",
+                "context_covered": true,
+                "persistence_mae": 0.2255706787109375,
+                "context_mae": 0.2073516845703125,
+                "paired_delta": 0.018218994140625,
+                "observer_hybrid_mae": 0.2073516845703125,
+                "full_delta": 0.018218994140625
+              },
+              {
+                "case_id": "GD",
+                "target": 11,
+                "positive": true,
+                "origin_category": "CORRECT",
+                "assigned_root": "FC-NEUTRAL/A",
+                "true_root": "FC-NEUTRAL/A",
+                "role": "retained",
+                "assignment_covered": true,
+                "correct_rejection": false,
+                "prediction_status": "PREDICTED_SCALED_RETAINED",
+                "context_covered": true,
+                "persistence_mae": 0.18596394856770834,
+                "context_mae": 0.2073516845703125,
+                "paired_delta": -0.021387736002604157,
+                "observer_hybrid_mae": 0.2073516845703125,
+                "full_delta": -0.021387736002604157
+              },
+              {
+                "case_id": "GR",
+                "target": 11,
+                "positive": true,
+                "origin_category": "CORRECT",
+                "assigned_root": "FC-NEUTRAL/A",
+                "true_root": "FC-NEUTRAL/A",
+                "role": "retained",
+                "assignment_covered": true,
+                "correct_rejection": false,
+                "prediction_status": "PREDICTED_SCALED_RETAINED",
+                "context_covered": true,
+                "persistence_mae": 0.09619140625,
+                "context_mae": 0.06911722819010417,
+                "paired_delta": 0.02707417805989583,
+                "observer_hybrid_mae": 0.06911722819010417,
+                "full_delta": 0.02707417805989583
+              },
+              {
+                "case_id": "GP",
+                "target": 11,
+                "positive": true,
+                "origin_category": "CORRECT",
+                "assigned_root": "FC-NEUTRAL/A",
+                "true_root": "FC-NEUTRAL/A",
+                "role": "retained",
+                "assignment_covered": true,
+                "correct_rejection": false,
+                "prediction_status": "PREDICTED_SCALED_RETAINED",
+                "context_covered": true,
+                "persistence_mae": 0.0,
+                "context_mae": 0.0480804443359375,
+                "paired_delta": -0.0480804443359375,
+                "observer_hybrid_mae": 0.0480804443359375,
+                "full_delta": -0.0480804443359375
+              },
+              {
+                "case_id": "AM",
+                "target": 19,
+                "positive": true,
+                "origin_category": "AMBIGUOUS",
+                "assigned_root": null,
+                "true_root": "FC-NEUTRAL/D",
+                "role": null,
+                "assignment_covered": false,
+                "correct_rejection": false,
+                "prediction_status": "AMBIGUOUS_CONTEXT",
+                "context_covered": false,
+                "persistence_mae": 0.04026031494140625,
+                "context_mae": null,
+                "paired_delta": null,
+                "observer_hybrid_mae": 0.04026031494140625,
+                "full_delta": 0.0
+              },
+              {
+                "case_id": "ZF",
+                "target": 11,
+                "positive": true,
+                "origin_category": "CORRECT",
+                "assigned_root": "FC-NEUTRAL/Z",
+                "true_root": "FC-NEUTRAL/Z",
+                "role": "retained",
+                "assignment_covered": true,
+                "correct_rejection": false,
+                "prediction_status": "ABSTAIN_AMBIGUOUS_FACTOR",
+                "context_covered": false,
+                "persistence_mae": 0.13217671712239584,
+                "context_mae": null,
+                "paired_delta": null,
+                "observer_hybrid_mae": 0.13217671712239584,
+                "full_delta": 0.0
+              },
+              {
+                "case_id": "EN",
+                "target": 11,
+                "positive": true,
+                "origin_category": "CORRECT",
+                "assigned_root": "FC-NEUTRAL/A",
+                "true_root": "FC-NEUTRAL/A",
+                "role": "retained",
+                "assignment_covered": true,
+                "correct_rejection": false,
+                "prediction_status": "ABSTAIN_NO_SUCCESSOR",
+                "context_covered": false,
+                "persistence_mae": 0.045984903971354164,
+                "context_mae": null,
+                "paired_delta": null,
+                "observer_hybrid_mae": 0.045984903971354164,
+                "full_delta": 0.0
+              },
+              {
+                "case_id": "NM",
+                "target": 11,
+                "positive": false,
+                "origin_category": "ABSTAIN",
+                "assigned_root": null,
+                "true_root": "FC-NEUTRAL/B",
+                "role": null,
+                "assignment_covered": false,
+                "correct_rejection": true,
+                "prediction_status": "ABSTAIN_NO_CONTEXT",
+                "context_covered": false,
+                "persistence_mae": 0.08052571614583333,
+                "context_mae": null,
+                "paired_delta": null,
+                "observer_hybrid_mae": 0.08052571614583333,
+                "full_delta": 0.0
+              }
+            ]
+          }
+        },
+        "paired": {
+          "scaled_vs_legacy": {
+            "rows": [
+              {
+                "case_id": "F1",
+                "target": 11,
+                "left": 0.0,
+                "right": 0.0,
+                "delta": 0.0
+              }
+            ],
+            "count": 1,
+            "left_mae": 0.0,
+            "right_mae": 0.0,
+            "delta": 0.0,
+            "better": 0,
+            "equal": 1,
+            "worse": 0,
+            "harms": []
+          },
+          "scaled_vs_persistence": {
+            "rows": [
+              {
+                "case_id": "F1",
+                "target": 11,
+                "left": 0.0,
+                "right": 0.096160888671875,
+                "delta": 0.096160888671875
+              },
+              {
+                "case_id": "FH",
+                "target": 11,
+                "left": 0.0,
+                "right": 0.0480804443359375,
+                "delta": 0.0480804443359375
+              },
+              {
+                "case_id": "FD",
+                "target": 11,
+                "left": 0.0,
+                "right": 0.19232177734375,
+                "delta": 0.19232177734375
+              },
+              {
+                "case_id": "GH",
+                "target": 11,
+                "left": 0.2073516845703125,
+                "right": 0.2255706787109375,
+                "delta": 0.018218994140625
+              },
+              {
+                "case_id": "GD",
+                "target": 11,
+                "left": 0.2073516845703125,
+                "right": 0.18596394856770834,
+                "delta": -0.021387736002604157
+              },
+              {
+                "case_id": "GR",
+                "target": 11,
+                "left": 0.06911722819010417,
+                "right": 0.09619140625,
+                "delta": 0.02707417805989583
+              },
+              {
+                "case_id": "GP",
+                "target": 11,
+                "left": 0.0480804443359375,
+                "right": 0.0,
+                "delta": -0.0480804443359375
+              }
+            ],
+            "count": 7,
+            "left_mae": 0.0759858630952381,
+            "right_mae": 0.12061273484002977,
+            "delta": 0.04462687174479167,
+            "better": 5,
+            "equal": 0,
+            "worse": 2,
+            "harms": [
+              {
+                "case_id": "GD",
+                "target": 11,
+                "left": 0.2073516845703125,
+                "right": 0.18596394856770834,
+                "delta": -0.021387736002604157
+              },
+              {
+                "case_id": "GP",
+                "target": 11,
+                "left": 0.0480804443359375,
+                "right": 0.0,
+                "delta": -0.0480804443359375
+              }
+            ]
+          },
+          "legacy_vs_persistence": {
+            "rows": [
+              {
+                "case_id": "F1",
+                "target": 11,
+                "left": 0.0,
+                "right": 0.096160888671875,
+                "delta": 0.096160888671875
+              }
+            ],
+            "count": 1,
+            "left_mae": 0.0,
+            "right_mae": 0.096160888671875,
+            "delta": 0.096160888671875,
+            "better": 1,
+            "equal": 0,
+            "worse": 0,
+            "harms": []
+          }
+        },
+        "full_rows": [
+          {
+            "case_id": "F1",
+            "target": 11,
+            "persistence": 0.096160888671875,
+            "legacy": 0.0,
+            "scaled": 0.0,
+            "scaled_vs_persistence": 0.096160888671875,
+            "scaled_vs_legacy": 0.0
+          },
+          {
+            "case_id": "FH",
+            "target": 11,
+            "persistence": 0.0480804443359375,
+            "legacy": 0.0480804443359375,
+            "scaled": 0.0,
+            "scaled_vs_persistence": 0.0480804443359375,
+            "scaled_vs_legacy": 0.0480804443359375
+          },
+          {
+            "case_id": "FD",
+            "target": 11,
+            "persistence": 0.19232177734375,
+            "legacy": 0.19232177734375,
+            "scaled": 0.0,
+            "scaled_vs_persistence": 0.19232177734375,
+            "scaled_vs_legacy": 0.19232177734375
+          },
+          {
+            "case_id": "GH",
+            "target": 11,
+            "persistence": 0.2255706787109375,
+            "legacy": 0.2255706787109375,
+            "scaled": 0.2073516845703125,
+            "scaled_vs_persistence": 0.018218994140625,
+            "scaled_vs_legacy": 0.018218994140625
+          },
+          {
+            "case_id": "GD",
+            "target": 11,
+            "persistence": 0.18596394856770834,
+            "legacy": 0.18596394856770834,
+            "scaled": 0.2073516845703125,
+            "scaled_vs_persistence": -0.021387736002604157,
+            "scaled_vs_legacy": -0.021387736002604157
+          },
+          {
+            "case_id": "GR",
+            "target": 11,
+            "persistence": 0.09619140625,
+            "legacy": 0.09619140625,
+            "scaled": 0.06911722819010417,
+            "scaled_vs_persistence": 0.02707417805989583,
+            "scaled_vs_legacy": 0.02707417805989583
+          },
+          {
+            "case_id": "GP",
+            "target": 11,
+            "persistence": 0.0,
+            "legacy": 0.0,
+            "scaled": 0.0480804443359375,
+            "scaled_vs_persistence": -0.0480804443359375,
+            "scaled_vs_legacy": -0.0480804443359375
+          },
+          {
+            "case_id": "AM",
+            "target": 19,
+            "persistence": 0.04026031494140625,
+            "legacy": 0.04026031494140625,
+            "scaled": 0.04026031494140625,
+            "scaled_vs_persistence": 0.0,
+            "scaled_vs_legacy": 0.0
+          },
+          {
+            "case_id": "ZF",
+            "target": 11,
+            "persistence": 0.13217671712239584,
+            "legacy": 0.13217671712239584,
+            "scaled": 0.13217671712239584,
+            "scaled_vs_persistence": 0.0,
+            "scaled_vs_legacy": 0.0
+          },
+          {
+            "case_id": "EN",
+            "target": 11,
+            "persistence": 0.045984903971354164,
+            "legacy": 0.045984903971354164,
+            "scaled": 0.045984903971354164,
+            "scaled_vs_persistence": 0.0,
+            "scaled_vs_legacy": 0.0
+          },
+          {
+            "case_id": "NM",
+            "target": 11,
+            "persistence": 0.08052571614583333,
+            "legacy": 0.08052571614583333,
+            "scaled": 0.08052571614583333,
+            "scaled_vs_persistence": 0.0,
+            "scaled_vs_legacy": 0.0
+          }
+        ],
+        "full_means": {
+          "persistence": 0.10393061782374527,
+          "legacy": 0.09518871885357481,
+          "scaled": 0.07553169944069603,
+          "scaled_vs_persistence": 0.028398918383049244,
+          "scaled_vs_legacy": 0.019657019412878788
+        },
+        "harms_against_persistence": [
+          {
+            "case_id": "GD",
+            "target": 11,
+            "persistence": 0.18596394856770834,
+            "legacy": 0.18596394856770834,
+            "scaled": 0.2073516845703125,
+            "scaled_vs_persistence": -0.021387736002604157,
+            "scaled_vs_legacy": -0.021387736002604157
+          },
+          {
+            "case_id": "GP",
+            "target": 11,
+            "persistence": 0.0,
+            "legacy": 0.0,
+            "scaled": 0.0480804443359375,
+            "scaled_vs_persistence": -0.0480804443359375,
+            "scaled_vs_legacy": -0.0480804443359375
+          }
+        ],
+        "harms_against_legacy": [
+          {
+            "case_id": "GD",
+            "target": 11,
+            "persistence": 0.18596394856770834,
+            "legacy": 0.18596394856770834,
+            "scaled": 0.2073516845703125,
+            "scaled_vs_persistence": -0.021387736002604157,
+            "scaled_vs_legacy": -0.021387736002604157
+          },
+          {
+            "case_id": "GP",
+            "target": 11,
+            "persistence": 0.0,
+            "legacy": 0.0,
+            "scaled": 0.0480804443359375,
+            "scaled_vs_persistence": -0.0480804443359375,
+            "scaled_vs_legacy": -0.0480804443359375
+          }
+        ],
+        "learning_targets": {
+          "F1": [
+            3,
+            5,
+            7,
+            9
+          ],
+          "FH": [
+            3,
+            5,
+            7,
+            9
+          ],
+          "FD": [
+            3,
+            5,
+            7,
+            9
+          ],
+          "GH": [
+            3,
+            5,
+            7,
+            9
+          ],
+          "GD": [
+            3,
+            5,
+            7,
+            9
+          ],
+          "GR": [
+            3,
+            5,
+            7,
+            9
+          ],
+          "GP": [
+            3,
+            5,
+            7,
+            9
+          ],
+          "AM": [
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17
+          ],
+          "ZF": [
+            3,
+            5,
+            7,
+            9
+          ],
+          "EN": [
+            3,
+            5,
+            7,
+            9
+          ],
+          "NM": [
+            3,
+            5,
+            7,
+            9
+          ]
+        }
+      },
+      "semantics": {
+        "concrete": "rows[policy].context_mae; null means no concrete prediction",
+        "fallback": "observer_hybrid_mae and full_rows legacy/scaled use persistence only on abstention",
+        "persistence": "persistence_mae is independently reported",
+        "learning": "learning_rows/learning_targets separate, not included in primary summary"
+      }
+    }
+  },
+  "original_plan_sha256": "908f93c76f871d36c4f971b236891d3da7721ba1fcd07d772464db90c439121d",
+  "production_binding_sha256": "a17eda51fbc8ad62fdfc0bd9cc3c145d275718dabbb50e108d65a5d3e78fa427",
+  "code_bindings_verified_before_after": true,
+  "FC_DEV_unproduced": true,
+  "FC_EVAL_unproduced": true
+}

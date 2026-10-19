@@ -1,5 +1,7490 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Aktuell: Exportengpass kuenstlich belegt; getrennte Budgetkorrektur geprueft (2026-10-19)
+
+Die feste kuenstliche Exportlast umfasste2351 Schreiboperationen und417 Nutzdateien.
+Unveraenderte RW1-Budgetverwaltung:214,272s, davon208,428s fuer14106 Scans.
+Getrennte inkrementelle Variante:58,351s fuer dieselbe Schreibfolge plus0,349s
+Initialisierung/Abgleich; acht budgetinterne Scans. Alle417 Nutzdateien bytegleich,
+Buchfuehrung und unabhaengiger Bestand stimmen ueberein.22 gezielte Fehlerpruefungen
+und ein echter Supervisor-/Worker-Schreibtest mit40 Anhaengen bestanden.
+
+Neue Variante unter experiments/rw1_budget: initialer Bestand, gemeinsames Lock,
+dauerhaftes BEGIN/COMMIT-Journal, Grenzen vor Schreiben, Sperre bei Teilfehlern,
+unabhaengiger Schlussabgleich. Historischer RW1-Code und Archive unveraendert.
+Keine Rezeptor-, NJ- oder Policy-Ausfuehrung; keine Forschungsdaten als Testmaterial.
+Alle Diagnoseprozesse blieben unter512MiB/2Prozessen/240sWorker/300sSupervisor.
+Der Vorteil gilt fuer diese synthetische Exportlast; volle RW1-Laufzeit ungeprueft.
+
+Naechster Vorschlag: begrenzte technische Anbindung an alle RW1-Schreiber mit
+kuenstlicher Anschlusspruefung und derselben Start-/Verbrauchssperre. Keine neue
+Forschungsfreigabe. RW1 bleibt TECHNICAL_FAILURE, Berechtigung verbraucht,
+S1-S4 unbewertet. Keine nachtraegliche wissenschaftliche Teilauswertung.
+
+[Diagnose und Vergleich](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/rw1-budget-diagnosis-20261019-01/REPORT.txt).
+Aeltere Abschnitte sind historische Zeitstaende.
+
+
+## Aktuell: RW1 einmalig technisch abgebrochen; Berechtigung verbraucht (2026-10-19)
+
+RW1 endete mit TECHNICAL_FAILURE an der festen Zeitgrenze.390 Rezeptor- und390
+NJ-Aufrufe sind jeweils vollstaendig abgeschlossen; zwei Quellen erzeugt.
+Fuenf Arme und fuenf Referenzen gestartet, vier je Typ regulaer geschlossen.
+Aufnahmezaehler48+48, Prognosezaehler21; vier gespeicherte Armarchive enthalten
+20 Entscheidungen. Der Prognosezaehler ist KEIN Beleg unabhaengiger Pruefung.
+Die vollstaendige unabhaengige Auswertung wurde nicht erreicht: S1-S4,
+neun Kollisionsvergleiche und wissenschaftliches Haupturteil bleiben unbewertet.
+Keine Nutzen- oder Negativnutzenbehauptung aus dem technischen Teilablauf.
+
+Supervisor inklusive technischer Abschlussbindung242,338s (unter300s);
+Worker an240s-Grenze beendet, Prozessressourcen freigegeben. Jobpeak150474752
+Bytes unter512MiB. Verbrauchsmarker und Abschlussbelege gesichert; kein Retry,
+keine Ersatzquellen, keine Codeaenderung oder erneute Ausfuehrung.
+
+Naechster Vorschlag: getrennt beauftragte technische Engpasspruefung der
+Export-/Zaehlerverwaltung mit kuenstlichen Dateien und Mock-I/O. Die Material-
+phase beanspruchte laut Dateizeitstempeln etwa222,65s nach Worker-Eintritt;
+rekursive Dateibaumpruefungen sind ein statischer Verdacht, keine bewiesene Ursache.
+Keine Wiederverwendung dieser Einmalfreigabe; neue Forschungsentscheidung erst
+nach geklaerter technischer Tragfaehigkeit. Historisches UNPROVEN unveraendert.
+
+[RW1-Abbruchbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/rw1-research-01/closure/REPORT.txt).
+Aeltere Abschnitte sind historische Zeitstaende.
+
+
+## Aktuell: RW1 technisch vorbereitet; Forschung weiterhin gesperrt (2026-10-19)
+
+Der abgenommene RW1-Vertrag ist unveraendert umgesetzt: separater ueberwachter
+Forschungseinstieg, Observerauswertung S1-S4 und neun Kollisionspaare,
+unabhaengige Archivrekonstruktion, Freeze-/Zugriffsbelege, N/T-Bank-/Kernvergleich,
+Zaehler, Cleanup und Abschlussbindung. Qualifizierter Auswahlkern unveraendert.
+C1-C6 bestanden im finalen kuenstlichen Prueflauf c1-c6-03 (148 Checks).
+Kleine Adapterfixture:22 Policy- und22 Referenzaufnahmen,10 Entscheidungen;
+Mock-Archivpruefung und unabhaengige Einzelwert-/Urteilspruefung bestanden.
+Ein Fixturefehler im ersten Versuch wurde dokumentiert und korrigiert.
+Keine RW1-PCM-Erzeugung, keine Rezeptor-/NJ-Aufrufe, kein Neutralgesamtversuch
+und kein Forschungslauf. Keine Forschungsberechtigung ausgestellt oder verbraucht.
+
+Naechster Schritt: Projektleiter bewertet die technische Lieferung und entscheidet
+ueber genau einen separat autorisierten RW1-Forschungslauf. Der vorbereitete
+Startbefehl sperrt ohne diese Berechtigung vor Materialerzeugung.
+Historischer Neutralverbrauch unveraendert; UNPROVEN bleibt erhalten.
+Kein Forschungsnutzen, keine allgemeine Verschiebungsrobustheit oder feldinterne
+Memory aus den kuenstlichen Pruefungen abgeleitet. AS480 und Fehlerzweig geschlossen.
+
+[Technischer Bericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/rw1-development-20261019-01/REPORT.txt).
+[Vorbereiteter Start](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/rw1-development-20261019-01/PREPARED_START.txt).
+Aeltere Abschnitte sind historische Zeitstaende.
+
+
+## Aktuell: Forschungspruefvertrag Rasterwiedererkennung vorgelegt (2026-10-19)
+
+Die technische Gesamtqualifikation ist abgenommen. Der neue Vertrag RW1 legt
+zwei neue Quellen, sechs Eigen-/Fremdfaelle bei 0/480/2400 Samples und N gegen T
+mit observerseitiger Persistenz fest. Erfolg erfordert Zusatztreffer in beiden
+verschobenen Eigenfaellen, keine zusaetzliche Fremdzuordnung, erhaltene korrekte
+Kontrollen und strikt geringeren mittleren Hauptzielfehler gegen N und P.
+Hinweiskollisionen, fehlender Zusatznutzen und technische Fehler bleiben getrennt.
+
+Nur Dokumentation erstellt: keine PCM-Erzeugung, neuen Tests oder Laeufe.
+390/390 Aufrufe, 12 Arme plus 12 Referenzen, 132+132 Aufnahmen und 60 Pruefungen
+sind der vorgesehene spaetere Umfang, kein neuer Ausfuehrungsnachweis.
+Naechster Schritt nach Vertragsabnahme: separater Forschungseinstieg und
+Observerauswertung (R1-R3) mit gezielten kuenstlichen Anschlusspruefungen C1-C6.
+Eine Forschungsausfuehrung braucht anschliessend eine eigene Einmalfreigabe.
+Die Neutralberechtigung bleibt verbraucht, historisch bleibt UNPROVEN.
+AS480 abgeschlossen; U unveraendert; Fehlerzweig geschlossen. Keine allgemeine
+Verschiebungsrobustheit, Erfahrungsverdichtung oder feldinterne Memory belegt.
+
+[Vertrag](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/S2UC_RASTERWIEDERERKENNUNG_FORSCHUNGSPRUEFVERTRAG_20261019.txt).
+[Dokumentationsbelege](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/raster-recognition-contract-documentation-20261019-01/REPORT.txt).
+Aeltere Abschnitte sind historische Zeitstaende.
+
+
+## Aktuell: Zeitliche Ausrichtung technisch gesamtqualifiziert (2026-10-19)
+
+Der neue Einmalauftrag6d248902 wurde einmal vollständig neutral ausgeführt:
+390 Rezeptor-/390 NJ-Aufrufe, zwölf Arme und zwölf Referenzen mit je132
+Aufnahmen,60 unabhängige Entscheidungsprüfungen bestanden. Alle geschlossen.
+Die27 bisherigen Entwicklungsprüfungen übernommen; acht neue Anschlussprüfungen
+bestanden. Neuer Start/Verbrauch an finalen Code, Runtime und Neutralrezept gebunden.
+Historischer Verbrauch bleibt UNPROVEN; die neue Berechtigung ist jetzt verbraucht.
+Supervisor einschließlich technischem Abschluss unter41s; Jobpeak151248896 Bytes.
+Produktive Spitzen:63 Vektorslots,76800 Byte Puffer,2991543 Byte Rezeptorarbeitsgebiet.
+Keine Forschungsausführung oder Nutzenbehauptung. Nächster Schritt: technische
+Abnahme und getrennte Entscheidung über einen vorab gebundenen Forschungsprüfvertrag.
+Kein erneuter Neutralablauf. AS480 abgeschlossen; U unverändert, Fehlerzweig geschlossen.
+
+[Qualifikationsbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/temporal-alignment-development-20261019-01/qualification-6d248902/REPORT.txt).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: Zeitliche Ausrichtung implementiert, Größenqualifikation gesperrt (2026-10-19)
+
+Kausaler Samplepuffer, historische Rasterbank, lebenszyklusgebundene Speicherung
+und exakter Zusatzabruf nach ABSTAIN_NO_APPROX_CONTEXT isoliert implementiert.
+27 künstliche Testausführungen bestanden (20+6+1), einschließlich unabhängigem
+Selektorvergleich, Originalbank-Promotion, Mehrdeutigkeit und Zukunftssperre.
+Ein künstliches Nullfenster:1 Rezeptor-/1 NJ-Aufruf; Arbeitsgebiet2993051 Bytes.
+Maximaler Fixture-Jobpeak82083840 Bytes; Worker beendet und Cleanup geprüft.
+Der formale390/390-Größenablauf wurde nicht gestartet. Der aktuelle Auftrag
+setzt einen belegten Nichtverbrauch voraus; die eigene ursprüngliche Freigabe-
+und Verbrauchszuordnung fehlt. Fehlende Dateien sind kein Nichtverbrauchsnachweis.
+Gesamtqualifikation und Forschung bleiben deshalb offen/gesperrt. Nächster
+Schritt ist diese Zuordnung, danach nur zulässige noch offene Ausführung.
+AS480 abgeschlossen; U unverändert und Fehlerbewertungszweig geschlossen.
+
+[Entwicklungsbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/temporal-alignment-development-20261019-01/REPORT.txt).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: Konzept zur historischen zeitlichen Ausrichtung vorgelegt (2026-10-19)
+
+AS480 und seine Archivdiagnose sind abgenommen und abgeschlossen;
+NO_ADDITIONAL_BENEFIT bleibt bestehen. Vorgeschlagen ist ein festes480-Sample-
+Raster vergangener Vierframe-Spuren mit exaktem Zusatzabgleich. Aktuelle Hinweise
+und Vorhersagehorizont bleiben unverändert; Mehrdeutigkeit führt zur Enthaltung.
+Technisch nur bedingt tragfähig: zusätzliche Wahrnehmungsbanken erfordern bis128
+Vektorslots statt20 und neue technische Qualifikation. Kein Versprechen fehlerfreier
+Fremdtrennung. Keine Schwellenoptimierung, Implementierung oder Versuchsausführung.
+Der Konzeptvorschlag budgetiert vergangene Samples, Projektionen, Lebenszyklus,
+Vergleich und Falsifikation. Nächste Sachentscheidung: diese Repräsentations- und
+Budgetänderung annehmen oder den Ansatz bei unveränderter18/20-Grenze verwerfen.
+Eine Forschungsberechtigung entsteht daraus nicht. U bleibt unverändert; der Fehlerzweig bleibt geschlossen.
+
+[Konzept](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/S2UC_ZEITLICHE_AUSRICHTUNG_KONZEPT_20261019.txt).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: AS480-Archivdiagnose abgeschlossen (2026-10-19)
+
+A480 besteht das Signalgate, hat keinen Exaktmatch und überschreitet mit
+Paar-L1=0.0359644722848 am vorgesehenen Offset0 die unveränderte Schwelle τ=0,03125.
+Auch Offset1/2 sind ausgeschlossen. Keine Mehrdeutigkeit; Offset0 hätte einen
+Nachfolger. Alle vier Fälle und sämtliche Kanalbeiträge sind archivbasiert
+gegenübergestellt. Acht künstliche Diagnosefixtures bestanden; keine neuen
+PCM-/Rezeptor-/NJ-/Policy-/Referenzläufe. NO_ADDITIONAL_BENEFIT bleibt bestehen.
+Nächste fachliche Entscheidung: AS480 abschließen und gegebenenfalls zeitliche
+Ausrichtung als getrennten konzeptionellen Ansatz prüfen, ohne Schwellenoptimierung.
+Einmalberechtigung verbraucht; U unverändert. Ältere Abschnitte sind historisch.
+
+[Diagnosebericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/as480-diagnosis-20261019-01/REPORT.md).
+
+
+## Aktuell: AS480 einmalig abgeschlossen – kein Zusatznutzen (2026-10-19)
+
+Die freigegebene Vierfallgegenprobe A0/A480/B0/B480 ist technisch vollständig:
+44 Rezeptor-/NJ-Aufrufe, acht Arme und acht Referenzen mit je88 Aufnahmen,
+40 unabhängige Entscheidungsprüfungen. Urteil NO_ADDITIONAL_BENEFIT.
+S1 falsch, S2 wahr, S3 wahr, S4 falsch. E=N im Hauptzielmittel
+0,0023202510123532727; P=0,00302567864944738. Keine zusätzlichen Fehlabrufe,
+keine Einzelschäden N−E/N−P, keine A/B-Hinweiskollisionen. A480 bleibt ohne Abruf.
+Lauf34,86s; Jobpeak300109824 Bytes unter512MiB, höchstens zwei Prozesse.
+Einmalberechtigung verbraucht; kein Retry, Ersatzmaterial oder Parameterwechsel.
+Vorschlag zur fachlichen Entscheidung: archivbasierte Ursachenanalyse des
+fehlenden A480-Näherungsabrufs, ohne neue Messung oder Regeländerung.
+U unverändert; Fehlerbewertungszweig geschlossen. Frühere Abschnitte historisch.
+
+[Forschungsbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/as480-comparison-01/REPORT.md).
+
+
+## Aktuell: AS480 technisch qualifiziert, Forschung nicht freigegeben (2026-10-19)
+
+Getrennter Material-/Replay-Anschluss und unabhängiges skalares Entscheidungsorakel
+implementiert. 17 künstliche Fixtures bestanden; ein vollständiger neutraler
+Größenablauf mit44 Rezeptor-/NJ-Aufrufen, acht Armen und acht Bestandsreferenzen
+(je88 Aufnahmen) sowie40 Entscheidungsprüfungen erfolgreich. Kein Forschungsfall.
+Lauf31,30s, Jobpeak299634688 Bytes; harte512MiB-/Zweiprozessgrenze eingehalten.
+Erster Fixture-Start vor Tests an OpenBLAS-Allokation gescheitert; numerische
+Bibliotheken danach auf einen Thread gebunden. Fehler- und Abbruchbilanz erhalten.
+Gezielte negative Gates bestanden; erfolgreicher Größenablauf nicht wiederholt.
+Code-/Runtime-/Rezept-/Qualifikationsbindung und genauer späterer Start liegen vor.
+Forschungsberechtigung unausgestellt. Nächster Schritt: technische Abnahme und
+separate Entscheidung über einen Forschungsstart. U unverändert; Fehlerzweig zu.
+
+[Technischer Bericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/as480-neutral-qualification-20261019-01/REPORT.txt).
+Frühere Übersichtsfassungen bytegenau unter as480-neutral-qualification-20261019-01/
+historical-overviews gesichert. Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: AS480-Prüfvertrag erstellt, technische Qualifikation offen (2026-10-19)
+
+Der abgenommene statische Anschluss wird im einzelnen Audiopfad konkretisiert:
+vier frische Fälle A0/A480/B0/B480 mit festem PCM-Fensterversatz +480 Samples.
+Zwei vollständig vorab festgelegte Quellen, Lernfolge A,A, je elf Frames;
+exakter Abruf gegen signal_approx_v1, beide legacy_v1, Persistenz als Baseline.
+Geplant sind 44 Rezeptor-/NJ-Projektionen, acht Vergleichsarme und acht
+Bestandsreferenzen; zusätzlich 40 unabhängige skalare Entscheidungsprüfungen.
+Harte Gesamtgrenzen: 512 MiB gemeinsamer Windows-Job, zwei Prozesse,
+300 Sekunden einschließlich 60 Sekunden Abschlussreserve. Neue neutrale
+Qualifikation zwingend; alte AN-Nachweise ersetzen sie nicht.
+
+Nur der Prüfvertrag ist erstellt. Keine Implementierung, PCM-Erzeugung,
+Rezeptormessung, Tests oder Versuchsausführung. Identifizierbarkeitsgrenze,
+fehlender Zusatznutzen und technischer Fehler bleiben getrennte Urteile.
+Der Fehlerglättungs-/Fehlererhaltzweig bleibt abgeschlossen; U unverändert.
+Das Gesamtprojekt wird fortgesetzt. Nächste Empfehlung: fachliche Vertragsabnahme,
+danach getrennte Implementierung und neutrale Qualifikation Q1–Q5;
+eine Forschungsdurchführung benötigt weiterhin eine separate Einmallauffreigabe.
+
+[Geschlossener AS480-Prüfvertrag](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/S2UC_AS480_AUDIO_FENSTERVERSATZ_PRUEFVERTRAG_20261019.txt).
+Die vorherigen Übersichtsfassungen sind bytegenau in
+reports/s2uc/as480-contract-documentation-20261019-01/historical-overviews/
+gesichert und durch preservation.json zugeordnet. Ältere Abschnitte sind historisch.
+
+
+## Aktuell: Fehlerglättungs-/Fehlererhaltzweig abgeschlossen (2026-10-19)
+
+Der Projektleiter hat FW1 einschließlich Anschlussdiagnose abgenommen und den
+Abschluss dieses Teilzweigs entschieden. U bleibt unverändert; das Gesamtprojekt
+wird fortgesetzt. ULZ1 belegt den begrenzten Stabilitätsnutzen der Fehlerglättung
+gegenüber dem letzten Fehlerpaar bei gleicher Warmverfügbarkeit. Ein früher
+Wechselvorteil von L ist nicht nachgewiesen. FW1 ergänzt den Nutzen des Behaltens
+gegenüber dem definierten Reset; daraus folgt kein isolierter Altersnutzen.
+Keine weitere FW1-/ULZ1-Wiederholung oder Variantenserie ist beauftragt.
+
+Aktueller Auftrag: statischer Abgleich zur Wiedererkennung variierender
+Wahrnehmungsverläufe über den tatsächlichen Rezeptorpfad. Der vorhandene
+AN-EVAL-Nachweis umfasst bereits additive PCM-Störungen vor Rezeptor und NJ,
+mit R3-Fortsetzungsschaden und N3-Identifizierbarkeitsgrenze. Er wird übernommen.
+Ein begrenzter Anschlussvorschlag betrifft ausschließlich den Audiopfad und eine
+feste Verschiebung des Fensterbeginns. Dies ist eine offene Konzeptempfehlung,
+keine Implementierungs-, Materialisierungs-, Mess- oder Versuchsfreigabe.
+
+Belege: [ULZ1-Abschluss](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ulz1-assessment-20261004-01/REPORT.md),
+[FW1-Diagnose](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/fw1-diagnosis-20261019-02/REPORT.txt),
+[AN-EVAL](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/an-eval-analysis-20261001-01/REPORT.txt).
+Die vorherigen Übersichten sind bytegenau unter
+reports/s2uc/research-branch-closure-documentation-20261019-01/historical-overviews/
+gesichert; preservation.json ordnet die bisherigen Lieferbindungen zu.
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: FW1-Anschlussdiagnose abgeschlossen (2026-10-19)
+
+Alle 16352 Ziele überschneidungsfrei eingeordnet; Gesamtbilanz exakt reproduziert.
+2274 Ziele mit unterschiedlicher Warm-/Kaltverfügbarkeit enthalten sämtliche
+1628 Gewinne und 646 Schäden (Fehlerdifferenzsumme KEEP minus RESET -491/2).
+552 Ziele mit gleicher Verfügbarkeit und unterschiedlichen Bewertungen nach
+Feedback zeigen gleiche Vorhersagefehler. 13526 Ziele haben identische Werte.
+47 Kategorie-1-Ziele enthalten kalte und bereits aktualisierte abweichende
+Hypothesen zugleich; keine behauptete Einzelursache. 10917 leere Mengen enthalten.
+15 künstliche Fixtures bestanden, vorhandene Archive ausgewertet; keine Policy-,
+Referenz- oder Bootstrapwiederholung. Ein Formatfehler vor Fallabschluss dokumentiert.
+Historische Bindungen erhalten, bisherige Übersichten bytegenau gesichert.
+Anschlussvorschlag: fachliche Bewertung des Kaltstartbefunds vor neuer Variante.
+
+[Diagnose und Belege](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/fw1-diagnosis-20261019-02/REPORT.txt).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: FW1 abgeschlossen – Behalten gegenüber Reset gestützt (2026-10-18)
+
+Einmaliger gebundener Forschungsversuch TERMINAL_COMPLETE: 16/16 Quellenpaare,
+64 frische Policy-Arme sowie jeweils 64 bestandene Live- und Archivreferenzen.
+Alle 32 Forschungsquellen vor Armstart unabhängig geprüft und versiegelt;
+Paarquittungen, Bestandsidentität und Cleanup vollständig bestätigt.
+Primärwert BEHALTEN minus RESET: -491/32704 = -0,0150134540 MAE.
+Nominales 95%-Intervall: [-0,0162365460; -0,0137750734], vollständig unter null.
+Unabhängige Statistikreferenz stimmt exakt überein; NUTZEN_GESTUETZT für die
+festgelegte gleichgewichtete Quellenmischung, keine allgemeine Überlegenheit.
+Informativ: 2798 wirksame Löschungen, 2790 mit späterer Auswahlgelegenheit.
+Alle 16352 Ziele: 1628 Gewinne, 646 Schäden, 14078 Gleichstände; nichts maskiert.
+Lauf 75,26 min, Jobpeak 226304000 Bytes (215,82 MiB), harte Grenzen eingehalten.
+Keine Zusatzarme oder Wiederholung. Einmallauffreigabe verbraucht, Neustart gesperrt.
+Nächster Vorschlag: unabhängiger Zeugenaudit vorhandener Reset-/Wiederanlernketten
+zu Gewinnen, Schäden und Gleichständen; kein neuer Policy-Lauf erforderlich.
+ZW1 und ER1 samt historischen Lieferungen bleiben erhalten.
+
+[FW1-Ergebnis und vollständige Belege](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/fw1-comparison-16h-01/REPORT.txt).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: FW1-Forschungsvorbereitung abgeschlossen, Start nicht freigegeben (2026-10-18)
+
+Forschungseinstieg mit vollständiger Vorstartprüfung, exklusivem Ziel,
+SHA-gebundener Einmalberechtigung, Verbrauchsschutz und Terminalreserve implementiert.
+Feste 10000x16-Matrix einmal erzeugt, unabhängig geprüft; vollständige Statistik
+mit künstlichen Fehlerdaten und unabhängiger Gegenrechnung bestätigt.
+Festes neutrales Paar r=1 einmal mit vier Armen à 1024 Frames abgeschlossen:
+vier Live-/vier Archivreferenzen, Bestandsidentität und Cleanup bestätigt.
+Jobpeak 83046400 Bytes, 144,06 s; keine Garantie für andere Forschungsquellen.
+Zusätzlich vier kurze Arme à 96 Frames und neun neue Sperrprüfungen bestanden.
+Zwei abschließende Zulassungskorrekturen separat ohne Policy-Arme geprüft;
+Qualifikationsherkunft und historische Lieferungen erhalten.
+Keine Forschungsberechtigung, keine Forschungsquellen und kein Forschungsstart.
+Nächster Schritt: Projektleiter prüft die Vorstartbindung und entscheidet separat
+über den einmaligen Forschungsstart. Kein wissenschaftlicher Nutzenbefund.
+
+[FW1-Vorbereitung und Belege](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/fw1-research-preparation-20261018-01/REPORT.txt).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: FW1 implementiert und neutral qualifiziert (2026-10-18)
+
+Separater KEEP/RESET-Pfad, unabhängige Live-/Archivreferenzen, Quellenbarriere,
+Paarquittungen und Primärstatistik mit unabhängiger Rechnung implementiert.
+18 Prüfkriterien erfüllt; Testhilfenkorrekturen und sämtliche Fehlversuche dokumentiert.
+Fünf Integrationsfälle: 28 kurze Policy-Arme à 96 Frames sowie je 28 bestandene
+Live-/Archivreferenzen; Quellen-, Paar-, Frist- und Schreibbudgetfehler kontrolliert.
+Zusätzlich 13 kurze manuelle Policy-Historien einschließlich Fehlversuchen;
+keine alten Audit-Replays. Gemeinsamer Integrations-Jobpeak 62136320 Bytes.
+Historische Bindungen bestätigt. Separate Unit-Prozesspeaks nicht gemessen;
+kurze Neutralfälle belegen keine Vollgrößenverträglichkeit.
+Keine Forschungsquellen, Forschungs-Matrix, Vorstartbindung oder Forschungsfreigabe.
+Nächster Schritt: Projektleiter prüft die Lieferung und entscheidet über eine
+separate Vorbereitung; Nutzen und Schaden bleiben wissenschaftlich ungeprüft.
+
+[FW1-Paket und vollständige Ausführungsbilanz](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/fw1-neutral-qualification-20261018-01/REPORT.txt).
+Ältere Abschnitte sind historische Zeitstände.
+
+## Aktuell: FW1-Gegenprüfvertrag vollständig festgelegt (2026-10-18)
+
+Abgenommene statische Konzeptprüfung in einen vollständigen Vertrag überführt:
+Behalten gegenüber Reset gültiger Fehlerzellen bei TRACE_CONFIRMED_RECENT.
+Eingriff nach Blockabschluss und Pruning; eingefrorene Vorhersagen bleiben
+innerhalb jedes Arms unverändert. Wahrnehmungsbestände müssen zwischen Armen gleich bleiben.
+Geplant: 16 frische A/B-Quellenpaare, 32 Geschichten, 64 Policy-Arme;
+neuer fester Namensraum MCM-FW1/source/v1, heute keine Quellen erzeugt.
+Einziges Primärmaß: Behalten minus Reset, gleichgewichtet über A/B und alle
+511 Ziele je Geschichte; nominales 95%-Intervall aus 10000 geschichteten Paarziehungen.
+Matrixrezept festgelegt, Erzeugung und Bindung erst in gesonderter Vorbereitung.
+Nutzen ungeprüft; Schaden möglich. Keine Implementierung, Tests oder Forschungsfreigabe.
+Nächster Schritt: Projektleiter entscheidet über das begrenzte Implementierungs-
+und Qualifikationspaket; technische Voraussetzungen stehen im Vertrag.
+ZW1 samt Audit bleibt abgeschlossen und unverändert; ER1 bleibt INCONCLUSIVE.
+
+[FW1-Gegenprüfvertrag mit Fundstellen](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/S2UC_FW1_FEHLERWISSEN_GEGENPRUEFVERTRAG_20261018.txt).
+Ältere Abschnitte sind historische Zeitstände.
+
+## Aktuell: ZW1-Zeugenaudit vollständig bestätigt (2026-10-18)
+
+32/32 Bedingungsarchive mit dem unveränderten qualifizierten unabhängigen
+ER1-Prüfkern geprüft: keine fehlenden, unbelegten oder duplizierten Zeugen.
+12 neue Zuordnungs-/Zähltests bestanden; 12 bestehende Semantiktests unverändert übernommen.
+Erhaltung / eindeutige warme Ziele / lokale Gewinne / Schäden:
+A/E 102/206/91/28; A/F 179/174/78/31; B/E 56/123/69/20; B/F 137/243/138/44.
+Je Gruppe 8176 Zielpositionen, keine Mehrfachzuordnung innerhalb eines Arms.
+Beidseitige Erhaltungs- und Verdrängungswege sowie Nutzen und Schäden bestätigt;
+höhere Zeugenzahlen allein erklären die Interaktion nicht. Kein isolierter Kausalnachweis.
+Audit: 148,67 s, ein Prozess, Jobpeak 48709632 Bytes (46,45 MiB), Grenzen eingehalten.
+Keine Policy-Ausführung, neuen Forschungsquellen oder Bootstrapziehungen.
+ZW1 bleibt NEGATIVE_INTERACTION; ER1 bleibt INCONCLUSIVE; historische Artefakte unverändert.
+Nächster Schritt: Projektleiter bewertet die mechanistische Einordnung und eine
+gegebenenfalls daraus begründbare Gegenprognose. Keine weitere Forschungsserie beauftragt.
+
+[Unabhängiger ZW1-Zeugenaudit](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/zw1-witness-audit-20261018-01/REPORT.md).
+Ältere Abschnitte sind historische Zeitstände.
+
+## Aktuell: ZW1 abgeschlossen – negative gerichtete Interaktion (2026-10-18)
+
+Einmaliger gebundener Forschungsversuch TERMINAL_COMPLETE: 16/16 Quellenpaare,
+64 frische Policy-Arme sowie jeweils 64 bestandene Live- und Archivreferenzen.
+Alle 32 Quellen vor Armstart geprüft und versiegelt; alle Paarquittungen und Cleanup bestätigt.
+Einziger Primärvergleich (E−F)A−(E−F)B: -67/32704 = -0.0020486791;
+95%-Intervall [-123/32704, -11/32704] vollständig negativ. Statistikreferenz exakt gleich.
+Gerichtete Interaktion in dieser Quellenfamilie; kein separater Nachweis eines
+absoluten E-Vorteils in A oder Schadens in B, kein isolierter Auffrischungs-Kausalnachweis.
+Jobpeak 399138816 Bytes (380,65 MiB) unter 512 MiB; Laufzeit 4456,27 s (74,27 min).
+Freigabe verbraucht. Kein Retry, Resume, Ersatzlauf, Tuning oder Umfangszuwachs.
+Historische ER1-Befunde unverändert, ER1 bleibt INCONCLUSIVE.
+Nächster Schritt: Projektleiter bewertet den Befund; vorgeschlagen ist bei Bedarf
+nur ein begrenzter unabhängiger Audit vorhandener ZW1-Archivzeugen, noch nicht freigegeben.
+
+[Ergebnis und Prüfnachweis](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/zw1-comparison-16h-01/REPORT.md).
+Ältere Abschnitte sind historische Zeitstände.
+
+## Aktuell: ZW1-Neutralpaket abgenommen; Forschungsvorbereitung gebunden (2026-10-18)
+
+Tatsächlicher Supervisor-/Worker-Einstieg, Einmalberechtigung, exklusives Ziel,
+Quellenbarriere und vollständige Paarquittungen sind implementiert und neutral geprüft.
+Fünf Integrationsszenarien und 11/11 neue Tests bestanden; frühere unveränderte
+Neutralnachweise übernommen. Neue Ausführung: 28 kurze Arme, 28 Live- und
+24 bestandene Archivreferenzen. Frist- und Schreibbudgetfehler enden kontrolliert.
+Vorstart-SHA `28a1b008daaa9663a3f7ce3f403dc631526c0f7f78c2cebe82f8d89962e3dc13`; vollständige Bindung einschließlich experiments/zw1 geprüft.
+Umfang unverändert 16 Paare/64 Arme. Matrix unverändert. Keine Forschungsberechtigung,
+kein Verbrauchsmarker, kein Forschungsziel und keine Forschungsquellen erzeugt.
+Vollgrößen-Speicherverträglichkeit bleibt offen; Grenze 512 MiB, ER1-Peak 412 MiB.
+Nächster Schritt: Projektleiter prüft die Bindung und entscheidet separat über
+den einmaligen Forschungsstart. ER1 bleibt abgeschlossen mit INCONCLUSIVE.
+
+[Vorbereitungsbericht, SHA und exakter zukünftiger Aufruf](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/zw1-research-preparation-20261018-01/REPORT.md).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: ZW1 implementiert und neutral geprüft; Paketabnahme offen (2026-10-18)
+
+Getrenntes ZW1-Paket: gekoppelte neutrale A/B-Quellen und unabhängige Rekonstruktion,
+Paarquittungen sowie alleiniger Interaktionsvergleich (E−F)A−(E−F)B mit separater
+Statistikreferenz. 20/20 fokussierte Tests und drei Integrationsszenarien bestanden.
+Einmalig erzeugte 10000×16-Matrix unabhängig geprüft und gebunden. Tatsächlich
+16 neutrale 96-Frame-Arme, 16 bestandene Live- und 14 bestandene Archivreferenzen;
+Fehlerpaar bleibt unquittiert, veränderte Quelle stoppt vor dem ersten Arm.
+Keine Forschungsquellen, 1024-Frame-Policyfälle, Berechtigung oder Forschungsserie.
+Umfang bleibt 16 Paare/64 Arme. Vollgrößen-Speicherbedarf bleibt offen; ER1-Peak
+412 MiB ist im Ressourcenplan berücksichtigt, 512-MiB-Grenze unverändert.
+ER1 ist abgeschlossen mit INCONCLUSIVE, Zeugenprüfung abgenommen.
+Nächster Schritt: Projektleiter prüft das Neutralpaket und entscheidet separat
+über Forschungsvorbereitung; noch keine Vorstart- oder Forschungsfreigabe.
+
+[ZW1-Abnahmebericht und Nachweise](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/zw1-neutral-preparation-20261018-01/REPORT.md).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: ER1 abgeschlossen, Zeugenprüfung abgenommen; ZW1-Konzeptfrage offen (2026-10-18)
+
+ER1-v2 bleibt abgeschlossen mit INCONCLUSIVE. Die unabhängige Prüfung sämtlicher
+Erhaltungs- und warmen Nutzungszeugen ist abgenommen; historische Artefakte bleiben
+unverändert. Der neue Konzeptvertrag ZW1 untersucht ausschließlich als ungeprüfte
+Hypothese, ob zeitliche Wiederkehr den vollständigen E−F-Effekt verändert.
+Vorschlag: 16 Quellenpaare mit zwei Bedingungen, insgesamt 64 Policy-Arme sowie
+getrennt 64 Live- und 64 Archivreferenzen. Einziger Primärvergleich ist die gepaarte
+Interaktion (E−F in A) minus (E−F in B), nicht zwei getrennte Signifikanzurteile.
+Die Isolation gilt für Verteilungsgesetze; realisierte Häufigkeiten und zeitliche
+Fortsetzungsabhängigkeiten können abweichen. Diese Grenzen sind ausdrücklich benannt.
+Nur Dokumentation und statische Prüfung durchgeführt. Keine Implementierung,
+Quellen, Archivneuberechnung oder Versuche. Eine Erweiterung auf 32 Paare/128 Arme
+ist nicht Teil des Vorschlags und benötigt eine separate Umfangsentscheidung.
+Nächster Schritt beim Projektleiter: fachliche Prüfung der Isolation und Paarzahl;
+Implementierungsqualifikation und Forschungsstart bleiben getrennte Entscheidungen.
+
+[ZW1-Konzeptvertrag](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/S2UC_ZW1_ZEITLICHE_WIEDERKEHR_KONZEPTVERTRAG_20261018.md).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: ER1-v2-Zeugen unabhängig bestätigt; Primärurteil unverändert (2026-10-18)
+
+Separater Prüfer bestätigt alle 32 Archive ohne bisherige Zeugenfunktion oder
+Observer: E 171 Erhaltungszeugen / 327 warme Nutzungen, F 343 / 320.
+12/12 neutrale Gegenprüfungen bestanden; keine fehlenden, unbelegten oder
+doppelten Zeugen und keine mehrfach zugeordneten warmen Zielpositionen je Arm.
+Originalkontinuität einschließlich Kandidatenpromotion, früheres Feedback gleichen
+Offsets, Gegenopfer und tatsächliche warme Auswahl sind belegt.
+Historische Artefakte unverändert, keine Policy-Ausführung, neuen Quellen oder
+Bootstrapziehungen. INCONCLUSIVE bleibt das alleinige Primärurteil.
+Nächster Vorschlag: Projektleiter nimmt die Prüfung ab und bewertet vorhandene
+Gegenkosten auf eine neue falsifizierbare Gegenprognose; kein neuer Lauf freigegeben.
+
+[Unabhängiger Prüfbericht und Grenzen](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/er1-v2-witness-audit-20261018-03/REPORT.md).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: ER1-v2 vollständig abgeschlossen; globaler E-Vorteil nicht nachgewiesen (2026-10-18)
+
+32/32 Geschichten, genau 64 Policy-Arme sowie getrennt je 64 Live- und Archivreferenzen.
+TERMINAL_COMPLETE, unabhängige Statistik gleich, Cleanup und Workerende bestätigt.
+Primärvergleich E−F über alle 16352 Ziele: −0,0006879892; 95%-Intervall
+[−0,0013606898; +0,0000611546], INCONCLUSIVE. Lokale Erhaltungsnutzen und
+Gegenkosten sind in beiden Richtungen belegt; keine globale Überlegenheit.
+Vorstartbindung `0d67e76c14afa1e74a19dd7190857e68a19062abd26fd2af484c85b761a8f2b7`
+ist verbraucht. Kein Retry, Resume, Ersatzlauf oder Tuning. Der historische
+ER1-Abbruch bleibt unverändert TECHNICAL_ABORT mit verbrauchter Freigabe.
+Nächster Vorschlag: Projektleiter bewertet vorhandene Zeugen und Gegenkosten
+lesend auf eine neue falsifizierbare Gegenprognose; keine neue Ausführung freigegeben.
+
+[Ergebnisbericht und Prüfnachweise](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/er1-v2-comparison-16h-01/REPORT.md).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: ER1-v2 vorbereitet und gebunden, Forschungsentscheidung offen (2026-10-18)
+
+Die abgenommene strukturelle Korrektur ist im getrennten v2-Einstieg integriert.
+8/8 vorhandene Tests bestanden; neutrale 9/10-Integration, synthetische 99/100-Regression
+und vier Fehlerfälle einschließlich erschöpftem Schreibbudget sind belegt.
+Vorstart-SHA: `0d67e76c14afa1e74a19dd7190857e68a19062abd26fd2af484c85b761a8f2b7`. Bindungsvalidator und vollständige Dateiabdeckung geprüft.
+Namensraum `MCM-ER1/source/v2` und neues exklusives Ziel sind gebunden; keine
+Forschungsberechtigung, kein Verbrauchsmarker, kein Forschungsziel und kein neuer
+Forschungslauf. Die Vollgrößenunsicherheit bleibt ausdrücklich bestehen.
+Der alte Versuch bleibt `TECHNICAL_ABORT` mit verbrauchter Freigabe; kein Retry/Resume.
+Nächster Schritt liegt beim Projektleiter: Paketprüfung und gesonderte Forschungsentscheidung.
+
+[Abschlussbericht und Bindungsnachweis](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/er1-v2-preparation-20261018-01/REPORT.md).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: ER1-Bestandsvergleich separat korrigiert und neutral geprüft (2026-10-17)
+
+Workflow 3d0c238b-1428-4946-b3f0-8631eccfc978 ist als begrenzte Korrektur abgeschlossen.
+10/10 Strukturtests für 9/10, 99/100, JSON-Rundreisen, ungültige Schlüssel und echte
+Bestandsabweichungen bestanden. Ein neutrales 80-Frame-Archiv je Arm besteht beide
+unabhängigen Referenzen; eine falsche Endmarke wird trotz passender Testprüfsummen
+zurückgewiesen. Vollständige Bestände einschließlich Retained-Reihenfolge bleiben geprüft.
+
+Historisch gebundene Dateien, Quellen, Forschungsarchiv, Marker und Abbruchbelege
+sind unverändert. Keine Forschungsarchiv-Neuauswertung, keine Berechtigung, kein
+Retry oder Resume. Der alte Lauf bleibt TECHNICAL_ABORT mit 0/32 quittierten Fällen.
+Nächster Schritt: Projektleiter prüft die Korrektur und entscheidet gesondert über
+Integration; kein neuer Forschungseinstieg aus diesem Auftrag.
+
+[Korrekturbericht, Testnachweise und Ressourcen](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/er1-structural-correction-20261017-01/REPORT.md).
+Ältere Abschnitte sind historische Zeitstände.
+
+## Aktuell: ER1 technisch abgebrochen; keine Geschichte quittiert (2026-10-17)
+
+Der einmalige Forschungsaufruf zur Bindung `8b00f9a27f958307e41673543ae294e8cffe9d2bf36949d2d71b3886b18b5bde`
+ist verbraucht. Alle 32 Quellen waren vor dem ersten Arm versiegelt. In Fall 1
+wurden zwei Policy-Arme mit ihren Live-Referenzen abgeschlossen; die fachliche
+Archivprüfung brach mit `ValueError: ARCHIVE_STOCK` ab. Quittierte Fälle: 0/32.
+Kein Primär- oder Nutzenurteil. Keine weiteren Policy-Arme, kein Retry oder Resume.
+
+Worker beendet, Armcleanup und Dateicleanup bestätigt. Die vorhandenen Daten
+zeigen einen Darstellungsfehler beim Vergleich numerischer und JSON-String-
+Generationsschlüssel; keine nachträgliche Archivfreigabe und kein erneuter Referenzlauf.
+Nächster Vorschlag: begrenzter neutraler Auftrag zur Korrektur des Archivvergleichs
+mit Regressionen 9/10 und 99/100. Keine neue Forschungsausführung daraus ableiten.
+
+[Abbruchbericht und Belege](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/er1-comparison-16h-01/REPORT.md).
+Ältere Abschnitte sind historische Zeitstände.
+
+## Aktuell: ER1-Einmallauf gestartet; Freigabe verbraucht (2026-10-17)
+
+Workflow 261de2b7-68f4-4c2b-996d-d77ebdfb48d8 autorisiert genau den gebundenen
+E/F-Vergleich. Sämtliche 2967 Dateibindungen und 43 Qualifikationsartefakte wurden
+vor Ausführung geprüft. Der exakte gebundene Aufruf wurde einmal gestartet.
+START.json und CONSUMED.json bestätigen den Verbrauch zur Vorstartbindung
+`8b00f9a27f958307e41673543ae294e8cffe9d2bf36949d2d71b3886b18b5bde`.
+Alle 32 Forschungsquellen wurden vor dem ersten Arm unabhängig geprüft und versiegelt.
+
+Die Ausführung läuft unter den gebundenen Grenzen. Noch kein Ergebnisurteil.
+Kein Retry, Resume, Ersatzlauf oder Tuning. Maßgeblicher Fortschritt und erste
+Fehlerursache stehen im reservierten Terminalbericht; nächste Arbeit ist der
+vollständige Abschluss mit Referenz-, Ressourcen- und Cleanupnachweisen.
+
+[Fortschritt und Abschlussstatus](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/er1-comparison-16h-01/terminal.json).
+Ältere Abschnitte sind historische Zeitstände.
+
+## Aktuell: ER1-Forschungseinstieg vorbereitet und gebunden; keine Forschungsfreigabe (2026-10-17)
+
+Workflow 17468e31-58e4-46da-9b73-b3fff84058de ist als Vorbereitung abgeschlossen.
+Der getrennte Einstieg bindet genau 64 einmalig gemessene und protokollierte
+Policy-Arme, 64 Live-Referenzen und 64 Archivrekonstruktionen. Keine zusätzlichen
+Mess-/Capture-Policyarme. 11/11 Integrationsprüfungen bestanden; kurze reale Fälle
+sowie gezielt erschöpfte Administrations-/Exportbudgets sauber abgeschlossen.
+
+Vorstart-SHA: `8b00f9a27f958307e41673543ae294e8cffe9d2bf36949d2d71b3886b18b5bde`.
+Keine Forschungsberechtigung, kein Verbrauchsmarker und kein Forschungsziel
+angelegt; keine Forschungsquellen oder vollständigen 1024-Frame-Policyfälle erzeugt.
+Der Ressourcenplan weist Hochrechnung und Vollgrößenunsicherheit ausdrücklich aus.
+Nächste Entscheidung: Projektleiter prüft das gebundene Paket und entscheidet
+anschließend gesondert über den Forschungseinstieg. Keine automatische Ausführung.
+
+[Vorbereitungsbericht, Bindung und exakter zukünftiger Aufruf](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/er1-research-preparation-20261017-01/REPORT.md).
+Ältere Statusabschnitte darunter sind historisch.
+
+## Aktuell: ER1-Vertrag angenommen; Neutralpaket geprüft und zur Abnahme geliefert (2026-10-17)
+
+Der angenommene E/F-Vertrag ist im begrenzten Neutralpaket umgesetzt. 16/16 Tests,
+drei archivierte Fälle mit 32/32/44 Frames und der gezielte Schreibfehlerabschluss
+sind bestanden. Jeder Arm wurde gegen eine eigene unabhängige Referenz geprüft.
+Erhaltung, warme spätere Nutzung und der Preis verlorener neuerer Erfahrung sind
+mit Originalidentität und zeitlich vorherigem Feedback technisch belegt.
+U-Auswahl und Feedback bleiben unverändert; CR1, K1 und A1 sind deaktiviert.
+
+Kein Forschungsnutzenurteil: Quellenprüfung und Statistik verwendeten ausschließlich
+neutrale bzw. synthetische Daten, Primärnenner 511 Ziele je Geschichte. Keine
+Forschungsquellen, vollständigen 1024-Frame-Policyfälle, Forschungsberechtigung oder
+Forschungsserie. Der Forschungseinstieg ist gesperrt; endgültige Vorstartbindung
+erst nach Paketabnahme. Nächster Schritt ist die fachliche Prüfung dieses Pakets,
+danach gegebenenfalls gesondert beauftragte gebundene Forschungsvorbereitung.
+
+[Paketbericht und Belege](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/er1-preparation-20261017-01/REPORT.md).
+Ältere Statusabschnitte darunter sind historisch.
+
+## Aktuell: ER1-Vertrag angenommen; Implementierung und Neutralprüfung in Arbeit (2026-10-17)
+
+Der Projektleiter hat den ER1-Konzeptvertrag angenommen. Der fortgesetzte Auftrag
+8d1b85cf-cad9-45fd-b0a6-90e43bb95067 umfasst ausschließlich Implementierung und
+neutrale Qualifikation des E/F-Vergleichs. Beim Bestandsabgleich lagen noch keine
+ER1-Implementierung und keine ER1-Prüfergebnisse vor. Die offenen Kriterien werden
+jetzt bearbeitet; eine Paketabnahme wird damit nicht behauptet.
+
+U-Auswahl und Feedback bleiben unverändert; CR1, K1 und A1 bleiben deaktiviert.
+Jeder Arm erhält eine eigene unabhängige Referenz. Primärmaß ist E−F über sämtliche
+511 beobachtbaren Ziele pro Geschichte. Forschungsquellen, vollständige
+1024-Frame-Policyfälle und Forschungsserien sind gesperrt. Endgültige
+Forschungsvorstartbindung erst nach Paketabnahme. Ältere Statusabschnitte sind historisch.
+
+## Aktuell: CR1 abgenommen; ER1-Konzept zur Erfahrungserhaltung geliefert (2026-10-17)
+
+CR1 ist fachlich abgenommen. Sein begrenzter Ausgabevorteil und die
+Einzelhypothesen-Grenze bleiben gültig; kein Nachweis verbesserter Erfahrungsbildung.
+Die Einmallauffreigabe bleibt verbraucht. K1 und A1 bleiben deaktiviert.
+
+Der fortgesetzte Konzeptauftrag zur Erfahrungserhaltung ist dokumentarisch
+abgeschlossen; der konkrete ER1-Vertrag liegt dem Projektleiter zur Abnahme vor.
+Vorhandene T1-/K1-Befunde und der Wiederwahrnehmungsvertrag vom 30.09. wurden
+weiterverwendet. Keine erneute Kandidatenfrist und kein weiterer FIFO-Demonstrationslauf.
+
+Genau ein vorgeschlagener Vergleich: E mit bestehender Reihenfolgeauffrischung
+bei vollständiger Wiederwahrnehmung gegen F ohne diese Umordnung. Beide führen
+dieselben begrenzten Beobachtungsendmarken, dieselbe U-Ausgabe, Feedbackregel,
+Speicherobergrenzen und denselben Informationszugang. Bestandsunterschiede sind
+gewollt und benötigen je Arm eine eigene unabhängige Referenz.
+
+Offene Gegenprognose: Spätere warme Wiederverwendung kann durch Erhaltung helfen;
+der Verlust neuerer oder inzwischen passenderer Erfahrung kann diesen Vorteil
+aufheben oder umkehren. Erhaltung, tatsächliche Nutzung und Prognoseleistung
+werden getrennt geprüft. Einziges Primärmaß: E−F-MAE über alle 511 Ziele je
+Geschichte, gleichgewichtet über 32 frische Geschichten. Alle Quellenanforderungen,
+Entscheidungs- und Ressourcengrenzen stehen im Vertrag; nichts davon wurde ausgeführt.
+
+Nächster konkreter Schritt: Projektleiter prüft ER1 als Vollleistungsvergleich
+jenseits des bereits belegten Bestandsmechanismus. Erst nach Abnahme gegebenenfalls
+getrenntes Implementierungs-/Neutralprüfpaket. Keine Quellenmaterialisierung,
+Archivneuberechnung, Policyänderung oder Versuchsausführung in diesem Auftrag.
+
+[ER1-Konzeptvertrag mit Code- und Berichtsbelegen](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/S2UC_ER1_ERFAHRUNGSERHALTUNG_KONZEPTVERTRAG_20261017.md).
+
+## Aktuell: CR1 vollständig abgeschlossen – begrenzter Ausgabevorteil für C (2026-10-17)
+
+COMPLETE / TERMINAL_COMPLETE: 32 Geschichten, 64 frische C/U-Arme,
+alle Quellen-, Zustands-, Feedback-, Archiv- und Statistikreferenzprüfungen
+bestätigt. Worker beendet, Arm- und Datei-Cleanup bestätigt; keine Fehler.
+Genau ein gebundener Aufruf, kein Retry, Resume, Ersatzlauf oder Tuning.
+Die Freigabe zum Vorstart-SHA
+`336f44aa79d8091991cfdc292e550c01e952e4faf5247e2c1b8613fb858ac1f3`
+ist verbraucht. Ältere Start- und Vorbereitungsstände unten sind historisch.
+
+Einziger Primärvergleich Q129–160, sämtliche 1024 Ziele aus 32 gleichgewichteten
+Geschichten: C-MAE 841/4096 = 0.205322265625; U-MAE 431/2048 = 0.210449218750.
+C−U = −21/4096 = −0.005126953125; nominales 95%-Intervall
+[−17/2048; −7/4096] = [−0.008300781250; −0.001708984375].
+Urteil: **C_EARLY_POST_BETTER** für die festgelegte Quellenfamilie und das
+vorab festgelegte Primärfenster. Weitere Fenster bleiben deskriptiv.
+
+48 Ziele besser, 27 schlechter, 949 gleich; Gewinn 12, Schaden 27/4,
+Netto 21/4. Alle 75 abweichenden Ziele waren vollständig kalt mit genau einer
+berechtigten Hypothese. Deshalb trägt der Befund die kalte Originalausgabe
+gegenüber Persistenz; ein Vorteil der Recency-Rangfolge mehrerer kalter
+Originale ist in diesem Primärfenster nicht nachgewiesen. Gemeinsame Zustände
+bleiben identisch. Die diagnosemotivierte Variantenwahl und die Grenze bleiben
+explizit: **Ein Ausgabevorteil beweist keine verbesserte Erfahrungsbildung.**
+
+Laufzeit 7919.528 s / 131.99 min; gemeinsamer Jobpeak 188317696 Byte unter
+512 MiB, höchstens zwei Prozesse. Finale Exportbilanz einschließlich Vorbereitung
+8816855 Byte. Alle 987 Vorstartbindungen und 32 Quellenhashes nachgeprüft;
+106 Dateien in der finalen Lieferung gebunden. Delivery-SHA:
+`b3978e3eef3605925ae0c6204576d86358b78aec9bf0176d28bde1b805d5c344`.
+
+Nächster konkreter Schritt: Projektleiter nimmt diesen begrenzten Ausgabebefund
+und seine Einzelhypothesen-Grenze ab und formuliert danach eine eigenständige
+mechanistische Gegenprognose zur Erfahrungsbildung. Kein automatischer weiterer
+C/U-Versuch oder Tuning; zusätzliche Entwicklung benötigt einen begrenzten Auftrag.
+
+[Ergebnis- und Prüfnachweis](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-cr1-comparison-16h-01/REPORT.md).
+[Statistik](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-cr1-comparison-16h-01/statistics.json).
+[Finale Lieferung](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-cr1-comparison-16h-01/delivery-closure.json).
+
+## Aktuell: CR1-Einmalvergleich gestartet (2026-10-17)
+
+Workflow-Freigabe `09fde789-5ec0-4a2f-9d30-516d4906d587` zum Vorstart-SHA
+`336f44aa79d8091991cfdc292e550c01e952e4faf5247e2c1b8613fb858ac1f3`.
+Alle 987 Dateibindungen unmittelbar vor Start bestätigt. Einmalberechtigung
+angelegt und gebundener Aufruf genau einmal ausgeführt; Startmarker verbraucht.
+Alle 32 Quellen aus `MCM-URA1-CR1/source/v1` vor dem ersten Arm unabhängig
+rekonstruiert, geprüft und gemeinsam versiegelt. Der Vergleich läuft;
+noch kein Ergebnis oder bestätigter Gesamtabschluss.
+
+Geplant: 64 frische C/U-Arme, einziger Primärkontrast C−U auf sämtlichen
+Q129–160, gleichgewichtet über 32 Geschichten. Alle gebundenen Prüfungen und
+Ressourcenlimits gelten. Kein Retry, Resume, Ersatzlauf oder Tuning.
+Die diagnosemotivierte Variantenwahl bleibt sichtbar; ein Ausgabevorteil
+würde keine verbesserte Erfahrungsbildung nachweisen.
+
+[Startbeleg](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-cr1-comparison-16h-01/START.json).
+[Fortschritt und Abschlussstatus](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-cr1-comparison-16h-01/terminal.json).
+
+## Aktuell: CR1-Vertrag angenommen, Umsetzung neutral geprüft (2026-10-17)
+
+Der Projektleiter hat den [CR1-Konzeptvertrag](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/S2UC_URA1_CR1_KALTAUSWAHL_KONZEPTVERTRAG_20261017.md)
+angenommen und das begrenzte Implementierungs- und Neutralprüfpaket beauftragt
+(Workflow `12411fb6-b054-4fec-808a-bcda26a48dd8`). Dieses Paket ist abgeschlossen;
+seine Abnahme und eine gesonderte Forschungsentscheidung liegen beim Projektleiter.
+Ältere Einreichungs- und Auftragsstände weiter unten sind historische Zeitstände.
+
+C wählt ausschließlich bei nicht leerem, vollständig kaltem H nach der bestehenden
+Originalrecency-Regel. In allen anderen Fällen gilt U. Keine zusätzlichen
+Lernzustände oder Rückmeldungen; ein Receipt. Getrennte C/U-Referenz, Executor,
+Archivsemantik, Quellenreferenz und Statistik sind implementiert. Primärkontrast
+bleibt C−U auf sämtlichen Q129–160, statistische Einheit Geschichte.
+
+29/29 fokussierte Tests bestanden. Zwei echte 32-Frame-C/U-Handfälle mit vier
+frischen Armen: gemeinsame Zustände einschließlich Aufnahme, Promotion und
+Verdrängung sowie Referenzfeedback stimmen überein. Nur Auswahlbytes 202/203
+werden normalisiert und separat geprüft. Absichtlich ausgelöster Budgetfehler
+endet mit TECHNICAL_ABORT, beendetem Worker und bestätigtem Cleanup.
+
+Vorbereitung: 2658052 Byte; G01 10.653 s, Jobpeak 53972992 Byte bei harter
+512-MiB-Grenze. 987 gebundene Dateien, darunter 939 unveränderte Vorgängerbindungen.
+Vorstart-SHA: `336f44aa79d8091991cfdc292e550c01e952e4faf5247e2c1b8613fb858ac1f3`.
+
+Keine Forschungsquellen erzeugt, keine 1024-Frame-Policyfälle oder Forschungsserie.
+Autorisierungsdatei und exklusives Forschungsziel fehlen. Historische Startmarker
+bleiben unverändert. Die neutrale Qualifikation ist kein Wirksamkeitsnachweis;
+Vollgrößenlaufzeit und zusätzlicher Archivprüfaufwand bleiben ungemessen.
+
+Nächster konkreter Schritt: Projektleiter prüft das gebundene Vorbereitungspaket
+und entscheidet danach über einen getrennt autorisierten einmaligen C/U-Vergleich.
+Bis dahin bleibt die Forschung geschlossen; keine neue Varianten- oder Namensraumsuche.
+
+[Ergebnisbericht, Test-IDs und zukünftiger Aufruf](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-cr1-preparation-20261017-01/REPORT.md).
+[Siegelprüfung](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-cr1-preparation-20261017-01/seal-verification.json).
+
+## Aktuelle Archivdiagnose: REV1-Entscheidungswege vollständig zugeordnet (2026-10-16)
+
+Die bestehende REV1-Serie wurde ausschließlich aus gespeicherten Archiven
+für Q129–160 diagnostiziert. Alle 1024 Primärziele sind eindeutig zugeordnet:
+40 ohne berechtigten Kontext, 66 ausschließlich kalt, 220 ohne negative warme
+Bewertung, 0 mit Gleichstand beim besten negativen Wert, 698 eindeutige Kontextwahl.
+
+Die 418 unterschiedlichen U/R-Ausgaben zerfallen in 66 rein kalte Entscheidungen,
+220 Enthaltungen ohne negative warme Bewertung und 132 unterschiedliche
+Kontextwahlen. Summen exakt bestätigt: 222 bessere, 196 schlechtere, 606 gleiche
+Ziele; Gewinn 75.75, Schaden 61.75, Netto +14. Nettobeiträge der drei ungleichen
+Entscheidungsklassen: −3.5, +2.5 und +15. Warm- und Bestandsklassen bleiben
+separate Partitionen; keine Doppelzählung oder neue Signifikanzprüfung.
+
+Alle 201 kalten Hypothesenauftritte (66 rein kalte und 135 gemischte Ziele)
+betreffen 201 Kandidaten-Originale ohne frühere Rückmeldung oder gültige
+Fehlerzelle für denselben Offset. Aufnahme und interne Lebenszyklusbelege
+sind vollständig verknüpft. 194 Originale wurden nach dem Wechsel aufgenommen,
+7 davor. Aktuelle Zielrückmeldung wird nicht als Vorgeschichte gezählt.
+Keine unbelegte Rücksetzung einer bereits warmen Zelle als Erklärung behauptet.
+
+Ein Archiv gleichzeitig, harte Jobgrenze 512 MiB, tatsächlich ein Prozess.
+Extraktion 381.346 s, Jobpeak 47591424 Byte; kompakte Abschlussprüfung 0.341 s.
+Finale Diagnoseausgabe 1424475 Byte, alle Bindungen und Summen geprüft.
+Historische Belege und das Forschungsurteil INCONCLUSIVE bleiben unverändert.
+Keine neuen Quellen, Policy-Läufe, alternativen Ausgaben oder Bootstrapziehungen.
+
+Einzige Anschlussfrage an den Projektleiter: Lässt sich der beobachtete Nachteil
+rein kalter Kandidaten durch einen getrennt vorregistrierten Umgang mit ihrer
+ersten berechtigten Nutzung verringern, während die warme Fehlerauswahl
+unverändert bleibt? Keine automatische Implementierungs- oder Versuchserlaubnis.
+
+[Diagnosebericht mit festen Beispielen und Reproduktionsaufruf](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-rev1-diagnosis-20261016-01/REPORT.md).
+[Quellenbindungen und finale Lieferung](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-rev1-diagnosis-20261016-01/diagnosis-closure.json).
+
+## Aktueller Forschungsabschluss: URA1-REV1 vollständig, Primärvergleich unentschieden (2026-10-15)
+
+COMPLETE / TERMINAL_COMPLETE: 32 Geschichten, 64 frische U/R-Arme,
+alle Fallquittungen, unabhängigen Referenz-/Archiv-/Statistikprüfungen und
+Cleanup bestätigt. Genau ein autorisierter Aufruf; kein Retry oder Resume.
+
+Einziger Primärkontrast Q129–160: U-MAE 0.19140625, R-MAE 0.205078125,
+U−R −0.013671875; nominales 95%-Intervall
+[−0.029541015625; +0.001220703125]. Urteil: INCONCLUSIVE.
+Das Intervall umfasst null: weder früher R-Vorteil noch gesicherter U-Vorteil;
+kein Gleichwertigkeitsnachweis. Deskriptive spätere Fenster ändern dieses Urteil nicht.
+
+Im Primärfenster 222 bessere, 196 schlechtere und 606 gleiche Einzelziele.
+Nettoverbesserung 14; kalte Zustände haben deskriptiv Netto −3.5,
+gemischt warme −0.75, warme +18.25. Genau ein Kandidat hat Netto 0,
+mehrere Kandidaten +14. Keine Kausalattribution oder nachträgliches Tuning.
+
+Gesamtdauer 7148.315 s (119.14 min), Jobpeak 206450688 Byte;
+Gesamtexport einschließlich Vorbereitung und Abschlussbericht 9375336 Byte.
+Ressourcen eingehalten; Worker beendet, interner und Datei-Cleanup bestätigt.
+939 Vorstart-Dateibindungen sowie alle Quellen-/Abschlusshashes geprüft.
+START und Einmalfreigabe für SHA
+`3d05e2fc657a704be3fb5901a302c0c81e519aefaa377909529686a6cf7e650d`
+bleiben verbraucht. Historische Quellen wurden nicht gepoolt.
+
+Nächster Schritt: Projektleiter bewertet Intervall und vorhandene Frühphasen-
+Diagnosen, insbesondere kalte/gemischte Zustände gegenüber warmen Beständen.
+Daraus gegebenenfalls einen eng begrenzten Ursachenauftrag ableiten;
+keine automatische Wiederholung, Vergrößerung oder Änderung der Auswahlregel.
+
+[Vollständiger Forschungsbericht und Belege](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-rev1-comparison-16h-01/REPORT.md).
+[Finale Lieferung mit Größen- und Dateibilanz](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-rev1-comparison-16h-01/delivery-closure.json).
+
+## Historischer Startnachweis: URA1-REV1 einmalig gestartet (2026-10-15)
+
+Die gesonderte Einmalbeauftragung wurde nach Prüfung aller 939 Dateibindungen
+auf Vorstart-SHA `3d05e2fc657a704be3fb5901a302c0c81e519aefaa377909529686a6cf7e650d`
+ausgeführt. START bestätigt `consumed=true`. Alle 32 Forschungsquellen sind
+vor dem ersten Policyarm unabhängig geprüft und gemeinsam versiegelt.
+Erster belegter aktiver Fall: 1; noch kein Ergebnisurteil.
+
+Ziel: `reports/s2uc/ura1-rev1-comparison-16h-01`.
+32 Geschichten / 64 U/R-Arme, unveränderte Regeln und fortlaufender Zustand;
+Kontingenzumkehr nach Block 128. Einziger Primärkontrast U−R über Q129–160.
+Global 57600 s, Worker 54000 s, Abschlussreserve 3600 s innerhalb der Gesamtfrist,
+Job 512 MiB und zwei Prozesse. Kein Retry, Resume, Ersatzlauf oder Tuning.
+
+Nächster Schritt: den bereits autorisierten Versuch bis zu seinem terminalen
+Zustand überwachen und vollständigen Befund samt Integrität, Ressourcen und
+Cleanup übergeben. Keine weitere Startfreigabe erforderlich oder erzeugen.
+Die V4-Freigabe und historischen Bindungen bleiben unverändert.
+
+[Startnachweis](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-rev1-comparison-16h-01/START.json).
+[Quellenmanifest](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-rev1-comparison-16h-01/sources-manifest.json).
+
+## Historische Vorbereitung: URA1-REV1 neutral qualifiziert (2026-10-15)
+
+Der Projektleiter hat den Transfer-Konzeptvertrag angenommen und ausschließlich
+Implementierung sowie fokussierte neutrale Prüfungen beauftragt. Dieses Paket
+ist abgeschlossen: getrennte REV1-Quelle und unabhängige Rekonstruktion,
+ein Primärfenster Q129–160 mit unabhängiger Statistikreferenz und eigener Einstieg.
+Unveränderte U/R-Verfahren; einmalige Forschungs-Kontingenzumkehr nach Block 128.
+
+18/18 fokussierte Tests bestanden. Zwei kurze spiegelbildliche U/R-Handfälle
+bestätigen erhaltenen Zustand und Fehlerzellen über die neutrale Wechselgrenze;
+der integrierte Admin-Grenzfehler endet erwartungsgemäß mit bestätigtem Cleanup.
+Alle 891 übernommenen V4-Dateibindungen stimmen überein. Keine Forschungsquelle,
+kein vollständiger 1024-Frame-Policyfall und keine Forschungsserie ausgeführt.
+
+Aktuelle Vorstart-SHA: `3d05e2fc657a704be3fb5901a302c0c81e519aefaa377909529686a6cf7e650d`.
+939 Dateien gebunden; Vorbereitung 2.802.870 Byte unter der 8-MiB-Grenze.
+Neues exklusives Ziel: `reports/s2uc/ura1-rev1-comparison-16h-01`, nicht angelegt.
+Forschungsberechtigung fehlt absichtlich. Die V4-Einmalfreigabe bleibt verbraucht.
+Der frühere Bindungsentwurf unter `seal-draft-01` ist überholt, keine Startgrundlage.
+
+Nächster Schritt: Projektleiter prüft Vorbereitung und aktuelle Vorstartbindung
+und entscheidet über den gesonderten Einstieg. Bis dahin kein Forschungsstart.
+Ein möglicher früher R-Vorteil bleibt offene Gegenprognose; die binäre Quelle
+begründet keinen pauschalen längeren EMA-Nachlauf.
+
+[Vorbereitung mit Tests, Grenzen und zukünftigem Aufruf](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-rev1-preparation-20261015-01/REPORT.md).
+[Angenommener Konzeptvertrag](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/S2UC_URA1_REV1_TRANSFER_KONZEPTVERTRAG_20261015.md).
+
+## Aktueller Forschungsabschluss: URA1 V4 vollständig bestanden (2026-10-15)
+
+COMPLETE / TERMINAL_COMPLETE: 32 Geschichten, 64 frische U/R-Arme, alle
+Fallquittungen, unabhängige Archiv-/Statistikprüfungen und Cleanup bestätigt.
+Primärvergleich über alle Q-Ziele: U-MAE 0.186279296875,
+R-MAE 0.222808837890625, U−R −0.036529541015625.
+Nominales 95%-Intervall [−0.0430908203125; −0.030029296875].
+Damit Vorteil für U in der gebundenen synthetischen Quellenfamilie;
+keine allgemeine Intelligenz-, Feld-Memory- oder Audio-/Video-Aussage.
+
+Alle 32 Geschichten haben negativen mittleren Q-Kontrast. Dennoch 1422
+verschlechterte Q-Einzelziele; kalte und Ein-Kandidaten-Zustände haben eine
+negative deskriptive Nettobilanz. Kein nachträgliches Tuning oder neuer Lauf.
+Gesamtdauer 6727.411 s, Jobpeak 198234112 Byte, Grenzen eingehalten.
+Workerende, interner Cleanup und Datei-Cleanup bestätigt; keine Fehlerursache.
+START und Einmalfreigabe bleiben verbraucht. Historische Daten nicht einbezogen.
+
+Nächster Schritt: Projektleiter nimmt den vollständigen Befund ab und wertet
+die gelieferten kalten/Ein-Kandidaten-Diagnosen aus, um vor weiterer Forschung
+eine konkrete Gegenprognose für einen späteren Transfervergleich festzulegen.
+
+[Vollständiger Forschungs- und Prüfnachweis](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-comparison-v4-consistent16h/REPORT.md).
+
+## Historischer Startstatus: URA1 V4 einmalig gestartet (2026-10-15)
+
+Die gesonderte Einmalbeauftragung auf Vorstart-SHA
+deaae277655ecf078de791190e840d42b2f42fb113288fc903b54b49342ccee3
+wurde nach vollständiger Bindungsprüfung ausgeführt. Ziel:
+reports/s2uc/ura1-comparison-v4-consistent16h. START.json bestätigt
+consumed=true. Terminalreserve vorhanden; Manifest mit 32 neuen Quellen
+versiegelt. Erster beobachteter aktiver Fall: 1. Noch kein Ergebnisurteil.
+
+Der laufende Versuch benötigt keine weitere Freigabe. Kein Retry, Resume
+oder Ersatzlauf. Maßgeblich für Fortschritt und Abschluss ist terminal.json;
+Primärvergleich erst bei vollständig geprüfter Serie. Historische Quellen
+und Abbruchbelege bleiben getrennt und unverändert.
+
+## Historischer Vorbereitungsstand: URA1 V4 vollständig integriert (2026-10-15)
+
+PASS_PREPARATION_V4: abgenommene gemeinsame Dateierfassung und begrenzte
+Supervisorfehlerdiagnose im tatsächlichen Worker-/Supervisorpfad integriert.
+I01–I08 mit kurzen echten U/R-Fällen und gezielten Fehlern bestanden;
+I09 misst ausschließlich neutrale Dateierfassung. N01–N07 bestanden.
+Regulärer Abschluss und erzwungene Umbenennung bestehen inklusive Decoder
+und Fallquittungen; echte Budgetfehler, Instabilität und Fristende schließen
+terminal ab. Cleanup bei erzwungenem Ende bleibt ausdrücklich unbestätigt.
+
+Neuer Namensraum MCM-URA1/source/v4, exklusives Ziel
+ura1-comparison-v4-consistent16h. V3-Quellen bleiben historische Abbruchbelege;
+keine Wiederverwendung. Neue Forschungsquellen, Berechtigung und Ziel fehlen.
+Keine Forschung gestartet. Vertrag, U/R, Rezept und Statistik unverändert.
+Aktualisierte Zeitplanung einschließlich Erfassung: 14.04 h, Puffer 1.96 h;
+keine Seriengarantie. Höchster Integrations-Jobpeak 52781056 Byte.
+
+Nächster Schritt: Projektleiter prüft die vollständige neue Vorstartbindung
+und entscheidet anschließend gesondert über den Forschungseinstieg.
+
+[Vollständiger integrierter V4-Vorbereitungsbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-v4-preparation-20261015-01/REPORT.md).
+
+## Historischer Korrekturstand: konkurrierende Dateierfassung geprüft (2026-10-15)
+
+PASS_FS_CORRECTION: Historischer list-then-stat-Fehler mit neutralem Worker
+und erzwungener Umbenennung reproduziert. Neue gemeinsame Budgetaufnahme
+verwirft unvollständige Scans, zählt finale Ziele mit und bricht nach spätestens
+acht instabilen Aufnahmen ab. F01–F14 bestanden, einschließlich echter Export-,
+Verwaltungs-/Tempüberschreitung sowie begrenzter Supervisorfehlerdiagnose.
+Höchster Jobpeak der abschließenden Prozessproben: 28057600 Byte.
+
+Getrenntes Korrekturpaket, kein neuer Forschungseinstieg und keine
+Forschungsfreigabe. Historischer V3-Code, Bindung und Abbruchbelege unverändert.
+V3-Start bleibt verbraucht; seine erzeugten Quellen bleiben Abbruchbelege.
+Nächster Schritt: technische Abnahme des Pakets und danach Entscheidung
+über Quellenbehandlung und gegebenenfalls neu gebundenen Einstieg.
+
+[Korrekturbericht, Testnachweise und Grenzen](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-fs-correction-20261015-01/REPORT.md).
+
+## Historischer Abschluss: URA1 V3 technisch abgebrochen (2026-10-15)
+
+Genau ein Versuch auf SHA
+e774d87d8a3df55eaa5e68142d3ca69d8dbfdc979fbdb99731e803c68b412382
+wurde gestartet. START und Freigabe verbraucht. TECHNICAL_ABORT nach 4.396 s:
+Supervisor meldet FileNotFoundError für sources-manifest.json.partial.
+32 neue Quellen und finales Manifest vorhanden, alle Quellenhashes geprüft.
+Null quittierte Fälle, kein aktiver Fall gespeichert, keine Fallarchive.
+Keine Leistungswertung; Primärkontrast, 95%-Intervall und Bilanzen nicht auswertbar.
+
+Workerende und Datei-Cleanup bestätigt; interner Cleanup UNCONFIRMED.
+terminal.json ist der maßgebliche Supervisorbeleg; reguläre Berichte fehlen.
+Jobpeak 44756992 Byte. Kein Retry, Resume, Ersatzfall oder Tuning erfolgt.
+Nächster Vorschlag: begrenzte Korrektur der konkurrierenden Dateierfassung
+mit neutraler Prüfung; kein weiterer Forschungsstart daraus ableitbar.
+
+[Vollständiger technischer Abbruchabschluss](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-comparison-v3-terminal16h/REPORT.md).
+
+## Historischer Vorbereitungsstand: URA1 V3 integriert, Forschungsentscheidung offen (2026-10-15)
+
+PASS_PREPARATION_V3: Neuer gebundener Einstieg verbindet tatsächlichen Worker,
+Ledger, Fallquittungen und reservierten Supervisorabschluss. N01–N06 und
+I01–I04 bestanden: zwei kurze echte U/R-Fälle sowie Export-, Verwaltungs- und
+Fristfehler einschließlich gescheitertem Workerbericht. Interner Cleanup bei
+Fristabbruch ausdrücklich unbestätigt. Alle bisherigen Grenzwerte unverändert.
+
+Neuer Namensraum MCM-URA1/source/v3 und exklusives Ziel
+ura1-comparison-v3-terminal16h vorab festgelegt. Rezept, 32 Geschichten, U/R,
+Primärkontrast und Statistik unverändert; Bootstrapmatrix bytegleich übernommen.
+Neue Forschungsquellen nicht erzeugt oder besichtigt; keine authorization.json,
+kein neues Forschungsziel und kein Forschungsstart. Alter Versuch bleibt
+TECHNICAL_ABORT, seine Freigabe verbraucht; alte Quellen werden nicht wiederverwendet.
+
+Die bisherigen gebundenen Überblicksfassungen sind im Vorbereitungspaket als
+historical-overviews bytegleich gesichert. Neue Standseinordnung ist keine
+Forschungsfreigabe. Nächster Schritt: Projektleiter prüft die vollständige
+Vorstartbindung und entscheidet separat über genau einen neuen Versuch.
+
+[Vollständiger V3-Vorbereitungsbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-v3-preparation-20261015-01/REPORT.md).
+
+## Historischer Stand: URA1-V2-Abnahme zurückgestellt, Versuch beendet (2026-10-15)
+
+Der gestartete Versuch wurde auf Projektleiterauftrag wegen des bestätigten
+terminalen Abschlussfehlers beendet. Worker und Supervisor beendet; alter
+Supervisorabschluss TECHNICAL_ABORT nach 6295.248 s gespeichert. 25 Archive;
+Abschlussfälle mindestens 24 aus sequenziellem Ablauf belegt, exakter Stand
+unbekannt. Keine Partialdateien; interner Cleanup des unterbrochenen Falls
+unbestätigt. 32 Forschungsquellen bereits erzeugt, keine Leistungsbewertung.
+START und Freigabe verbraucht; keine Wiederaufnahme oder neue Forschung.
+
+Getrennte terminale Korrektur mit 16384-Byte-Abschlussreserve innerhalb der
+unveränderten Grenzen. T01–T08 und drei neutrale Prozessfehlerproben bestanden;
+auch gescheiterter Workerbericht führt zum gespeicherten Supervisorabschluss.
+Alte 346-Dateien-Bindung unverändert. Neue Bindung gilt nur dem Korrekturpaket,
+nicht einem erneuten Forschungsstart. Nächster Schritt: technische Prüfung
+und fachliche Entscheidung des Projektleiters zu den bereits erzeugten Quellen.
+
+[Unterbrechungs- und Korrekturbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-terminal-repair-20261015-01/REPORT.md).
+
+## Historischer Vorbereitungsstand: URA1 V2 unter 16-Stunden-Vertrag geprüft (2026-10-15)
+
+PASS_PREPARATION_V2: Quellenrezept nur im neutralen Namensraum unabhängig
+geprüft; rationale Statistik und Referenz am künstlichen vollständigen Schema
+bestätigt. Bootstrapmatrix 320000 Byte erzeugt und unabhängig gebunden.
+P01–P08 sowie Startfehler-/Watchdogproben bestanden; zwei kurze Achtframefälle
+mit frischen U/R-Armen, keine Forschungsquellen oder Grössen-Policy-Läufe.
+
+Neuer ausdrücklich versionierter Gesamtzeitvertrag: 57600 s global,
+Workerende spätestens nach 54000 s ab demselben Beginn, 3600 s Abschlussreserve
+innerhalb der Gesamtfrist. Alle Speicher-/Archiv-/Exportgrenzen unverändert.
+Konservative Planung einschliesslich 25%-Kernreserve und Zusatzkosten:
+12.20 h; verbleibender Puffer 3.80 h. Plausibilität, keine Seriengarantie.
+Vorbereitung: gemeinsamer Kernel-Peak 78356480 Byte, Supervisor 32,913 s.
+Code, Runtime, Vertrag, Matrix und Belege in neuer Vorstartbindung versiegelt.
+
+**Keine Forschungsfreigabe:** authorization.json und Forschungs-START fehlen;
+Forschungsnamensraum bleibt gesperrt. Historische Marker bleiben verbraucht.
+Nächster Schritt: Projektleiter nimmt Vorbereitung und Risiken ab und trifft
+separat die Forschungsentscheidung auf den gebundenen SHA. Keine weitere
+Optimierungsserie oder Quellenbesichtigung aus diesem Vorbereitungspaket.
+
+[Vollständiger Vorbereitungsbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-v2-preparation-20261015-01/REPORT.md).
+
+## Vorheriger Entwicklungsstand: URA1-Laufzeitpaket bestanden, Serie zeitlich offen (2026-10-15)
+
+PASS_RUNTIME_PACKAGE: gebündelte Paar-/Vollständigkeits-/Diagnoseprüfung mit
+Envelopehash und unabhängiger Decoder mit exakter inkrementeller Recordgrösse.
+O01–O04, zwei bestehende Kleinfälle und genau eine Prüfung des vorhandenen
+1024-Frame-Archivs bestanden. Inhalte, Anker, Ereignisse und geprüfte terminale
+Fehler unverändert. Historische Dateien und Marker unverändert; neuer
+Archivprüfmarker ebenfalls verbraucht. Kein neuer Grössen-Policy-Lauf.
+
+Grosse Nachverarbeitung 177,403 s; unabhängiger Decoder 82,408 s statt 329,786 s.
+Archivprüfung insgesamt 262,136 s, Kernel-Job-Peak 81047552 Byte. Keine
+unbelegte Erfassungseinsparung. Konservative 32-Fall-Planungsabschätzung mit
+25 Prozent Reserve: 10.96 Stunden plus noch ungemessene Quellen-,
+Statistik- und Abschlussarbeiten. Keine Serienmessung oder garantierte Schranke.
+SERIES_TIME_NOT_READY: 3600 s bleiben das globale Serienbudget, nicht je Fall.
+Quellen-/Bootstrap-/Statistikprüfung, Serienressourcen und Vorstartbindung offen.
+Nächster Schritt: Projektleiter bewertet die verbleibende Zeitlücke und trifft
+vor weiterer Forschung eine ausdrückliche Entscheidung zum künftigen Zeitvertrag.
+Keine automatische Budgetänderung oder weitere Optimierungsserie.
+
+[Vollständiger Abschlussbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-runtime-development-20261015-01/REPORT.md).
+
+## Vorheriger Planungsstand: URA1-Serienlaufzeit offen (2026-10-15)
+
+Der einzelne Delta-Groessenlauf ist bestanden und seine Einmalfreigabe verbraucht.
+Die Laufzeitmachbarkeit der geplanten 32-Fall-Serie ist weiterhin offen.
+Lineare Abschätzung aus 1193,505 s je vollständigem U/R-Handfall: rund 10,61 h
+für 32 Fälle, noch ohne zusätzliche Serienstatistik; keine Serienmessung.
+3600 s bleiben der Gesamtvertrag, nicht ein Budget je Fall oder Teilstart.
+
+Genau eine Empfehlung: separat beauftragte Optimierung wiederholter kanonischer
+Recordverarbeitung, mit gebündelten Prüfdurchläufen und exakter inkrementeller
+Recordgrössenprüfung im unabhängigen Decoder. Alle Ereignisse, Referenzen,
+Bestands-/Zellprüfungen, Erfassungsanker und unabhängige Archivprüfung bleiben.
+Kein bezifferter Instrumentierungsgewinn belegt; keine Budgetänderung beschlossen.
+Noch offen: Quellenprüfung, Statistik-/Bootstrapprüfung, vollständige
+Serienressourcen und endgültige Vorstartbindung. Keine neue Ausführung freigegeben.
+
+[Machbarkeitsentscheidung mit Codebelegen und Umsetzungspaket](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/S2UC_URA1_SERIENLAUFZEIT_ENTSCHEIDUNG_20261015.md).
+
+## Abgenommener Einzelbefund: URA1-Delta-Groessenlauf bestanden (2026-10-15)
+
+COMPLETE_NEUTRAL_SIZE / PASS_DELTA_INTEGRITY: genau ein separat gebundener
+D_ITEMS-x16-Handfall mit 1024 Frames je U/R-Arm vollstaendig bestanden.
+Sieben Vorbereitungstests und Start-/Fristproben bestanden. 271 Dateien,
+Material, Runtime, Grenzen und Aufruf vorab gebunden; START.json verbraucht.
+Je Arm 3072 aeussere und 11276 interne Ereignisse, 512 Prognosen und 511
+beobachtete Ziele; Ziel 1025 zensiert. Alle Referenz-/Gleichheitspruefungen
+und acht unabhaengige Erfassungsanker bestaetigt. Rekonstruktion: 358862679 Byte.
+Dictionary 901970 Byte, JSON-Format 1029374 Byte, gzip 170176 Byte.
+Gemeinsamer harter 512-MiB-Job: Kernel-Peak 146649088 Byte, Gesamtzeit
+1193,505 s. Cleanup und Workerende bestaetigt, keine Partialdateien.
+
+Erfolg nur fuer diesen periodischen Handfall, keine Forschungsbereitschaft,
+Leistungswertung oder Freigabe weiterer Laeufe. Alter Dictionary-Abbruch
+und Marker unveraendert. Naechster Vorschlag: technische Abnahme durch den
+Projektleiter und Bestimmung des kleinsten noch fehlenden Abnahmekriteriums
+im bestehenden Forschungsauftrag; keine automatische Wiederholung oder Serie.
+
+[Vollstaendiger Abschlussbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-delta-size-neutral-20261015-01/REPORT.md).
+
+## Vorheriger Entwicklungsstand: URA1-Zustandsdifferenzen klein geprüft (2026-10-15)
+
+PASS_SMALL_STATE_DELTA: genau eine gezielte Formatänderung mit vollständigem
+Anfangsrecord, geordneten strukturellen Änderungen und begrenzten Referenztabellen.
+T01–T06, zwei vollständige Archivabnahmen und zwei reguläre Kleinfallintegrationen
+bestanden. Unabhängiger Decoder und Erfassungsanker bestätigen unveränderte
+kanonische Records; U/R, Referenzen und Ereignisprüfungen unverändert.
+Dictionary beider Arme zusammen: 70.451 / 58.471 Byte statt 337.128 / 264.724.
+Dekomprimiertes Format: 78.258 / 64.582 Byte statt 339.990 / 267.066.
+Kein versteckter Rohspool oder innere Kompression; vorherige Records und Tabellen
+sind begrenzt und im harten 512-MiB-Job mitgemessen. Integration: Kernel-Peak
+64.729.088 Byte, 90,645 s. Größenersparnis deutlich, Laufzeitgewinn gering.
+
+Für 1024 Frames je Arm ergeben lineare Abschätzungen rund 1,13 Millionen
+Dictionarybytes (exakt 1.127.216 Byte) und 1.252.128 Byte Format für U/R zusammen;
+dies sind keine Größenmessungen. Keine Forschungsbereitschaft.
+Nächster Vorschlag: Codecstand abnehmen und gegebenenfalls einen neuen einzelnen
+neutralen Größenlauf separat beauftragen und neu binden. Der frühere Marker
+bleibt verbraucht. Hier kein Größenlauf, keine fehlenden Präfixdaten rekonstruiert,
+keine Forschungsquellen, Bootstrapmatrix oder Forschungsausführung.
+
+[Vollständiger Codecbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-delta-development-20261015-01/REPORT.md).
+
+## Vorheriger Ergebnisstand: URA1-Größengrenztest technisch abgebrochen (2026-10-15)
+
+TECHNICAL_ABORT: DICTIONARY_LIMIT. Genau der beauftragte periodische
+1024-Frame-Handfall wurde einmal gestartet; START.json ist verbraucht.
+Kein Retry, Resume oder Ersatzfall. Sieben Vorabtests sowie Start-/Fristproben
+bestanden; Material, 202 Dateien, Runtime, Grenzen und Aufruf vorab gebunden.
+
+U begann Frame 844; 843 Frames waren vollständig referenzgeprüft. R wurde
+nicht gestartet. Dictionary 4.194.282 / 4.194.304 Byte; der nächste Eintrag
+wurde abgewiesen. 2529 äußere / 9278 interne Ereignisse sowie je 421 Prognose-
+und Feedbackrecords aufgenommen. Unabhängige Erfassungsanker liegen nur für
+diesen Präfix vor; kein vollständiges Fallarchiv oder Größen-Decoderergebnis.
+Gemeinsamer Kernel-Job-Peak 121.827.328 Byte bei harter 512-MiB-Grenze;
+Gesamtzeit 236,994 s. Cleanup und Workerende bestätigt, temporäre Dateien 0.
+
+Der Größenlauf ist nicht bestanden. Keine vollständige U/R-Gleichheitsprüfung,
+keine Leistungswertung und keine Forschungsbereitschaft. Nächster Vorschlag:
+begrenzte weitere verlustfreie Zustands-/Metadatenkompaktierung an vorhandenen
+kleinen Belegen mit unabhängigem Decoder und Erfassungsankern. Unveränderte
+Grenzen und Ereignisse; ein weiterer Größenlauf braucht eine neue ausdrückliche
+Beauftragung. Keine Forschungsquellen, Bootstrapmatrix oder Forschungsserie.
+
+[Vollständiger Grenztestbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-size-neutral-20261015-01/REPORT.md).
+
+## Vorheriger Entwicklungsstand: URA1 direkt referenzierend erfasst (2026-10-15)
+
+PASS_BOUNDED_DIRECT_CAPTURE: bestehende 64-/48-Frame-Handfolgen vollständig
+gegen die bisherigen kanonischen Ressourcenrecords geprüft. D01 und sieben
+fokussierte Tests D02–D08 bestanden; numerische Metadatenschlüssel nach einem
+vom Decoder abgewiesenen Entwicklungsversuch korrigiert und regressiv geprüft.
+U/R, Referenzen, Ereignisumfang und ursprüngliche Bindungen unverändert.
+Keine redundante JSONL-Ablage; Tabellen, Kanten, Indizes und Buffer begrenzt.
+Temporärer Peak einschließlich Partialausgabe: 23.491 / 19.210 Byte.
+Gemeinsamer harter 512-MiB-Job: Kernel-Peak 69.181.440 Byte, Laufzeit 94,935 s
+(vorher 75.165.696 Byte / 212,922 s). Vollständige Rekonstruktion unverändert.
+
+Keine Forschungsbereitschaft. Der einzelne vorgeschlagene 1024-Frame-Ablauf
+ist nur als gesondert beauftragter technischer Grenztest bedingt vertretbar:
+lineare Dictionary-/Formatabschätzungen überschreiten 4 MiB; Wiederverwendung
+und tatsächliche Skalierung sind ungeprüft. Die 128-Frame-Kleinfallgrenze bleibt.
+Nächster Vorschlag: genau diesen Grenztest samt gesondertem Einstieg und
+unabhängiger Integritätsbindung bewerten; keine automatische Ausführung.
+Kein Größenablauf, keine Forschungsquellen, Bootstrapmatrix oder Forschung.
+
+[Vollständiger Abschlussbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-direct-development-20261015-01/REPORT.md).
+
+## Vorheriger Entwicklungsstand: URA1-Kleinfallressourcen geprüft (2026-10-14)
+
+PASS_SMALL_RESOURCE_QUALIFICATION: vorhandene 64-/48-Frame-Handfolgen gezielt
+mit vollständigem Ereignistrace, Referenzen, Codec und Cleanup gemessen.
+Supervisor und höchstens ein Worker im gleichen harten 512-MiB-Windows-Job.
+Normaler gemeinsamer Kernel-Peak 75.165.696 Byte; Laufzeit 212,922 s.
+Native Speicherablehnung, Encoder-/Decoderfehler und Cleanup geprüft (R01–R07).
+Vollständige Historienlisten im RAM durch begrenzte fortlaufende Dateierfassung ersetzt.
+Originalbelege und U/R-Kernregeln unverändert; Rekonstruktion verlustfrei.
+Lebenszyklusrecord stimmt auch im kanonischen Hash mit dem alten Beleg überein.
+
+Keine Forschungsbereitschaft. Spooldaten: 19.677.758 / 13.338.998 Byte für die
+kleinen Fälle; der 64-MiB-Spoolrahmen ist ein konkretes Skalierungsrisiko.
+Nächster Vorschlag: vor Größenfreigabe direkt referenzierende Erfassung oder
+frühere verlustfreie Kompaktierung des Spools begrenzt bearbeiten.
+Genau ein späterer 1024-Frame-Größenablauf ist konkret vorgeschlagen, nicht ausgeführt;
+die bestehende 128-Frame-Kleinfallgrenze bleibt unverändert. Keine Forschungsquellen,
+Bootstrapmatrix oder Forschungsausführung. Native Phasenmaxima sind teilweise nur
+gesampelt; der gemeinsame Job-Peak ist kernelgemessen. Details im Bericht.
+
+[Vollständiger Ressourcenbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-resource-development-20261014-01/REPORT.md).
+
+## Vorheriger Entwicklungsstand: URA1-Archivcodec neutral geprüft (2026-10-14)
+
+PASS_CODEC_ONLY: Neun fokussierte Codec-Tests bestanden. Die zwei ursprünglichen
+neutralen Archive und ihre Bindungen bleiben unverändert; keine Policy-Wiederholung.
+Unabhängiger Decoder rekonstruiert sämtliche kanonischen Originalbytes.
+Referenzkodierung identischer JSON-Teilbäume, keine innere Kompression.
+Neue gzip-Größen: 24.408 / 19.732 Byte; dekomprimiertes Archivformat:
+276.323 / 266.560 Byte. Beide Fälle erfüllen 512 KiB gzip und 4 MiB Formatgröße.
+Die vollständig rekonstruierte Historie bleibt 3.860.092 / 13.380.342 Byte groß.
+Fortlaufende Decoderprüfung: Python-Peak 8.589.858 / 8.585.166 Byte;
+mit vollständiger Materialisierung 19.531.679 / 61.950.316 Byte.
+Fehlende/vertauschte Ereignisse, beschädigte Referenzen und Werte werden erkannt.
+
+Der frühere Formatgrößenblocker ist für diese zwei neutralen Fälle gelöst.
+Keine Forschungsbereitschaft: Skalierung, Gesamtprozess-/Beobachterkosten und
+Konstruktortransienten bleiben offen. Kein Größenablauf, keine Forschungsquellen,
+keine Bootstrapmatrix und kein Forschungsversuch. U/R-Regeln unverändert.
+Nächster Vorschlag: Codec abnehmen und die offene Ressourcenbilanz gesondert
+begrenzt beauftragen; daraus folgt kein automatischer Größen- oder Forschungslauf.
+
+[Codec-Abschlussbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-codec-development-20261014-01/REPORT.md).
+
+## Vorheriger Entwicklungsstand: URA1 neutral implementiert und geprüft (2026-10-14)
+
+Der bestehende neutrale URA1-Entwicklungsauftrag ist mit
+PASS_FOCUSED_NEUTRAL_DEVELOPMENT dokumentiert. Zuordnung zur Rückfrage:
+Prüfpaket dda37469-3a5d-4448-abcc-45f05509760e.
+14 vorhandene Tests bestanden; 160 gebundene Vorgängerdateien unverändert.
+R wählt den jüngsten berechtigten Originalnachfolger, mit festem Schlüsselgleichstand;
+Fehlerwerte und Warmstatus steuern seine Auswahl nicht. Eigene unabhängige Referenz.
+Reguläre Nichtäquivalenz bei Ziel 7: U persistiert V(0.5), R gibt Original V(0.25) aus.
+Das ist kein Leistungsnachweis. Bestand, Hypothesen, Tickets und Fehlerzellen sind
+in den neutralen Fällen ereignisweise gleich, einschließlich 552 interner Ereignisse
+je Arm im Lebenszyklusfall. Injektionskontrollen erkennen Bestands-/Feedbackkopplung.
+
+Keine Forschungsbereitschaft: Das expandierte Lebenszyklusarchiv benötigt
+13.380.342 Byte und überschreitet die geplante 4-MiB-Fallgrenze. Ressourcen sind
+für die kleinen Prüffälle belegt; vollständige Prozess-/Größenqualifikation fehlt.
+Kein Größenablauf, keine Forschungsquellen, keine Bootstrapmatrix, kein Forschungsversuch.
+Die Ergebnisübergabe wiederholt keine bereits bestandenen Entwicklungstests.
+Nächster Vorschlag an den Projektleiter: begrenzte verlustfreie Archivkompaktierung
+mit unabhängigem Decoder und unveränderten Grenzen, danach weitere technische
+Vorbereitung nur im gesondert beauftragten Umfang. UFB1 bleibt unbeauftragt;
+historische Einmalfreigaben bleiben verbraucht.
+
+[Vollständiger Abschlussbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-neutral-development-20261014-01/REPORT.md).
+
+## Historische Konzeptentscheidung: URA1 Auswahlablation bei gleichem Bestand (2026-10-14)
+
+Der folgende Konzeptstand wird durch den obigen neutralen Entwicklungsstand ergänzt; seine damaligen nächsten Schritte sind keine neuen Aufträge.
+
+Die [Konzeptentscheidung mit Ablationsvertrag](docs/S2UC_URA1_AUSWAHLABLATION_KONZEPT_20261014.md) ist ausgearbeitet.
+Die Frage bleibt offen: ULZ1 verglich zwei Fehlerbewertungen; HX1/UF1 hielten
+nicht denselben verfügbaren Spurenbestand fest. Kein erneuter Letztfehlervergleich.
+Geplant sind genau U und R. U unverändert; R wählt die jüngste berechtigte
+Originalfortsetzung ohne Fehlerwerte, Warmstatus oder Häufigkeitsbank zur Auswahl.
+Aufnahme, Bestätigung, Verdrängung, Originalspuren und Feedback bleiben gleich.
+R führt dieselben Fehlerzellen als für die Auswahl ungenutzten Kontrollzustand;
+die Ablation betrifft ihre Nutzung, nicht ihren Speicher- oder Rechenaufwand.
+Codelektüre zeigt keine reguläre Auswahlrückkopplung auf den Bestand. Später
+müssen Bestand, Hypothesen und Fehlerzellen ereignisweise gleich nachgewiesen werden.
+
+Begrenzter Entwurf: 32 neue D-Geschichten, ein Primärkontrast U−R über alle Q-Ziele.
+Gegenprognose, Ausgangsentscheidungen, Referenzen und Abnahmekriterien sind festgelegt.
+Keine Implementierung, Simulation, Quellen-/Matrixerzeugung oder Versuchsausführung.
+UFB1 ist fachlich ausgewertet; seine Erkenntnisse bleiben erhalten. Implementierung
+und Forschungswiederholung sind derzeit NICHT BEAUFTRAGT.
+Nächster Vorschlag: URA1-Vertrag bewerten, danach gegebenenfalls nur R-Auswahl,
+Referenz und Bestands-/Zellgleichheit neutral qualifizieren. Forschung separat.
+UF1 bleibt abgeschlossen; sämtliche historischen Einmalfreigaben bleiben verbraucht.
+
+## Abgeschlossene Konzeptarbeit: UFB1 derzeit nicht zur Umsetzung beauftragt (2026-10-14)
+
+Die folgenden Anschlussvorschläge sind durch die aktuelle URA1-Priorität überholt.
+
+
+Der beauftragte [Konzeptvertrag](docs/S2UC_UFB1_KONZEPTVERTRAG_20261014.md) ist ausgearbeitet.
+Machbarkeitsentscheidung: gemeinsamer externer Informationszugang und vollständige
+Speicherobergrenze konzeptionell möglich; technische Qualifikation steht aus.
+U kennt bereits Index und Vierframe-Segmentierung. F nutzt die Phase gezielt;
+gleicher Zugang bedeutet weder gleichen internen Bestand noch gleiche Nutzung.
+Geplant sind genau U_B/F_B mit unveränderten Kernregeln, gemeinsamer kausaler
+Schnittstelle und je 65.536 Byte vollständig gezähltem Speicher einschließlich
+Originalen, Hülle, Puffern, Ausgaben und Transienten. Kein künstliches Auffüllen,
+keine zusätzlichen U-Fähigkeiten und keine Kürzung von Fs Häufigkeitsspeicher.
+Neue Ausführungs-/Ressourcenvariante; historische Bindungen bleiben unverändert.
+
+32 neue D/N-Paare derselben Familie, ein Primärkontrast über alle Q-Ziele,
+Erfolgsregel, unabhängige Referenzen und Abbruchgrenzen sind konzeptionell festgelegt.
+Keine Quellen, Matrix, Implementierung, Simulation oder Versuchsausführung.
+Ein nicht bindender gemeinsamer Rahmen prüft eine begrenzte Replikationsaussage;
+er isoliert nicht den kausalen Nutzen der Verlaufsspeicherung oder Phasennutzung.
+Nächster Vorschlag: Vertragsabnahme, danach ausschließlich gemeinsame Hülle und
+vollständigen Speicherprüfer neutral qualifizieren. Erst anschließend über den
+Nutzen eines separat freizugebenden Forschungsversuchs entscheiden.
+UF1 ist abgeschlossen; seine Einmalbeauftragung bleibt VERBRAUCHT.
+
+## Abgeschlossener Ergebnisstand: UF1 unabhängig geprüft (2026-10-14)
+
+Der Forschungsversuch vom 2026-10-05 ist COMPLETE; die nachgelagerte Archivprüfung
+ist PASS_ARCHIVE_VERIFICATION. F_VORTEIL_BELEGT unabhängig bestätigt:
+D: U−F = 0.057098388672; nominales 95%-Intervall [0.054504394531; 0.059814453125].
+D-MAE: U 0.186218261719, F 0.129119873047. Ergänzend N: U−F = −0.011047363281,
+Intervall [−0.017975616455; −0.003936767578]; kein zweiter Primärtest.
+32 neue D/N-Paare, 64 Geschichten, 128 Armläufe. 65.536 F-Zustände,
+je 32.704 U-/F-Ausgaben, 640 Armmittelwerte, alle Intervalle und Bilanzen geprüft.
+Keine neuen Quellen und keine Policy-Wiederholung im Abschlussaudit.
+Supervisor 465.861 s; Job-Peak 204697600 Byte; Ressourcen- und Exportgrenzen eingehalten.
+
+[Ergebnisbericht](reports/s2uc/uf1-assessment-20261005-01/REPORT.md), [Archivprüfung](reports/s2uc/uf1-assessment-20261005-01/verification.json), [Exportbilanz](reports/s2uc/uf1-assessment-20261005-01/export-accounting.json).
+Die UF1-Einmalbeauftragung ist VERBRAUCHT: kein Retry, Resume oder Ersatzmaterial.
+Gebundene Verfahren und Archive bleiben unverändert; UH1/UHR1 werden nicht gepoolt.
+U zeigt hier keinen D-Vorteil gegenüber F. F hat Phasenwissen und eine andere
+Speicherrepräsentation; Ursachen und allgemeine Überlegenheit sind damit nicht belegt.
+Nächster Vorschlag: begrenzter Konzeptvertrag für einen Vergleich unter angeglichenem
+Informationszugang und nachvollziehbar abgeglichenem Gesamtbudget, mit genau einer
+falsifizierbaren Frage zum Nutzen der Verlaufserfahrung. Noch nicht ausgeführt.
+
+## Historischer Vorbereitungsstand: UF1 implementiert und neutral qualifiziert (2026-10-05)
+
+F und unabhängige Referenz sind implementiert; N1–N7/G1–G6 bestanden
+(18 Testmethoden plus elf U-Untertests). Genau ein neutraler Größenablauf COMPLETE:
+64 Geschichten, 128 U/F-Armläufe, 131.072 Armverarbeitungen samt Referenzen.
+Archivprüfung PASS: 65.536 F-Zustände und je 32.704 U-/F-Ausgaben rekonstruiert;
+Zählerdiagnosen, alle Intervalle und vollständige Bilanzen unabhängig geprüft.
+159 Vorgängerhashes unverändert; U und seine laufwirksamen Abhängigkeiten unverändert.
+F-Bank 4304 Byte, fokussierte transiente Numerik 96 Byte plus 32 Byte Reserve,
+konservatives numerisches Maximum 4712 unter 5120 Byte. F-Eigenheap im Größenablauf
+4839 Byte, in injizierten Fehlerpfaden höchstens 6753 unter 32768 Byte.
+Supervisor 487.258 s, Job-Peak 126853120 Byte;
+Vorbereitung 4690185 Byte unter 8 MiB. Ressourcen-/Exportgrenzen eingehalten.
+
+[Abschlussbericht](reports/s2uc/uf1-preparation-assessment-20261005-01/REPORT.md),
+[Vorstartbindung](docs/S2UC_UF1_V1_20261005_VORSTARTBINDUNG.json),
+[späterer Aufruf](docs/S2UC_UF1_V1_20261005_START.md).
+Vorstart-SHA256: `1a2c3bcab967eeed4d6fa422693216f8ba2853bac7aaab389ecc54aa606eb6d7`.
+Keine Forschungsquellen erzeugt oder gesichtet, keine operative Autorisierung.
+Nächster Vorschlag: Umsetzungspaket abnehmen; danach separat über genau einen
+UF1-Forschungsversuch mit dieser Bindung entscheiden. Kein zweiter neutraler Größenablauf.
+F behält Phasenwissen und größeres Budget gegenüber H; dritte Fortsetzung terminal.
+Keine allgemeine Lernfähigkeit behauptet; UH1/UHR1 bleiben getrennte Befunde.
+
+## Historischer Konzeptstand: UF1-Häufigkeitsbaseline spezifiziert (2026-10-05)
+
+Der UHR1-Replikationsbefund ist abgenommen. Vor einem Aufgabenstrukturwechsel
+liegt der [vollständige UF1-Prüfvertrag](docs/S2UC_UF1_PRUEFVERTRAG_20261005.md) zur Abnahme vor:
+U unverändert gegen F mit Hs zwei Hinweisschlüsseln und Phasenwissen, je Hinweis
+höchstens zwei erst nach Feedback gelernte Fortsetzungsvektoren samt Häufigkeiten.
+Strikte Mehrheit vorhersagen, bei Gleichstand/unbekanntem Hinweis Persistenz.
+Dritter verschiedener Fortsetzungswert terminal; keine unbegrenzte Historie.
+F-Bank 4304 Byte, konservative Numerik 4712 Byte bei 5120-Byte-Limit,
+Eigenheap 32768 Byte. Größerer Speicher als H ausdrücklich offengelegt.
+32 neue D/N-Paare derselben Familie, reservierter Namensraum MCM-UF1/source/v1.
+Einziger Primärkontrast U−F in D auf allen Q-Zielen, bisherige Aggregation und
+nominales 95%-Intervall. Analytische MAE-Passung begründet, keine Oraclebehauptung.
+Unabhängige Referenz, neutrale Prüffälle, Ressourcen und Abbruchregeln vollständig.
+Nur Dokumentation: keine Implementierung, Quellen/Matrix oder Versuchsausführung.
+Nächster Vorschlag: Vertragsabnahme und begrenztes F-Implementierungs-/Qualifikationspaket;
+Forschungsfreigabe bleibt separat. UH1/UHR1 bleiben unverändert und getrennt.
+
+## Abgenommener Ergebnisstand: UHR1 abgeschlossen, U-Vorteil repliziert (2026-10-05)
+
+Genau ein autorisierter UHR1-Forschungsversuch COMPLETE: 32 neue D/N-Paare,
+64 Geschichten, 128 frische U/H-Armläufe und 131.072 Armverarbeitungen samt Referenzen.
+Einziger Primärkontrast U−H in D: -0.005799488143; nominales 95%-Intervall
+[-0.009360747140; -0.002299448369], vollständig negativ.
+Urteil U_VORTEIL_REPLIZIERT. D-MAE U 0.185607910156, H 0.191407398300.
+Archivprüfung PASS: 65.536 H-Zustände, je 32.704 U-/H-Ausgaben, alle Intervalle
+und ergänzenden Bilanzen unabhängig geprüft. Supervisor 466.732 s,
+Job-Peak 117858304 Byte; Ressourcen- und Exportgrenzen eingehalten.
+Alle Quellen vor erstem Policy-Aufruf versiegelt; U/H unverändert.
+
+[Ergebnisbericht](reports/s2uc/uhr1-assessment-20261005-01/REPORT.md),
+[Archivprüfung](reports/s2uc/uhr1-assessment-20261005-01/verification.json),
+[exakte Auswertung](reports/s2uc/uhr1-comparison-20261005-01/assessment.json).
+Replikation auf neuen Folgen derselben Aufgabenfamilie; keine Aussage zu anderen
+Aufgaben, Audio/Video oder allgemeiner Kognition. UH1 bleibt getrennt, kein Pooling.
+Einmalbeauftragung VERBRAUCHT, kein Retry/Resume/Ersatzmaterial.
+Die Anschlusspriorität ist durch den Projektleiter geändert: zunächst UF1 mit
+passenderer einfacher Baseline auf derselben Aufgabenfamilie, siehe obersten Stand.
+
+## Historischer Vorbereitungsstand: UHR1 implementiert und neutral qualifiziert (2026-10-05)
+
+Der fachlich abgenommene UHR1-Vertrag ist umgesetzt. N1–N7 und G1–G7 bestanden
+(14 Prüfgruppen plus elf U-Untertests); genau ein neutraler Größenablauf COMPLETE:
+64 Geschichten, 128 U/H-Armläufe, 131.072 Armverarbeitungen samt Referenzen.
+Archivprüfung PASS: 65.536 H-Zustände, je 32.704 U-/H-Ausgaben sowie alle Intervalle
+und ergänzenden Bilanzen unabhängig geprüft. Alle 150 geerbten UH1-Dateihashes
+unverändert; neue Codebindung mit 159 Dateien. U/H-Speicher und H-Phasenwissen unverändert.
+Supervisor 482.526 s, Job-Peak 130.842.624 Byte;
+Vorbereitung 8.212.164 Byte unter 8 MiB. Alle Grenzen des neutralen Größenablaufs eingehalten.
+Keine Forschungsquelle erzeugt oder gesichtet, kein Forschungsversuch ausgeführt.
+Bootstrapmatrix und vollständige Vorstartbindung sind versiegelt.
+
+[Abschlussbericht](reports/s2uc/uhr1-preparation-assessment-20261005-01/REPORT.md),
+[Vorstartbindung](docs/S2UC_UHR1_V1_20261005_VORSTARTBINDUNG.json),
+[späterer Aufruf](docs/S2UC_UHR1_V1_20261005_START.md).
+Vorstart-SHA256: `91a770a4b5ba5e442807abc50bd458c194e57c6c8cebfc135102bbca304c6355`.
+Nächster Vorschlag: Umsetzungspaket abnehmen; danach gesondert über genau einen
+Forschungsversuch mit dieser Bindung entscheiden. Keine operative Autorisierung
+angelegt. UH1 bleibt abgeschlossen; UHR1 bleibt eine getrennte Wiederholungsprüfung
+auf neuen Folgen derselben Aufgabenfamilie, kein Aufgabentransfer.
+
+## Historischer Konzeptstand: UHR1 vorregistriert (2026-10-05)
+
+Der [vollständige UHR1-Prüfvertrag](docs/S2UC_UHR1_PRUEFVERTRAG_20261005.md) liegt zur fachlichen Abnahme vor.
+32 neue D/N-Paare derselben Aufgabenfamilie; U/H einschließlich Speicher,
+Lernen und H-Phasenwissen unverändert. Neuer reservierter Quellen-Namensraum
+MCM-UHR1/source/v1. Einziger Primärkontrast U−H in D über sämtliche Q-Ziele;
+UH1-Aggregation und geschichtetes Bootstrap mit nominalem 95%-Intervall:
+vollständig negativ = U-Vorteil repliziert, vollständig positiv = H-Vorteil,
+sonst kein eindeutiger Unterschied. Neue Ergebnisse werden getrennt von UH1 beurteilt.
+Quellenrezept, Verfahrensbindung, Ressourcen, Abbruch und Sekundärbilanz festgelegt.
+Keine Quellen oder Bootstrapmatrix erzeugt, keine Implementierung oder Ausführung.
+Aussage ausschließlich zu neuen Folgen derselben Aufgabenfamilie, kein Aufgabentransfer.
+Nächster vorgeschlagener Schritt: nach Vertragsabnahme begrenzte Umsetzung der
+UHR1-Hülle und unabhängigen Rezeptprüfung mit neutraler Qualifikation und neuer
+Vorstartbindung; Forschungsversuch danach weiterhin separat zu beauftragen.
+UH1 bleibt abgeschlossen; seine Einmalfreigabe bleibt verbraucht.
+
+## Vorheriger Abschlussstand: UH1 abgeschlossen, begrenzter U-Vorteil auf bekannten Quellen (2026-10-05)
+
+Der separat beauftragte U/H-Vergleich wurde genau einmal ausgeführt: COMPLETE,
+64 unveränderte Archivquellen, 128 frische Armläufe, 131.072 Frame-Verarbeitungen
+und Referenzfortschritte. Einziger Primärkontrast U−H in D:
+−0,004190908083, nominales 95%-Intervall [−0,007614034809; −0,000909328372].
+Urteil H_ERWARTUNG_WIDERLEGT_U_VORTEIL; U-MAE 0,186340332031,
+H-MAE 0,190531240114. Vollständige Gewinne, Schäden und Verfügbarkeit berichtet.
+
+Untersuchung auf bekannten Quellen, keine unabhängige Replikation.
+Vergleich zweier Gesamtverfahren mit unterschiedlicher Speicherrepräsentation
+und unterschiedlichem Informationszugang; keine isolierte Kausalzuordnung.
+H besaß zwei dauerhaft verfügbare gelernte Hinweise und Phasenwissen.
+Keine allgemeine Überlegenheit von U gegenüber allen einfachen Verfahren behauptet.
+
+Archivprüfung bestanden: 65.536 H-Zustände dekodiert, 32.704 H-Ausgaben unabhängig
+bewertet; alle 32.704 U-Fehler stimmen mit HX1 überein. Primär- und sämtliche
+sekundären Intervalle unabhängig aus dem Archiv nachgerechnet.
+Job-Peak 116.539.392 Byte, Supervisor 457,090 s; alle Ressourcenlimits eingehalten.
+
+[Ergebnisbericht](reports/s2uc/uh1-assessment-20261005-01/REPORT.md),
+[Archivprüfung](reports/s2uc/uh1-assessment-20261005-01/verification.json),
+[exakte Auswertung](reports/s2uc/uh1-comparison-20261004-01/assessment.json).
+Einmalfreigabe VERBRAUCHT; kein Retry, keine Quellenneugenerierung.
+U unverändert, A1/K1 aus; H nicht übernommen. HX1 bleibt abgenommen.
+Der konzeptionelle Anschluss ist jetzt im oben verlinkten UHR1-Vertrag
+als Wiederholung derselben Aufgabenfamilie festgelegt.
+
+
+## Historischer Stand: UH1 neutral qualifiziert, vor Forschungsfreigabe (2026-10-05)
+
+Der freigegebene Profilabsatz ist korrigiert; U verwendet unverändert das
+HX1-Profil 4309cfc91eb99fc2a999fdac99c5a7f1807ee654996e019ec0d94e3900bcbd4b.
+U/H implementiert, H genau zwei Hinweisslots. N1–N7 und 11 U-Untertests bestanden;
+genau ein vollständiger neutraler Größenablauf COMPLETE: 64 Geschichten,
+128 Armläufe, 131.072 Frame-Verarbeitungen und Referenzfortschritte.
+Alle 65.536 H-Zustände unabhängig geprüft und verlustfrei rekonstruiert.
+
+Job-Peak 132.976.640 Byte unter 512 MiB; Supervisor 485,472 s.
+H-eigener Heap 3.991 Byte regulär, höchstens 5.953 Byte in geprüften Fehlerpfaden;
+U-Zusatzheap 5.263 Byte. Unterschiedliche Messgrenzen bleiben ausdrücklich sichtbar.
+Kanonische Vorbereitung einschließlich vorgesehener Autorisierung 7.803.824 Byte
+unter 8 MiB. Gemeinsame verlustfreie Archivpackung gezielt nachqualifiziert;
+kein zweiter Größenablauf, keine Änderung der Replayfunktionen dabei.
+
+[Prüfbericht](reports/s2uc/uh1-preparation-assessment-20261005-01/REPORT.md),
+[Prüfbilanz](reports/s2uc/uh1-preparation-assessment-20261005-01/verification.json),
+[Startanleitung](docs/S2UC_UH1_V1_20261005_START.md).
+Vorstart-SHA256: 49c8118f34cd4b7e13f0de720d3521e164ac3a35cca761d023ca830fe55becc7.
+Alle 139 HX1-Dateien unverändert. Forschungsquellen nur lesend validiert,
+kein Forschungsreplay, keine operative Autorisierung angelegt.
+Nächster Vorschlag beim Projektleiter: technische Abnahme; anschließend
+gegebenenfalls separate Einmalbeauftragung auf bekannten Quellen.
+HX1 bleibt abgenommen und seine Einmalfreigabe verbraucht.
+
+
+## Historischer Stand: UH1 spezifiziert, vor Entwicklungsauftrag (2026-10-04)
+
+HX1 ist fachlich abgenommen; der begrenzte Hinweisnutzen bleibt belegt und
+seine Einmalfreigabe verbraucht. Der angenommene H-Entwurf ist jetzt als
+[verbindlicher U/H-Prüfvertrag](docs/S2UC_UH1_PRUEFVERTRAG_20261004.md)
+konkretisiert. Genau zwei Hinweisslots, Aufnahme nach Zielbeobachtung,
+explizite Prognosetickets, begrenzte Ressourcen und neutraler Plan N1–N7.
+
+Alle 64 archivierten HX1-Quellen sind mit ihren unveränderten Hashes
+[gebunden](docs/S2UC_UH1_QUELLENBINDUNG_20261004.json): bekannte Quellen,
+keine Neugenerierung oder Auswahl. Einziger Primärkontrast U−H in D;
+positive Werte sprechen für H. H-Vorteil wäre ein Vergleich der Gesamtverfahren,
+kein isolierter Beleg für Speicherumfang oder Mittelwertbildung.
+
+[Spezifikationsbindung](docs/S2UC_UH1_SPEZIFIKATIONSBINDUNG_20261004.json).
+Keine Implementierung, Bootstrapmatrix-Erzeugung, neutralen Prüfungen oder
+Replays ausgeführt. Nächster Vorschlag beim Projektleiter: Vertragsabnahme
+und danach begrenzter Entwicklungs-/Qualifikationsauftrag; Forschungsstart
+bleibt anschließend separat zu beauftragen.
+
+
+## Abgenommener Befund: HX1 abgeschlossen, Hinweisnutzen belegt (2026-10-04)
+
+Nach technischer Abnahme des Speicherpunkts wurde genau ein separat beauftragter
+Forschungsdurchlauf ausgeführt: COMPLETE, 64 Quellen, 32 D/N-Paare,
+192 Prädiktorgeschichten, 196.608 Frame-Verarbeitungen und Referenzfortschritte.
+Alle drei notwendigen Primärkontraste belegt (nominale 98⅓%-Intervalle):
+D:U−G −0,064610281192 [−0,067178469119; −0,061997330062],
+D:U−P −0,063659667969 [−0,066345214844; −0,060913085938],
+Interaktion −0,066375732422 [−0,070678710938; −0,061960601807].
+Gesamturteil HINWEISNUTZEN_BELEGT im begrenzten HX1-Vertragsumfang.
+
+Alle 8.192 gepaarten G-Q-Positionen bitgleich; 133 Abschlussdateien hashgeprüft.
+Job-Peak 124.964.864 Byte unter 512 MiB, Supervisor 387,387 s;
+Vorbereitung und Laufexport zusammen 12.735.523 Byte unter 64 MiB.
+U unverändert, A1/K1 aus. Kein Semantik-, Cluster-, Feld-Memory- oder
+Generalisierungsnachweis; keine Überlegenheit gegenüber allen einfachen
+hinweisabhängigen Verfahren behauptet.
+
+[Ergebnisbericht](reports/s2uc/hx1-assessment-20261004-01/REPORT.md),
+[Archivprüfung](reports/s2uc/hx1-assessment-20261004-01/verification.json),
+[exakte vollständige Auswertung](reports/s2uc/hx1-comparison-20261004-01/assessment.json).
+Einmalfreigabe VERBRAUCHT, keine Wiederholung/Wiederaufnahme.
+Nächster Vorschlag beim Projektleiter: Befund abnehmen und einen einfachen
+hinweisabhängigen Mittelwertvergleich konzeptionell spezifizieren;
+keine automatische Implementierungs- oder Lauffreigabe.
+
+
+## Historischer Stand: HX1-Speicherprüfung vor technischer Abnahme (2026-10-04)
+
+Die vorhandenen gezielten Messungen belegen die gemeinsame 512-MiB-Commit-Grenze
+für Supervisor und Worker. Der Windows-Rohzähler PeakJobMemoryUsed steigt auch
+bei abgewiesenen Commit-Anträgen; der historische Fehler-Peak 687.595.520 Byte
+ist deshalb kein Beleg für erfolgreich bereitgestellten Speicher dieser Größe.
+Der absichtliche Fehlerfall bleibt NOT_EVALUABLE. Keine Produktionskorrektur;
+ursprüngliche Code- und Vorstartbindung unverändert und lesend bestätigt.
+Kein erneuter Größenablauf und kein Forschungsstart.
+
+[Abschlussauswertung](reports/s2uc/hx1-memory-clarification-20261004-02/REPORT.md)
+und [Ergänzungsbindung](docs/S2UC_HX1_SPEICHERGRENZE_ERGAENZUNGSBINDUNG_20261004.json).
+Nächster Schritt beim Projektleiter: technische Abnahme anhand dieser Belege;
+Forschung bleibt bis zur technischen Entscheidung und gesonderten
+Einmalbeauftragung gesperrt.
+
+
+## Historischer Stand: HX1 neutral qualifiziert, vor Forschungsfreigabe (2026-10-04)
+
+Die beauftragte HX1-Hülle ist implementiert und neutral qualifiziert.
+Q1–Q7 bestanden; genau ein vollständiger neutraler Größenablauf COMPLETE:
+64 Geschichten, 192 Prädiktorläufe, 196.608 Frame-Verarbeitungen und ebenso
+viele unabhängige Referenzfortschritte. G auf allen 8.192 D/N-Q-Paarpositionen
+bitgleich; vollständige V0–V3-Bilanzen und rationale Primärauswertung geprüft.
+U unverändert, A1/K1 aus; unterschiedliche U-Bestände bleiben regulär möglich.
+
+Gemeinsamer Job-Peak 132.042.752 Byte unter 512 MiB; die Windows-Grenze
+wird durchgesetzt und ein übergroßer Abruf wurde neutral abgewiesen.
+Heap-Spitzen U/G/P: 5.323/3.441/2.049 Byte bei unterschiedlichen Zählgrenzen.
+Worker 369,559 s; alle Arm-, Zeit- und Exportgrenzen eingehalten.
+Verrechnete Vorbereitung einschließlich vorgesehener späterer Autorisierung:
+5.108.345 Byte unter 8 MiB. Codebindung 139 Dateien, Vorstartprüfung bestanden.
+
+[Vorbereitungsbericht](reports/s2uc/hx1-preparation-assessment-20261004-01/REPORT.md),
+[Prüfbilanz](reports/s2uc/hx1-preparation-assessment-20261004-01/verification.json),
+[Startanleitung und Bindung](docs/S2UC_HX1_V1_20261004_START.md).
+Vorstart-SHA256: `e8cb8f935d28a5624239aafdbab75d0cb8246b665045442afcc9ec4a8931d36e`.
+
+Forschungsströme weder erzeugt noch abgespielt; operative Autorisierung fehlt,
+Vorlage PENDING_SEPARATE_AUTHORIZATION. Keine Nutzenaussage aus neutralen Daten.
+Nächster Vorschlag beim Projektleiter: technische Abnahme und gegebenenfalls
+separate Einmalbeauftragung des gebundenen Forschungsdurchlaufs.
+ULZ1 abgeschlossen; seine Freigabe wird nicht wiederverwendet.
+
+## Historischer Auftrag: HX1 implementieren und neutral qualifizieren (2026-10-04)
+
+Der Projektleiter hat den HX1-Vertrag abgenommen und die begrenzte Umsetzung
+von D/N und U/G/P samt Q1–Q7 und höchstens einem vollständigen neutralen
+Größenablauf beauftragt. U unverändert, A1/K1 aus. Forschungsströme bleiben
+gesperrt; keine Forschungsquellen erzeugen oder abspielen. Gefordert sind
+unabhängige Referenzen, harte 512-MiB-Prozessgrenze, Ressourcenbelege und
+vollständige Vorstartbindung. Forschungsdurchlauf weiterhin separat gesperrt.
+
+## Historischer Arbeitsstand: HX1-Prüfvertrag spezifiziert (2026-10-04)
+
+Der Hinweis-Konzeptentwurf ist fachlich angenommen. Der beauftragte
+[verbindliche HX1-Prüfvertrag](docs/S2UC_HX1_PRUEFVERTRAG_20261004.md)
+liegt vor: 32 Geschichtenpaare, genau D/N und U/G/P, vier getrennte
+Quellenströme, feste Permutationen und Gegenorientierungen. Drei notwendige
+Primärkontraste auf allen Q-Zielen, gepaarter geschichteter Bootstrap und
+Bonferroni-Fehlerkontrolle; G-Gleichheit zwischen D/N positionsweise verpflichtend.
+Reguläre Drei-Spuren-Grenze, V0–V3, Ressourcen, unabhängige Referenzen,
+neutrale Qualifikation und terminale Fehlerabschlüsse sind festgelegt.
+Präzisierung: Persistenzfehler in N exakt 1/4, keine allgemeine optimale
+Fehlergrenze bei festen Gesamtquoten. U unverändert; ULZ1 abgeschlossen.
+Nur Vertragsarbeit abgeschlossen. Keine Implementierung, Quellenmaterialisierung
+oder Ausführung. Nächster Vorschlag: Vertragsprüfung, danach gegebenenfalls
+gesonderter Auftrag zur Implementierung und neutralen Qualifikation.
+
+## Historischer Arbeitsstand: Konzept zur Hinweisabhängigkeit (2026-10-04)
+
+ULZ1 ist abgenommen und wissenschaftlich abgeschlossen. Der anschließend
+beauftragte [Konzeptentwurf zur hinweisabhängigen Erfahrungsnutzung](docs/S2UC_HINWEISABHAENGIGE_ERFAHRUNG_KONZEPT_20261004.md)
+liegt zur fachlichen Prüfung vor: zwei Hinweise mit gegensätzlichen
+Fortsetzungen, identische globale A/B-Folge in der unabhängigen Kontrolle,
+globaler lernender Vergleich und vollständige Bewertungsmengen.
+Analytische Grenze: höchstens drei abrufbare Originalspuren; vier Varianten
+sind nicht gleichzeitig verfügbar. Reguläre Lerngelegenheiten für zwei
+Hauptfortsetzungen sind möglich, ihr ausreichendes Auftreten ist ungeprüft.
+Nur Konzeptarbeit abgeschlossen; keine Implementierung, Speichererweiterung,
+Quellenerzeugung oder Versuchsausführung. U unverändert, A1/K1 aus.
+Nächster Vorschlag: fachliche Prüfung und danach gegebenenfalls eigener
+Prüfvertragsauftrag. Der Entwurf ist keine Ausführungsfreigabe.
+
+## Abgenommener Forschungsstand: ULZ1 wissenschaftlich abgeschlossen (2026-10-04)
+
+Die freigegebene abschließende Archivdiagnose ist vollständig: alle 16.384
+Y-Ziele nach tatsächlichem U/L-Ausgabepaar A/B/Z/P kategorisiert; sämtliche
+Kategorien stimmen exakt mit den bestehenden Gewinn-/Schadenssummen überein.
+Primär stabil: Gewinn 30,375, Schaden 15,375, Netto 15. Früher Wechsel:
+Gewinn 9, Schaden 6, Netto 3. Netto bezeichnet eingesparte Fehlersumme von U.
+
+Der begrenzte Stabilitätsvorteil bleibt belegt; im frühen Wechselfenster
+ist weder der erwartete L-Vorteil noch ein gegenläufiger U-Vorteil nachgewiesen.
+Die erwartete gemeinsame Abwägung bleibt NICHT_NACHGEWIESEN.
+Nachträgliche Kategorien liefern keine neuen bestätigenden Untergruppenurteile.
+
+Der beobachtete Nettovorteil entsteht überwiegend bei Kontext/Persistenz-
+Unterschieden. Ältere Fehlerwerte erhalten Präferenzen oder verzögern neue
+Wahlen; beides kann gewinnen und schaden. Maximaler Einzelschaden 0,25.
+66.432 Arm-Entscheidungen und 81.954 Zellvorzustände vollständig rekonstruiert;
+3.978 unveränderte Zellübernahmen bei Promotion geprüft. Ungleiche Zellalter
+berücksichtigt. Zeitliche Nähe zur Verdrängung beweist keine eigene Schadensursache.
+
+[Diagnosebericht](reports/s2uc/ulz1-diagnosis-20261004-01/REPORT.md),
+[fachliche Einordnung und Belegketten](reports/s2uc/ulz1-diagnosis-20261004-01/EINORDNUNG.md),
+[Prüfbilanz](reports/s2uc/ulz1-diagnosis-20261004-01/verification.json).
+Keine Replays, neuen Quellen oder Regeländerungen. U unverändert, L nicht
+übernommen, A1/K1 aus, Einmalfreigabe VERBRAUCHT. LZ1-/T1-/F-Urteile unverändert.
+Nächster fachlicher Schritt beim Projektleiter: eine eigenständige offene
+MCM-Forschungsfrage priorisieren. Keine automatische ULZ1-Fortsetzung.
+
+## Historischer verbindlicher Stand: ULZ1 abgeschlossen, Stabilitätsvorteil belegt (2026-10-04)
+
+Genau ein beauftragter ULZ1-Forschungsdurchlauf ist COMPLETE:64 Geschichten,
+128 Arme,66.560 Quellenframes,133.120 Arm-Aufnahmen und vollständiger
+unabhängiger Referenz-/Bestands-/Berechtigungs-/Feedbackabgleich.
+
+Primär stabil (S,Y33–128): U−L=−0,0048828125;
+97,5%-Intervall[−0,006591796875;−0,003214009603]. U-Vorteil BELEGT.
+Primär früher Wechsel (W,Y129–160): U−L=−0,0029296875;
+97,5%-Intervall[−0,006713867188;+0,0009765625]. Erwarteter L-Vorteil
+NICHT_NACHGEWIESEN; ebenso kein nachgewiesener gegenläufiger U-Vorteil.
+Die erwartete Abwägung ist insgesamt NICHT_NACHGEWIESEN.
+Sekundäre Vorteile ersetzen keinen fehlenden Primärnachweis.
+
+[Ergebnisbericht](reports/s2uc/ulz1-assessment-20261004-01/REPORT.md),
+[Integrität und Ressourcen](reports/s2uc/ulz1-assessment-20261004-01/verification.json),
+[vollständige Z-Lebenszyklen](reports/s2uc/ulz1-assessment-20261004-01/cycles.json).
+Alle133 Abschlussdateien hashgeprüft. Zusatzheap U6.260/L5.976Byte,
+Bank je416Byte; gleiche Original-/Zellbelegung. Worker667,362s, alle Grenzen erfüllt.
+Z wurde regulär warm, ausgewählt, promoviert und verdrängt. Gewinne und Schäden
+sowie alle Ziele bleiben dokumentiert; keine Schadensfreiheit oder allgemeiner
+MCM-Mehrwert behauptet.
+
+Einmalfreigabe VERBRAUCHT. Kein Neustart, keine weitere Regeländerung und keine
+Übernahme von L. Operative Autorisierung bleibt historischer Startbeleg.
+Nächster Vorschlag beim Projektleiter: getrennte Primärbefunde abnehmen und
+vor weiteren Versuchen die Entscheidungs-/Verlustsituationen im vorhandenen
+Archiv einordnen. LZ1-/T1-/F-Einordnungen unverändert, A1/K1 bleiben aus.
+
+## Historischer verbindlicher Stand: ULZ1 implementiert und neutral qualifiziert (2026-10-04)
+
+Der beauftragte U/L-Vergleich ist implementiert. U bleibt unverändert, L speichert
+nur das letzte gültige Fehlerpaar. Unabhängige Referenzen und ereignisweiser
+Bestands-/Berechtigungs-/Feedbackabgleich sind aktiv; Z wird regulär berücksichtigt.
+Acht Prüfgruppen einschließlich22 Lebenszyklus-Unterprüfungen bestanden.
+Genau ein vollständiger neutraler Größenablauf:64 Geschichten,128 Arme,
+133.120 Arm-Aufnahmen, vollständige Referenzgleichheit und Bereinigung.
+Zusatzheap maximal U6.080Byte/L5.980Byte, Bank je416Byte, konservativ16 Originale
+und18 kombiniert. Worker686,759s. Alle Zeit-, Speicher- und Exportgrenzen erfüllt.
+
+[Qualifikationsbericht](reports/s2uc/ulz1-preparation-assessment-20261004-01/REPORT.md),
+[Ressourcen/Bindung](reports/s2uc/ulz1-preparation-assessment-20261004-01/verification.json),
+[Startanleitung](docs/S2UC_ULZ1_V1_20261004_START.md).
+Vorstart-SHA256: `58f6009f7b5609e3993983bafe554f9029bdca31f82addf9c79fa5eec2120537`.
+Vorstartprüfung bestanden. 64 Forschungsquellen weder materialisiert noch
+abgespielt; operative Autorisierung fehlt, Vorlage PENDING_SEPARATE_AUTHORIZATION.
+Nächster Schritt beim Projektleiter: Paket technisch abnehmen und gegebenenfalls
+separat genau einen Forschungsdurchlauf beauftragen. Erwartete Abwägung offen.
+LZ1-Abnahme, historische Wirkungsgrenze, negative T1/F-Befunde und A1/K1-aus bleiben.
+
+## Historischer verbindlicher Stand: LZ1 abgeschlossen und fachlich abgenommen (2026-10-04)
+
+Genau ein LZ1-Forschungsdurchlauf ist COMPLETE: 96 Geschichten, 288 Arme,
+99.840 Quellenframes und 24.576 primäre G_Y-Ziele je Arm. Der Projektleiter
+hat den begrenzten positiven Lernnachweis abgenommen. U und H64 senken in
+S und W den mittleren Fehler gegenüber Persistenz; alle vier vorab bestimmten
+98,75%-Intervalle liegen unter null. G_Y-Mittelwerte P/U/H64: S
+0,2500/0,1609/0,1023; W 0,2500/0,1576/0,1175.
+
+H64 ist insgesamt genauer; U ist im frühen Wechselzeitfenster günstiger
+(sekundärer Befund). Kein MCM-spezifischer Mehrwert, Transfer oder feldinterne
+Memory belegt. N zeigt auf G_Y keinen nachgewiesenen systematischen Vorteil;
+die Gerüstfehler sind bei allen Armen null. Negative T1/F-Befunde bleiben
+bestehen; A1/K1 bleiben deaktiviert.
+
+[Ergebnisbericht](reports/s2uc/lz1-assessment-20261004-01/REPORT.md) und
+[Laufabschluss](reports/s2uc/lz1-comparison-20261004-01/closure.json).
+Die Einmalfreigabe ist VERBRAUCHT; kein Neustart und keine Wiederholung.
+Die operative Autorisierungsdatei bleibt als historischer Startbeleg unverändert.
+U-Zusatzheap im Lauf: 5.495 Byte; H64: 78.964 Byte. Dies war kein
+speichergleicher Vergleich. Workerzeit 180,083 s, alle gebundenen Limits erfüllt.
+
+Die [U/L-Vorprüfung](reports/s2uc/ul-analytic-precheck-20261004-01/REPORT.md)
+ist abgenommen; der große Vergleich auf LZ1 ist geschlossen. Der LZ1-Vorteil
+gegenüber Persistenz belegt auf dieser Quelle keine zusätzliche reguläre
+Auswahlwirkung länger zurückliegender Erfahrung: U entscheidet wie das
+Wiederholen der zuletzt beobachteten Fortsetzung, außer an numerischen Grenzen.
+Versiegelte Berichte und Messurteile bleiben unverändert.
+
+Das analytische Beispiel unterschiedlich starker Rückmeldungen ist abgenommen.
+Die beauftragte [neutrale Lebenszyklusprüfung](reports/s2uc/strong-feedback-neutral-20261004-01/REPORT.md)
+ist PASS: vier Fälle zu 28 Frames, unverändertes U und unabhängige Referenz.
+U(I)=A, U(II)=Persistenz, L als reine Vergleichsrechnung stets Persistenz.
+Z ist vor Ziel 27 berechtigt, aber kalt; erstmaliges Feedback genau an 27.
+Originale bleiben erhalten, Feedback und Bereinigung in allen Fällen korrekt.
+An Ziel 27 einmal Gewinn 1/4, einmal Schaden 1/4, zweimal Gleichstand.
+Historische Auswahlwirkung bestätigt; durchschnittlicher Nutzen weiterhin offen.
+Die neutrale Prüfung ist fachlich abgenommen. Der weitere
+[Z-Lebenszyklus bis Abschluss 32](docs/S2UC_Z_LEBENSZYKLUS_ANALYTISCH_20261004.md)
+ist ausschließlich analytisch für zwölf Übergänge geklärt. Z ist warm und kann
+gewinnen; bei seiner Promotion wird regulär die älteste Retained-Spur verdrängt.
+U/L behalten je identischem Eingang denselben Bestand und Feedbackzugang.
+Ein längerer Vergleich ist als Bewertung unter gemeinsamem, wechselndem
+Speicherbestand interpretierbar, nicht als dauerhaft feste Dreihypothesenprüfung.
+Lebenszyklusanalyse fachlich abgenommen. Der einzige
+[ULZ1-Prüfvertrag](docs/S2UC_UL_Z_PRUEFVERTRAG_20261004.md) liegt vor:
+32 Wiederholungen, stabile und wechselnde A/B/Z-Verteilung, zwei primäre
+U/L-Kontraste, vollständiger regulärer Lebenszyklus und feste Ressourcengrenzen.
+Nächster Schritt beim Projektleiter: Vorregistrierung bewerten und gegebenenfalls
+Implementierung/neutrale Qualifikation beauftragen. Keine heutige Implementierung,
+Materialisierung oder Ausführung; Forschung benötigt separate Einmallauffreigabe.
+
+## Historischer verbindlicher Stand: LZ1 mit primärem G_Y implementiert und neutral qualifiziert (2026-10-04)
+
+Der korrigierte Vertrag und die begrenzte Hülle sind fertig. Ausschließlich
+alle256 stochastischen Y-Fortsetzungen je Geschichte bilden die primäre
+Nutzenmenge. Vier primäre Kontraste: H64−P und U−P, jeweils S/W.
+G_post, Gerüst, Präfix und Gesamtverlauf bleiben sekundär vollständig enthalten.
+Die Nullerwartung in N gilt nur für G_Y; Gerüstvorteile sind kein Lecknachweis.
+
+[Prüfbericht](reports/s2uc/lz1-preparation-assessment-20261004-01/REPORT.md),
+[Prüf- und Ressourcenbilanz](reports/s2uc/lz1-preparation-assessment-20261004-01/verification.json),
+[zehn bestandene Qualifikationsgruppen](reports/s2uc/lz1-neutral-20261004-01/tests.json),
+[Vorstartbindung](docs/S2UC_LZ1_V1_20261004_VORSTARTBINDUNG.json).
+
+Vollständiger neutraler Ablauf:96 Geschichten,288 Arme,99.840 Quellenframes,
+49.824 Ziele je Arm, davon24.576 primäre Y-Ziele. Beide Originalspuren an allen
+Y-Zielen lebend; korrekte Rückmeldung, H64-Überschreibung/Ties, kein Reset am
+Wechsel, unabhängige Referenzen und gemeinsame Clusterauswertung geprüft.
+Fehlende Ziele, falsche Cluster, Start-/Abbruch-/Exportfehler werden geschlossen.
+Ein reiner Gerüstvorteil erzeugt nachweislich kein positives Primärurteil.
+
+Worker171,868s; U-Zusatzheap5.498Byte, H64 maximal80.540Byte im neutralen Stress.
+Vollständiger kompakter Laufexport4.427.810Byte. Vorbereitung vor Eigenbindung/
+Autorisierung4.445.279Byte. Vorgesehene Zeit-, Speicher- und Exportgrenzen
+wurden eingehalten. Keine stillschweigende Kürzung von Fällen oder Belegen.
+
+Vorstart-SHA256: `e4c57655eae1b954ea22807beb42d26bb28ce8df468c8c64f8048702046c9da3`.
+Reine Bindungsprüfung bestanden. U unverändert; A1/K1 deaktiviert und historische
+Bindungen intakt. Forschungsfolgen weder materialisiert noch abgespielt.
+Autorisierungsvorlage bleibt PENDING_SEPARATE_AUTHORIZATION.
+
+Nächste Entscheidung beim Projektleiter: qualifiziertes Paket technisch abnehmen
+und gegebenenfalls genau einen gebundenen Forschungsdurchlauf separat beauftragen.
+Keine weitere Regeländerung vorgeschlagen. Aussagegrenze bleibt Lernen einer
+Fortsetzungsverteilung innerhalb vorhandener Kapazität, kein Transfernachweis,
+keine Verdrängungsrobustheit und kein vorweggenommener MCM-spezifischer Mehrwert.
+
+## Historischer verbindlicher Stand: A1 abgeschlossen; Prüfentwurf zum Lernen unter Unsicherheit vorgelegt (2026-10-04)
+
+Die A1-Auswahl-Archivdiagnose ist abgenommen. A1 bleibt deaktiviert; der Teilzweig
+ist abgeschlossen. Die negativen T1/F-Urteile bleiben unverändert. Fachliche
+Richtung ist Lernen mit belastbarem durchschnittlichem Vorteil, keine sichere
+Trennung jeder zukünftigen richtigen und falschen Fortsetzung.
+
+[Begrenzter Prüfentwurf zum vollständigen Erfahrungszyklus](docs/S2UC_LERNBARKEIT_ERFAHRUNGSZYKLUS_PRUEFENTWURF_20261004.md)
+liegt vor: wiederkehrender Zweiframehinweis, zwei stochastische Fortsetzungen,
+stabile Verteilung, festgelegter Wechsel und unabhängige faire Nullkontrolle.
+Ein festes reguläres Aufnahmepräfix bietet beide Spuren innerhalb vorhandener
+Kapazität an; Lerngelegenheiten hängen nicht vom Versuchsergebnis ab.
+
+Getrennt geprüft werden sollen Informationsgehalt der Quelle und Nutzung durch
+unverändertes U. Vergleiche: Persistenz und ausschließlich aus bisherigen
+Beobachtungen lernender H64-Häufigkeitsring. Dessen höherer Speicherbedarf ist
+offengelegt; kein kapazitätsgleicher Vergleich behauptet. A1/K1 bleiben aus.
+32 Wiederholungen je drei Bedingungen, vollständige Zielmengen, feste Zeitfenster,
+Clusterunsicherheit und vollständige Schadensdarstellung sind vorab beschrieben.
+
+Status ausschließlich ENTWURF. Keine Implementierung, Materialisierung,
+Ausführung oder Neubewertung historischer Ergebnisse. Nächster Schritt beim
+Projektleiter: Quellenfamilie, Präfix, Vergleichsspeicher und getrennte Urteile
+fachlich prüfen. Erst danach gegebenenfalls begrenzte Implementierung und
+neutrale Qualifikation beauftragen; kein Forschungsstart aus diesem Entwurf.
+
+## Historischer verbindlicher Stand: A1-Negativbefund abgenommen; Auswahl-Archivdiagnose abgeschlossen (2026-10-04)
+
+A1 bleibt deaktiviert. Die reine Archivdiagnose ist vollständig abgeschlossen;
+keine neue Regel, Schwelle, Quellenmaterialisierung oder Replay.
+
+[Diagnosebericht mit Entscheidungstabellen](reports/s2uc/a1-selection-diagnosis-20261004-01/REPORT.md),
+[20 Entscheidungseinträge](reports/s2uc/a1-selection-diagnosis-20261004-01/decisions.csv),
+[vollständige Feedbackketten](reports/s2uc/a1-selection-diagnosis-20261004-01/chains.json),
+[alle fünf zusätzlichen warmen T1-Vorkommen](reports/s2uc/a1-selection-diagnosis-20261004-01/t1-extra-five.json).
+
+T1-1-3/Ziel17 hatte nur Feedback7: Kontext ungenau, aber relativ günstiger als
+Persistenz. Vor dem Schaden gab es keinen relativen Widerspruch dieser Linie.
+F7-Linie1–4/Offset0 wird zehnmal gewählt: acht Vorteile, zwei Schäden.
+Vor11/15/19 stehen identische Fehlerzellen[0;0,0078125]; der erste Nachteil
+entsteht erst19. Spätere Gewinne und Schäden besitzen beide widersprüchliche
+Vorgeschichten. Historische Rohfeedbacklisten sind Beobachterdaten; der Adapter
+speichert die zwei EMA-Werte, keine vollständige Historie.
+
+Stärkster Beleg: F3 und F7 besitzen vor Ziel11 identische erste zehn Frames,
+Bestandsereignisse, Rückmeldungen und Auswahlrechnung; erst Ziel11 unterscheidet
+sich. Dieselbe Auswahl schadet in F3 und hilft in F7. Scope-Hashes unterscheiden
+sich, sind aber keine zulässigen semantischen Vorhersagemerkmale.
+[Präfixbeleg](reports/s2uc/a1-selection-diagnosis-20261004-01/indistinguishable-prefix.json).
+
+Die fünf zusätzlichen warmen T1-Vorkommen: zwei Gleichstände ohne Kontextwahl,
+zwei inzwischen schlechtere Kontextschätzungen ohne Kontextwahl und eine
+schädliche Kontextwahl. Keiner der fünf Originalnachfolger ist modal.
+Kein belegter allgemeiner Selektor trennt die untersuchten Gewinne und Schäden.
+Insbesondere kann eine Mindestmarge identische kausale Präfixe nicht trennen.
+
+Empfehlung an den Projektleiter: A1 als untersuchten Erhaltungsansatz abschließen
+und deaktiviert lassen. Vor neuer Umsetzung konzeptionell entscheiden, ob
+begrenzter Erwartungsnutzen unter Fortsetzungsunsicherheit genügt oder eine
+unabhängig begründete, vor dem Ziel verfügbare Zusatzinformation erforderlich
+ist. Erst eine konkrete Gegenprognose rechtfertigt einen neuen Versuchsauftrag.
+Historische Kriterien, Laufarchive und verbrauchte Einmallauffreigabe bleiben
+unverändert. Keine weitere Bestätigungs- oder Archivschleife erforderlich.
+
+## Historischer verbindlicher Stand: U/A1-Einmallauf abgeschlossen; Primärnutzen nicht nachgewiesen (2026-10-04)
+
+Der separat freigegebene Vergleich ist einmalig COMPLETE abgeschlossen:
+24/24 Fälle,48/48 Arme,3.584 Aufnahmen und Referenzfortschreibungen,
+872 Zielvergleiche. Keine Wiederholung oder Regeloptimierung.
+
+[Ergebnisbericht](reports/s2uc/a1-comparison-assessment-20261004-01/REPORT.md),
+[alle Zielwerte](reports/s2uc/a1-comparison-assessment-20261004-01/targets.csv),
+[Erfahrungs- und Verlustketten](reports/s2uc/a1-comparison-assessment-20261004-01/lineages-and-losses.json),
+[versiegelter Laufabschluss](reports/s2uc/a1-comparison-20261004-01/closure.json).
+
+Vertragsurteile: Technik AUSWERTBAR; Mechanismus und Gesamtnutzen
+NICHT_NACHGEWIESEN; Schaden GRENZE_EINGEHALTEN. Modale warme T1-Möglichkeiten
+bleiben80/624, Anpassung0/52. T1-Mittel verschlechtert sich von0,05347585105
+auf0,05361270331. Bessere F-/Gesamtfallmittel erfüllen den Nutzenvertrag nicht.
+
+A1:18 Teilzulassungen,82 vollständige Bestätigungen,270 verarbeitete
+Hypothesenfeedbacks und51 spätere warme Abrufe nach Teilzulassung. Gegenüber U
+38 zusätzliche warme Vorkommen auf acht Original-Offset-Linien. Gleichzeitig
+fünf kalte Möglichkeiten verloren und sechs warme Spuren in F8 verdrängt;
+F8 bleibt ohne zusätzlichen Prognosefehler. Teilzulassung ist kein Vollnachweis.
+
+15 Zielverbesserungen,7 Verschlechterungen,850 Gleichstände. Größter
+Zielmehrfehler0,08539581298828125 bei T1-1-3/Ziel17 durch irreführende warme
+Erfahrung. Die maximale mittlere Falldifferenz0,00218963623046875 bleibt unter
+1/32; T1-G_w unverändert. Schadensgrenze bedeutet keine Schadensfreiheit.
+
+Worker4,355s, Supervisor vor Abschluss5,964s; Zusatzheap7.158Byte,
+konservativ16 Originalframes/18 kombiniert, zwei Ausgabeslots und416Byte Bank.
+Alle Limits eingehalten und149 Archivdateien anhand ihrer Hashes geprüft.
+Einmalfreigabe verbraucht; A1 bleibt standardmäßig deaktiviert. Bekannte
+synthetische Entwicklungsfälle, kein unabhängiger Transfernachweis.
+
+Empfehlung an den Projektleiter: negativen Primärbefund abnehmen, A1 nicht als
+Standard übernehmen. Als nächster begrenzter Auftrag käme eine reine
+Archivdiagnose der schädlichen Auswahl T1-1-3/Ziel17 im Vergleich zu den
+nützlichen und schädlichen F7-Abrufen infrage. Erst daraus eine Gegenprognose
+ableiten; keine neue Variante oder Ausführung ist bereits freigegeben.
+
+## Historischer verbindlicher Stand: A1 technisch abgenommen; U/A1-Vergleichshülle neutral qualifiziert (2026-10-04)
+
+Der freigegebene Vorbereitungsauftrag ist abgeschlossen. Die separate U/A1-Hülle
+bindet unverändert16 T1- und acht F-Fälle, Reihenfolge, Zielmasken, Nutzen- und
+Schadenskriterien. A1-Regel, U und historische K1-Bindungen sind unverändert.
+
+[Abschlussbericht](reports/s2uc/a1-comparison-preparation-assessment-20261004-01/REPORT.md),
+[Prüfbelege](reports/s2uc/a1-comparison-preparation-assessment-20261004-01/verification.json),
+[18 bestandene Hüllenprüfungen](reports/s2uc/a1-comparison-neutral-20261004-01/tests.json),
+[Vorstartbindung](docs/S2UC_A1_VERGLEICH_V1_20261004_VORSTARTBINDUNG.json).
+
+Neutraler Vollablauf:24 Fälle,48 Arme,3.584 Aufnahmen/Referenzfortschreibungen,
+872 Zielvergleiche. Teilzulassungen, vollständige Bestätigungen, verarbeitetes
+Feedback und spätere warme Abrufe sind getrennt geprüft. Verdrängungsverluste,
+gewonnene/verlorene Original-Offset-Linien sowie alle Zielschäden bleiben sichtbar.
+Fehler nach A1-Revision und Receipt schließen leer; Auswerterfehler und die
+qualifizierten Start-/Abbruchpfade schließen NOT_EVALUABLE.
+
+Maximal9.394Byte Zusatzheap, konservativ16 Originalframes/18 kombiniert,
+zwei Ausgabeslots,416Byte Bank. Budgets unverändert:3.600s gesamt einschließlich
+60s Abschlussreserve;64MiB einschließlich8MiB Vorbereitung und1MiB Abschluss.
+Neutrale Zahlen sind keine Forschungsergebnisse. Kein Forschungsreplay,
+keine Forschungsquellenmaterialisierung und keine operative Autorisierung.
+
+Vorstart-SHA256: `c5478f0a7fce810bda23ee045a02b21317d5178d4ee595c1f064327d08199705`.
+Reine Bindungsprüfung bestanden. Der ausführbare Vergleichsbefehl und die
+noch nicht freigegebene Autorisierungsvorlage stehen im Abschlussbericht.
+Nächster Schritt beim Projektleiter: Vergleichshülle anhand der Belege abnehmen
+und gegebenenfalls separate Einmallaufentscheidung für genau diese Bindung
+vorbereiten. Keine weitere Implementierungs- oder Bestätigungsschleife nötig.
+
+## Historischer verbindlicher Stand: A1 technisch abgenommen; U/A1-Vergleichsvorbereitung beauftragt (2026-10-04)
+
+A1 ist als separate, standardmäßig deaktivierte Option implementiert; U-Code
+und K1 bleiben unverändert. A01–A11 sind technisch abgedeckt: zehn gültige
+Kriterien aus Qualifikation02 und die gezielt bestandene A10-Korrektur03.
+Drei ergänzende Prüfpakete bestehen ebenfalls. Der FAILED-Abschluss02 bleibt
+wegen einer korrigierten Testannahme sichtbar; kein Produktionsfehler wurde
+behoben oder verschwiegen.
+
+[Abschlussbericht](reports/s2uc/a1-implementation-assessment-20261004-01/REPORT.md),
+[Prüfzuordnung und Ressourcen](reports/s2uc/a1-implementation-assessment-20261004-01/verification.json),
+[Codebindung](docs/S2UC_A1_IMPLEMENTIERUNGSBINDUNG_20261004.json).
+
+Eindeutige Zulassung, vollständige Bestätigung mit Vorrang, Originalidentität,
+Zellübernahme, neue Tickets und warmer Wiederabruf sind neutral geprüft.
+Mehrdeutigkeit einschließlich identischer Nachfolger löst keine Zulassung aus.
+Zulassungsfehler schließen und leeren die Sitzung; kein teilweise nutzbarer
+Bestand bleibt bestehen. Retained-Abrufe verjüngen den Bestand nicht.
+
+Maximal6.679 Byte Zusatzheap,16 Originalframes, zwei Ausgabeslots und416 Byte
+Bank im geprüften Umfang. Teilzulassungen sind ausdrücklich keine vollständigen
+Wiederholungsnachweise. Irreführender alter Nachfolger und Verdrängung einer
+warmen Spur verursachen in neutralen Gegenfällen jeweils0,001953125 Mehrfehler
+gegenüber U. Ein Forschungsvorteil ist nicht nachgewiesen.
+
+Aktueller Entwicklerauftrag: fest gebundene U/A1-Vergleichshülle mit eigenem
+A1-Auswerter und unabhängigen Referenzen implementieren und ausschließlich
+neutral qualifizieren. Bisherige Nutzen- und Schadenskriterien bleiben bestehen.
+Keine T1-/F-Replays, Quellenmaterialisierung oder Forschungsausführung erfolgt.
+
+## Historischer verbindlicher Stand: Konzept A1 zur abrufbezogenen Bestätigung vorgelegt (2026-10-04)
+
+K1 ist als untersuchter Teilzweig abgeschlossen und bleibt deaktiviert.
+Auf neuen Konzeptauftrag liegt genau ein Vorschlag vor:
+[A1: eindeutiger Teilhinweis als Anlass zur Erhaltung](docs/S2UC_ABRUFBESTAETIGUNG_A1_KONZEPT_20261004.md).
+Keine Implementierung, Quellenmaterialisierung oder Ausführung erfolgt.
+
+A1 vergleicht mit unverändertem U und übernimmt keine K1-Frist. Genau eine
+berechtigte Hypothese aus einem lebenden Kandidaten kann dessen Originalframes
+vor dem Einfrieren der neuen Prognose in einen vorhandenen Erhaltungsplatz
+überführen. Vollständige Wiederkehr hat Vorrang; mehrdeutige Teilhinweise
+lösen keine Zulassung aus. Zielwerte und Fehlerwerte bestimmen sie nicht.
+
+Die neue Retained-Rolle bezeichnet Zulassung zur Erhaltung, nicht automatisch
+vollständige Viererwiederkehr. Bei zwei belegten Plätzen verliert die nach
+bisheriger Reihenfolge älteste Spur ihren Platz und ihre Fehlerzellen.
+Der Kandidatenplatz wird frei; kein Zusatzslot, keine Wiederbelebung und
+keine Verjüngung bereits erhaltener Spuren allein durch weitere Abrufe.
+
+Neue Tickets entstehen erst nach der Umschlüsselung. Erfolg verlangt späteren
+berechtigten Wiederabruf derselben Originalspur-Offset-Linie mit übernommener
+Rückmeldung und Vorhersagenutzen über vollständige Fallmengen. Ein häufiger,
+aber irreführender Teilhinweis und die Verdrängung warmer Altspuren sind
+als Gegenfälle beschrieben. Die Slots sind strukturell budgetiert;
+Heap-, Frame- und Laufzeitqualifikation sowie Nutzen bleiben ungeprüft.
+
+Nächste Entscheidung beim Projektleiter: genau diese Regel einschließlich
+geänderter Retained-Bedeutung, Vorhersagegrenze und Verlustseite abnehmen
+oder fachlich verwerfen. Implementierung und neutrale Tests benötigen einen
+weiteren Auftrag. Die abgeschlossene K1-Diagnose wurde nicht wiederholt.
+
+## Historischer verbindlicher Stand: K1-Feedbackdiagnose abgeschlossen; kein weiterer Fristversuch begründet (2026-10-04)
+
+Der negative K1-Primärbefund ist abgenommen. Die reine Archivdiagnose ordnet
+alle31 hinzugewonnenen und fünf verlorenen T1-Vorkommen vollständig zu.
+31 zusätzliche Vorkommen entsprechen30 Originalspuren und31 Spur-Offset-Linien.
+Alle31 Abrufe sind die jeweils erste berechtigte Feedbackgelegenheit und kalt.
+
+Bei27 zusätzlichen Vorkommen wird die Prognose vor dem Abschluss c+8 eingefroren,
+der Kandidat bei c+8 ersetzt und Feedback bei c+9 wegen totem Schlüssel verworfen.
+Vier Rückmeldungen werden übernommen; keine Linie wird danach erneut berechtigt
+abgerufen. Zwei echte Promotionen erhalten die Originale. Der andere Offset
+derselben Spur ist ein eigener Fehlerschlüssel, kein Promotionsverlust.
+
+[Diagnosebericht](reports/s2uc/k1-feedback-diagnosis-20261004-01/REPORT.md),
+[vollständige Zuordnung mit Belegstellen](reports/s2uc/k1-feedback-diagnosis-20261004-01/mapping.csv),
+[Einzelketten beider Varianten](reports/s2uc/k1-feedback-diagnosis-20261004-01/occurrences.json).
+
+Die fünf unter K1 verlorenen Originalspuren werden dort gar nicht aufgenommen.
+U übernimmt jeweils Feedback, ersetzt sie aber vor erneuter berechtigter Nutzung.
+F1/F2 zeigen dagegen tatsächlich Aufnahme, lebendiges Feedback, erhaltende
+Promotion und erneuten Abruf. Zehn später wertgleiche Hinweise nach K1-Verlust
+sind diagnostische Wiederkehr, keine damals verfügbaren Hypothesen.
+
+Empfehlung: K1-Teilzweig mit diesem Ursachenbefund abschließen und deaktiviert
+lassen. Die Annahme aufgeben, ein pauschaler zusätzlicher Viererblock erzeuge
+bereits später nutzbare Erfahrung. Kein weiterer konkreter Speicherregelversuch
+ist durch diese Diagnose begründet. Für künftige Entwürfe muss der vollständige
+Feedback-/Wiederabrufzyklus unter Budget die prüfbare Anforderung sein.
+Keine neuen Quellen, Replays, Fristen oder Parameter; Laufarchiv unverändert.
+Dies beendet den K1-Teilzweig, nicht das Gesamtprojekt; fachliche Entscheidung
+über einen anderen Ansatz bleibt beim Projektleiter.
+
+## Historischer verbindlicher Stand: U/K1-Einmallauf abgeschlossen; Primärnutzen nicht nachgewiesen (2026-10-04)
+
+Der separat freigegebene Vergleich ist COMPLETE und technisch AUSWERTBAR:
+24/24 Fälle,48/48 Arme,3.584 Aufnahmen und eigene Referenzfortschreibungen,
+872 bewertete Ziele je Variante. Kein Abbruch oder erneuter Start.
+
+[Abschlussbericht](reports/s2uc/k1-comparison-assessment-20261004-01/REPORT.md),
+[alle872 Zielvergleiche](reports/s2uc/k1-comparison-assessment-20261004-01/targets.csv),
+[24 Fallwerte](reports/s2uc/k1-comparison-assessment-20261004-01/case-metrics.csv),
+[versiegelter Laufabschluss](reports/s2uc/k1-comparison-20261004-01/closure.json).
+
+Mechanismus NICHT_NACHGEWIESEN: lebende modale Nachfolger mit vorherigem Feedback
+bleiben in T1 bei80/624 für U und K1.31 zusätzliche T1-Nachfolger sind beim Abruf
+kalt; keine zusätzliche warme Möglichkeit. Alle T1-Prognosefehler bleiben gleich.
+Gesamtnutzen NICHT_NACHGEWIESEN trotz besserem F- und Gesamtmittel, weil die
+vorab verlangte strikte T1-Verbesserung fehlt. Anpassung bleibt0/52.
+
+Schadensgrenze EINGEHALTEN, keine Schadensfreiheit:20 Zielverbesserungen,
+11 Verschlechterungen,841 Gleichstände. Größter Zielschaden0,0078125.
+Gewinn F1, verlorene neue Erfahrung F2 und irreführende alte Erfahrung F3
+sind konkret belegt. Alle Änderungen der Vorhersage liegen in den F-Fällen.
+
+Limits eingehalten; Worker4,166s, Supervisor vor Abschluss5,946s;
+Zusatzheap maximal6.084 Byte, Bank416 Byte. Die Einmalfreigabe ist verbraucht.
+Defaults bleiben deaktiviert. F1–F8 sind jetzt ausgeführtes Entwicklungsmaterial;
+T1 bleibt bekannt. Kein unabhängiger Transfernachweis und keine Regeloptimierung.
+
+Empfohlener nächster Auftrag an den Entwickler: ausschließlich gespeicherte
+Belege der31 zusätzlichen T1-Nachfolger auf Feedback- und Wiederkehrzeitpunkte
+prüfen. Erst daraus einen möglichen weiteren Ansatz begründen. Keine neue
+Ausführung oder Änderung der Erhaltungsdauer ist daraus bereits freigegeben.
+
+## Historischer verbindlicher Stand: U/K1-Vergleichshülle neutral qualifiziert; Einmalausführung offen (2026-10-04)
+
+K1 ist im dokumentierten neutralen Prüfumfang technisch abgenommen.
+Die vollständige Vergleichshülle V2 für alle24 Vertragsfälle ist implementiert
+und neutral qualifiziert:15/15 Prüfungen PASS. Der neutrale Gesamtablauf umfasst
+48 Arme,3.584 Aufnahmen,3.584 eigene Referenzfortschreibungen und872 Ziele.
+K1-Regel, Defaults und Bewertungskriterien bleiben unverändert.
+
+[Abschlussbericht](reports/s2uc/k1-comparison-preparation-assessment-20261004-01/REPORT.md),
+[Vorstartbindung](docs/S2UC_K1_VERGLEICH_V2_20261004_VORSTARTBINDUNG.json),
+[ausführbarer Aufruf und Freigabegrenze](docs/S2UC_K1_VERGLEICH_V2_20261004_AUFRUF.md).
+
+Vorbereitung rund2,34MB unter8MiB; feste Exportkappen einschließlich maximaler
+Vorbereitung und Abschlussreserve61,75MiB unter64MiB. Die Hülle überwacht
+3.600s Gesamtzeit mit3.540s Workerfrist und60s Abschlussreserve. Fehler vor
+Workerstart, Zeitlimit, Abbruch, Workerfehler und Exportüberschreitung sind
+neutral geprüft und hinterlassen einen terminalen Beleg.
+
+Keine F1–F8-Materialisierung und kein T1-Forschungsreplay ausgeführt. Neutrale
+Ersatzdaten sind kein Forschungsergebnis. Die getrennten Urteile Technik,
+Mechanismus, Gesamtnutzen und Schaden bleiben für den Vergleich offen.
+Verlorene neue Erfahrungen und Schäden werden vollständig erfasst.
+
+Nächste Entscheidung beim Projektleiter: die Vergleichshülle abnehmen und
+gegebenenfalls genau einen Vergleich aller16 bekannten T1-Fälle und F1–F8
+separat beauftragen. Die operative Autorisierung existiert noch nicht.
+Wissenschaftliche Frage: Überwiegt zusätzlich nutzbare alte Erfahrung den
+Preis verworfener neuer Spuren? Kein neuer Transfernachweis und kein Tuning.
+
+## Historischer verbindlicher Stand: K1 implementiert und neutral qualifiziert; technische Abnahme offen (2026-10-04)
+
+K1 ist optional implementiert. Die gespeicherte Qualifikation02 bestätigt
+K01–K10 mit10/10 PASS; ergänzende Ausgabe- und Ticketprüfungen sind bestanden.
+Der aktuelle Code stimmt mit der Prüfbindung überein. Defaults bleiben deaktiviert.
+
+[Abschlussbericht](reports/s2uc/k1-implementation-assessment-20261003-01/REPORT.md),
+[Codebindung](docs/S2UC_K1_IMPLEMENTIERUNGSBINDUNG_20261003.json),
+[Aufrufspezifikation und Startgrenze](docs/S2UC_K1_VERGLEICH_AUFRUF_20261003.md).
+
+Gemessener Zusatzheap maximal9.136 Byte,16 Originalframes, zwei Ausgabeslots
+und416 Byte Bank im neutral geprüften Umfang. Kein Forschungsvorteil nachgewiesen.
+Verlorene neue Erfahrung, Kandidatenverlust durch feste Frist und ein neutraler
+Zielschaden von0,00390625 gegenüber U sind dokumentiert.
+
+Keine F1–F8-Materialisierung, kein T1-Replay und kein24-Fälle-Vergleich ausgeführt.
+Der bisherige Konzeptstand unten ist historisch. Die technische Abnahme des
+Implementierungspakets liegt jetzt beim Projektleiter. Empfohlener Folgeauftrag:
+gebundene Vergleichshülle samt Auswerter, Quellen/Masken und neutraler Startprüfung
+vorbereiten. Ein ausführbarer24-Fälle-Executor fehlt noch; eine Vergleichsfreigabe
+ist damit nicht vorweggenommen. T1 bleibt bekanntes Entwicklungsmaterial.
+
+## Historischer verbindlicher Stand: Konzeptvertrag Kandidatenerhaltung K1 zur Abnahme (2026-10-03)
+
+Die T1-Ursachenanalyse ist abgenommen. Genau ein Konzeptvertrag liegt vor:
+[K1: ein zusätzlicher Viererblock Kandidatenerhaltung](docs/S2UC_KANDIDATENERHALTUNG_K1_KONZEPTVERTRAG_20261003.md).
+Ein neuer, abweichender Zwischenblock wird verworfen; spätestens am zweiten
+Folgeabschluss endet der alte Kandidat durch Promotion, Freigabe oder Ersetzung.
+Die feste Frist wird aus bestehenden Originalordinalen abgeleitet; keine neuen
+persistenten Metadaten, kein Zusatzkandidat und keine Wiederherstellung gelöschter Spuren.
+
+Segmentierung, Abruf, Fehlerbewertung und Auswahl bleiben im Entwurf unverändert.
+Zwei bestätigte Spuren, ein Kandidat,18 Originalframes und416 gepackte Bytes
+bleiben verbindlich. Die strukturelle Budgetbilanz ersetzt keine spätere Messung.
+Der Preis verlorener neuer Spuren und ein vorab erwarteter Gegenfall mit irreführenden
+alten Fehlerwerten sind ausdrücklich Bestandteil des Vergleichsvertrags.
+
+Geplanter Vergleich: U gegen K1 auf allen16 bekannten T1-Fällen und acht vollständig
+festgelegten Entwicklungsgegenfällen. Gesamtnutzen über alle Ziele, getrennte
+Verfügbarkeit, vorzielliches Feedback, Entscheidungen und Schäden. Keine Dauersuche.
+Keine Implementierung, Quellenmaterialisierung, Qualifikation oder Ausführung erfolgt.
+Nächster Schritt beim Projektleiter: Konzeptregel und Gegenprüfvertrag abnehmen;
+erst danach gegebenenfalls genau K1 zur Implementierung und neutralen Qualifikation
+beauftragen. Keine heutige Ausführungsfreigabe. Defaults bleiben deaktiviert.
+T1 bleibt bekanntes Entwicklungsmaterial; kein erneuter unberührter Transfernachweis.
+
+## Historischer verbindlicher Stand: T1-Ursachenanalyse abgeschlossen (2026-10-03)
+
+T1 ist als vollständig ausgewerteter negativer Anpassungs-/Nutzen-Transferbefund
+abgenommen; Defaults bleiben deaktiviert. Die beauftragte Diagnose aus gespeicherten
+Belegen umfasst alle32 potenziell prüfbaren Übergänge und324 Prüfziele.
+201 Ziele haben frühere aufgenommene exakte Hinweise, aber nur3 lebende Matches,
+2 berechtigte Nachfolger und0 warme berechtigte Schlüssel. Bei133 Zielen war eine
+passende berechtigte Originalspur früher gespeichert und vor Wiederkehr ersetzt;
+bei108 davon entsprach ihr Nachfolger dem Modalwert. Segmentierungsgrenzen bestehen
+zusätzlich. Promotion erhält Originalspuren; bestätigte Verdrängung ist hier nicht belegt.
+
+[Ursachenbericht](reports/s2uc/t1-cause-analysis-20261003-01/REPORT.md),
+[vollständige Zielzuordnung](reports/s2uc/t1-cause-analysis-20261003-01/target-map.csv),
+[Einzelbelege](reports/s2uc/t1-cause-analysis-20261003-01/targets.json).
+Keine neuen Quellen, Policy-Replays oder Parameteränderungen. Historische Vorkommen
+sind ausschließlich diagnostisch und keine damals verfügbaren Systemhypothesen.
+
+Genau eine nächste Forschungsfrage: Erhöht budgetneutrale längere Erhaltung
+gebildeter Kandidatenspuren den Anteil potenziell prüfbarer Ziele mit lebendem
+modalem Nachfolger und vorziellichem Feedback gegenüber bisheriger Ersetzung,
+bei unveränderter Segmentierung, Abruf- und Auswahlregel?
+Der Projektleiter entscheidet auf dieser Grundlage über einen begrenzten Folgeauftrag;
+keine Architekturänderung oder neue Ausführung ist daraus bereits freigegeben.
+T1 ist bekanntes Entwicklungsmaterial und kein erneuter unberührter Transfernachweis.
+Aussagegrenze bleibt synthetische48-Vektor-Grenze; alter Raster32-Lauf separat
+NOT_EVALUABLE. Beide T1-Laufarchive bleiben geschlossen und unverändert.
+
+## Historischer verbindlicher Stand: T1-Transferprüfung vollständig abgeschlossen (2026-10-03)
+
+T1-START-V3-Einmallauf COMPLETE:16/16 Fälle,80/80 Arme,1.280 Quellpositionen,
+6.400 Aufnahmen plus6.400 Referenzfortschreibungen. Kein Abbruch oder Wiederholung.
+Wiedererkennung BELEGT:11/16 Fälle,4 Gruppen. Anpassung0/52 und G-Gesamtnutzen
+NICHT_NACHGEWIESEN. Stabilitäts-/Schadensgrenze BELEGT; keine Schadensfreiheit:
+ein Ziel gegenüber K um0,0024005572 schlechter, größter Fallabstand0,00006155275.
+U/M/E/P im G-Mittel gleich; K geringfügig besser. Keine Kontextwahl durch U.
+
+Verfügbarkeit über624 Ziele:528 ohne berechtigten Kontext,7 tatsächliche Nachfolger
+fehlen,9 kalt,80 warm. Alle52 Übergänge einschließlich20 negativer I/H-Kontrollen
+bleiben im Nenner; modale Anpassung und realisierte Prognosefehler getrennt.
+G_w bleibt festes Zeitfenster. Kein Quellenüberlapp im gebundenen Herkunftsindex.
+
+Laufabschluss535,9044721s vor eigenem terminalem Schreibvorgang, Worker Exit0.
+Maximaler Zusatzheap6.033/16.384 Byte; konservative Exportbilanz einschließlich
+externer Berichtsreserve14.453.566/67.108.864 Byte. Bindungen unverändert.
+Einmalfreigabe verbraucht. Erster Startfehlversuch unverändert separat geschlossen.
+
+[Abschlussbericht](reports/s2uc/t1-transfer-assessment-20261003-02/REPORT.md),
+[Einzelbefunde und Ressourcen](reports/s2uc/t1-transfer-assessment-20261003-02/facts.json),
+[ursprüngliche Gesamtauswertung](reports/s2uc/t1-transfer-20261003-02/assessment.json),
+[Abschlussbilanz](reports/s2uc/t1-transfer-assessment-20261003-02/closure.json).
+
+Empfehlung an den Projektleiter: den vollständigen negativen Anpassungs-/Nutzen-
+Transferbefund abnehmen; anschließend eine begrenzte lesende Ursachenanalyse der
+32 nichtnegativen Übergänge aus vorhandenen Belegen beauftragen. Kein Tuning,
+keine Kriterienänderung oder erneute Ausführung daraus ableiten. Defaults aus.
+Nur synthetische48-Vektor-Grenze; kein Audio-/Video-Kettentransfer.
+Alter Raster32-Lauf bleibt separat NOT_EVALUABLE.
+
+## Historischer verbindlicher Stand: administrative T1-Startkorrektur V3 qualifiziert (2026-10-03)
+
+Der technische T1-Fehlversuch ist geschlossen und als NOT_EVALUABLE angenommen.
+Die separat beauftragte administrative Korrektur ist umgesetzt: Claim155/1.024 Byte,
+Zusatzbilanz separat, exakte Serialisierung vor Reservierung, begrenzter früher
+Fehlerabschluss auch ohne Worker. Neutrale Tests A01–A12:12/12 bestanden.
+Keine T1-Quelle erzeugt, keine Policy-Replays und keine neue operative Autorisierung.
+Fachliche T1-V2-Qualifikation wiederverwendet; Policy und Kriterien unverändert.
+
+[Abschlussbericht](reports/s2uc/t1-start-v3-assessment-20261003-01/REPORT.md),
+[Test- und Budgetbelege](reports/s2uc/t1-start-v3-assessment-20261003-01/facts.json),
+[neue Startbindung](docs/S2UC_T1_START_V3_BINDUNG_20261003.json),
+[vorbereiteter Aufruf](docs/S2UC_T1_START_V3_AUFRUF_20261003.txt).
+Vorlage bleibt PENDING_SEPARATE_AUTHORIZATION; neues Ziel t1-transfer-20261003-02
+ist nicht angelegt. Der frühere Fehlversuch bleibt unverändert erhalten.
+
+Nächster Schritt beim Projektleiter: administrative Korrektur fachlich abnehmen
+und danach gegebenenfalls eine neue ausdrückliche Einmallauffreigabe erteilen.
+Keine Ausführung aus diesem Vorbereitungspaket ableiten. Defaults deaktiviert;
+nur synthetische48-Vektor-Grenze, kein Audio-/Video-Kettentransfer.
+Alter Raster32-Lauf bleibt separat NOT_EVALUABLE.
+
+## Historischer verbindlicher Stand: T1-Einmallauf technisch abgebrochen (2026-10-03)
+
+Die T1-V2-Vorbereitung wurde fachlich abgenommen und der Einmallauf freigegeben.
+Der Startversuch brach vor Workerstart mit FILE_CAP:claim.json ab: zusätzliche
+Bilanzmetadaten im administrativen Aufruf überschritten die1.024-Byte-Dateigrenze.
+Die Grenze wies den Startbeleg vor dem Schreiben zurück. Keine T1-Quellen,
+keine gestarteten Arme, keine Arm-Aufnahmen oder Referenzfortschreibungen.
+
+Alle fachlichen Transferurteile sind NOT_EVALUABLE; kein negativer Transferbefund.
+Policy und Kriterien bleiben unverändert. Die Einmalfreigabe ist für den
+Fehlversuch verbraucht; keine Fortsetzung, Reparatur oder Wiederholung erfolgt.
+Das ursprüngliche Laufverzeichnis mit seinem Startzeitbeleg bleibt erhalten.
+
+[Teilabschlussbericht](reports/s2uc/t1-transfer-assessment-20261003-01/REPORT.md),
+[Einzelurteile und Belegbilanz](reports/s2uc/t1-transfer-assessment-20261003-01/result.json),
+[Abschlussbilanz](reports/s2uc/t1-transfer-assessment-20261003-01/closure.json).
+
+Empfehlung an den Projektleiter: technischen Teilabschluss abnehmen und ein
+separates enges Paket für die administrative Startkorrektur beauftragen.
+Zusatzbilanz außerhalb des begrenzten Startbelegs halten und frühen Fehlerabschluss
+absichern. Keine wissenschaftliche Kriterienänderung aus diesem Fehler ableiten.
+Ein erneuter Versuch benötigt neue ausdrückliche Einmallauffreigabe und neues Ziel.
+Synthetische48-Vektor-Grenze; kein Audio-/Video-Kettentransfer. Defaults deaktiviert.
+Alte Raster32-Evaluation bleibt separat NOT_EVALUABLE.
+
+## Historischer verbindlicher Stand: T1-V2-Vorbereitung qualifiziert (2026-10-03)
+
+**T1-Vertrag abgenommen, Vorbereitung V2 qualifiziert, fachliche
+Vorbereitungsabnahme noch offen, T1-Ausführung nicht freigegeben.**
+
+Die separate Quellen-/Auswertungshülle ist implementiert. Gespeicherte
+V2-Qualifikation: PASS, elf Vorbereitungstests und vier Belegtests bestanden,
+zehn neutrale Replays. Der erhaltene V1-Fehlversuch enthält fünf weitere
+abgeschlossene neutrale Replays; insgesamt15 im T1-Entwicklungspaket.
+Die V2-Korrektur betrifft die Belegprüfung vorziellicher Fehlerwerte bei
+Promotion und verlorenen Schlüsseln. U/M/E/K/P bleiben unverändert.
+Keine T1-Evaluationsquelle erzeugt, keine T1-Evaluation ausgeführt.
+
+Alle52 Übergänge einschließlich20 negativer I/H-Kontrollen bleiben im Nenner;
+Kontrollen werden zusätzlich separat ausgewiesen. G_w bleibt das feste späte
+Zeitfenster und setzt keine warme Verfügbarkeit voraus. Begrenzter synthetischer
+Transfer ab der48-Vektor-Grenze, kein Audio-/Video-Kettentransfer.
+
+Die gespeicherte Zeitplanung beträgt2.066,196404s bei3.600s Gesamtgrenze;
+sie ist eine Hochrechnung. Maximaler neutral gemessener Zusatzheap6.033/16.384 Byte.
+Der [vollständige Vorbereitungsbericht](reports/s2uc/t1-preparation-assessment-20261003-01/REPORT.md)
+enthält Dateien, Test-IDs, V1/V2-Ausführungsbilanz, Bindung, Ressourcen und Grenzen.
+[Bindung](docs/S2UC_T1_V2_BINDUNG_20261003.json) und
+[vorbereiteter Aufruf](docs/S2UC_T1_V2_AUFRUF_20261003.txt) bleiben unverändert.
+Die Autorisierungsvorlage bleibt PENDING_SEPARATE_AUTHORIZATION.
+
+Nächster Schritt beim Projektleiter: fachliche Abnahme dieses Vorbereitungspakets;
+danach gegebenenfalls separate Einmallauffreigabe für die unveränderte T1-Prüfung.
+Keine erneute Qualifikation oder Optimierungsserie. Alte Raster32-Evaluation
+bleibt NOT_EVALUABLE; die technische Wiederholung bleibt separat abgeschlossen.
+
+## Historischer verbindlicher Stand: Transfervertrag T1 zur Abnahme (2026-10-03)
+
+Genau ein [Transfervertragsentwurf](docs/S2UC_TRANSFERPRUEFVERTRAG_T1_20261003.txt)
+liegt vor. Nur Konzeption; keine Implementierung, Quellenmaterialisierung,
+Ausführung oder neue Autorisierung. Laufzeit-/Integrationszweig abgeschlossen.
+
+Vorgesehen sind16 neue synthetische, mehrdimensionale Zustandsverläufe mit
+je80 Positionen, festem Quellenverfahren, neuen Symbolbereichen und variablen
+Phasen. U/M/E/K/P bleiben eingefroren. Wiedererkennung, Verfügbarkeit,
+Warmwahl/Anpassung, Gesamtnutzen und Schäden werden getrennt beurteilt;
+kurze und strukturell negative Phasen bleiben in den Nennern.
+
+Dies wäre Transfer ab der48-Vektor-Grenze, kein Audio-/Video-Kettentransfer.
+Die künstliche exakte Wiederkehr des endlichen Alphabets ist offengelegt.
+Der Exact-Pfad besitzt keine invariante Wiedererkennung verrauschter Werte.
+Nächster Schritt: fachliche Abnahmeentscheidung über diesen Vertrag;
+keine automatische Umsetzung. Alte Raster32-Evaluation bleibt NOT_EVALUABLE.
+
+## Historischer verbindlicher Stand: technische Wiederholungsprüfung vollständig abgeschlossen (2026-10-03)
+
+V4-Einmallauf COMPLETE:32/32 Fälle,160/160 Arme U/M/E/K/P vollständig neu.
+2048 Quellpositionen,10240 Arm-Aufnahmen plus10240 separat geprüfte
+Referenzfortschreibungen. Lauf einschließlich tatsächlichem Abschluss1426,334740s
+unter3600s; kein Zeitabbruch,keine Wiederholung oder Reparatur im Lauf.
+V4-Bindung und Qualifikationen unverändert,Einmalautorisierung verbraucht.
+
+Getrennte Kriterien: **Anpassung48/48,H-Nettonutzen,G-Gesamtnutzen sowie
+Stabilität/Schadensgrenze BELEGT innerhalb des bekannten Rasters.**
+Je Dauer24/24 und je Richtung24/24 Wechsel bestanden. Primäre Fallmittel:
+H U0,074013 gegen M0,232581/E0,259495/K0,205667/P0,375000;
+G U0,410640 gegen M0,487232/E0,500192/K0,474272/P0,556020.
+S_w:U/M/K jeweils0. Keine Umdeutung zu Schadensfreiheit:
+32 kalte Anfangsziele7 schlechter als K,5 schlechtere Fallmittel;
+größter G-Fallabstand1/46<1/32,größter Zielschaden0,5.
+H:28 Sollkontexte fehlen,60 kalt,392 warm;kein Ziel aus Nennern entfernt.
+N:512 Ziele ohne berechtigten Kontext,kein Vorteil gegenüber Baselines.
+
+Alle160 Ressourcen-/Freigabeprüfungen bestanden;maximaler Zusatzheap5161/16384 Byte.
+32 Einzelbelegprüfungen und Gesamtaggregation aus neuen gespeicherten Daten
+nachgerechnet und mit den Workerbelegen abgeglichen. Nachauswertung ohne Replays.
+
+**Evidenzstatus: technische Wiederholungsprüfung bekannter Daten,keine
+unberührte Evaluation. Ursprünglicher Raster32-Lauf bleibt geschlossen
+und global NOT_EVALUABLE.** Keine Zusammenführung alter/neuer Ergebnisarme.
+
+[Abschlussbericht](reports/s2uc/technical-repeat-assessment-20261003-01/REPORT.md),
+[getrennte Urteile](reports/s2uc/technical-repeat-assessment-20261003-01/aggregate.json),
+[Verfügbarkeit/Anfangskosten](reports/s2uc/technical-repeat-assessment-20261003-01/availability-and-costs.json),
+[Zeitwächterchronologie](reports/s2uc/technical-repeat-assessment-20261003-01/chronology.json),
+[Abschlussbilanz](reports/s2uc/technical-repeat-assessment-20261003-01/closure.json).
+
+Nächste Empfehlung an den Projektleiter: technischen Integrations-/Laufzeitzweig
+abschließen;vorab festgelegten Transferprüfvertrag für bislang unberührte
+Wahrnehmungsverläufe mit kalten Anfängen,Kontextausfällen und variablen
+Wechselabständen formulieren,K als starke Baseline beibehalten.
+Dies ist keine neue Ausführungsfreigabe. Keine weitere Optimierungsserie
+oder automatische Policyänderung. Übertragbarkeit außerhalb der bekannten
+exakten Aufgabenfamilie bleibt NICHT_GEPRUEFT.
+
+## Historischer verbindlicher Stand: Sample-Beobachter integriert, Laufzeitplan abgeschlossen (2026-10-03)
+
+Separat gebundener Endstand V4 übernimmt den qualifizierten Sample-Beobachter
+in die bestehende V2-Hülle. Genau zehn neutrale JSON-Replays N1/N2 × U/M/E/K/P,
+je80 Positionen, über den tatsächlichen Workerpfad; keine Zeitwiederholung.
+Fachgleichheit10/10, strukturelle Ressourcenvergleiche10/10, vollständiges Cleanup.
+Neue Prüfungen J01–J07:7/7 PASS; frühere Qualifikationen unverändert übernommen.
+
+V3-Matrix vollständig; nachgelagerter U-Vergleich zunächst zu streng für
+Heapmesswerte. V4 repariert nur diese Prüfung, erhält den Fehlerstand und
+alle Rohabweichungen. Worker/Engine/Watchdog/Gates AST-identisch; keine neuen Replays.
+Maximaler Zusatzheap5184/16384 Byte. Matrix samt Abschluss106,551s.
+
+Einheitlicher Plan: je Baselinearm langsamerer integrierter80er-Wert ×32 ×1,25
+plus unverändert180s Verwaltung,30s U,60s Abschluss: **2709,087s**.
+**890,913s Reserve** zu3600s; separate technische Wiederholung empfohlen,
+keine absolute Laufzeitgarantie. Unveränderter Worker-Hardstopp nach3540s.
+
+[Abschlussbericht](reports/s2uc/technical-repeat-preparation-assessment-20261003-02/REPORT.md),
+[Zeitplan](reports/s2uc/technical-repeat-preparation-20261003-04/time-plan.json),
+[V4-Bindung](docs/S2UC_TECHNISCHE_WIEDERHOLUNG_V4_BINDUNG_20261003.json).
+
+Nächster Schritt: Projektleiterentscheidung über separate technische Einmallauffreigabe.
+Keine weitere Optimierungsserie. Nur PENDING-Vorlage; **Raster32 bleibt geschlossen
+und global NOT_EVALUABLE. Keine Rasterausführung und keine operative Freigabe.**
+
+## Historischer Stand: PerceptionSample-Blattfall separat neutral qualifiziert (2026-10-03)
+
+Beauftragter Sample-Blattfall umgesetzt in tools/_s2uc_sample_leaf_observer_v1.py.
+Nur exakt PerceptionSample,exakt tuple mit48 echten floats,exakt skalare
+profile/owner/stream-Strings und index/start_sample/end_sample-Integer
+duerfen nach unveraenderter seen-Erfassung den weiteren Abstieg auslassen.
+Unterklassen,mutable/custom Payloads und unklare Feldtypen bleiben beim
+vollstaendigen Visitor. Keine Wertededuplizierung,Cache,Stackverkuerzung,
+Quellen-/Policy-/Traceaenderung. Alter Frame-Blattfall unveraendert erhalten.
+
+S01–S10:10/10 bestanden,keine Fehler/Skips. AST-Minimalitaet,erreichbare
+Frame-ID-Mengen,Slots/Transientgrenzen,Budgetfehler,Aliase/Zyklen,
+Frame-/Sample-Unterklassen,verborgene Frames in allen sieben Samplefeldern,
+mutable Nachaenderung,bool-Index-Fallback,sechs Hypothesen,Promotion,
+Verdraengung und vier Unterbrechungspunkte mit Fehlercleanup.
+Isolierter Observerpeak7176→5592 Byte;kein persistenter Cache.
+
+Vor Matrix Plan und drei neue Dateien gebunden. Frischer Worker nach
+Unitqualifikation;genau16 Replays mit gespeicherten JSON-Quellen N1/N2,
+je80 Positionen,M/E/K/P. N1 OLD/NEW,N2 NEW/OLD.1280 Aufnahmen+1280
+Referenzfortschreibungen. Voller Trace,keine Diagnosezaehler oder zusaetzlichen
+Test-/Mock-Aufrufrahmen,keine Warmups oder Zeitwiederholungen. Quellenlesen/
+Digest und Export ausserhalb identisch begrenzter Wall-/CPU-Replaymessung.
+
+OLD124,1053624 s,NEW97,4527171 s:21,4758 Prozent weniger Replayzeit.
+Alle acht Paare schneller (19,64 bis24,87 Prozent). Matrix einschliesslich
+Abschluss222,848014 s/900 s;Paket vor letztem Abschluss1473573 Byte plus
+65536 Byte Abschlussreserve,unter16 MiB.
+8/8 Fachbelege und saemtliche Meterfelder gleich;allevollstaendig freigegeben.
+Vollstaendige Ressourcenobjekte in sechs Paaren gleich,in zwei ausschliesslich
+Heapunterschiede:N1/M4548→2724 Byte,N2/M2860→2892 Byte. Die32 Byte Erhoehung
+bleibt dokumentiert;kein nachtraegliches Wegfiltern. Alles unter16384 Byte.
+Meterframepeak12,Slots2,kombiniert13,transiente Frameobergrenze12,
+Receipt454 Byte/UTF8-Obergrenze908 Byte. Gepackter Bound416 Byte unveraendert.
+
+Neue Bindung SHA256:
+7ad1818a644f381bbcfc503ccd61e324bc8c4389bee1c390c07515a3d3260ead.
+Historische Dateien,Bindungen,Exporte und Rasterautorisierung unveraendert.
+[Bericht](reports/s2uc/sample-leaf-assessment-20261003-01/REPORT.md),
+[Test-IDs](reports/s2uc/sample-leaf-assessment-20261003-01/tests.json),
+[Ressourcen-/Fehlerbelege](reports/s2uc/sample-leaf-assessment-20261003-01/test-facts.json),
+[Messpaare/Hochrechnung](reports/s2uc/sample-leaf-assessment-20261003-01/analysis.json),
+[Bindung](docs/S2UC_SAMPLE_BLATT_V1_BINDUNG_20261003.json).
+
+Aktualisierte Zeitplanung ausdruecklich HOCHRECHNUNG:schwaechste gemessene
+NEW/OLD-Quote0,803642 auf bisherige Baselineplanung angewandt;25 Prozent
+Zuschlag und180 s Verwaltung+30 s U+60 s Abschluss bleiben. Konservativer
+Plan6330,09→5140,14 s;historische48/80-Kontextklassen4760,36→3878,64 s.
+Neutrales Direkt-Kontextmodell2541,87 s ist keine obere Schranke.
+Transfer auf gesamten Hüllenstack unbewiesen,keine Streuungsschaetzung oder
+Hostlastkontrolle. Beide historisch gestuetzten Szenarien bleiben ueber3600 s;
+ausreichende Reserve fuer vollstaendigen Rasterlauf weiterhin nicht belegt.
+
+Naechster begrenzter Vorschlag beim Projektleiter:qualifizierten Sample-
+Beobachter in einer separat beauftragten Version der bestehenden Huelle
+uebernehmen und neu binden,mit unveraenderten Ressourcen-/Autorisierungssperren.
+Diese operative Integration ist noch NICHT erfolgt. Keine weitere
+Optimierungsvariante oder Rasterausfuehrung aus diesem Abschluss ableiten.
+Raster32 bleibt geschlossen und global NOT_EVALUABLE;keine neue Rasterfreigabe.
+
+## Historischer Stand: begrenzte2x2-Identitäts-/Stackdiagnose abgeschlossen (2026-10-03)
+
+Beauftragte Diagnose in exakt gebundener Reihenfolge abgeschlossen:
+A direkt/geteilte Floats,B direkt/JSON,C integrierte Testhuelle/JSON,
+D integrierte Testhuelle/geteilt. Genau vier N2/M-Replays mit je80 Positionen,
+320 Aufnahmen+320 Referenzfortschreibungen. Numerisch gleiche Quelle,
+gleicher qualifizierter Visitor,Trace voll aktiv,identischer Zaehlercode.
+Keine Warmups,Wiederholungen oder zusaetzlichen Kombinationen.
+
+Isolierte Wall-/CPU-Zeiten in Sekunden:
+A19,023107/19,015625;B23,906571/23,812500;
+C25,304781/25,281250;D21,679324/21,687500.
+Quellenaufbereitung und Export ausserhalb Replay separat gespeichert.
+Gesamtdiagnose90,940278 s/900 s. Paket vor letztem Abschluss516830 Byte,
+65536 Byte Abschlussreserve,unter16 MiB. Historische Bindungen unveraendert.
+
+Alle Kombinationen:172135 Traceereignisse,76050 Samplebesuche,
+729704 Frame-Blattfalltreffer. JSON erhoeht die kumulierte samplelokale
+Float-Identitaetssumme um3574350 und die nach seen noch neuen Floatbesuche
+um3578815. Letztere zaehlen pro Tracecallback,keine gleichzeitig lebenden
+Objekte. Integrierte Huelle verursacht684450 weitere Stack-/Dateinamenchecks
+=9 weitere aeussere Rahmen je relevantem Basisvisitorereignis. Beide
+Arbeitsunterschiede unabhaengig im Zaehlervergleich belegt.
+
+Fachbelege und alle Meterfelder exakt gleich;keine nachtraegliche Feldfilterung.
+Vollstaendige Ressourcenobjekte unterscheiden sich ausschliesslich im
+additional_python_peak:A4316,B2860,C2724,D2724 Byte. Alle unter16384 Byte;
+Abweichung erhalten,Ursache nicht separat allokationsprofiliert.
+Meterframes12,Slots2,kombiniert13,transiente Obergrenze12,Receipt454 Byte,
+UTF8-Obergrenze908 Byte. Vollstaendige terminale/EMA-/Ausgabefreigabe.
+D2X01_COUNTER_AST_AND_SYNTHETIC_SNAPSHOT bestanden,ohne Policy-Replay.
+
+Zeitkontraste:JSON direkt+4,883464 s,integriert+3,625457 s;
+Huelle/geteilt+2,656216 s,Huelle/JSON+1,398209 s.
+MittelwerteIdentitaet4,254460 s,Huelle2,027213 s;
+WechselwirkungWall-1,258007 s/CPU-1,203125 s. Arbeitszaehler trennen Faktoren,
+Zeiten sind nicht exakt additiv. Inkremente und samplelokale ID-Mengen
+verursachen selbst volumenabhaengige Zusatzkosten. Vier Einzelmessungen
+ohne Hostlastprofil/repetitive Statistik;keine allgemeine Laufzeitgarantie
+und keine sekundengenaue Rekonstruktion der vorherigen42,06 s.
+
+[Bericht und Messgrenzen](reports/s2uc/identity-stack-diagnosis-verification-20261003-01/REPORT.md),
+[Kontraste/Gleichheit](reports/s2uc/identity-stack-diagnosis-verification-20261003-01/analysis.json),
+[vollstaendiges Exportinventar](reports/s2uc/identity-stack-diagnosis-verification-20261003-01/export-inventory.json),
+[Plan](docs/S2UC_IDENTITAET_STACK_DIAGNOSE_PLAN_20261003.json),
+[Bindung](docs/S2UC_IDENTITAET_STACK_DIAGNOSE_BINDUNG_20261003.json).
+
+Genau ein minimaler naechster Aenderungsvorschlag beim Projektleiter:
+PerceptionSample als Blatt nur bei exaktem Typ,exaktem tuple mit48 echten
+floats und ausschliesslich exakt skalaren Bindungs-/Index-/Zeitfeldern.
+seen-Erfassung erhalten;Unterklassen,mutable/custom Werte und unklare
+Typen vollstaendig traversieren. Kein Cache,keine Wertededuplizierung,
+keine weitere Stackoptimierung. Abnahme:identische Frame-IDs,Slots,
+Transientgrenzen,Budgetfehler,Fachbelege,Fallbacks mit verborgenen Frames
+und neutrale Zeit-/Speicherpruefung unter aktivem Trace.
+Dieser Patch ist NICHT implementiert oder automatisch freigegeben.
+Raster32 bleibt geschlossen/global NOT_EVALUABLE. Keine Rasterausfuehrung,
+operative Optimierung oder neue Rasterautorisierung in diesem Auftrag.
+
+## Historischer Stand: gespeicherte Laufzeitabweichung statisch eingegrenzt (2026-10-03)
+
+Auftrag ausschliesslich statische Analyse/gespeicherte Daten abgeschlossen.
+Keine neuen Replays,Policy-/Huellenaenderungen oder Autorisierung.
+Baselinequalifikation99,2578592 s gegen Integration141,3201837 s:
+42,0623245 s bzw.42,3768 Prozent Mehrzeit. Pro Arm fehlen integrierte
+monotone Einzelzeiten und CPU-Zeiten;Paarvergleich zeigt explizit UTC-
+Startintervalle. Intervallsumme142,071918 s liegt0,751734 s ueber der
+Baselinekategorie. Gesamte Engineverwaltung ausserhalb Baselines1,047881 s;
+aeusserer Export/Materialisierung/Fallpruefung erklaert nicht42,06 s Mehrzeit.
+
+Neuer Frame-Blattfall ist in beiden Aufrufpfaden derselbe und aktiv.
+GatedReplay.take bildet auch JSON-Werte in tuple um;Frames behalten
+exakten Typ,48 floats und skalare Bindungsfelder. Kein Listen-Fallback
+des Frame-Blattfalls. Fachbelege und alle Meterfelder stimmen ueberein.
+
+Zwei statisch belegte Arbeitsunterschiede ohne gemessene Zeitaufteilung:
+Direkte Fixture (x,)*48 teilt eine Float-Referenz,JSON-Lesen erzeugt48
+verschiedene Float-Identitaeten pro Vektor. PerceptionSample ist kein
+Frame-Blattfall;sein Wertefeld wird weiter traversiert.47 weitere Float-
+Identitaeten erreichen dort Typpruefungen statt sofortigem seen-Ruecksprung.
+Zudem liegen checked,active und drei unittest.mock-Dispatcher nur in der
+Integrationspruefung auf dem Stack;der Basisvisitor prueft auch Dateinamen
+irrelevanter aeusserer Stackrahmen bis zum Stackende. Gleiche samples/Peaks
+messen diese Zusatzarbeit nicht. Hostschwankung bleibt moeglich,ungemessen.
+
+Zeitplan gliedert48/80 Positionen und stabile/konkurrierende Kontexte.
+Historische beobachtete/geplante Baseline-Arme:48-stabil8/8,48-Konkurrenz56/56,
+80-stabil4/8,80-Konkurrenz43/56. Fehlende Werte nicht ergaenzt.
+Alle Modelle behalten25 Prozent Zuschlag+180 s Verwaltung+30 s U+60 s Abschluss.
+Bisheriger konservativer Plan6330,09 s bleibt unveraendert.
+Historische Klassenmaxima mit einheitlich unguenstigster NEW/OLD-Quote:
+4760,36 s;Transfer dieser Quote auf JSON/Aufrufpfad bleibt unbewiesen.
+Ohne Entlastungstransfer6015,07 s. Neutraler Kontextansatz3474,37 s,
+auch48er mit vollem80er-Preis,aber keine obere Schranke fuer alle Kontexte.
+Keine ausreichende Reserve unter3600 s nachgewiesen;kein Startauftrag.
+
+[Bericht und genau eine Anschlusspruefung](reports/s2uc/runtime-reconciliation-20261003-01/REPORT.md),
+[Paarwerte/Klassenmodelle](reports/s2uc/runtime-reconciliation-20261003-01/analysis.json),
+[Integritaetspruefung](reports/s2uc/runtime-reconciliation-20261003-01/verification.json).
+
+Konkreter naechster Vorschlag zur Entscheidung des Projektleiters:
+genau eine2x2-Diagnose N2/M,vier80er-Replays ohne Wiederholung;Faktoren
+geteilte Float-Referenzen/JSON und direkter Aufruf/integrierte Testhuelle.
+Gleicher aktiver Visitor,gleiche kanonische Quelle. Messen:Wall/CPU,
+Traceereignisse,Stack-/Dateinamenpruefungen,PerceptionSample-Besuche,
+Float-Identitaeten und Frame-Blattfalltreffer. Gleiche Diagnosezaehler
+in allenvier Armen und vollstaendige Fach-/Metervergleiche. Damit die
+beiden Faktoren und ihre Wechselwirkung trennen,bevor ein Patch gewaehlt
+wird. Vorschlag nicht implementiert/ausgefuehrt/autorisiert.
+Raster32 bleibt geschlossen und global NOT_EVALUABLE;spaetere Ausfuehrung
+nur separat autorisierte technische Wiederholungspruefung bekannter Daten.
+
+## Historischer Stand: technische Ausführungsvorbereitung V2 geprüft, Zeitreserve nicht belegt (2026-10-03)
+
+Beauftragte separate Integration des abgenommenen Frame-Blattfalls beendet.
+Neue Huelle tools/s2uc_repeat_prepare_v2.py,Tests test_s2uc_repeat_prepare_v2.py,
+Plan/Bindung/Vorlage/Aufruf S2UC_TECHNISCHE_WIEDERHOLUNG_V2_*.
+Eingefrorener execute-Bytecode,Quellenverfahren,Policy,Belegpruefer,Kriterien
+und Ressourcenlimits unveraendert. Baseline-Abhaengigkeit aktiviert den
+qualifizierten Visitor pro Aufruf und setzt ihn anschliessend zurueck.
+
+V2 I01–I07 bestanden:7/7,keine Fehler/Skips. Autorisierung vor Start,
+exklusives Verzeichnis,Normalende/Abbruch/Workerfehler,echte Abschlussverwaltung,
+Ressourcenfehler,Evidenzstatus und vorzeitige join-Rueckkehr geprueft.
+V1 hatte I03 wegen0,7951 ms vorzeitiger Abbruchanforderung nicht bestanden.
+V2 wartet nach vorzeitigem join weiter bis zur monotonen Deadline oder Exit.
+V1-Quellen/Bindung/fehlgeschlagene Qualifikation bleiben erhalten.
+
+Die bestandene V1-Integration N1/N2 je U/M/E/K/P mit80 Positionen wurde
+hashgeprueft wiederverwendet:10 Replays,800 Aufnahmen+800 Referenzfortschreibungen.
+Keine Zeitwiederholung. AST-Gleichheit der Integrationsfunktionen V1/V2
+geprueft;acht Fach-/Metervergleiche gleich,beide Fallpruefer ohne Fehler,
+alle Zustaende freigegeben. Gesamtintegration143,230698 s einschliesslich
+Abschluss;Engine142,368065 s,Baselines141,320184 s,U0,221049 s.
+Materialisierung0,000175 s,Validierung0,019296 s,Manifest0,006294 s,
+Export0,071298 s,Fallbelegpruefung0,688451 s. Neutrale Aggregation ist kein
+Zeitbeweis fuer32-Fall-Aggregation. Zusatzheappeak5184/16384 Byte.
+
+Zeitwaechter trennt Deadline,Abbruchanforderung,Workerbestaetigung und Beginn/
+Ende tatsaechlicher Abschlussverwaltung inklusive Inventar,Hashes und
+Abschlussdatei. Nur der letzte Journal-Endmarker kann seine eigene
+Schreibzeit nicht enthalten. Historischer Workerstop bleibt unbekannt.
+V2-Abbruch3,7026 ms nach Deadline,Endbestaetigung6,9464 ms spaeter.
+Kuenftig3540 s Worker+60 s Abschluss innerhalb unveraenderter3600 s.
+
+Konservativer Zeitplan:128 Baseline-Arme ×48,458863 s historischer
+Maximalabstand ×0,781602 schlechteste gemessene NEW/OLD-Quote ×1,25
+Hostreserve=6060,09 s;plus180 s Vor-/Beleg-/Exportverwaltung,30 s U,
+60 s Abschluss=6330,09 s. Reserve gegen3600 s:MINUS2730,09 s.
+Das ist Hochrechnung,kein gemessener Rasterlauf oder mathematischer
+Worst-Case-Beweis. Ausreichende Reserve ist NICHT NACHGEWIESEN;
+vollstaendige Ausfuehrung derzeit nicht empfohlen.
+
+Bindung78 Codefiles,davon71 historisch unveraendert;SHA256:
+d752fc323cae2c440c5de7ce7ef540d4245a605e4583ff84dc5f04306d1ce254.
+Operatives Vorbereitungspaket2636403 Byte/8388608 Byte;64MiB Gesamtlimit,
+1MiB Abschlussreserve und Dateicaps unveraendert. Alte Archive bleiben
+separat erhalten,werden integritaetsgeprueft und nicht als neue Arme bilanziert.
+Vorlage PENDING_SEPARATE_AUTHORIZATION;realer run-Aufruf damit vor Start
+abgewiesen. Kein operativer Ausgabeordner oder operative Autorisierung.
+
+[Abschlussbericht](reports/s2uc/technical-repeat-preparation-assessment-20261003-01/REPORT.md),
+[Verifikation](reports/s2uc/technical-repeat-preparation-assessment-20261003-01/verification.json),
+[Test-IDs](reports/s2uc/technical-repeat-preparation-20261003-02/tests.json),
+[Zeitplan](reports/s2uc/technical-repeat-preparation-20261003-02/time-plan.json),
+[Bindung](docs/S2UC_TECHNISCHE_WIEDERHOLUNG_V2_BINDUNG_20261003.json),
+[Vorlage](docs/S2UC_TECHNISCHE_WIEDERHOLUNG_V2_AUTORISIERUNG_VORLAGE_20261003.json),
+[Aufruf](docs/S2UC_TECHNISCHE_WIEDERHOLUNG_V2_AUFRUF_20261003.txt).
+
+Keine Rasterquellen neu materialisiert oder Rasterarme ausgefuehrt.
+Raster32 bleibt geschlossen,TIME_LIMIT/global NOT_EVALUABLE. Spaeterer
+vollstaendiger Lauf waere separat autorisierte technische Wiederholungspruefung
+bekannter Daten,keine unberuehrte Evaluation. Alte/neue Ergebnisse niemals
+zu einem urspruenglichen vollstaendigen Lauf zusammensetzen.
+Naechste Entscheidung beim Projektleiter: technische Integration abnehmen,
+Ausfuehrung zurueckstellen und gegebenenfalls Absicherung der60-Minuten-Grenze
+gesondert beauftragen. Keine weitere Optimierungsvariante umgesetzt.
+
+## Historischer Stand: Frame-Blattfall V1 neutral qualifiziert (2026-10-03)
+
+Der ausdruecklich beauftragte begrenzte Visitor-Patch samt Qualifikation und
+Zeitmatrix ist abgeschlossen. Separater Beobachterstand in
+tools/_s2uc_frame_leaf_observer_v1.py;historische71 Codebindungen unveraendert.
+Exakt ein AST-gepruefter Zusatz im Visitor: Frame-ID erfassen und nur bei
+exaktem Frame-Typ,exaktem tuple mit48 echten floats und skalaren Bindungsfeldern
+den weiteren rekursiven Abstieg beenden. Unterklassen,mutable/custom Payloads
+und unklare Typen bleiben vollstaendig traversiert. Kein Cache,keine geaenderte
+Policy/Grenze und keine abgeschalteten Traceereignisse.
+
+V01–V08 bestanden:8 Tests,0 Fehler,0 Skips. Identitaetsmengen,Aliase/Zyklen,
+18/19-Framegrenze,Slots/20er-Kombination,mutable/custom/Subklassen,sechs reale
+Hypothesen einer neutralen Vorbelegung,Promotion/Verdrängung,vier
+Publikationsunterbrechungen und Fehlercleanup,abgeleitete Budgetfehler und
+isolierte Beobachterallokationen. Letztere OLD6264/NEW5528 Byte;kein
+persistenter Cache. Kein Gesamtprozess-RAM-Beleg.
+
+Feste Matrix: N1/N2 je80 Positionen,M/E/K/P je OLD/NEW,beide voller Trace;
+N1 je OLD dann NEW,N2 umgekehrt.16 Replays=1280 Aufnahmen+1280
+Referenzfortschreibungen. Keine Warmups oder Zeitwiederholungen.
+8/8 kanonische Fachbelege gleich nach Ausschluss nur von resources;
+8/8 saemtliche meter-Felder exakt gleich,einschliesslich Stichproben und
+transienter Peaks. Vollstaendige Freigabe/EMA-Loeschung in allen16 Replays.
+
+Summierte Replayzeit OLD139,497534 s/NEW99,257859 s:28,846 Prozent Entlastung.
+Alle acht Einzelpaare schneller (21,84 bis33,09 Prozent). Matrix bis
+Workerbestaetigung239,602218 s unter900 s;1.463.975 Byte Exporte unter16 MiB.
+Zusatzheappeak4548 unter16384 Byte;Framepeak12,Outputslots2,kombiniert13,
+transiente Frameobergrenze12. Receipt454 Byte,UTF8-Obergrenze908 Byte.
+Gepackter EMA-Bound416 Byte ist nicht in jedem Arm tatsaechlicher Besitz.
+Keine Garantie einer Raster32-Gesamtlaufzeit aus diesen neutralen Paaren.
+
+Neue Bindung SHA256:
+2453b892cd00959b2c7893d816c959bb12676a6dd28bbfb34765f639f9e4cab6.
+Plan,Patch,Tests und Runner vor Matrix gebunden;71 Altdateien,58 Audit-
+Artefakte und376 Raster-Abschlussdateien nachher unveraendert geprueft.
+Ergebnisabschluss und alle exportierten Hashes nachgeprueft.
+
+[Bericht/gepaarte Zeiten](reports/s2uc/frame-leaf-qualification-20261003-01/REPORT.md),
+[Test-IDs](reports/s2uc/frame-leaf-qualification-20261003-01/tests.json),
+[Ressourcen-/Fehlerbelege](reports/s2uc/frame-leaf-qualification-20261003-01/test-facts.json),
+[Messwerte](reports/s2uc/frame-leaf-qualification-20261003-01/summary.json),
+[Bindung](docs/S2UC_FRAME_BLATT_V1_BINDUNG_20261003.json),
+[Abschluss](reports/s2uc/frame-leaf-qualification-20261003-01/closure.json).
+
+Naechste Entscheidung beim Projektleiter: qualifizierten Beobachterstand
+fuer eine getrennte technische Ausfuehrungsvorbereitung uebernehmen;
+Zeitbudget und vollstaendige Protokollierung von Deadline,Abbruchanforderung,
+bestaetigtem Workerende und gesamter Abschlussverwaltung absichern.
+Diese Vorbereitung ist hier nicht ausgefuehrt oder automatisch freigegeben.
+Historischer Workerstop bleibt unbekannt. Raster32 bleibt geschlossen,
+TIME_LIMIT und global NOT_EVALUABLE. Keine Wiederholung/Vervollstaendigung
+der Evaluation. Folgende Eintraege sind historische Staende.
+
+## Historischer Stand: neutraler Laufzeitaudit abgeschlossen (2026-10-03)
+
+Die ausdruecklich beauftragte Fortsetzung des neutralen Audits ist abgeschlossen.
+18 Replays mit je80 Positionen:1440 Arm-Aufnahmen und1440 Referenzfortschreibungen.
+Zwei vorab feste neutrale Quellen,N1 stabil,N2 mit konkurrierenden Kontexten;
+je M/E/K/P ON/OFF und genau zwei originale M-Anker. Keine Rasterquellen oder
+U-Replays. Matrix206,579 Sekunden bis bestaetigtem Workerende,unter900 Sekunden.
+Rohdiagnose1.747.707 Byte; Auditpaket mit Bericht ebenfalls unter16 MiB.
+
+D01–D05 bestanden:5 Tests,keine Fehler/Skips,einschliesslich normaler und
+abgebrochener Prozessprobe.8/8 ON/OFF-Fachbelege nach Ausschluss nur von
+resources kanonisch byteidentisch. Beide M-Anker stimmen mit M ueberein;
+keine Gleichheit verschiedener Policies gefordert. N2 hat je Arm14
+konkurrierende Prognosen. Entscheidungen,Fehlerupdates,Originalbestaende,
+Zustandshashes,Endziel81 und vollstaendige Freigabe erhalten.
+
+Die drei Ressourcen-Traceebenen belegen94,035 Prozent der ON-Wall-Partition;
+Basisbeobachter allein85,065 Prozent. ON-Replaygesamt166,806 Sekunden,
+OFF2,481 Sekunden. Policy,Referenz,Belegaufbau,JSON,Dateiausgabe und Rest sind
+getrennt und exklusiv ausgewiesen. Diagnose-M ist gegen Original-M um20,53
+bzw.14,66 Prozent langsamer: Timer-/Stackperturbation bleibt sichtbar.
+OFF und zeitinstrumentiertes ON sind KEINE operative Ressourcenqualifikation.
+Kein Vergleich der Policygeschwindigkeit aus ungleichen Messmethoden.
+
+Vor/nach Diagnose geprueft: Plan,Code,Tests,71 Altdateien und376 historische
+Dateien unveraendert. Keine operative Reparatur oder Policyaenderung.
+Zeitwaechterprototype protokolliert Deadline,Abbruchanforderung,bestaetigtes
+Workerende und Beispiel-Abschlussverwaltung getrennt. Abbruchanforderung
+1,801 ms nach Deadline;Endbestaetigung12,260 ms spaeter. Historischer
+Raster32-Workerstop bleibt unbekannt. Bestaetigung ist kein exakter Todeszeitpunkt.
+
+[Auditbericht und genau ein Reparaturvorschlag](reports/s2uc/runtime-neutral-audit-assessment-20261003-01/REPORT.md),
+[Messwerte](reports/s2uc/runtime-neutral-audit-assessment-20261003-01/analysis.json),
+[Verifikation/Test-IDs](reports/s2uc/runtime-neutral-audit-assessment-20261003-01/verification.json),
+[Rohabschluss](reports/s2uc/runtime-neutral-audit-20261003-01/closure.json).
+
+Naechste begrenzte Entscheidung beim Projektleiter: sicheren Frame-Blattfall
+im rekursiven Ressourcenvisitor freigeben oder aendern. Frame-IDs weiter
+zaehlen; nur nachgewiesen unveraenderliche exakt typisierte Skalarpayloads
+vom weiteren Abstieg ausnehmen,sonst alter Visitor als Fallback. Notwendige
+Abnahme: identische Frame-/Slot-/Transientgrenzen und Budgetfehler,
+Promotion/Eviction,sechs Hypothesen,Fehlercleanup,mutable/custom Fallback,
+vollstaendige Fachgleichheit und neutrale Laufzeitmessung unter vollem Trace.
+Das ist ein Vorschlag,keine bereits umgesetzte Reparatur oder neue Laufgenehmigung.
+Raster32 bleibt TIME_LIMIT,alle globalen Kriterien NOT_EVALUABLE; keine
+Fortsetzung,Wiederholung oder fehlenden Arme. Folgende Eintraege sind historisch.
+
+## Historischer Stand: Raster32-Einmallauf am Zeitlimit technisch abgebrochen (2026-10-03)
+
+V2/Qualifikation02 wurde abgenommen und separat genau einmal autorisiert.
+Operative Autorisierung ausschliesslich im Status zu AUTHORIZED_ONCE
+geaendert.32 Quellen mit2048 Positionen vollstaendig materialisiert;
+Manifest am2026-10-03 um11:59:11.935821 UTC versiegelt,erster Armstart
+11:59:11.949567 UTC.140 Armstarts referenzieren denselben Manifesthash.
+Keine Volltreffer zu19 indexierten Altquellen,alle32 Faelle enthalten
+bekannte Teilfolgen. Keine Fallersetzung oder nachtraegliche Auswahl.
+
+Zeitwaechter: TIME_LIMIT,Exit1,hard_process_stop=true,resume_permitted=false.
+Protokollierte Dauer bis Abschluss3602,419874 Sekunden bei3600 Sekunden
+Deadline; der Abschluss umfasst Prozessbeendigung/Inventarisierung.
+Ein separater genauer Workerstopzeitpunkt wurde nicht protokolliert.
+27/32 Faelle und139/160 Arme vollstaendig exportiert:8560 belegte
+Arm-Aufnahmen plus8560 Referenzfortschreibungen. D5-YXYY ist fuer U/M/E/K
+abgeschlossen,P wurde begonnen und abgebrochen. D5-YYXX,D5-YYXY,D5-YYYX,
+D5-YYYY wurden nicht gestartet. Aufnahmen im abgebrochenen P-Arm sind
+nicht vollstaendig gemessen; keine ungesicherte Gesamtzahl behaupten.
+
+Anpassung,H-Nettonutzen,G-Gesamtnutzen und Stabilitaet/Schadensgrenze sind
+global jeweils NOT_EVALUABLE. Fester Nenner48:42 beobachtete Anpassungs-
+erfolge,0 beobachtete Misserfolge,6 nicht abschliessend ausgewertete Wechsel.
+Dauer3:24/24 beobachtet;Dauer5:18 beobachtet und6 offen bei Nenner24.
+Numerisch erreichte Teilschwellen ersetzen keinen vollstaendigen Gesamtbefund.
+Auf385 H-Zielen vollstaendiger Faelle:24 Sollkontexte fehlen,51 sind kalt,
+310 warm. Diese Ziele bleiben enthalten.797 Zielvergleiche:gegen K27
+Mehrfehler,ausschliesslich an Ziel7,Summe10,75,Maximum0,5;gegen M/E/P
+keine Mehrfehler in diesem abgeschlossenen Teil. Keine Extrapolation auf
+die fehlenden Faelle. Alle Einzelfall-MAEs und Unterschiede sind erhalten.
+
+[Abschlussbericht](reports/s2uc/raster32-assessment-20261003-01/REPORT.md),
+[Verifikation](reports/s2uc/raster32-assessment-20261003-01/verification.json),
+[alle48 Wechsel inklusive unbekannter Ergebnisse](reports/s2uc/raster32-assessment-20261003-01/all-48-switches.json),
+[saemtliche gespeicherten Zieldifferenzen](reports/s2uc/raster32-assessment-20261003-01/all-target-differences.json),
+[Manifestchronologie](reports/s2uc/raster32-assessment-20261003-01/chronology-and-overlap.json),
+[Original-Teilabschluss](reports/s2uc/raster32-evaluation-20261003-01/closure.json),
+[gemeinsame Abschlussbilanz](reports/s2uc/raster32-assessment-20261003-01/closure.json).
+Gesamt12228634/67108864 Byte inklusive Vorbelegen,Originalexport,Berichtsskript
+und Nachauswertung;1048576 Byte Abschlussreserve. U-Zusatzpeak5161 Byte;
+12 Originalframes/14 gemeinsam sind kontrollierte OBERGRENZEN,keine
+gemessenen Peaks. Nicht erhobene Peaks null,nicht Nullverbrauch.
+Ressourcenmaxima gelten fuer abgeschlossene Armexporte; kein vollstaendiger
+Messbeleg fuer den hart beendeten P-Arm.71 Codebindungen,Policy und
+deaktivierte Defaults unveraendert. Keine Wiederholung,Fortsetzung oder
+Quellenneuerzeugung. Einmalfreigabe VERBRAUCHT; Ausgabeordner bleibt gesperrt.
+
+Genau eine naechste Forschungsentscheidung vorgeschlagen: begrenzter
+neutraler Laufzeitaudit der Baseline-Beobachtungshuelle mit80 Positionen
+und konkurrierenden Kontexten ausserhalb des Rasters. Beobachtete Abstaende
+zwischen Armstarts im Mittel:U0,0861 s,M32,3804 s,E32,4001 s,K31,9902 s,
+P31,6200 s. Sie enthalten Export/Verwaltung,P auch Fallauswertung; keine
+isolierten CPU-Zeiten und kein bewiesener Beschleunigungseffekt. Der Code
+verwendet bei Baselines Tracing,bei U eine andere Messmethode. Das begruendet
+die Untersuchung von Beobachtungskosten,keine Policyaenderung. Ziel:
+Laufzeit und Beleg-/Ressourcengleichheit einer moeglichen technischen
+Entlastung neutral pruefen. Dieser Auftrag ist ein Vorschlag,keine neue
+Ausfuehrungsfreigabe. Rasterlauf bleibt geschlossen; weitergehende
+Generalisierung NICHT_GEPRUEFT. Folgende Eintraege sind historische Staende.
+
+## Aktueller Stand: Raster32 technisch vorbereitet und neutral qualifiziert (2026-10-03)
+
+Der abgenommene Evaluationsvertrag ist separat umgesetzt:32 Faelle,2048
+Quellpositionen,fuenf Arme,10240 Arm-Aufnahmen plus10240 Referenzfortschreibungen
+als gebundener SOLL-Umfang. Keine Evaluationsquelle materialisiert,kein Pilot
+oder Evaluationslauf. Generator,Huelle und Auswertung sind getrennt.
+Separate Replayfunktionen erlauben maximal80 Positionen; die historischen
+64er-Einstiege und alle64 bisherigen Codebindungen bleiben unveraendert.
+Die neue V2-Bindung umfasst71 Dateien; Defaults weiterhin deaktiviert.
+
+25/25 Neutraltests R01-R25 PASS,0 Fehler/Fehlschlaege/Skips,Exit0.
+Geprueft:vollstaendiges Raster,neutraler80er-Fuenfarmvergleich,frische
+Zustaende,Originalherkunft/Feedback,39/48 und18/24,fehlende Kontexte im Nenner,
+gleiche Fallgewichte,strikte Gleichstaende,exakte Schadensgrenze1/32,
+System-/Exportgrenzen,Zeitabbruch,exklusiver Start und erhaltener Teilabschluss.
+Manifest fuer alle32 Quellen/Masken muss vor jedem Policyaufruf versiegelt
+sein. Entwicklungsindex mit19 gespeicherten Quellen,Array- und values-Formate;
+Volltreffer/Teilfolgen werden gekennzeichnet,nie herausgefiltert.
+
+[Qualifikationsbericht](reports/s2uc/raster32-preparation-qualification-20261003-02/REPORT.md),
+[Test-IDs/Ergebnisse](reports/s2uc/raster32-preparation-qualification-20261003-02/tests.json),
+[neutrale Belege](reports/s2uc/raster32-preparation-qualification-20261003-02/facts.json),
+[aktive V2-Bindung](docs/S2UC_RASTER32_V2_BINDUNG_20261003.json),
+[Plan](docs/S2UC_RASTER32_V2_PLAN_20261003.json),
+[ausstehende Vorlage](docs/S2UC_RASTER32_V2_AUTORISIERUNG_VORLAGE_20261003.json),
+[Ressourcenplan/Aufruf](docs/S2UC_RASTER32_RESSOURCEN_UND_VORBEREITETER_AUFRUF_20261003.txt).
+Neue Qualifikation02:115465 Byte; aktuelle Paketbilanz1135894 Byte inklusive
+alter Qualifikationen,erhaltenem Vorbereitungsstand01,Quellenreferenzen und
+gebundenen Dokumenten. Spaetere operative Autorisierung kommt hinzu.
+Deckel67108864 Byte,Reserve1048576 Byte,Prozessdeadline3600 Sekunden;
+strukturelle konservative Exportobergrenze62556160 Byte,keine Messbehauptung.
+Systemspeicherlimits unveraendert. Unbefuellte U-Framepeaks bleiben null;
+kontrollierte Frameobergrenzen werden nicht als Messwerte ausgegeben.
+
+Vorbereitung01 bestand24 Tests,erfasste jedoch nur nackte Quellenarrays.
+Sie bleibt vollstaendig erhalten und wird mitgerechnet; massgeblich ist
+V2/Qualifikation02 mit korrigiertem Quellenindex und zusaetzlichem TestR25.
+Keine operative Autorisierung und kein Evaluationsausgabeordner vorhanden.
+Einziger naechster Vorschlag: technische Vorbereitung abnehmen und danach
+separat ueber genau eine Materialisierung samt vollstaendigem Rasterlauf
+entscheiden. Weitergehende Generalisierung NICHT_GEPRUEFT; XYX bleibt
+abgenommen,seine Einmalfreigabe verbraucht. Folgende Eintraege sind Historie.
+
+## Aktueller Stand: XYX abgeschlossen und abgenommen; Evaluationsvertrag vorgelegt (2026-10-03)
+
+Der Projektleiter hat den einmaligen XYX-Vergleich fachlich abgenommen:
+48 Positionen,240 Arm-Aufnahmen plus240 Referenzfortschreibungen,alle fuenf
+Arme vollstaendig,keine dokumentierten technischen Fehler oder Zusatzreplays.
+Auswahl X->Y->X,H-Nettonutzen und G-Gesamtnutzen sind im festgelegten
+Entwicklungskontrast BELEGT. U waehlt Y27/31 und wieder X39/43/47;
+Fehlgriffe19/23/35 mit je0,25 bleiben enthalten. Kein unabhaengiger
+Generalisierungsnachweis. Einmalfreigabe VERBRAUCHT; nicht erneut starten.
+
+[Abschlussbericht](reports/s2uc/xyx-assessment-20261003-01/REPORT.md),
+[Verifikation](reports/s2uc/xyx-assessment-20261003-01/verification.json),
+[Abschlussbilanz](reports/s2uc/xyx-assessment-20261003-01/closure.json).
+Gesamtbilanz956176/4194304 Byte inklusive Qualifikation,Vorbereitung und
+Auswertung. Originalexporte,64 Codebindungen und Autorisierungsdatei bleiben
+unveraendert; ihr historischer Statustext erneuert keine verbrauchte Freigabe.
+
+Genau ein [Evaluationsvertrag](docs/S2UC_EINGEFRORENE_POLICY_EVALUATIONSVERTRAG_20261003.txt)
+liegt zur Abnahme vor: vollstaendiges32-Fall-Raster mit stabilen und wechselnden
+Verlaeufen,2048 Positionen,vorab feste Baselines,Kriterien und Ressourcen.
+Prospektive Evaluation derselben konstruierten Familie; bekannte Bausteine
+und Entwicklungsbezug werden offengelegt. Anpassung,Nutzen,Schaeden und
+fehlende Kontextverfuegbarkeit bleiben getrennt. Weitergehende unabhaengige
+Generalisierung NICHT_GEPRUEFT. Heute ausschliesslich Konzeption/Standspflege;
+keine Materialerzeugung,Tests oder Ausfuehrung. Policy/Defaults unveraendert.
+Naechster Vorschlag: Vertrag abnehmen und genau eine getrennte technische
+Vorbereitung beauftragen; keine neue Lauf- oder Materialisierungsfreigabe.
+
+Die folgenden Standseintraege sind historische Zeitstaende.
+
+## Aktueller Stand: separate XYX-Laufvorbereitung gebunden und neutral geprueft (2026-10-03)
+
+Abgenommener Gegenpruefvertrag technisch vorbereitet,ohne neue Quelle zu
+materialisieren oder auszufuehren. Drei neue Dateien: separate feste Huelle,
+Belegauswertung und Vorbereitungstests. multi_error_exact_v1 und alle61
+vorher gebundenen Dateien unveraendert; neue Bindung umfasst64 Dateien.
+Feste48er-Rezeptur mit Y=9/16,Arme U/M/E/K/P,alle sieben Zielmengen,
+Fristen27/43 sowie getrennte Auswahl-/H-Netto-/G-Gesamtnutzenkriterien.
+
+12/12 Vorbereitungstests B01-B12 PASS,0 Fehler/Fehlschlaege/Skips,Exit0.
+Rezept-/Code-/Vertragsbindung,Zielmengen/fehlende Ziele,negative Auswahl-
+faelle,strikte und getrennte Nutzenkriterien,Originalschluessel/Ordinalen,
+Feedbackketten,vertauschte Ticketreihenfolge,kausale Vorzielgrenze,
+Autorisierung vor Materialisierung,exklusive Ausgabe und Fehlerabschluss
+geprueft. Nur abstrakte technische Fixtures und gespeicherte alte Belege;
+keine Adapter-/Replayausfuehrung und keine erneute101er-Policyqualifikation.
+
+[Abschlussbericht](reports/s2uc/xyx-preparation-qualification-20261003-01/REPORT.md),
+[konkrete Test-IDs](reports/s2uc/xyx-preparation-qualification-20261003-01/tests.json),
+[neue Bindung](docs/S2UC_XYX_BINDUNG_20261003.json),
+[Plan](docs/S2UC_XYX_PLAN_20261003.json),
+[ausstehende Vorlage](docs/S2UC_XYX_AUTORISIERUNG_VORLAGE_20261003.json),
+[vorbereiteter Aufruf](docs/S2UC_XYX_VORBEREITETER_AUFRUF_20261003.txt).
+Neue Vorbereitung49280 Byte plus wiederverwendete Qualifikation549025 Byte
+=598305/4194304 Byte;256KiB Abschlussreserve. Frameobergrenzen werden
+ausdruecklich als Obergrenzen ausgewiesen,unbefuellte Tracingpeaks als null
+im Sinne nicht gemessen (JSON null),niemals als Nullverbrauch.
+
+Vorlage PENDING_SEPARATE_AUTHORIZATION; keine neue operative Autorisierung,
+kein neuer Vergleichsordner,keine neue48er-Materialisierung. Alte Freigaben
+bleiben verbraucht. Defaults deaktiviert,unabhaengiger Nutzen NICHT_GEPRUEFT.
+Genau ein naechster Vorschlag: Vorbereitung abnehmen und danach separat
+ueber den einmaligen gebundenen XYX-Vergleich entscheiden.
+
+## Aktueller Stand: Gegenpruefvertrag fuer zwei nichtpersistente Fortsetzungen erstellt (2026-10-03)
+
+48er-Abschluss vom Projektleiter abgenommen; anschliessender Konzeptauftrag
+abgeschlossen. [Geschlossener Vertrag](docs/S2UC_ZWEI_NICHTPERSISTENTE_FORTSETZUNGEN_GEGENPRUEFVERTRAG_20261003.txt)
+legt genau X*4,Y*4,X*4 mit48 Positionen fest. Gemeinsamer Hinweis3/16,5/16;
+X-Fortsetzung13/16,Y-Fortsetzung9/16,Persistenz5/16,paarweise verschieden.
+Policy,alpha,mae48,Promotion und Ressourcenlimits unveraendert.
+
+Statische Code-/Fehlerableitung: beide Hypothesen ab23 verfuegbar,ab27 warm,
+bleiben bis Ende erhalten. Erwartet X11/15,Y27/31,X39/43/47. Erwarteter
+Fehlgriff23 wegen kaltem Y bleibt in A_W/H/G; Erstverluste19/35 ebenfalls.
+Auswahlkriterium verlangt tatsaechliche warme Kontextwahl X->Y->X mit
+vorherigem Feedback; P,Kaltwahl,Gleichstand reichen nie. Fristen27/43,
+Nettonutzen auf H und Gesamtnutzen auf G getrennt,strikt gegen M/E/K/P.
+
+Nur Konzeptdokumentation: keine Quelle erzeugt,kein Code geaendert,keine
+Tests/Simulationen/Laeufe. Unabhaengiger Evaluationsnutzen NICHT_GEPRUEFT.
+Genau ein naechster Vorschlag: separate Laufvorbereitung fuer diese feste
+Rezeptur und Auswertung binden,nach Projektleiterauftrag. Alte Laufbindung
+und verbrauchte Autorisierung nicht wiederverwenden; keine Ausfuehrungs-
+freigabe aus diesem Vertrag. Defaults bleiben deaktiviert.
+
+## Aktueller Stand: einmaliger48er-Vergleich abgeschlossen; Anpassung und lokaler Nettonutzen belegt (2026-10-03)
+
+Nach technischer Abnahme separat beauftragter gebundener48er-Kontrast
+U/M/E/K/P genau einmal ausgefuehrt,Exit0:48 Quellpositionen,240 Arm-Aufnahmen
+plus240 interne Referenzfortschreibungen. Keine Zusatzfolge,Optimierung oder
+Wiederholung. Autorisierung nur im Status zu AUTHORIZED_ONCE geaendert;
+Einmalfreigabe durch exklusiven Ausgabeordner verbraucht.61 Dateien,Plan,
+Vertrag und Laufzeit vor/nach unveraendert. Keine technischen Fehler oder
+Abweichungen von den konkreten Entscheidungs-/Fehlerpaarprognosen.
+
+Anpassung BELEGT_IM_ENTWICKLUNGSKONTRAST: U19 erste Wechselabweichung0.5,
+danach X=(0.25,0.25). U23 P aus Gleichstand/kaltem Y,KEIN Anpassungsbeleg.
+Feedback23 bewertet beide ungewaehlten Kontexte; U27/31 P bei warmem X mit
+strikt schlechterem Fehler als P. Y ist identisch mit P und bleibt Gleichstand,
+dieser allein wird nicht gezaehlt. U35 erste Rueckkehrabweichung0.5; Feedback
+macht X=(0.234375,0.265625). U39/43/47 waehlt X,je Fehler0,Frist43 erfuellt.
+Vorherige gespeicherte Fehlerpaare begruenden die andere Wahl,kein Zusatzlauf.
+
+Strikter Nettonutzen auf H BELEGT,Reihenfolge U/M/E/K/P:
+H-MAE0.136363636364/0.272727272727/0.318181818182/0.227272727273/0.318181818182.
+G-MAE0.445652173913/0.510869565217/0.532608695652/0.489130434783/0.532608695652.
+Kein Gleichstand mit K. U gegen M: Gewinne39/43/47 je0.5,keine Schaeden.
+Gegen E zusaetzlich Gewinn11;gegen K Schaden7;gegen P Gewinne11/15/39/43/47,
+Schaden19,je0.5. In A_W alle Arme fehlerfrei,kein Zusatzgewinn dort.
+Unabhaengiger Evaluationsnutzen NICHT_GEPRUEFT;Defaults bleiben deaktiviert.
+
+[Vollstaendiger Bericht](reports/s2uc/multi-assessment-20261003-01/REPORT.md),
+[Entscheidungen und Fehlerpaare](reports/s2uc/multi-assessment-20261003-01/all-decisions-and-updates.json),
+[alle Zielmengen](reports/s2uc/multi-assessment-20261003-01/all-target-sets.json),
+[Gewinne und Schaeden](reports/s2uc/multi-assessment-20261003-01/all-gains-and-harms.json),
+[Ressourcenbilanz](reports/s2uc/multi-assessment-20261003-01/closure.json).
+Originalvergleich273221 Byte,Qualifikation549025 Byte;zusammen mit
+Nachauswertung850897/4194304 Byte,256KiB Abschlussreserve eingehalten.
+U im Lauf Zusatzheap5134/16384 Byte,416 gepackte Bytes,kontrollierte
+Originalframe-Obergrenze12 und gemeinsam14 bei maximal2 Ausgabeplaetzen;
+Receipt705,UTF8-Obergrenze1410 Byte. Unbefuellte U-Tracingzaehler0 sind
+keine Nullverbrauchsmessung. Qualifikationspeaks9897 Zusatzbyte,18 Frames,
+2 Ausgaben,gemeinsam20 bleiben gesondert ausgewiesen. Kein Prozess-RAM-Beleg.
+Nachauswertung ausschliesslich gespeicherter Daten,0 weitere Replays.
+
+Genau ein naechster Vorschlag: Gegenpruefvertrag fuer zwei konkurrierende
+Fortsetzungen konzipieren,die beide von Persistenz verschieden sind.
+Hier ist Y gleich P; belegt sind Abwahl von X und Rueckkehr zu X,nicht
+die Auswahl zwischen zwei verschiedenen nichtpersistenten Fortsetzungen.
+Policy unveraendert lassen,keine neue Folge oder Ausfuehrung aus diesem
+Abschluss ableiten. Der Projektleiter entscheidet ueber den Konzeptanschluss.
+
+## Aktueller Stand: multi_error_exact_v1 implementiert und neutral qualifiziert (2026-10-03)
+
+Beauftragtes Entwicklungspaket abgeschlossen: genau eine optionale Policy U,
+default disabled. Vollstaendige Behandlung bis zu sechs berechtigter Exact-
+Hypothesen,Auswahl nach eindeutig kleinster negativer eigener EC-EP-Differenz.
+Alle Herkunftstreffer bleiben sichtbar. Feedback auch fuer nicht gewaehlte
+Hypothesen; Originalfortsetzungen eingefroren,keine Ticketumleitung bei
+Promotion oder Wiederbelebung verlorener Generationen. Alte51 gebundene
+Dateien unveraendert; fuenf neue Code-/Testdateien,fuenf weitere bestehende
+Regressionseinbindungen ergeben insgesamt61 gebundene Dateien.
+
+101/101 Tests PASS,0 Fehler/Fehlschlaege/Skips,Exit0. T1-T11,R1-R2,Q1-Q6
+und betroffene bestehende Regressionen.44 Unterbrechungspunkte der
+Zellpublikation plus3 Promotionsunterbrechungen; kein verwendbarer Teilzustand.
+Ressourcen:416/416 gepackte Byte inkl.Staging,Python-Zusatzpeak9897/16384,
+18/18 Originalframes,2/2 Ausgabeplaetze,gemeinsam20/20.Receipt2012 Byte,
+transiente UTF8-Obergrenze4024 Byte. Kein Gesamtprozess-RAM-Beleg.
+
+[Abschlussbericht](reports/s2uc/multi-neutral-qualification-20261003-01/REPORT.md),
+[Test-IDs und Ergebnisse](reports/s2uc/multi-neutral-qualification-20261003-01/tests.json),
+[Ressourcen und Entscheidungsgruende](reports/s2uc/multi-neutral-qualification-20261003-01/facts.json),
+[Bindung](docs/S2UC_MULTI_BINDUNG_20261003.json),
+[vorbereiteter Aufruf](docs/S2UC_MULTI_VORBEREITETER_AUFRUF_20261003.txt).
+Export inklusive gebundener Quellkopien und Abschluss549025/4194304 Byte.
+Plan-,Code-,Vertrags- und Laufzeitbindung vor/nach unveraendert und nachgelesen.
+
+Neutrale12er-Folge in fuenf Armen:60 Arm-Aufnahmen plus60 Referenzschritte;
+weitere technische Fixtures/Regressionen separat,kein Lernnutzenbeleg.
+Der48er-Kontrast weder erzeugt noch ausgefuehrt; keine Autorisierungsdatei,
+Vorlage bleibt PENDING_SEPARATE_AUTHORIZATION. Kein unabhaengiger Nutzenbeleg.
+Genau ein naechster Vorschlag: technische Abnahme,dann separate Entscheidung
+ueber einmaligen gebundenen48er-Vergleich U/M/E/K/P. Keine Vergleichsfreigabe
+aus diesem Abschluss ableiten; alle bestehenden Defaults bleiben deaktiviert.
+
+## Aktueller Stand: Mehrhypothesen-Fehlerbewertung technisch spezifiziert (2026-10-03)
+
+Struktureller Grenzbeleg abgenommen; beauftragter Konzeptschritt abgeschlossen.
+[Geschlossener technischer Vertrag](docs/S2UC_MEHRHYPOTHESEN_FEHLERBEWERTUNG_VERTRAG_20261003.txt)
+definiert genau eine optionale Exact-Policy U neben M/E/K/P. Alle Herkunfts-
+treffer bleiben sichtbar; maximal sechs berechtigte Fortsetzungen werden
+vor Ziel als Originalframe-Referenzen eingefroren und getrennt bewertet.
+Wahl nach eindeutig kleinster negativer eigener EMA-Differenz EC-EP,sonst P;
+kalte Alternativen werden bewertet,aber nicht optimistisch ausgewaehlt.
+416 gepackte Byte einschliesslich Ticket/Staging; zwei Ausgabealiase,
+alle zusaetzlichen Frame-Halter/Heapobjekte mitzuzaehlen. Kein gemessener
+Python-Peak,keine Implementierung/Tests/Materialisierung oder Versuch.
+48er-Folge,Masken und Anpassungsfrist unveraendert; U als einziger neuer Arm.
+Naechster Vorschlag: genau diese Policy implementieren und T1-T11/R1-R2
+neutral qualifizieren,nach Projektleiterauftrag. Fachlicher Vergleich bleibt
+separat geschlossen; bisherige Standards und Defaults unveraendert.
+
+## Aktueller Stand: Anpassung unter regulaerer Aufnahme strukturell begrenzt (2026-10-03)
+
+S/W/L vom Projektleiter abgenommen als begrenzter Stabilitaetsvorteil mit
+Wechselschaden. Die Informationsgrenze vor dem ersten Wechsel ist geklaert.
+Der anschliessende Konzeptauftrag ist durch eine statische Codepruefung
+abgeschlossen: [Grenzbeleg und fester Pruefrahmen](docs/S2UC_ANPASSUNG_REGULAER_STRUKTURELLE_GRENZE_20261003.txt).
+Genau eine48-Positionen-Folge X*4,Y*4,X*4 beschrieben, nicht erzeugt/ausgefuehrt.
+Nach erster Y-Aufnahme sperrt Mehrdeutigkeit Kontext,Ticket und weitere EMA-
+Updates; beide Spuren bleiben auch bei Rueckkehr erhalten. Daher kein
+Anpassungsnachweis mit unveraendertem Abruf empfohlen. Keine allgemeine
+Unmoeglichkeitsbehauptung fuer andere Folgen. Keine Tests oder Codeaenderung.
+Genau ein Vorschlag: getrennte Fehlerbewertung konkurrierender Fortsetzungen
+bei weiterhin sichtbarer Herkunftsmehrdeutigkeit konzeptionell entscheiden.
+Einzelticket/Ressourcen sind dafuer neu zu spezifizieren, nicht bereits geloest.
+Keine Implementierungs-/Lauffreigabe; EMA/Mitnahme bleiben default disabled.
+
+## Aktueller Stand: S/W/L-Vergleich abgeschlossen; Stabilitaetsvorteil mit Wechselschaden (2026-10-03)
+
+Nach technischer Abnahme separat beauftragte synthetische Folgen mit
+regulaerer Aufnahme S16,W16,L64 je M/E/K/P genau einmal ausgefuehrt,Exit0:
+96 Quellpositionen,384 Arm-Aufnahmen plus384 interne Referenzfortschreibungen.
+Keine Zusatzfolge,Wiederholung,Zwischenresets oder Parameter-/Maskenaenderung.
+51 gebundene Dateien,Plan,Vertrag und Laufzeit vor/nach unveraendert.
+Autorisierung ausschliesslich auf AUTHORIZED_ONCE geaendert; Einmalfreigabe
+durch exklusiven Zielordner verbraucht. EMA/Mitnahme bleiben default disabled.
+
+Zuordnung S/W/L jeweils PASS,keine technischen Fehler/Erwartungsabweichungen.
+Stabilitaetsvorteil BELEGT gegen Reset-E auf S-H/G; robuster Auswahlvorteil
+NICHT_NACHGEWIESEN. S an11: M spart0.5 gegen E aus mitgenommener Erfahrung.
+W an11: dieselbe Mitnahme verursacht0.5 Mehrfehler gegen E/P. An W15
+Mehrdeutigkeit statt eindeutiger Anpassungsprobe; daraus kein weiterer
+erfahrungsabhaengiger Anpassungsbeleg. S und W nicht gegeneinander verrechnen.
+
+MAE auf H,Reihenfolge M/E/K/P:
+S:0.166666666667/0.333333333333/0/0.5.
+W:0.333333333333/0.166666666667/0.166666666667/0.166666666667.
+L:0.173611111111/0.222222222222/0.180555555556/0.333333333333.
+L-V: M0.151785714286<E0.214285714286,K0.160714285714,P0.357142857143;
+lokales vorab definiertes Nutzenkriterium erfuellt. Dennoch auf L-G:
+M0.419354838710>K0.383064516129. L bleibt Entwicklungsregression;
+unabhaengiger Evaluationsnutzen NICHT_GEPRUEFT.
+
+L gegen E: M-Gewinne23/59 je0.5,Schaden19 0.5625. E19 gewinnt durch
+kalten Default,kein erlernter Vorteil. M31 nutzt durch Ziel19 aktualisierte
+Bewertung,waehlt bei Gleichstand P,ohne Zusatzvorteil gegen E/kalten Default.
+Bei L48 alte A-Zellen endgueltig geloescht,L55 beide kalt; nur neue c7-
+Erfahrung wird bei56 nach r5 verschoben und an59 genutzt. An63 liegt auch
+neue Ziel59-Erfahrung vor. Kein Wiederherstellen alter r1-Erfahrung.
+
+[Vollstaendiger Bericht](reports/s2uc/promotion-assessment-20261003-01/REPORT.md),
+[Promotionszellen](reports/s2uc/promotion-assessment-20261003-01/promotion-cells.json),
+[Entscheidungsgrundlagen](reports/s2uc/promotion-assessment-20261003-01/choice-origins.json),
+[alle Gewinne/Schaeden](reports/s2uc/promotion-assessment-20261003-01/all-gains-and-harms.json),
+[gemeinsame Schlussbilanz](reports/s2uc/promotion-assessment-20261003-01/closure.json).
+
+Originalexport493440 Byte; einschliesslich vorheriger technischer
+Qualifikation495076 Byte und neuer Berichtsauswertung insgesamt
+1045739/4194304 Byte.256KiB Abschlussreserve eingehalten. Aktueller Peak:
+4420/16384 Zusatzbyte,416 gepackte Byte,16/18 Frames,2 Vorschlaege,
+gemeinsam17/20,Receipt457 Byte,transiente UTF8-Obergrenze914 Byte.
+Endziele17/17/65 zensiert,Ressourcen freigegeben; kein Prozess-RAM-Beleg.
+Nachauswertung nur gespeicherter Daten,keine weiteren Replays.
+
+Genau ein naechster Vorschlag: konzeptionelle Informationsgrenze klaeren,
+welche vor dem Ziel verfuegbaren Signale stabile und geaenderte Fortsetzung
+unterscheiden koennten. S/W haben bis zum ersten Wechsel denselben
+numerischen Wahrnehmungspraefix; ohne Zusatzinformation keine Voraberkennung.
+Abnahme: zulaessiges vorab verfuegbares Signal samt Gegenfall oder begruendeter
+Nichtnachweis. Keine Parametertuning-/Implementierungs-/Lauffreigabe daraus.
+
+## Aktueller Stand: Direkte Promotionsmitnahme implementiert und neutral qualifiziert (2026-10-03)
+
+Separater Projektleiterauftrag abgeschlossen: eine optionale Mitnahmeregel
+direct_promotion_v1 als neuer Adapter,standardmaessig disabled. Bestehende
+Reset-EMA/Standardverhalten unveraendert; alle46 zuvor gebundenen Dateien
+hashidentisch,neue Bindung51 Dateien. Kein Eingriff in abgeschlossene Befunde.
+
+44/44 Tests PASS,0 Fehler/Fehlschlaege/Skips,Exit0: T1-T10,R1-R3,Q1-Q7,
+sowie12 bisherige EMA- und12 Bestandsregressionen. Originalframe-Identitaet,
+Scope,bitgleiche Fehlerpaare,negative/gleiche Bewertungen,vier Zellen,
+Konflikte,offene Tickets und15 Unterbrechungspunkte geprueft. Bei Fehler
+terminal bereinigt,kein nutzbarer Teilzustand; Vorzustand/Promotionsresultat
+im Fehlerbeleg erhalten. Atomaritaet gilt fuer seriellen synchronen Betrieb.
+
+Neue komplette Aufnahme/Bereinigung maximal5558/16384 Byte Python-Zusatz,
+inkl.Promotionsmetadaten und temporaeren Objekten;416 gepackte Byte.
+Originalframes inkl.temporaerer Halter16/18,Vorschlaege2/2,gemeinsam17/20;
+Receipt457 Byte,UTF8-Obergrenze914 Byte. Kein Gesamtprozess-RAM-Beleg.
+Beobachterkosten getrennt,Produktionsmetadaten voll mitgemessen.
+
+[Abschlussbericht](reports/s2uc/promotion-neutral-qualification-20261003-01/REPORT.txt),
+[Testergebnis](reports/s2uc/promotion-neutral-qualification-20261003-01/test-result.json),
+[Plan](docs/S2UC_PROMOTION_PLAN_20261003.json),
+[Bindung](docs/S2UC_PROMOTION_BINDUNG_20261003.json),
+[vorbereiteter Aufruf](docs/S2UC_PROMOTION_VORBEREITETER_AUFRUF_20261003.txt).
+
+Die synthetischen Folgen S/W/L mit regulaerer Aufnahme wurden NICHT erzeugt
+oder ausgefuehrt. Technische Fixtures sowie andere neutrale Aufnahmen sind
+davon getrennt. Keine spaetere Autorisierungsdatei/kein S/W/L-Zielordner.
+Erfahrungserhaltung ist technisch qualifiziert,Auswahl-/Lernnutzen offen.
+Genau ein naechster Vorschlag: Paket abnehmen und danach gesondert ueber
+den einmaligen gebundenen S/W/L-Vergleich M/E/K/P entscheiden. Bis dahin
+keine Vergleichsausfuehrung; EMA und Mitnahme bleiben default disabled.
+
+## Aktueller Stand: Gegenpruefvertrag direkter Promotionsmitnahme konzipiert (2026-10-03)
+
+Nach Abnahme der Ursachenpruefung ist der beauftragte geschlossene
+[Gegenpruefvertrag](docs/S2UC_EMA_DIREKTE_PROMOTIONSMITNAHME_GEGENPRUEFVERTRAG_20261003.txt)
+erstellt. Nur Konzept: keine Implementierung, Tests, Materialerzeugung,
+Zustandsuebertragung oder neue Ausfuehrung; historische Befunde unveraendert.
+
+Einzige Alternative M: vorhandene Fehlerpaare bei nachgewiesener unmittelbarer
+Promotion derselben Originalframes im selben Scope einmalig umschluesseln.
+Keine Mitnahme nach Verdraengung/Wertegleichheit,keine Ticketumlenkung,
+Mittelung oder zusaetzliche Lernaktualisierung. Reihenfolge gegenueber
+Verdraengung/Pruning,Atomaritaet und terminale Konfliktbehandlung festgelegt.
+
+Geplant sind S16 stabil,W16 mit Wechsel direkt nach Promotion und bekannte
+L64 als Entwicklungsregression,je M/E/K/P. Feste Zielmengen und getrennte
+Zuordnungs-/Nutzenkriterien; S-Vorteil darf W-Schaden nicht verdecken.
+384 Arm-Aufnahmen plus gegebenenfalls384 interne Referenzfortschreibungen
+sind ausschliesslich ein spaeterer Rahmen,keine ausgefuehrten Aufnahmen.
+Unveraenderte Speichergrenzen und gemeinsames4MiB-Exportbudget.
+
+T1-T10 definieren getrennte technische Fixtures u.a.fuer negative und gleiche
+Fehlerpaare,mehrere Schluessel,Identitaetskonflikte und offene Tickets.
+Negative Kandidatenerfahrung vor Promotion wird durch die natuerlichen
+Folgen nicht vorgetaeuscht; diese Fixture ist kein natuerlicher Nutzenbeleg.
+Keine der offenen Entwicklungsfolgen gilt als unabhaengige Evaluation.
+
+Genau ein naechster Vorschlag: Projektleiter entscheidet ueber begrenzte
+Entwicklung/Neutralqualifikation dieser einen optionalen Regel unter den
+alten Grenzen. Natuerliche Vergleichslaeufe brauchen danach gesonderte
+Ausfuehrungsfreigabe. Bestehende EMA bleibt unveraendert/default disabled.
+
+## Aktueller Stand: Ursachen von Kaltstarts getrennt; Promotionsmitnahme nur Konzeptoption (2026-10-03)
+
+Projektleiter hat den technisch korrekten Bestandslauf mit negativem
+Nettonutzen gegen K abgenommen. Beauftragte Ursachenanalyse nur anhand
+gespeicherter Ergebnisse abgeschlossen; keine neuen Replays, Tests,
+Quoten, Implementierungen oder Zustandsuebertragungen.
+[Ursachenpruefung](docs/S2UC_EMA_URSACHENPRUEFUNG_PROMOTION_20261003.txt).
+
+Erste auswertbare Erfahrung: Ziele7/15/47. Echter A-Verlust bei48 erklaert
+fehlenden Kontext51 und Neustart55. Promotionsbedingte Resets8/16/56
+erklaeren hingegen die kalten retained-Starts23/19/59 trotz fortbestehender
+Originalframes. Ziel19 ist ein Gewinn des vorgegebenen Defaults P,kein
+erlernter Vorteil; Ziel31 nutzt B-Erfahrung aus19,waehlt aber ebenfalls P.
+Erfahrung veraendert die Wahl gegenueber dem Default an35/63 zu Kontext.
+
+Direkte identitaetserhaltende Promotion ist von Wertegleichheit nach
+Verdraengung zu trennen. Begrenzte Zellmitnahme ist eine pruefbare Option,
+kein bereits belegter Nutzen: B:c2 hatte vor Promotion16 die Bewertung
+(0,0.5625),die Kontext bevorzugt; Fortsetzung19 widerlegt diese Erwartung.
+Erhaltene Identitaet garantiert keine weiterhin passende Fortsetzung.
+
+Genau ein naechster Vorschlag: konzeptionellen Gegenpruefvertrag fuer
+direkte Promotionsmitnahme ausarbeiten,mit stabilem UND wechselndem
+Fortsetzungsfall,sowie Ausschluss von Uebernahme nach echter Verdraengung.
+Abnahme nur bei eindeutiger Identitaetsgrenze,festen Vergleichen/Masken,
+vollen Kaltstart-/Anpassungskosten und vorab festgelegten Grenzen.
+Keine nachfolgende Implementierung/Ausfuehrung daraus ableiten;
+bestehender EMA-Zusatz bleibt unveraendert und standardmaessig deaktiviert.
+
+## Aktueller Stand: Bestands-Gegenprobe abgeschlossen; korrekte Erfahrungsauswahl ohne Nettonutzen gegen K (2026-10-02)
+
+Nach Abnahme der Vorbereitung separat beauftragte synthetische64-Frame-Folge
+genau einmal in E/K/P ausgefuehrt,Exit0:192 Versuchsarm-Aufnahmen plus192
+interne Referenzfortschreibungen,kein Zwischenreset. Plan,46 gebundene Dateien
+und Laufzeit unveraendert;42 bisherige EMA-Dateien hashidentisch.
+Autorisierung nur von PENDING_SEPARATE_AUTHORIZATION auf AUTHORIZED_ONCE
+geaendert; exklusiver Zielordner beansprucht,Freigabe damit verbraucht.
+
+Bestand/Kausalitaet PASS,Erfahrungsauswahl PASS. Keine technischen Fehler
+oder Abweichung von den erwarteten Speicheruebergaengen. An39 kein Ticket
+und kein Fehlerupdate; B:r2 erst bei Aufnahme40 regulaer geloescht. A:r1
+mit Fehlerpaar(0,0.5) bei48 verdraengt; an51 kein Treffer. Kandidat c7 an55
+und retained r5 an59 starten getrennt kalt; Kontextwahl63 aus neuer
+r5-Erfahrung von59. Endziel65 zensiert,Ausgaben/EMA-Zellen freigegeben.
+
+Nettonutzen auf V7: SCHADEN gegen K. MAE E0.21428571428571427,
+K0.16071428571428573,P0.35714285714285715; Kontext an7/7 V-Zielen verfuegbar.
+Kalte A-Starts23/55/59 kosten gegen K zusammen1.5; B-Gewinne19/31 zusammen
+1.125,also0.375 Mehrfehler auf V. Diagnose D3: E0,K0.1875,P1/3 ersetzt V nicht.
+Gesamt31: E0.4334677419354839,K0.38306451612903225,P0.4657258064516129.
+Gegen K alle Schaeden:7(0.5),15(0.5625),23(0.5),47(0.125),55(0.5),59(0.5);
+Gewinne19/31 je0.5625. Gegen P Gewinne35/63 je0.5,keine Schaeden.
+
+[Abschlussbericht mit allen5 Zielmengen und31 Einzelentscheidungen](reports/s2uc/ema-stock-assessment-20261002-01/REPORT.md),
+[Fehlerzellenverlaeufe](reports/s2uc/ema-stock-assessment-20261002-01/error-cell-trajectories.json),
+[Gewinne/Schaeden](reports/s2uc/ema-stock-assessment-20261002-01/all-gains-and-harms.json),
+[Originalabschluss](reports/s2uc/ema-stock-counterprobe-20261001-01/closure.json),
+[gemeinsame Bilanz](reports/s2uc/ema-stock-assessment-20261002-01/closure.json).
+
+Originalexport287396 Byte; mit ergaenzendem Bericht/Tabellen393306/4194304
+Byte,256KiB Abschlussreserve eingehalten. Frame-Peak16/18,Vorschlaege2/2,
+EMA-Zusatz4281/16384 Byte,Receipt457 Byte,transiente UTF8-Obergrenze914 Byte.
+Keine Gesamtprozess-RAM-Aussage. Nachauswertung nur gespeicherter Daten,
+keine weitere Ausfuehrung. EMA bleibt standardmaessig deaktiviert.
+
+Naechster Vorschlag an Projektleiter: gemischten Befund abnehmen; danach
+eng begrenzt konzeptionell die kalte Persistenzwahl anhand vorhandener
+Kosten gegen Kontext-Risiken abwaegen. Vor weiterem Versuch eine pruefbare
+Alternative begruenden; keine Fehleruebernahme zwischen Generationen,
+Parameteraenderung oder Wiederholung aus diesem Ergebnisbericht ableiten.
+Kein allgemeiner Lernnutzen oder Clusterorganisationsnachweis.
+
+## Aktueller Stand: Bestands-Gegenprobe technisch vorbereitet und neutral qualifiziert (2026-10-01)
+
+Direkter Projektleiterauftrag zur Vorbereitung umgesetzt:64-Frame-Plan,
+Masken V7/D3/M9/N22/Gesamt31, Kriterien, Ressourcen und unveraenderte Module
+maschinenlesend gebunden. Beobachter trennt Zielkonsum, Aufnahme-Loeschungen
+und Generationenwechsel. Erwartungen bleiben Hypothesen; Abweichungen werden
+nicht durch Systemeingriffe korrigiert,abhaengige Kriterien NOT_EVALUABLE.
+
+Endgueltige neutrale Qualifikation02:12/12 Tests S01-S12 PASS,Exit0,
+Code vor/nach gleich. 46 Dateien gebunden,davon42 bisherige EMA-Dateien
+hashidentisch. Vollstaendiger neutraler Export281530/4194304 Byte,
+256KiB Abschlussreserve;16/18 Frames,2 Vorschlaege,EMA-Zusatz4281/16384 Byte.
+Receipt457 Byte,transiente UTF8-Obergrenze914 Byte. Kein Prozess-RAM-Beleg.
+Ein Receipt-Zaehler fuer exact_v1 wurde vor der endgueltigen Qualifikation
+im Beobachter ergaenzt; Qualifikation01/alte Bindung bleiben dokumentiert.
+
+[Plan](docs/S2UC_EMA_BESTANDSPLAN_20261001.json),
+[Bindung](docs/S2UC_EMA_BESTANDSBINDUNG_20261001.json),
+[Abschlussbericht](reports/s2uc/ema-stock-neutral-qualification-20261001-02/REPORT.txt),
+[Testbeleg](reports/s2uc/ema-stock-neutral-qualification-20261001-02/test-result.json),
+[vorbereiteter Aufruf](docs/S2UC_EMA_BESTAND_VORBEREITETER_AUFRUF_20261001.txt).
+
+Echte64-Frame-Folge weder erzeugt noch ausgefuehrt/ausgewertet; keine echte
+Autorisierungsdatei,kein echter Zielordner. Naechster Vorschlag: Projektleiter
+nimmt Vorbereitung ab und entscheidet danach gesondert ueber den einmaligen
+unveraenderten E/K/P-Lauf. Keine weitere Implementierung allein aus diesem
+Ergebnisbericht ableiten. Bisheriger Kern/EMA bleiben unveraendert.
+
+## Aktueller Stand: Erfahrungs-Gegenproben abgenommen; wechselnder Bestand konzipiert (2026-10-01)
+
+Projektleiter hat den kontrollierten EMA-Funktionsbefund abgenommen; Zusatz
+bleibt experimentell/default disabled. Kein Cluster-/Gedaechtnisorganisations-
+nachweis. Neuer Konzeptauftrag erfuellt:
+[Gegenprobenvertrag wechselnder Bestand](docs/S2UC_EMA_WECHSELNDER_BESTAND_GEGENPROBENVERTRAG_20261001.txt).
+
+Eine64-Frame-Geschichte in E/K/P,192 Versuchsarm-Aufnahmen geplant.
+Konkrete Folge A,A,B,B,Bp,A,C,Bp,A,Bp,C,C,A,A,A,A; nur normale Aufnahme,
+keine geschuetzte Spur,keine Guards/variablen Enden zur A-Schonung.
+A/B gleichzeitig erhalten und gegensaetzlich bewertet; Ziel39 mehrdeutig
+zwischen B:r2 und Bp:c5,ohne Trefferwahl/Fehlerupdate. A:r1 wird bei48
+regulaer verdraengt; gleiche Werte kehren als candidate c7/retained r5
+ohne alte Fehler zurueck. Ziele55/59 kalte Starts,63 eigenes Neulernen.
+Alle Speicheruebergaenge bislang statische Erwartungen,keine Messbefunde.
+
+9 Haupt-/22 Nebenziele,Endziel65 zensiert. Bestand/Kausalitaet,
+Erfahrungsauswahl und Nettonutzen getrennt beurteilen. Nettonutzenmaske
+enthaelt alle7 eindeutigen Hauptziele einschliesslich Kaltstarts; kein
+Vorteil an fehlendem/mehrdeutigem Kontext verlangt,aber volle Kosten berichten.
+Ein korrekter Mechanismus kann bei Bestandswechsel dennoch gegen K verlieren.
+Unveraendert alpha1/2,exact_v1,legacy_v1,18+2 Frames/Vorschlaege,12 Zellen,
+16KiB Python-Zusatzbudget; kompletter Export<=4MiB einschliesslich Abschluss.
+Heute nur Konzept/Standseinordnung,keine Implementierung oder weiteren Laeufe.
+Naechster Vorschlag: Vertrag entscheiden,dann begrenzte Bindung/Beobachter-
+Qualifikation vorbereiten; Gegenprobe erst gesondert beauftragen.
+
+## Aktueller Stand: EMA-Gegenproben abgeschlossen; kontrollierter Funktionsnutzen (2026-10-01)
+
+Nach neutraler Implementierungsabnahme separat beauftragte Geschichten
+constant/switch_return je200 fortlaufende Frames in E/K/P abgeschlossen,
+1200 Versuchsarm-Aufnahmen,ohne Zwischenreset,Exit0. Der qualifizierte Replay
+hat zusaetzlich1200 interne Referenz-Fortschreibungen derselben Samples zur
+Zustandspruefung ausgefuehrt. Keine weiteren Versuchsarme/Quellframes.
+Plan,Code,Runtime,alpha1/2,exact_v1,legacy_v1 und Rezepte unveraendert.
+
+Status **CONTROLLED_FUNCTION_CRITERIA_MET**. Hauptziel-MAE switch_return:
+E0.0625,K0.16666666666666666,P0.3333333333333333. In allen drei Abschnitten
+ab zweitem Hauptziel jeweils bessere Prognose gewaehlt; Kontextnutzung nach
+Rueckkehr wieder aufgenommen. Stabile Kontrolle constant: Hauptziel-MAE
+E0.020833333333333332,K0,P0.5. Nach erstem auswertbarem retained-Ergebnis
+Ziel15 kein Mehrfehler gegen K; Anfangsverluste trotzdem voll enthalten.
+E ist dort insgesamt schlechter als K,kein allgemeiner Dominanzbefund.
+
+Alle Schaeden erhalten: constant gegen K an Nebenziel7/Hauptziel15 je0.5;
+switch_return gegen K an7/15/143 und gegen P an79 je0.5. Je Geschichte/Arm
+24 Haupt-/75 Nebenziele getrennt. Endziel201 ohne Fehlerupdate zensiert.
+Keine Ergebnisverbesserung durch Parameter-/Quellenaenderung.
+
+Fehler-Vor-/Nachwerte,vor Ziel eingefrorene Entscheidungen,atomare Updates,
+lebende Schluessel und Freigabe bestaetigt. Nach jedem Frame Speicherzustand
+gleich zur Referenz und zwischen E/K/P. Peak12 Frames,2 Vorschlaege,gemeinsam13;
+zusaetzlicher gemessener EMA-Python-Heap4284/16384 Byte inklusive temporaerer
+Verwaltung,kein Gesamtprozess-RAM-Beleg. Zusatz weiterhin default disabled.
+
+[Abschlussbericht](reports/s2uc/ema-counterprobe-20261001-01/REPORT.txt),
+[Kriterien](reports/s2uc/ema-counterprobe-20261001-01/criteria.json),
+[Einzelentscheidungen](reports/s2uc/ema-counterprobe-20261001-01/decisions.json),
+[getrennte MAE](reports/s2uc/ema-counterprobe-20261001-01/comparison.json),
+[technische Nachweise](reports/s2uc/ema-counterprobe-20261001-01/final-verification.json).
+Die gezielt durch Zwischenbloecke/Tails erhaltene A-Spur bleibt ausdrueckliche
+Versuchsbedingung. Kein allgemeiner Lernnutzen oder neue Herkunftserkennung.
+Naechster Vorschlag: kontrollierten Funktionsbefund abnehmen; danach begrenzten
+Gegenprobenvertrag fuer konkurrierende/verdraengte Spuren unter normaler
+Memoryfortschreibung vorbereiten. Keine weiteren Laeufe in diesem Auftrag.
+
+## Aktueller Stand: paired_error_ema_v1 implementiert und neutral qualifiziert (2026-10-01)
+
+Nach Annahme des Prognoseerfahrungsvertrags den ausdruecklich waehlbaren
+Zusatz implementiert. **E1-E12:12/12 PASS**, keine Fehler/Skips,Exit0,
+endgueltige Codebindungen waehrend der Qualifikation unveraendert.
+[Abschlussbericht](reports/s2uc/ema-neutral-qualification-20261001-02/REPORT.txt),
+[Testbelege](reports/s2uc/ema-neutral-qualification-20261001-02/test-result.json),
+[Einzelbelege](reports/s2uc/ema-neutral-qualification-20261001-02/facts.json).
+
+Neue Module _s2uc_paired_error_ema.py und _s2uc_paired_error_replay.py;
+vorhandene Wahrnehmung/Abruf/Bestaetigung/Memoryregeln unveraendert,vorherige
+AN-Codebindungen weiter gueltig. Zusatz standardmaessig disabled.
+Vollstaendige Eingangsvalidierung inklusive Zeit/Scope vor atomarem Fehlerpaar-
+Update; Schattenbewertung auch ungenutzter Kontexte. Neue Generation/Promotion
+ohne Fehleruebernahme; Verdrängung/Ende loescht Status,alte Tickets beleben
+nichts wieder. Gleichstand Persistenz,alpha1/2. Gemeinsame skalare binary64-
+MAE-Funktion fuer interne Fehler und neue Baselines,keine neue Schwelle.
+
+Max12 Zellen,ein Ticket,416 Byte feste Puffer. Zusatz-Python-Heap einschliesslich
+gemessener temporaerer Verwaltungsobjekte und Grenzwertmetadaten:
+**5518/16384 Byte**. Kein Gesamtprozess-RAM-Beleg. Bestehende18+2 Frame-/
+Vorschlagsgrenzen unveraendert,gewaehlte Ausgabe ausschliesslich Alias.
+Aktiver Zusatz bindet Zeit-/Ordinalmetadaten<2^63,Generationen positive uint64.
+
+Fortlaufender Anschluss:200 Frames nur mit explizitem begrenztem Vertrag;
+alte64-Grenze unveraendert. Separater neutraler200-Frame-Monotonstrom ohne
+Reset geprueft:99 Ziele,Endziel201 zensiert,Zustaende nach jedem Frame gleich
+zur Referenz. **Die beiden geplanten200-Frame-Geschichten nicht ausgefuehrt.**
+[Gegenprobenplan](docs/S2UC_EMA_GEGENPROBENPLAN_20261001.json) und
+[Implementierungsbindung](docs/S2UC_EMA_IMPLEMENTIERUNGSBINDUNG_20261001.json)
+vorbereitet,keine Ausfuehrungsfreigabe. Gezielte A-Spurerhaltung bleibt
+offene ausgewiesene Versuchsbedingung,kein allgemeiner Lernnutzen.
+
+Naechster Vorschlag: Implementierung/Qualifikation abnehmen und danach die
+zwei gebundenen Gegenproben separat beauftragen. Keine weiteren Varianten,
+keine Parametersuche und keine automatische Policy-Aktivierung.
+
+## Aktueller Stand: AN-EVAL abgenommen; Nutzung vergangener Prognosefehler konzipiert (2026-10-01)
+
+Projektleiter hat AN-EVAL im dokumentierten synthetischen PCM-/NJ-Umfang
+abgenommen. signal_approx_v1 bleibt experimentell,exakter Abruf/legacy_v1 Standard.
+Keine erneute Untersuchung der bereits implementierten Herkunft-/Nutzentrennung.
+Neuer Konzeptauftrag erfuellt:
+[Entscheidungsvertrag Prognoseerfahrung](docs/S2UC_PROGNOSEERFAHRUNG_ENTSCHEIDUNGSVERTRAG_20261001.txt).
+
+Genau eine vorgeschlagene Variante paired_error_ema_v1: zwei Fehler-EMA mit
+alpha1/2 je lebender Spur/Rolle/Generation, Hinweisoffset und Matchqualitaet.
+Kontext nur bei kleinerem bisherigen Kontextfehler,sonst Persistenz. Eigene
+eingefrorene Kontext-/Persistenzvorschlaege erst nach real eingetroffenem Ziel
+bewerten; auch ungenutzten Kontext als Schattenvorschlag weiter beurteilen.
+Keine Wirkung auf Wahrnehmung,Bestaetigung,Abruf oder Erhaltung. Neue Generation/
+Promotion ohne Erfahrung,Verdrängung/Ende loescht Status. Max12 Zellen und
+ein Ticket,416 Byte geplantes kompaktes Layout; Python-Zusatzbudget16KiB
+spaeter neutral nachweisen. Bestehende18+2 Vektor-/Framegrenzen unveraendert.
+
+Fortlaufende Gegenprobe vorgeplant: zwei200-Frame-Geschichten (stabil/Wechsel
+mit Rueckkehr),je24 Hauptziele und75 Nebenziele; drei Arme E/K/P mit identischer
+normaler Memoryfortschreibung. Neue einfache direkte48er-Fixture isoliert
+den Zusatz,kein neuer Audio-Robustheitsnachweis. Strikter Nutzen gegen beide
+Baselines,Wechselanpassung und Kontext-Rueckkehr erforderlich; alle Kosten
+einschliesslich Kaltstart sichtbar. Keine Umsetzung/Tests/Materialproduktion.
+Naechster Vorschlag: Vertrag entscheiden,danach begrenzte Implementierung mit
+neutraler Qualifikation; fortlaufenden Versuch erst separat beauftragen.
+
+## Aktueller Stand: AN-EVAL einmalig ausgewertet; kontrollierte PCM-/NJ-Kriterien erfuellt (2026-10-01)
+
+Nach AN-DEV-Abnahme einschliesslich dokumentierter Beobachterkorrektur separat
+beauftragte AN-EVAL-Produktion genau einmal MATERIAL_COMPLETE,Exit0:
+49 Rezeptor-/49 NJ-Aufrufe,67 Dateien,2061032/4194304 Byte.
+Vor Produktion korrigierten Runner,Code,Profile,Plan,Herkunft und Parameter
+eingefroren. epsilon_AUDIO=0.000033647428814553505,tau_AUDIO=1/32 exakt aus
+DEV-Auswahl uebernommen. Keine Evaluation-Kalibration oder Parametersuche.
+Genau eine Einstellung/ein Auswertungsaufruf,Exit0,ohne Abbruch/Wiederholung.
+
+Status **SYNTHETIC_PCM_NJ_CRITERIA_MET**: zwei zusaetzliche korrekte R1/R2-
+Zuordnungen,keine zusaetzlichen falschen Einzelzuordnungen,keine verlorenen
+Exakttreffer. Herkunft4 korrekt,6 Enthaltungen,1 bestehender N3-Fehler;
+Kontextabdeckung5/11 gegen2/11. P0 bleibt signalbedingt unabgedeckte positive
+Herkunft. Keine allgemeine natuerliche Audio-Wiedererkennung behauptet.
+
+R3 trotz korrekter Herkunft Prognoseschaden:MAE0.0018484613305405366 statt0
+gegen Persistenz und exaktes Schema. N3 weiterhin falsche A-Zuordnung bei
+wahrer D-Herkunft. Vollabdeckungs-MAE:Persistenz0.0015061054542216642,
+exaktes Schema0.0013380585499272529,Naeherungsschema0.0011687276888434138.
+11 Pruef-/48 Lernziele getrennt; keine Lernziel-Schaeden oder zusaetzlichen
+Lern-Herkunftsfehler. DEV/EVAL getrennt gegenuebergestellt,keine gemeinsame Quote.
+
+Materialintegritaet,disjunkte Seeds/Basis-PCM-Hashes und Unveraendertheit von
+103 DEV-Dateien bestaetigt. Gemeinsames synthetisches Rezept begrenzt die
+Unabhaengigkeitsaussage. Kausalitaet,Referenzspeicherzustand und Ressourcen-
+freigabe nachgewiesen. Peak12 Frames,2 Ausgaben,gemeinsam13; Receipt557/
+transient970 Byte,keine temporaeren48er-Distanzkopien. Kein Prozess-RAM-Beleg.
+
+[Abschlussbericht](reports/s2uc/an-eval-analysis-20261001-01/REPORT.txt),
+[Kriterien](reports/s2uc/an-eval-analysis-20261001-01/criteria.json),
+[vollstaendige Resultate](reports/s2uc/an-eval-analysis-20261001-01/result.json),
+[getrennter DEV-/EVAL-Vergleich](reports/s2uc/an-eval-analysis-20261001-01/dev-eval-comparison.json),
+[technische Nachweise](reports/s2uc/an-eval-analysis-20261001-01/final-verification.json).
+Beide AN-Familien nun bekanntes Material. Keine Policy-Aktivierung:
+exakter Abruf und legacy_v1 bleiben Standard,signal_approx_v1 experimentell.
+Naechster Vorschlag: begrenzten PCM-/NJ-Wiedererkennungsbefund fachlich abnehmen;
+danach Konzeptauftrag zur getrennten Pruefung von Herkunft und Fortsetzungsnutzen
+vorbereiten. R3-Grenze durch neue pruefbare Hypothese untersuchen,keine auf
+diesen Einzelfall zugeschnittene Regel oder weitere Versuche ohne Auftrag.
+
+## Aktueller Stand: AN-DEV produziert; Audio-Siebener-Auswertung abgeschlossen (2026-10-01)
+
+Nach Abnahme des PCM-/NJ-Anschlusses separat beauftragte AN-DEV-Produktion
+genau einmal MATERIAL_COMPLETE,Exit0:57 Rezeptor-/57 NJ-Aufrufe,76 Dateien,
+2396435/4194304 Byte. Autorisierung gegen Vorlage nur im Status geaendert.
+Herkunft,PCM-Ableitungen,Quellzeiten,Profile und Projektionsdigests geprueft;
+Material und gebundener Algorithmuscode waehrend der Auswertung unveraendert.
+
+epsilon_AUDIO=0.000033647428814553505 ausschliesslich Maximum der acht
+exportierten AN-DEV-NJ-Rauschframe-Mittelwerte. Genau sieben Einstellungen
+vollstaendig ausgewertet:0,1/256,1/128,1/64,1/32,1/16,1/8.
+Korrekte R1/R2-Zuordnungen:0,0,0,1,2,2,2. Alle sieben ohne zusaetzliche
+falsche Einzelzuordnungen oder verlorene Exakttreffer. Unveraenderter Selector
+waehlt **tau_AUDIO=1/32**, Status DEVELOPMENT_CANDIDATE_ONLY. MAE kein Auswahlziel.
+
+Bei Auswahl Kontextabdeckung5/11 statt2/11; Herkunft4 korrekt,6 Enthaltungen,
+1 bestehender FehlerN3. R3 trotz korrekter Herkunft Prognoseschaden:
+MAE0.0023763522335992263 statt0 bei Persistenz/exaktem Schema.
+Vollabdeckungs-MAE:Persistenz0.0016007918773188517,exaktes Schema
+0.0013852158907184332,Naeherungsschema0.0011678249452126979.
+P0 bleibt signalbedingt unabgedeckte positive Herkunft, kein verlorener Exakttreffer.
+11 Pruef-/48 Lernziele je Einstellung getrennt; keine Lernziel-Schaeden oder
+zusaetzlichen Lern-Herkunftsfehler. Keine Verrechnung von R3-Schaden mit Gewinnen.
+
+Kausalitaet,Referenzspeicherzustand,einmalige Aufnahme und Freigabe bestaetigt.
+Gemessener Peak12 Frames,2 Ausgaben,gemeinsam13; Receipt558/transient971 Byte,
+keine temporaeren48er-Distanzkopien. Kein harter Prozess-RAM-Beleg.
+
+Transparente Ablaufabweichung: erster Berichtversuch nach R0/tau0 wegen
+falscher Indexierung des Query-Lernziels9 abgebrochen. Nur Beobachtergenealogie
+korrigiert und neu gebunden; danach sieben vollstaendige Einstellungen,Exit0.
+Zusaetzlicher R0-Replay mit11 Aufnahmen je Arm separat dokumentiert und nicht
+in Auswahl/Quoten aufgenommen. Keine erneute Materialproduktion/Projektion.
+
+[Abschlussbericht](reports/s2uc/an-dev-search-20261001-01/REPORT.txt),
+[Auswahl](reports/s2uc/an-dev-search-20261001-01/selection.json),
+[Entscheidungstabellen](reports/s2uc/an-dev-search-20261001-01/decision-tables.json),
+[alle Schaeden](reports/s2uc/an-dev-search-20261001-01/all-harms.json),
+[technische Nachweise](reports/s2uc/an-dev-search-20261001-01/final-verification.json).
+AN-EVAL **unproduziert und unausgewertet**. Keine Gitterverfeinerung,
+Stoeramplitudenaenderung,Skalierungskombination oder automatische Policy-Aktivierung.
+Naechster Vorschlag: AN-DEV einschliesslich Beobachterkorrektur fachlich abnehmen;
+getrennte Audio-Evaluation mit eingefrorenem epsilon_AUDIO/tau_AUDIO beauftragen.
+
+## Aktueller Stand: PCM-/NJ-Materialanschluss implementiert und neutral qualifiziert (2026-10-01)
+
+Nach Annahme des Audio-/NJ-Vertrags durch den Projektleiter den begrenzten
+Materialanschluss implementiert. AN1-AN9: **9/9 PASS**, keine Fehler/Skips,
+Exit0, Codebindungen waehrend der endgueltigen Pruefung unveraendert.
+[Abschlussbericht](reports/s2uc/an-material-qualification-20261001-02/REPORT.txt),
+[Testbelege](reports/s2uc/an-material-qualification-20261001-02/test-result.json),
+[Einzelbelege](reports/s2uc/an-material-qualification-20261001-02/facts.json).
+
+Vollstaendige neutrale Development-Konfiguration: exakt57 Rezeptor-/57 NJ-
+Projektionen,76 Dateien,2396504/4194304 Byte einschliesslich Abschluss.
+Stoerung,Mischung,Gain nur auf PCM; unveraenderter Generator/Rezeptor/NJ.
+Gemeinsame Praefixe, Queryzeiten, Herkunft und Projektionsdigests geprueft.
+Separater neutraler Evaluation-Export mit49 Projektionen ohne Kalibration.
+Fehlerabschluss, Budgetreserve, Manipulationsabwehr und Wiederholungssperre
+geprueft. Keine reservierten AN-Seeds benutzt.
+
+Kalibrationsanschluss ausschliesslich acht Development-NJ-Rauschprojektionen;
+fremdes Development-epsilon und Evaluation-Umbenennung technisch abgewiesen.
+Neutraler epsilon-Messwert ist KEIN Parameter fuer AN. Keine Parametersuche;
+Vergleich neutral bei vorgegebenem tau1/32.11 Pruef-/48 Lernziele getrennt,
+R3-Prognoseschaden und N3-Herkunftsfehler sichtbar. Adapterpeak12 Frames,
+2 Ausgaben,gemeinsam13; keine temporaeren48er-Distanzkopien. Kein Prozess-RAM-Beleg.
+
+[Maschinenplan](docs/S2UC_AUDIO_NJ_MATERIALPLAN_20261001.json) mit
+[Code-/Runtimebindung](docs/S2UC_AN_PRODUKTIONSBINDUNG_20261001.json) vorbereitet.
+[AN-DEV-Aufruf](docs/S2UC_AN_DEV_VORBEREITETER_AUFRUF_20261001.txt) dokumentiert;
+Autorisierungsvorlage bleibt PENDING und wird vom Produktionseinstieg abgewiesen.
+AN-DEV und AN-EVAL **unproduziert**, keine AN-Kalibration/Auswertung.
+Exakter Abruf und legacy_v1 bleiben Standard; keine Skalierungskombination.
+
+Naechster Vorschlag an den Projektleiter: Anschluss anhand der Belege abnehmen,
+danach AN-DEV-Produktion und begrenzte Siebener-Auswertung gesondert beauftragen.
+AN-EVAL erst nach DEV-Entscheidung mit eingefrorenen Parametern eigens beauftragen.
+
+## Aktueller Stand: AR abgenommen; PCM-/NJ-Uebertragung konzipiert (2026-10-01)
+
+Verbindliche Projektleiterentscheidung: AR-EVAL im dokumentierten Umfang
+abgenommen, synthetische Wiedererkennungskriterien erfuellt. signal_approx_v1
+bleibt explizit waehlbar und experimentell. Exakter Abruf und legacy_v1 bleiben
+Standard; R3-Prognoseschaden und N3-Herkunftsfehler bleiben. AR-Pruefung beendet,
+keine Wiederholung. Skalierte Fortsetzung wird nicht automatisch kombiniert.
+
+Neuer Konzeptauftrag erfuellt:
+[Audio-/NJ-Pruefvertrag](docs/S2UC_AUDIO_NJ_NAEHERUNGSABRUF_PRUEFVERTRAG_20261001.txt).
+Neue Familien AN-DEV/AN-EVAL mit konkreten Sinusrezepten,Seeds/Frequenzen;
+Stoerung,Mischung,Gain und abweichende Fortsetzung ausschliesslich auf PCM
+VOR unveraendertem Rezeptor/NJ. Elf Faelle; DEV57/EVAL49 Projektionsfenster.
+Keine direkte Manipulation fertiger48er-Vektoren als Audiobeleg.
+epsilon_AUDIO erst aus maximaler NJ-Frame-Absolutamplitude von8 neuen DEV-
+Rauschfenstern bestimmen; weder Vektor-epsilon2^-10 noch tau1/64 ungeprueft
+uebernehmen. Begrenztes Siebener-Gitter auf DEV,danach Parameter einfrieren.
+Keine Evaluation-Kalibration/Suche. Herkunftsfehler,Signalverluste und
+Prognoseschaeden getrennte Kriterien; keine allgemeine Audio-Robustheitsbehauptung.
+
+Heute nur Vertrags-/Standseinordnung,keine Implementierung/Produktion/Tests.
+Naechster Vorschlag: PCM-/NJ-Materialanschluss separat neutral qualifizieren,
+danach neue DEV-Produktion/Auswertung eigens beauftragen. Alte Familien bleiben
+bekanntes Entwicklungsmaterial,keine erneute unberuehrte Evaluation daraus.
+
+## Aktueller Stand: AR-EVAL einmalig mit eingefrorenen Parametern ausgewertet (2026-10-01)
+
+Nach AR-DEV-Abnahme separat beauftragte Evaluation genau einmal produziert,
+MATERIAL_COMPLETE,Exit0. epsilon=2^-10 und tau=1/64 vor Produktion mit Code,
+Profil,Plan,Herkunft und Auswertung gebunden. Keine Evaluation-Kalibration,
+keine Suche oder Parameteranpassung.11 Pruefziele/48 Lernziele getrennt.
+Vorgegebene Herkunftskriterien erfuellt:2 zusaetzliche korrekte R1/R2-Zuordnungen,
+keine zusaetzlichen falschen Einzelzuordnungen,keine verlorenen Exakttreffer.
+Status SYNTHETIC_CRITERIA_MET, nur fuer diese synthetische Aufgabenklasse.
+
+Konkrete Prognoseabdeckung neu5/11,exakt2/11. Evaluation-Vollabdeckung:
+Persistenz-MAE0,037827664140,exaktes Beobachterschema0,031661263808,
+Signal-/Naeherungsschema0,026087181925. R3-Schaden gegen beide Baselines
+bleibt:MAE0,061233520508 statt0. N3 weiterhin bestehender Herkunftsfehler
+bei gleichem Anfang. DEV/EVAL separat,keine gemeinsame Erfolgsquote.
+[Abschlussbericht](reports/s2uc/ar-eval-analysis-20261001-01/REPORT.txt),
+[fachliche Kriterien](reports/s2uc/ar-eval-analysis-20261001-01/criteria.json),
+[Einzelwerte](reports/s2uc/ar-eval-analysis-20261001-01/result.json),
+[getrennter Vergleich](reports/s2uc/ar-eval-analysis-20261001-01/comparison.json).
+
+Materialintegritaet/Partitionstrennung/Kausalitaet/identische Speicherzustaende
+und Freigabe bestaetigt;38 DEV-Dateien unveraendert. Peak12 Frames,2 Ausgaben,
+gemeinsam13; keine48er-Distanzkopien. Keine Audio-/NJ-Robustheitsbehauptung.
+Beide AR-Partitionen nun bekannt. Standard bleibt exakter Abruf mit legacy_v1;
+weder Naeherungsabruf noch Faktorfortsetzung automatisch aktiviert.
+Naechster Vorschlag an Projektleiter: fachliche Abnahme/Statusentscheidung,
+Naeherungsabruf als explizite experimentelle Hypothese mit R3-/N3-Grenzen
+einordnen; keine automatische Standardumschaltung oder weiteren Versuche.
+
+## Aktueller Stand: AR-DEV produziert, Siebener-Suche abgeschlossen (2026-10-01)
+
+Separat beauftragte Produktion genau einmal MATERIAL_COMPLETE,Exit0;
+21 Dateien,128999/4194304 Byte. Integritaet und Bindungen bestaetigt.
+Acht Kalibrationsframes bestaetigen epsilon=2^-10=0,0009765625 konstruktionsbedingt;
+Rezeptpruefung, keine Schaetzung unbekannten Rauschbodens.
+Genau sieben tau ausgewertet:0,1/256,1/128,1/64,1/32,1/16,1/8.
+Korrekte R1/R2-Zuordnungen:0,0,1,2,2,2,2. Alle sieben zulaessig hinsichtlich
+zusätzlicher falscher Einzelzuordnungen; keine verlorenen exakten Zuordnungen.
+Auswahl nur Herkunftsregel, ohne MAE: selected_tau=1/64=0,015625,
+kleinster Wert mit maximalem Zugewinn2. Status DEVELOPMENT_CANDIDATE_ONLY.
+
+Je Einstellung11 Pruefziele/48 Lernziele getrennt, beide Arme legacy_v1,
+jede Geschichte leer. Bei Auswahl konkrete Prognoseabdeckung neu5/11,exakt2/11.
+Vollabdeckung:Persistenz-MAE0,038344136242,exaktes Beobachterschema0,033274519173,
+Signal-/Naeherungsschema0,027761010058. R3-Schaden gegen Persistenz/exaktes Schema
+MAE0,060567220052 statt0 bleibt erhalten. N3 bestehender Herkunftsfehler beider
+Arme und Schaden gegen Persistenz, keine Verbesserung dieser kausalen Grenze.
+Auch verworfene Einstellungen und alle Lernzielbefunde archiviert.
+
+[Abschlussbericht](reports/s2uc/ar-dev-search-20261001-01/REPORT.txt),
+[Parameterauswahl](reports/s2uc/ar-dev-search-20261001-01/selection.json),
+[alle sieben Bilanzen](reports/s2uc/ar-dev-search-20261001-01/overview.json),
+[Bindungen/Ressourcen](reports/s2uc/ar-dev-search-20261001-01/verification.json).
+Peak12 Frames,2 Ausgaben,gemeinsam13; keine neuen48er-Distanzvektoren.
+AR-EVAL weiterhin unproduziert/unausgewertet. Nur Development-Ergebnis,
+noch kein Robustheitsgewinn. Kein Nachverfeinern/Gitter- oder Episodenwechsel.
+Naechster Vorschlag: Development abnehmen und epsilon/tau sowie unveraenderte
+Regel/Auswertung fuer separat beauftragte einmalige AR-EVAL-Pruefung einfrieren.
+
+## Aktueller Stand: AR-Generator/Export und Auswahlfunktion qualifiziert (2026-10-01)
+
+Gebundenen AR-Plan unveraendert umgesetzt; M1-M7 neutral PASS. Generator,
+verlustfreier Export/Leser, Auswertungsanschluss und reine Siebener-Auswahlfunktion
+implementiert. Keine AR-Produktion, Forschungskalibration oder Parametersuche.
+Kalibrationspraezisierung: bei +/-2^-10 ist jede Frame-Absolutamplitude bereits
+konstruktionsbedingt2^-10. Rezeptpruefung, keine Schaetzung unbekannten Rauschbodens.
+
+Neutral geprueft: Werte/PRNG, gemeinsames A/D-Praefix,R1/R3-Hinweisgleichheit,
+Stoerungen,Mischherkunft,Gain,Profile; Evaluation-Kalibrationsseed unbenutzt;
+Ausgabe-/Mengengrenzen,Fehlerabschluss,Manipulations-/Wiederholungsschutz.
+Vergleichsarme eindeutig Exakter Abruf bzw. Signal-/Naeherungsabruf benannt,
+beide mit legacy_v1-Fortsetzung. Selector nutzt nur Herkunftskategorien,
+keine MAE:keine neuen falschen Einzelzuordnungen,maximal korrekte R1/R2,
+Gleichstand kleinstes tau. Ohne Zugewinn ausdruecklich keine Evaluationauswahl.
+[Bericht und konkreter Aufruf](reports/s2uc/ar-material-qualification-20261001-01/REPORT.txt),
+[Testbelege](reports/s2uc/ar-material-qualification-20261001-01/tests.json),
+[zusaetzliche Produktionsbindung](docs/S2UC_AR_PRODUKTIONSBINDUNG_20261001.json).
+AR-DEV/AR-EVAL weiterhin unproduziert. Autorisierungsvorlage nur PENDING.
+Naechster Vorschlag: einmalige AR-DEV-Produktion und fest begrenzte Siebener-
+Suche separat beauftragen; AR-EVAL bis Ergebnis/Entscheidung geschlossen halten.
+
+## Aktueller Stand: Signal-/Naeherungsabruf technisch implementiert (2026-10-01)
+
+Vertrag gemaess Projektleiter praezisiert: Signalpruefung veraendert auch den
+exakten Pfad der neuen Policy; verlorene exakte Zuordnungen separat berichten.
+Numerisch unbekannter Vergleich erzwingt gesamte Naeherungs-Enthaltung.
+SignalApproxAdapter mit expliziter signal_approx_v1-Policy implementiert;
+exact_v1 und legacy_v1 bleiben Standard. epsilon/tau validiert und unveraenderlich.
+EXACT/APPROXIMATE getrennt von candidate/retained. Alter Memory-/Matchingkern
+und Faktorfortsetzung unveraendert. Keine Parametersuche oder Produktion.
+
+12/12 neutrale Tests PASS: Signal-/Distanzgrenzen, Null, Konkurrenz, globale
+numerische Enthaltung, Exaktprioritaet, Nachfolger, Kausalitaet, Zustandsidentitaet,
+Freigabe sowie Observer fuer neue Fehler/verlorene Exakttreffer/Prognoseschaeden.
+Maximale9 Konkurrenten instrumentiert:15 Frames,1 Ausgabe,gemessen gemeinsam15;
+Receipt1856 Byte,voruebergehende Provenienz3590 Byte,keine neue48er-Vektorkopie.
+[Abschlussbericht](reports/s2uc/signal-approx-development-20261001-01/REPORT.txt),
+[Testbelege](reports/s2uc/signal-approx-development-20261001-01/tests.json),
+[konkreter Materialplan](docs/S2UC_SIGNAL_NAEHERUNGSABRUF_MATERIALPLAN_20261001.json).
+AR-DEV/AR-EVAL unproduziert; Seeds,Stoerungen2^-10/2^-9,Gain2^-12 und
+DEV-Kalibrationsrezept gebunden. epsilon/tau noch nicht bestimmt.
+Technische Funktionsfaehigkeit ist kein Robustheitsnachweis. Zusaetzliche
+falsche Einzelzuordnung auf Evaluation verhindert fachliche Abnahme.
+Naechster Vorschlag: Generator-/Exportpfad separat neutral qualifizieren;
+danach DEV-Produktion/Parametersuche eigens beauftragen, EVAL weiter geschlossen.
+
+## Aktueller Stand: Faktorpruefung abgeschlossen; Naeherungsabruf konzipiert (2026-10-01)
+
+FC-EVAL durch Projektleiter abgenommen. Verbindliche Statusentscheidung:
+factor_scaled_v1 bleibt ausdruecklich waehlbare experimentelle Fortsetzungs-
+hypothese; legacy_v1 bleibt Standard. Keine automatische Umschaltung.
+Mittlerer Nutzen hebt GP-Schaden nicht auf. Abgeschlossene Versuche werden
+nicht wiederholt; beide Materialpartitionen sind bekannte Bestaende.
+
+Neuer Schwerpunkt kleine Stoerungen: ausschliesslich Konzeptauftrag erfuellt.
+[Aenderungs- und Pruefvertrag](docs/S2UC_NAEHERUNGSABRUF_AENDERUNGS_PRUEFVERTRAG_20261001.txt)
+schlaegt genau einen Ansatz vor: amplitudennormierter L1-Vergleich zweier
+Hinweisframes bei Faktor1, nur nach fehlendem exakten Match. Exakter Abruf
+bleibt Referenz. Signalzulassung verhindert Null-/Kleinsignalzuordnung;
+mehrere Naeherungstreffer fuehren zur Enthaltung, kein naechster-Nachbar-Sieger.
+Aufnahme/Bestaetigung/Auffrischung/Fortsetzungsregeln bleiben unveraendert.
+
+Parameter nur aus neuer Entwicklung: Signalgrenze aus separaten Stoerungsframes,
+tau aus festem kleinem Gitter ohne zusaetzliche falsche Einzelzuordnung.
+Keine NASA-Abstandsschwelle. Elf Faelle mit Stoerungen, Fremdpegel,
+Nachbarschaft, gleichem Anfang, Konkurrenz und Null-/Kleinsignal; neue Familien
+vor Produktion konkret binden. Kein Gewinn oder neue Fehlzuordnung in Evaluation
+verhindert Abnahme als verbesserte Wiedererkennung. Herkunft und Nutzen getrennt.
+Heute nur Vertrag und Standseinordnung, keine Implementierung/Tests/Produktion.
+Naechster Vorschlag: Ansatz/Fehlerregel entscheiden, dann begrenzte Abrufpolicy
+mit neutraler technischer Qualifikation beauftragen; Materialproduktion separat.
+
+## Aktueller Stand: FC-EVAL einmalig ausgewertet, Statusentscheidung offen (2026-10-01)
+
+Nach FC-DEV-Abnahme separat beauftragte FC-EVAL-Produktion genau einmal
+MATERIAL_COMPLETE,Exit0. Vorabbindungen unveraendert; keine Regel-/Seedanpassung.
+11 Pruefziele,48 Lernziele und Kandidatenprobe getrennt ausgewertet.
+Konkrete Prognoseabdeckung scaled7/11,legacy1/11. Herkunft je Policy:
+9 korrekt,1 mehrdeutig,1 Enthaltung. Keine Aufbauabweichungen.
+FC-EVAL Vollabdeckung: Persistenz-MAE0,105972752427,
+Legacy-sonst-Persistenz0,096699107777,scaled-sonst-Persistenz0,072831587358.
+GP bleibt Schaden gegen beide Schemata:Delta=-0,051005045573.
+GD unveraendert enthalten, auf FC-EVAL kein Schaden. FC-DEV separat:
+Persistenz0,091564062870,Legacy-Schema0,084845571807,scaled-Schema0,070344173547;
+damalige Schaeden GD und GP bleiben erhalten. Keine gemeinsame Erfolgsquote.
+
+[Evaluationsbericht](reports/s2uc/fc-eval-analysis-20261001-01/REPORT.txt),
+[Vorabbindung](reports/s2uc/fc-eval-analysis-20261001-01/freeze.json),
+[Einzelwerte](reports/s2uc/fc-eval-analysis-20261001-01/result.json),
+[getrennter Vergleich](reports/s2uc/fc-eval-analysis-20261001-01/comparison.json).
+Matching-/Speicherzustaende identisch, kausale Prognosen und einmalige Aufnahme
+129 Frames je Policy bestaetigt; Kandidatenprobe separat7 Frames.
+Peak12 Frames,2 Ausgaben,gemessen gemeinsam13; transient konservativ14/20.
+Ressourcen freigegeben,38 FC-DEV-Dateien unveraendert. Keine Audioverarbeitung.
+Beide neuen Partitionen nun bekannt; kein erneuter unabhaengiger Nachweis
+mit denselben Daten fuer geaenderte Regeln. Legacy bleibt Standard.
+Naechste Entscheidung beim Projektleiter: Status der skalierten Fortsetzung
+angesichts Nutzen im festen Fallmix und GP-/Gainwechselrisiko festlegen.
+Empfehlung: explizite optionale Hypothese erhalten, keine automatische
+Standardumschaltung oder adaptive Policywahl aus diesen Befunden.
+
+## Aktueller Stand: FC-DEV einmalig produziert und ausgewertet (2026-10-01)
+
+Ausdruecklich beauftragte FC-DEV-Produktion genau einmal MATERIAL_COMPLETE,
+Exit0. Urspruenglicher Plan und zusaetzliche Produktionsbindung unveraendert.
+Materialintegritaet/Profile/Herkunft/Varianten bestaetigt; keine Ersatzdaten.
+11 Pruefziele und48 Lernziele pro Policy separat, Kandidatenprobe separat.
+Konkrete Prognoseabdeckung scaled7/11,legacy1/11. Vollabdeckungsschemata:
+Persistenz-MAE0,091564062870; Legacy-sonst-Persistenz0,084845571807;
+scaled-sonst-Persistenz0,070344173547. Keine Enthaltung als konkrete MAE0.
+Schaeden gegen Persistenz und Legacy-Beobachterschema bei GD und GP erhalten:
+Delta GD=-0,010574340820; GP=-0,036951700846. Keine Aufbauabweichungen.
+
+Matching-/Speicherzustaende beider Policies und Referenz identisch; Prognosen
+kausal gebunden,129 Primaerframes je Policy genau einmal aufgenommen.
+Ressourcenpeak12 Frames,2 Ausgaben,gemessener gemeinsamer Peak13;
+mit transientem Builder konservativ14/20. Keine48er-Zusatzliste; Slots frei.
+[Abschlussbericht](reports/s2uc/fc-dev-analysis-20261001-01/REPORT.txt),
+[Einzelbewertungen und Masken](reports/s2uc/fc-dev-analysis-20261001-01/result.json),
+[Integritaet/Ressourcen](reports/s2uc/fc-dev-analysis-20261001-01/verification.json).
+FC-EVAL weiterhin unproduziert/unausgewertet. Nur synthetische Adapterpruefung,
+kein Audio-/NJ-Robustheitsnachweis. Keine unveraenderten Volltests wiederholt.
+Naechster Vorschlag: Development technisch abnehmen und danach unveraenderte
+Regel/Auswertung fuer separat beauftragte einmalige FC-EVAL-Pruefung binden.
+Keine automatische Evaluation oder Anpassung an diese Development-Ergebnisse.
+
+## Aktueller Stand: Faktor-Materialgenerator neutral qualifiziert (2026-10-01)
+
+Begrenzter Generator-/Exportpfad und separater Dreiarm-Leseranschluss umgesetzt.
+G1-G7 PASS auf final gebundenem Code: unabhaengige Wertepruefung, verlustfreier
+Export, A/D- und Nullpraefix, Varianten/Profile/Herkunft, Reproduzierbarkeit,
+Mengengrenzen, reservierter Fehlerabschluss, Wiederholungs-/Ueberschreibschutz,
+Manipulationsablehnung und Vergleichsanschluss. Nur FC-NEUTRAL erzeugt.
+Neutraler Erfolg:18 Dateien,768 Basiskomponenten,129 Fallframes,113524 Byte;
+11 Pruefziele und48 Lernziele separat. Kein Audio-/NJ-Robustheitsnachweis.
+
+[Abschlussbericht](reports/s2uc/factor-material-qualification-20261001-01/REPORT.txt),
+[Testbelege](reports/s2uc/factor-material-qualification-20261001-01/tests.json),
+[zusaetzliche Produktionsbindung](docs/S2UC_FAKTORFORTSETZUNG_PRODUKTIONSBINDUNG_20261001.json).
+Urspruenglicher Materialplan einschliesslich Seeds/Faellen/Codebindungen
+unveraendert. Erweiterung bindet neuen Generator/Export/Leser/Tests separat.
+FC-DEV und FC-EVAL bleiben unproduziert. FC-DEV-Autorisierungsvorlage PENDING;
+konkreter spaeterer Produktionsaufruf im Bericht, heute nicht ausgefuehrt.
+
+Praezisierung: Im vorherigen handgesetzten GP-Test war die skalierte MAE2,
+Persistenz0; Legacy enthielt sich.0 galt fuer Legacy-sonst-Persistenz, nicht
+fuer eine konkrete Legacy-Prognose. Im neuen neutralen Generator-GP skalierte
+MAE0,0480804443359375, Persistenz0, Legacy-Prognose undefiniert,
+Legacy-Beobachterschema0. Ergebnisse unterscheiden diese Faelle ausdruecklich.
+Naechster Vorschlag: einmalige FC-DEV-Produktion und lokale Dreiarm-Auswertung
+separat beauftragen; FC-EVAL weiter geschlossen halten.
+
+## Aktueller Stand: Faktorfortsetzung implementiert und neutral geprueft (2026-10-01)
+
+Beauftragtes Paket umgesetzt: legacy_v1 bleibt Standard; factor_scaled_v1
+explizit vor Geschichte waehlen, danach Policy unveraenderlich. Eindeutiger
+Nachfolger*f, Faktor1 unveraendert; numerische Grenzen und Mehrdeutigkeit
+mit expliziter Enthaltung. Matching/Aufnahme/Bestaetigung/Auffrischung unveraendert.
+34/34 Tests PASS:Q1-Q10 plus24 Regressionen. Fuenf Legacy-Geschichten exakt
+gegen eingefrorenen alten Adapter/Consumer; kausale Gates und Referenzzustaende
+bestaetigt. Neutraler GP-Schaden erhalten: skalierte MAE2 gegen Persistenz/Legacy0.
+Kein Leistungsnachweis aus diesen technischen Fixtures.
+
+[Bericht](reports/s2uc/factor-continuation-development-20261001-01/REPORT.txt),
+[Testbelege](reports/s2uc/factor-continuation-development-20261001-01/tests.json),
+[gebundener Materialplan](docs/S2UC_FAKTORFORTSETZUNG_MATERIALPLAN_20261001.json).
+Transiente Skalierung geprueft:ein48er-Tupelbuilder plus Persistenz,2 Ausgabeslots;
+konservative gemeinsame Obergrenze im neutralen Fall10/20, keine48er-Zusatzliste.
+FC-DEV und FC-EVAL bleiben PENDING_UNPRODUCED. Direkte Vektorwelt prueft
+Adapterregel, keine Audio-/NJ-Robustheit. Alte Partitionen bleiben bekannte Daten.
+Naechster Vorschlag: begrenzten Generator-/Exportpfad implementieren und separat
+neutral qualifizieren; erst danach einmalige FC-DEV-Produktion eigens beauftragen.
+Kein heutiger Produktionsauftrag, keine automatische Evaluation.
+
+## Aktueller Stand: Faktorfortsetzung konzipiert, nicht implementiert (2026-09-30)
+
+Evaluation durch Projektleiter abgenommen und abgeschlossen. Neuer Auftrag
+ausschliesslich Konzeption: [Aenderungs- und Pruefvertrag](docs/S2UC_FAKTORFORTSETZUNG_AENDERUNGS_PRUEFVERTRAG_20260930.txt).
+Bestehender Abruf prueft gespeichert*f=Hinweis; vorgeschlagene Fortsetzung
+deshalb Nachfolger*f bei genau einem Match und einem Faktor0,5/1/2.
+Faktor1 bleibt unveraendert; Mehrdeutigkeit, fehlender Nachfolger und
+numerische Grenzen fuehren zu expliziter Enthaltung. Keine Matchinglockerung.
+
+Geplant: kleine explizite Ausgabepolicy im Prognoseadapter, Standard legacy;
+keine Aenderung an Aufnahme/Bestaetigung/Auffrischung. Numerik ohne Clipping,
+Subnormalresultate neuer Skalierungen konservativ ablehnen. Zusatzbudget
+weiterhin2 Ausgabeslots einschliesslich transient gepruefter Skalierung.
+Elf vorbestimmte Faelle je neuer Familie,48 Lernziele separat; durchgehender
+Gain, wechselnder Gain, Persistenz-Gegenfall, Konkurrenz, Nullhinweis,
+fehlender Nachfolger und fremde Herkunft. Neue Seeds/Rezept vorgeschlagen,
+noch kein Material erzeugt. Direkte Vektorwelt ist kein Audio-/NJ-Nachweis.
+Q1-Q10 sind geplante Pruefpflichten, keine ausgefuehrten Tests.
+
+Naechster Vorschlag: Vertrag abnehmen und eng begrenzte Implementierung mit
+neutraler Qualifikation beauftragen; neue Materialproduktion danach separat.
+Heute nur Dokumentation, keine Implementierung, Tests oder Produktion.
+Beide frueheren Partitionen bleiben bekannte Bestaende, nicht unberuehrte
+Evaluation fuer geaenderte Regeln.
+
+## Aktueller Stand: einmalige synthetische Evaluation abgeschlossen (2026-09-30)
+
+Development durch Projektleiter abgenommen; separat beauftragte Evaluation
+einmalig MATERIAL_COMPLETE:7 Sequenzen,28 Fenster,28 Rezeptor-/28NJ-Aufrufe,
+537600 PCM-Byte,1169505/4194304 Ausgabebyte. Vor Produktion Plan/Seeds/Fallmatrix,
+Herkunft, Laufzeit und1451 Codedateien gebunden. Evaluation-Routing bis auf
+Partition/Ausgabe/Autorisierung AST-identisch zum Development-Auswertungsablauf.
+Integritaet und Partitionstrennung PASS; alle Bindungen sowie51 Development-
+Artefakte nachher unveraendert. Keine Matching-/Parameteranpassung.
+
+8 Evaluation-Pruefziele:3 korrekt,1 falsch,1 mehrdeutig,3 Enthaltungen;
+Zuordnungsabdeckung4/8,Kontext3/8. Gepaarte MAE Persistenz0,002239374837,
+Kontext0,001332740018;3 besser,0 gleich,0 schlechter. Vollabdeckung:
+Persistenz0,002258435296,festes Observer-Schema0,001918447239,
+Delta0,000339988057. Keine MAE-Schaeden. N3 bleibt falsche Herkunft trotz
+kleinem MAE-Vorteil; P2 ohne Rauscherkennung; P1 ohne Faktorfortsetzung;
+N4 mehrdeutig. T0/N3 identische Prognosen vor Folgeframe bestaetigt.
+36 Lernziele separat:13 korrekt,5 falsch,1 mehrdeutig,17 Enthaltungen;
+9 Kontextprognosen,keine MAE-Schaeden. Keine gemeinsame Erfolgsquote mit Development.
+Instrumentierte Peaks12 Frames,2 Ausgabeslots,gemeinsamer Peak13.
+
+[Abschlussbericht](reports/s2uc/known-origin-evaluation-analysis-20260930-01/REPORT.txt),
+[Vorabbindung](reports/s2uc/known-origin-evaluation-binding-20260930-01/freeze.json),
+[Einzelbewertungen](reports/s2uc/known-origin-evaluation-analysis-20260930-01/result.json),
+[getrennter Vergleich](reports/s2uc/known-origin-evaluation-analysis-20260930-01/comparison.json).
+Begrenzter Nutzen auf dieser synthetischen Aufgabenklasse; keine allgemeine
+Wiedererkennung natuerlicher Erfahrungen. Beide Partitionen jetzt ausgewertet.
+Naechster Vorschlag: Pruefung abschliessen, separat explizite Faktor0,5/2-
+Fortsetzung bei eindeutigem Faktorabruf konzipieren. Rauschrobustheit separat;
+N3 bleibt Identifizierbarkeitsgrenze. Neue Regeln benoetigen neue unberuehrte
+Evaluation. Keine automatische weitere Produktion oder Regelimplementierung.
+
+## Aktueller Stand: Development-Herkunftspruefung abgeschlossen (2026-09-30)
+
+Vollstaendiger Produktionspfad mit separater neutraler Konfiguration geprueft:
+Erfolgspfad mit echten Rezeptor-/NJ-Projektionen, Ausgabegrenze, Fehlerabschluss
+und Wiederholungsverweigerung PASS; bestehende Adapter-/Prueferregression24/24 PASS.
+Danach Development genau einmal MATERIAL_COMPLETE:7 Sequenzen,28 Fenster,
+28 Rezeptor-/28NJ-Aufrufe,537600 PCM-Byte; Materialausgabe1169539/4194304 Byte.
+Genealogie, bitgleicher A/D-Anfang, Gain/Rauschen/Tailgain, Zeiten und Digests
+bestaetigt. Generator, Plan, Matching und Parameter unveraendert.
+
+8 Pruefziele:3 korrekte,1 falsche,1 mehrdeutige Zuordnung,3 Enthaltungen.
+Zuordnungsabdeckung4/8, Kontextabdeckung3/8. Gepaarte MAE Persistenz0,002185468283,
+Kontext0,001344155963;3 besser,0 gleich,0 schlechter. Observer-Vollabdeckung:
+Persistenz0,002248279832, Kontext-sonst-Persistenz0,001932787712.
+Keine MAE-Schaeden gegen Persistenz; N3 bleibt dennoch falsche Herkunft A statt D.
+P2 ohne Rauscherkennung; P1 ohne spezifizierte Faktorfortsetzung; N4 mehrdeutig.
+T0/N3 vor Zukunftsaufnahme mit identischen Prognosen/Systemzustaenden bestaetigt.
+36 Lernziele separat, nicht in Prueferfolgszahlen:13 korrekt,5 falsch,
+1 mehrdeutig,17 Enthaltungen;9 Kontextprognosen,keine MAE-Schaeden.
+
+[Gemeinsamer Bericht](reports/s2uc/known-origin-development-analysis-20260930-01/REPORT.txt),
+[Einzelbewertungen](reports/s2uc/known-origin-development-analysis-20260930-01/result.json),
+[neutrale Qualifikation](reports/s2uc/known-origin-neutral-qualification-20260930-01/tests.json),
+[Produktionsabschluss](reports/s2uc/known-origin-development-20260930-01/closure.json).
+Nur synthetischer Development-Befund, keine abschliessende Leistungspruefung.
+Evaluation weiterhin unproduziert, Vorlage unveraendert PENDING.
+Naechster Vorschlag an Projektleiter: fachliche Abnahme und unveraenderte Regel/
+Auswertung fuer eine separat zu beauftragende einmalige Evaluation einfrieren.
+Keine automatische Evaluation, erneute Development-Produktion oder Matcherlockerung.
+
+## Aktueller Stand: Herkunfts-/Bewertungstreiber technisch geprueft (2026-09-30)
+
+24/24 Tests PASS. Label-freier Replay mit unveraenderten Adaptern; getrennte
+Prueferherkunft, Zuordnungs-/Prognoseabdeckung, gepaarte MAE und rein
+observerseitiges Kontext-sonst-Persistenz-Schema. Schadensfaelle bleiben einzeln
+sichtbar. T0/N3 bei identischem Vorzustand/Praefix mit identischer Systemprognose
+nachgewiesen; unterschiedliche Labels aendern nur die Prueferbewertung.
+[Bericht](reports/s2uc/origin-judge-development-20260930/REPORT.txt),
+[Tests](reports/s2uc/origin-judge-development-20260930/tests.json).
+Instrumentierter Kontrollfall Peak8 Frames,2 Ausgabeslots,gemeinsamer Peak9;
+einmalige Aufnahme, Referenzzustand und Freigabe geprueft. Keine Robustheits-
+oder abschliessende Leistungsbehauptung aus den bekannten Regressionen.
+[Ausfuehrbarer Materialplan](docs/S2UC_HERKUNFT_MATERIALPLAN_20260930.txt)
+und [konkrete Bindung](docs/S2UC_HERKUNFT_MATERIALPLAN_20260930.json): zwei
+Partitionen mit festem Generator/Seeds/Ablauf, je7 Sequenzen/28 Fenstern und
+allen8 Fallzuordnungen. Anfaenge und Derivate bleiben partitionsintern;
+gemeinsamer Generator begrenzt jede Unabhaengigkeitsaussage. Beide
+Autorisierungsvorlagen PENDING, keine neuen Materialien erzeugt.
+Naechster Vorschlag: technische Abnahme und separat nur Development-Produktion
+beauftragen; Evaluation bis zur eingefrorenen Regel/Abnahme geschlossen halten.
+Matching unveraendert, Rauschrobustheit bleibt ein offenes Pruefziel.
+
+## Aktueller Stand: Wiedererkennung und Fortsetzungsnutzen getrennt geplant (2026-09-30)
+
+Kontrollanalyse abgenommen, Zeitabstandskontrollen abgeschlossen. Matching
+wird derzeit nicht gelockert. [Pruefvertrag](docs/S2UC_WIEDERERKENNUNG_NUTZEN_PRUEFVERTRAG_20260930.txt)
+definiert acht Faelle mit extern bekannter Herkunft: identische Kontrolle,
+Gain-/Rausch-/Fortsetzungsvariante sowie fremde Erfahrung bei gleichem Pegel,
+Nachbarschaft und gemeinsamem Anfang. Identische Hinweise mit verschiedenen
+verborgenen Episoden bleiben eine kausale Identifizierbarkeitsgrenze.
+Zuordnungsrichtigkeit, Mehrdeutigkeit/Enthaltung, Rollen und Fortsetzungs-MAE
+getrennt; gemeinsame Zielpositionen und observerseitiges festes Vollabdeckungs-
+schema verhindern einen scheinbaren Nutzen allein durch Fallauslassung.
+NASA/W1-W4 bleiben explorativ. Unabhaengige Entwicklungs-/Prueffamilien mit
+versiegelter Basis-Herkunft fehlen; keine Varianten derselben Episode zwischen
+Partitionen mischen. Gesonderte Aenderungen fuer Rauschrobustheit, nicht-exakte
+Bestaetigung oder skalierte Fortsetzung waeren erforderlich und sind nicht
+beauftragt. Nur Planung, keine Materialisierung oder Matchingimplementierung.
+Naechster Vorschlag: getrennten Herkunfts-/Bewertungstreiber mit vorhandenen
+Regressionsdaten technisch entwickeln und neue Materialfamilien vor Produktion
+quellen-/seedgebunden festlegen. Historische Berichte bleiben unveraendert.
+
+## Aktueller Stand: feste zeitliche Beobachterkontrollen abgeschlossen (2026-09-30)
+
+Abgenommene [Abweichungsanalyse](reports/s2uc/nasa-deviation-observer-20260930-01/REPORT.txt)
+mit49 Persistenzpaaren/24 Kandidatenuebergaengen durch feste zeitliche
+[Kontrollanalyse](reports/s2uc/nasa-temporal-controls-20260930-01/REPORT.txt)
+ergaenzt. Auswahl/Formeln vor Berechnung gebunden,10/10 Tests PASS.
+Frameziele53,55,...,99: Nachbar t-1 gegen Kontrolle t-51. Nachbarn21mal
+geringere MAE,0mal gleich,3mal groesser. Mittlere MAE nahe0,000493804,
+fern0,001442393; mittleres Delta fern-minus-nahe0,000948589.
+Formationsziele14..25: j-1 gegen j-13. Nachbarn11mal geringer,0mal gleich,
+1mal groesser. Mittlere MAE nahe0,000540903,fern0,001416569;
+mittleres Delta0,000875667. Identische Zielteilmengen, Nachbarschaftswerte
+exakt gegen vorige Einzelwerte geprueft. Maximalabweichungen und mittlere
+Signalbetraege vollstaendig in [Einzelbefunden](reports/s2uc/nasa-temporal-controls-20260930-01/result.json).
+Deskriptiver Befund zeitlicher Aehnlichkeit auf einem Abschnitt, keine
+Wiedererkennung oder nuetzliche Kontextprognose nachgewiesen. Signalstaerke,
+Nichtstationaritaet und abhaengige Beobachtungen begrenzen die Aussage.
+Keine Matching-/Schwellenanpassung, neue Materialisierung oder Memory-Ausfuehrung.
+Historische Berichte unveraendert. Empfehlung an Projektleiter: Zeitabstands-
+kontrollen abschliessen und separates Wiedererkennungs-/Nutzenskriterium
+festlegen, bevor eine Erweiterung des Matchings erwogen wird.
+
+## Aktueller Stand: NASA-49-Ziele-Vergleich abgeschlossen (2026-09-30)
+
+Gespeicherter100-Fenster-Bestand lokal ausgewertet, keine neue Dekodierung.
+20/20 fokussierte Tests PASS.100 Frames genau einmal,50 feste Paarreceipts,
+alle49 Ziele3..99 kausal gebunden; Ziel101 NOT_EVALUABLE_END ausserhalb Nenner.
+Nach jedem Frame und Abschluss Speicherzustand inklusive Endmarken identisch
+zum Adapter ohne Vorhersage. Prognoseslots frei, Peak8 Frames plus1 Ausgabe.
+Kontextabdeckung0/49:49 Enthaltungen wegen fehlenden Kontexts. Persistenz
+49/49 Abdeckung,0 Treffer/49 Fehler. Gemeinsam abgedeckte Positionen0.
+25 Kandidatengenerationen (1 Anlage,24 Ersetzungen),0 Bestaetigungen/Promotionen,
+0 vorlaeufige oder bestaetigte Kontextprognosen. Keine Regelanpassung.
+[Bericht](reports/s2uc/nasa-context-comparison-20260930-01/REPORT.txt),
+[Einzelbefunde](reports/s2uc/nasa-context-comparison-20260930-01/result.json),
+[Tests](reports/s2uc/nasa-context-comparison-development-20260930/tests.json).
+Kein Kontextnutzen und kein isolierter Nachweis einer Kontinuitaetswirkung.
+Abweichungsgroessen ungeprueft. Naechster Vorschlag: beobachterseitigen Vertrag
+fuer mittlere/maximale absolute Abweichungen an allen49 Persistenzzielen und
+24 Kandidaten-Folgeformationen vorbereiten; keine Schwellenoptimierung,
+Matchingaenderung oder guenstigere Quellenauswahl. Noch nicht ausgefuehrt.
+Verbrauchte Materialisierungsfreigabe bleibt geschlossen.
+
+## Aktueller Stand: NASA[0,10) einmalig vollstaendig materialisiert (2026-09-30)
+
+Ausdruecklicher Benutzerauftrag durch Projektleiter uebermittelt; genau ein
+Materialisierungsaufruf, MATERIALIZATION_COMPLETE, Exit0.100 Fenster,
+480000 akzeptierte Samples,100 Rezeptor-/100NJ-Aufrufe. Quellintervalle
+lueckenlos[0,480000), Snapshotindices0,10,...,990, Profile unveraendert.
+Alle100 gespeicherten Projektionen/Intervalle/Digests lesend bestaetigt.
+[Bericht](reports/s2uc/nasa-contiguous-materialization-20260930-01/REPORT.txt),
+[Abschluss](reports/s2uc/nasa-contiguous-materialization-20260930-01/closure.json),
+[Inventar](reports/s2uc/nasa-contiguous-materialization-20260930-01/inventory.json).
+740 Pakete,469 Audioframes,480256 dekodierte Samples/Kanal;256 Endueberhang
+nicht aufgenommen.939952 Decoder-Lesebyte; Prozesspeak466399232Byte,
+Jobpeak472965120Byte unter640MiB. Gesamtausgabe519221Byte unter4MiB,
+Abschluss-/Beobachteranteil21322Byte unter256KiB. Handles/Prozess geschlossen.
+Einmalfreigabe verbraucht; keine Wiederholung.49-Ziele-Vergleich NICHT gestartet.
+Naechster Vorschlag: Projektleiter prueft Bestand und beauftragt separat die
+lokale49-Ziele-Integration mit leerem Speicher/fester Phase/unveraenderten Regeln.
+Keine Kontext- oder Kontinuitaetswirkung aus der Materialisierung abgeleitet.
+
+## Aktueller Stand: begrenzter Audio-Leser neutral geprueft (2026-09-30)
+
+Implementierung abgeschlossen,26/26 abschliessende Entwicklungstests PASS,
+keine Fehler/Skips. [Bericht](reports/s2uc/audio-reader-development-20260930/REPORT.txt)
+und [Test-/OS-Belege](reports/s2uc/audio-reader-development-20260930/tests-06.json).
+Neutrale WAV-/AAC-Dateien liefern100 Fenster/480000 akzeptierte Samples;
+WAV zusaetzlich100 Rezeptor-/100NJ-Aufrufe mit korrekten Quellzeiten.
+NJ-Snapshotindex0,10,...,990 entspricht unveraendertem Profilhop480 bei
+externem Fensterhop4800. Entwicklungsfehler der Indexzuordnung korrigiert;
+tests-03 bleibt als fehlgeschlagener Zwischenstand erhalten.
+Echte neutrale Container pruefen Edit-List/Priming, Luecke/Overlap und nur
+erste Audiospur; weitere PTS-Grenzfaelle am Assembler geprueft.640MiB
+Windows-Job vor Decoderarbeit, echter Allokationsfehler und beide Watchdogs
+nachgewiesen. Quellenhandle gegen Schreiben gesperrt, Lese-/Mengenlimits
+und4MiB Ausgabe mit256KiB Abschlussreserve implementiert.
+[Laufzeitbindung](docs/S2UC_AUDIO_READER_BINDING_20260930.json):572 Dateien.
+[Konkreter Einmalauftrag](docs/S2UC_NASA_100_FENSTER_AUSFUEHRUNGSAUFTRAG_20260930.txt)
+und PENDING-Vorlage vorbereitet. NASA-Datei NICHT dekodiert/materialisiert;
+ihre Zeitbedingungen und Ressourcen im Abschnitt[0,10) bleiben ungeprueft.
+Naechster Vorschlag: Paket abnehmen und genau eine gebundene Materialisierung
+separat beauftragen.49-Ziele-Vergleich bleibt getrennt, keine automatische
+Fortsetzung/Quellenauswahl. Historischer20er-Befund unveraendert.
+
+## Aktueller Stand: lueckenloser Eingang quellengebunden geplant (2026-09-30)
+
+Lokaler20-Beobachtungen-Vergleich durch Projektleiter im dokumentierten Umfang
+abgenommen. Keine Ursachenbehauptung zu Luecken und keine Fehlergroessenbewertung.
+[Beschaffungsvertrag](docs/S2UC_LUECKENLOS_BESCHAFFUNGSVERTRAG_20260930.txt)
+bindet die vorhandene NASA-Projektdatei an Hash und die ersten10 Sekunden:
+100 Fenster zu4800 Samples bei48kHz, Hop4800, bestehendes Rezeptor-/NJ-Profil,
+leerer Speicher, feste Paarphase,49 Ziele und Ziel101 ohne Folgeframe.
+[Lesende Quellenpruefung](docs/S2UC_LUECKENLOS_QUELLENPRUEFUNG_20260930.json)
+bestaetigt historischen SHA1/Groesse sowie SHA256; Audioheaderdauer175,08s.
+Keine Dekodierung oder Materialisierung. Historische Quellenverwendung ist
+keine aktuelle Ausfuehrungsfreigabe. Decoder-/Zeit-/Ressourcengates muessen
+erst implementiert und qualifiziert werden. Naechster Vorschlag: begrenztes
+Audio-Leser-Entwicklungspaket mit neutralen Tests, anschliessend separate
+Materialisierungsbeauftragung. Forschungsfrage nur Kontextabdeckung auf
+diesem Abschnitt; kein isolierter Nachweis einer Kontinuitaetswirkung.
+
+## Aktueller Stand: fortlaufender lokaler Vergleich abgeschlossen (2026-09-30)
+
+20/20 fokussierte Entwicklungstests PASS. Gebundener Dateileser und kausaler
+Treiber verarbeiten20 gespeicherte Beobachtungen ab leerem Speicher. Alle neun
+Zielzugriffe an vorhandene Prognose gebunden, alle20 Frames genau einmal
+aufgenommen; saemtliche Speicherfelder inklusive Endmarken nach jedem Eingang
+und Abschluss identisch zum bisherigen Adapter. Zehn Paarreceipts, neun
+Zielbewertungen, Ziel21 NOT_EVALUABLE_END ausserhalb des Nenners.
+Kontext0/9 Abdeckung, neun Enthaltungen wegen fehlenden Kontexts; Persistenz
+9/9 Abdeckung, null Treffer und neun Fehler. Gemeinsam abgedeckt0. Kein
+belegter Kontextvorteil. Fuenf Kandidatengenerationen, keine Bestaetigung.
+Peak8 Frames plus1 Ausgabeslot, alle Prognoseslots am Ende frei; Leser und
+Beobachter getrennt ausgewiesen. [Bericht](reports/s2uc/continuous-comparison-20260930-01/REPORT.txt),
+[Einzelbefunde](reports/s2uc/continuous-comparison-20260930-01/result.json),
+[Tests](reports/s2uc/continuous-comparison-20260930-01/tests.json).
+Nur20 ausgewaehlte Beobachtungen einer bereits verwendeten Quelle, jeweils
+1,3s unbeobachtet zwischen Fenstern. Kein Holdout oder lueckenloses Audio;
+historischer Gesamtversuch bleibt NOT_EVALUABLE. Keine Quellenverarbeitung.
+Naechster Vorschlag: fuer die offene Kontinuitaetsfrage den begrenzten
+10-s-/100-Fenster-Beschaffungsvertrag konkret quellenbinden; keine Anpassung
+des Matchings oder erneute Auswahl nach diesen Ergebnissen. Neue
+Materialisierung bleibt separat zu beauftragen. Aeltere Staende historisch.
+
+## Aktueller Stand: fortlaufender Vergleich statisch gebunden (2026-09-30)
+
+Lesende Bestandspruefung abgeschlossen. [Vergleichsvertrag](docs/S2UC_FORTLAUFENDER_VERGLEICHSVERTRAG_20260930.txt)
+und [Datei-/Positionsbindung](docs/S2UC_FORTLAUFENDER_VERGLEICH_BESTAND_20260930.json)
+legen20 vorhandene auditive Vektoren eines Mediendurchgangs fest: neun
+erreichbare Folgepositionen ab leerem Speicher, feste Paarphase, kein Seed.
+Originalfenster100ms im Abstand1,4s; historische Runtimezeiten sind keine
+Quellzeiten. Kleiner Vergleich ausgewaehlter Beobachtungen, keine lueckenlose
+Audiofolge und kein unbenutzter Holdout. Historischer Gesamtversuch bleibt
+NOT_EVALUABLE; gespeichertes Material wird nicht zur erfolgreichen Abnahme
+umgedeutet. Kontext-Faktor1 und Persistenz unveraendert, Enthaltungen und
+gemeinsame Abdeckung getrennt. Keine Prognosen berechnet, keine neue
+Materialisierung oder Versuchsausfuehrung. Naechster Vorschlag an Projektleiter:
+enges lokales Vergleichspaket mit kausalem Dateileser/Treiber und vollstaendiger
+Neun-Ziele-Bilanz beauftragen. Fuer lueckenlosen Eingang ist die Materialluecke
+und ein separater minimaler Beschaffungsvorschlag dokumentiert.
+Aeltere Abschnitte sind historische Staende; Registry/Originalquellenlauf
+bleiben zurueckgestellt.
+
+## Aktueller Stand: kausale Fortsetzungsvorhersage lokal geprueft (2026-09-30)
+
+17/17 Tests PASS auf finalem Stand. Fuenf feste Faelle: Kontext1 Treffer,
+1 Fehler,1 Mehrdeutigkeit,2 Enthaltungen; Abdeckung2/5. Persistenz2 Treffer,
+3 Fehler,Abdeckung5/5. K1/K2 identische Prognose vor drittem Pull.
+Alle15 Frames unveraendert aufgenommen, Zustaende/Endmarken gleich bisherigem
+Adapter. Zusatzslots nach Auswertung/Fehler/Abschluss freigegeben.16+2 Speicher
+plus2 getrennte Prognoseslots eingehalten. Keine neue PCM-Verarbeitung.
+Verdrangungsgrenzfall haelt vorher gebundene Mehrdeutigkeit/Persistenz fest;
+konkurrierenden Kandidaten nicht zu Gunsten einer konkreten Prognose ausblenden.
+[Finalbericht](reports/s2uc/context-prediction-20260930-03/REPORT.txt),
+[Beobachtete Faelle](reports/s2uc/context-prediction-20260930-03/result.json),
+[Tests](reports/s2uc/context-prediction-20260930-03/tests.txt),
+[Verdrangungsbilanz](reports/s2uc/context-prediction-20260930-03/eviction-resources.json).
+Kontrollierter Vorhersagenutzen/-schaden, keine allgemeine Wahrnehmungsverbesserung.
+Naechster Vorschlag: unabhaengigen vorab gebundenen Fortsetzungsbestand fuer
+Abdeckungs-/Fehlerkostenbewertung festlegen, keine Regel auf diesen Fallmix
+optimieren. Keine Folgeausfuehrung; Registry/Originalquellenlauf zurueckgestellt.
+Aeltere Abschnitte historisch.
+
+
+## Aktueller Stand: Fortsetzungsvorhersage statisch geplant (2026-09-30)
+
+[Vergleichsvertrag](docs/S2UC_KONTEXT_FORTSETZUNG_VERGLEICHSVERTRAG_20260930.txt)
+mit fuenf festen Geschichten abgeschlossen: passende/abweichende Fortsetzung,
+fehlender Kontext, konkurrierende Fortsetzungen und Spurende. Persistenz als
+Referenz. Gleicher Praefix muss vor Zugang zum Folgeframe dieselbe Prognose
+liefern. Feste Paarphase erreicht geplante Matchoffsets0/1/2 durch getrennte
+Geschichten, kein gleitender Abruf behauptet. Erwarteter Fallmix zeigt sowohl
+Nutzen als auch Schaden, keinen allgemeinen Wahrnehmungsvorteil.
+Offene Integration: Fortsetzung aus Abruf-Vorzustand vor Aufnahme sichern;
+aktueller Adapter liefert Receipt erst nach Aufnahme. Zwei zusaetzliche
+Vorhersage-Vektorslots ausserhalb16+2 ausdruecklich vorgeschlagen und bilanziert,
+keine verdeckte Erweiterung. Noch keine Implementierung oder Ausfuehrung.
+Registry/Originalquellenlauf zurueckgestellt. Aeltere Staende historisch.
+
+
+## Aktueller Stand: automatischer lokaler Wahrnehmungspaar-Anschluss geprueft (2026-09-30)
+
+Feste Zweierpaare werden vor ihrer Aufnahme lesend abgefragt. Vorlaeufige,
+bestaetigte, mehrdeutige und leere Kontextausgaben automatisch erzeugt, mit
+vollstaendiger Herkunft und ohne Erfahrungspayloads. Kein Receipt-Rueckkanal.
+5 gebundene Szenarien, 14 Frames genau einmal aufgenommen, 7 Receipts;
+alle Paarzustaende identisch zur Aufnahme-ohne-Abruf-Referenz inkl. Endmarken.
+6 Adapter- und4 Anschlussgrenztests PASS. Luecken/Wechsel terminal, Restframe
+explizit, Reset geprueft. Maximale temporare Belegung16 unterschiedliche
+Frames; Aliase/Metadaten/Receiptbuffer separat bilanziert,16+2 eingehalten.
+[Bericht](reports/s2uc/pair-context-20260930-01/REPORT.txt),
+[Zustaende und Ressourcen](reports/s2uc/pair-context-20260930-01/result.json),
+[Tests](reports/s2uc/pair-context-20260930-01/tests.txt),
+[Grenztests](reports/s2uc/pair-context-20260930-01/boundary-tests.txt).
+Nur lokale Integration vorhandener Vektoren, keine neue PCM-Verarbeitung,
+Runtime-Ersetzung oder Produktfreigabe. Ein Wahrnehmungsnutzen durch Kontext
+ist nicht nachgewiesen; naechste eigene Gegenprognose beim Projektleiter.
+Registry/Originalquellenlauf zurueckgestellt. Aeltere Staende historisch.
+
+
+## Aktueller Stand: Wahrnehmungsanschluss und getrennter Innerkontext statisch geplant (2026-09-30)
+
+[Anschlussvertrag und Architekturentscheidung](docs/S2UC_WAHRNEHMUNG_HINWEIS_INNERKONTEXT_VERTRAG_20260930.txt)
+abgeschlossen. Lokale F-/Auffrischungskombination bleibt im bisherigen Umfang
+geprueft; neuer automatischer Anschluss ist noch nicht implementiert.
+Vorschlag: feste aufeinanderfolgende Zweierpaare, lesender Abruf vor Aufnahme
+beider Originalframes, getrennte Herkunfts-Receipts ohne Rueckspeisung.
+Paarbuffer teilt die zwei Hinweisplaetze; Wrapperreferenzen, Endmarken und
+Receipt-Metadaten separat bilanzieren. Historische Runtime nutzt andere Typen,
+keine bestehende Produktanbindung behauptet. Kleine Gegenprobe prueft kausale
+Paarwahl, Aufnahmeunabhaengigkeit und Speichergrenzen. Nur Analyse/Planung,
+keine Ausfuehrung; Registry/Originalquellenlauf zurueckgestellt.
+Aeltere Abschnitte sind historische Staende.
+
+
+## Aktueller Stand: F-Abruf und exakte Auffrischung lokal integriert (2026-09-30)
+
+Unveraenderte vorhandene Methoden in FactorRecencyArm kombiniert. Vier
+Integrationsfaelle und temporaere Vollbelegung bestanden; 48 zustandsneutrale
+Abfragen gegen vollstaendige Treffermengen geprueft. 11 Testmethoden PASS,
+darin 8 Verhaltenskontrollen auf der kombinierten Klasse zusaetzlich ausgefuehrt.
+Halbhinweis erreicht A ohne Auffrischung; exakte Vollbeobachtung erhaelt A auf
+Kosten von D; Halbvollbeobachtung erzeugt nur Kandidat; Konkurrenz bleibt
+mehrdeutig. 16+2 gleichzeitig nachgewiesen. Endmarken/Kandidaten geschuetzt.
+[Bericht](reports/s2uc/factor-recency-20260930-01/REPORT.txt),
+[Herkuenfte und Ressourcen](reports/s2uc/factor-recency-20260930-01/result.json),
+[Tests](reports/s2uc/factor-recency-20260930-01/tests.txt).
+Nur lokale Integration mit gespeicherten Vektoren, keine Produktfreigabe,
+keine skalierte Bestaetigung und keine PCM-Verarbeitung. Naechster Schritt
+beim Projektleiter: Integrationsbaustein im geprueften Umfang einordnen und
+naechste offene Nutzungsfrage priorisieren. Keine automatische Folgeausfuehrung.
+Registry/Originalquellenlauf zurueckgestellt. Aeltere Abschnitte historisch.
+
+
+## Aktueller Stand: Auffrischung durch kontrollierte Datei-Wiederverarbeitung geprueft (2026-09-30)
+
+33/33 Tests PASS. A-3 ausschliesslich durch vier neue Rezeptor-/NJ-Aufrufe
+materialisiert: 192/192 NJ-Werte und 192/192 Rohwerte bitgleich zum Original.
+P behaelt urspruengliches A auf Kosten von D, R behaelt D; Kontrollen unveraendert.
+40 Hinweise zustandsneutral einschliesslich Endmarken. Maximal zwei skalare
+Endmarken, Reset bei Abschluss/zwischen Geschichten geprueft, 16+2 eingehalten.
+Kontrollierte Wiederverarbeitung derselben Datei, keine unabhaengige Neuaufnahme.
+[Bericht](reports/s2uc/perception-reprocess-20260930-01/REPORT.txt),
+[Materialisierung](reports/s2uc/perception-reprocess-20260930-01/materialization.json),
+[Wertevergleich](reports/s2uc/perception-reprocess-20260930-01/value-comparison.csv),
+[Tests](reports/s2uc/perception-reprocess-20260930-01/tests.txt).
+Naechster Vorschlag: Grenze zwischen faktorgebundenem Hinweisabruf und exakter
+Auffrischung statisch einordnen; keine automatische weitere Ausfuehrung.
+Registry und Originalquellenlauf zurueckgestellt. Aeltere Staende historisch.
+
+
+## Aktueller Stand: lokale Auffrischungsregel mit gespeicherten Vektoren geprueft (2026-09-30)
+
+31/31 Tests PASS auf finalem Stand, 40 zustandsneutrale Hinweise.
+Hauptfall: Variante behaelt Original-A und verliert D; Referenz verliert A.
+Ohne erneutes A und bei ausschliesslichen A-Hinweisen identisches FIFO-Ergebnis.
+Herkunft, Werte, Generation und Kandidat bleiben bei Auffrischung unveraendert.
+Nur strikt spaetere vollstaendige exakte Beobachtungsintervalle frischen auf;
+maximal zwei skalare Endmarken verhindern Wiederverwendung bereits akzeptierter
+Intervalle. Keine zusaetzlichen Frames; 16+2 eingehalten.
+[Finalbericht](reports/s2uc/perception-recency-20260930-02/REPORT.txt),
+[Uebergaenge und Herkuenfte](reports/s2uc/perception-recency-20260930-02/result.json),
+[Tests](reports/s2uc/perception-recency-20260930-02/tests.txt).
+Nur Speicherregelpruefung mit Vektoren, keine PCM-Verarbeitung. Historischer
+S2-TX-Lauf bleibt nicht qualifiziert. Naechster Vorschlag: gesondert A-3 aus
+gebundenem PCM materialisieren, um die offene Wahrnehmungseingangsbindung zu
+pruefen. Noch nicht ausgefuehrt. Registry/Originalquellenlauf zurueckgestellt.
+Aeltere Abschnitte sind historische Staende.
+
+
+## Aktueller Stand: Wiederwahrnehmungs-Vergleich statisch geplant (2026-09-30)
+
+[Vergleichsvertrag und historische Belege](docs/S2UC_WIEDERWAHRNEHMUNG_VERGLEICHSVERTRAG_20260930.txt)
+abgeschlossen. S2-TX implementiert bereits Aktualisierung durch exakte
+Wiederwahrnehmung; historischer Lauf bleibt wegen vorzeitigen Starts nicht
+qualifiziert. Keine Wiederholung dieses Hauptlaufs.
+Offen ist die begrenzte Uebertragung auf aktuellen Kandidaten-/Erhaltungspfad:
+A-A-D-D-A-Z-Z gegen ohne A und gegen ausschliessliche A-Hinweise.
+Vorhersage: Aktualitaetsarm behaelt A auf Kosten von D; Referenz behaelt D.
+Beide Kontrollen ohne Vorteil. Ursprungswerte/-herkunft und 16+2 bleiben gleich.
+Vektortestwiedergabe und erneute PCM-Wahrnehmungsverarbeitung sind getrennte
+Evidenzstufen; keine unabhaengige Neuaufnahme behaupten. Nur statischer Auftrag
+erledigt, keine Implementierung oder Ausfuehrung. Naechster Vorschlag ist eine
+schmale neutrale Integration vorhandener S2-TX-Operation, keine neue Regelserie.
+Registry/Originalquellenlauf zurueckgestellt. Aeltere Staende historisch.
+
+
+## Aktueller Stand: Eindeutigkeit durch FIFO-Verlust statisch abgeleitet (2026-09-30)
+
+Die beauftragte Analyse ist abgeschlossen: [Herkunft, Uebergaenge und Grenzen](docs/S2UC_FIFO_EINDEUTIGKEIT_ABLEITUNG_20260930.txt).
+Dritte synthetische Montage Z=W4/W3/W2/W1 wuerde nach exakter Bestaetigung
+A verdraengen. Derselbe B/C-Hinweis waere danach nur noch D@1 zugeordnet;
+X/B verlierte seinen einzigen Treffer A@0. Kein neuer Hinweisinhalt und kein
+Nachweis der urspruenglich gemeinten Herkunft. Vollstaendig aus vorhandenen
+Bandrelationen und FIFO ableitbar, keine neue Messung oder Implementierung.
+16+2 unveraendert, kein zusaetzliches Archiv. STOPP fuer einen weiteren reinen
+FIFO-Demonstrationslauf: nur Regression, keine neue Forschungsgegenprognose.
+Naechster fachlicher Schritt beim Projektleiter ist ein konkretes Nutzungskriterium
+fuer Erhaltung nach stoerenden Erfahrungen; keine Speicherregel daraus vorwegnehmen.
+Registry/Originalquellenlauf zurueckgestellt. Nachfolgende Staende historisch.
+
+
+## Aktueller Stand: PCM-Konkurrenzgegenprobe abgeschlossen (2026-09-30)
+
+21/21 Tests PASS; acht von acht Treffermengenvorhersagen bestaetigt.
+B/C trifft A und D (Position 1), X/B nur A (Position 0). F zeigt dies auch
+bei PCM-halbierten Hinweisen; E hat bei beiden Halbhinweisen keine Treffer.
+Alle 16 Abfragen zustandsneutral und wiederholbar. Halb-W1 wurde als einzige
+neue Ableitung einmal durch Rezeptor/NJ verarbeitet: je 48/48 Bandwerte
+bitexakt halbiert. Bestehende sechs Ausgaben gebunden wiederverwendet.
+D ist synthetische Montage, Bestaetigungen sind Testwiedergaben.
+E/F, Bestaetigung und Wahrnehmungspfad unveraendert; 16+2 eingehalten.
+
+Belege: [Bericht](reports/s2uc/pcm-competition-20260930-01/REPORT.txt),
+[Ergebnis](reports/s2uc/pcm-competition-20260930-01/result.json),
+[Bandvergleich](reports/s2uc/pcm-competition-20260930-01/band-comparisons.csv),
+[Tests](reports/s2uc/pcm-competition-20260930-01/tests.txt).
+Naechster Vorschlag: statisch pruefen, wie eine dritte bestaetigte Erfahrung
+unter derselben FIFO-Grenze Kontextzugang und Mehrdeutigkeit veraendert.
+Keine Umsetzung daraus abgeleitet. Registry/Originalquellenlauf zurueckgestellt.
+Nachfolgende Abschnitte sind historische Staende.
+
+
+## Aktueller Stand: zeitliche synthetische PCM-Gegenprobe abgeschlossen (2026-09-30)
+
+Der anschliessend beauftragte statische Konkurrenzentwurf ist abgeschlossen:
+[Montage, Speicherfolge und Vorhersagen](docs/S2UC_PCM_KONKURRENZ_ENTWURF_20260930.txt).
+A=W1/W2/W3/W4, D=W4/W2/W3/W1; gemeinsame und kontexttrennende Hinweise
+original/halbiert. Halb-W1 bleibt eine neue, noch ungepruefte Ableitung.
+Keine Umsetzung oder Auswertung dieses Folgeplans; Entscheidung beim Projektleiter.
+
+Die beauftragte neutrale Umsetzung ist abgeschlossen: 21/21 gezielte und
+Regressionstests PASS; sechs Rezeptor-/NJ-Verarbeitungen. Das unveraenderte
+Chirp-Signal mit 19200 Samples ist reproduzierbar erzeugt und herkunftsgebunden.
+W2/W3-Halbableitungen sind bitexakt rueckfuehrbar. Je 96/96 Rezeptor- und
+NJ-Bandwerte sind bitexakt halbiert. Alle sechs Originalfensterpaare sind
+unterschiedlich und unter den Faktoren 0.5,1,2 nicht proportional.
+
+Originalhinweis: E/F eindeutig Position 1. Halbhinweis: E ohne Treffer,
+F eindeutig Position 1, Faktor 0.5. Umkehrhinweis: beide ohne Treffer.
+Herkunft origin-1, Ordinale 1..4, Generation 1; exakte Bestaetigung durch
+Testwiedergabe mit Ordinalen 5..8, keine zweite Quellenaufnahme.
+Alle 12 Hinweise zustandsneutral, Wiederholungen identisch, Treffermengen
+vollstaendig unabhaengig geprueft. Beide Arme bleiben innerhalb 16+2.
+
+Belege: [Bericht](reports/s2uc/pcm-temporal-20260930-01/REPORT.txt),
+[Ergebnis](reports/s2uc/pcm-temporal-20260930-01/result.json),
+[Bandvergleiche](reports/s2uc/pcm-temporal-20260930-01/band-comparisons.csv),
+[Tests](reports/s2uc/pcm-temporal-20260930-01/tests.txt).
+Der Befund gilt fuer diesen synthetischen Verlauf und diese Laufzeit.
+Naechster Vorschlag an den Projektleiter: statischer Konkurrenzentwurf mit
+zwei Erfahrungen, die denselben Hinweis bei unterschiedlichem Aussenkontext
+teilen. Noch nicht beauftragt oder ausgefuehrt. Keine automatische Fortsetzung.
+E/F, Bestaetigung und Wahrnehmungspfad unveraendert; Registry und
+Originalquellenlauf bleiben zurueckgestellt. Aeltere Abschnitte sind historische Staende.
+
+
+## Aktueller Stand: PCM-Einzelfenster abgeschlossen; zeitliche Gegenprobe geplant, nicht ausfuehrbar (2026-09-30)
+
+Ergaenzung: Der beauftragte statische Entwurf einer lokalen synthetischen
+19200-Sample-Testsequenz ist abgeschlossen: [Signalformel und Pruefablauf](docs/S2UC_PCM_ZEITSEQUENZ_SIGNALENTWURF_20260930.txt).
+Durchgehender Chirp 400..4000 Hz bei Amplitude 1/8; Fenster und Hinweis bleiben
+fest. Noch keine PCM-Datei erzeugt, keine Rezeptorverarbeitung oder Tests.
+Der Projektleiter entscheidet als Naechstes ueber die begrenzte neutrale Umsetzung.
+Der Bestandsbefund und die fehlende reale Dateibindung bleiben bestehen.
+
+Die PCM-Einzelfenstergegenprobe ist abgeschlossen. Der gespeicherte Bericht
+weist 17/17 Tests PASS und 48/48 bitexakt halbierte Rezeptor- sowie NJ-Werte
+fuer genau das gebundene Einzelfenster aus. E: kein Treffer. F: drei passende
+Positionen und ABSTAIN_AMBIGUOUS, kein eindeutiger zeitlicher Erfahrungsabruf.
+Belege: [PCM-Bericht](reports/s2uc/pcm-half-20260930-01/REPORT.txt),
+[damalige Tests](reports/s2uc/pcm-half-20260930-01/tests.txt).
+
+Der beauftragte statische Folgeauftrag ist abgeschlossen:
+[PCM-Bestand und zeitlicher Pruefplan](docs/S2UC_PCM_ZEITVERLAUF_BESTAND_UND_PLAN_20260930.txt).
+Fuenf gespeicherte PCM-Dateien enthalten jeweils nur 4800 Samples; Wiederverwendung,
+neutrale Duplikate und Halbableitung belegen keine zusammenhaengende Vierfensterfolge.
+Die sieben geprueften S2OC-Archive liefern keine weitere PCM-Datei.
+
+Der ausdruecklich nicht ausfuehrbare Entwurf bindet prospektiv vier angrenzende
+4800-Sample-Fenster und W2/W3 als Hinweis. Fehlend ist eine herkunftsgebundene,
+lueckenlose PCM-Datei mit mindestens 19200 Samples/76800 Byte bei 48000 Hz,
+mono Float32 little-endian. Auch vier ueberlappende Hop-480-Fenster braeuchten
+6240 Samples und sind durch die Einzeldateien nicht belegt. Keine Verkettung
+getrennter Dateien und keine ergebnisabhaengige Auswahl.
+
+Naechster fachlicher Schritt beim Projektleiter: Bereitstellung einer einzigen
+zusammenhaengenden kontrollierten PCM-Testquelle festlegen. Erst danach kann
+der geplante E/F-Vergleich mit Original-, PCM-halbiertem und umgekehrtem Hinweis
+konkret gebunden und gesondert beauftragt werden. Eindeutigkeit bleibt Prueffrage.
+In diesem Folgeauftrag keine Signalproduktion, Rezeptorverarbeitung oder Tests.
+Registry und Originalquellenlauf bleiben zurueckgestellt. Nachfolgende Abschnitte
+sind historische Staende und keine parallelen Ausfuehrungsfreigaben.
+
+
+## Aktueller Stand: E/F-Abrufgegenprobe abgeschlossen (2026-09-30)
+
+21/21 Tests PASS.48/48 Entscheidungs- und48/48 Treffermengenvorhersagen
+bestaetigt (zwoelf Faelle, zwei Arme, jeweils Wiederholung). Exakte Bestaetigung
+unveraendert; ausschliesslich hint erweitert. Beide Arme erreichen16+2Frames.
+Drei eindeutige Zugangsgewinne, vier neu mehrdeutige Faelle; darunter Verlust
+einer zuvor eindeutigen bestaetigten Antwort. Nullfaktoren werden pro Schluessel
+zusammengefasst, unterschiedliche Herkuenfte/Positionen bleiben getrennt.
+Alle76 Abschlussuebergaenge je Arm und Zustandsbilder sind referenztreu,
+einschliesslich Wiedergaben ohne Hinweise. Der JSON-Nullzahltyp wurde beim
+Einlesen wertgleich korrigiert; Vorregistrierung unveraendert.
+Belege: [Bericht](reports/s2uc/factor-hint-20260930-01/REPORT.txt),
+[Ergebnis](reports/s2uc/factor-hint-20260930-01/result.json),
+[Tests](reports/s2uc/factor-hint-20260930-01/tests.txt).
+
+Die begrenzte Gegenprobe ist abgeschlossen. Keine automatische Zusammenfuehrung
+mit skalierter Bestaetigung. Deren zuvor zusaetzlich eingefuehrte Enthaltungsregel
+war eine gesonderte Umfangsabweichung und ist aus diesem Paket ausgeschlossen;
+Vorregistrierung ersetzt keine Beauftragung. Registry/Originalquellenlauf bleiben
+zurueckgestellt. Aeltere Abschnitte sind historische Staende.
+
+
+## Aktueller Stand: faktorgebundene Bestaetigung neutral geprueft (2026-09-30)
+
+20/20 Tests PASS;44/44 Uebergangs-,64/64 Hinweis- und16/16 Zustandsvorhersagen
+bestaetigt. Zwei konkurrierende Herkunftsmengen ebenfalls bestaetigt.
+G bestaetigt A gegen A/2 in beiden Richtungen; Umkehrung und lokale Skalierung
+werden nicht promoviert. A-A/2-A/4 veraendert den gespeicherten Ursprung A nicht.
+Mehrere passende Inhalte fuehren nach explizit vorregistrierter neuer Regel
+zu Enthaltung ohne Speicherveraenderung. Hinweise bleiben exakt und lesend:
+ein skalierter Wiederholungshinweis trifft deshalb nicht automatisch.
+Belege: [Bericht](reports/s2uc/gain-20260930-01/REPORT.txt),
+[Ergebnis](reports/s2uc/gain-20260930-01/result.json),
+[Tests](reports/s2uc/gain-20260930-01/tests.txt).
+
+Befund gilt nur fuer gespeicherte synthetische Vektoren und Faktoren1,1/2,2;
+keine allgemeine Erfahrungsgleichheit oder neue PCM-Validierung. Beide Arme
+bleiben bei16+2Frames. Naechster Vorschlag: separater statischer Entwurf zum
+faktorgebundenen Hinweisabruf und seiner Konkurrenz A gegen A/4. Noch keine
+Umsetzung dieses Vorschlags. Registry/Originalquellenlauf bleiben zurueckgestellt.
+Aeltere Auftraege unten sind historische Staende.
+
+
+## Aktueller Stand: Speicheraufteilungsvergleich abgeschlossen (2026-09-30)
+
+1K/2R gegen 2K/1R bei gleichem16+2-Frame-Budget neutral geprueft.
+23/23 Entwicklungs- und Regressionstests PASS, 44/44 Hinweis- und28/28
+Zustandsvorhersagen bestaetigt. Keine Abweichungen. In D-D-A-B-A bestaetigt
+2K/1R die urspruengliche A-Erfahrung und verdrangt das zuvor nachweislich
+abrufbare D. 1K/2R behaelt D; sein letztes A ist nur ein neuer Kandidat.
+Vorlaeufiger Zugriff zaehlt nicht als gleichwertige bestaetigte Erhaltung.
+Beide Grenztests erreichen16+2; gleiche Framekapazitaet ist kein gleicher RAM.
+Belege: [Bericht](reports/s2uc/allocation-20260930-01/REPORT.txt),
+[Ergebnis](reports/s2uc/allocation-20260930-01/result.json),
+[Tests](reports/s2uc/allocation-20260930-01/tests.txt).
+
+Der erwartete Zielkonflikt ist bestaetigt; dieser Vergleich ist abgeschlossen.
+Keine pauschale Gewinnerwertung und keine automatische weitere Variante.
+Fortsetzung braucht eine konkret unbeantwortete Forschungsfrage mit
+begruendetem Nutzungskriterium. Registry/Originalquellenlauf bleiben
+zurueckgestellt; keine adaptive Speicheraufteilung oder Produktfreigabe.
+Nachfolgende Auftraege sind historische Staende.
+
+
+## Aktueller Stand: K1/K2-Kandidatenkapazitaet neutral geprueft (2026-09-30)
+
+20/20 Entwicklungs- und Regressionstests PASS. 36/36 Hinweisvorhersagen,
+6/6 FIFO-Herkunftsfolgen und 2/2 Promotionsherkuenfte bestaetigt. K2 bestaetigt
+nach A-B-A die urspruenglichen A-Frames; nach A-B-C-A entsteht ausschliesslich
+ein neuer A-Kandidat. Wiederholte Hinweise veraendern keine Uebergaenge.
+Konkurrierende Kandidatentreffer bleiben mehrdeutig. Grenztests belegen
+K1 16+2 und K2 20+2 gleichzeitig gehaltene Frames. K1 bleibt unveraendert.
+Belege: [Bericht](reports/s2uc/k2-20260930-01/REPORT.txt),
+[Ergebnis](reports/s2uc/k2-20260930-01/result.json),
+[Tests](reports/s2uc/k2-20260930-01/tests.txt).
+
+Befund ist ein Kapazitaetseffekt bei gleicher FIFO-Regel. Kosten: zusaetzlicher
+Kandidatenplatz, mehr Vergleiche und mehr konkurrierende Treffer. Produktgrenzen
+bleiben unveraendert. Naechster Vorschlag: statischen Speicheraufteilungsvergleich
+2K/1R gegen 1K/2R bei gleichem 16+2-Budget entwerfen; noch nicht umgesetzt.
+Registry und Originalquellenlauf bleiben zurueckgestellt. Aeltere Auftraege
+unten sind historische Staende und keine parallelen Ausfuehrungsfreigaben.
+
+
+## Aktueller Stand: B2-V vorlaeufiger Kandidatenabruf neutral geprueft (2026-09-30)
+
+B2-V ergaenzt ausschliesslich den Hinweisabruf. 14/14 Entwicklungs- und
+Regressionstests PASS; 14/14 Vorhersagezeilen bestaetigt. P1/P2 einschliesslich
+Wiederholung sind vorlaeufig zugaenglich; N1/N2 bleiben ohne Treffer. K1 wird
+gegenueber B2 mehrdeutig: bestaetigte und Kandidatenherkunft werden beide
+sichtbar. Die sieben Originalhinweise und elf Speicheruebergaenge bleiben
+referenztreu. Nach Hinweisen bleiben Speicherzustand und Generationen gleich.
+Ein Kandidat, zwei Erhaltungsplaetze und 16+2-Frame-Grenze bleiben bestehen.
+Belege: [Bericht](reports/s2uc/b2v-20260930-01/REPORT.txt),
+[Ergebnisse](reports/s2uc/b2v-20260930-01/result.json),
+[Tests](reports/s2uc/b2v-20260930-01/tests.txt).
+
+Nutzen: Zugriff auf noch vorhandene einmalige Erfahrungen; Preis: zusaetzliche
+Mehrdeutigkeit. Keine Wiederherstellung ersetzter Kandidaten oder verbesserte
+Haltung nachgewiesen. Naechster Vorschlag ist ein getrennter statischer Vertrag
+zur Kandidatenhaltung bei Unterbrechung (A-B-A gegen A-B-C, explizite konstante
+Ressourcenbilanz und FIFO-Baseline). Noch keine Umsetzung dieses Vorschlags.
+Registry und Originalquellenlauf bleiben zurueckgestellt. Nachfolgende
+Auftraege sind historische Staende, keine parallelen Ausfuehrungsfreigaben.
+
+
+## Aktueller Stand: Vierarmvergleich umgesetzt und neutral geprueft (2026-09-30)
+
+Abschluss: **25/25 Entwicklungs- und Regressionstests PASS**, je 100
+Referenzabgleiche fuer I2/B1 bestanden, **28/28 vorregistrierte Abrufvorhersagen
+bestaetigt**. B2 erhaelt A bei g3/67; g1/26 und g2/38 bleiben ohne erstmalige
+Abrufzulassung. Belege: [Bericht](reports/s2uc/four-arm-20260930-01/REPORT.txt),
+[Ergebnisse](reports/s2uc/four-arm-20260930-01/result.json),
+[Tests](reports/s2uc/four-arm-20260930-01/tests.txt).
+Die temporaere Messung wurde wegen eines Python-3.14-Mapping-Proxys korrigiert;
+die Erstausgabe bleibt als ungueltige Ressourcenmessung erhalten.
+Naechster fachlicher Vorschlag: begrenzten Vertrag fuer vorlaeufigen Kandidatenabruf
+mit klarer Trennung von bestaetigter Erhaltung und unveraendertem Gegenprobenbudget
+entwerfen. Noch keine Umsetzung oder Produktfreigabe dieses Vorschlags.
+
+Beauftragt sind begrenzte Implementierung und neutrale Entwicklungspruefung
+auf gespeichertem synthetischem P2-Testmaterial: I1/I2 sofortige Aufnahme
+mit einem/zwei Erhaltungsplaetzen; B1/B2 bestaetigte Aufnahme mit einem/zwei
+Erhaltungsplaetzen und jeweils einem Kandidaten. I2 und B1 bleiben unveraenderte
+Referenzen. B2 darf ausschliesslich hier 16 Spurframes plus zwei Hinweisframes
+verwenden. Alle sieben Hinweise, Herkunft, Uebergaenge und Ressourcen werden
+berichtet. Vorhersagen sind vor Auswertung in
+`reports/s2uc/four-arm-20260930-01/preregistration.json` gesichert.
+
+Registry/UAC und Originalquellenlauf sind zurueckgestellt. Die nachfolgenden
+administrativen Fortsetzungen sind historische Staende, kein aktiver Auftrag.
+Produktgrenzen und Originalquellen bleiben unveraendert. Die Bestaetigungsregel
+umfasst in diesem Vergleich auch die Haltung eines einzelnen Kandidaten.
+
+
+## Aktueller Stand: M1–M5 implementiert und technisch geprüft, Reallauf gesperrt (2026-09-30)
+
+Das Paket M1–M5 ist als **s2uc.productive.v1** durch den Projektleiter im geprüften
+Implementierungs- und Testumfang abgenommen. **226/226 PASS** auf endgültigem Code: sämtliche bisherigen 207 Prüfpflichten
+plus 19 neue Prüfungen Q1–Q7, keine Fehler, Fehlschläge oder Skips, Exit 0.
+Code und Laufzeit blieben während der Vollprüfung unverändert. Die begrenzte
+P2-Projektleiterabnahme bleibt bestehen. Die begrenzte Paketabnahme ist keine
+unabhängige Gesamtabnahme und keine Freigabe realer Ausführung.
+Belege: [Abschlussbericht](reports/s2uc/p3-implementation-20260930-01/REPORT.txt),
+[Einzelresultate](reports/s2uc/p3-implementation-20260930-01/test-result.json) und [Prüfprotokoll](reports/s2uc/p3-implementation-20260930-01/protocol.json).
+
+Vier zusätzliche Dateien ergänzen produktive Zulassung, intern gebundenen
+Originalsupplier, exklusiven persistenten Verbrauch vor Prozessstart und getrennte
+Produkt-/Herkunftsleser. Die Autorität muss unabhängig vom Freigabedokument im
+festen, administrativ geschützten Windows-Register bestätigt sein. Testzulassungen
+werden vom öffentlichen Einstieg abgewiesen. **Keine operative Autorisierung wurde
+erzeugt, kein Originalquellenlauf ausgeführt; die vier realen Ablagen sind unbenutzt.**
+Der gespeicherte Originalhash-Negativfall endet vor Rezeptor und NJ als `NOT_EVALUABLE`;
+ein erfolgreicher Originalquellenlauf wird aus Ersatzproduktion nicht behauptet.
+
+Die endgültige Fassung umfasst **76 Dateien / 978.115 Byte**. Gemeinsame gemessene
+Schlussbilanz einschließlich Bericht: **1.973.225 / 4.194.304 Byte**;
+prospektive Abschlussreserve: **2.707.220 / 4.194.304 Byte**. Sämtliche P2-Teilgrenzen
+bleiben unverändert. Dies ist eine Testpaketbilanz, keine Vorausmessung eines Reallaufs.
+640 MiB begrenzen ausschließlich den Produktkindprozess.
+Belege: [Code-/Laufzeitinventar](reports/s2uc/p3-implementation-20260930-01/inventory.json),
+[gemeinsame Bilanz](reports/s2uc/p3-implementation-20260930-01/ledger.json) und [historische Integrität](reports/s2uc/p3-implementation-20260930-01/preservation.json).
+
+**Operative Fortsetzung: Benutzerzustimmung durch den Projektleiter übermittelt;
+Einrichtung an fehlenden administrativen Rechten blockiert.** Die aktuelle Sitzung
+hat keinen aktivierten Administratortoken. Bereits das Öffnen von HKLM64\SOFTWARE
+mit dem Recht KEY_CREATE_SUB_KEY wird mit Windows-Fehler 5 (Zugriff verweigert)
+abgewiesen. Kein Registry-Schreibzugriff wurde ausgeführt; alle drei Schlüssel fehlen.
+Beleg: [Rechte- und Bindungsprüfung](docs/S2UC_ADMINISTRATIVE_RECHTE_20260930.json).
+Die 76 Code-/Laufzeitbindungen, 48 Qualifikationsdateien, Quellenbindungen und Bilanz
+sind erneut lesend bestätigt; alle vier realen Ablagen bleiben unbenutzt. Keine
+operative Autorisierung, kein Claim und keine Quellenproduktion wurden erzeugt.
+Die Zustimmung wird nicht erneut angefordert. Nächster Schritt ist eine regulär
+administrativ berechtigte Ausführungsumgebung für die bereits genehmigte Einrichtung;
+danach Vorprüfung und genau ein Versuch gemäß dem übermittelten Auftrag.
+Das [begrenzte Einrichtungsskript](docs/Setup-S2UCRegistry.ps1) und sein
+[dokumentierter Aufruf samt Prüfgrenzen](docs/S2UC_REGISTRY_EINRICHTUNG_AUFRUF_20260930.txt)
+liegen vor. Im vorhandenen PowerShell-7.6.5-Host unter unverändertem `RemoteSigned`
+sind Selbstprüfung einschließlich nativer SDDL-Konvertierung und lesender Prüfung
+praktisch bestanden. Der Installationsaufruf stoppt ausschließlich am fehlenden
+Administratortoken. Der genaue reguläre UAC-Aufruf steht in der Aufrufdatei;
+[Kompatibilitätsbeleg](docs/S2UC_POWERSHELL7_KOMPATIBILITAET_20260930.json).
+Keine Richtlinienänderung oder Umgehung, keine Registry-Anlage und kein Verbrauch.
+Nach UAC-Einrichtung muss zusätzlich der unveränderte produktive ACL-Leser zustimmen.
+
+**Aktueller UAC-Startbefund:** Der genehmigte administrative Start wurde ausgeführt,
+aber Windows meldete „Der Vorgang wurde durch den Benutzer abgebrochen“.
+Der Installer wurde nicht gestartet; ein Installations-Exitcode liegt nicht vor.
+Alle drei Registry-Schlüssel fehlen weiterhin. Die unabhängige Vorprüfung war gültig;
+keine Autorisierung, kein Claim und kein Quellenversuch wurden erzeugt.
+[Abbruchbeleg](docs/S2UC_UAC_START_20260930.json). Kein automatischer erneuter Start.
+Fortsetzung benötigt einen erfolgreichen regulären UAC-Start der Einrichtung;
+die übermittelte fachliche Zustimmung wird nicht erneut angefordert.
+
+## Abgenommene P2-Basis (2026-09-30)
+
+Der Projektleiter hat den **P2-Testanschluss einschließlich Anschlusskorrektur
+im genehmigten Testumfang abgenommen**. Dies ist eine begrenzte Projektleiterabnahme,
+keine unabhängige Gesamtabnahme, keine formale Laufqualifikation und keine Freigabe
+realer Ausführung. **207/207 PASS** (203 bestehende plus vier Anschlussprüfungen),
+keine Fehler, Fehlschläge oder Skips, Exit 0, unveränderter Code während der Prüfung.
+Belege: [Korrekturbericht](reports/s2uc/p2-supplier-correction-20260930-01/REPORT.txt),
+[Einzelresultate](reports/s2uc/p2-supplier-correction-20260930-01/final/test-result.json) und
+[gebundenes Protokoll](reports/s2uc/p2-supplier-correction-20260930-01/final/protocol.json).
+
+Nachgewiesen sind 58 tatsächliche Aufrufe des vorhandenen gebundenen NU-Suppliers
+über 58 Aufrufe der ersetzten PCM-Produktionsschnittstelle, acht vorher abgewiesene
+falsche Endpunkte und sieben Herkunftsauswertungen. **Null reale Produktionsaufrufe**;
+NU-Identitäten mit Test-PCM bleiben Testbefunde. Produktabschluss und Herkunftsnachtrag
+bleiben getrennt; die ursprünglichen Produktdateien bleiben bytegleich.
+Belege: [Supplierbeobachtung](reports/s2uc/p2-supplier-correction-20260930-01/final/retained-success/observer/facts.json) und
+[Nachtragsabschluss](reports/s2uc/p2-supplier-correction-20260930-01/final/retained-success/appendix/appendix-terminal.json).
+
+Die abgenommene P2-Codefassung umfasst **72 Dateien / 926.690 Byte**.
+Die geschlossene P2-Testbilanz beträgt 2.290.197 Byte insgesamt, davon 77.369 Byte
+für Produktverifikation und Herkunftsnachtrag gemeinsam. Diese Bestandswerte sind
+keine Vorausbilanz eines Reallaufs. Die 640-MiB-Jobgrenze gilt ausschließlich für
+den Produktkindprozess, nicht für Elternprozess oder Herkunftsauswertung.
+Belege: [Codeinventar](reports/s2uc/p2-supplier-correction-20260930-01/final/inventory.json) und
+[geschlossene Ressourcenbilanz](reports/s2uc/p2-supplier-correction-20260930-01/final/ledger.json).
+
+Der [geprüfte, nicht ausführbare Freigabeentwurf](docs/S2UC_FREIGABEENTWURF_NACH_P2_20260930.txt) trennt vorhandene
+P2-Nachweise, noch notwendige Implementierung und spätere ausdrückliche Laufentscheidung.
+Der damalige Folgeauftrag M1–M5 ist umgesetzt und technisch geprüft; die aktuelle
+Prüffassung und die jetzt anstehende Projektleiterentscheidung stehen oben.
+
+## Historischer Stand: V9 neutral abgeschlossen, Regressionslücke geschlossen (2026-09-30)
+
+Die folgenden Angaben einschließlich damaliger offener Abnahmen und Bytegrenzen
+sind historische Befunde. Für den aktuellen Auftrag gilt die P2-Einordnung oben.
+
+Der vollständige neutrale Ablauf vom begrenzten V9-Produkteinstieg bis zum
+getrennt gespeicherten Herkunftsbericht ist im beauftragten Entwicklungsumfang
+**abgeschlossen**. Produktabschluss und Nachtragsstatus bleiben getrennt;
+Record, Produktverifikation und Produktterminal bleiben bytegleich erhalten.
+Beleg: [Abschlussbericht](reports/s2uc/provenance-appendix-repeat-20260929-01/REPORT.md).
+
+Der Anschlusscheck vom 29.09.2026 besteht mit **79/79**: 70 bestehende und
+neun neue Prüfungen. Die damals darin nicht wiederholten **105 bestehenden
+Prüfpflichten wurden am 30.09.2026 mit 105/105 PASS ergänzend ausgeführt**.
+Beide Gruppen weisen keine Fehler, Fehlschläge oder Skips auf, jeweils Exit `0`.
+Damit liegen **184 unterschiedliche PASS-Nachweise aus zwei getrennten
+Ausführungen ohne Überschneidung** vor. Der Codebestand ist für beide Gruppen
+identisch und unverändert; die bisherigen Ergebnisse bleiben erhalten.
+Der Ergänzungsauftrag ist durch den Projektleiter abgenommen und die benannte
+Regressionslücke geschlossen. Dies ersetzt weder die unabhängige Gesamtabnahme
+noch eine formale Laufqualifikation oder eine Freigabe des Realstarters.
+Belege: [79 Test-IDs und Resultate](reports/s2uc/provenance-appendix-repeat-20260929-01/test-result.json),
+[zugehöriges Testprotokoll](reports/s2uc/provenance-appendix-repeat-20260929-01/unittest.log),
+[Ergänzungsbericht vom 30.09.2026](reports/s2uc/regression-105-20260930-01/REPORT.txt),
+[105 Einzelresultate](reports/s2uc/regression-105-20260930-01/test-result.json)
+und [vollständige Zuordnung aller 184 Prüfpflichten](reports/s2uc/regression-105-20260930-01/coverage-184.json).
+
+Die frischen synthetischen Nichtnull-Fixtures zeigen **einen Erhaltungsgewinn
+bei g1/24** sowie **drei getrennte Verluste bei g1/26, g2/38 und g3/67**.
+Diese Befunde werden weder verrechnet noch auf reale Quellen oder eine allgemeine
+Überlegenheit übertragen. Bei g3/69 rufen beide Arme B richtig ab; dies ist kein
+kompensierender Gewinn. Die Herkunftsbelege stehen im
+[gespeicherten Sieben-Hint-Bericht](reports/s2uc/provenance-appendix-repeat-20260929-01/cases/1/appendix/provenance.json).
+
+**g1/24 bleibt ein offener Erwartungswiderspruch:** Die unveränderte alte
+TW-Erwartung lautet `ABSTAIN_AMBIGUOUS_RETAINED_TRACE`; tatsächlich ergibt die
+synthetische Gegenprobe `ABSTAIN_NO_RETAINED_TRACE`. Die alte Erwartung bleibt
+verletzt und wird separat von der Herkunftsauswertung berichtet. Die historische
+Entscheidungsauswertung wird dadurch nicht nachträglich korrigiert; die belegten
+Herkunftsgewinne und -verluste stehen im getrennten Nachtrag.
+
+Die **unterschiedliche Speicheraufteilung** bleibt eine Grenze der
+Ursacheninterpretation: TW besitzt zwei Erhaltungsslots, UA einen Kandidaten-
+und einen Erhaltungsslot. Die Befunde isolieren daher nicht allein die Wirkung
+der Bestätigung.
+
+Der vollständige Codebestand umfasst **62 Dateien mit 851.840 / 851.968 Byte**;
+es bleiben **nur 128 Byte frei**. Produktverifikation und Herkunftsbericht
+belegen gemeinsam **77.760 / 131.072 Byte**. Das sind Artefakt-/Quellbytekonten,
+keine Prozessspeichermessung. Belege:
+[vollständiges Codeinventar](reports/s2uc/provenance-appendix-repeat-20260929-01/dependency-inventory.json)
+und [gemeinsame Budgetrechnung](reports/s2uc/provenance-appendix-repeat-20260929-01/success-budget.json).
+
+Die Windows-Job-Commitgrenze von **640 MiB gilt ausschließlich für den
+Produktkindprozess**. Die nachgelagerte Herkunftsauswertung im Elternprozess
+ist davon **nicht erfasst**. Eine Begrenzung des gesamten Ablaufs wird nicht
+behauptet.
+
+**Unabhängige Abnahme offen; reale Quellen und realer Starter weiterhin
+gesperrt.** Die nächste fachliche Entscheidung betrifft die **Abnahme des
+abgeschlossenen neutralen Gesamtstands**, keinen weiteren Ausbau seiner
+technischen Hülle. Aus diesem Dokumentationsstand folgt weder ein neuer
+Implementierungs-/Testauftrag noch eine Grenzerhöhung oder Lauföffnung.
+
+## Historische Stände und Bindungen (unverändert überlieferte Befunde)
+
+Alle nachfolgenden Abschnitte sind historische Zeitstände. Ihre Formulierungen
+„aktuell“, „aktiv“ oder „nächster Schritt“, früheren Budgets, Qualifikations- und
+Auswertungsangaben sind keine heutige Freigabe oder aktuelle Gesamtbilanz.
+Der damalige Stopp der untersuchten Modultrennung bleibt als historischer
+Einzelentscheid erhalten; die damalige offene Ressourcenarchitekturfrage ist
+für den neutralen V9-Anschluss inzwischen bearbeitet. Maßgeblich sind oben der
+abgeschlossene Entwicklungsumfang und die noch offene unabhängige Abnahme.
+Der historische reale S2-UC-Lauf bleibt unverändert `NOT_EVALUABLE`.
+
+## Historischer Stand V6: S2-UC-Zulassung gesperrt, untersuchte Modultrennung beendet (2026-09-20)
+
+Die Zulassungskorrektur ist mit **57/57 neutralen Entwicklungstests**, Exitcode
+`0`, belegt. Die **unabhängige Abnahme bleibt offen**; dies ist keine formale
+Gesamtqualifikation und keine Hauptlauffreigabe.
+Belege: [Entwicklerbericht](reports/s2uc/v6-admission-development-20260920-155753/REPORT.md)
+und [Test-IDs, Ergebnisse und Hashbindungen](reports/s2uc/v6-admission-development-20260920-155753/test-result.json).
+
+Der bestehende reale Einstieg bleibt wegen der vollständigen Quellbytebilanz
+**gesperrt**: 29 Projektdateien mit 477.802 Byte überschreiten die unveränderte
+Reserve für aktive Bindungen (131.072 Byte) und bereits allein die Shared-Grenze
+(262.144 Byte). Das ist eine Quellbytebilanz, keine Prozessspeichermessung.
+Beleg: [vollständiges Abhängigkeitsinventar](reports/s2uc/v6-admission-development-20260920-155753/dependency-inventory.json).
+
+**STOPP für die untersuchte S2-UC-Modultrennung.** Die statische
+Machbarkeitsprüfung ist mit negativem Befund abgeschlossen; es erfolgt keine
+Umsetzung, kein Teilumbau und keine weitere Optimierungsrunde auf diesem Weg.
+Das vollständigere, ausdrücklich modellierte aktive Budget liegt bei 140.838
+Byte und damit 9.766 Byte über der Reserve, selbst bei kostenlos angenommener
+Rezeptorentkopplung. Beleg: [abschließender Machbarkeitsentscheid](reports/s2uc/final-split-feasibility-20260920-163154/DECISION.md).
+Diese Entscheidung betrifft diesen technischen Umbau, nicht die MCM-KI oder
+die fachliche Frage nach dem Nutzen wiederholter Wahrnehmungsbestätigung.
+
+Der historische S2-UC-Lauf bleibt unverändert **NOT_EVALUABLE**. Historische
+Abschnitte, Bindungen und Ergebnisse bleiben erhalten; ihre damaligen
+Aufträge oder Freigaben begründen keinen heutigen Ausführungsauftrag.
+
+Die nächste offene Architekturfrage lautet: **Wie lässt sich der fachliche
+Vergleich unter einer tragfähigen, ausdrücklich begründeten Ressourcenarchitektur
+durchführen?** Dazu besteht noch kein Umsetzungs- oder Laufauftrag. Die nächste
+Architekturentscheidung liegt beim Projektanalysten. Die nachfolgenden älteren
+Standseinordnungen sind im Licht dieses aktuellen Abschlussstands zu lesen.
+
+## Aktiver Arbeitsauftrag: S2-UC neutrale Fehler- und Zustandsverifikation abschließen, 2026-09-20
+
+S2-TY und S2-TZ sind abgeschlossen. Ihre abgeschlossenen Qualifikationen,
+der reale S2-TY-Einmallauf und sämtliche historischen Befunde bleiben
+unverändert erhalten. S2-TW ist ausschliesslich Referenzcode fuer die exakte
+Bestätigung; aus ihm folgt keine automatische neue Versuchslinie.
+
+Die private S2-UA-Komposition ist neutral mit vollständigen Übergangs- und
+Hintnachrechnungen geprüft. Der aktuelle Auftrag vervollständigt die neutrale
+S2-UC-Fehler- und Zustandsverifikation für den bereits gebundenen kleinen
+Quellenvergleich in
+[S2UC_QUELLENVERGLEICH_BINDUNG.md](docs/S2UC_QUELLENVERGLEICH_BINDUNG.md).
+Zugelassen sind weder Quellenproduktion noch Rezeptoranalysen, reale
+Memorygeschichten oder Systemintegration.
+
+### Abgeschlossener S2-UA-Kompositionsstand
+
+S2-UA vergleicht unverändertes S2-TW mit einer privaten Regel aus genau einem
+Bildungs-, Kandidaten- und Retained-Platz. Die neutrale Suite besteht mit
+`11/11`: vollständige Übergangsreceipts, Hintentscheidungen einschließlich
+Mehrdeutigkeit, Read-only-Zustände, Framegrenzen und Ownerabschluss sind
+geprüft. Das ist keine Wahrnehmungs-, Quellen- oder Systemqualifikation und
+begründet keine allgemeine Überlegenheit der Kandidatenregel.
+
+### Abgeschlossener S2-TZ-Stand
+
+Die symbolische Gegenprobe zu fortlaufenden überlappenden Viererfenstern ist
+in [S2TZ_STATISCHE_ANSCHLUSSENTSCHEIDUNG_FORTLAUFENDE_VIERERFENSTER.md](docs/S2TZ_STATISCHE_ANSCHLUSSENTSCHEIDUNG_FORTLAUFENDE_VIERERFENSTER.md)
+dokumentiert. Für zwei FIFO-Slots und positionsbezogene Zweiframe-Hints zeigte
+sie keinen zurechenbaren Abrufgewinn gegenüber der festen nichtüberlappenden
+Baseline, aber zusätzliche Verdrängung und Mehrdeutigkeit. Der Rolling-Adapter
+bleibt daher nicht implementiert. Das ist keine allgemeine Widerlegung von
+Sequenzspeicherung.
+
+### Abgeschlossener S2-TY-Stand
+
+### Formale neutrale Gesamtqualifikation
+
+Der aktive Auftrag bindet den vollständigen neutralen S2-TY-Testbestand vorab
+mit Code-/Testhashes, Python-/NumPy-Versionen und unveränderten Profilen und
+führt ihn genau einmal aus. Er umfasst Erfolgsverlauf, Materialisierungs- und
+Manifestabbrüche, spätere Steuer-/Ownerfehler, Receiptmanipulationen,
+Direktrechnung sowie Ressourcenprüfungen. Reale NU-/TW-Payloads und ein
+S2-TY-Hauptlauf bleiben gesperrt. Die bekannte Python-/NumPy-Prozessspitze
+wird getrennt ausgewiesen, jedoch nicht als statisch eingehalten behauptet.
+Der erste Starteraufruf erreichte wegen `ModuleNotFoundError: tools` keinen
+`unittest`-Prozess und ist als
+[`NOT_QUALIFIED_PRESTART`](reports/s2ty/S2TY_NEUTRAL_OVERALL_QUALIFICATION_PRESTART_20260920.md)
+erhalten. Keine der gebundenen 49 Prüfungen wurde dabei ausgeführt.
+
+Der nach lokaler Starterkorrektur einmal ausgeführte formale Aufruf
+`S2TY-NEUTRAL-OVERALL-QUALIFICATION-20260920-02` erreichte `49/49` Tests mit
+Exit-Code `0`, bleibt aber korrekt `NOT_QUALIFIED`: Die gebundene ID-Auswertung
+verdoppelte den Methodennamen aus der `unittest`-Klammerform und bestätigte den
+vollständigen Testbestand daher nicht. Der vollständige Befund einschließlich
+Vor-/Nachhashes, neutraler Materialisierungszählung und Budgetwerten bleibt in
+[der Qualifikationsablage](reports/s2ty/s2ty-neutral-overall-qualification-20260920-02/REPORT.md)
+erhalten. Kein Wiederholungsaufruf ist aus diesem Befund abgeleitet.
+
+Die danach neu gebundene Gesamtqualifikation
+`s2ty-neutral-overall-qualification-20260920-03` ist mit `49/49` Tests,
+Exit-Code `0`, vollständiger ID-Gleichheit und unveränderten Vor-/Nachhashes
+`QUALIFIED`. Der Beleg hält ausschließlich neutrale In-Memory-Quellen fest;
+die erfolgreiche Materialisierung beträgt `22/22/22` für Hash, Rezeptor und
+NJ. Die Python-/NumPy-Prozessspitze bleibt ausdrücklich offen. Der Befund
+autorisiert keinen S2-TY-Hauptlauf.
+
+### Ausführungsbindung ohne Hauptlauf
+
+Die prospektive Ausführungsbindung
+[S2TY_REALER_ANSCHLUSSVERSUCH_AUSFUEHRUNGSBINDUNG.md](docs/S2TY_REALER_ANSCHLUSSVERSUCH_AUSFUEHRUNGSBINDUNG.md)
+verwendet den versiegelten NU-Plan weiter und bindet einen Lazy-Supplier für
+jeweils ein generatornatives PCM-Fenster. Der ergänzte Supplier und die
+`bytearray`-Übergabe, der dateigebundene Starter und die getrennte Auswertung
+wurden einschließlich der tatsächlichen Abschlussbilanz und des terminalen
+Fehlerabschlusses ausschließlich mit 30 neutralen Tests geprüft;
+es wurden keine NU-/TW-Quellen erzeugt oder verarbeitet. Die reale
+Prozessspeicherobergrenze bleibt offen. Diese Bindung autorisiert keinen
+S2-TY-Hauptlauf.
+
+Der gebundene Einmallauf `s2ty-temporal-confirmation-retention-real-20260920-01`
+wurde danach technisch vollständig abgeschlossen. Der originale Auswerter
+hatte bei zwei inhaltlich gleichen Trefferpaaren einen Liste-/Tupel-
+Darstellungsfehler; Originalartefakte bleiben unverändert. Die fokussierte
+Normalisierung ist `6/6` neutral qualifiziert, und ihr separater read-only
+Nachtrag bestätigt die gespeicherten Übergänge und Hinweisentscheidungen.
+S2-TY bleibt auf exakte Sequenzspeicherung über wiederverwendete Quellen
+begrenzt; Variantenlernen, Quellenidentität und allgemeiner Videonutzen sind
+nicht belegt.
+
+### Historischer, abgeschlossener Restauftrag nach Arbeitsablaufkorrektur
+
+Historischer Auftrag, nicht mehr aktiv: Die zuletzt gemeldeten sieben Tests ersetzen
+nicht die nachfolgende fehlende Deckung. Der Entwickler bearbeitet jetzt
+ausschliesslich die zwei vorhandenen Testdateien:
+
+- `tests/test_s2ty_event_control.py`: den kombinierten Owner-Schliessfehlertest
+  in zwei unabhaengige Methoden aufteilen (mit/ohne Primaerfehler); jeweils
+  den tatsaechlichen direkten Owner-Close mit Spy nachweisen. NOT_EVALUABLE,
+  Primaerfehler und Fortschritt pruefen.
+- `tests/test_s2ty_record_verification.py`: positiven Hint vor Verdraengung
+  pruefen; ausschliesslich die direkte Armentscheidung manipulieren und
+  Abweisung nachweisen; doppelte, fehlende und unbekannte Abschlussarmnamen
+  getrennt pruefen.
+
+Neutrale Tests ausfuehren und bei Fixturefehlern im selben Auftrag korrigieren.
+Rueckgabe mit konkreten Test-IDs und Resultaten. Keine erneute Planung,
+Empfangsbestaetigung, Ressourcen-Gesamtqualifikation oder reale Verarbeitung.
+Falls die Tests einen Produktfehler finden, diesen konkret belegen statt die
+Assertions zur Anpassung an den Fehler zu lockern. Die nachfolgende bisherige
+Paketbeschreibung bleibt Kontext; sie startet keine weiteren Arbeitspakete.
+
+Diese Analystenfortschreibung auf Benutzerauftrag ersetzt fuer die aktuelle
+Arbeit aeltere Anschlussfreigaben und Zwischenmeldungen. TS, TU und TW bleiben
+begrenzte bestaetigte Spurbausteine; TX ist nicht vorab qualifiziert. S2-TY
+ist unvollstaendig und nicht fuer reale Quellen freigegeben.
+
+Der damalige Entwicklerauftrag lautete: den vorhandenen neutralen S2-TY-Record
+unabhaengig auf Speicherverlauf und Entscheidungen pruefen. Aus `inputs` sind
+Viereraufnahme, exakte Bestaetigung ohne Verjuengung, FIFO mit Kapazitaet zwei
+und geordnete Zweiframe-Hints eigenstaendig nachzurechnen und gegen beide
+Armreceipts sowie die Inventare vor Owner-Close zu vergleichen. Produktive
+Speicher- und Entscheidungshelfer duerfen diese Nachrechnung nicht ersetzen.
+Die bestehende Strukturpruefung allein darf kein funktionales VERIFIED melden.
+
+Erfolgsstatus verlangt ausserdem beide erfolgreichen Owner-Abschluesse.
+Schliessfehler duerfen weder COMPLETE ergeben noch einen Primaerfehler
+verdecken. Diese lokale Korrektur gehoert zum selben Abnahmeumfang.
+
+Abnahme: gueltiger JSON-Roundtrip; Abweisung manipulierter Hintentscheidung,
+Inventare, Uebernahme/Verdraengung und Ereignisreihenfolge; neutraler
+Schliessfehler verhindert Erfolgsstatus. Entwicklungstests duerfen mit
+neutralen Daten wiederholt werden. Keine realen Payloads, neue Forschung,
+Gesamtqualifikation oder Hauptausfuehrung in diesem Arbeitspaket.
+
+Rueckmeldung mit geaenderten Dateien und tatsaechlichen Testergebnissen oder
+konkretem technischen Hindernis. Offene Implementierung und blosse
+Empfangsbestaetigungen begruenden keine neue Freigaberunde. Der Analyst
+prueft danach die Abnahme; historische Belege bleiben unveraendert.
+
+### Abnahme und Ressourcenbilanz S2-TY
+
+Die begrenzte neutrale S2-TY-Recordverifikation ist mit `14/14` Tests und
+Exit-Code `0` abgenommen. Die zusätzliche statische Ressourcenrechnung,
+Fehlerabschlussverifikation, die prospektive Quellen-/Zeitbindung und die
+vollständige neutrale Laufhülle einschließlich Audio-/NJ-Materialisierung
+wurden anschließend um direkte Materialisierungszähler, Receipt-Integrität
+und die vollständige Halbendpunktwarteschlange ergänzt. Der aktuelle neutrale
+Aufruf bestand mit `49/49` Tests. Das sind
+Teilnachweise, keine formale Gesamtqualifikation.
+Die Test- und Implementierungsbindungen sind in
+[S2TY_RESSOURCEN_UND_ANSCHLUSSBILANZ.md](docs/S2TY_RESSOURCEN_UND_ANSCHLUSSBILANZ.md)
+vollständig aufgeführt. Relevante SHA-256-Bindungen:
+
+- `_s2ty_event_control.py`:
+  `df395160eff9978ca992de19d5bd4db8dad8c8a155a4e345c6002e2100d1ada9`
+- `_s2ty_record_verification.py`:
+  `18af82bc9aa36cc23ca50c762ca90e255f514905c1b7c054c7fc5110e3503160`
+- `_s2ty_resource_ledger.py`:
+  `9c39435dd15db76fbb41090e4073cd2e608d911772595ea123b40eba92e731f1`
+- `_s2ty_failure_verification.py`:
+  `563645efda35eec015fb4b53b3f4bf9ad2c5f8e4bcfb25964dddfe3daf705e51`
+- `test_s2ty_event_control.py`:
+  `d31459a8eae4a35603f944fc67c374d30661fb906e04d6218db9400766c64259`
+- `test_s2ty_record_verification.py`:
+  `3e80a904b08597b3627c94e560596412a811e4d274510b2057f35bfeff7a69b9`
+- `test_s2ty_resource_ledger.py`:
+  `2cbf774ff8d7ae99114c143a90fdc3e7d68ffe5761570f06acf74ff1a8b036be`
+- `test_s2ty_failure_verification.py`:
+  `9f4409ae8bdfa8c63a469b7af3ca82c1c6515c814a507e6cd0500092bcca4413`
+- `_s2ty_source_time_binding.py`:
+  `eaa6b4aa18d14c03356a093f496a827d4c087be3a3932965800b5b175d4823ab`
+- `test_s2ty_source_time_binding.py`:
+  `f71f7fce8a96ddd91bf3ed018fb9b57f227d51ad943ae2c2c030320595465f2d`
+- `_s2ty_run_envelope.py`:
+  `e57305a5c9626e2f92fba5baa9474eaaa4fc20dc3691801c583abee8d93c13b6`
+- `test_s2ty_run_envelope.py`:
+  `9fd5f130c4777c160d06a738098f3420f0539248dad1d4faf47180196cf7e97d`
+
+Die Bilanz ist keine Gesamtqualifikation und keine Quellen- oder
+Lauffreigabe. Vor einer solchen Freigabe fehlen weiterhin eine gebundene
+reale Quellen- und Ergebnisartefaktgrößen. Die neutrale Fehlerverifikation
+bindet noch keinen quellen- oder zeitgebundenen Abschluss mit tatsächlichem
+Fortschritt.
+
+## Leitziel und aktueller Entscheidungsstand
+
+### Abgeschlossener Auftrag: privater S2-SP-Memoryvergleich
+
+Der begrenzte private S2-SP-Memoryvergleich prüfte, ob ein bereits belegter horizontaler
+Teilstrukturhinweis bei tatsächlich gebildeten und konkurrierenden
+Memorykandidaten erhalten bleibt. Der Hinweis bleibt read-only und getrennt:
+keine öffentliche A/B-Zulassung, keine Hypothesenanwendung und keine Änderung
+der Memory- oder Feldmechanik.
+
+Vor dem einen Vergleich wurden feste Formationsgeschichte, Generationen,
+Verfügbarkeit, Kandidatenbestand, Erwartungen und Ressourcen gebunden. Die
+historische Exaktbaseline und der private Versatzvergleich lesen denselben
+aktuellen Kandidatenbestand. Zielbeziehungen, eindeutige Hinweise,
+Mehrdeutigkeiten, Verluste und Fehlhinweise werden getrennt ausgewertet.
+
+Es bleibt kein weiterer S2-SP-Lauf freigegeben. Weiterhin gesperrt bleiben der Video-Abrufzweig, die SFA-Integration, jede
+öffentliche Abrufumstellung, neue Lernregeln sowie die automatische Anwendung
+von Teilstrukturhinweisen. ME/MI bleiben gesperrt. Die unten stehende
+allgemeine Konzeptpause ist für diesen eng begrenzten Auftrag ein historischer
+Entscheidungsstand und keine operative Sperre.
+
+### Abschluss S2-SP-Memoryvergleich
+
+Der einmalige Vergleich `s2sp-memory-compare-real-20260919-01` ist technisch
+vollständig und unabhängig verifiziert. Vor Konkurrenz liefert die verschobene
+A1-Cue innerhalb Fast einen eindeutigen privaten Teilstrukturhinweis, während
+die Exaktbaseline dort keinen Kandidaten findet. Dieser Befund ist nicht
+bankübergreifend eindeutig: B4 enthält parallel mehrere A0-Kandidaten.
+
+Nach der Konkurrenzfolge ist die ursprüngliche B4-Generation nicht verfügbar.
+Die A1-Cue liefert jedoch einen eindeutigen Hinweis auf eine gespeicherte
+Randvariante; das ist ein zusätzlicher Fehlhinweis. Eine Integration ist daher
+nicht begründet. [Record, Verifikation und Auswertung](reports/s2sp-memory-compare-real-20260919-01/REPORT.md)
+trennen diese Befunde.
+
+Der zunächst vermutete fehlende Slow-Aufbau ist nach einer späteren, getrennt
+qualifizierten Präfixdiagnose korrigiert: Bei e06 existiert ein visueller
+Slow-Kandidat. Die produktive PPB-Fortschreibung beginnt bei e03 nach einem
+Fast-Match, der Support sättigt bei `2`, und die visuelle PPB wird bis e05
+drei Mal fortgeschrieben. Der frühere Record hatte die Kandidatbelegung
+bereits enthalten, aber nur den fehlenden **Hinweis** als fehlende Spur
+fehlgedeutet. Der PPB-Prototyp ist gegenüber der Cue nicht exakt genug für
+die fest gebundene Teilstrukturprüfung; daraus folgt `HINT_NOT_APPLICABLE`.
+Dies ist weder eine fehlende Fast-Konsolidierung noch ein Übergabefehler und
+rechtfertigt keine Memoryregeländerung oder Wiederholung.
+
+Der getrennte Diagnoselauf `s2sp-slow-prefix-diagnostic-20260919-01` ist
+technisch vollständig und read-only verifiziert. Seine vier Formationen
+belegen: e01 `FAST_CREATED` (Support 1, nicht konsolidierbar), e03-e05 jeweils
+`FAST_UPDATED`, Support `1→2`, danach Sättigung bei `2`, und jeweils eine
+`COMMITTED`-PPB-Fortschreibung. Bei e06 ist ein visueller Slow-Slot vorhanden,
+aber weder Exakt- noch Teilstrukturhinweis anwendbar. Die früheste erwartete
+Fast-/Support-/Konsolidierungskette scheitert damit nicht; die verbleibende
+Grenze liegt ausschließlich in der unveränderten Abrufvergleichsregel für den
+gespeicherten PPB-Prototyp.
+
+### Abschluss: S2-SP-identitätserhaltende PPB-Aktualisierung
+
+Der Werteaudit belegt, dass die historische PPB-Formel identische
+Binary64-Eingänge numerisch verändern kann. Der aktive Auftrag vergleicht
+daher ausschließlich eine private, versionierte Aktualisierung: Bei
+bitgleicher Eingangskomponente bleibt der gespeicherte Wert erhalten;
+abweichende Komponenten verwenden unverändert die historische Formel.
+Support, Zeit, Generationen und Konsolidierung bleiben regulär. Historische
+Defaults und alle öffentlichen Abrufregeln bleiben unverändert. Die
+fokussierte Qualifikation besteht aus drei gebundenen Erstprüfungen und einer
+separaten korrigierten Atomaritätsprüfung. Der einmalige Zwei-Arm-Präfix
+`s2sp-identity-prefix-compare-20260919-01` ist technisch verifiziert:
+Beide Arme bilden dieselbe Fast-/PPB-Fortschreibung, aber nur
+`identity-preserving.v1` erhält den e06-Slow-Prototyp bitgleich und liefert
+einen Exakthinweis. Der historische Arm bleibt unverändert ohne solchen
+Hinweis. [Befund](reports/s2sp-identity-prefix-compare-20260919-01/REPORT.md).
+Dies ist eine private numerische Updatevariante, keine öffentliche Integration.
+Die ungelöste Randvarianten-Fehlzuordnung bleibt getrennt.
+
+Die erste Qualifikation `S2SP-IDENTITY-UPDATE-QUAL-20260919-01` ist mit
+`3/4` nicht bestanden. Der Fehler liegt vor der atomaren Sollprüfung in einer
+falschen Neutraltest-Attributannahme (`accepted_step_count` statt
+`accepted_exposure_count`). Der reale Zwei-Arm-Präfixvergleich bleibt
+gesperrt; keine Produktabweichung oder Memoryaussage folgt daraus.
+
+### Abschluss: S2-SP-Lebenszyklusvergleich
+
+Der einmalige Zweiarmvergleich
+`s2sp-identity-lifecycle-20260919-01` ist technisch vollständig und
+unabhängig read-only verifiziert. Die private Variante
+`identity-preserving.v1` erhält bei e05 nach wiederholter identischer Bildung
+genau einen visuellen Slow-Exakthinweis; der historische Arm hat dort keinen.
+Die e07-Variationskontrolle bestätigt in beiden Armen unverändert die
+historische Formel für die tatsächlich geänderte Komponente.
+
+Der weitergehende Lebenszykluseffekt ist nicht bestätigt: e06 bis e12 sind
+sämtlich `FAST_UPDATED` auf demselben Fast-Slot; eine A-Verdrängung durch
+`FAST_REPLACED` ist nicht eingetreten. Bei e13 bestehen weiterhin zwei
+exakte B4-Treffer, aber kein exakter visueller Slow-Kandidat. Auch nach e14
+bleibt e15 ohne Slow-Exakthinweis. Ein geänderter Kandidatendigest beweist
+keine Ersetzung, weil er den veränderlichen Slot-Payload enthält. Der Record
+führt für PPB nur Readout-Digests, nicht Ereignis und Slot-ID lesbar fort;
+die Ursache einer möglichen Zieländerung bleibt daher offen. Das ist ein
+fachlicher Gegenbefund, kein technischer Fehler. Keine Regel, Schwelle oder
+Memorymechanik wird geändert und kein weiterer Lauf vorbereitet. Die
+[korrigierte Aufgabenbindung](docs/S2SP_KORRIGIERTE_LEBENSZYKLUS_AUFGABENBINDUNG.md)
+trennt Zielerhaltung, Variantenkontrolle, A-Verdrängung/B-Erhaltung und
+Zielersetzung für eine spätere fachliche Prüfung.
+
+### Aktiver Auftrag: S2-SP-PPB-Lebenszyklus V2
+
+Die konkrete Folge übernimmt ohne Quellensuche die dokumentierte OA-Folge
+A–E: 18 Formationen und zwei read-only A-Hinweise. Nach f13 wird
+B-Erhaltung nur bewertet, wenn A tatsächlich nicht mehr in B4/Fast vorhanden,
+aber die gebundene visuelle PPB-Slotkette erhalten ist. Nach dem zweiten
+E-Ereignis wird Zielersetzung nur mit einem nativen `REPLACED`-Readout auf
+dieser zuvor gebundenen Slotkette bewertet. Regulärer Fast-Ablauf genügt;
+`FAST_REPLACED` wird nicht erzwungen. Fehlende Zustandsvoraussetzungen sind
+fachlich `PRÜFBEDINGUNG_NICHT_ERREICHT`. Vor dem einmaligen Zweiarmvergleich
+werden die private Receipt-Belegführung und Auswertung fokussiert qualifiziert.
+Siehe [Ausführungsbindung](docs/S2SP_PPBLIFECYCLE_V2_AUSFUEHRUNGSBINDUNG.md).
+
+Die reine Readout-Durchleitung ist mit `2/2` neutral qualifiziert. Ein
+V2-Hauptlauf bleibt gesperrt. Der neue private OA-Adapter übernimmt bereits
+materialisierte Halbprofil-Pairs ohne doppelte NJ-Projektion und ist für einen
+vollständigen neutralen AV-Fall mit `2/2` qualifiziert. Die vollständige
+20-Ereignis-Hülle, getrennte Zweiarmzustände, Cue-Anschluss, Lifecycle-
+Auswertung und Gesamtbilanz sind damit noch nicht qualifiziert. Siehe
+[Adapter-Qualifikation](reports/s2sp-oa-adapter-qualification-20260919-01/REPORT.md).
+
+Nach Ergänzung eines dritten Adaptertests wurde der gesamte Testmodulaufruf
+technisch mit `3/3` wiederholt. Da dies die bereits gebuchten zwei
+Adapterkontrollen erneut ausführte, ist der Sammelaufruf keine neue
+protokollkonforme Qualifikation. Die technische End-to-End-Beobachtung ist
+erhalten, die V2-Gesamtqualifikation bleibt jedoch offen; kein V2-Hauptlauf
+wurde ausgeführt.
+
+Die neue, getrennte Anschlussqualifikation
+`S2SP-PPB-LIFECYCLE-V2-QUAL-20260919-01` ist `NOT_QUALIFIED`: Der einmalige
+Aufruf endete im Setup vor allen fünf Testkörpern, weil die neue Testanbindung
+eine visuelle Cue-Operation fälschlich als Wrapper behandelte. Weder Record,
+Verifikation noch Auswertung der neutralen 20-Ereignis-Hülle wurden erreicht;
+ein V2-Hauptlauf bleibt gesperrt. Siehe
+[Fehlbefund](reports/s2sp-ppb-lifecycle-v2-qualification-20260919-01/FAILURE.md).
+
+Auch die danach separat gebundene Korrekturqualifikation
+`S2SP-PPB-LIFECYCLE-V2-QUAL-20260919-02` ist `NOT_QUALIFIED`: Die direkte
+Cue-Übergabe wurde erreicht, aber die neue unabhängige Neutralbaseline
+verglich volle 288 Werte statt ausschließlich die sichtbaren Cuepositionen.
+Der Fehler trat vor den fünf Testkörpern auf. Die V2-Gesamtqualifikation und
+der Hauptlauf bleiben offen. Siehe
+[Fehlbefund](reports/s2sp-ppb-lifecycle-v2-qualification-20260919-02/FAILURE.md).
+
+Die dritte, getrennte Anschlussqualifikation
+`S2SP-PPB-LIFECYCLE-V2-QUAL-20260919-03` besteht mit `8/8`. Sie bindet die
+vollständige neutrale 20-Ereignis-Hülle, die direkten Cuetypen, den festen
+sichtbaren Vergleichsumfang `0..31`, beide frischen Arme, PPB-Readouts,
+read-only Hinweise, unabhängige Baseline und Hüllenbilanz. Sie qualifiziert
+keine reale OA-Quellenmaterialisierung; die tatsächliche V2-Ausführungs- und
+Ergebnisbindung muss vor dem einmaligen Vergleich vollständig vorliegen.
+Siehe [Qualifikationsbefund](reports/s2sp-ppb-lifecycle-v2-qualification-20260919-03/REPORT.md).
+
+Die anschließende Runner-Qualifikation
+`S2SP-PPB-LIFECYCLE-V2-RUNNER-QUAL-20260919-01` ist `NOT_QUALIFIED`: Ihr
+einziger Aufruf scheiterte im Setup an einer falschen Fensterattributannahme
+des neuen Adapters. Die drei Runner-Prüfgruppen und die reale
+OA-Quellenmaterialisierung wurden nicht erreicht; kein V2-Hauptlauf wurde
+ausgeführt. Siehe
+[Fehlbefund](reports/s2sp-ppb-lifecycle-v2-runner-qualification-20260919-01/FAILURE.md).
+
+Die korrigierte Runner-Qualifikation
+`S2SP-PPB-LIFECYCLE-V2-RUNNER-QUAL-20260919-02` ist ebenfalls
+`NOT_QUALIFIED`: Der einmalige Setup-Aufruf erreichte die vier Testkörper
+nicht, weil die neue Feldzeitvariable im Adapterpfad nicht lokal gebunden war.
+Die reale OA-A–E-Materialisierung und der V2-Hauptlauf blieben aus. Siehe
+[Fehlbefund](reports/s2sp-ppb-lifecycle-v2-runner-qualification-20260919-02/FAILURE.md).
+
+Die danach gebundene Runner-Qualifikation
+`S2SP-PPB-LIFECYCLE-V2-RUNNER-QUAL-20260919-03` ist mit `3/4`
+`NOT_QUALIFIED`: Die lokale Feldbindung wurde statisch und in drei neutralen
+Kontrollen erreicht. Die vierte Kontrolle brach jedoch im Testaufbau vor dem
+Adapteraufruf ab, weil sie aus einem bereits adaptierten Paarbeleg fälschlich
+ein natives OA-Ereignis über ein nicht existentes `event`-Attribut ableitete.
+Der Produktadapter, die reale OA-A–E-Materialisierung und der V2-Hauptlauf
+wurden in dieser Kontrolle nicht erreicht. Siehe
+[Fehlbefund](reports/s2sp-ppb-lifecycle-v2-runner-qualification-20260919-03/FAILURE.md).
+
+Die isolierte native Feldbindungs-Kontrolle
+`S2SP-PPB-LIFECYCLE-V2-RUNNER-QUAL-20260919-04` besteht mit `1/1`; zusammen
+mit den drei unverändert gebundenen Kontrollen aus `...-03` ist die fokussierte
+Runnerdeckung `4/4` vollständig. Der einmalige Vergleich
+`s2sp-ppb-lifecycle-v2-20260919-01` ist technisch vollständig und unabhängig
+read-only verifiziert. In beiden Armen trifft Hinweis 14 die gebundene
+visuelle PPB-Spur; nach deren nativem `REPLACED`-Übergang bei Ereignis 19
+bleibt für Hinweis 20 kein passender Kandidat. Die leeren B4-/Fast-Listen sind
+jedoch nur Cue-Trefferlisten. Der Record enthält weder vollständige
+Bankinventare noch eine fortlaufende Fast-/A-Generation; eine A-Entfernung vor
+Hinweis 14 ist deshalb nicht belegt. Öffentliche A/B-Auflösung und
+Hypothesenanwendung wurden nicht ausgeführt. V2 zeigt keinen Armvorteil;
+der frühere unmittelbare numerische Erhaltungseffekt bleibt ein Einzelbefund,
+die Randvarianten-Fehlzuordnung offen. Keine Produktionsumstellung und kein
+weiterer V2-Lauf. Siehe [Befund](reports/s2sp-ppb-lifecycle-v2-20260919-01/REPORT.md).
+
+Als nächste fachliche Frage bleibt nicht ein weiterer Speicherzyklus, sondern
+die streng begrenzte Wiederfindung einer gebundenen Wahrnehmungsordnung. Der
+[statische Zeitspurplan](docs/ZEITSPUR_TEILVERLAUF_STATIC_PLAN.md) verwendet
+S2-NU nur als Reihenfolgenbefund und NW–NZ nicht als Systemregel: Eine private
+Spur erhält nur `TRACE_FORMATION`-Ereignisse, höchstens vier exakte
+Halbprofilzustände je Sitzung. `TRACE_HINT_FRAME`-Ereignisse bleiben read-only;
+die Spur verfällt bei `TRACE_SESSION_CLOSE` oder vor einer fünften Formation.
+Ein Zweizustandshint muss die gespeicherte Ordnung finden und deren Permutation
+ablehnen. Einzelzustands- und ungeordnete Baselines erhalten dieselben Inhalte
+und melden ihre tatsächliche Inhaltsübereinstimmung; sie dürfen für beide
+Ordnungen gleich zulassen oder gleich enthalten. Das ist weder
+Quellen-/Objektidentität noch Variantenrobustheit und autorisiert noch keine
+Implementierung, Quellen oder Ausführung.
+
+Die private Spurzustandslogik ist neutral mit `3/3` qualifiziert: exakter
+Teilverlauf, Umkehr, Nichtnachbarschaft, Mehrfachoffset, Hintpuffer,
+Kapazitäts- und Sitzungsverfall. Diese Deckung bindet noch keine konkreten
+NU-Quellen, 18-Endpunkt-Bilanz oder reale Materialisierung; kein Hauptlauf
+wurde gestartet.
+
+Der einmalige neue S2-TS-Laufanschlussaufruf
+`S2TS-TEMPORAL-TRACE-RUN-QUAL-20260919-01` erreichte die neutrale
+20-Ereignis-Reihenfolge mit `1/1`, ist jedoch **nicht** die vollständige
+Quellen-/Verifikationsqualifikation. Die NU-Quellenauflösung, tatsächliche
+18-malige Hash-/Rezeptor-/NJ-Kette, unabhängige Gesamtverifikation und
+vollständige Hüllenbilanz wurden nicht erreicht. Der S2-TS-Hauptlauf bleibt
+gesperrt; keine Lauf-ID wurde verbraucht. Siehe
+[Anschlussbefund](reports/s2ts-temporal-trace-run-qualification-20260919-01/REPORT.md).
+
+Die anschließend einmal ausgeführte vollständige Quellen-/Verifikations-
+Qualifikation `S2TS-TEMPORAL-TRACE-RUN-QUAL-20260919-02` ist
+`NOT_QUALIFIED`. Die unabhängige Verifikation erreichte den Vergleich der
+gespeicherten Spurentscheidungen, lehnte aber die produktive Tupelform der
+Offsets gegen ihre kanonische Listenform ab (`TRACE_DECISIONS_INVALID`). Es
+wurden keine NU-Payloads, Rezeptoren oder NJ-Projektionen ausgeführt und kein
+Hauptlauf gestartet. Der kleinste offene Anschluss ist ausschließlich die
+kanonische Offsetform vor diesem Vergleich; der Fehlbefund bleibt erhalten.
+
+Die daraufhin einmal ausgeführte Offsetkorrekturqualifikation
+`S2TS-TEMPORAL-TRACE-RUN-QUAL-20260919-03` ist ebenfalls `NOT_QUALIFIED`.
+Die Offsetform wurde erreicht, der anschließende Baselinevergleich scheiterte
+an derselben administrativen Tupel-/Listenabweichung für `present`
+(`BASELINES_INVALID`). Kein Hauptlauf und keine numerische Quellenverarbeitung
+wurden gestartet. Eine erneute Qualifikation verlangt eine ausdrückliche
+vollständige Kanonisierung aller aufgezeichneten Belegformen, nicht nur der
+Offsets.
+
+### Abschluss S2-TS: exakter auditiver Sequenzabruf
+
+Die vollständige Anschlussqualifikation `S2TS-TEMPORAL-TRACE-RUN-QUAL-
+20260919-05` bestand mit `3/3`. Der einmalige Lauf
+`s2ts-temporal-trace-real-20260919-01` ist `RECORDING_COMPLETE` und einmal
+unabhängig read-only verifiziert. Er verarbeitete 20 Ereignisse und 18
+vorversiegelte Audioendpunkte mit genau 18 Rezeptoranalysen und
+NJ-Projektionen, aber ohne Feldkontakte, A/B-Scans oder Hypothesenanwendung.
+
+Der Hint `b,c` findet den geordneten Abschnitt eindeutig. Umkehr und
+Nichtnachbarschaft werden trotz gleicher Inhaltsbaselines abgewiesen; nach
+Close wird keine alte Generation ausgegeben; die doppelte Position `a,b`
+bleibt mehrdeutig. Das bestätigt ausschließlich exakten,
+sitzungsgebundenen Sequenzabruf, weder Quellenidentität noch Variations-
+robustheit oder gelernten Erfahrungsspeicher. Kein weiterer S2-TS-Lauf ist
+freigegeben. Siehe [Befund](reports/s2ts-temporal-trace-real-20260919-01/REPORT.md).
+
+Als nächste statische Frage ist die begrenzte Aufbewahrung abgeschlossener
+Spuren bei neuer Wahrnehmung gebunden: [S2TU-Plan](docs/S2TU_AUFBEWAHRUNG_ABGESCHLOSSENER_SPUREN_PLAN.md).
+
+### S2TV: gebundene Medienabtastung, noch kein Medienlauf
+
+Der private Medienzeitadapter ist neutral mit `3/3` qualifiziert. Er bindet
+zwei identische Durchläufe mit jeweils zehn 100-ms-Audiofenstern bei `0,0` bis
+`4,5` Sekunden, die zweiten Durchlauf-Hinweise bei `1,0` und `4,0` Sekunden
+vor ihrer Formation sowie den letzten Videoframe am oder vor dem jeweiligen
+Fenstermittelpunkt. Native `30000/1001` fps und Zeitbasis `1/30000` bleiben
+vom streng steigenden Runtimezeitadapter getrennt. Die Folge umfasst 24
+Ereignisse, 20 Formationen, zwei auditive und zwei visuelle Hinweise. Sie
+passt statisch in die bestehenden Ereignis-, Hinweis-, Feldkontakt- und
+Scanobergrenzen. Der Adapter hat keine Payloads geöffnet und keine Rezeptor-,
+Feld-, Memory- oder Laufverarbeitung ausgeführt.
+
+Die vom Benutzer festgelegte YouTube-URL ist weiterhin nur eine Quellenwahl.
+Für eine separate reale Freigabe fehlt ein zulässiger synchroner,
+bytegebundener Audio-/Videozugang; es gibt keinen automatischen Wechsel zur
+Bildschirm- oder Audioaufnahme. Siehe
+[Anschluss](docs/S2TV_MEDIENZEIT_AUSWAHLANSCHLUSS.md) und
+[Qualifikationsbefund](reports/s2tv-media-sampling-qualification-20260919-01/REPORT.md).
+
+Auf Benutzerauftrag vom 19.09.2026 ist das
+[Leitziel der Festigung durch Wahrnehmungserfahrung](docs/KONZEPTNOTIZ_WAHRNEHMUNGSVERLAEUFE_PRAEGUNG_UND_INNERKONTEXT.md#leitziel-festigung-durch-wahrnehmungserfahrung)
+verbindlich fortgeschrieben: zeitlich geordnete Erfahrungsspuren, selektive
+Erhaltung unterscheidender Beziehungen, Bestaetigung durch neue Wahrnehmung
+und nachweisbarer spaeterer Nutzen unter begrenzten Ressourcen. Wiederholung,
+Support und Prototypmittelung allein belegen dieses Ziel nicht.
+
+Historischer Entscheidungsstand: nur Konzeptdokumentation, kein neuer
+operativer Auftrag. SFA ist geschlossen; der Video-Abrufzweig bleibt pausiert.
+Vor einer Umsetzung war ein konkreter Erhaltungs-/Lernmechanismus mit fairer
+Baseline und Verwerfungsbedingung zu begründen. Diese allgemeine Pause wird
+durch den oben beschriebenen, ausdrücklich begrenzten S2-SP-Auftrag nicht
+rückwirkend aufgehoben. Ältere Freigaben unten bleiben historische Stände.
+Keine automatische Wiederaufnahme durch Weitergabe oder Empfangsbestätigung.
+
+## Abgeschlossen: S2-SFA-Quellenquittungen und Methodenversuch
+
+Der private S2-SFA-Quellenanschluss wurde ergänzt und neutral qualifiziert.
+Jeder erzeugte Frame wird vor der Rezeptoranalyse gehasht; seine Quittung wird
+im Laufrecord, auch bei einem Fehlerpfad, mit Quellen-, Form-, Datentyp- und
+Positionsbindung erhalten. Der read-only Verifikator prüft diese Quittungen
+ohne Frame-Regeneration.
+
+Der einmalige 32-Frame-Methodenversuch
+`s2sfa-visual-method-20260919-01` ist abgeschlossen: technisch vollständig,
+aber ohne zusätzlichen selektiven SFA-Nutzen gegenüber der Rohbaseline. Beide
+Arme ordnen `QA`, `QB` und `QAB` korrekt zu; die Rohbaseline zeigt damit auf
+diesem Bestand einen Deckeneffekt. Der begrenzte positive Einzelbefund lautet,
+dass die vorhandenen 288 visuellen Rezeptorwerte für diese positionsveränderte
+Farbmusterzuordnung ausreichen. Er erklärt weder frühere Video-Abrufgrenzen
+noch belegt er allgemeine Formerkennung. [Befund](reports/s2sfa-method-real-20260919-01/REPORT.md).
+Keine Wiederholung, schwierigeren Quellen, Parameteränderung, reale
+Medienverarbeitung oder Feld-/Memoryintegration ist daraus freigegeben. Die
+Grenzen bleiben unverändert: maximal 2 MiB je Record und 8 MiB gemeinsame
+Belegablage. Die nachfolgende Konzeptpause ist ein historischer Geltungsstand;
+sie eröffnet keinen Auftrag.
+
+## Zielrichtung vom 19.09.2026: Wahrnehmungsverlaeufe und Erfahrungsspuren
+
+Auf ausdruecklichen Benutzerauftrag in der
+[Konzeptnotiz](docs/KONZEPTNOTIZ_WAHRNEHMUNGSVERLAEUFE_PRAEGUNG_UND_INNERKONTEXT.md#fortschreibung-auf-benutzerauftrag-vom-2026-09-19)
+festgehalten: zeitlich geordnete Erfahrung, Bestaendigkeit und Variation,
+evidenzgebundene Zusammengehoerigkeit, selektive Verdichtung und pruefbarer
+Erinnerungsnutzen. "Wolke/Cluster" ist ein Anschauungsbild, keine festgelegte
+Implementierung oder bestaetigte Faehigkeit. Biologie ist funktionale
+Orientierung, keine Gleichsetzung mit Gehirnregionen.
+Nur Konzeptdokumentation: Die folgende Entwicklungspause bleibt bestehen.
+Keine neue Implementierungs-, Test- oder Medienfreigabe; keine automatische
+Weitergabe als auszufuehrender Forschungsauftrag.
+
+[Statische Architekturklärung zur zeitlichen Erfahrungsspur](docs/ARCHITEKTURKLAERUNG_ZEITLICHE_ERFAHRUNGSSPUR.md):
+Eine begrenzte geordnete Übergangsspur ist nur als möglicher, strikt
+falsifizierbarer Rezeptorkandidat beschrieben. Sie belegt weder
+Variantentoleranz noch Quellen-/Objektbindung und autorisiert keine
+Implementierung. Der Video-Abrufzweig bleibt pausiert.
+
+## ERFAHRUNGSVERGLEICH — EINMALLAUF ABGESCHLOSSEN
+
+Analystenentscheidung: unverändert geschlossen, **0 Gewinne, 0 Verluste,
+kein nachgewiesener praktischer Abrufvorteil**. Keine Wiederholung, Medienwahl,
+Schwellenoptimierung oder Komfortfunktion anschließen.
+[Statische Architekturentscheidung](docs/ARCHITEKTURENTSCHEIDUNG_NACH_ERFAHRUNGSVERGLEICH.md):
+beobachtete Rezeptorinformation, getrennte/verdrängte Spuren, gemischte
+Prototypen und regelbedingte Enthaltung getrennt eingeordnet. Keine einzelne
+Änderung mit hinreichend belegter Erfolgsaussicht ableitbar; Entwicklungspause
+für den Video-Abrufzweig empfohlen. Technische Grundpfadbefunde bleiben gültig.
+Nur Dokumentation geändert, keine neue Ausführung oder Auswertung.
+
+`experience-comparison-real-20260919-01` nach separater ausdrücklicher Freigabe
+genau einmal ausgeführt: **RECORDING_COMPLETE**, einmal unabhängig verifiziert,
+anschließend einmal ausgewertet. 30 Formationen, acht read-only Hinweise,
+11.424 Feldkontakte und 16 Scans vollständig. Beide Instanzen CLOSED, Gates False.
+**Kein Abrufvorteil:** beide Audiokontrollen in beiden Armen mehrdeutig,
+beide Visualkontrollen ohne anwendbaren Kandidaten. Erfahren hat mehr auditive
+Treffer (11 gegenüber 3 beziehungsweise 10), aber keine zusätzliche Hypothese.
+Gemischte Zielbeteiligung und Support sind kein richtiger Abrufnachweis.
+[Vier Einzelvergleiche, Herkunft und Ressourcen](reports/experience-comparison-real-20260919-01/REPORT.md).
+Lauf-ID verbraucht, kein Retry und keine automatische Optimierungsfreigabe.
+Die folgenden Vorbereitungsstände bleiben historische Bindungen.
+
+Abschluss dieser Freigabe: **22/22 QUALIFIED**, ein neutraler Aufruf unter
+`experience-comparison-qualification-20260919-01`. Native 24+14 Ereignisse,
+30 Formationen, acht read-only Hinweise, 11.424 Feldkontakte und 16 Scanbelege
+erreicht. Beide Instanzen CLOSED; gemeinsame aktuelle Eingänge unabhängig
+geprüft. Neutral vier gleiche Mehrdeutigkeits-Enthaltungen, kein Erfahrungsnutzen
+behauptet. [Befund und Grenzen](reports/experience-comparison-qualification-20260919-01/REPORT.md).
+Gemeinsame Vorreservierung 20.619.300 / 25.165.824 Byte, keine Verletzung.
+[Reale Bindung](reports/experience-comparison-real-20260919-01-binding/binding.json)
+vorbereitet, `authorized=False`; kein reales Medium geöffnet.
+Die Qualifikationsfreigabe ist verbraucht. Keine automatische Folgeausführung.
+
+Ausdrückliche nachfolgende Budgetentscheidung: ausschließlich private
+Nachweisablage `EXPERIENCE_COMPARISON_24M_V1`, gemeinsam für beide Arme.
+Gesamt 25.165.824, Metadaten 3.145.728, Quellen 524.288, Zusatzhülle 786.432,
+Verifikation 262.144 Byte. Historische Limits und Einzelbeleg-, Memory-,
+RAM-/Decodergrenzen unverändert. Keine automatische Checkpointübernahme.
+Vor dem einzigen Aufruf wurden minimale Implementierung, 22 neue neutrale
+Prüfgruppen, aktuelles Codeinventar und gesamte Reservebindung unter
+`experience-comparison-qualification-20260919-01` festgeschrieben.
+Kein realer Medienvergleich freigegeben. Die folgende 4-MiB-Vorprüfung bleibt
+als historischer Vorabstopp erhalten, nicht als aktuelles Profil.
+
+Neue ausdrückliche Workflow-Übergabe vom 19.09.2026: Maßgeblich ist
+[Erneutes Betrachten gegenüber frisch](docs/ERNEUTES_BETRACHTEN_GEGEN_FRISCH_PLAN.md).
+Vorbindung, minimale Implementierung und genau eine neue neutrale Qualifikation
+sind freigegeben; der reale Vergleich bleibt gesperrt. Die erneut zugestellte
+historische Medienanweisung ist gegenstandslos. Keine Wiederholung von 14/14.
+Erfahrener Arm 20, frischer Arm zehn Formationen; jeweils vier Hinweise,
+gemeinsam 30 Formationen und acht Hinweise, getrennte Instanzen.
+
+Historischer Vorabstopp vor der neuen Budgetentscheidung: Die damalige
+gemeinsame Belegvorabsicherung trug diesen
+Umfang noch nicht. Bereits die unten dokumentierten nativen Reserven samt einer
+Verifikationsreserve ergeben 4.964.336 Byte gegenüber 4.194.304 Byte, noch ohne
+Quellen und administrative Abschlüsse. Dies ist keine gemessene Laufgröße und
+kein Nachweis, dass eine enger begründete Darstellung unmöglich wäre.
+[Bilanz, Zeitanschlüsse und verbleibender Blocker](reports/ERFAHRUNGSVERGLEICH_VORBINDUNG_20260919.md).
+Zu diesem Vorabstopp noch keine Implementierung oder Qualifikation ausgeführt.
+Die nachfolgende neue Budgetentscheidung und Qualifikation stehen oben;
+kein reales Medium verarbeitet, kein Checkpointbudget automatisch übertragen.
+
+## DATEIBETRIEB-CHECKPOINT — ABGESCHLOSSEN
+
+Administrativer Abschluss am 19.09.2026: neue Publikationsbindung mit allen
+20 konkreten Zeilenpositionen und Referenzindex einmal neutral **8/8 QUALIFIED**,
+`media-evaluation-publication-qualification-20260919-01`. Historische Pläne
+und Fehlbefunde nicht umgedeutet; keine pauschale Pfadfreigabe.
+Danach genau ein separater Nachtrag `media-restart-evaluation-annex-20260919-01`:
+**EVALUATION_ANNEX_COMPLETE**, unveränderter Auswerter **CONFIRMED**.
+[Nachtrag](reports/media-restart-evaluation-annex-20260919-01/REPORT.md),
+[Herkunftsdigests](reports/media-restart-evaluation-annex-20260919-01/origin.json),
+[Istbilanz](reports/media-restart-evaluation-annex-20260919-01/balance.json):
+5.025.593 Byte physisch, 5.033.785 einschließlich Fehlerreserve.
+Keine neue Verifikation, Medienverarbeitung oder Zustandsberechnung;
+historische Laufdateien vor/nach dem Nachtrag identisch. Gates False.
+Ursprünglicher Lauf weiterhin NOT_EVALUABLE; positive gespeicherte
+Fortsetzungsgleichheit und separater Auswertungsabschluss bleiben getrennt.
+
+Checkpointzweig geschlossen, keine weiteren Neustartversuche oder Komfortarbeit.
+Nächster Schritt nur als [kurzer statischer Vergleichsplan](docs/ERNEUTES_BETRACHTEN_GEGEN_FRISCH_PLAN.md):
+erneutes Betrachten gegenüber einem frischen System. Historische vier
+Video-Enthaltungen und unmittelbarer A-Abruf berücksichtigt; noch keine
+Implementierung oder Ausführung dieses Vergleichs freigegeben.
+
+Einmallauf `media-restart-real-20260913-03` am 19.09.2026 verbraucht:
+**NOT_EVALUABLE wegen Auswertungsveröffentlichung**, nicht wegen Replay.
+Reale Referenz20, geordnetes Suspend19 und Restore20 in frischem Prozess
+sind abgeschlossen; beide EOF erreicht. 20 sequenzgebundene Bestätigungen,
+59,11694 Sekunden für Replay plus Zielauswahl, keine zusätzliche MCM-Formation.
+Genau eine gespeicherte read-only Gesamtverifikation bestätigt Kern-, Auswahl-,
+Feld- und alle 20 Zeilengleichheiten sowie Replay. Der danach einmal aufgerufene
+Auswerter scheitert an `PUBLICATION_POSITION_MISSING`,
+`evaluation.json#/rows/0` (native); evaluation.json und result.json fehlen.
+Keine nachträgliche Ersatzbewertung, Korrektur oder Wiederholung.
+[Getrennter Befund und vollständiger Verbrauch](reports/media-restart-real-20260913-03/REPORT.md).
+[Istbilanz](reports/media-restart-real-20260913-03/balance.json):
+4.807.167 Byte physisch, 4.823.551 mit Restreserven; keine Belegbudgetverletzung.
+Vergleich kumulativ 661.523.670 Decoder-Lesebyte einschließlich Replay;
+diesmal kein unbekannter Restverbrauch. Prozesse geschlossen, Gates False.
+Die technische Wiederaufnahme ist als Einzelbefund belegt, der vollständige
+Abschlussvertrag nicht. Die nachfolgende Bindung ist historisch und nicht
+erneut ausführbar; keine automatische Folgefreigabe.
+
+Fensterweiser Replayanschluss einmal neutral qualifiziert:
+`media-replay-sections-qualification-20260913-01`, **19/19 QUALIFIED**,
+88,901 Sekunden. Einzelbestätigungen mit Quellen-/Zeit-/Sequenzbindung,
+kumulativer Verbrauch, manipulierte Bestätigungen und simulierte Fristfälle
+sind geprüft. Der native späte Neustart mit synthetischen Codecframes erreicht
+20 Bestätigungen, Ereignis 20 und beide EOF; bei jeder Replaybestätigung bleibt
+der MCM-Stand unverändert bei 19. Keine reale MP4 verarbeitet.
+[Befund](reports/media-replay-sections-qualification-20260913-01/REPORT.md),
+[Istbilanz](reports/media-replay-sections-qualification-20260913-01/balance.json):
+2.654.558 Byte physisch, 2.662.750 mit Fehlerreserve; keine Verletzung.
+
+Version `media.replay-confirmation.v1`: höchstens ein Replayfenster je Anfrage,
+30 Sekunden je Anfrage, nicht erneuerbare 600-Sekunden-Frist für höchstens
+19 Replayanfragen plus die Zielauswahl. Quellenprüfung zählt mit; Initialisierung,
+EOF und close sind getrennte Schritte. Die Fristen sind Abbruchgrenzen, keine
+Laufzeitgarantie. Nach Abbruch bleibt unbestätigter Verbrauch unbekannt.
+Historische Befunde und Memorymechanik unverändert, Prozesse geschlossen, Gates False.
+
+Neue Bindung `media-restart-real-20260913-03`: **PASSEND, NICHT AUTORISIERT**.
+84 Publikationsrollen; konservative Gesamtspitze 19.940.200 / 25.165.824 Byte,
+Metadaten 2.540.118 / 3.145.728, Quellen 425.225 / 524.288,
+gemeinsame Zusatzhülle 720.236 / 786.432, Verifikation 262.144 / 262.144.
+Alle Qualifikationsdateien einschließlich nativer Belege bleiben verfügbar,
+über drei digestgebundene Kataloge auflösbar und vollständig mitgezählt.
+[Laufbindung](reports/media-restart-real-20260913-03-binding/binding.json),
+SHA-256 `ef2af7f3e21e52b0e241dc2c218f592629b164c7a2c59fce4a9bec4f79f7800f`.
+Ausgabe abwesend, Autorisierungsvorlage False. Separate Einmallaufentscheidung
+erforderlich; die folgenden Stände bleiben historisch erhalten.
+
+Statische Restore-Ursachenklärung: Die 30-Sekunden-Frist umfasst beim ersten
+select alle 19 Replayfenster und das Zielfenster in einer Anfrage. Phasenmeldungen
+erneuern die Frist nicht und tragen keine Zeiten oder Zwischenzähler.
+Langsamer Fortschritt, Stillstand und fehlende Antwort bleiben ununterschieden;
+zusätzlicher Replayverbrauch unbekannt. Kleinster Vorschlag: begrenzte
+Replayabschnitte mit kumulativen Bestätigungen und getrennten endlichen
+Fortschritts-/Gesamtzeitgrenzen, ohne zusätzliche MCM-Erfahrung.
+[Belegte Aufrufgrenze, Unsicherheiten und Korrekturrichtung](reports/MEDIA_RESTART_REPLAY_TIMEOUT_CAUSE_20260913.md).
+Nur statische Dokumentation; keine Implementierung, Tests oder Medienverarbeitung.
+
+Einmallauf `media-restart-real-20260913-02` verbraucht: **NOT_EVALUABLE**.
+Referenz mit 20 Ereignissen und beiden EOF abgeschlossen; Suspend19 geordnet
+gespeichert und beendet. Einmaliger Restore in frischem Prozess scheitert
+vor Ereignis 20 mit `DECODER_TIMEOUT` in MATERIALIZATION (30 Sekunden).
+Keine zusätzliche MCM-Formation, keine Gesamtverifikation oder Auswertung.
+Die Replay-Lese-/Framezähler sind unvollständig; ihre Nullwerte belegen keinen
+Nullverbrauch. Fortsetzungsgleichheit bleibt ungeprüft, kein Memorygegenbefund.
+Prozesse beendet, Gates False; kein Retry oder Eingriff.
+[Primärfehler, Fortschritt und Ressourcen](reports/media-restart-real-20260913-02/REPORT.md).
+[Istbilanz](reports/media-restart-real-20260913-02/balance.json): 2.700.930 Byte
+physisch einschließlich aktiver Referenzen, 2.715.874 Byte mit verbleibenden
+Reserven; keine Belegbudgetverletzung. Quelle wiederverwendet.
+Die folgende Vorbindung und alle älteren Befunde bleiben historische Stände;
+insbesondere ist die Lauf-ID -02 nicht mehr verfügbar.
+
+Neues, ausschließlich privates Belegbudget
+`CHECKPOINT_COMPARISON_24M_V1` neutral qualifiziert:
+`media-checkpoint-budget-profile-qualification-20260913-01`, **16/16
+QUALIFIED**, genau ein administrativer Aufruf. Historische Standardgrenzen,
+Einzelbelege und Fehlerreserven bleiben erhalten; keine Wahrnehmungs- oder
+Restoreversuche wiederholt. [Qualifikationsbefund](reports/media-checkpoint-budget-profile-qualification-20260913-01/REPORT.md).
+Die neue Bindung `media-restart-real-20260913-02` ist **PASSEND, aber nicht
+autorisiert**: konservative Gesamtspitze 17.776.202/25.165.824 Byte,
+7.389.622 Byte Reserve. [Vollständige Laufbilanz](reports/media-restart-real-20260913-02-binding/budget.json).
+Quelle, Ereignisfolge und Vergleichsstufen sind administrativ mit der alten
+Bindung abgeglichen; keine neuen Payloadzugriffe. Ausgabe weiterhin abwesend,
+Autorisierungsvorlage False, Gates False. Die historischen NICHT_PASSEND-
+und NOT_EVALUABLE-Befunde bleiben unverändert unter ihren damaligen Grenzen.
+
+Administrative Erfolgshülle abgeschlossen: **NICHT_PASSEND** für die
+vollständig konservative Vorbindung des unveränderten Referenz-/Suspend19-/
+Restore20-Vergleichs. 82 Publikationsrollen samt gemeinsamen Reserven,
+temporären Kopien und Fehleralternative sind bilanziert. Größter reservierter
+Stand einschließlich der neuen Verwaltungsbelege: **17.798.455 Byte** gegen
+4.194.304 Byte. Das ist keine Messung eines zukünftigen Laufs und keine
+behauptete Mindestgröße: Grobe vorhandene Einzelobergrenzen sind ausdrücklich
+als solche gekennzeichnet. Bereits der vollständig weitergeführte Quellensatz
+liegt 12.749 Byte über seiner Grenze. Keine automatische Übernahme der
+kleineren, nur fokussierten Qualifikationsklassifikation.
+[Vollständige Bilanz und Ursachen](reports/MEDIA_RESTART_SUCCESS_ENVELOPE_20260913.md).
+Nur administrative Rechnung; kein Test, keine Medienverarbeitung,
+keine Produktänderung. Gates False; kein neuer Lauf freigegeben.
+
+Aktueller fokussierter Aufruf:
+`media-failure-form-qualification-20260913-01`, **4/4 QUALIFIED**,
+genau ein administrativer Testaufruf. Die korrigierte neutrale Fehlerform
+verwendet ausschließlich `failure.details` und umfasst 3.473/4.096 Byte.
+Unabhängige Strukturerwartung, Veröffentlichung, Primärerhalt und einmaliger
+Abschluss sind geprüft. Produktcode und Grenzen unverändert; die elf
+bestandenen Vorgängerkontrollen wurden nicht wiederholt und bleiben anhand
+unveränderter Quellen gebunden. Kein neuer vollständiger Zwölf-Test-Lauf;
+der alte 11/12-Befund bleibt `NOT_QUALIFIED`.
+[Prüfdeckung, aktive Abhängigkeiten und Istbilanz](reports/media-failure-form-qualification-20260913-01/REPORT.md).
+Keine Medienausführung. Die vollständige Medien-Erfolgshülle bleibt
+`NOT_ESTABLISHED`; keine Freigabe oder Durchführbarkeit daraus abgeleitet.
+Gates False. Die folgenden Zwischenstände bleiben historisch erhalten.
+
+Statische Eingangsprüfung zur Diagnosekompaktierung: Test 12 legt neue
+Details zusätzlich außerhalb von `failure.details` ab und misst damit
+nicht die tatsächliche Sitzungsfehlerform. Die 4.593 Byte belegen diese
+Fixturegröße, noch keine Überschreitung der produktiven Fehlerhülle.
+[Formabweichung und engste Korrekturrichtung](reports/MEDIA_FAILURE_FIXTURE_FORM_CLARIFICATION_20260913.md).
+Keine Codeänderung oder Neuqualifikation; zunächst Testbindung klären.
+Die folgenden Belege und Status bleiben unverändert.
+
+Aktueller administrativer Anschlussaufruf:
+`media-publication-plan-qualification-20260913-01`, **11/12 bestanden,
+NOT_QUALIFIED**. Genau ein rezeptorfreier Testaufruf. Der historische
+134.341-Byte-Fall wird vor Medienbeginn abgewiesen; Grenzgleichheit,
+Überschreitung und fehlende Publikationspositionen sind unabhängig geprüft.
+Die vollständige neue Fehlerfixture benötigt jedoch 4.593 statt höchstens
+4.096 Byte. Die folgende Einmaligkeitsprüfung der Fehlerpublikation wurde
+nicht erreicht. [Fehlbefund, Prüfdeckung und Bilanz](reports/media-publication-plan-qualification-20260913-01/REPORT.md).
+Keine Korrektur oder Wiederholung nach dem Test. Erfolgshülle für einen
+Medienlauf weiterhin nicht begründet; kein Decoder-/Rezeptor-/Memoryaufruf,
+Gates False. Der nachfolgende statische Stand bleibt historisch erhalten.
+
+Enge DRAIN-Ursachenklärung abgeschlossen, nur Dokumentation:
+89.972 Byte aktive Metadaten + 12.049 Byte tatsächlich erzeugte Verwaltung
++ 7.744 Byte angebotene Publikationskopien + 24.576 Byte offene Reserven
+= 134.341 Byte. Keine bei DRAIN bereits ersetzte Reserve nachgewiesen;
+der Vorbindung fehlt der Ansatz für innere Verwaltungsobjekte/Verweisindizes.
+[Dateiweise Zerlegung, gemeinsame Rechenregel und Korrekturvorschlag](reports/MEDIA_RESTART_DRAIN_METADATA_CAUSE_20260913.md).
+Rezeptorfreier administrativer Regressionsfall als JSON vorbereitet, nicht
+ausgeführt. Unter unveränderter Rechnung muss dieser Fall vor Medienbeginn
+abgewiesen werden. Kein Code geändert, kein Test oder Medienlauf; Gates False.
+
+Realer Einmallauf `media-restart-real-20260913-01` verbraucht:
+**NOT_EVALUABLE**. Referenz erreicht 20 Ereignisse und beide EOF-Marker,
+scheitert in DRAIN bei einer Metadatenpublikation: 134.341 gegenüber
+131.072 Byte einschließlich Kopien und Reserven. Primärfehler vollständig
+erhalten. Suspend/Restore nicht gestartet; null Gesamtverifikationen und
+null Funktionsauswertungen. [Laufbefund und vollständige Istbilanz](reports/media-restart-real-20260913-01/REPORT.md).
+Prozesse beendet, Gates False. Keine Korrektur, Wiederholung oder weitere
+Laufvorbereitung. Die folgenden Qualifikationen und Vorabstände bleiben
+historisch erhalten.
+
+Reale Zulassungsanbindung: `media-restart-admission-qualification-20260913-02`,
+**12/12 QUALIFIED**, genau ein neutraler Testaufruf. Inventar und physische
+Quellenpflicht getrennt; beide Zulassungsstellen und Dateieinstieg erreicht.
+[Prüfdeckung und vollständige Istbilanz](reports/media-restart-admission-qualification-20260913-02/REPORT.md).
+Kein realer Medienlauf. Der anschließende Laufbindungsentwurf zählt noch
+sämtliche neutralen Fixtures als aktive Referenzen und liegt damit 117 Byte
+über der Metadatengrenze; keine belegte unvermeidbare Zählpflicht:
+[getrennter Vorabstand](reports/REAL_RESTART_FINAL_BINDING_PRESTART_20260913.md).
+Keine weitere Qualifikation aufgerufen. Gates False. Die folgenden
+Vorabstände bleiben historisch erhalten.
+
+Reale Zulassungsanbindung als unqualifizierter Entwurf ergänzt:
+`media-restart-admission-qualification-20260913-01`, **PRESTART_BLOCKED,
+null Testaufrufe**. Die neue Vorrechnung zählt das gesamte geerbte
+Codeinventar als Quellenbelege; diese Abgrenzung unterscheidet sich von der
+bisherigen `external`-Liste. Quellen-/Zusatz- und Metadatenüberschreitung
+[mit Beträgen und verbleibender Zuordnung](reports/media-restart-admission-qualification-20260913-01/REPORT.md).
+Keine reale MP4-Verarbeitung, keine Fortsetzungsprüfungen wiederholt.
+Die folgende 8/8-Qualifikation bleibt historisch gültig, nicht auf die
+neuen Zulassungsstellen übertragen. Gates False.
+
+Neuester Aufruf: `media-restart-qualification-20260913-05`, **8/8, QUALIFIED**.
+Früher und später Prozessneustart samt vollständigen Gesamtvergleichen erreicht.
+Begrenzte Serialisierung, Reserveersetzung und kontrollierter Primärfehler nach
+nativer Formation geprüft. [Befund, Bindungen und Istbilanz](reports/media-restart-qualification-20260913-05/REPORT.md).
+Erfolg bleibt von der tatsächlichen Belegbelegung abhängig; die universelle
+Worst-Case-Erfolgshülle ist keine Startbedingung mehr. Reale Medienausführung
+weiter gesperrt, Gates False. -04 war nur eine abgelöste Vorbindung ohne Test;
+die folgenden Vorabstopps und Fehlqualifikationen bleiben historisch erhalten.
+
+Neuester Vorabstand: `media-restart-qualification-20260913-03`, **PRESTART_BLOCKED,
+null Testaufrufe**. Die 6.788 Byte Unterreservierung sind auf alle 43 Objekte
+zurückgeführt. Gemeinsamer Reserveverbrauch implementiert, noch unqualifiziert.
+Die formatgebundene Teilreserve überschreitet bereits Gesamt-/Zusatzgrenze;
+keine behauptete Mindestgröße des neutralen Ergebnisses. Eine engere belastbare
+Obergrenze fehlt. [Zuordnung, Quellenstand und konkrete Rechnung](reports/media-restart-qualification-20260913-03/REPORT.md).
+Kein weiterer Test oder realer Videolauf; Gates False. Folgende Aufrufe bleiben
+historisch NOT_QUALIFIED.
+
+Neuester Aufruf: `media-restart-qualification-20260913-02`, **8/11,
+NOT_QUALIFIED**. Primärfehlerabschluss nach nativer Formation und gemeinsame
+Referenzauflösung geprüft. Später Restore verarbeitet Ereignis 20, scheitert
+bei PLAYER_CLOSE: 131.639 Byte einschließlich Reserven gegenüber 131.072.
+Vollständiger Primärfehler jetzt gespeichert; Gesamtvergleiche weiterhin
+nicht erreicht. [Befund und Istbilanz](reports/media-restart-qualification-20260913-02/REPORT.md).
+Kein Retry, keine Korrektur nach dem Aufruf, kein realer Videolauf. Gates False.
+Der folgende 11/12-Stand bleibt unverändert historisch NOT_QUALIFIED.
+
+Neuester tatsächlicher Aufruf: `media-restart-qualification-20260913-01`,
+**11/12, NOT_QUALIFIED**. Batchabbruchsemantik und gemeinsame Referenzablage
+neutral teilweise bestätigt. Früher Restore vollständig verarbeitet; später
+Restore erreicht Ereignis 20, scheitert dann mit MEDIA_STORE_BUDGET bei der
+Belegveröffentlichung. Nachgelagerte Gesamtvergleiche nicht erreicht.
+[Vollständiger Befund und Fehlerabschlusslücke](reports/media-restart-qualification-20260913-01/REPORT.md).
+Kein Retry oder Produktkorrektur nach dem Aufruf. Die neue Batchsemantik
+ersetzt die frühere unerfüllte interne Vorabgarantie unten ausdrücklich;
+keine neue native Decoderarchitektur. Gates False, reale Medienausführung
+weiter gesperrt. Die folgenden Einträge sind historische Vorabstände.
+
+Neueste statische Klärung: Die lokale PyAV-16.1.0-API sammelt Decoderframes
+intern bis EAGAIN/EOF; ein numerischer Batchdeckel einschließlich Flush ist
+aus der bestehenden Bindung nicht belegt. [Lokale Quellstellen, Hashes und
+genau fehlender Nachweis](reports/MEDIA_RESTART_DECODER_BATCH_BOUNDARY.md).
+Keine erfundene Reservierung, keine Qualifikation gestartet. Gemeinsame
+Referenzdarstellung weiterhin freigegeben, aber noch nicht fertiggestellt;
+sie beseitigt diese unabhängige Decoder-API-Grenze nicht. Kein Memorybefund.
+
+Neuester Stand: Die freigegebene private Ein-Neustart-Arbeitsversion ist als
+gesperrter Entwurf angebunden (2.048/4.096 Frames, 8.192 Pakete, 24 × Datei).
+Keine Qualifikation gestartet. Die vollständigen Präfixkopien reservieren
+am Peak bereits **11.498.068 Byte Datenbelege vor Administration**, gegenüber
+4.194.304 Byte Gesamtgrenze. Das ist eine untragfähige Oberreservierung,
+keine gemessene Mindestgröße. [Entwürfe, Teilbeträge und offene Batchgrenze](reports/MEDIA_RESTART_BUDGET_PRECONDITION.md).
+Workerdatei geändert, Quellenbindung noch nicht neu qualifiziert; historische
+Zulassungen nicht übertragen. Playeranschluss noch nicht vollständig aktiviert.
+Keine reale Medienverarbeitung. Die frühere 1.024-Frame-Grenze unten ist für
+die neue private Arbeitsversion durch die ausdrückliche Freigabe ersetzt.
+
+Konkreter Vorabkonflikt (2026-09-13): Voll-Dateimodus, Suspend nach Ereignis 7,
+Wiedereinstieg ab Dateianfang benötigt für reguläre CFR-Zeiten mindestens
+1.055 Videoframes statt kumulativ 1.024, ohne EOF-Drain. Keine reale Messung,
+sondern [statische Gegenrechnung mit Codebezug](docs/DATEIBETRIEB_CHECKPOINT_BEDIENUNG.md).
+Beliebige abgeschlossene Ereignisgrenzen sind so nicht vorab abgesichert.
+Null Testaufrufe, kein Produktcode geändert, keine Grenzerhöhung. Frühere
+Schnittpositionen sind damit nicht widerlegt, aber keine stillschweigende
+Ersatzqualifikation für den vollständig fortsetzbaren Dateibetrieb.
+
+Neueste Freigabe: Medienmanifest-/Checkpointanschluss implementieren und nach
+vollständiger Vorbilanz einmal neutral qualifizieren. Noch kein Testaufruf.
+Die [konkreten Restanschlüsse](docs/DATEIBETRIEB_CHECKPOINT_BEDIENUNG.md)
+betreffen unterschiedliche Dateikonten, kumulative Workergrenzen und eine
+noch fehlende gemeinsame physische Belegbilanz. Kein fertiger Anschluss,
+keine behauptete Budgetüberschreitung und kein realer Videolauf. Die folgende
+Planungsfreigabe beschreibt den vorherigen Stand.
+
+Stand 2026-09-13: `memory-restart-transfer-20260912-01` ist verbraucht und
+unverändert abgeschlossen: einmalige Verifikation `RECORDING_COMPLETE`,
+getrennte Auswertung `CONFIRMED`. Alle sieben Zustands-/Kontenvergleiche und
+der Übergabepunkt sind gleich; beide Hinweise liefern in beiden Armen
+`ABSTAIN_INTERNAL_AMBIGUITY`. Tatsächliches Prozessende und frischer Restore
+sind belegt, nicht allgemeine Crash-Recovery oder erfolgreicher Zielabruf.
+[Auswertung](reports/memory-restart-transfer-20260912-01/evaluation.json),
+[Istbilanz](reports/memory-restart-transfer-20260912-01/final-balance.json).
+Keine Wiederholung; historische Vorbereitungen einschließlich START.md bleiben
+Zeitstände vor Ausführung, keine unverbrauchte Freigabe.
+
+Aktuell ausschließlich [Anschlussplanung](docs/DATEIBETRIEB_CHECKPOINT_BEDIENUNG.md):
+vorhandene Dateibedienung mit geordnetem Checkpoint und einmaliger Fortsetzung
+verbinden. Video benötigt zusätzlich Quellen-/Medienposition, kontrollierten
+Decoderwiedereinstieg und kumulative Budgets. Kein bereits allgemeiner
+Datei-Restorezugang. Keine Implementierung, Tests oder neue Verarbeitung in
+diesem Auftrag. Gates False; ME/MI gesperrt, Prognosezweig ruhend.
+
+Die folgenden Einträge sind historische Arbeitsstände.
+
+## MEMORY-SPEICHERN-WIEDERLADEN — PROZESSAUFRUFER-FERTIGSTELLUNG
+
+**Ergänzung abgeschlossen: 17/17 in genau einem fokussierten Aufruf.**
+Workerautorisierung, Rollenverbrauch und private Budgetversion v3 geprüft.
+Historische 24 Tests nicht wiederholt, keine neue native Memorygeschichte.
+[Qualifikation und Aussagegrenzen](reports/checkpoint-authorization-qualification-20260912-04/REPORT.md).
+[Endgültige Einmalbindung und gesperrter Startweg](reports/memory-restart-transfer-final/START.md).
+Vollständige Schutzrechnung: 138.913 Byte Metadaten, 175.789 Quellen,
+256.685 Zusatzhülle, phasengerecht maximal 4.293.977 gesamt. Alle neuen
+privaten Grenzen eingehalten. Historische Limits bleiben unverändert.
+Lauf-ID `memory-restart-transfer-20260912-01` unbenutzt; keine Autorisierung
+erstellt, kein Hauptlauf ausgeführt. Gates False. Die folgenden Stopps sind
+historische Vorbereitungen, keine weiterhin geltenden Qualifikationsaufträge.
+
+Neuster Vorabstand: private Metadatenbindung v2 mit 131.072 Byte umgesetzt;
+historische Defaults unverändert. Die vollständig ergänzte Schutzrechnung
+stoppt weiter: Metadaten **140.276**, Quellen **175.480**, Gesamt
+**4.295.031 Byte**. Überschreitungen: 9.204 / 1.400 / 100.727 Byte.
+[Gesammelte Beiträge und phasengerechte Rechnung](reports/checkpoint-authorization-qualification-20260912-02/REPORT.md).
+Die 17 vorbereiteten Ergänzungsprüfungen wurden nicht gestartet. Keine
+Grenzerhöhung darüber hinaus, keine reale Verarbeitung, keine Einmalbindung.
+Die Zahlen sind Schutzobergrenzen, keine Laufmessung oder Mindestgrößen.
+
+Ergänzung v2: Rollen-/Abschnittsautorisierung vor jeder Worker-Gateöffnung
+implementiert, noch nicht qualifiziert. Die neue Format-Vorprüfung stoppt:
+**102.161 > 65.536 Byte Metadaten**, Überschreitung 36.625 Byte in der
+Schutzrechnung für `restore-failure-7`, noch ohne weitere neue Abschlusskosten.
+[Vollständige Teilbeträge und Aussagegrenze](reports/checkpoint-authorization-precondition-20260912-01/REPORT.md).
+Null neue Testaufrufe; keine reale Verarbeitung. Eine Überschreitung dieser
+Obergrenze ist keine gemessene Laufgröße oder bewiesene Mindestgröße.
+Keine endgültige Einmalbindung und keine Grenzerhöhung. Hauptlauf-ID unbenutzt.
+
+Neuer tatsächlicher Anschlussaufruf: **24/24 Einzeltests bestanden**, aber
+**NOT_QUALIFIED_FOR_MAIN**. Der direkte Worker bindet noch keine
+Hauptlaufautorisierung; die Metadatenobergrenze wurde in der Vorrechnung
+eingesetzt statt vollständig aus den Ausgabeformen hergeleitet.
+[Qualifikation, konkrete Lücken und Aussagegrenzen](reports/checkpoint-entry-qualification-20260912-02/REPORT.md).
+Keine Codekorrektur oder Wiederholung nach diesem Aufruf. Die erzeugte
+Ready-Bindung ist ausdrücklich gesperrt, keine Autorisierung erstellt;
+die Hauptlauf-ID bleibt unbenutzt. Die folgenden Stände sind vorherige
+Vorbereitungen, keine erneuten Freigaben.
+
+Aktiver Auftrag: dateigebundener Referenz-/Restore-Aufrufer mit unabhängiger
+Gesamtverifikation, getrennter Auswertung und vollständiger Fortschritts- und
+Fehlerbilanz. Referenz ohne Unterbrechung; nur der zweite Arm beendet nach
+vier Formationen seinen Prozess. Keine Wiederholung historischer Prüfungen
+und kein realer Hauptlauf. Die neue Anschlusslogik ist noch nicht qualifiziert.
+
+Der dateigebundene Entwurf liegt vor, bleibt jedoch **NOT_READY**:
+[konkrete Startblocker mit Datei-/Funktionsbezug](reports/MEMORY_PROZESSAUFRUFER_RESTBLOCKER.md).
+Zulassungsform, Pflichtinventar, durchgängige Fortschritts-/Fehlerbilanz und
+vollständige Einzelvergleichsausgabe sind nicht abgeschlossen. Kein neuer
+Testaufruf; fehlende Gesamtbilanz weder als Bestehen noch als Überschreitung
+ausgeben. Die Fertigstellung bleibt beauftragt, der Hauptlauf gesperrt.
+
+Funktionsbindung vorbereitet, **noch nicht ausführungsbereit**:
+`memory-restart-transfer-20260912-01`, unbenutztes Ergebnisverzeichnis,
+sieben Ereignisse je Arm mit Checkpoint nach vier Formationen.
+Quellenhashes der drei vorhandenen OB-Aufruferdateien bestätigt, keine Analyse.
+[Konkrete Bindung und offene Startanschlüsse](reports/memory-restart-transfer-binding-20260912-01/STATUS.md).
+Der reale dateigebundene Prozessaufrufer, Gesamtverifikations-/Auswertungsabschluss
+und seine vollständige Fortschrittsbilanz sind noch zu ergänzen. Keine
+Ausführung und keine Testwiederholung; der Fertigstellungsauftrag gilt weiter.
+
+Ergänzung: **4/4** in genau einer fokussierten read-only Qualifikation unter
+`memory-checkpoint-focus-20260912-01`. Native Typgültigkeit, kanonischer
+Memory-/Feldrundlauf und Unveränderlichkeit unabhängig erreicht. Produktcode
+unverändert; weder die 21 bestandenen Gruppen noch der Prozessversuch wiederholt.
+[Ergänzende Prüfdeckung](reports/memory-checkpoint-focus-20260912-01/REPORT.md).
+Der alte 21/22-Befund bleibt NOT_QUALIFIED; seine offene Test-05-Deckung ist
+durch den separaten Beleg geschlossen, nicht durch einen neuen Gesamtlauf.
+Keine reale Sieben-Ereignis-Ausführung freigegeben. Gates False.
+
+Neuester Stand: **21/22, NOT_QUALIFIED** in genau einem neutralen Aufruf unter
+`memory-checkpoint-qualification-20260912-02`. Tatsächliches Prozessende,
+Restore im frischen Interpreter und identische native Fortsetzung erreicht.
+Test 05 scheitert am Vergleich des nativen Codecobjekts mit JSON-Containern;
+nachgelagerte Rundlauf-/Unveränderlichkeitsassertions nicht erreicht.
+[Vollständiger Befund](reports/memory-checkpoint-qualification-20260912-02/REPORT.md).
+Keine Korrektur oder Wiederholung. Der reale Sieben-Ereignis-Vergleich bleibt
+gesperrt; Gates False. Die folgenden Vorbereitungsstände sind historisch.
+
+Aktueller Stand: `FIELD_CHECKPOINT.v1` mit 524.288 Byte Schutzdeckel ist
+freigegeben. Die vollständige gebundene Feldformatrechnung ergibt 426.580 Byte.
+Private Anschlussdateien und 16 neutrale Kontrollen sind vorbereitet, **nicht
+qualifiziert**. Die gemeinsame Metadaten-Vorreserve beträgt noch 200.704 statt
+65.536 Byte; null Testaufrufe. Der vorläufige READY-Eintrag ist ausdrücklich
+keine Testzulassung. [Stand, Bilanz und Restarbeiten](reports/MEMORY_CHECKPOINT_IMPLEMENTATION_PRECONDITION.md).
+Kein echter Prozessvergleich und kein realer Sieben-Ereignis-Lauf ausgeführt.
+
+Vorheriger Folgeauftrag: begrenzten Checkpoint-/Restore-Anschluss implementieren
+und einmal neutral einschließlich tatsächlichem Prozessende qualifizieren,
+aber erst nach tragfähiger vollständiger Vorbilanz. **Vorabstopp:** Der native
+Feldcheckpoint hat noch keine passende Klasse im bestehenden OB-Ledger.
+Eine statische Untergrenze seiner Neuronen-/Sampledarstellung beträgt bereits
+192.870 Byte; dies ist keine erzeugte Datei und keine obere Reservierung.
+[Konkrete Herleitung und gesammelte Restblocker](reports/MEMORY_RESTORE_BUDGET_PRECONDITION.md).
+Null Testaufrufe, keine Runtime- oder Payloadverarbeitung, kein neuer
+Checkpointcode. Der Sieben-Ereignis-Funktionsvergleich bleibt separat gesperrt.
+Die Medienläufe bleiben abgeschlossen.
+[Konkreter Anschlussplan](docs/MEMORY_SPEICHERN_WIEDERLADEN_PLAN.md).
+
+Memorycodec und vollständiger Feldsnapshot sind vorhanden. Ein gültiger
+Wiedereinstieg in Runtime und Sitzung fehlt: Die heutigen Einstiege beginnen
+frisch, vorzeitiges Sitzungsschließen bedeutet INCOMPLETE. Vorgeschlagen ist
+eine ausdrücklich versionierte Unterbrechung an einer abgeschlossenen
+Ereignisgrenze, mit tatsächlichem Prozessende und vollständiger Fortsetzung.
+Keine Rücksetzung von Feld, Supports, Ablaufzählern oder Generationsketten.
+
+Neue kurze Vergleichsaufgabe: sieben Ereignisse je Arm, Schnitt nach vier
+Formationen; identische Fortsetzung mit zwei Hinweisen und einer Formation.
+Der gespeicherte Zustand wird vor der ersten Fortsetzung verglichen.
+Die vollständige Checkpoint-/Quellen-/Abschlussbilanz ist noch zu binden;
+vorhandene Limits sind keine nachgewiesene Platzreserve. Keine Qualifikation
+gestartet; die Qualifikation ist bedingt freigegeben, der Hauptlauf nicht.
+Gates False; ME/MI gesperrt, Prognosezweig ruht.
+
+## Dateibetrieb einmal bis EOF abgeschlossen
+
+`media-full-file-20260912-01`: **RECORDING_COMPLETE**, einmal unabhängig
+verifiziert, danach einmal beschreibend ausgewertet. Keine Wiederholung,
+keine Hinweise, kein Retry. Die Lauf-ID und Autorisierung sind verbraucht.
+[Abschluss](reports/s2oe/media-full-file-20260912-01/REPORT.md) ·
+[20 einzelne Speicherzustandsbefunde](reports/s2oe/media-full-file-20260912-01/evaluation.json) ·
+[vollständige Istbilanz](reports/s2oe/media-full-file-20260912-01/final-balance.json).
+
+Eine Sitzung: 20 Audioanalysen/NJ-Projektionen, 20 visuelle Analysen,
+20 Formationen und 6.720 Feldkontakte, null Scans. Beide Streams melden EOF:
+801 Videoframes, 1.252 Audioframes, 2.057 Pakete; letzter Video-PTS 800800
+bei Zeitbasis 1/30000, Audioende bei Sample 1282048 mit 48 kHz.
+Das sind beobachtete Endpunkte, nicht aus Containerdauer ergänzte Werte.
+Die ursprünglichen 30000/1001 fps bleiben erhalten. Runtimeende: 3,9 s;
+die Medienauswahl 0…26,6 s ist keine entsprechend lange Runtimezeit.
+
+B4: neun Belegungen, elf Ersetzungen. Fast: eine Generation, 19 MATCHED-
+Fortschreibungen und 19 Konsolidierungen, Support ab e02 gesättigt bei zwei.
+Audio-PPB: eine Generation ab e02, 18 Fortschreibungen, ab e04 stabil mit
+Support drei. Visuelle PPB: vier Belegungen und 15 Ersetzungen, alle Supports
+eins; keine visuelle Stabilisierung. Gleiche Slot-IDs bei Ersetzung tragen
+neue Generationsbindungen. Diese Befunde sind keine Objektidentität.
+
+Lesemenge des Decoders einschließlich Hashprüfungen: 333.993.752 Byte
+bei 83.498.438 Byte Eingangsbestand und 1.001.981.256 Byte gebundener Grenze.
+Keine Vorschauzugriffe. Worker-/Jobspitzen: 599.490.560 / 606.007.296 Byte,
+unter jeweils 1.073.741.824 Byte. Worker geschlossen; gespeicherter Exitcode
+eins wird ausdrücklich erhalten. Der bestehende `WorkerDecoder.close()`
+beendet den Worker über `cancel()`; EOF und Verifikation waren erfolgreich.
+Der Playerabschluss lautet COMPLETED, ohne Fehler oder Benutzer-Stoppauslöser.
+Erst danach wurde der Bedienserver mit Ctrl-C geschlossen, ebenfalls Exitcode
+eins; dies ist vom vorherigen Sitzungsabschluss getrennt.
+
+Ist einschließlich aktiver Referenzen, Autorisierung, Auswertung und Abschluss:
+89.771 Byte Metadaten, 257.502 Quellen, 302.642 Zusatzhülle,
+30.509 Verifikation und 1.583.571 gesamt. Keine Grenzverletzung.
+Quellen wurden wiederverwendet. Nur 20 Bilder und zwei Sekunden ausgewähltes
+Audio gingen an MCM, trotz vollständigem Decoderlauf bis EOF.
+Abruf nicht angefordert: weder Wiedererkennung noch Enthaltung geprüft.
+Sitzung geschlossen, Gates False; kein weiterer Lauf freigegeben.
+
+## DATEILERNBETRIEB-LAENGERE-SITZUNG: Anschluss neutral qualifiziert
+
+**16/16 in genau einem Aufruf**: die 13 vorbereiteten Anschlussgruppen und
+drei Abschlusskontrollen. Native 20er-Sitzung und Primärfehler nach Formation
+tatsächlich erreicht; keine reale Datei verarbeitet, keine OS-Testwiederholung.
+[Qualifikation und Aussagegrenzen](reports/s2oe/full-file-connection-qualification-20260912-02/REPORT.md).
+Prospektiv nur Qualifikationsmetadaten 262.144 Byte; jede Sitzung weiterhin
+131.072 Byte. Vollständige Qualifikations-Istbilanz einschließlich Bericht:
+93.997 Byte Metadaten, 1.419.497 Byte gesamt; keine Verletzung.
+
+[Finale Einmalbindung](reports/s2oe/full-file-run-binding-20260912-01/settings.json)
+für `media-full-file-20260912-01`: dieselbe Datei einmal bis EOF, 20 feste
+Formationen bei 0; 1,4; …; 26,6 s, keine Hinweise oder Wiederholung.
+[Alle Fortschritts- und Abschlussalternativen](reports/s2oe/full-file-run-binding-20260912-01/budget.json)
+passen: maximal 122.000 Byte Metadaten und 3.442.210 Byte gesamt.
+Ausgabe noch nicht angelegt, keine Autorisierung erstellt; Hauptlauf gesperrt.
+Gates False. Die vollständige reale Dateidekodierung bleibt ungeprüft.
+Frühere Vorabstopps und historische Zulassungen werden nicht umgedeutet.
+
+## Dateibetrieb: Anschluss vorbereitet, Qualifikation vorab gestoppt
+
+Neue private 20er-Modusbindung einschließlich Decoderdeckeln und EOF-Drain
+implementiert, aber **nicht qualifiziert**. Alle 21 Fortschrittspositionen
+und Abschlussalternativen administrativ bilanziert; null Testaufrufe.
+Gemeinsame Qualifikationsmetadaten 215.530 / 131.072 Byte, Überschreitung
+84.458 Byte. Quellen-, Zusatzhüllen- und Gesamtgrenzen passen.
+[Vollständige Teilbeträge, Codebindung und offene Prüfdeckung](reports/s2oe/full-file-connection-qualification-20260912-01/REPORT.md).
+Kein realer Dateizugriff, kein Lernlauf und keine Grenzerhöhung. Die 13
+Prüfgruppen sind nur vorbereitet; keine aktuelle Laufzulassung. Gates False.
+
+## DATEILERNBETRIEB-LAENGERE-SITZUNG: statischer Anschluss vorbereitet
+
+[Konkreter Umfang, Anschlussstellen und Ressourcenmodell](docs/DATEILERNBETRIEB_LAENGERE_SITZUNG.md):
+ausgewählte lokale Datei einmal bis EOF, 20 feste 100-ms-Fenster über
+0…26,6 Sekunden, eine Sitzung, keine Wiederholung oder Abrufproben.
+Ereignis-/Memorylimits bleiben erhalten. Die vorhandenen Decoderdeckel
+400 Video-/600 Audioframes reichen für die vollständige Datei nicht;
+neue endliche Decoderarbeitsbudgets nur vorgeschlagen, nicht geändert.
+Runtimezeit bleibt getrennt und ordinalgebunden, keine lückenlose Wahrnehmung
+oder längere interne Zeitachse behauptet. Keine Ausführung oder Tests.
+Nächster Schritt ist die begrenzte Implementierungsentscheidung; Gates False.
+Benutzerfeedback zur historischen Ansicht ist keine Voraussetzung.
+
+## Historische Abrufanzeige bereitgestellt: 15/15 neutral qualifiziert
+
+Read-only Ansicht im bestehenden Playerlayout: Ereignis, Zeit, beobachtete
+Komponenten, Vergleichsregel, damalige Spur-/Generationsbindung und konkreter
+Abrufausgang. Keine aktuelle Spurenverfügbarkeit oder Szenenidentität behauptet.
+[Ansicht](reports/s2oe/history-display-qualification-20260912-01/view.html) ·
+[Prüfdeckung und vollständige Bilanz](reports/s2oe/history-display-qualification-20260912-01/REPORT.md).
+Ein Testaufruf einschließlich unabhängigem Browserabgleich auf neutralen
+Desktop-/Mobilfixtures. Vorhandene abgeschlossene Videobelege nur gelesen;
+keine Medienanalysen, Scans, Runtime oder erneute numerische Verifikation.
+Gemeinsamer Ansatz mit Abschlussreserven 1.903.984 / 4.194.304 Byte.
+Gates False. Historische Ergebnisse und Zulassungen unverändert.
+
+## ABRUF-ANZEIGE-AUSSAGEUMFANG: Aufgabenbindung und Anzeigevorschlag
+
+Keine bevorzugte Integration von <= 1/255, keine weitere Schwellen-/Pegelsuche.
+Vier richtige B-Anwendbarkeitsgewinne, eine Fehlanwendbarkeit und ein
+öffentlicher Abrufgewinn bleiben getrennt; D=0 und nicht unabhängige
+bytegleiche Hinweise unverändert. Keine Umdeutung historischer Erwartungen.
+[Aufgabenbindung und Anzeigevorschlag](docs/AUFGABENENTSCHEIDUNG_VISUELLER_ABRUF.md):
+Abruf beschreibt ausschließlich beobachtete Komponenten, die eine benannte
+Vergleichsbedingung zur gespeicherten Spur erfüllen. Keine Objekt- oder
+Gesamtszenenidentität. Datenquellen und fehlende Playerprojektion je Feld
+ausgewiesen; Hypothese, Mehrdeutigkeit und Enthaltungsgrund bleiben getrennt.
+Zusätzliche Rasterzelle zurückgestellt, nur explorativ und nicht implementiert.
+Dokumentationsauftrag erledigt; keine Tests, Medienanalyse oder Ausführung.
+Gates False. Keine neue Qualifikation oder Wiederaufnahme des Medienlaufs.
+
+## Abgeschlossener Auftrag: VISUELLE-B-ANWENDBARKEIT-QUELLENBINDUNG
+
+Einmalvergleich abgeschlossen: sieben Analysen, einmal VERIFIED, getrennte
+Auswertung. MAX <= 1/255 ermöglicht vier richtige B-Anwendbarkeiten, aber auch
+eine falsche bei der verdeckten Strukturkontrolle. Nur vb-05 führt zu einer
+neuen öffentlichen B-Zulassung. Bytegleiche vb-01/02/03/06 sind keine
+unabhängigen Replikate; bei ihnen bleibt A mehrdeutig. D=0: Erhaltung ungeprüft.
+[Vollständiger Vergleich](reports/s2oe/visual-b-frozen-comparison-20260912-01/REPORT.md).
+Lauf-ID verbraucht, Gates False; keine Produktumstellung oder Folgeausführung.
+
+Vorheriger Anschlussstand:
+Gesamtanschluss neu qualifiziert: 19/19 in einem Aufruf, alte 18/18 nicht
+wiederholt. Herkunft, Generationen, öffentliche Nenner, Einmalzulassung und
+Erfolgs-/Fehlerbilanz geprüft. Private Metadatengrenze prospektiv 131.072 Byte;
+übrige Grenzen unverändert. Reale Herkunft nur lesend gebunden, keine neuen
+Rezeptoranalysen oder Regelvergleiche. Einmalbindung bleibt authorized=false.
+[Anschlussnachweis und Prüfgrenzen](reports/s2oe/visual-b-connection-qualification-20260912-02/REPORT.md).
+Finale [gesperrte Einmalbindung](reports/s2oe/visual-b-connection-qualification-20260912-02/admission-final.json):
+visual-b-frozen-comparison-20260912-01, Ausgabe noch nicht vorhanden.
+Aktive Referenzen einschließlich Qualifikationsabschluss vollständig geprüft;
+Erfolgsobergrenze 2.700.774 Byte (88.346 Metadaten), Fehleralternative
+2.688.486 Byte (76.058 Metadaten), jeweils einschließlich temporärer Hülle.
+Keine Grenzverletzung und kein realer Vergleich gestartet.
+
+Historischer Vorbereitungsstand:
+Gesamtanschluss anschließend vorbereitet, noch nicht qualifikationsreif:
+gemeinsame Metadatenvorrechnung 104.047 > 98.304 Byte, null Tests.
+Native Herkunfts-/Einmaleinstiegsprüfung, öffentliche Nenner und vollständige
+Abschlussbilanz noch offen. Keine reale Verarbeitung und keine Einmalzulassung.
+[Gemeinsame Restlücken und Vorbilanz](reports/VISUELLE_B_GESAMTANSCHLUSS_VORBEREITUNG.md).
+
+Quellenanbindung abgeschlossen: neue Qualifikation 18/18, danach sieben
+Quellen einmal erzeugt und einmal unabhängig read-only BINDING_VALID geprüft.
+Bytegleich nach Okklusion: vb-01/vb-02/vb-03/vb-06, Identitäten getrennt.
+Keine realen Rezeptoranalysen oder Regelvergleiche. Gates False.
+[Qualifikation, Vorversiegelung und Grenzen](reports/s2oe/visual-b-source-seal-20260912-02/REPORT.md).
+
+Historischer Fehlversuch:
+Einmalige neue Qualifikation nach prospektiver Metadatengrenze 98.304 Byte:
+17/18 bestanden, Gesamt NOT_QUALIFIED. Historischer Exaktheitshelfer im
+Test falsch positional statt mit Schlüsselwortargumenten aufgerufen.
+Keine Quellen erzeugt; keine Wiederholung oder Korrektur automatisch.
+[Abschluss und Bilanz](reports/s2oe/visual-b-source-seal-20260912-01/REPORT.md).
+
+Freigegeben: sieben Quellen und eingefrorenen Zustand binden, neue B-Logik
+und Quellenanschluss einmal neutral qualifizieren; nur bei Bestehen sieben
+Quellen einmal vorversiegeln und einmal unabhängig lesend prüfen.
+Maßgeblich ist der folgende Vergleichsplan. Keine realen Rezeptoranalysen,
+Regelvergleiche, Formationen oder Feld-/Runtimeaufrufe. Medienzweig bleibt
+geschlossen; historische Qualifikationen werden nicht wiederholt.
+
+Vorbereitung vor dem Test gestoppt: vollständige Metadatenhülle 73.984 Byte
+bei 65.536 Grenze; auch Erfolg ohne Fehlerreserve liegt darüber.
+18 Prüfgruppen vorbereitet, null ausgeführt; keine Quellen erzeugt.
+[Vorbilanz und Quellenstand](reports/VISUELLE_B_QUELLENBINDUNG_VORABSTOPP.md).
+
+## Visuelle B-Anwendbarkeit: ein prospektiver Vergleich geplant
+
+Exakte sichtbare Gleichheit gegen Maximumabstand <= 1/255 auf denselben
+32 Komponenten. Grenze als enges RGB8-Pegeländerungsbudget begründet,
+nicht aus PPB 0,01 oder beobachteten Distanzen übernommen.
+Sieben festgelegte Hinweise, eingefrorener Systemzustand, A unverändert.
+[Konkreter Plan](docs/VISUELLE_B_ANWENDBARKEIT_VERGLEICHSPLAN.md).
+Nur Dokumentation; keine Erzeugung, Berechnung, Tests oder Ausführung.
+
+## Systemversuch geschlossen; visuelle Abrufsemantik read-only geklärt
+
+Stabilisierung bleibt bestätigt, eindeutiger Abruf nicht. Die vier B4-Treffer
+lösen bereits durch ihre Anzahl interne Mehrdeutigkeit aus; vollständige
+Kandidatengleichheit wurde in diesem Zweig nicht geprüft (Zähler 0).
+Auch Slow verlangt exakte numerische Gleichheit der 32 sichtbaren Werte,
+keine PPB-Distanzschwelle. Mittelung garantiert diese Gleichheit nicht,
+schließt passende Hinweise aber auch nicht grundsätzlich aus.
+[Vertragsprüfung](docs/STRUKTUR_AV_PROTOTYP_ABRUF_READONLY.md).
+Keine neuen Distanzen, Tests oder Regeländerungen; Gates False.
+
+## Regulärer AV-Systemversuch einmal abgeschlossen
+
+q04/q04/q05/q06: Fast 1/2/2/2, PPB-Eingänge exakt q04/q05/q06,
+visueller Support 1/2/3. Slotwerte entsprechen dem direkten Vergleich;
+Generation stammt aus Formation 2 und bleibt bei den Matches erhalten.
+Abschließender q06-Cue read-only: vier B4- und ein Fast-Kandidat sichtbar
+gleich; stabiler visueller Slot vorhanden, aber nicht sichtbar gleich und
+laut gespeichertem Scan nicht anwendbar. Öffentliche Enthaltung wegen
+interner A-Mehrdeutigkeit, keine Hypothese; Direktbaseline stimmt überein.
+Einmal RECORDING_COMPLETE und unabhängig verifiziert. Keine Regeländerung.
+[Kurzbefund](reports/s2oe/STRUCTURE_AV_SYSTEM_RESULT.md).
+Laufablage structure-av-system-20260912-01; Freigabe verbraucht, Gates False.
+
+## Fünf-Ereignis-Anschluss: ergänzende Qualifikation und gesperrte Einmalbindung
+
+Fünf neue Prüfgruppen einmal bestanden, einschließlich äußerem nativen
+Sitzungseinstieg mit negativem Vergleich, Wiederanlaufsperre, Referenz-/
+Zuordnungsfehlern, Kandidatensicht und Dateifehler mit Primärfehlererhalt.
+Frühere 4/4 und acht Quellenprüfungen nicht wiederholt.
+Konkrete Dateien: `reports/s2oe/structure-av-integration-qualification-20260912-03/`
+mit common.json, admission.json, Ergebnis und Vorregistrierung.
+Alle Referenzen der finalen gemeinsamen Bindung aufgelöst und aktuelle
+historische OC-Zulassung geprüft. Hauptfreigabe ausdrücklich false.
+Vorbilanzen über alle Positionen: maximal 1.588.032 Byte insgesamt,
+48.943 Metadaten, 138.049 Quellen, 154.433 gemeinsame Zusatzhülle.
+Externer Direktbeleg samt Prüfung und Zulassung vollständig mitgezählt.
+Realer Fünf-Ereignis-Lauf weiterhin nicht ausgeführt; Gates False.
+
+## AV-Anschluss: vier neue Kontrollen bestanden, Gesamtanschluss noch offen
+
+Ein neutraler Fünf-Ereignis-Pfad samt bestehender Verifikation und neuer
+Auswertungsprojektion wurde erreicht; keine realen Aufruferdaten verwendet.
+Der neue äußere run-Einstieg wurde nicht vollständig durchlaufen. Aktuelle
+Prüfdeckung ist daher kein qualifizierter Gesamtanschluss.
+Offen: konkrete Einmalzulassung und auflösbare statt Platzhalter-Referenzen;
+Bindung des externen Vergleichs an den erwarteten historischen Beleg;
+separate sichtbare Gleichheit/Kandidatenverfügbarkeit; gemeinsame Istbilanz
+mit externen Belegen und Dateifehlern nach der Session. Keine weiteren Tests
+ohne neue Entscheidung; vorhandener einmaliger Testaufruf verbraucht.
+[Teilbefund](reports/s2oe/STRUCTURE_AV_INTEGRATION_PARTIAL.md). Gates False.
+
+## Vier-Formationen-Quellenbindung einmal qualifiziert und bereitgestellt
+
+Acht neue Quellen-/Cue-/Zeitprüfungen einmal bestanden; q04/q05/q06 einmal
+rezeptgetreu als RGB-Dateien bereitgestellt, q06-Cue separat abgeleitet.
+Historische Payloadhashes stimmen überein; eine lesende Bindungsprüfung
+BINDING_VALID. Keine Rezeptor-/Memoryverarbeitung.
+[Befund und verbleibende Laufbindung](reports/s2oe/STRUCTURE_AV_SOURCE_RESULT.md).
+Noch keine vollständige funktionale Laufzulassung; Gates False.
+
+## Neuer Vier-Formationen-Systemversuch statisch gebunden
+
+q04/q04/q05/q06 mit konstantem vorhandenem OB-Audio, danach visueller
+q06-Teilhinweis. Erste q04 baut Fast auf; nur die folgenden drei Kontakte
+sollen regulär PPB erreichen. Keine Stabilisierung aus drei Formationen
+behauptet. [Konkrete Folge und Anschlusslücken](docs/STRUKTUR_LAGE_VIER_FORMATIONEN.md).
+Nur Planung, keine Quellenproduktion oder Ausführung; Gates False.
+
+## Direkter PPB-Versuch geschlossen; Drei-Formationen-Integration nicht erreichbar
+
+q04/q05/q06 stabilisiert ausschließlich im geprüften direkten PPB-Pfad.
+Reguläres Fast beginnt mit Support 1 ohne Konsolidierung; drei Formationen
+erzeugen höchstens zwei PPB-Eingänge. Daher keine Übertragung der bestätigten
+Dreier-Stabilisierung auf eine leere Systemgeschichte.
+[Statische Anschlussklärung](docs/STRUKTUR_LAGE_FAST_INTEGRATION.md).
+Keine zusätzlichen Wiederholungen, keine Ausführung oder Kernänderung.
+
+## Direkte PPB-Ketten einmal abgeschlossen
+
+Neun Übergänge, einmal EVIDENCE_VALID, getrennte Auswertung.
+q04/q05/q06 stabilisiert Slot 000; q01/q02/q03 trennt q02 ab;
+q01/q03/q04 trennt q04 ab. Keine der drei ursprünglichen
+Ankerentscheidungen kippt durch die Fortschreibung.
+[Ergebnis](reports/s2oe/STRUCTURE_CHAIN_REAL_RESULT.md).
+Keine Rezeptoranalyse oder vollständige Memoryausführung. Gate False;
+Einmallauffreigabe verbraucht.
+
+## PPB-Kettenanschluss einmal neutral qualifiziert: 19/19
+
+Die drei Evidenzreserven sind aus der festen Ausgabeform abgeleitet;
+Erfolg und Fehler verwenden dieselbe Bilanzierung. Begrenzte Diagnostik,
+Schreib-/Abschlussfehler und erhaltene Primärfehler sind neutral geprüft.
+Einmalige Qualifikation `structure-location-chain-qualification-20260912-04`:
+19/19 bestanden, keine Wiederholung. Vorbilanz maximal 3.858.425 Byte.
+[Befund](reports/s2oe/STRUCTURE_CHAIN_QUALIFIED_RESULT.md).
+Keine reale Neun-Übergänge-Folge; Hauptfreigabe fehlt, Gate False.
+
+## Begrenzte Fehlerdiagnostik vorbereitet; Qualifikation nicht gestartet
+
+Prospektiv entfällt die Pflicht zu unbegrenzten Fehlertexten. Der Ketten-
+einstieg enthält eine versionierte Fehlerform und begrenzte stdout/stderr-
+Erfassung; zwölf bestehende plus drei fokussierte Prüfgruppen sind vorbereitet,
+noch nicht ausgeführt. Aktualisierte Vorbilanz: Erfolg 3.251.351 Byte,
+Fehleralternative 4.299.927 Byte, Überschreitung 105.623 Byte.
+[Vorabstopp und offene Grenzen](reports/s2oe/STRUCTURE_CHAIN_BOUNDED_ERROR_PRESTART.md).
+Keine reale PPB-Folge. Der Anschluss ist weiterhin unqualifiziert.
+
+## PPB-KETTE-FEHLERBILANZ: vollständige Fehlerreserve nicht abgesichert
+
+Aktueller Auftrag ist ausschließlich die Fehlerbilanz der vorbereiteten
+Neun-Übergänge-Kette, nicht der historische Medienadapterauftrag.
+Die vollständigen Ausnahmetexte und Tracebacks sowie das Qualifikationslog
+haben im aktuellen Anschluss keine hergeleitete endliche Byteobergrenze.
+Die Reserven 8.192 beziehungsweise 4.096 Byte sind keine solchen Nachweise.
+[Statische Eingrenzung](reports/s2oe/STRUCTURE_CHAIN_ERROR_BOUND.md).
+Zwölf vorbereitete Prüfungen weiterhin nullmal ausgeführt. Keine reale
+PPB-Folge, keine Code- oder Grenzänderung; Gates unverändert False.
+
+## Reine PPB-Diagnose ausgelagert; Vorbilanz noch 101.772 Byte zu groß
+
+Historischer Extraktor und neuer Binder verwenden nun ein gemeinsames reines
+Tabellen-/Prüfmodul. Originalquelle archiviert und mitgezählt. Zwölf neutrale
+Prüfgruppen vorbereitet, null ausgeführt: Fehlerhülle 4.296.076 Byte liegt
+weiter über 4.194.304. Keine weitere Anpassung nach dem Vorabstopp.
+[Aktuelle Klassenbilanz](reports/s2oe/STRUCTURE_CHAIN_EXTRACTION_PRESTART_STOP.md).
+Keine reale PPB-Folge oder Rezeptoranalyse, Gates False.
+
+## PPB-Kettenanschluss vor Qualifikation am Gesamtbudget gestoppt
+
+Binder und acht neutrale Tests vorbereitet, kein Testaufruf ausgeführt.
+Erfolgshülle 4.036.307 Byte; vollständige Fehleralternative 5.084.883 Byte,
+damit 890.579 über der unveränderten Gesamtgrenze.
+[Vorabstopp und aktive Abhängigkeiten](reports/s2oe/STRUCTURE_CHAIN_PRESTART_STOP.md).
+Keine realen Übergänge, kein Quellen-/Rezeptoraufruf, Gates False.
+Die vorhandene breite Diagnoseanbindung ist noch nicht tragfähig entkoppelt.
+
+## Direkter PPB-Verlauf ausschließlich geplant
+
+[Minimaler Plan](docs/STRUKTUR_LAGE_PPB_VERLAUFSPLAN.md): drei getrennte
+leere visuelle PPB-Banken, feste Teilfolgen q04/q05/q06, q01/q02/q03 und
+q01/q03/q04. Neun Übergänge sollen akzeptierte Lage, ausgeschlossene Lage
+und Strukturänderung gegen tatsächliche Prototypfortschreibung prüfen.
+Kein Fast-/Memorygesamtlauf. Nachsättigungsupdate, Ersetzung und Ablauf
+sind in diesem Umfang nicht abgedeckt. Nur Planung, Gates False.
+
+## PPB-Quellenpaare einmal offline geprüft
+
+Sechs neue Anschlussprüfungen bestanden, anschließend 22 Paare einmal mit
+der tatsächlichen fsum-PPB-Regel berechnet und einmal read-only verifiziert.
+Alle Abstände bitgleich zur sum-Rechnung. 6/8 Lage-, 0/12 Struktur- und
+2/2 Exaktbeziehungen erfüllen <=0,01. A/P1 wird unter beiden Hintergründen
+ausgeschlossen; kein Nachweis eines tatsächlichen Prototypverlaufs.
+[Befund und alle Einzelbeziehungen](reports/s2oe/STRUCTURE_PPB_OFFLINE_RESULT.md).
+Keine Rezeptor-/Memoryausführung, Gates False; keine automatische Folgearbeit.
+
+## Struktur/Lage geschlossen: Rohordnung ist noch kein PPB-Nachweis
+
+[Lesende Entscheidungsübersicht](reports/s2oe/STRUCTURE_LOCATION_DECISION_READONLY.md)
+führt alle gespeicherten Paarabstände getrennt nach Lage, Struktur und
+Hintergrund zusammen. Rohsicht genügt für die geprüfte Ordnung; keine
+bevorzugte Formintegration. Vergleich verwendet sum, produktive PPB fsum:
+keine regelidentische Grenzaussage oder Erhaltungsentscheidung daraus.
+Keine neue Berechnung oder Ausführung; keine Merkmalsausweitung, Gates False.
+
+## Struktur-/Lage-Einmalvergleich abgeschlossen
+
+14 Quellen einmal verarbeitet, 22 Paare, 24 Kriterien; RECORDING_COMPLETE
+und einmal EVIDENCE_VALID. Rohsicht besteht alle Kriterien. Form verliert
+beide globalen Kriterien bei H0, besteht sie bei H1; keine Gleichstände
+oder fehlenden Projektionen. Keine allgemeine Robustheits- oder Lernbindung.
+[Getrennter Befund](reports/s2oe/STRUCTURE_LOCATION_REAL_RESULT.md).
+Freigabe verbraucht, Gates False; keine automatische Folgeausführung.
+
+## Vergleichsledger ergänzt: acht administrative Prüfungen bestanden
+
+Private Metadatengrenze prospektiv 98.304 Byte, historische Defaults unverändert.
+Aktive Referenzen klassentreu gezählt; Erfolgs-/Fehleralternativen getrennt.
+8/8 neue Ledgerprüfungen einmal ausgeführt; vorherige 12/12 nicht wiederholt.
+Reale 19.008 Differenzen, Offline-Verifikation und nachträglich erfasste
+neutrale Gesamtarbeit ausdrücklich getrennt.
+[Vollständiger Nachweis und Einmalbindung](reports/s2oe/STRUCTURE_LEDGER_CORRECTION_RESULT.md).
+Hauptlauf weiterhin nicht autorisiert und nicht ausgeführt; Gates False.
+
+## Vergleichsanschluss: zwölf Tests bestanden, Budgetanschluss offen
+
+Einmalige neutrale Qualifikation 12/12; native synthetische Gesamtverarbeitung,
+Direktrechnung, fehlende Form und negative Kriterien erreicht. Kein realer
+Quellenzugriff. Abschließender Klassenabgleich zeigt ausgelassene aktive
+Referenzmetadaten im Lauf-Ledger und fehlende Trennung der gesamten neutralen
+Zusatzarbeit vom Einzelvergleichsbudget. Deshalb keine reale Laufbereitschaft.
+[Befund und konkrete Teilbeträge](reports/s2oe/STRUCTURE_COMPARISON_CONNECTION_RESULT.md).
+Keine Korrektur oder Wiederholung nach dem Befund; Gates False.
+
+## Struktur-/Lage-Quellen einmalig vorversiegelt
+
+Neue Quellenqualifikation 6/6 in genau einem Aufruf. Danach 14 RGB-Frames
+einzeln erzeugt und gehasht, keine Rohablage; einmal read-only BINDING_VALID.
+Nur die vorgesehenen Exaktpaare q01/q13 und q07/q14 sind hashgleich.
+22 Paare und 24 Kriterien getrennt gebunden, noch nicht ausgewertet.
+[Befund, Digests und Bilanz](reports/s2oe/STRUCTURE_LOCATION_SOURCE_SEAL_RESULT.md).
+Keine Rezeptor-/Formprojektion oder Memoryausführung; Gates False.
+Die folgenden Planstände bleiben als Herkunft erhalten.
+
+## Struktur-/Lage-Gegenprobe ausschließlich geplant
+
+[Konkreter Plan](docs/STRUKTUR_LAGE_GEGENPROBE_PLAN.md): 14 neue RGB-Quellen,
+zwei Formen an drei Positionen, jeweils mit gleichmäßigem oder feststehend
+strukturiertem Hintergrund, dazu zwei Exaktkopien. Neue Frage gegenüber
+LV/LX: Ganzbild-Formprojektion ohne Freistellung des verschobenen Anteils.
+22 festgelegte Paare, Rohsicht und vorhandene Formprojektion getrennt;
+24 strikte Ordnungskriterien, keine gewählte Schwelle. Nur Dokumentation,
+keine Quellenproduktion, Berechnung, Tests oder Implementierung.
+Detailvergleich bleibt geschlossen, Gates False, ME/MI gesperrt.
+
+## Detailvergleich geschlossen; Leistungsfrage präzisiert
+
+Lesender Nachtrag: NOT_ESTABLISHED ist eine feste Aussagegrenze des
+Auswerters, kein berechneter negativer Leistungstest. Reale Frameherkunft
+und RGB-Unterschiede sind von synthetischen Rezeptorkollisionen zu trennen.
+[Einordnung und Entwicklungsentscheidung](reports/s2oe/DETAILBLICK_EINORDNUNG_UND_ENTWICKLUNGSENTSCHEIDUNG.md):
+Vorhandene Pose-/Formbefunde und die begrenzte MQ-Bewegungsevidenz zuerst
+berücksichtigen. Fehlend ist der aufgabenbezogene Nachweis von Struktur
+gegenüber Lageänderung, nicht ein weiterer Bedien- oder Ausschnittadapter.
+Keine neue Ausführung oder Implementierung; Gates False.
+
+## Detailvergleich abgeschlossen: technisch gültig, Zusatznutzen nicht belegt
+
+Neue Abschlussqualifikation 8/8 in einem Aufruf; historische 16/16 und 14/14
+nicht wiederholt. `fixed-detail-comparison-20260912-01` einmal ausgeführt,
+RECORDING_COMPLETE, einmal unabhängig EVIDENCE_VALID, getrennte Auswertung.
+Zehn Originalframes, zwanzig Ansichten; kein nachgewiesener Detailvorteil.
+Die getrennte Kontrolle liefert trotz verschiedener Pixel in beiden Ansichten
+gleiche Rezeptorwerte. Kein Memory-/Feldlauf, Gates False, kein Retry.
+[Abschluss, Grenzen und Istbilanz](reports/s2oe/FIXED_DETAIL_CLOSURE_RESULT.md).
+Die nachstehenden Freigaben sind damit historische Zeitstände.
+
+## Aktiver Auftrag: Abschlussanschluss des festen Detailvergleichs
+
+Die vorhandene Abschlussanbindung wird einmal mit acht neuen neutralen
+Prüfgruppen qualifiziert. Die 16 Adapterprüfungen und die historischen
+14 Medienanschlussprüfungen werden nicht wiederholt. Bei bestandener
+Qualifikation und vollständiger Budgetdeckung ist anschließend genau der
+gebundene Zehn-Frame-Vergleich mit unabhängiger Verifikation und getrennter
+Auswertung freigegeben. Quelle, mittiger Ausschnitt und Vergleichsgrößen
+bleiben unverändert. Kein Memory-/Feldaufruf, kein Retry.
+
+## Detailvergleich: Hauptlauf vor Medienzugriff angehalten
+
+Die erteilte Einmallauffreigabe wurde noch nicht ausgeführt. Der statische
+Vorabcheck zeigt: 16/16 qualifizieren den Darstellungsadapter, nicht einen
+vollständigen Gesamtabschluss. Einmaleinstieg, unabhängiger Gesamtverifikator
+und gesperrte getrennte Auswertung fehlen noch.
+[Konkrete Anschlusslücke](reports/s2oe/FIXED_DETAIL_MAIN_READINESS.md).
+Keine neue Lauf-ID verbraucht, keine MP4-Verarbeitung, keine Tests oder
+Kennzahlenerweiterung. Vorherige Belege unverändert; Gates False.
+
+## Fester Detailblick: 16/16 neutral qualifiziert, kein Medienlauf
+
+Die vom Analysten gewählte Kontrollansicht x=960, y=540, 1920×1080 ist
+versioniert angebunden, keine Benutzer-Blickwahl. Vorhandener Worker und
+Rezeptor wiederverwendet; historische Übersichtskonversion unverändert.
+`fixed-detail-qualification-20260912-01`: ein Aufruf, 16/16, nativer neutraler
+Zweiansichtenpfad und kontrollierter vorzeitiger Stopp erreicht.
+[Befund und Vergleichsbindung](reports/s2oe/fixed-detail-qualification-20260912-01/BEFUND.md).
+Getrennte Kontrolle: unterschiedliche Streifenbilder liefern in beiden
+Ansichten gleiche Rezeptorwerte; kein allgemeiner Informationserhaltungsbeleg.
+Die ausgewählte MP4 blieb ungeöffnet. Kein Memorylauf, keine Schwellenänderung.
+Realer Vergleich und frei wählbare Benutzeransicht bleiben separat gesperrt;
+Gates False. Keine automatische Folgeausführung.
+
+## Diagnosezweig geschlossen; Detailblick ausschließlich geplant
+
+Die Befundkette ist begrenzt geschlossen: visueller Eingang reproduzierbar,
+unmittelbarer A-Abruf möglich, e04 außerhalb der unveränderten PPB-Grenze,
+deshalb keine Verstärkung vorhandener Spuren. Kein nachgewiesener Speicherfehler;
+keine weiteren Einzelübergänge und keine Schwellenanpassung.
+[Detailblickplan](docs/BENUTZERGESTEUERTER_DETAILBLICK_PLAN.md): Übersicht gegen
+einen vorab vom Benutzer festzulegenden Originalausschnitt, gleiche Rezeptorarbeit,
+eigene räumliche Herkunft und getrennte Informationsverlustkontrolle.
+Nur Darstellungsvergleich, keine Objekt-/Lernbindung oder Memoryausführung.
+Die konkrete Ausschnittbestätigung und Anschlussqualifikation stehen aus.
+Gates False; jetzt keine Implementierung oder Ausführung.
+
+## e03 → e04: fehlende visuelle PPB-Zuordnung numerisch erklärt
+
+`visual-transition-e03-e04-20260912-03`: eine Tabelle, eine unabhängige
+read-only Prüfung, EVIDENCE_VALID. Zuvor 13/13 neue Anschlusskontrollen;
+12/12 Tabellenprüfungen nicht wiederholt. Beide belegten visuellen Slots
+verfehlen die Grenze 0,01: e02-Spur 0,034057930258008545,
+e03-Spur 0,030183521569636083. Kein Ablauf; regelkonforme Neuanlage in
+freiem Slot 002, Support 1, wie aufgezeichnet. Noch keine Ersetzung bei e04.
+[Befund und Herkunftsgrenze](reports/s2oe/visual-transition-e03-e04-20260912-03/BEFUND.md).
+Historische Decoderquellen nicht vollständig verfügbar; nicht ausgeführt
+oder als heutige Quellen ersetzt. Die ursprüngliche PPB-Regel ist gebunden.
+Keine Medien-/Memoryausführung, Schwellenänderung oder Erhaltungslösung.
+Diagnose abgeschlossen, Gates False; keine automatische Folgearbeit.
+
+## Korrigierte Offline-Anbindung: Vorabstopp an Quellenintegrität
+
+Der neue Referenzanschluss und die vollständigen Fehleralternativen sind
+vorbereitet, aber nicht qualifiziert. Bei der Quellenbindung weichen die
+aktuellen Dateien `_s2oe_media_decoder.py` und `_s2oe_decoder_worker.py` von
+den historischen Hashes ab. [Konkreter Vorabstopp](reports/s2oe/visual-transition-e03-e04-20260912-02/PRESTART_STOP.md).
+Keine neue Qualifikation, Tabellenberechnung oder Belegprüfung ausgeführt.
+Keine finale vollständige Vorbilanz behauptet. Historische Bindungen und
+aktuelle Decoderdateien unverändert; Gates False. Benötigt werden verfügbare
+historische Quellenstände oder eine ausdrücklich entschiedene Trennung
+historischer Herkunft und aktiver Offline-Abhängigkeiten. Kein automatischer Retry.
+
+## Offline-Diagnose e03 → e04 vor Distanzrechnung abgebrochen
+
+`visual-transition-e03-e04-20260912-01`: NOT_EVALUABLE in INPUT_VALIDATION.
+Die neue Diagnose prüfte den nativen Digest vor Auflösung der gespeicherten
+`$oc_common`-Referenzen. 12/12 neue neutrale Tabellenprüfungen bestanden,
+aber die historische Eingangsauflösung war nicht abgedeckt.
+**Null Distanzberechnungen, keine unabhängige Diagnoseprüfung erreicht.**
+[Fehlbefund und Anschlussgrenzen](reports/s2oe/visual-transition-e03-e04-20260912-01/BEFUND.md).
+Kein Retry und keine Produktkorrektur; historische Befunde unverändert,
+Gates False. Eine erneute Diagnose benötigt eine ausdrücklich freigegebene
+Korrektur der Referenzauflösung und vollständigen Vorbilanz.
+
+## Visuelle Teilbefunde konsolidiert; Erhaltungsgrenze im Verlauf
+
+Der unmittelbare Kontrollversuch ist unverändert geschlossen. Reproduzierbarer
+Eingang und unmittelbarer A-Abruf sind für die geprüften Eingänge bestätigt;
+die späteren Enthaltungen des Videolaufs bleiben bestehen.
+[Lesende Übergangseinordnung](docs/VISUELLE_ERHALTUNG_IM_GESPEICHERTEN_VERLAUF.md):
+Fast wird 19-mal fortgeschrieben; visuelle PPB: vier Anlagen, 15 Ersetzungen,
+kein MATCHED, Support durchgehend 1 statt Stabilisierung bei 3. e03 verliert
+seine PPB-Generation bei e07 und B4 bei e12; e09 entsprechend bei e15/e20.
+Numerische visuelle Formationsdistanzen sind nicht gespeichert und wurden
+nicht nachberechnet. Vorgeschlagen ist höchstens eine spätere Offline-Diagnose
+des ersten Folgeübergangs e03 → e04, keine neue Formations- oder Wiederholungsfolge.
+Jetzt nur Dokumentation; keine neue Ausführung, Gates False.
+
+## Unmittelbarer visueller Abruf einmalig bestätigt
+
+`immediate-visual-retrieval-20260912-01`: RECORDING_COMPLETE, einmal unabhängig
+verifiziert (EVIDENCE_VALID), danach getrennt ausgewertet. Leerabruf
+ABSTAIN_NO_CONTEXT; nach genau einer regulären AV-Formation unmittelbarer
+read-only Wiederabruf ADMIT_SINGLE_CONTEXT in A. Je eine passende B4-/Fast-Spur,
+je 32 sichtbare Werte gleich, Direktbaseline übereinstimmend. Noch keine
+stabile B-Spur. [Befund](reports/s2oe/IMMEDIATE_VISUAL_RESULT_20260912.md).
+Eingefrorene e03-Werte wiederverwendet, keine neue Medien-/Rezeptoranalyse.
+Historische Enthaltungen unverändert. Gates False, Einmallauffreigabe verbraucht;
+keine Wiederholung oder automatische Folgearbeit.
+
+## Unmittelbarer visueller Abruf nach einer Formation – Vorbereitung
+
+Aktuell: Abschlussanschlüsse mit **4/4 neuen Prüfungen** bestanden; 22/22 und
+7/7 nicht wiederholt. Die reale Kontrolle ist nun
+[konkret gebunden](reports/s2oe/immediate-visual-retrieval-binding/START.md),
+aber noch nicht ausgeführt oder freigegeben. Neue ID
+`immediate-visual-retrieval-20260912-01`, Ergebnisablage unbenutzt.
+Vollständige konservative Fehleralternative: 65.322 / 65.536 Byte Metadaten,
+1.945.134 / 4.194.304 Byte insgesamt. Herkunftsrecord, aktuelle Quellen und
+alle aktiven Qualifikationsbelege enthalten. Fortschritt und Primärfehler
+werden erhalten; keine fachliche Auswertung nach technischem Fehler.
+Gates False. Separate Einmallaufentscheidung erforderlich.
+
+Neueste Anschlussprüfung: `immediate-verification-qualification-20260912-01`,
+**7/7 fokussiert bestanden**, keine Wiederholung der 22 Präsentationstests.
+Unabhängige Herkunfts-, Präsentations-, Formations- und Scanverifikation
+angebunden, Auswertung getrennt. Kein realer e03-Lauf.
+[Befund und zwei Restblocker](reports/s2oe/immediate-verification-qualification-20260912-01/BEFUND.md):
+Der vorbereitete Dateieinstieg erzwingt noch keine gemeinsame Istbilanz und
+erhält bei inneren Fehlern noch keine vollständigen Fortschrittsbelege.
+Deshalb keine startbereite Hauptlaufbindung; Gates False.
+
+Aktueller Abschluss: `immediate-visual-qualification-20260912-04`, **22/22**
+neutral bestanden, genau ein Aufruf, alle Testkörper erreicht. Versionierte
+Präsentationsbindung trennt historische Herkunft und neue native Cuezeit;
+Leerabruf → reguläre Formation → unmittelbarer Wiederabruf erfolgreich
+geprüft. Manipulierte Herkunft und Präsentationszeiten abgewiesen.
+[Befund](reports/s2oe/immediate-visual-qualification-20260912-04/BEFUND.md).
+Keine reale e03-Verarbeitung, kein neuer Rezeptor-/Medienlauf. Historische
+Fehlbefunde unverändert; Gates False. Ein realer Kontrolllauf benötigt weiterhin
+seine eigene vollständige Einmalbindung und separate Freigabe.
+
+Neuester tatsächlicher Aufruf: `immediate-visual-qualification-20260912-03`,
+**17/18 bestanden, NOT_QUALIFIED**, alle 18 Testkörper erreicht. Administrative
+Prüfungen bestanden; Leerabruf und reguläre Formation durchlaufen, Wiederabruf
+mit `S2KQ_SOURCE_INVALID` abgewiesen: eingefrorene native Cuezeit [14,15)
+ist nach der Formation veraltet. Neue Sitzungszeit allein genügt nicht.
+[Befund](reports/s2oe/immediate-visual-qualification-20260912-03/BEFUND.md).
+Qualifikationsmetadaten prospektiv 131.072, reale Sitzungen weiter 65.536 Byte.
+Vorbilanz 2.127.564 / 4.194.304, Istlog 4.346 / 65.536 Byte. Keine Wiederholung
+oder nachträgliche Korrektur; reale Kontrolle gesperrt, Gates False.
+
+Neuester Stand: Fixture-Zeitkorrektur und unabhängige administrative Fixtures
+vorbereitet, Produkt unverändert. Die neue Vorbindung `...-20260912-02`
+stoppt **vor jedem Testaufruf**: 65.536 Byte freigegebene Logreserve plus
+32.768 Byte übrige Metadatenreserven ergeben 98.304 / 65.536 Byte.
+Gesamt 2.127.564 / 4.194.304 Byte. Keine Qualifikationsfreigabe verbraucht,
+keine erreichten Testkörper und keine reale Kontrolle.
+[Konkrete Bilanz](reports/s2oe/immediate-visual-qualification-20260912-02/BEFUND.md).
+Der Konflikt zwischen lokaler Logreserve und übergeordneter Metadatengrenze
+benötigt eine ausdrückliche Entscheidung; keine Umklassifizierung vorgenommen.
+
+Aktuell: `immediate-visual-qualification-20260912-01` genau einmal ausgeführt,
+**NOT_QUALIFIED**. Die freigegebene historische Eingangsbelegklasse ist
+implementiert, Vorbilanz 2.094.796 / 4.194.304 Byte. Alle 18 Prüfgruppen
+scheiterten jedoch im neutralen Setup an `VISUAL_TIME_BINDING_INVALID`;
+kein Testkörper oder nativer Memoryanschluss erreicht. Vollständiges Log
+36.578 Byte überschreitet seine 32.768-Byte-Reserve um 3.810 Byte.
+[Befund](reports/s2oe/immediate-visual-qualification-20260912-01/BEFUND.md).
+Kein Retry, keine nachträgliche Korrektur. Reale Kontrolle gesperrt, Gates False.
+Die folgenden Vorabstopps bleiben historische Zwischenstände.
+
+Nach der Anschlussfreigabe statischer Vorabstopp, kein Qualifikationsaufruf:
+Die vollständige historische Eingangsreferenz allein umfasst 1.359.778 Byte
+und passt in keine externe Referenzklasse des vorgesehenen OB/OA-Ledgers.
+Die frühere Gesamt-Teilbilanz beweist keine lokalen Grenzen. Der
+[Nachtrag](docs/UNMITTELBARER_VISUELLER_ABRUF_VORBEREITUNG.md#vorabstopp-nach-anschlussfreigabe)
+nennt Grenzen und Überschreitungen. Eine eigenständige eingefrorene
+Eingangsbindung mit ausdrücklich geklärter aktiver Herkunft ist noch offen;
+kein Weglassen der Elternreferenz oder Übertragen fremder Budgetausnahmen.
+Keine Produktänderung oder Ausführung. Gates False.
+
+Aktueller Auftrag ist eine neue kleine Kontrolle, nicht die Wiederholung des
+24-Ereignis-Videoversuchs: frischer Leerzustand → visueller Cue → genau eine
+reguläre AV-Formation → unmittelbarer gleicher Cue ohne Zwischenformation.
+[Konkrete Vorbereitung](docs/UNMITTELBARER_VISUELLER_ABRUF_VORBEREITUNG.md)
+bindet den gespeicherten e03-Wahrnehmungseingang, Quellen und Zeiten,
+Kandidaten-/Werte-/Entscheidungskontrollen und unabhängige Direktbaseline.
+Der Konsistenzvergleich ist geschlossen; historische Enthaltungen bleiben
+unverändert. Keine Decoder-/Maskierungstests, keine Ausführung. Die kleine
+Rekonstruktions-/Formationskomposition und vollständige aktive Belegklassifikation
+sind noch offen; keine vorhandene Passzahl qualifiziert diese Kombination.
+Gates False. Nur Vorbereitung freigegeben, kein automatischer Folgeaufruf.
+
+## Visuelle Eingangskontrolle vollständig: Wiederholung und sichtbare Werte gleich
+
+`visual-input-consistency-20260912-01`: einmaliger Realvergleich abgeschlossen.
+Vier unabhängige Auswahlen, acht visuelle Analysen, 312/400 Decoderframes.
+Einmal unabhängig verifiziert, danach getrennt ausgewertet. Beide PTS-/
+Frame-/RGB-Bindungen wiederholen sich; je 288 vollständige Werte bitgleich.
+Alle vier Okklusionen erhalten die 32 sichtbaren Werte bitgenau.
+[Befund](reports/s2oe/visual-input-consistency-20260912-01/BEFUND.md).
+Kein Nachweis einer historischen Fehlerursache oder erfolgreicher Wiedererkennung.
+Keine Memory-/Feld-/Audioausführung; Gates False, alle Worker geschlossen.
+Einmallauffreigabe verbraucht. Kein automatischer Folgeversuch.
+
+## Visuelle Diagnose: drei Ergänzungen mit 8/8 neutral bestanden
+
+`visual-completion-qualification-20260912-01`: genau ein ergänzender Aufruf.
+Vier echte neutrale Worker, 312/400 Frames, native Fehlerweitergabe,
+vollständige verlustfreie Hüllen und gemeinsame Zählgrenze geprüft.
+Die früheren 12/12 bleiben eigene Teilqualifikation, nicht wiederholt.
+[Befund und gesperrte Ausführungsbindung](reports/s2oe/visual-completion-qualification-20260912-01/BEFUND.md).
+Keine ausgewählte MP4, Rezeptor-, Memory- oder Feldverarbeitung. Gates False.
+Realer Vergleich mit vier Frames und acht Analysen bleibt separat gesperrt.
+
+## Visuelle Diagnoseanbindung: 12/12 neutral, Gesamtanschluss noch offen
+
+Gemeinsame Frameauswahl/Konvertierung und private Videoanbindung implementiert.
+`visual-consistency-qualification-20260912-01`: ein neutraler Aufruf, 12/12.
+Keine reale MP4-/Rezeptorverarbeitung. Historische Videobelege unverändert.
+[Befund mit Prüfgrenzen](reports/s2oe/visual-consistency-qualification-20260912-01/BEFUND.md).
+Offen: neuer Worker-Protokollweg nativ, vollständige serialisierte Vergleichshülle
+und gemeinsame Decoderzählgrenze über vier Worker. Reservierung allein ist
+kein Hüllennachweis. Kein weiterer Testaufruf oder realer Vergleich freigegeben;
+Gates False. Konkrete Rückmeldung erforderlich, keine automatische Folgearbeit.
+
+## Videoversuch geschlossen; visuelle Eingangskontrolle nur vorbereitet
+
+Der vollständige Videoversuch bleibt mit Fast-/Audiofortschreibung und vier
+Enthaltungen geschlossen. Keine Wiederholung oder Regeländerung; auditive
+Konkurrenz wird nicht weiter untersucht. Historische Laufdateien unverändert.
+Nächste Vorbereitung: zwei unabhängige Videodekodierungen an den bestehenden
+Hinweiszeitpunkten, danach getrennte Prüfung von PTS, Frame, Konvertierung,
+Rezeptorwiederholung und Erhaltung der 32 sichtbaren Werte durch Okklusion.
+[Kleiner statischer Plan](docs/VISUELLER_EINGANGSKONSISTENZVERGLEICH.md).
+Keine Analyse durchgeführt. Diagnostischer Videozugang und native Framebindung
+fehlen noch; kein Memoryanschluss. Gates False. Separate Freigabe erforderlich.
+
+## Videoversuch vollständig abgeschlossen: Speicherbildung, vier Enthaltungen
+
+`media-memory-video-20260912-01`: einmal gestartet, 24/24 Ereignisse,
+20 Formationen, vier vorgelagerte read-only Hinweise. RECORDING_COMPLETE;
+einmal unabhängig verifiziert, anschließend getrennt ausgewertet.
+Audio bei 1,0 und 4,0 s: interne Mehrdeutigkeit; Video: kein passender
+Kandidat. Alle Direktbaselines stimmen überein, keine Hypothese ausgegeben.
+Fast wird fortgeschrieben, Audio-PPB stabilisiert; visuelle PPB-Slots werden
+ersetzt und erreichen hier keinen stabilen Abrufstatus. Kein Nachweis eines
+eindeutigen Wiederabrufs oder kausalen Vorteils gegenüber frischer Memory.
+[Einzelbefunde](reports/s2oe/media-memory-video-20260912-01/evaluation.md),
+[Istbilanz](reports/s2oe/media-memory-video-20260912-01/final-balance.json).
+Gemeinsamer Abschluss einschließlich voller Abschlussreserve: höchstens
+1.816.345 / 4.194.304 Byte. Sitzung, Worker und Starter geschlossen;
+Gates False. Kein Retry, historische Abbrüche unverändert. Weitere Arbeit
+bedarf einer neuen Entscheidung; diese Einmallauffreigabe ist verbraucht.
+
+## Bedienkorrektur qualifiziert; neuer vollständiger Versuch vorbereitet
+
+`media-player-usability-20260912-01`: einmal neutral 8/8 bestanden.
+Optionale unsynchrone Vorschau und Betriebsanzeige getrennt; angezeigt wird
+das zuletzt abgeschlossene Fenster. Unvollständiger Abschluss und künftiger
+Stoppauslöser sind sichtbar; unbekannte Ursachen bleiben unbekannt.
+Keine Rezeptor-, Memory-, Auswahl- oder Decoderprofiländerung.
+[Befund](reports/s2oe/media-player-usability-20260912-01/BEFUND.md).
+
+Neue ID `media-memory-video-20260912-01`, neue
+[Startbindung](reports/s2oe/media-player-run-binding-20260912-03/START.md),
+Bedienadresse nach späterem Start `http://127.0.0.1:43825/`.
+Der Entwickler übernimmt nach Freigabe Bedienung und Überwachung.
+Noch kein Serverstart, keine wirksame Autorisierung, Gates False.
+Gemeinsames Gesamtmaximum inklusive zusätzlicher Qualifikation
+3.934.632 / 4.194.304 Byte; übrige Grenzen eingehalten.
+**RÜCKMELDUNG ERFORDERLICH:** separate Einmallauffreigabe.
+Alter Lauf bleibt CLOSE / INCOMPLETE, ohne nachträglich behaupteten Auslöser.
+
+## Videoversuch 02 vorzeitig geschlossen: 8/24, kein Wiederabrufbefund
+
+Bei autorisierter Übernahme der vorhandenen Instanz auf Port 43824 war
+`media-memory-video-20260911-02` bereits NOT_EVALUABLE. Gespeicherter Grund:
+CLOSE / INCOMPLETE nach acht Ereignissen. Kein Decoderfehler, kein belegter
+Stillstand und kein gespeicherter konkreter Stoppauslöser. Acht Audio-/NJ-
+und visuelle Verarbeitungen erreicht; zweiter Durchlauf und Hinweise fehlen.
+Keine fachliche Teilauswertung, keine erneute Verifikation oder Wiederholung.
+Worker/Sitzung geschlossen, Gates False.
+
+[Abschluss und vorbereitete Bedienkorrektur](reports/VIDEO_BEDIENABSCHLUSS_20260912.md).
+Die Vorschau pausiert per bestehendem Code beim Start und zusätzlich bei
+fünf Sekunden; sie ist keine synchrone Verarbeitungsanzeige.
+**RÜCKMELDUNG ERFORDERLICH:** eindeutige Trennung von Vorschau/Betriebsanzeige
+und präzise Stoppanzeige freigeben. Kein weiterer realer Lauf automatisch.
+
+## Freigegebener UHD-Einmalversuch: Bedienseite wartet auf Benutzerstart
+
+`media-memory-video-20260911-02` ist ausdrücklich freigegeben und an die
+finale Startdatei sowie eine eigene Einmalautorisierung gebunden. Der
+dateigebundene Starter wurde genau einmal gestartet: PID 15324, Port 43824.
+HTTP 200, READY, 0/24 Ereignisse beim Statusabruf. Kein Startkommando durch
+den Entwickler; kein Medien-/Memorylauf stellvertretend ausgeführt.
+
+Bedienseite: `http://127.0.0.1:43824/`; Öffnung im Codex-Browser vorgemerkt.
+Der Benutzer betätigt Start. Danach übernimmt der Player den kontrollierten
+Abschluss und die einmalige Verifikation. Nur bei technisch gültigem
+Abschluss fachlich auswerten. Kein Retry und keine Parameteränderung.
+Keine weiteren Wartebestätigungen; nächste Meldung nur bei Benutzerfrage,
+Abschluss oder Fehler. Historischer Fehlversuch bleibt unverändert.
+
+## UHD-Sitzungsanschluss qualifiziert; neue Laufbindung wartet auf Freigabe
+
+`media-uhd-admission-20260912-01`: einmal fokussiert 6/6 bestanden,
+ohne Decoder-, Browser- oder Memorywiederholung. Privater v6-Pfad bindet
+Quelle, Lauf, Profil und tatsächliche 1024-MiB-Prozess-/Joblimits ausdrücklich.
+Quellengrenze 327.680 Byte nur hier; übrige Grenzen und historische Defaults
+unverändert. [Qualifikationsbefund](reports/s2oe/media-uhd-admission-20260912-01/BEFUND.md).
+
+`media-memory-video-20260911-02`: unbenutzte ID, keine Ausgabe, keine wirksame
+Autorisierung. [Startbefehl und Bedienadresse](reports/s2oe/media-player-run-binding-20260912-01/START.md).
+Finale Startdatei ist `start-settings.json`; die Budgetabschlusshülle zählt
+auch die physische Budgetdatei. Metadatenmaximum 107.407 / 131.072,
+Quellen 283.802 / 327.680, Zusatzhülle 367.770 / 393.216,
+Laufgesamt 3.849.686 / 4.194.304 Byte; mit vollständiger zusätzlicher
+Qualifikationsreserve 3.898.838 Byte.
+**RÜCKMELDUNG ERFORDERLICH:** separate Einmallauffreigabe. Kein Server,
+keine Medienöffnung und kein Lernlauf gestartet; Gates False.
+
+## UHD-Decoderfolge vollständig geprüft; reale Laufbindung noch gesperrt
+
+Privates datei-/laufgebundenes 1024-MiB-Profil: fokussiert 6/6 qualifiziert.
+`decoder-uhd-sequence-20260911-01`: 24 Übergaben, 20 ausgewählte AV-Fenster,
+beide Durchläufe vollständig; einmalige read-only Prüfung EVIDENCE_VALID.
+Keine Rezeptoren, NJ, Feld, Memory oder Runtime. Keine Limit-/Fehlermeldungen;
+Worker geschlossen. Default 512 MiB unverändert.
+[Befund und Bilanz](reports/s2oe/decoder-uhd-sequence-20260911-01/BEFUND.md).
+
+Neue reale ID `media-memory-video-20260911-02`, Ausgabe noch nicht vorhanden.
+[Vorbereitete Bindung](reports/s2oe/media-player-run-binding-20260911-03/proposed-binding.json)
+ist ausdrücklich BLOCKED_NOT_START_READY: Sitzung/Verifikator wählen noch
+den Default und historische Quellzulassungen. Aktive Quellenuntergrenze
+einschließlich neuer Abhängigkeiten 291.129 / 262.144 Byte.
+**RÜCKMELDUNG ERFORDERLICH:** enger Profil-/Zulassungsanschluss und konkrete
+Budgetzuordnung. Keine weitere Decoderoptimierung oder Wiederholung;
+kein Lernlauf automatisch freigegeben.
+
+## Decoder-Isolation abgeschlossen: erstes AV-Fenster nur bei höherem Limit
+
+`decoder-isolation-neutral-20260911-01`: 6/6. Anschließend je ein frischer
+Worker mit 512/512 bzw. 1024/1024 MiB Prozess-/Job-Commit; keine weiteren
+Speicherstufen. 512 MiB: VIDEO / packet_decode, `get_buffer() failed`,
+`no frame!`, InvalidDataError und Prozesslimitmeldung 9. 1024 MiB:
+erstes AV-Fenster vollständig geliefert, keine Limitmeldung.
+
+Einmalige read-only Prüfung: EVIDENCE_VALID.
+[Ergebnis und Ressourcenbilanz](reports/s2oe/decoder-isolation-20260911-01/BEFUND.md).
+Speicherabhängigkeit dieses Decoderpfads gestützt, konkrete Allokationsursache
+und ausreichend wirksame Optimierung weiterhin offen. Keine Rezeptoren,
+NJ, Feld, Memory oder Runtime; Gates nicht geöffnet. Systemdefault bleibt
+512 MiB. Historische Fehlerbelege unverändert, beide Diagnoseaufrufe verbraucht.
+**RÜCKMELDUNG ERFORDERLICH:** Entscheidung über den nächsten begrenzten
+Decoder-Korrekturschritt; kein weiterer Lauf automatisch freigegeben.
+
+## Decoder-Isolation: Prozesslimit vor Ausführung klären
+
+Der neue Auftrag erlaubt zwei Diagnosearme mit 512/1024 MiB Job-Commit.
+Die statische Vorprüfung zeigt: Gespeicherte Meldung 9 bezeichnet das
+**Prozesslimit**, nicht das Joblimit (10). Beide Grenzen sind derzeit separat
+auf 512 MiB gesetzt. Nur das Joblimit zu erhöhen ließe die gemeldete
+Prozessgrenze unverändert.
+[Bindung und konkrete Rückfrage](reports/LOCAL_VIDEO_ISOLATION_LIMIT_BINDING_20260911.md).
+**RÜCKMELDUNG ERFORDERLICH:** Auch 1024 MiB Prozess-Commit ausschließlich
+im höheren Diagnosearm freigeben? Noch keine Codeänderung, Tests oder
+Diagnoseaufrufe; historische Belege bleiben unverändert.
+
+## Decoderdiagnose einmal ausgeführt: VIDEO / packet_decode
+
+`decoder-phase-neutral-20260911-02`: 5/5 bestanden. Danach genau ein
+Decoderaufruf für das erste gebundene AV-Fenster unter
+`decoder-first-window-diagnostic-20260911-02`. Originalfehler:
+`av.error.InvalidDataError`, errno 1094995529, aus dem Videopaketdecoder.
+Separat liegt eine Job-Limitmeldung vor; ihr ursächlicher Zusammenhang
+mit der nativen Ausnahme ist noch nicht belegt.
+
+Einmalige unabhängige Belegprüfung: EVIDENCE_VALID; Diagnose NOT_EVALUABLE.
+Keine Rezeptoren, NJ, Feld, Memory oder Runtime aufgerufen, keine Gates
+geöffnet. 512 MiB unverändert, keine Optimierung oder Wiederholung.
+[Befund und Aussagegrenze](reports/s2oe/decoder-first-window-diagnostic-20260911-02/BEFUND.md).
+Historischer Lauf und vorheriger 4/5-Fehlbefund bleiben unverändert.
+**RÜCKMELDUNG ERFORDERLICH:** Entscheidung über die noch fehlende native
+Fehlerursache. Kein neuer Medien- oder Lernlauf automatisch freigegeben.
+
+## Decoderdiagnostik vorbereitet; neutraler Test 4/5, kein Medienaufruf
+
+Die freigegebene enge Diagnoseergänzung ist implementiert, ohne Optimierung
+oder Änderung des 512-MiB-Limits. `decoder-phase-neutral-20260911-01` wurde
+genau einmal ausgeführt und bleibt `NOT_QUALIFIED`: Die künstliche
+Jobmeldung war nicht über den nachfolgenden echten Close-Snapshot gebunden.
+Ursprüngliche Ausnahme und abruptes Workerende wurden unabhängig geprüft.
+
+[Vollständiger Befund und Bilanz](reports/s2oe/decoder-first-window-diagnostic-20260911-01/BEFUND.md).
+Kein realer Decoderaufruf, keine Gates geöffnet, kein Retry.
+**RÜCKMELDUNG ERFORDERLICH:** enge Fixturekorrektur mit neuer neutraler
+Qualifikation. Historischer Videolauf unverändert `NOT_EVALUABLE`;
+konkrete MP4-Fehlerphase weiterhin offen.
+
+## Videoeinmalversuch abgebrochen: kein Memorybefund
+
+`media-memory-video-20260911-01` ist verbraucht und `NOT_EVALUABLE`.
+Vor dem ersten vollständigen AV-Fenster wurde die Decoder-Speichergrenze
+gemeldet; Runtime und Worker sind geschlossen, Gates False. Keine
+Rezeptor-/NJ-Verarbeitung, Feldwirkung oder Memoryformation erreicht.
+Der gespeicherte Jobpeak und die Limitmeldung belegen Speicherbegrenzung,
+nicht die konkrete fehlgeschlagene Allokation. Der Workeranschluss verliert
+den ursprünglichen Fehler und die innere Phase.
+
+[Statische Einordnung und engster Vorschlag](reports/LOCAL_VIDEO_DECODER_FAILURE_20260911.md).
+Keine Codekorrektur, Wiederholung oder Grenzerhöhung ausgeführt.
+**RÜCKMELDUNG ERFORDERLICH:** Diagnosekorrektur und begrenzte Prüfung;
+kein weiterer Lernlauf. Die folgenden Bereitschaftseinträge sind historisch.
+
+## Freigegebener Videoeinmalversuch: Bedienseite bereit, Benutzer startet
+
+Die ausdrückliche Freigabe gilt ausschließlich für
+`media-memory-video-20260911-01` und die v5-Bindung 02. Die kanonische
+Einmalautorisierung mit dem vorgebundenen Hash wurde bereitgestellt.
+Der qualifizierte dateigebundene Starter wurde genau einmal gestartet,
+PID 5312, Port 43823. HTTP 200, Status READY, 0 / 24 Ereignisse und
+0 Vorschau-Lesebytes beim ersten Statusabruf. Kein Startkommando durch den
+Entwickler; Gates bis zur Benutzerbetätigung geschlossen.
+
+Bedienseite: `http://127.0.0.1:43823/`. Die Öffnung im Codex-Browser wurde
+vorgemerkt. Das zusätzliche Öffnen über den Windows-Standardbrowser wurde
+von der Werkzeugrichtlinie abgewiesen; kein Umgehungsversuch. Die Seite
+selbst ist erreichbar. Benutzer betätigt Start, Status oder Stopp.
+
+Nach Ende übernimmt der Player den kontrollierten Sitzungsabschluss und
+genau eine Verifikation. Erst bei technisch gültigem Abschluss getrennt
+auswerten; bei Fehler Belege erhalten, kein Retry und keine Anpassung.
+Keinen zweiten Starter, keine automatische Bedienung und keine weitere
+Wartebestätigung auslösen. Noch kein beobachteter Funktionsbefund des Videos.
+
+## Videoeingang startbereit gebunden; Einmallauffreigabe noch ausstehend
+
+`s2oe.sampled-media.v5-private-session-budget` ist administrativ gebunden.
+`media-player-admission-20260911-02`: QUALIFIED / ADMINISTRATIVE_ADMISSION.
+START, PROGRESS und CLOSE akzeptieren 131.072 Byte; +1 Byte wird typisiert
+abgewiesen. Keine Browser-, Decoder- oder Funktionsprüfung wiederholt.
+
+Konkreter Lauf: `media-memory-video-20260911-01`, weiterhin unverbraucht.
+Alle 25 Fortschrittspositionen, Erfolgs-/Fehleralternativen und vorgelagerten
+Startprüfungen passen. Maxima: Metadaten 100.017 / 131.072, Quellen
+259.828 / 262.144, Zusatzhülle 343.796 / 393.216, Laufgesamt
+3.818.322 / 4.194.304 Byte. Einschließlich vollständiger Qualifikation und
+Reserven, gemeinsame physische Dateien einmal gezählt: 3.948.265 Byte.
+
+[Verbindlicher Befehl und Bedienung](reports/s2oe/media-player-run-binding-20260911-02/START.md)
+unter `http://127.0.0.1:43823/`, sobald separat gestartet. Die Metadatenprüfung
+des konkreten Starters akzeptierte die Bindung, ohne einen Server, Player,
+Decoder oder eine Sitzung zu starten. Autorisierung liegt nur als unwirksame
+Vorlage vor. Ausgabe und Verbrauchsdatei fehlen, Gates False.
+
+**RÜCKMELDUNG ERFORDERLICH:** Ausschließlich separate Einmallauffreigabe für
+diese konkrete Bindung. Keine weitere administrative Teilreserve offen;
+reale Dateigültigkeit und Decoderfähigkeit werden erst im freigegebenen Lauf
+geprüft, nicht als bereits funktional bestätigt ausgegeben.
+
+## Aktueller Auftrag: private Sitzungsmetadaten versioniert 131.072 Byte
+
+Ausdrücklich genehmigt ist `s2oe.sampled-media.v5-private-session-budget`:
+131.072 Byte Sitzungsmetadaten ausschließlich im privaten Medienpfad.
+Historische Profile und Befunde bleiben unverändert; Quellen 262.144,
+Zusatzhülle 393.216 und Gesamt 4.194.304 Byte sowie Decoder-/Memorygrenzen
+unverändert. Der gemeinsame Ledger bindet Start, Fortschritt und Abschluss.
+
+Neue administrative Zulassung `media-player-admission-20260911-02` prüft
+die explizite Versions-/Grenzdifferenz gegenüber der getesteten v4 sowie
+Grenzgleichstand und +1 Byte Überschreitung in allen drei Phasen. Keine
+Browser-, Decoder-, Sitzungs- oder Funktionswiederholung. Vorbilanz dieser
+administrativen Qualifikation: Metadaten 147.160 / 147.456, Quellen 259.607,
+Gesamt 408.107 Byte. Danach vollständige reale Laufbindung und Startanleitung;
+noch kein realer Videolauf und keine wirksame Einmalautorisierung.
+
+## Administrative Playerzulassung gültig; reale Laufhülle noch zu groß
+
+`media-player-admission-20260911-01`: **QUALIFIED / ADMINISTRATIVE_ADMISSION**.
+Genau eine unabhängige lesende Prüfung; null Browser-, Decoder-, Sitzungs-
+oder Testwiederholungen. Zehn bestandene Gruppen an den tatsächlichen Stand
+gebunden, historische Qualifikation 03 weiterhin NOT_QUALIFIED.
+Qualifikationsmetadaten einschließlich Reserven 147.160 / 147.456 Byte.
+Vollständige Screenshots unverändert und vollständig mitgezählt.
+
+Die neue konkrete Laufbindung liegt vor, bleibt aber **NOT_START_READY**:
+maximal 102.007 / 98.304 Byte reale Sitzungsmetadaten, Überschreitung 3.703.
+Die Fehlerhülle überschreitet ab Fortschritt 18 die Grenze; bei 24 Ereignissen
+liegen Erfolgs-/Fehlerhülle bei 101.420 / 102.007 Byte. Quellen 257.950,
+Zusatzhülle 341.918 und Gesamt 3.818.434 Byte passen. Einschließlich kompletter
+Qualifikationsablage und Reserven, gemeinsame physische Referenzen einmal
+gezählt: Gesamtobergrenze 3.948.635 / 4.194.304 Byte.
+
+[Konkrete Bindung und gesperrte Startanleitung](reports/s2oe/media-player-run-binding-20260911-01/START.md).
+Keine reale MP4 geöffnet, keine Gateöffnung oder Wiederholung. Qualifikation
+ist kein Ersatz für das reale Sitzungsbudget. Keine weitere Größenoptimierung
+oder Grenzänderung automatisch vorgenommen.
+**RÜCKMELDUNG ERFORDERLICH:** Die konkrete reale Metadatenüberschreitung
+entscheiden; der administrative Qualifikationsnachweis ist abgeschlossen.
+
+## Aktueller Auftrag: administrative Zulassung ohne Funktionswiederholung
+
+Für die neue administrative Playerqualifikationsbindung gelten prospektiv
+98.304 Byte Screenshotreserve und 147.456 Byte gesamte Qualifikationsmetadaten.
+Reale Sitzungen bleiben bei 98.304 Byte; keine übrige Grenze wird geändert.
+Die vorhandenen vollständigen Bilder und zehn bestandenen Prüfgruppen von 03
+werden per vollständigem Dateibaumdigest eingebunden, nicht erneut erzeugt.
+Historischer Gesamtstatus bleibt NOT_QUALIFIED.
+
+Neue Bindung `media-player-admission-20260911-01`: keine neue Funktions-
+qualifikation. Ausschließlich Zulassungs-ID und zwei administrative Dateien
+im aktiven Codeinventar ergänzt; bestehende Verarbeitung unverändert.
+Vorbilanz: Metadaten 147.160, Quellen/Zusatzhülle 257.729, Gesamt 406.229 Byte.
+Eine unabhängige lesende Prüfung kontrolliert Prüfdeckung, rekonstruierbare
+administrative Quelldifferenz, Browserbindungen, alle Dateien und Bilanz.
+Kein Browser-, Decoder-, Sitzungs- oder realer Medienstart.
+
+## Player: alle zehn Prüfgruppen erreicht, Qualifikationshülle überschritten
+
+`media-player-qualification-20260911-03`: einmal **10/10 Prüfgruppen bestanden**,
+aber Gesamtstatus **NOT_QUALIFIED** wegen Beleggröße. CSP unverändert;
+neutrale Videozeit, Pixel, Desktop-/Mobilansicht, Browserbuttons Start/Status/
+Stopp und der separate native Sitzungsanschluss sind tatsächlich erreicht.
+
+Die zwei unveränderten Screenshots belegen **68.891 / 40.960 Byte**.
+Gemeinsame Metadaten einschließlich Restreserven: **119.147 / 98.304 Byte**,
+Überschreitung 20.843 Byte. Auch ohne verbleibende Reserven sind es
+113.139 Byte; der Konflikt verschwindet nicht durch Reservenfreigabe.
+Qualifikationsabschlussdateien 7.444 / 12.288 Byte passen. Quellen 249.766,
+Zusatzhülle 249.766, Verifikation 564 und Gesamt 370.253 Byte passen ebenfalls.
+
+Keine Bilder verkleinert, keine Belege entfernt oder umklassifiziert, keine
+Grenze erhöht und kein Retry. Quelldateien und Browserbindung unverändert.
+Gates False, keine reale MP4 gelesen. Starter bleibt wegen fehlender gültiger
+Gesamtqualifikation gesperrt; keine endgültige freigegebene Laufbindung.
+
+[Befund, Bilanz und tatsächliche Playeransichten](reports/LOCAL_VIDEO_PLAYER_V4_20260911.md).
+**RÜCKMELDUNG ERFORDERLICH:** Ausschließlich den konkreten Belegbudgetkonflikt
+entscheiden. Keine Produktkorrektur aus diesem Größenbefund ableiten.
+
+## Aktueller Auftrag: ausschließlich CSP-verträgliche Player-Testabfragen
+
+Freigegeben ist die enge Testkorrektur mit einer vollständigen neuen
+Zehn-Gruppen-Qualifikation `media-player-qualification-20260911-03`.
+Die auslösende String-Auswertung in Test 08 wird durch Locator-Prüfungen
+und direkte DOM-Funktionsaufrufe ersetzt. Produktlogik und CSP unverändert;
+`unsafe-eval` bleibt gesperrt. Neue Qualifikations-ID separat gebunden.
+Vorbilanz: Metadaten 97.873, Quellen 249.766, Gesamt 626.167 Byte.
+Lokale Reserve unverändert 12.288 Byte innerhalb genehmigter 16.384 Byte;
+keine Budgetänderung. Historische Fehlbelege bleiben erhalten.
+Kein realer Medienlauf. Bei Bestehen konkrete finale Bedienbindung vorlegen.
+
+## Video-Grundbetrieb: zweite Playerqualifikation 9/10, CSP-Testgrenze offen
+
+`media-player-qualification-20260911-02`: **NOT_QUALIFIED**, genau ein neuer
+Aufruf, neun von zehn Gruppen bestanden. Browserumgebung und lokale Reserve
+sind gebunden und innerhalb der Grenzen. Chromium startete; der neutrale
+Videoframe wurde als 320 Pixel breit gemeldet. Die folgende Testabfrage
+`wait_for_function` scheiterte an CSP/`unsafe-eval`, nicht am fehlenden Browser.
+Die nachgelagerten Sicht- und Browserbuttonprüfungen bleiben unerreicht.
+
+Vollständige Qualifikationsdateien 9.816 / 12.288 Byte. Gemeinsame Istbilanz
+einschließlich Restreserven: Metadaten 91.216, Quellen 249.581, Zusatzhülle
+249.581, Verifikation 564, Gesamt 342.137 Byte. Keine Budgetverletzung.
+Nativer Einereignis-/Stoppanschluss und einmalige Verifikation erreicht;
+keine fachliche Auswertung. Alle Quellen-/Browserbindungen unverändert.
+
+Kein Retry, keine CSP-Lockerung, keine reale MP4 gelesen. Ergebnisablage und
+Autorisierungsverbrauch für den vorgesehenen realen Lauf fehlen weiterhin.
+**RÜCKMELDUNG ERFORDERLICH:** CSP-verträgliche Testabfragen korrigieren und
+unerreichte Browserkontrollen neu freigeben. Kein neuer Budgetwechsel nötig.
+
+### Vorbindung des zweiten Playeraufrufs
+
+Die erneute Freigabe betrifft ausschließlich Browserumgebung, lokale
+Qualifikationsreserve und vollständigen Playeranschluss. Vorhanden ist nur
+der historische 9/10-Fehlbeleg. Neue ID:
+`media-player-qualification-20260911-02`, zum Vorbindungszeitpunkt noch nicht ausgeführt.
+Playwright 1.62.0 und Chromium Headless 151.0.7922.34 / Revision 1234 sind
+vorab gebunden; lokale Qualifikationsreserve prospektiv 12.288 Byte.
+Übergeordnete Grenzen bleiben unverändert. Vorbilanz: Metadaten 97.873,
+Quellen 249.581, Gesamt 625.982 Byte, keine Überschreitung.
+Keine Worker-Testwiederholung und keine reale MP4-Verarbeitung.
+
+Nur dokumentarische Vormerkung: visuelle Übersicht erhalten, später zunächst
+benutzergesteuerter Detailblick aus dem Originalbild. Blickposition,
+Ausschnitt, Maßstab und Zeitpunkt wären explizit zu binden; eigener
+Blickwechsel ist von Materialveränderung zu unterscheiden. Verschiedene
+Ansichten dürfen nicht automatisch dieselbe Sache bedeuten. Keine Umsetzung,
+automatische Blickwahl, auditive Fokussierung oder neue Memorymechanik.
+
+## Playeranschluss: einmalig 9/10, Browserumgebung und lokale Reserve offen
+
+`media-player-qualification-20260911-01`: **NOT_QUALIFIED**, genau ein
+Testaufruf mit zehn neuen Gruppen, neun bestanden. Die private Budgetbindung
+und ein nativer Sitzungsanschluss bis Ereignis eins mit kontrolliertem Stopp
+wurden erreicht. Die Browserprüfung scheiterte vor dem Start: Der verwendete
+Playwright erwartet die nicht vorhandene Chromium-Headless-Version 1234.
+Keine Screenshots oder Sichtprüfung entstanden.
+
+Vollständige Qualifikationsdateien: **9.641 / 8.192 Byte**, lokale Reserve
+um 1.449 Byte überschritten; Logs ungekürzt. Gemeinsame Istbilanz inklusive
+Restreserven: Metadaten 88.569, Quellen 246.054, Zusatzhülle 246.054,
+Verifikation 564, Gesamt 335.963 Byte. Übergeordnete Grenzen eingehalten.
+Codehashes unverändert, Gates False. Kein Retry und keine reale MP4 gelesen.
+Die frühere Workerqualifikation bleibt 14/14, nicht wiederholt.
+
+**RÜCKMELDUNG ERFORDERLICH:** Browserumgebung und vollständige lokale
+Qualifikationshülle vor einer neuen Freigabe korrigieren. Kein realer Start.
+
+### Freigabe der privaten Budgetversion
+
+Die ausdrücklich bestätigte Freigabe gilt prospektiv für
+`s2oe.sampled-media.v4-local-player`: **98.304 Byte Sitzungsmetadaten** in
+Start-, Fortschritts- und Abschlussprüfung. Historische Profile behalten
+65.536 Byte. Quellen 262.144, Zusatzhülle 393.216 und Gesamt 4.194.304 Byte
+bleiben unverändert; ebenso alle Memory- und Operationsgrenzen.
+
+Die bestehende 14/14-Workerqualifikation wird nicht wiederholt. Vorbereiteter
+Browserplayer und dateigebundener autorisierter Starter werden zusammen mit
+der neuen Budgetbindung einmal fokussiert neutral geprüft. Keine reale
+MP4-Verarbeitung und kein Lernlauf. Gates außerhalb neutraler Prüfungen False.
+
+[Vorbindung und Ergebnis der neuen Anschlussqualifikation](reports/LOCAL_VIDEO_PLAYER_V4_20260911.md).
+Die folgenden früheren Budgetstopps bleiben historische Befunde.
+
+## Decoderworker integriert: 14/14; reale Metadatenbindung noch gesperrt
+
+`media-worker-qualification-20260911-01`: **QUALIFIED**, einmal 14/14.
+Echte Windows-Jobbegrenzung vor neutralem Quellenzugriff, verweigerte
+Speicheranforderung, 30-Sekunden-Timeout, begrenzte Übergabe und blockierter
+Stopp sind erreicht. Eine volle native Sitzung über den Worker wurde einmal
+verifiziert; Primärfehler nach Formation erhalten Feld und Memory.
+
+Neue private Quellen-/Zusatzhüllengrenzen: 262.144 / 393.216 Byte;
+System- und Memorylimits unverändert. Qualifikations-Ist inklusive Reserven:
+Metadaten 76.202, Quellen 225.328, Zusatzhülle 271.335, Gesamt 1.528.958 Byte.
+512 MiB Job-Commit sind eine Betriebsgrenze, keine Gesamt-RAM-Garantie.
+
+Die konkrete reale Bindung für `media-memory-video-20260911-01` liegt vor,
+ist aber **NOT_START_READY**: 74.372 statt 65.536 Byte Sitzungsmetadaten
+einschließlich Originalbindung und vollständiger Bilanz. Schon die bestehende
+Startprüfung kommt auf 68.169 Byte. Kein weiterer Test, keine reale MP4-
+Verarbeitung und kein Lernlauf; Ergebnisverzeichnis unbenutzt, Gates False.
+Browserplayer und autorisierter Starter fehlen weiterhin.
+
+[Anschlussnachweis, vollständige Laufbindung und genaue Restgrenze](reports/LOCAL_VIDEO_WORKER_V3_20260911.md).
+**RÜCKMELDUNG ERFORDERLICH:** Metadatenbindung entscheiden, nicht die bereits
+bestandene Workerqualifikation wiederholen.
+
+## Decoderworker: Vorbereitung vor Integration am Belegbudget gestoppt
+
+Der freigegebene separate Windows-Worker ist als **unqualifizierte** neue
+Quelldatei vorbereitet, noch nicht in die Sitzung integriert. Privates
+Budget: 512 MiB Prozess-/Job-Commit, ein 6.240.000-Byte-Übergabeplatz,
+30 Sekunden Anfragefrist. Keine Gesamt-RAM-Garantie für den Elternprozess.
+
+Bereits die zusätzliche Datei ergibt mindestens **194.329 / 180.224 Byte
+Quellen** und **278.297 / 262.144 Byte gemeinsame Zusatzhülle**. Neue Tests,
+Zulassung und zusätzliche Abschlüsse fehlen in dieser Untergrenze noch.
+Deshalb null Tests und null Worker-/Medienstarts; historische 14/14 nicht
+wiederholt. Aktiver Sitzungscode und Gates unverändert. Kein realer Lauf.
+
+[Konkreter Code, Ressourcenbudget, Überschreitungen und offene Anschlüsse](reports/LOCAL_VIDEO_WORKER_PRECONDITION_20260911.md).
+**RÜCKMELDUNG ERFORDERLICH:** Vollständige administrative Tragfähigkeit
+entscheiden. Browserplayer und autorisierter Starter fehlen weiterhin.
+
+## Direkter OC-Medienanschluss: einmalig 14/14 neutral qualifiziert
+
+`media-oc-qualification-20260911-02`: **QUALIFIED**, genau ein Testaufruf,
+14/14 bestanden. Die private Version `s2oe.sampled-media.v2-private-budget`
+bindet die genehmigten 180.224 Byte Quellen und 98.304 Byte gesamte
+Qualifikationsmetadaten. Einzelne Sitzungen bleiben bei 65.536 Byte;
+historische Defaults, Memory-, Zeit- und Operationsgrenzen sind unverändert.
+
+Erreicht: native 24-Ereignis-Sitzung mit 20 Formationen, vier read-only
+Hinweisen, 7.392 Feldkontakten und acht Scanbelegen; einmal unabhängig
+verifiziert. Zusätzlich kontrollierter Stopp und erhaltener Primärfehler nach
+Formation. Istbilanz inklusive Restreserven: Quellen 178.006, Metadaten 60.084,
+gemeinsame Zusatzhülle 224.013, Gesamt 1.465.597 Byte. Keine Grenzverletzung.
+
+**Grenze:** Der native Sitzungsfall nutzt synthetische Endpunkte. Native
+Frame-/Audiokonversion ist separat geprüft; keine vollständige reale
+Containerdekodierung und kein Lernlauf. Alle Sitzungen geschlossen, Gates
+False. Der historische Vorabstopp bleibt erhalten; keine Wiederholung.
+
+[Befund, vollständige Bilanz, Prüfdeckung und Digests](reports/LOCAL_VIDEO_SAMPLING_BUDGET_20260911.md).
+**RÜCKMELDUNG ERFORDERLICH:** Reale Medienlaufbindung und separate Freigabe
+stehen weiterhin aus. Keine automatische Folgeausführung.
+
+## Direkter OC-Medienanschluss: vollständiger Vorabstopp, null Tests
+
+Die freigegebene direkte OC-Fassung ist einschließlich Quellenadapter,
+Start/Status/Stopp, Herkunftsverifikation und 14 neutralen Prüfgruppen
+vorbereitet. Die vollständige Istbindung überschreitet jedoch die Grenzen:
+**175.215 / 174.080 Byte Quellen**, zusätzlich **80.251 / 65.536 Byte
+Metadaten der gemeinsamen Qualifikationshülle**. Gemeinsame Zusatzhülle
+259.183 / 262.144 Byte und Gesamt 3.747.298 / 4.194.304 Byte passen.
+OD-Terminalabhängigkeiten wurden nicht übernommen; notwendige OC-Belege
+bleiben enthalten. Die ursprüngliche Aufgabe mit 24 Ereignissen bleibt gleich.
+
+`reports/s2oe/media-oc-qualification-20260911-01/precondition-stop.json`
+belegt **0 Testaufrufe**. Keine neue Qualifikation, keine Medienverarbeitung,
+keine Sitzung und keine Gateöffnung. Neue Dateien bleiben unqualifizierte
+Vorbereitung. Keine historische Passzahl übernommen, kein Limit erhöht.
+
+[Vollständiger Nachtrag mit Quellenaddition, Hüllen und Digests](reports/LOCAL_VIDEO_SAMPLING_BUDGET_20260911.md).
+**RÜCKMELDUNG ERFORDERLICH:** Beide konkreten Überschreitungen entscheiden;
+keine weitere Reserveverschiebungs- oder Optimierungskette automatisch starten.
+
+## Medienauswahl gebunden: OD-Zusatzhülle vor Umsetzung nicht tragfähig
+
+Aktuelle Freigabe: zwei Durchläufe mit je zehn 100-ms-Audiofenstern ab
+0; 0,5; ...; 4,5 Sekunden und letztem Frame am oder vor dem Fenstermittelpunkt.
+Im zweiten Durchlauf Audio-/Visualhinweise bei 1 und 4 Sekunden jeweils vor
+Formation. Die genaue Reihenfolge ergibt 24 Ereignisse, 20 Formationen,
+vier Hinweise, 22 Audio-/NJ- und 22 visuelle Analysen, acht Scanbelege und
+7.392 Feldkontakte. Original-PTS und virtuelle Runtimezeit bleiben getrennt.
+
+Vorprüfung: Unveränderte aktive OD-Quellenbelege plus vollständige native
+Reserven ergeben 277.178 Byte gemeinsame Zusatzhülle statt maximal 262.144.
+Keine neuen Adapteranteile darin enthalten. Das ist ein Konflikt der
+Vorabsicherung, keine gemessene Größe eines realen Medienlaufs. Der schlankere
+OC-Sitzungspfad ist als Basis noch nicht ausgeschlossen; seine vollständige
+neue Medien-/Qualifikationsbindung fehlt. Kein Limit erhöht oder Ereignis
+gestrichen. Keine Implementierung, Qualifikation oder Hauptausführung erfolgt.
+
+[Auswahl, Uhren, Operationszahlen und konkrete Belegbilanz](reports/LOCAL_VIDEO_SAMPLING_BUDGET_20260911.md).
+Die folgende frühere Rückfrage zur Auswahl ist durch die neue Freigabe erledigt.
+**RÜCKMELDUNG ERFORDERLICH:** direkte OD-Übernahme passt nicht; kleinster
+verbleibender Anschluss ist die dünne Medienbedienung auf der vorhandenen
+OC-Sitzung mit vollständig gebundenen aktiven Abhängigkeiten, ohne Kernlimitänderung.
+
+## Lokale Quelle geprüft: Zeit-/Ereignisanschluss noch offen
+
+Der benannte Pfad `C:\Users\TV\Downloads\17138816-uhd_3840_2160_30fps.mp4`
+existiert, aktuell 83.498.438 Byte. SHA-256:
+`df0986f384e156c4dfec234e94b6f6baa3d0f8a9cfd7ba81f14aadf0313450aa`.
+Ausschnitt **[00:00, 00:05)** vor Rezeptorbewertung gebunden.
+H.264/UHD mit **30000/1001 fps**, AAC-Stereo mit 48 kHz; Dauer rund
+26,752 Sekunden. Keine Identität mit der früher gesichteten YouTube-Datei
+behauptet. Die ausdrücklich benannte lokale Quelle ist jetzt maßgeblich.
+
+PyAV 16.1.0 ist in der Projekt-`.venv` verfügbar; ein begrenzter Decoderzugriff
+erreichte beide Modalitäten bei PTS 0. Kein Lernlauf, keine Rezeptorverarbeitung
+und noch keine neutrale Anschlussqualifikation. Die aktuellen 30-Hz-/Ordinal-
+Validatoren akzeptieren die Originalzeitbindung nicht unmittelbar; 25
+200-ms-Formationen für fünf Sekunden würden bereits das Sitzungsmaximum 20
+überschreiten. Kein stillschweigendes Umindizieren oder Anheben der Grenzen.
+
+[Quellenbeleg, Format-/Puffervorgaben und konkrete Anschlussgrenze](reports/LOCAL_VIDEO_ACCESS_20260911.md).
+HEAD erneut geprüft: `537109994cf777f8d36cda617aafe12226806c25`, zusätzlich
+bestehender Arbeitsstand. Historische Dateien und fremde Änderungen erhalten.
+**RÜCKMELDUNG ERFORDERLICH:** Medienzeit und begrenzte Memory-Ereignisauswahl
+explizit festlegen. Keine erneute Dateipfadrückfrage, Ersatzquelle oder
+vorgezogene Hauptausführung. Gates nicht geöffnet.
+
+## Priorisierte Entwicklung: Dateiwahrnehmung, Erfahrung, Detailblick
+
+Verbindliche Zielrichtung gemäß aktueller Analystenanweisung: ein bedienbarer
+Grundpfad mit längerer zusammenhängender Wahrnehmung, erhaltenem Erfahrungsspeicher
+und später räumlich gebundenen visuellen Detailblicken. **Nur Planung und
+Dokumentation freigegeben**, keine erweiterte Laufgenehmigung oder Implementierung.
+Bezugsstand: Git-HEAD `537109994cf777f8d36cda617aafe12226806c25` plus vorhandener
+uncommitteter Arbeitsstand. Eine erwähnte Sicherung wurde nicht geprüft und ist
+kein zusätzlicher versionierter Bezugspunkt. Fremde Änderungen bleiben erhalten.
+
+### 1. Fünf Sekunden Dateieingang zuerst
+
+**Vorhanden:** qualifizierter PCM-/RGB-Aufrufer, Halbprofil mit NJ vor
+Audiokontaktbildung, eine fortbestehende Sitzung, unabhängige Feld-/Memoryzweige
+und read-only Scans. Anschlüsse: `tools/_s2ob_private_caller_binding.py`
+(`validate_manifest`, `Materializer.next`, `bind_input`, `CallerRuntime.process`),
+`tools/_s2oc_bound_session.py` und private OD-Bedienhülle.
+
+**Fehlt:** konkrete lokale Quellenbindung und der Containerdecoder-/Zeitanschluss
+für Start/Status/Stopp. Die zuletzt belegte Auswahl ist YouTube-ID `P0wNIsAjht8`,
+Ausschnitt **[00:00, 00:05)**. Die neue Weitergabe bezeichnet eine ausgewählte
+lokale Datei, nennt aber keinen Pfad. Im Workspace wurden nur die historischen
+Medien `sources/media/Street traffic.webm` und `sources/media/NASA Earthrise Realtime
+Apollo 8.mp4` gefunden; daraus folgt keine Identität mit der ausgewählten Quelle.
+Keine dieser Dateien wird ersatzweise verwendet. Keine Payloads gelesen.
+
+**Nächster Nachweis:** nach eindeutiger Pfad-/Quellenzuordnung die fünf Sekunden
+mit begrenzter Dekodierung, expliziten Audio-/Video-Zeitstempeln und fest gebundenen
+Konversionen verarbeiten. Quelle und Ausschnitt vor Analyse fixieren; Status
+rein lesend, Stopp zuverlässig und ohne zweiten Abschluss. Zwei Durchläufe in
+derselben offenen Sitzung, jeweils read-only Prüfung vor erneuter Formation;
+gleiche Quellzeiten bei weiterlaufender Systemzeit ausdrücklich abbilden.
+Keine verdeckte Tonersatzquelle, Hypothesenanwendung oder neue Memoryregel.
+
+### 2. Dauer danach schrittweise erweitern
+
+**Vorhanden:** ereignisweise Verarbeitung; rohe PCM-/RGB-Payloads werden nach
+dem Schritt freigegeben. **Fehlt:** ein Decoder mit begrenzter Warteschlange,
+Rückstau-/Stoppbehandlung und eine ausdrücklich versionierte längere Ereignis-
+und Belegbindung. Aktuell gelten höchstens 28 Ereignisse, 20 Formationen,
+zwei auditive und sechs visuelle Hinweise sowie feste ordinalabhängige Zeiten.
+`CallerRuntime` sammelt außerdem Zustands-/Schrittbelege; ein begrenzter Rohpuffer
+allein begrenzt daher noch nicht den gesamten Speicherbedarf.
+**Nächster Nachweis:** kleinste zusätzliche endliche Dauer mit durchgehender
+Zeit/Memory und vollständig gezählten Decoder-, Zustands- und Belegressourcen.
+Nicht das gesamte Video in RAM laden; keine unbegrenzte Nachlieferung behaupten.
+Erhaltene, aktualisierte, verdrängte und ersetzte Spuren einzeln ausweisen.
+
+### 3. Erfahrung sichern, Zusammenhang nicht behaupten
+
+**Vorhanden:** Zeit-/Slotgenerationen und Transaktionsherkunft
+(`tools/_s2oa_private_runtime_binding.py:106`, `generation_step`), native
+Zustandsbelege und deren read-only Rekonstruktion. Diese belegen Herkunft und
+Gültigkeit, aber keine gelernte Übergangsbeziehung. **Fehlt:** ein operationaler,
+versionierter Speichern-/Wiederladen-Anschluss. `CallerRuntime` initialisiert
+heute Memory neu und setzt Generationsherkunft neu auf; ein lesbarer Snapshot
+ist noch kein zulässiger Wiedereinstieg.
+
+Zu erhalten wären native Inhalte/Prototypen, Support, Belegungen, Generationen,
+Herkunft, letzte Aktualisierungs-/Auswahlschritte sowie Profil-/Konfigurations-
+und logische Zeitbasis. Decoderpuffer, offene Dateihandles und Locks sind
+flüchtig. Geschlossene Owner nicht wieder öffnen; neue Owner müssten explizit
+und validiert an den geladenen Zustand gebunden werden. Ob das Feld separat
+frisch beginnt oder ebenfalls fortgesetzt wird, muss ausdrücklich festgelegt
+werden; Memoryreload allein stellt keine alte Feldtrajektorie wieder her.
+Ablauf nach Ereignisschritten ist nicht automatisch Ablauf nach realer Wartezeit.
+Keine Zeitrücksetzung, die alte Generationen oder abgelaufene Slots reaktiviert.
+
+**Nächster Nachweis:** Material verarbeiten, speichern, schließen, neu laden,
+dann vor Updates spätere Hinweise prüfen; Vergleich gegen ununterbrochene
+Fortsetzung, einschließlich Ablauf, Ersetzung und manipulierten Profilbindungen.
+Für lernend gespeicherte Übergänge fehlen dagegen eine gebundene Darstellung,
+beobachtbare Beziehungsevidenz und qualifizierte Update-/Abrufregeln. Ereignislogs,
+zeitliche Nachbarschaft und Prototypähnlichkeit schließen diese Lücke nicht.
+Hierfür jetzt weder neue Lernregel noch Sequenzspeicher implementieren.
+
+### 4. Detailblick erst nach funktionierendem Grundbetrieb
+
+**Vorhanden:** feste visuelle Raster-/Teilhinweisverarbeitung, keine qualifizierte
+Zoom- oder Blicksteuerung. **Fehlt:** ein zusätzlicher, benutzergesteuerter Ausschnitt
+aus demselben Originalframe mit Frame-/Zeitbindung, Originalkoordinaten, Maßstab,
+Transformation und eigener Geometriebindung. Historische Rastertypen nicht
+umdeuten; Übersicht bleibt erhalten. Kein Screenshot eines skalierten Players
+als Originaldetail ausgeben.
+
+**Nächster Nachweis:** Übersicht allein gegen Übersicht plus vorher festgelegten
+Detailblick vergleichen, bei gleichen Ausgangszuständen und getrennt gezählter
+Mehrarbeit. Audio bleibt identischer Gesamteingang ohne Stimmselektion oder
+auditive Aufmerksamkeit. Keine automatische, autonome oder feldgesteuerte
+Blickwahl. Zusätzliche Bildverarbeitung ist für sich kein Lernfortschritt.
+
+### Aussage und nächster Anschluss
+
+Objektidentität, Semantik, sprachliche Benennung, gelernte Sequenzbindung und
+allgemeiner Dauerbetrieb bleiben unbelegt. Der OD-Bedienversuch erhält keinen
+neuen Status allein durch diese Entwicklungsplanung. Keine Laufwiederholung,
+Aufnahme, Dekodierung, Tests oder MCM-Ausführung in diesem Auftrag.
+**RÜCKMELDUNG ERFORDERLICH:** den konkreten Pfad der ausgewählten lokalen Datei
+mitteilen beziehungsweise ihre dokumentierte Zuordnung benennen. Danach zuerst
+den Fünf-Sekunden-Eingang anbinden; längere Dauer, Wiederladen und Detailblick
+bleiben nachgeordnete, getrennt zu prüfende Anschlüsse. ME/MI gesperrt;
+Prognosezweig ruhend. Keine Gates durch diesen Plan geöffnet.
+
+## Ausgewähltes YouTube-Video: Sichtung und konkrete Zugangsgrenze
+
+Am 2026-09-11 wurde ausschließlich `https://www.youtube.com/watch?v=P0wNIsAjht8`
+im Browser gesichtet. Die normale Wiedergabe funktionierte; der neu geöffnete
+Sichtungstab wurde anschließend geschlossen. Kein Download, keine Track-,
+Bildschirm- oder Systemaudioaufnahme und keine MCM-Verarbeitung.
+
+Sichtbarer Titel: **Times Square Crowd People 2 HD Video Background**;
+angegebener Kanal: Evaldas Marinskas. Der Player zeigte rund 13 Sekunden.
+Die lesbaren Videoelement-Metadaten meldeten 13,121 Sekunden und einen
+aktuell dekodierten Bildraster von 1.280 x 720. Das sind Beobachtungen dieser
+Browserwiedergabe, keine garantierte Originalauflösung oder Dateiidentität.
+
+**Prospektiv festgelegter Ausschnitt: [00:00, 00:05)** in Medienzeit.
+Auswahl vor jeder Rezeptor-/Memoryauswertung; keine weitere Ausschnittsuche
+nach späteren Messwerten. Die stichprobenartig gesichteten Anfangs- und
+Folgebilder zeigen dieselbe Hintergrundanordnung mit veränderten
+Vordergrundpositionen. Dies begründet einen kleinen Bewegungsvergleich,
+keinen Nachweis von Objektidentität oder vollständiger Schnittfreiheit.
+Der Videotitel und die menschliche Sichtbeschreibung sind ausschließlich
+Quellenverwaltung, keine funktionalen Labels für MCM.
+
+**Zugang:** Die [offizielle IFrame-API](https://developers.google.com/youtube/iframe_api_reference)
+stellt Wiedergabe-, Such-, Status- und Stoppfunktionen bereit, aber keinen
+dokumentierten Export synchroner PCM-Samples und RGB-Frames. Ein eingebetteter
+Player erfüllt den eigenen Dateiplayer-Anschluss daher nicht. Die gelesene
+Medienquelle hatte das Schema `blob`; dies ist keine nutzbare dauerhafte
+Mediendatei-URL. Interne Streamadressen wurden nicht extrahiert.
+Die eingeschränkte lesende Browserabfrage lieferte keine verwertbaren
+Audio-Trackangaben. Daraus folgt weder Tonlosigkeit noch Audiozugänglichkeit.
+Auch eine dort nicht exponierte Capture-Funktion beweist keine allgemeine
+Browserinkompatibilität. Ein synchroner, unterstützter Rohdatenzugang wurde
+in dieser Prüfung **nicht nachgewiesen**. Keine Schutzumgehung oder automatische
+Ausweichaufnahme; normale Abspielbarkeit ist keine Extraktionsberechtigung.
+
+**Konkreter Bedarf:** eine rechtmäßig bereitgestellte lokale Datei genau
+dieses Videos, vorzugsweise Original/Export vom Urheber oder eine ausdrücklich
+bereitgestellte herunterladbare Fassung. Kein anderes Medium. Dateihash,
+Tonspur, Zeitstempel, Farbraum und Konversion können erst daran gebunden werden.
+Eine eventuell fehlende Tonspur darf nicht durch künstlichen Ton ersetzt
+oder stillschweigend als audiovisuelle Prüfung ausgegeben werden.
+
+Start/Status/Stopp bleiben vorbereitet als quellengebundene Bedienzustände:
+Start nur nach gültiger Datei-/Ausschnittbindung; Status ohne neue Analyse;
+Stopp beendet den Eingang und schließt regulär. Zwei Durchläufe mit demselben
+Memory und read-only Abruf vor erneuter Formation bleiben der Versuchsplan,
+nicht bereits ausgeführte Funktionen des YouTube-Anschlusses. Medienzeit beim
+Replay und monotone Systemzeit müssen weiterhin getrennt gebunden werden.
+
+**RÜCKMELDUNG ERFORDERLICH:** lokale Datei oder vom Rechteinhaber bereitgestellten
+direkten Dateizugang für genau dieses Video bereitstellen. Bis dahin kein
+Lernlauf und keine behauptete vollständige technische Eingangsbindung.
+
+## Browser-Video: Eng begrenzte Anschlussprüfung
+
+Der Benutzer hat als Medium ausdrücklich
+`https://www.youtube.com/watch?v=P0wNIsAjht8` ausgewählt.
+Gebunden ist damit zunächst die Video-ID `P0wNIsAjht8`, noch kein
+unveränderlicher Medienpayload oder konkreter Ausschnitt. Start-/Endzeit,
+tatsächliche Bild-/Tonzugänglichkeit und reproduzierbare Quellenbindung
+sind offen. Der lesende Webabruf lieferte keinen Videoinhalt; Titel,
+Dauer oder Eignung wurden deshalb nicht bestätigt. Keine Wiedergabe,
+Aufnahme, Dekodierung oder Rezeptorverarbeitung gestartet.
+
+Neuer Benutzerauftrag: Einfluss früherer Wahrnehmung desselben ausgewählten
+Medienverlaufs auf späteren Abruf prüfen. Zunächst statisch eingegrenzt;
+Video nun oben ausgewählt; kein Browserstream geöffnet, keine Aufnahme oder
+Rezeptorausführung. Der OD-Bedienlauf wird nicht wiederholt oder stillschweigend
+als abgeschlossen behandelt. Sein zuvor dokumentierter Status bleibt bestehen.
+
+**Kleinster Eingang:** Eine ausdrücklich ausgewählte lokale Videodatei in einem
+eigenen Browserplayer. Datei-Hash, exakter Ausschnitt, Bild-/Tonspuren und
+Decoder-/Konversionsparameter vor dem Versuch binden. Kein beliebiger Tab,
+keine Navigation und kein Mikrofonzugriff. Bevorzugt werden die tatsächlich
+dekodierten Spuren dieses Videoelements, nicht der Desktop. Ein Videoelement
+kann nach der [W3C-Spezifikation](https://www.w3.org/TR/mediacapture-fromelement/)
+einen MediaStream liefern; konkrete Browserunterstützung, Zugriffsrechte und
+Trackverfügbarkeit müssen am später gewählten Browser geprüft werden.
+Eine reine Bildschirmaufnahme ist kein gleichwertiger Ersatz: Skalierung,
+Overlays, Bildausfälle, Audiomischung und Latenzen können den Eingang verändern.
+[Screen Capture](https://www.w3.org/TR/screen-capture/) erfordert eine separate
+Quellenauswahl und kann auch andere Flächen erfassen. Deshalb kein automatischer
+Fallback darauf; fehlende isolierte Tracks bedeuten zunächst Stopp.
+
+**Vorhanden:** `tools/_s2ob_private_caller_binding.py:90` bindet feste
+Ereigniszeiten; `validate_manifest` begrenzt die Folge auf 28 Ereignisse,
+20 Formationen, zwei auditive und sechs visuelle Hinweise.
+`Materializer.next` verarbeitet 4.800 Little-Endian-Float32-Samples pro
+Audiofenster und RGB8-Frames mit 1.920 x 1.080 Pixeln; NJ liegt vor Kontaktbildung.
+Visuelle Teilhinweise müssen bereits vor Rezeptoranalyse maskiert sein.
+`tools/_s2oc_bound_session.py:103` und der private OD-Anschluss halten eine
+Runtime über Einzelaufrufe hinweg; `CallerRuntime.process` verwendet die
+bestehende atomare Fortschreibung. Das ist kein fertiger Browserdecoder.
+
+**Fehlender kleiner Anschluss:** isolierte Medienquelle, begrenzter Decoder-/
+PCM-/RGB-Übergang und eine explizite Zuordnung von Medien-PTS, nativen Fenstern
+und monotoner Ereignis-/Feldzeit. Browserframes sind nicht schon zulässige
+Aufrufer-Payloads. Resampling, Kanalmischung, Farbraum und Größenanpassung dürfen
+nicht implizit bleiben. Medienzeit darf beim zweiten Abspielen zurückspringen,
+die laufende Systemzeit nicht. Historische Zeitvalidatoren nicht lockern.
+Die aktuelle Vorbindung sämtlicher Payloadhashes passt außerdem nicht direkt
+zu einem noch unbekannten Echtzeitstrom. Für den kleinsten reproduzierbaren
+Versuch ist daher eine einmalige begrenzte Dekodierung in gebundene Dateien
+vor der Rezeptorverarbeitung vorzusehen. Diese Vorstufe ist noch nicht gebaut.
+
+**Bedienung:** Start bindet genau Datei und Ausschnitt, prüft Freigabe und
+Format und beginnt nur den ausdrücklich angeforderten Durchlauf. Status zeigt
+Quelle, Durchlauf, Medienposition, Ereignisfortschritt, Memory-/Abrufstatus und
+Fehler, ohne neue Verarbeitung. Stopp trennt Tracks und beendet die Verarbeitung;
+keine automatische Ersatzquelle oder Wiederaufnahme. Zwischen den beiden
+Durchläufen bleibt dieselbe Sitzung offen, ohne Memoryreset. Erst der endgültige
+Stopp schließt sie. Wiederladen über Prozessgrenzen ist hierfür nicht nötig.
+
+**Vergleichsvorschlag, noch keine fertige Quellenbindung:** kurzer Clip mit
+Wiederkehr, Bewegung und wenigen Schnitten; Auswahl ausschließlich vor Messung.
+Acht feste AV-Stellen und drei davorliegende read-only Prüfstellen je Durchlauf
+wären innerhalb der bestehenden Operationsgrenzen möglich: zusammen 22 Ereignisse,
+16 Formationen, zwei auditive und vier visuelle Hinweise, 18 Audio/NJ-, 20 visuelle
+Analysen und zwölf Scanbelege. Das ist eine Budgetskizze, keine belegte vollständige
+Bytehülle oder bereits gültige Zeitfolge. Die exakten Stellen werden erst am
+ausdrücklich ausgewählten Clip festgelegt, danach nicht nach Trefferwerten angepasst.
+
+An jeder Prüfposition erst den gespeicherten Zustand und generationsgebundene
+Treffer samt Direktbaseline aufzeichnen, dann die Formation ausführen. Entsprechende
+Prüfpositionen beider Durchläufe vergleichen; keine Hypothesenanwendung.
+Stabilisierung, Aktualisierung, Ersetzung, Kandidatenkonflikte und Enthaltungen
+einzeln berichten. Gesättigter Support bedeutet nicht ausgebliebene Aktualisierung.
+Decoder-/Payloadabweichungen zwischen Durchläufen getrennt ausweisen: Ohne gleiche
+gebundene Wahrnehmungseingänge ist ein Unterschied nicht allein Memory zuzuschreiben.
+Auch ein positiver Befund wäre nur ein Einfluss gespeicherter Erfahrung auf
+Musteranwendbarkeit, keine Objektidentität, kein semantisches Label und kein
+Nachweis allgemeiner Video- oder Sequenzlernfähigkeit.
+
+**RÜCKMELDUNG ERFORDERLICH:** Start- und Endzeit im ausgewählten Video benennen.
+Der direkte Zugriff auf dessen isolierte Medienströme ist noch ungeprüft.
+Erst danach lassen sich Quellenzugriff, Zeitabbildung und vollständige
+Budgetbindung abschließen. Keine aktive Aufnahme oder Implementierung vorgetäuscht.
+
+## OD: Terminal einmal gestartet, Benutzerbedienung ausstehend
+
+Nach ausdrücklicher weitergegebener Benutzerfreigabe wurde der unveränderte
+qualifizierte Dateieinstieg genau einmal als sichtbares Windows-Terminal
+gestartet: Python-Prozess **28660**, Fenster `C:\Python314\python.exe`.
+Die native Fensterkennung wurde lesend bestätigt; der Prozess antwortet.
+Es wurden **keine Bedienkommandos** eingegeben. Bei der anschließenden
+Statusaufnahme war die Ergebnisablage noch nicht vorhanden: keine geöffnete
+Sitzung und kein verarbeiteter Schritt belegt.
+
+Vor Start wurden aktueller Code, Qualifikation, gemeinsame Bindung,
+Erwartungsbindung, Referenzhashes und Ausgabeabwesenheit geprüft. Die
+synthetische administrative Vorbilanz blieb innerhalb der Laufgrenzen.
+Nur `release.json` wurde für die fest gebundene Lauf-ID auf
+`execution_authorized=True` gesetzt und neu digestgebunden; kein Produktcode
+und keine historische Qualifikation wurden geändert.
+Freigabedatei SHA-256:
+`cb41b5357294d99ff6ce3310090bae620d40e2fbecc5b6b917ab3d53ef0c5b3e`.
+
+Der Benutzer bedient `open`, siebenmal jeweils `next` und `status`, danach
+`close`. Das Gate wird erst durch `open` einmal gesetzt und zurückgesetzt.
+Der Client bleibt alleiniger Verifikator. Kein Wiederanlauf, kein weiterer
+Prozessstart, keine stellvertretende Bedienung. Ein Bedienergebnis liegt
+noch nicht vor. Der gewünschte Anschlussplan für Dateilernbetrieb und
+versioniertes Wiederladen folgt erst nach Abschluss dieses Bedienversuchs;
+keine Speicher-, Zeit- oder Generationsmechanik vorsorglich ändern.
+
+**WEITER:** Benutzerbedienung des bereits geöffneten Terminals abschließen;
+danach gespeicherten Abschluss lesen, ohne zweite Verifikation.
+
+## OD: Finale Bedienlaufbindung vorbereitet, nicht gestartet
+
+Für `caller-terminal-basic-20260911-01` liegt die finale Bindung unter
+`reports/s2od/terminal-basic-final-binding` vor. Die Ergebnisablage
+`reports/s2od/caller-terminal-basic-20260911-01` ist nicht vorhanden.
+Der aktuelle qualifizierte Starter und sämtliche aktiven Quellenhashes
+wurden lesend abgeglichen. Keine Codeänderung, Testwiederholung,
+Payloadverarbeitung, Sitzung oder technische Laufverifikation ausgeführt.
+
+[Startnotiz](reports/s2od/terminal-basic-final-binding/START.md),
+[gemeinsame Bindung mit Manifest und Quellenreferenzen](reports/s2od/terminal-basic-final-binding/common.json),
+[Freigabebindung](reports/s2od/terminal-basic-final-binding/release.json),
+[getrennte Erwartungen](reports/s2od/terminal-basic-final-binding/evaluation-binding.json),
+[vollständige Fortschritts-/Abschlussbilanz](reports/s2od/terminal-basic-final-binding/budget.json).
+
+| Klasse | Vorabmaximum | Unveränderte Laufgrenze |
+| --- | ---: | ---: |
+| Metadaten | 60.004 | 65.536 |
+| Quellenbelege | 193.210 | 196.608 |
+| Gemeinsame Zusatzhülle | 210.618 | 262.144 |
+| Verifikation | 262.144 | 262.144 |
+| Gesamt | 1.448.075 | 4.194.304 |
+
+Die Rechnung enthält die finale Budgetdatei, aktuelle Qualifikationsnachweise,
+Auswertungsbindung, gemeinsame Inhalte und die unveränderten Reserven für
+Auswertung, Dispatch, Abschlussbilanz, Freigabe und Bericht. Erfolgs- und
+Fehlerformen sind Alternativen für alle Fortschrittspositionen 0 bis 7.
+Die separate 73.728-Byte-Qualifikationsgrenze wird nicht verwendet.
+
+Aktiv eingebunden sind das neue Qualifikationsergebnis mit Vorregistrierung,
+vollständigen stdout-/stderr-Protokollen und Messzählern sowie die OD-Policy.
+Qualifikationsinterne Vorbilanz, native neutrale Belege, deren Rohfixtures und
+Qualifikationsabschlussbilanz bleiben in der abgeschlossenen Qualifikationshülle
+erhalten. Der Lauf liest sie nicht ein; sie werden nicht pauschal als aktive
+Laufvoraussetzungen dupliziert. Die dort benötigten Inhalte bleiben verfügbar.
+Alle tatsächlich benötigten historischen OC-/Clientnachweise und transitiven
+Softwaredateien sind weiterhin vollständig im gemeinsamen Ledger enthalten.
+
+Die drei unveränderten OB-Aufruferdateien bleiben separater Eingangsbestand:
+12.460.800 Byte; geplante wiederholte Lesemenge 37.420.800 Byte.
+Tatsächlich wurde hier kein Payload gelesen. Hashbestätigung erfolgt später
+vor jedem Analysezugriff, ohne Deduplizierung. Erwartet bleiben sieben
+Ereignisse, vier Formationen, drei Hinweise, fünf Audio/NJ-Verarbeitungen,
+sechs visuelle Analysen, 1.968 Feldkontakte und sechs Scanbelege.
+
+Gemeinsame Bindung SHA-256:
+`613a45ae6bb841d716e46d8a77bae442a7371e5d9a292263b25d396c4450a31b`.
+Starter SHA-256:
+`ff42b9a20e98db65c79621f652eca644372c2a2de9d829ee6edfdffbca7f6c24`.
+Qualifikation: `s2od-native-start-qualification-20260911-03`, 12/12.
+
+**Startbefehl nach ausdrücklicher Einmallauffreigabe:**
+
+```powershell
+Set-Location 'C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace'
+C:/Python314/python.exe -B -m reports.s2od.start_terminal_basic_once
+```
+
+Es gibt keine frei wählbaren Laufargumente: ID, Eingänge, Reihenfolge,
+Bindungsverzeichnis und Ausgabeziel stehen im qualifizierten Dateieinstieg.
+Aktuell bleibt `release.json: execution_authorized` **False**. Ohne die
+ausdrückliche Startfreigabe weist der Befehl mit `START_NOT_AUTHORIZED` ab.
+Die spätere Freigabe betrifft ausschließlich diese vorbereitete ID; der
+Forscher startet nicht und gibt keine Bedienkommandos stellvertretend ein.
+
+Nach Freigabe erscheint bei `open` zunächst `OPEN 0/7`; erst dieses Kommando
+öffnet das Gate einmal für die Sitzungsinitialisierung. Jedes `next` zeigt
+Fortschritt, Wahrnehmungs-, Memory- und Kontextstatus, Hypothese oder `null`
+sowie Fehlercodes. `status` zeigt etwa `3/7 OPEN`, ohne Ereignisverarbeitung.
+Verbindlich: `open`, sieben einzelne `next` jeweils gefolgt von `status`,
+anschließend `close`. Der Abschluss zeigt Status, Fortschritt, Fehlerbeleg
+und `evaluation_allowed`; nur der Client verifiziert einmal. EOF oder
+`abort` schließen vorzeitig, ohne vollständigen Erfolg zu behaupten.
+
+**WEITER:** Ausdrückliche Entscheidung über diesen einen Benutzerlauf.
+Keine automatische Ausführung. Gates `False`, ME/MI gesperrt,
+Prognosezweig ruhend. Historische Belege bleiben unverändert.
+
+## OD: Anschlussqualifikation mit getrennten Budgets bestanden
+
+Unter `s2od-native-start-qualification-20260911-03` wurden am 2026-09-11
+**genau einmal zwölf Prüfgruppen ausgeführt: 12/12 bestanden**.
+Keine historischen Passzahlen übernommen. Die vorgebundenen Quellenhashes
+blieben unverändert. Der kurze native Pfad mit neu gebundenen neutralen
+Payloads erreichte zwei Audioanalysen/NJ-Projektionen, eine visuelle Analyse,
+einen abgeschlossenen Sitzungsverlauf und genau eine read-only Verifikation.
+Beide Anzeigehashes stimmen mit der unabhängig aus gespeicherten Schritten
+gebildeten Projektion überein. Der Starter verifiziert nicht zusätzlich.
+
+| Metadatenklasse | Vorabmaximum | Gebundene Istbilanz | Grenze |
+| --- | ---: | ---: | ---: |
+| Späterer Sieben-Ereignis-Benutzerlauf | 61.433 | Nicht ausgeführt | 65.536 |
+| Native Sitzung allein | 41.887 | 21.009 | 65.536 |
+| Gesamte Anschlussqualifikation | 69.998 | 35.099 | 73.728 |
+
+Die Istbilanz enthält weiterhin die **einmalige 512-Byte-Berichtreserve**;
+sie ist keine Behauptung, dass der Kurzbericht genau 512 Byte belegt.
+Qualifikationszusätze sind als Metadaten separat und vollständig aufgeführt:
+Vorbereitung 9.438, Vorregistrierung 2.218, stdout 0, stderr 116,
+Messzähler 84, Ergebnis 1.479 und gemeinsame Bilanz 755 Byte.
+Diese zusammen 14.090 Byte werden zum Sitzungsanteil hinzugezählt.
+Gemeinsame Bindung und Policy sind bereits im Sitzungsledger enthalten
+und werden nicht doppelt angesetzt. Die native Sitzung erhält keine
+Neutral-Sondergrenze: 65.537 Byte werden auch unter der größeren äußeren
+Hülle abgewiesen. Qualifikationsgrenzgleichheit und Überlauf sind geprüft.
+
+Aktive Quellenbelege: **193.210 / 196.608 Byte**.
+Gemeinsame Zusatzhülle tatsächlich **195.947 / 262.144 Byte**,
+gesamte Qualifikation einschließlich Berichtreserve **298.062 / 4.194.304 Byte**.
+Die getrennte Verifikation belegt **2.792 / 262.144 Byte**.
+Die lokale 6.607-Byte-Prüfprotokollreserve ist mit 3.813 Byte belegt;
+die Messzähler stehen separat in der gemeinsamen Rechnung.
+
+[Kurzbefund](reports/s2od/s2od-native-start-qualification-20260911-03/BEFUND.md),
+[Vorbilanz](reports/s2od/s2od-native-start-qualification-20260911-03/preparation.json),
+[Ergebnis mit Quellenhashes](reports/s2od/s2od-native-start-qualification-20260911-03/result.json),
+[vollständige Ist-/Zusatzbilanz](reports/s2od/s2od-native-start-qualification-20260911-03/qualification-balance.json).
+Ergebnisdatei SHA-256:
+`19e68a7d6e98cc4bcb998f5ad84297a7b44e0012c81966659ab94bd2219c977c`.
+
+Der technische neutrale Anschlussnachweis ist kein realer Benutzerlauf und
+keine erneute OB-Aufgabenprüfung. Die neutrale Auswertung hat keine
+fachlichen Sollentscheidungen; geprüft wurden der getrennte Auswertungspfad
+und der Anzeigeabgleich. Historische Vorabstopps bleiben unverändert.
+Gates `False`, ME/MI gesperrt, Prognosezweig ruhend.
+**WEITER:** Endgültige Benutzerlaufbindung separat entscheiden; keine
+automatische Ausführung aus diesem Qualifikationsbefund.
+
+### Prospektive Budgetentscheidung vor dem Aufruf
+
+Prospektive Freigabe vom 2026-09-11: Ausschließlich die vollständige
+OD-Anschlussqualifikation erhält **73.728 Byte Metadaten** unter
+`s2od.qualification-envelope.v1`. Jede Sitzung, einschließlich der neutralen
+Sitzung, und der spätere Benutzerlauf bleiben bei **65.536 Byte**.
+Quellenbelege 196.608, gemeinsame Zusatzhülle 262.144 und Gesamtgrenze
+4.194.304 Byte bleiben unverändert. Keine größere Systemkapazität.
+
+Der Prüfaufruf `reports/s2od/qualify_native_start_once.py` trennt native
+Sitzungsbelege von Vorbereitung, Prüfprotokoll, Messzählern und gemeinsamer
+Abschlussbilanz. Beide Klassen werden gemeinsam gezählt, ohne die native
+Sitzungsgrenze durch die äußere Grenze zu ersetzen. Die vorhandenen zwölf
+Prüfgruppen enthalten Grenzgleichheit, Qualifikationsüberlauf und eine unter
+der äußeren Grenze trotzdem unzulässige Sitzung. Historische Vorabstopps
+bleiben erhalten. Neue Ablage: `s2od-native-start-qualification-20260911-03`.
+Die einmalige Ausführung ist weiterhin an die vollständige Vorbilanz gebunden.
+Kein realer Benutzerlauf; Gates außerhalb der neutralen Prüfung `False`.
+
+## OD: Quellenanpassung gebunden, Metadaten-Vorabstopp
+
+Die ausdrückliche Freigabe vom 2026-09-11 ist ausschließlich für den privaten
+OD-Anschluss als `s2od.sources-budget.v1` vorbereitet: **196.608 Byte**
+Quellenbelege statt historisch 174.080 Byte. OC-Defaults, native Validatoren,
+Memorymechanik und die übrigen Grenzen bleiben unverändert.
+Bezugscommit: `537109994cf777f8d36cda617aafe12226806c25`, mit vorhandenem
+Arbeitsstand; fremde Änderungen wurden nicht zurückgesetzt.
+
+Der neue private Budgetanschluss in `tools/_s2od_budget_session.py` bindet
+Vorstart, Fortschritt, Abschluss und Verifikation an dieselbe OD-Grenze.
+Er verwendet die bestehenden Sitzungs-, Zustands- und Verifikationsbausteine.
+Seine Datei, Starter, Tests, Prüfaufruf und transitive Pflichtdateien werden
+vollständig gezählt. Das ist **noch kein qualifizierter Anschluss**.
+Die zwölf vorbereiteten Prüfgruppen enthalten zusätzlich Grenzgleichheit,
+Quellenüberschreitung, unveränderte gemeinsame Grenze und Policybindung.
+
+Die vollständige Vorbilanz unter neuer ID
+`s2od-native-start-qualification-20260911-02` stoppte **vor** dem Testaufruf:
+
+| Klasse | Sieben-Ereignis-Hülle maximal | Neutrale Hülle maximal | Grenze |
+| --- | ---: | ---: | ---: |
+| Quellenbelege | 189.189 | 189.189 | 196.608 |
+| Metadaten | 61.432 | **65.901** | **65.536** |
+| Gemeinsame Zusatzhülle | 206.597 | 194.309 | 262.144 |
+| Verifikation | 262.144 | 262.144 | 262.144 |
+| Gesamt | 1.445.482 | 847.101 | 4.194.304 |
+
+Die neutralen Fehleralternativen bei Fortschritt 0/1/2 benötigen
+65.683 / 65.791 / 65.901 Byte Metadaten, also 147 / 255 / 365 Byte zu viel.
+Erfolgs- und Fehlerabschlüsse werden alternativ, nicht additiv gerechnet.
+Die 16.384-Byte-Vorbereitungsreserve und die übrigen bisherigen lokalen
+Reserven wurden nicht nachträglich verkleinert. Die tatsächlich 8.867 Byte
+große Vorbereitungsdatei ersetzt ihre gebundene Reserve nicht.
+
+[Befund](reports/s2od/s2od-native-start-qualification-20260911-02/BEFUND.md),
+[vollständige Vorbilanz und Prüfinventar](reports/s2od/s2od-native-start-qualification-20260911-02/preparation.json),
+[verfügbare versionierte Budgetbindung](reports/s2od/s2od-native-start-qualification-20260911-02/od-budget.json).
+SHA-256 der Budgetbindung:
+`1251ec116046784c84fab205c3c6dbdefe70d5309a3bb806fe9a245ebdbd7dc8`.
+SHA-256 der Vorbilanz:
+`5e40648465a8cc56abae1fdd353c1c5f05c220a0b71df39435e5c1268d11ebe5`.
+
+**0 Testaufrufe**, kein nativer Sitzungsanschluss ausgeführt, keine neutralen
+Payloaddateien erzeugt, kein realer Benutzerlauf. Die Freigabe für zwölf Tests
+wurde nicht verbraucht; ihre Budgetvorbedingung ist nicht erfüllt.
+Alle historischen Vorabstände bleiben unverändert. Gates `False`, ME/MI
+gesperrt, Prognosezweig ruhend. Keine weitere Optimierung oder Grenzanpassung.
+**RÜCKMELDUNG ERFORDERLICH:** Die Quellenanpassung allein trägt die vollständige
+neutrale Abschlussreserve nicht; die unveränderte Metadatengrenze verhindert
+den Qualifikationsstart.
+
+## Vorabstopp: vollständiger Anschluss überschreitet Quellenobergrenze
+
+Die lokale Neubudgetierung ist am 2026-09-11 zusammenhängend vorbereitet:
+Starter einschließlich Vor-/Abschlussbilanz, zwölf gezielte Anschlussprüfungen
+und der einmalige Prüfaufruf liegen vor. Die Prüfsuite enthält einen echten
+Zwei-Ereignis-Pfad mit neu gebundenen neutralen PCM-/RGB-Payloads, unverändertem
+Client und unabhängiger Anzeigeprojektion. **Dieser Pfad wurde nicht ausgeführt.**
+
+Die vollständige administrative Vorprüfung stoppte vor dem Testaufruf:
+**179.842 Byte aktive Quellenbelege überschreiten 174.080 Byte um 5.762 Byte.**
+[Befund](reports/s2od/s2od-native-start-qualification-20260911-01/BEFUND.md),
+[vollständige Einzelbeiträge und Abschlussalternativen](reports/s2od/s2od-native-start-qualification-20260911-01/preparation.json).
+Das Verzeichnis enthält einen Vorabstopp, keinen Qualifikationsbefund oder
+historisch übernommene Passzahlen. **0 Testaufrufe**, keine neutralen Payloaddateien,
+keine Rezeptor-/NJ-Verarbeitung und keine Sitzung. Reale OB-Dateien unberührt.
+
+Die Quellenrechnung enthält einmalig:
+
+| Aktive Gruppe | Byte |
+| --- | ---: |
+| Bisherige gemeinsame OC-Bindung samt Inventar/Nachweisen | 117.707 |
+| Client, Clienttests und bisheriger Clientprüfaufruf | 21.259 |
+| Vollständiger neuer Starter | 10.858 |
+| Neue Anschlussprüfungen | 10.252 |
+| Neuer Vorbindungs-/Prüfaufruf | 8.691 |
+| Zusätzlich importierter bestehender OB-Auswerter samt seiner Moduldatei | 11.075 |
+| **Summe** | **179.842** |
+
+Es wurden keine benötigten Quellinhalte aus der Rechnung entfernt. Die importierte
+OB-Moduldatei wird vollständig gezählt, obwohl nur ihre Auswertungsfunktion,
+nicht ihr historischer Haupteinstieg verwendet wird.
+
+Die vollständige synthetische Auswertungsform umfasst **4.730 Byte**: drei
+Entscheidungen, vier Formationsbefunde mit begrenzten Supportlisten und sämtlichen
+Prüffeldern, Herkunfts-/Ergebnisdigests, sieben Anzeigehashes und sieben unabhängige
+Vergleichsergebnisse. Das ist eine Ausgabeformgrenze, keine erneut berechnete
+OB-Auswertung. Lokal gebunden sind 8.192 Byte Auswertung, 1.536 Byte Dispatch,
+8.192 Byte Abschlussbilanz, 3.072 Byte Freigabebindung, 6.607 Byte Qualifikation,
+16.384 Byte Vorbereitung und weiterhin 512 Byte Berichtreserve.
+Die Startergröße beträgt nun 10.858 Byte einschließlich der vollständigen
+Budgetkontrollen; frühere 4.096-/6.720-Byte-Vorbindungen bleiben historisch erhalten.
+
+Die übrigen Obergrenzen passen in dieser gemeinsamen Vorbilanz:
+
+| Klasse | Sieben-Ereignis-Versuch maximal | Native Qualifikationshülle maximal | Grenze |
+| --- | ---: | ---: | ---: |
+| Metadaten | 60.874 | 65.343 | 65.536 |
+| Gemeinsame Zusatzhülle | 197.250 | 184.962 | 262.144 |
+| Verifikation | 262.144 | 262.144 | 262.144 |
+| Gesamt | 1.435.577 | 837.196 | 4.194.304 |
+
+Erfolg und Fehler wurden je Präfix getrennt bilanziert, nicht addiert. Eine
+passende Gesamtgrenze hebt die verletzte Quellenobergrenze nicht auf.
+Keine Qualifikation oder finale Laufzulassung behaupten. Keine neue lokale
+Einzelkorrektur angestoßen; die konkrete übergeordnete Überschreitung ist die
+verbleibende Entscheidung. Gates `False`; realer Benutzerlauf gesperrt.
+
+## Vorabstopp: Starterreserve freigegeben, Auswertungshülle nicht gedeckt
+
+Die lokale Starterreserve ist prospektiv auf **6.720 Byte** korrigiert;
+Dateigröße und unveränderter Codehash sind im
+[neuen Vorabbeleg](reports/s2od/STARTER_RESERVE_UND_ABSCHLUSSGRENZE.md) gebunden.
+Historische Vorbereitungen bleiben unverändert. Die bisherige
+Starterquellenüberschreitung ist damit geschlossen.
+
+Bei der vollständigen Abschlussprüfung wurde eine neue konkrete Überschreitung
+gefunden: Starter und gemeinsames Ledger begrenzen die Auswertung auf 3.000 Byte,
+die vorhandene vollständige OB-Auswertung allein umfasst aber bereits 3.229 Byte.
+Sieben Anzeigehashes und die unabhängigen Vergleichsergebnisse kommen noch hinzu.
+Das ist eine statisch belegte unzureichende Hüllenbindung, kein neuer Laufbefund.
+**0 Testaufrufe**, keine neutralen Payloads oder native Sitzung. Die finale
+Gesamtbindung ist noch nicht tragfähig; der reale Benutzerlauf bleibt gesperrt.
+Keine weitere Grenzerhöhung oder Prüfkürzung; Gates `False`.
+
+## Vorabstopp: Starter überschreitet lokale Quellenreserve
+
+Der am 2026-09-11 beauftragte versuchsspezifische Starter einschließlich
+unabhängigem Anzeigeabgleich liegt als unqualifizierter Entwurf vor:
+**6.720 Byte statt höchstens 4.096 Byte**, Überschreitung **2.624 Byte**.
+[Konkreter Vorabstopp und offene Prüfdeckung](reports/s2od/STARTER_VORABSTOPP.md).
+Entsprechend der ausdrücklichen Budgetbedingung wurde kein Testaufruf gestartet.
+Keine neutrale oder reale Sitzung, keine Payloadverarbeitung; Gates `False`.
+
+Die vollständige neue Hülle einschließlich Test-/Aufrufdateien und nativen
+neutralen Belegen ist noch nicht gebunden. Die alte Vorbilanz und die 16/16
+der Bedienhülle ersetzen diesen Anschlussnachweis nicht. Keine Grenzerhöhung,
+Codeverdichtung oder Prüfkürzung wurde vorgenommen. Vor einer Fortsetzung ist
+die lokale Reserve zu entscheiden; anschließend bleibt die gemeinsame
+Vorbilanz Voraussetzung für den einzigen neutralen Qualifikationsaufruf.
+Der reale Benutzerlauf ist weiterhin gesperrt.
+
+## Vorbereitet: begrenzter Terminal-Bedienversuch, Startanschluss offen
+
+Für `caller-terminal-basic-20260911-01` sind die unveränderten sieben
+OB-Ereignisse unter neuer Lauf-/Codebindung vorbereitet. Ergebnisverzeichnis
+war bei Vorbereitung unbenutzt; es wurde nicht angelegt. Keine Payloads,
+Sitzung oder Tests wurden ausgeführt. Nur administrative Bindungen und
+synthetische Beleggrößen wurden verarbeitet; Gates bleiben `False`.
+
+- [Konkreter Startvorschlag und Bedienfolge](reports/s2od/BEDIENVERSUCH_VORBEREITUNG.md)
+- [Gemeinsame Eingangsbindung](reports/s2od/terminal-basic-preparation/common.json)
+- [Unveränderte Erwartungen und Anzeigeabgleich](reports/s2od/terminal-basic-preparation/evaluation-binding.json)
+- [Alle acht Präfixpositionen und Abschlussalternativen](reports/s2od/terminal-basic-preparation/budget.json)
+
+Gemeinsame SHA-256-Bindung:
+`182f017e3fd4b8c161c168bb45ef1162b1864261a560ac93b47fb9806575e329`.
+Budgetdigest: `491ba8b8b15c396be74f95433d628e92e37bc6b1f7d2a1a9ca77d1dbfbbe13e1`.
+Vorbilanz einschließlich aktiver Belege, Vorbereitung, 4.096 Byte
+Starterreserve, 8.192 Byte Budgetreserve und bestehender Abschlussreserven:
+
+| Klasse | Erfolg maximal | Fehler maximal | Grenze |
+| --- | ---: | ---: | ---: |
+| Metadaten | 57.927 | 60.116 | 65.536 |
+| Quellenbelege | 147.790 | 147.790 | 174.080 |
+| Gemeinsame Zusatzhülle | 165.198 | 147.790 | 262.144 |
+| Verifikation | 262.144 | 262.144 | 262.144 |
+| Gesamt | 1.402.767 | 584.738 | 4.194.304 |
+
+Erfolg und Fehler sind Alternativen, nicht zu addieren. Der Quellenbestand
+umfasst 12.460.800 Byte; geplant sind 37.420.800 gelesene Byte, tatsächlich
+hier null. Sieben einzelne `next` mit `status` nach jedem Schritt folgen auf
+`open`, danach `close`. Die einmalige Verifikation bleibt allein beim Client.
+
+**Noch nicht ausführungsbereit:** Der einzige vorgeschlagene autorisierte
+dateigebundene Starter einschließlich Anzeigeabgleich ist noch nicht
+implementiert oder qualifiziert. Seine Reserve ist kein verfügbarer Inhalt
+und kein Codehash. Die 16/16 mit Sitzungsdoubles ersetzen diesen Anschluss
+nicht. Vor einer Einmallauffreigabe sind diese konkrete Logik, ihr Quellenhash
+und die daraus vervollständigte gemeinsame Bindung vorzulegen; keine
+Gatefreigabe, neue Zulassungsplattform oder historische Testwiederholung daraus ableiten.
+
+## Aktuell: privater Terminalclient neutral qualifiziert
+
+Der [S2-OD-Terminalclient](tools/_s2od_private_terminal_client.py) wurde am
+2026-09-11 mit genau einem Aufruf unter `s2od-terminal-qualification-20260911-01`
+qualifiziert: **16/16**. [Befund](reports/s2od/s2od-terminal-qualification-20260911-01/BEFUND.md),
+[Quellen-/Ergebnisbindung](reports/s2od/s2od-terminal-qualification-20260911-01/result.json),
+[Vorbilanz](reports/s2od/s2od-terminal-qualification-20260911-01/preparation.json).
+`open`, `next`, `status`, `close`, `abort` und `quit` bedienen die bestehende
+Sitzung. Der Client öffnet kein Gate und ersetzt keine OC-Zulassung.
+
+Geprüft wurden Schrittreihenfolge, unveränderliche Anzeige, vorzeitiger Abschluss,
+Primärfehler, einmaliger Verifikationsaufruf und verhinderter Neustart mit
+synthetischen Sitzungsrückgaben. Die erhaltene Feldwirkung im Fehlerfall wurde
+an einem Sitzungsdouble geprüft, nicht durch eine neue native Formation.
+Payloadleser, Materialisierer und Runtimekonstruktion waren gesperrt.
+Keine historische Testserie oder reale Eingangsfolge wurde wiederholt.
+Die neue Prüfung ist keine vollständige End-to-End-Qualifikation mit nativer
+Sitzung; die bestehende OC-Qualifikation bleibt ihr Unterbau.
+
+Ist einschließlich 512 Byte Berichtreserve: Metadaten 4.832/65.536 Byte,
+Quelleninventar samt neuen Dateien 33.701/174.080 Byte, gesamt 38.533/4.194.304 Byte.
+Die Qualifikationsdateien belegen 2.508/6.607 Byte; vollständige Logs sind erhalten.
+Vor dem Test wurden alle Fortschrittspositionen und beide Abschlussalternativen
+einer synthetischen Dreierfolge gebunden: höchstens 29.129 Byte Metadaten und
+858.620 Byte Gesamtbeleg, ohne Verletzungen. Dies ist keine pauschale Reserve
+für beliebige längere Folgen.
+
+Ein Benutzerlauf bleibt separat gesperrt. Neue Eingaben benötigen eine vollständige
+gemeinsame Bindung einschließlich Clientdateien und Qualifikationsbelegen sowie
+eigene Budgetprüfung und Einmallauffreigabe. Gates `False`; ME/MI gesperrt,
+Prognosezweig ruhend. Der OC-Gedächtniszyklus bleibt abgeschlossen.
+
+Die [kurze Betriebsanleitung zum qualifizierten Sitzungseinstieg](docs/BETRIEBSANLEITUNG_PRIVATER_OC_SITZUNGSEINSTIEG.md)
+ordnet akzeptierte Dateien, feste Zeiten, aktive Bindungen, Einzelaufrufe und
+Rückgaben anhand des Codes zu. Sie ist reine Dokumentation, keine neue Freigabe:
+Python-Sitzungsbedienung und der oben qualifizierte Terminalclient bestehen;
+ein autonomer CLI-Start ohne Gatefreigabe besteht nicht. Neue Folgen benötigen eine konkrete
+Eingangs-/Budgetbindung und separate Einmallauffreigabe. Kein Versuch wurde wiederholt.
+
+## Abgeschlossen: begrenzter OC-Gedächtniszyklus
+
+Dokumentarischer Abschluss vom 2026-09-10 gemäß jüngster Analystenentscheidung.
+Dieser Stand ersetzt die nachfolgenden älteren Arbeitsfreigaben, nicht deren
+historische Befunde. Kein weiterer Lauf, keine Produktkorrektur und keine neue
+Auswertung sind beauftragt. Gates bleiben `False`, ME/MI gesperrt; der Prognosezweig ruht.
+
+`caller-memory-cycle-20260910-02` ist technisch `RECORDING_COMPLETE`:
+eine Sitzung ohne Reset, 21 Ereignisse, 18 Formationen, drei visuelle Hinweise,
+6.912 Feldkontakte und sechs Scanbelege. Der vorgebundene fachliche Gesamtstatus
+bleibt unverändert **`FALSIFIED`**. Der erste Lauf `caller-memory-cycle-20260910-01`
+bleibt `NOT_EVALUABLE`.
+
+### Bestätigte Einzelbefunde und Sollbildungsfehler
+
+Die [gespeicherte Auswertung](reports/s2oc/caller-memory-cycle-20260910-02/evaluation.json)
+bestätigt die Zielabrufe e02 aus `A_RECENT` und e15 aus `B_STABLE`, jeweils
+`ADMIT_SINGLE_CONTEXT`. Alle fünf Zustandskontrollen bei e05, e13, e14, e16
+und e20 sind bestätigt. Damit ist in dieser begrenzten Sitzung die Folge
+**Aufnahme → Stabilisierung → A-Verdrängung → B-Abruf → visuelle
+Generationsersetzung → kein passender Zielabruf** belegt. Eine wiederverwendete
+Slot-ID erhält dadurch nicht die Verfügbarkeit ihrer früheren Generation zurück.
+
+Die Statusvorhersage für e21 war falsch: Erwartet war `ABSTAIN_NO_CONTEXT`,
+gespeichert ist `ABSTAIN_NO_APPLICABLE_CONTEXT`. Diese Abweichung wird weder
+im [Erwartungsbeleg](reports/s2oc/memory-cycle-run-binding-02/evaluation-binding.json)
+noch im Ergebnis berichtigt. Sie betrifft die Sollunterscheidung, nicht die
+bestehende Abrufregel. Der gewünschte Zielverlust nach Ersetzung ist als
+Einzelbefund bestätigt, ohne den Gesamtstatus nachträglich umzudeuten.
+
+### e21: Bestand ist nicht Anwendbarkeit
+
+Im [Gesamtbeleg](reports/s2oc/caller-memory-cycle-20260910-02/record.json),
+`record.execution.scans` bei `ordinal = 21`, enthalten Primärscan und unabhängige
+Direktbaseline dieselben Bankbefunde:
+
+| Bank | Prüfbare Kandidaten | Treffer | Bankstatus |
+| --- | ---: | ---: | --- |
+| B4 | 9 | 0 | `BANK_NO_OBSERVED_MATCH` |
+| Fast | 3 | 0 | `BANK_NO_OBSERVED_MATCH` |
+| Visuelle Slow-Bank | 3 | 0 | `BANK_NO_OBSERVED_MATCH` |
+
+Die Bereiche sind `A_RECENT_NOT_APPLICABLE` und `B_STABLE_NOT_APPLICABLE`,
+nicht `ABSENT_VALID`. Beide Scans weisen null öffentliche Kandidaten,
+`hypothesis = null` und identische Vor-/Nachzustandsdigests aus.
+Die bestehende visuelle Entscheidung in
+[`_decide`](tools/_s2kq_private_partial_cue_retrieval_336.py) (Zeilen 696–708)
+liefert `ABSTAIN_NO_CONTEXT` nur bei gleichzeitigem `A_RECENT_ABSENT_VALID`
+und `B_STABLE_ABSENT_VALID`. Andernfalls gilt hier bei null anwendbaren
+Kandidaten `ABSTAIN_NO_APPLICABLE_CONTEXT`; die
+[Direktbaseline](tools/_s2kq_private_direct_slot_scan_baseline.py) bildet diese
+Unterscheidung separat ab (Zeilen 337–339).
+
+Die Enthaltung bedeutet daher **kein passender Zielabruf bei vorhandenem
+anderem Kontextbestand**, nicht leere Memory oder allgemeine
+Unbekanntheitserkennung. Quellen wurden wiederverwendet; allgemeiner
+Dauerbetrieb und unabhängige Robustheit sind damit nicht nachgewiesen.
+
+Der [Laufabschluss](reports/s2oc/caller-memory-cycle-20260910-02/BEFUND.md)
+und die [bereits gespeicherte Verifikation](reports/s2oc/caller-memory-cycle-20260910-02/verification.json)
+bleiben unverändert. Dieser Nachtrag beruht ausschließlich auf lesender
+Einordnung, ohne Tests, Nachrechnung, erneute Verifikation oder Auswertung.
+
+## Verbindlicher Arbeitsauftrag nach Synchronisation am 2026-09-10
+
+Auf ausdruecklichen Benutzerauftrag nach widerspruechlicher Chatweitergabe
+neu abgeglichen. Bezugsstand: `537109994cf777f8d36cda617aafe12226806c25`;
+`main` und `origin/main` waren nach Fetch identisch. Diese Synchronisation
+ist Dokumentation und Arbeitssteuerung, kein Test, Auditlauf oder neuer
+Funktionsbefund. Historische Ergebnisse bleiben unveraendert.
+
+**Nur dieser oberste Auftrag beschreibt die jetzt erlaubte Fortsetzung.**
+Die darunter erhaltenen Abschnitte dokumentieren ihre damaligen Zeitstaende,
+auch wenn ihre Ueberschriften "Aktuell" oder "Vorrangig" lauten. Alte
+Implementierungs- und Einmallauffreigaben werden dadurch nicht erneuert.
+
+### Abgeglichener Stand
+
+- Ziel bleibt audiovisuelle Wahrnehmung mit unabhaengigem Feldzweig,
+  begrenzter `A_RECENT`-/`B_STABLE`-Memory und read-only Teilhinweisabruf.
+  Langfristige Sequenz-/Beziehungsbindung und gelernte Semantik sind Ziele,
+  keine schon vorhandenen Faehigkeiten. Memory aus dem Feld selbst ist nicht
+  nachgewiesen. Keine Rueckkehr zu alten Substrat-/Prognosezweigen.
+- OB-Eingang und der kurze OC-Sitzungsversuch sind bestaetigt. OC:
+  sieben Ereignisse, vier Formationen, drei Hinweise; nativer Vergleich mit
+  dem gespeicherten OB-Beleg bestaetigt, kein Stapelreplay.
+- Sitzungsqualifikation 29/29, aktive Zulassung 16/16 und nachgelagerter
+  Gedaechtniszyklus-Auswerter 15/15 sind abgeschlossene, getrennte Nachweise.
+  Sie sind nicht zu wiederholen und ersetzen keinen laengeren Funktionslauf.
+- `caller-memory-cycle-20260910-01` ist verbraucht und `NOT_EVALUABLE`:
+  elf Ereignisse, zehn Formationen, ein Hinweis; Stopp vor Ereignis 12 an
+  `COMBINED_RUNTIME_METADATA_LIMIT`. Kein Funktionsauswerter aufgerufen.
+  Sitzung geschlossen, Gates laut Abschluss False.
+- Der konkrete ausloesende Summenwert fehlt. Der urspruengliche Abschlussledger
+  ordnet zudem `failed_prefix_steps` falsch zu und nennt geplante statt
+  erreichte Payload-Lesebytes. Originale bleiben unveraendert. Die darunter
+  dokumentierte lesende Einordnung ist keine nachtraegliche Laufmessung.
+
+### Einziger naechster Forscherauftrag
+
+Auftragskennung `OC-SYNC-20260910-A`, keine Lauf-ID:
+**eine zusammenhaengende statische Klaerung der Vorstart-, Fortschritts-
+und Abschlussbilanz sowie ihrer Fehlerbeobachtbarkeit.**
+
+1. Den konkreten aeusseren Aufrufcode der kombinierten Pruefung lokalisieren
+   und seine Herkunft benennen. Falls er nur im damaligen Aufrufprotokoll
+   vorliegt, dies offenlegen; nicht aus dem Ergebnis neu erfinden.
+2. Herkunft der 24.104-Byte-Reserve, aktuelle Metadaten, Fehlerhulle,
+   moeglich doppelt gezaehlte Bestandteile und alternative Erfolgs-/Fehlerpfade
+   anhand vorhandenen Codes und Bindungen getrennt zuordnen.
+3. Dieselbe vorhandene Klassenregel fuer Praefixschritte in allen drei
+   Bilanzierungsstellen vorsehen. Geplante und erreichte Lesemengen trennen.
+4. Die kleinste gemeinsame Korrektur mit Datei-/Funktionsbezug vorschlagen.
+   Kuenftige Abbrueche brauchen Teilbetraege, Summe, Grenze, Phase und
+   Fortschritt; der primaere Budgetfehler darf nicht hinter CLOSE/INCOMPLETE
+   verschwinden. Keine historische Zahl als neu gemessenen Wert ausgeben.
+5. Angeben, ob die unveraenderte 21-Ereignis-Aufgabe innerhalb der Grenzen
+   statisch abgesichert werden kann oder welche konkrete Information fehlt.
+   Fehlende Garantie nicht durch einen weiteren realen Versuch ersetzen.
+
+Erlaubt: Quellen und vorhandene Belege lesen, eine kompakte dokumentarische
+Korrekturvorlage erstellen. Nicht erlaubt: Codekorrektur, Test, Import von
+Projektfunktionen, neue Budgetsimulation, erneute Verifikation, Payloadzugriff,
+Rezeptor-/NJ-/Memory-/Feld-/Runtimeausfuehrung oder neuer Hauptlauf.
+Keine Grenzerhoehung, neue Memorymechanik oder weitere Vertragsserie.
+
+Die Rueckmeldung nennt Auftrag `OC-SYNC-20260910-A`, bearbeiteten
+Repository-Stand, neue Erkenntnis und konkrete verbleibende Entscheidung.
+Danach warten; `WEITER` ist ein Vorschlag, keine automatische Folgefreigabe.
+
+### Rollen und Weitergabe
+
+Analyst: `Analysiere Forschung`, Aufgabe
+`01a00576-0a2c-7e72-a963-b003a223cac6`.
+Ausfuehrender Forscher: `MCM-Forscher 2`, Aufgabe
+`01a00512-1f4e-7441-bd1f-8dfc1f474273`.
+Andere Absender und Weiterleiter sind keine zusaetzlichen Forschungsleiter.
+Die Pause automatischer MCM-Wiederweitergaben wurde angefordert; dies ist
+noch kein Nachweis einer technisch reparierten Automation. Bis zur Klaerung
+erfolgt die fachliche Uebergabe direkt, ohne automatische Folgeschleife.
+
+Veraltete Orientierung wurde in `docs/README.md`,
+`docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md` und lokalen
+`.codex-orchestrator`-Beschreibungen festgestellt. Diese Texte geben fuer
+den aktuellen Auftrag keine Freigabe; ihre historische Substanz bleibt erhalten.
+Die Konzeptnotiz bewahrt Benutzerziele, ihre alten NS-Freigabesatze gelten
+nicht als gegenwaertiger Auftrag. Keine fremden Projektziele uebernehmen.
+
 ## Aktuell: Gedächtniszyklus vor Ereignis 12 budgetgestoppt
 
 `caller-memory-cycle-20260910-01` wurde **einmal begonnen** und bleibt

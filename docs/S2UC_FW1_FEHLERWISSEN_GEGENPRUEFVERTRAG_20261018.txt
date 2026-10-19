@@ -1,0 +1,316 @@
+FW1 – Gegenprüfvertrag: Behalten gegenüber Reset bei vollständiger Wiederbeobachtung
+2026-10-18 | Workflow 867afebb-149d-4977-a92c-8dad4ad2e0e2
+Status: vollständiger Konzeptvertrag auf Grundlage der abgenommenen statischen Prüfung.
+Keine Implementierungs-, Qualifikations-, Vorbereitungs- oder Forschungsfreigabe.
+FW1 ist eine Dokument-/Vergleichskennung, keine Laufnummer.
+
+1. Forschungsfrage, Hypothesen und Neuigkeit
+
+Verbessert der bei einer erhaltenen Wahrnehmungsspur akkumulierte Fehlerstand
+spätere Vorhersagen gegenüber seinem gezielten Reset bei vollständiger
+Wiederbeobachtung, während die Wahrnehmungsbestände identisch bleiben?
+
+H+: Behalten vermeidet erneute Kaltstarts und senkt den Gesamtfehler.
+H−: Reset entfernt inzwischen unpassende Bewertungen und senkt den Gesamtfehler.
+Auch gleiche Ausgaben sind möglich. Keine dieser Erwartungen ist ein Befund.
+Gelöscht wird der gesamte am Eingriffszeitpunkt vorhandene Fehlerstand,
+einschließlich jüngster Updates. Eine besondere Wirkung ausschließlich alter
+Erfahrung oder eines bestimmten Erfahrungsalters wird nicht behauptet.
+
+Der historische M/E-Vergleich betraf Fehlerzellmitnahme bei Kandidatenpromotion
+unter Eindeutigkeitsgate. FW1 betrifft erneute Bestätigung bereits erhaltener
+Spuren unter U-Mehrhypothesenauswahl. Historisches „E=Reset-EMA“ bezeichnet
+nicht den heutigen E-Arm. Promotionsnutzen und Wechselschaden sind bekannt,
+beantworten FW1 jedoch nicht [F5,F6]. ZW1 bleibt NEGATIVE_INTERACTION, ER1
+INCONCLUSIVE; deren Quellen, Ergebnisse, Audits und Freigaben bleiben unverändert.
+
+2. Genau zwei Varianten je Geschichte
+
+BEHALTEN: heutiges E, FactorRecencyArm mit MultiErrorAdapter und
+multi_error_exact_v1 (U), unverändert [F1,F3].
+RESET: dieselbe Variante, ergänzt ausschließlich um die nachfolgende Löschung.
+Kein FIFO-Arm, keine weitere Baseline, kein anderer kalter Default und kein
+verändertes EMA-alpha (weiter 1/2). Beide Varianten starten je Geschichte
+vollständig frisch und erhalten dieselben 1024 externen Frames. Zwischen
+Geschichten oder Bedingungen wird kein Zustand übertragen. A/B-, Paar-,
+Orientierungs-, Phasen- und Zukunftskennungen bleiben außerhalb der Systeme.
+
+Auslöser ist ausschließlich das tatsächliche normale Ereignis
+TRACE_CONFIRMED_RECENT für genau eine weiterhin lebende Retained-Generation g.
+Es setzt vier exakt gleiche Framewerte einer vollständigen, zeitlich späteren
+Wiederbeobachtung voraus, nicht nur einen passenden Hinweis oder Abruf [F1].
+Nach regulärem Blockabschluss und regulärem Pruning werden in RESET alle
+gültigen Zellen mit (role=retained, generation=g, offset=0 oder 1) invalidiert.
+Der bestehende exact-Pfad hat quality=0. Vollständige Zellslots werden geleert;
+keine gültigen Nullwerte, neuen Zellen oder künstlichen Feedbackwerte einsetzen.
+Fehlende Zellen bleiben fehlend. Beide Offsets werden unabhängig davon gelöscht,
+ob ihre Fehler positiv, gleich, günstig oder ungünstig waren.
+
+Andere Generationen und Kandidatenzellen bleiben bitgleich. Originale,
+Retained-Reihenfolge, Beobachtungsendmarken, Generationszähler, Promotionsmitnahme,
+Pruning fremder toter Zellen, Formierung und Verdrängung bleiben regulär.
+Keine Löschung bei bloßem TRACE_PROMOTED, unvollständigem Block, Hinweisabruf,
+Phasenwechsel oder späterer Wiederkehr einer bereits verdrängten Identität.
+Keine Altersgrenze, Vorzeichenauswahl oder ergebnisabhängige Ausnahme.
+
+Die Generation muss unmittelbar aus dem normalen Abschlussereignis stammen
+und anhand der lebenden Spur/Originalreferenzen eindeutig bestätigt werden.
+Kein Wert- oder Archivsuchverfahren darf eine fremde Generation zuordnen.
+Alle Schlüssel und Ausschlüsse vor dem ersten Schreibzugriff prüfen; anschließend
+serielle, nach außen unteilbare Löschung innerhalb der Aufnahmeoperation.
+Bei widersprüchlicher Zuordnung oder Teilpublikation: technischer Abbruch,
+kein Ersatzschlüssel und keine Reparatur durch Überspringen des Resets.
+
+3. Verbindliche Zeitfolge und Invarianten
+
+Für Blockendordinal b (durch vier teilbar, first_ordinal=1):
+1. Bereits eingetroffenes berechtigtes Feedback wird vor normaler Aufnahme
+   verarbeitet. Im üblichen Takt liegt das letzte beobachtbare Ziel bei b−1.
+2. Bei Wahrnehmung b friert der Receipt-Pfad die Wahl für b+1 ein, bevor die
+   Frames b−1 und b aufgenommen werden [F2,F4].
+3. Normale Aufnahme, close_segment, Endmarken-/Reihenfolgeänderung und Pruning
+   laufen genau einmal. Nur bei TRACE_CONFIRMED_RECENT folgt der Reset.
+4. Die bereits eingefrorene Ausgabe, der Receipt, sämtliche Tickets, Frozen-
+   Originalreferenzen und der Persistenzframe bleiben INNERHALB dieses Arms
+   über den Eingriff unverändert. Kein Neuwählen, Ticketumlenken oder Rückschau.
+5. Reguläres Feedback für b+1 darf die gelöschten lebenden Zellen neu anlegen.
+   Ohne Vorgängerzelle gilt der normale erste Fehlerwert, danach EMA-alpha=1/2.
+   Alle berechtigten Hypothesen werden wie bisher aktualisiert, nicht nur die
+   ausgewählte. Keine alten Fehlerpaare aus Receipts wiederherstellen [F3].
+6. Die nächste Auswahl erfolgt bei b+2 für Ziel b+3. Bei b=1024 existiert kein
+   beobachtetes Ziel 1025 und keine weitere Auswahl; der Schlussreset begründet
+   für sich allein keine Gelegenheit für einen Vorhersageeffekt.
+
+Eine bereits durch frühere Resets entstandene Differenz zwischen den Armen
+ist erlaubt: ihre eingefrorenen Ausgaben müssen nicht untereinander gleich sein.
+Die Unverändertheit in Punkt 4 ist ein Vorher-/Nachher-Vergleich desselben Arms.
+
+Zwischen BEHALTEN und RESET müssen zu denselben Aufnahmegrenzen dagegen
+Originalordinalen und -werte, Rollen/Generationen, Formierungsbestand, Kandidat,
+Retained-Reihenfolge, Endmarken, Hint-/Eingabepuffer, Promotionen und Verdrängungen
+übereinstimmen. Prozessübergreifend sind die kanonischen Originalidentitäten
+zu vergleichen, nicht rohe Speicheradressen. Innerhalb jedes Arms bleiben
+Originalobjekte bei Wiederbeobachtung erhalten.
+
+Statische Begründung: Formierung und close_segment erhalten ausschließlich
+die externen Frames; Auswahl/Fehlerbank treiben keinen Bestandsübergang an.
+Feedback aktualisiert Bewertungen aller berechtigten Hypothesen, nicht den
+Wahrnehmungsbestand [F2,F3,F7]. Dies gilt für die hier feste externe Quellfolge,
+nicht für einen geschlossenen Aktionskreis, in dem Ausgaben neue Eingaben ändern.
+Die spätere technische Qualifikation muss diese Isolation tatsächlich belegen.
+
+4. Vollständiges festes Quellenrezept – heute nicht ausführen
+
+Forschungsnamensraum ausschließlich MCM-FW1/source/v1.
+Neutrale Qualifikation später ausschließlich MCM-FW1/neutral/v1, separat gezählt.
+Keine Wiederverwendung historischer ER1-/ZW1-Forschungsquellen. „Frisch“ bedeutet
+neuer festgelegter Namensraum, keine Auswahl oder Zurückweisung nach realisierten
+Eigenschaften. Zufällige Werteübereinstimmungen rechtfertigen keine Ersatzkennung.
+
+Paare r=1,…,16; Orientierung o=(r−1) mod 2, acht Paare je Orientierung.
+Je Paar Bedingungen A/B, jeweils 256 Viererblöcke = 1024 Frames mit 48 Werten.
+Zwei getrennte deterministische SHA-256-Streams je Paar: cue und outcome.
+Schlüssel als UTF-8, ohne Zeilenende, Leerzeichen oder führende Nullen:
+  {namespace}/r={r}/stream={name}/draw={cursor}
+Cursor je Stream ab 0. Pro Versuch um eins erhöhen; erste acht Digestbytes
+als unsigned 64-bit Big-Endian v lesen. below(n) akzeptiert nur
+v < floor(2^64/n)*n und liefert v mod n. Andernfalls nächste Rohziehung.
+Höchstens 4096 Rohziehungen je Stream; Erschöpfung bedeutet technischen Abbruch,
+keine neue Kennung. Keine Quellen erzeugen oder Seeds ausprobieren, um dieses
+Rezept zu beurteilen. Die Verteilungsaussagen beruhen auf dem festgelegten
+Pseudozufallsmodell der getrennten Hashstreams, nicht auf gemessenen Häufigkeiten.
+
+Hinweisstrom: einmal below(4) für gemeinsamen Anfang A_1=B_1=K.
+Für Block k=2,…,256 genau eine akzeptierte Ziehung u_k=below(24):
+  A_k=A_(k−1), falls u_k<12;
+  sonst A_k=L[floor((u_k−12)/4)], wobei L die aufsteigend sortierte Liste
+  der drei Hinweise aus {0,1,2,3} ohne A_(k−1) ist.
+  B_k=u_k mod 4.
+Damit im Quellenmodell: Bleibewahrscheinlichkeit A=1/2, jeder andere Übergang
+1/6; B zeitlich unabhängig und gleichverteilt. Beide starten stationär mit
+gleichem marginalem Hinweisrand. Die gemeinsame u-Folge bleibt die feste Kopplung.
+
+Outcome-Strom: für jeden k=1,…,256 genau eine akzeptierte Ziehung below(4);
+z_k=1 genau bei Ergebnis 0, sonst 0. Derselbe z_k gilt in A und B.
+Phase p_k=0 für k≤128, sonst 1. Für c in {A,B}:
+  y_(c,k)=(c_k mod 2) XOR o XOR p_k XOR z_k.
+Ein Block besteht in dieser Reihenfolge aus
+  V((2*c_k+1)/16), V(1/2), V(1/4+y_(c,k)/2), V(15/16),
+  V(x)[j]=x+j/4096, j=0,…,47.
+Diese binären Brüche werden unverändert als binary64 verarbeitet.
+Keine Startpräfixe, zusätzlichen Frames, Phasenlabels oder Zwischenresets.
+
+Die Quellengesetze, Kopplung, Orientierung und Länge entsprechen ZW1 [F8].
+Realisierte A/B-Häufigkeiten dürfen abweichen; keine Angleichung oder Gewichtung
+nach Ergebnis. Beide Varianten sehen innerhalb einer Bedingung identisches
+Material. Alle 32 Quellen müssen später vor dem ersten Arm unabhängig aus dem
+festen Rezept rekonstruiert, verglichen und gemeinsam per Manifest versiegelt
+werden. Hashkontrolle vor jeder Bedingung und jedem Arm; keine On-demand-Quellen.
+
+5. Einziges Primärmaß und feste statistische Einheit
+
+T={3,5,…,1023}; 511 Ziele je Geschichte, Ziel 1025 zensiert.
+MAE ist unverändert der Mittelwert absoluter Differenzen der 48 Komponenten.
+Für Paar r und Bedingung c:
+  D_(r,c)=(1/511)*Summe über t in T von (MAE_BEHALTEN−MAE_RESET).
+  J_r=(D_(r,A)+D_(r,B))/2.
+  J=(1/16)*Summe der 16 J_r.
+J ist das einzige Primärmaß, kein A/B-Interaktionsmaß. Es beurteilt die
+gleichgewichtete Mischung der beiden Quellenbedingungen, keinen getrennten
+Nutzen in A und B. 8176 gepaarte Ziele je Bedingung, 16352 insgesamt,
+32704 einzelne Armfehler. Unabhängige statistische Einheit sind 16 Quellenpaare,
+nicht 32 Geschichten oder einzelne Ziele. Alle vier Arme eines Paars bleiben zusammen.
+
+Alle kalten, gleichen, erfolglosen, vor dem ersten Reset liegenden und nicht
+zurückgesetzten Ziele bleiben enthalten. Keine warme Maske oder Selektion von
+Geschichten mit günstigen beziehungsweise zahlreichen Resetereignissen.
+Fehlendes Ziel oder Paar: keine Auswertung einer Teilserie.
+
+Nominales zweiseitiges 95%-Perzentilintervall aus genau 10000 geschichteten
+Paarziehungen mit Zurücklegen: je Ziehung acht Paarindizes aus jeder Orientierung.
+Dieselben Indizes gelten für A, B und beide Varianten. Rationale Summen aus den
+gespeicherten binary64-Fehlern; keine Zwischenrundung für Entscheidungen.
+Sortierte Ziehungsmittel s_0,…,s_9999; für q=0,025 bzw. 0,975:
+h=9999*q, j=floor(h), Q(q)=(1−(h−j))*s_j+(h−j)*s_(j+1).
+
+Festes Rezept für die später einmal zu erzeugende 10000×16-Byte-Indexmatrix:
+Zeile a=0,…,9999, Spalte c=0,…,15, UTF-8-Schlüssel ohne Zeilenende:
+  MCM-FW1/bootstrap/v1/row={a}/column={c}
+Erste acht SHA-256-Bytes unsigned Big-Endian v; Bytewert
+  2*(v mod 8)+floor(c/8).
+Byte i bezeichnet Paar r=i+1. Spalten 0…7 ziehen Orientierung 0,
+Spalten 8…15 Orientierung 1. Keine Moduloverzerrung bei Teiler 8.
+Matrixerzeugung, unabhängige Rezeptprüfung und SHA-Bindung erfolgen ausschließlich
+in einer gesondert beauftragten Vorbereitung, nicht jetzt. Keine Übernahme der
+historischen ZW1-Matrix und keine Auswahl nach Ergebnissen. Die Statistikreferenz
+wertet dieselbe gebundene Matrix unabhängig aus, ohne zusätzliche Ziehungen.
+
+6. Entscheidung, Aussagefähigkeit und Widerlegung
+
+Technische Gültigkeit hat Vorrang: Quelle, Eingriff, Bestand, Referenzen,
+Vollständigkeit, Budgets und Cleanup müssen bestanden sein.
+Eine wirksame Löschung invalidiert mindestens eine unmittelbar vorher gültige
+Zelle der bestätigten Spur. Auslöser ohne gültige Zelle werden separat gezählt.
+Zusätzlich separat ausweisen, ob nach der Löschung noch mindestens eine Auswahl
+mit beobachtetem Ziel in dieser Geschichte folgt; ein Schlussreset zählt nicht
+als solche Gelegenheit. Keine Zielmaske daraus bilden.
+
+Keine wirksame Löschung in der gesamten Serie: NICHT_INFORMATIV, kein Nutzenurteil.
+Nur wirksame Löschungen nach der letzten relevanten Auswahl: ebenfalls
+NICHT_INFORMATIV hinsichtlich späterer Vorhersagen. Keine neue Serie anschließen.
+Löschungen müssen nicht in jedem Paar oder in beiden Bedingungen auftreten;
+unbetroffene Paare bleiben im festen Nenner. Gleiche Ausgaben trotz wirksamer
+Löschungen mit späterer Gelegenheit sind ein gültiger Befund, kein technischer
+Fehler und kein Anlass für Auswahl, Erweiterung oder Wiederholung.
+
+Bei technisch vollständiger, informativer Serie:
+  obere Intervallgrenze <0: NUTZEN_GESTUETZT für die festgelegte Quellenmischung;
+  untere Intervallgrenze >0: SCHADEN_GESTUETZT, Nutzenhypothese widersprochen;
+  Nullberührung oder Nulleinschluss: INCONCLUSIVE, keine Gleichwertigkeit.
+Keine Mindestnutzen- oder Powerzusage. Nullausgang erneuert keine Freigabe.
+
+Deskriptiv: D_A/D_B, alle Gewinne/Schäden, wirksame/ineffektive Auslöser,
+betroffene Offsets, Wiederanlernen und gleiche/abweichende Ausgaben berichten.
+Keine zusätzlichen Signifikanztests. Keine Behauptung eines isolierten
+Altersanteils, allgemeinen Lernvorteils, Semantik oder feldinterner Memory.
+
+7. Spätere unabhängige technische Abnahme – jetzt nicht ausführen
+
+Neutrale Gegenbeispiele müssen mindestens prüfen:
+a) Richtige Retained-Generation; gleich nummerierter Kandidat und fremde lebende
+   Generation bleiben unberührt; falsche Zuordnung wird abgewiesen.
+b) Offset 0 allein, Offset 1 allein, beide, keine Zelle; alle Fehler-Vorzeichen;
+   gültige Nullpaare zählen als gültige Zellen und werden wirklich invalidiert.
+c) Nur TRACE_CONFIRMED_RECENT löst aus; Promotion, Hinweis, unvollständiger Block
+   und nicht qualifizierte Bestätigung lösen nicht aus. Wiederholte echte
+   Bestätigungen sind neue Ereignisse, doppelte Verarbeitung desselben Ereignisses nicht.
+d) Innerhalb eines Arms bitgleiche eingefrorene Ausgabe, Receipt, Ticketfelder,
+   Originalreferenzen, Persistenzframe und Vorschlagsmetadaten über den Reset.
+   Auswahl vor Aufnahme darf nicht nachträglich mit der leeren Bank neu entstehen.
+e) Reguläres Feedback b+1 lernt aus den eingefrorenen Originalen neu; kein
+   Wiederherstellen alter ec/ep. Alle berechtigten Tickets gelten unverändert;
+   spätere Auswahl bei b+2 kann abweichen oder gleich bleiben.
+f) Exakte armübergreifende Bestandsidentität vor/nach Aufnahme, Blockabschluss,
+   Feedback und Reset; einschließlich Kandidaten-/Retained-Originalen, Reihenfolge,
+   Endmarken, Generationszählern, Formierung und tatsächlichen Verdrängungen.
+g) Fail-closed bei Teilpublikation, falscher Generation, Ressourcenfehler oder
+   unvollständigem Paar; erste Ursache und getrennte Cleanupzustände erhalten.
+
+Eine eigenständige Zustandsreferenz muss Löschung und neues Feedback aus Rohzustand
+und Eingaben bestimmen, ohne die produktive Resetfunktion aufzurufen. Eine
+unabhängige Archivrekonstruktion muss denselben Eingriff und die Fehler prüfen,
+ohne Observer-Behauptungen als Wahrheit zu übernehmen. Bestehende unveränderte
+Qualifikationen werden per Bindung übernommen; nur neue Eingriffs-/Zuordnungs-
+und Integrationspfade benötigen neue neutrale Prüfungen. Kein alter Audit-Replay.
+
+8. Vollständiger späterer Ausführungsumfang und Ressourcen
+
+16 Quellenpaare, 32 Geschichten à 1024 Frames; je Geschichte BEHALTEN und RESET:
+64 frische Policy-Arme, 64 begleitende Live-Referenzen, 64 unabhängige
+Arm-Archivrekonstruktionen (32 Bedingungsarchive mit jeweils beiden Armen),
+32 Bedingungsquellenprüfungen aus 16 unabhängigen Paarrekonstruktionen,
+eine unabhängige Gesamtstatistikreferenz und eine Matrix mit 10000 Paarziehungen.
+Null zusätzliche Policy-Mess-/Capture-Arme. Referenzen sind separat auszuweisen,
+nicht als kostenloser Systemspeicher zu behandeln. Neutrale Qualifikation ist
+ein gesonderter späterer Auftrag mit eigener Ausführungsbilanz.
+
+Feste serielle Reihenfolge je Paar: A/BEHALTEN, A/RESET, B/BEHALTEN, B/RESET.
+Eine Bedingung einschließlich Archivprüfung und Cleanup abschließen, bevor die
+nächste beginnt. Paarquittung erst nach vier frischen Armen, beiden vollständigen
+Archivprüfungen, Bestandsidentität und bestätigtem Cleanup. Zwischen Bedingungen
+nur kompakte Vergleichs-/Fehlerdaten halten; keine parallel gehaltenen Vollarchive.
+
+Unveränderte Obergrenzen [F8]: zwei Retained-Viererspuren, ein Viererkandidat,
+höchstens vier Bildungsframes, 18 Originalframes plus zwei Ausgabeslots,
+416-Byte-Bank, Zusatzheap und Receipt je 16384 Bytes, UTF-8 transient 32768 Bytes,
+höchstens zwei Endmarken. Ein begrenzter Scan von sechs Zellslots genügt konzeptionell;
+kein Schattenfehlerregister, keine zusätzliche Framehaltung für den Reset.
+
+Gemeinsamer harter Job 512 MiB, höchstens zwei Prozesse; Worker 54000 s,
+gesamt 57600 s einschließlich 3600 s Abschlussreserve. Vorbereitung 8 MiB;
+Quellen gesamt 2 MiB, je Quelle 32 KiB; Archive gesamt 32 MiB, je gzip 512 KiB;
+encoded/Dictionary je 4 MiB, Record 256 KiB; nodes/indices je 65536, edges 262144,
+Collections 16; Temporär/Export je 64 MiB, Administration 2 MiB, Closure 1 MiB.
+Laufzeit, Job-/Prozesspeak, Datenstrukturgrößen und Schreibbudgets getrennt belegen.
+Eine kleinere Fehlerbankbelegung garantiert keinen kleineren Archiv-/Prozesspeak.
+Grenzverletzung: technischer Abbruch, kein Auslassen einer Prüfung oder Anheben.
+
+Ein Forschungsstart benötigt später vollständige Code-/Laufzeit-/Rezept-/Matrix-
+Bindung, separates exklusives Ziel, reservierten Terminalabschluss und separate
+SHA-gebundene Einmalberechtigung. Vorhandenes Ziel oder Verbrauchsmarker sperrt
+einen zweiten Start. Kein Retry, Resume, Ersatzlauf, Tuning, Kennungswechsel oder
+Umfangszuwachs. Bei Abbruch erste Ursache, quittierte Paare, aktiven Teilfall,
+Ressourcen sowie Worker-, Arm-/Codec- und Dateicleanup getrennt sichern.
+
+9. Verbleibende technische Voraussetzungen und nächste Entscheidung
+
+Konzeptionell ist der Vergleich mit diesem Vertrag vollständig festgelegt.
+Offen und nicht durch dieses Dokument freigegeben sind: begrenzte Implementierung
+des separaten Resetpfads, unabhängige Live-/Archivreferenz, neutrale Qualifikation
+des Eingriffs und seriellen Gesamtpfads, Ressourcenbeleg, einmalige Matrixerzeugung
+und vollständige Vorstartbindung. Danach bleibt eine explizite Einmallauffreigabe
+erforderlich. Heute kein ausführbarer Code, keine Tests, Quellen oder Matrizen.
+
+Nächster Schritt beim Projektleiter: Entscheidung über genau dieses begrenzte
+Implementierungs-/Qualifikationspaket. Keine weitere konzeptionelle
+Bestätigungsschleife erforderlich; keine automatische Forschungsfreigabe.
+
+10. Fundstellen (Projektpfade relativ zum Workspace, bestehender Stand)
+
+[F1] tools/_s2uc_factor_recency.py:5 und tools/_s2uc_perception_recency.py:10:
+     E-Grundklasse, vollständige Wiederbeobachtung, TRACE_CONFIRMED_RECENT.
+[F2] tools/_s2uc_pair_context_adapter.py:55: Receipt vor Aufnahme derselben Frames.
+[F3] tools/_s2uc_multi_error.py:103,179,267,298: Auswahl, alle Feedbacktickets,
+     Promotionsmitnahme und normale Aufnahme/Pruning; Bankdefinition ab Zeile 39.
+[F4] tools/_s2uc_er1_run_engine.py:78: Feedback vor Wahrnehmung; eingefrorene Ausgabe.
+[F5] tools/_s2uc_promotion_ema.py:106 und
+     docs/S2UC_EMA_DIREKTE_PROMOTIONSMITNAHME_GEGENPRUEFVERTRAG_20261003.txt:
+     historischer Eingriff bei Promotion, keine Wiederbeobachtungslöschung.
+[F6] reports/s2uc/promotion-assessment-20261003-01/REPORT.md:3:
+     begrenzter Stabilitätsvorteil und Wechselschaden, kein allgemeiner Nutzenbeleg.
+[F7] tools/_s2uc_four_arm.py:26: framegetriebene Bestätigung, Promotion, Verdrängung.
+[F8] docs/S2UC_ZW1_ZEITLICHE_WIEDERKEHR_KONZEPTVERTRAG_20261018.md:
+     Abschnitte 2/4/6 für Quellengesetze, vollständige Ziele und Obergrenzen.
+[F9] reports/s2uc/zw1-comparison-16h-01/REPORT.md und
+     reports/s2uc/zw1-witness-audit-20261018-01/REPORT.md:
+     abgeschlossene historische Befunde; keine neue Auswertung dieses Materials.

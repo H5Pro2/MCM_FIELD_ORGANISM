@@ -1,0 +1,848 @@
+[
+  {
+    "case": "N1",
+    "arm": "M",
+    "mode": "ANCHOR",
+    "timing": {
+      "replay_wall_ns": 14377008200,
+      "export_serialization_ns": 2342000,
+      "file_output_ns": 1250000,
+      "bytes": 83008
+    }
+  },
+  {
+    "case": "N1",
+    "arm": "M",
+    "mode": "ON",
+    "timing": {
+      "wall_ns": {
+        "replay_other": 114115300,
+        "json_internal": 120766300,
+        "source_gate": 1693400,
+        "resource_trace_promotion": 646976700,
+        "resource_trace_approx": 1312656100,
+        "resource_trace_base": 14294046600,
+        "policy": 355574000,
+        "reference": 12062300,
+        "evidence_observation": 457465900,
+        "resource_other": 28852800,
+        "export_serialization": 1955000,
+        "file_output": 760400
+      },
+      "cpu_ns": {
+        "replay_other": 156250000,
+        "json_internal": 109375000,
+        "source_gate": 0,
+        "resource_trace_promotion": 515625000,
+        "resource_trace_approx": 1437500000,
+        "resource_trace_base": 14218750000,
+        "policy": 343750000,
+        "reference": 0,
+        "evidence_observation": 500000000,
+        "resource_other": 0,
+        "export_serialization": 0,
+        "file_output": 0
+      },
+      "calls": {
+        "json_internal": 412,
+        "source_gate": 80,
+        "resource_trace_promotion": 164910,
+        "resource_trace_approx": 164910,
+        "resource_trace_base": 164910,
+        "policy": 320,
+        "reference": 161,
+        "evidence_observation": 1094,
+        "resource_other": 480,
+        "export_serialization": 1,
+        "file_output": 1
+      },
+      "partition_wall_ns": 17346924800,
+      "partition_cpu_ns": 17281250000,
+      "replay_wall_ns": 17329185700,
+      "outer_wall_ns": 17346955300,
+      "outside_partition_ns": 30500,
+      "bytes": 83008,
+      "tracing_enabled": true,
+      "resource_certification": false
+    }
+  },
+  {
+    "case": "N1",
+    "arm": "M",
+    "mode": "OFF",
+    "timing": {
+      "wall_ns": {
+        "replay_other": 83902000,
+        "json_internal": 29841400,
+        "source_gate": 1380900,
+        "policy": 14609600,
+        "reference": 6305700,
+        "evidence_observation": 51431500,
+        "resource_other": 4806300,
+        "export_serialization": 1743100,
+        "file_output": 621800
+      },
+      "cpu_ns": {
+        "replay_other": 78125000,
+        "json_internal": 31250000,
+        "source_gate": 0,
+        "policy": 15625000,
+        "reference": 0,
+        "evidence_observation": 78125000,
+        "resource_other": 0,
+        "export_serialization": 0,
+        "file_output": 0
+      },
+      "calls": {
+        "json_internal": 412,
+        "source_gate": 80,
+        "policy": 320,
+        "reference": 161,
+        "evidence_observation": 1094,
+        "resource_other": 480,
+        "export_serialization": 1,
+        "file_output": 1
+      },
+      "partition_wall_ns": 194642300,
+      "partition_cpu_ns": 203125000,
+      "replay_wall_ns": 182140300,
+      "outer_wall_ns": 194659800,
+      "outside_partition_ns": 17500,
+      "bytes": 82999,
+      "tracing_enabled": false,
+      "resource_certification": false
+    }
+  },
+  {
+    "case": "N1",
+    "arm": "E",
+    "mode": "ON",
+    "timing": {
+      "wall_ns": {
+        "replay_other": 146675300,
+        "json_internal": 119396800,
+        "source_gate": 1805400,
+        "resource_trace_promotion": 641454600,
+        "resource_trace_approx": 1306195300,
+        "resource_trace_base": 14169315300,
+        "policy": 352654000,
+        "reference": 12512000,
+        "evidence_observation": 460855900,
+        "resource_other": 28562100,
+        "export_serialization": 2029200,
+        "file_output": 722300
+      },
+      "cpu_ns": {
+        "replay_other": 78125000,
+        "json_internal": 93750000,
+        "source_gate": 0,
+        "resource_trace_promotion": 609375000,
+        "resource_trace_approx": 1265625000,
+        "resource_trace_base": 14312500000,
+        "policy": 390625000,
+        "reference": 15625000,
+        "evidence_observation": 453125000,
+        "resource_other": 0,
+        "export_serialization": 0,
+        "file_output": 0
+      },
+      "calls": {
+        "json_internal": 412,
+        "source_gate": 80,
+        "resource_trace_promotion": 164898,
+        "resource_trace_approx": 164898,
+        "resource_trace_base": 164898,
+        "policy": 320,
+        "reference": 161,
+        "evidence_observation": 1094,
+        "resource_other": 480,
+        "export_serialization": 1,
+        "file_output": 1
+      },
+      "partition_wall_ns": 17242178200,
+      "partition_cpu_ns": 17218750000,
+      "replay_wall_ns": 17228068300,
+      "outer_wall_ns": 17242190800,
+      "outside_partition_ns": 12600,
+      "bytes": 82406,
+      "tracing_enabled": true,
+      "resource_certification": false
+    }
+  },
+  {
+    "case": "N1",
+    "arm": "E",
+    "mode": "OFF",
+    "timing": {
+      "wall_ns": {
+        "replay_other": 114294100,
+        "json_internal": 27109100,
+        "source_gate": 1272200,
+        "policy": 12460300,
+        "reference": 5546300,
+        "evidence_observation": 47634700,
+        "resource_other": 3938200,
+        "export_serialization": 1812400,
+        "file_output": 803100
+      },
+      "cpu_ns": {
+        "replay_other": 140625000,
+        "json_internal": 31250000,
+        "source_gate": 0,
+        "policy": 15625000,
+        "reference": 15625000,
+        "evidence_observation": 15625000,
+        "resource_other": 0,
+        "export_serialization": 0,
+        "file_output": 0
+      },
+      "calls": {
+        "json_internal": 412,
+        "source_gate": 80,
+        "policy": 320,
+        "reference": 161,
+        "evidence_observation": 1094,
+        "resource_other": 480,
+        "export_serialization": 1,
+        "file_output": 1
+      },
+      "partition_wall_ns": 214870400,
+      "partition_cpu_ns": 218750000,
+      "replay_wall_ns": 201456100,
+      "outer_wall_ns": 214884800,
+      "outside_partition_ns": 14400,
+      "bytes": 82397,
+      "tracing_enabled": false,
+      "resource_certification": false
+    }
+  },
+  {
+    "case": "N1",
+    "arm": "K",
+    "mode": "ON",
+    "timing": {
+      "wall_ns": {
+        "replay_other": 180214500,
+        "json_internal": 115222700,
+        "source_gate": 1752800,
+        "resource_trace_promotion": 498838100,
+        "resource_trace_approx": 1011321600,
+        "resource_trace_base": 14002195500,
+        "policy": 301711300,
+        "reference": 13042200,
+        "evidence_observation": 418441700,
+        "resource_other": 28262200,
+        "export_serialization": 1350400,
+        "file_output": 599400
+      },
+      "cpu_ns": {
+        "replay_other": 156250000,
+        "json_internal": 125000000,
+        "source_gate": 0,
+        "resource_trace_promotion": 531250000,
+        "resource_trace_approx": 906250000,
+        "resource_trace_base": 14078125000,
+        "policy": 265625000,
+        "reference": 31250000,
+        "evidence_observation": 421875000,
+        "resource_other": 0,
+        "export_serialization": 0,
+        "file_output": 0
+      },
+      "calls": {
+        "json_internal": 393,
+        "source_gate": 80,
+        "resource_trace_promotion": 122493,
+        "resource_trace_approx": 122493,
+        "resource_trace_base": 122493,
+        "policy": 320,
+        "reference": 161,
+        "evidence_observation": 1094,
+        "resource_other": 480,
+        "export_serialization": 1,
+        "file_output": 1
+      },
+      "partition_wall_ns": 16572952400,
+      "partition_cpu_ns": 16515625000,
+      "replay_wall_ns": 16560830500,
+      "outer_wall_ns": 16572967000,
+      "outside_partition_ns": 14600,
+      "bytes": 64548,
+      "tracing_enabled": true,
+      "resource_certification": false
+    }
+  },
+  {
+    "case": "N1",
+    "arm": "K",
+    "mode": "OFF",
+    "timing": {
+      "wall_ns": {
+        "replay_other": 154341900,
+        "json_internal": 27842700,
+        "source_gate": 1413400,
+        "policy": 9268900,
+        "reference": 5623700,
+        "evidence_observation": 46713500,
+        "resource_other": 3501000,
+        "export_serialization": 1177100,
+        "file_output": 661800
+      },
+      "cpu_ns": {
+        "replay_other": 156250000,
+        "json_internal": 15625000,
+        "source_gate": 15625000,
+        "policy": 0,
+        "reference": 0,
+        "evidence_observation": 62500000,
+        "resource_other": 0,
+        "export_serialization": 0,
+        "file_output": 0
+      },
+      "calls": {
+        "json_internal": 393,
+        "source_gate": 80,
+        "policy": 320,
+        "reference": 161,
+        "evidence_observation": 1094,
+        "resource_other": 480,
+        "export_serialization": 1,
+        "file_output": 1
+      },
+      "partition_wall_ns": 250544000,
+      "partition_cpu_ns": 250000000,
+      "replay_wall_ns": 237453500,
+      "outer_wall_ns": 250556100,
+      "outside_partition_ns": 12100,
+      "bytes": 64539,
+      "tracing_enabled": false,
+      "resource_certification": false
+    }
+  },
+  {
+    "case": "N1",
+    "arm": "P",
+    "mode": "ON",
+    "timing": {
+      "wall_ns": {
+        "replay_other": 217161300,
+        "json_internal": 114103700,
+        "source_gate": 1776300,
+        "resource_trace_promotion": 484390100,
+        "resource_trace_approx": 987473800,
+        "resource_trace_base": 13803638400,
+        "policy": 288297300,
+        "reference": 11821400,
+        "evidence_observation": 404738400,
+        "resource_other": 27585900,
+        "export_serialization": 1675200,
+        "file_output": 1038300
+      },
+      "cpu_ns": {
+        "replay_other": 93750000,
+        "json_internal": 156250000,
+        "source_gate": 15625000,
+        "resource_trace_promotion": 453125000,
+        "resource_trace_approx": 1062500000,
+        "resource_trace_base": 13781250000,
+        "policy": 312500000,
+        "reference": 0,
+        "evidence_observation": 421875000,
+        "resource_other": 31250000,
+        "export_serialization": 0,
+        "file_output": 0
+      },
+      "calls": {
+        "json_internal": 393,
+        "source_gate": 80,
+        "resource_trace_promotion": 121253,
+        "resource_trace_approx": 121253,
+        "resource_trace_base": 121253,
+        "policy": 241,
+        "reference": 161,
+        "evidence_observation": 1094,
+        "resource_other": 480,
+        "export_serialization": 1,
+        "file_output": 1
+      },
+      "partition_wall_ns": 16343700100,
+      "partition_cpu_ns": 16328125000,
+      "replay_wall_ns": 16329163800,
+      "outer_wall_ns": 16343751700,
+      "outside_partition_ns": 51600,
+      "bytes": 64738,
+      "tracing_enabled": true,
+      "resource_certification": false
+    }
+  },
+  {
+    "case": "N1",
+    "arm": "P",
+    "mode": "OFF",
+    "timing": {
+      "wall_ns": {
+        "replay_other": 196759400,
+        "json_internal": 27992800,
+        "source_gate": 1385900,
+        "policy": 8957800,
+        "reference": 5593100,
+        "evidence_observation": 45595800,
+        "resource_other": 3446200,
+        "export_serialization": 1156500,
+        "file_output": 684000
+      },
+      "cpu_ns": {
+        "replay_other": 218750000,
+        "json_internal": 46875000,
+        "source_gate": 0,
+        "policy": 15625000,
+        "reference": 15625000,
+        "evidence_observation": 0,
+        "resource_other": 0,
+        "export_serialization": 0,
+        "file_output": 0
+      },
+      "calls": {
+        "json_internal": 393,
+        "source_gate": 80,
+        "policy": 241,
+        "reference": 161,
+        "evidence_observation": 1094,
+        "resource_other": 480,
+        "export_serialization": 1,
+        "file_output": 1
+      },
+      "partition_wall_ns": 291571500,
+      "partition_cpu_ns": 296875000,
+      "replay_wall_ns": 266139000,
+      "outer_wall_ns": 291590300,
+      "outside_partition_ns": 18800,
+      "bytes": 64729,
+      "tracing_enabled": false,
+      "resource_certification": false
+    }
+  },
+  {
+    "case": "N2",
+    "arm": "M",
+    "mode": "ANCHOR",
+    "timing": {
+      "replay_wall_ns": 21908608400,
+      "export_serialization_ns": 3113400,
+      "file_output_ns": 1461200,
+      "bytes": 99749
+    }
+  },
+  {
+    "case": "N2",
+    "arm": "M",
+    "mode": "OFF",
+    "timing": {
+      "wall_ns": {
+        "replay_other": 225435500,
+        "json_internal": 40990200,
+        "source_gate": 1440000,
+        "policy": 13082500,
+        "reference": 6107600,
+        "evidence_observation": 65905000,
+        "resource_other": 4290500,
+        "export_serialization": 3362600,
+        "file_output": 1184900
+      },
+      "cpu_ns": {
+        "replay_other": 234375000,
+        "json_internal": 46875000,
+        "source_gate": 0,
+        "policy": 15625000,
+        "reference": 15625000,
+        "evidence_observation": 31250000,
+        "resource_other": 15625000,
+        "export_serialization": 0,
+        "file_output": 0
+      },
+      "calls": {
+        "json_internal": 511,
+        "source_gate": 80,
+        "policy": 320,
+        "reference": 161,
+        "evidence_observation": 1080,
+        "resource_other": 480,
+        "export_serialization": 1,
+        "file_output": 1
+      },
+      "partition_wall_ns": 361798800,
+      "partition_cpu_ns": 359375000,
+      "replay_wall_ns": 346742100,
+      "outer_wall_ns": 361815800,
+      "outside_partition_ns": 17000,
+      "bytes": 99740,
+      "tracing_enabled": false,
+      "resource_certification": false
+    }
+  },
+  {
+    "case": "N2",
+    "arm": "M",
+    "mode": "ON",
+    "timing": {
+      "wall_ns": {
+        "replay_other": 278823800,
+        "json_internal": 168774200,
+        "source_gate": 1852500,
+        "resource_trace_promotion": 728598700,
+        "resource_trace_approx": 1486673900,
+        "resource_trace_base": 21529485400,
+        "policy": 392506900,
+        "reference": 12229400,
+        "evidence_observation": 503641800,
+        "resource_other": 29264600,
+        "export_serialization": 2439000,
+        "file_output": 988000
+      },
+      "cpu_ns": {
+        "replay_other": 265625000,
+        "json_internal": 140625000,
+        "source_gate": 0,
+        "resource_trace_promotion": 734375000,
+        "resource_trace_approx": 1593750000,
+        "resource_trace_base": 21421875000,
+        "policy": 375000000,
+        "reference": 15625000,
+        "evidence_observation": 515625000,
+        "resource_other": 31250000,
+        "export_serialization": 0,
+        "file_output": 0
+      },
+      "calls": {
+        "json_internal": 511,
+        "source_gate": 80,
+        "resource_trace_promotion": 190320,
+        "resource_trace_approx": 190320,
+        "resource_trace_base": 190320,
+        "policy": 320,
+        "reference": 161,
+        "evidence_observation": 1080,
+        "resource_other": 480,
+        "export_serialization": 1,
+        "file_output": 1
+      },
+      "partition_wall_ns": 25135278200,
+      "partition_cpu_ns": 25093750000,
+      "replay_wall_ns": 25120011200,
+      "outer_wall_ns": 25135310400,
+      "outside_partition_ns": 32200,
+      "bytes": 99749,
+      "tracing_enabled": true,
+      "resource_certification": false
+    }
+  },
+  {
+    "case": "N2",
+    "arm": "E",
+    "mode": "OFF",
+    "timing": {
+      "wall_ns": {
+        "replay_other": 255782900,
+        "json_internal": 41465400,
+        "source_gate": 1415100,
+        "policy": 12865200,
+        "reference": 6270800,
+        "evidence_observation": 67037800,
+        "resource_other": 4236600,
+        "export_serialization": 2064300,
+        "file_output": 591200
+      },
+      "cpu_ns": {
+        "replay_other": 218750000,
+        "json_internal": 15625000,
+        "source_gate": 0,
+        "policy": 46875000,
+        "reference": 0,
+        "evidence_observation": 93750000,
+        "resource_other": 15625000,
+        "export_serialization": 0,
+        "file_output": 0
+      },
+      "calls": {
+        "json_internal": 511,
+        "source_gate": 80,
+        "policy": 320,
+        "reference": 161,
+        "evidence_observation": 1080,
+        "resource_other": 480,
+        "export_serialization": 1,
+        "file_output": 1
+      },
+      "partition_wall_ns": 391729300,
+      "partition_cpu_ns": 390625000,
+      "replay_wall_ns": 378676800,
+      "outer_wall_ns": 391742500,
+      "outside_partition_ns": 13200,
+      "bytes": 99138,
+      "tracing_enabled": false,
+      "resource_certification": false
+    }
+  },
+  {
+    "case": "N2",
+    "arm": "E",
+    "mode": "ON",
+    "timing": {
+      "wall_ns": {
+        "replay_other": 313314800,
+        "json_internal": 170419200,
+        "source_gate": 1873500,
+        "resource_trace_promotion": 742041000,
+        "resource_trace_approx": 1513263600,
+        "resource_trace_base": 21820770200,
+        "policy": 398675900,
+        "reference": 12301500,
+        "evidence_observation": 516127100,
+        "resource_other": 29185500,
+        "export_serialization": 2388100,
+        "file_output": 690000
+      },
+      "cpu_ns": {
+        "replay_other": 343750000,
+        "json_internal": 187500000,
+        "source_gate": 0,
+        "resource_trace_promotion": 750000000,
+        "resource_trace_approx": 1562500000,
+        "resource_trace_base": 21687500000,
+        "policy": 421875000,
+        "reference": 0,
+        "evidence_observation": 531250000,
+        "resource_other": 15625000,
+        "export_serialization": 0,
+        "file_output": 0
+      },
+      "calls": {
+        "json_internal": 511,
+        "source_gate": 80,
+        "resource_trace_promotion": 190308,
+        "resource_trace_approx": 190308,
+        "resource_trace_base": 190308,
+        "policy": 320,
+        "reference": 161,
+        "evidence_observation": 1080,
+        "resource_other": 480,
+        "export_serialization": 1,
+        "file_output": 1
+      },
+      "partition_wall_ns": 25521050400,
+      "partition_cpu_ns": 25500000000,
+      "replay_wall_ns": 25506743600,
+      "outer_wall_ns": 25521064200,
+      "outside_partition_ns": 13800,
+      "bytes": 99147,
+      "tracing_enabled": true,
+      "resource_certification": false
+    }
+  },
+  {
+    "case": "N2",
+    "arm": "K",
+    "mode": "OFF",
+    "timing": {
+      "wall_ns": {
+        "replay_other": 302159200,
+        "json_internal": 43217000,
+        "source_gate": 1673300,
+        "policy": 11089200,
+        "reference": 6377200,
+        "evidence_observation": 66226300,
+        "resource_other": 3908000,
+        "export_serialization": 1608000,
+        "file_output": 703900
+      },
+      "cpu_ns": {
+        "replay_other": 312500000,
+        "json_internal": 62500000,
+        "source_gate": 0,
+        "policy": 15625000,
+        "reference": 0,
+        "evidence_observation": 31250000,
+        "resource_other": 15625000,
+        "export_serialization": 0,
+        "file_output": 0
+      },
+      "calls": {
+        "json_internal": 506,
+        "source_gate": 80,
+        "policy": 320,
+        "reference": 161,
+        "evidence_observation": 1080,
+        "resource_other": 480,
+        "export_serialization": 1,
+        "file_output": 1
+      },
+      "partition_wall_ns": 436962100,
+      "partition_cpu_ns": 437500000,
+      "replay_wall_ns": 423766100,
+      "outer_wall_ns": 436975100,
+      "outside_partition_ns": 13000,
+      "bytes": 81106,
+      "tracing_enabled": false,
+      "resource_certification": false
+    }
+  },
+  {
+    "case": "N2",
+    "arm": "K",
+    "mode": "ON",
+    "timing": {
+      "wall_ns": {
+        "replay_other": 346663700,
+        "json_internal": 172784300,
+        "source_gate": 1728000,
+        "resource_trace_promotion": 603411900,
+        "resource_trace_approx": 1211688000,
+        "resource_trace_base": 21072116100,
+        "policy": 344169100,
+        "reference": 12167700,
+        "evidence_observation": 469412600,
+        "resource_other": 27638300,
+        "export_serialization": 1707400,
+        "file_output": 861000
+      },
+      "cpu_ns": {
+        "replay_other": 296875000,
+        "json_internal": 78125000,
+        "source_gate": 0,
+        "resource_trace_promotion": 625000000,
+        "resource_trace_approx": 1390625000,
+        "resource_trace_base": 21093750000,
+        "policy": 390625000,
+        "reference": 0,
+        "evidence_observation": 359375000,
+        "resource_other": 15625000,
+        "export_serialization": 0,
+        "file_output": 0
+      },
+      "calls": {
+        "json_internal": 506,
+        "source_gate": 80,
+        "resource_trace_promotion": 148777,
+        "resource_trace_approx": 148777,
+        "resource_trace_base": 148777,
+        "policy": 320,
+        "reference": 161,
+        "evidence_observation": 1080,
+        "resource_other": 480,
+        "export_serialization": 1,
+        "file_output": 1
+      },
+      "partition_wall_ns": 24264348100,
+      "partition_cpu_ns": 24250000000,
+      "replay_wall_ns": 24250985400,
+      "outer_wall_ns": 24264369600,
+      "outside_partition_ns": 21500,
+      "bytes": 81115,
+      "tracing_enabled": true,
+      "resource_certification": false
+    }
+  },
+  {
+    "case": "N2",
+    "arm": "P",
+    "mode": "OFF",
+    "timing": {
+      "wall_ns": {
+        "replay_other": 325566800,
+        "json_internal": 41678400,
+        "source_gate": 1547600,
+        "policy": 10157200,
+        "reference": 6455800,
+        "evidence_observation": 65718100,
+        "resource_other": 3608500,
+        "export_serialization": 1434600,
+        "file_output": 630100
+      },
+      "cpu_ns": {
+        "replay_other": 203125000,
+        "json_internal": 46875000,
+        "source_gate": 0,
+        "policy": 31250000,
+        "reference": 31250000,
+        "evidence_observation": 125000000,
+        "resource_other": 15625000,
+        "export_serialization": 0,
+        "file_output": 0
+      },
+      "calls": {
+        "json_internal": 506,
+        "source_gate": 80,
+        "policy": 241,
+        "reference": 161,
+        "evidence_observation": 1080,
+        "resource_other": 480,
+        "export_serialization": 1,
+        "file_output": 1
+      },
+      "partition_wall_ns": 456797100,
+      "partition_cpu_ns": 453125000,
+      "replay_wall_ns": 444598300,
+      "outer_wall_ns": 456837000,
+      "outside_partition_ns": 39900,
+      "bytes": 81156,
+      "tracing_enabled": false,
+      "resource_certification": false
+    }
+  },
+  {
+    "case": "N2",
+    "arm": "P",
+    "mode": "ON",
+    "timing": {
+      "wall_ns": {
+        "replay_other": 388507700,
+        "json_internal": 168974200,
+        "source_gate": 2042300,
+        "resource_trace_promotion": 591046200,
+        "resource_trace_approx": 1206993100,
+        "resource_trace_base": 21300615700,
+        "policy": 336482300,
+        "reference": 12268600,
+        "evidence_observation": 457845800,
+        "resource_other": 28001500,
+        "export_serialization": 1574900,
+        "file_output": 678500
+      },
+      "cpu_ns": {
+        "replay_other": 343750000,
+        "json_internal": 203125000,
+        "source_gate": 15625000,
+        "resource_trace_promotion": 671875000,
+        "resource_trace_approx": 1281250000,
+        "resource_trace_base": 21078125000,
+        "policy": 375000000,
+        "reference": 0,
+        "evidence_observation": 500000000,
+        "resource_other": 15625000,
+        "export_serialization": 0,
+        "file_output": 0
+      },
+      "calls": {
+        "json_internal": 506,
+        "source_gate": 80,
+        "resource_trace_promotion": 147537,
+        "resource_trace_approx": 147537,
+        "resource_trace_base": 147537,
+        "policy": 241,
+        "reference": 161,
+        "evidence_observation": 1080,
+        "resource_other": 480,
+        "export_serialization": 1,
+        "file_output": 1
+      },
+      "partition_wall_ns": 24495030800,
+      "partition_cpu_ns": 24484375000,
+      "replay_wall_ns": 24481338900,
+      "outer_wall_ns": 24495043500,
+      "outside_partition_ns": 12700,
+      "bytes": 81164,
+      "tracing_enabled": true,
+      "resource_certification": false
+    }
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "status": "PENDING",
+  "action": "NASA_FIRST_10S_MATERIALIZE_ONLY",
+  "binding_sha256": "3089947ad40211a66866b9d700a103afc319a7af553fe991a3ff175cd82cae3b",
+  "output": "reports/s2uc/nasa-contiguous-materialization-20260930-01"
+}

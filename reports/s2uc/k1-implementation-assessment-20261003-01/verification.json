@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-04",
+  "qualification_code_match": true,
+  "prior_bindings_verified": true,
+  "qualification_closures_verified": [
+    "01",
+    "02"
+  ],
+  "original_test_fixture_hash_verified": true,
+  "production_unchanged_between_attempts": true,
+  "tests": {
+    "count": 10,
+    "success": true,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "output": "test_K01_hold_without_hidden_new_trace (tests.test_s2uc_k1.K1Tests.test_K01_hold_without_hidden_new_trace) ... ok\ntest_K02_second_close_replaces_without_extension (tests.test_s2uc_k1.K1Tests.test_K02_second_close_replaces_without_extension) ... ok\ntest_K03_exact_promotion_before_and_at_deadline (tests.test_s2uc_k1.K1Tests.test_K03_exact_promotion_before_and_at_deadline) ... ok\ntest_K04_expiry_during_retained_confirmation_loses_U_candidate (tests.test_s2uc_k1.K1Tests.test_K04_expiry_during_retained_confirmation_loses_U_candidate) ... ok\ntest_K05_pending_dead_key_never_revived (tests.test_s2uc_k1.K1Tests.test_K05_pending_dead_key_never_revived) ... ok\ntest_K06_promotion_cells_and_frozen_ticket (tests.test_s2uc_k1.K1Tests.test_K06_promotion_cells_and_frozen_ticket) ... ok\ntest_K07_defaults_scope_incomplete_and_generation_limits (tests.test_s2uc_k1.K1Tests.test_K07_defaults_scope_incomplete_and_generation_limits) ... ok\ntest_K08_full_stock_resources_and_cleanup (tests.test_s2uc_k1.K1Tests.test_K08_full_stock_resources_and_cleanup) ... ok\ntest_K09_neutral_harm_and_lost_new_experience (tests.test_s2uc_k1.K1Tests.test_K09_neutral_harm_and_lost_new_experience) ... ok\ntest_K10_inherited_policy_and_independent_reference (tests.test_s2uc_k1.K1Tests.test_K10_inherited_policy_and_independent_reference) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 188.674s\n\nOK\n"
+  },
+  "resource_maxima": {
+    "additional_python_peak": 9136,
+    "original_frames_peak": 16,
+    "output_slots_peak": 2,
+    "combined_peak": 17,
+    "original_frames_upper_bound": 16,
+    "combined_upper_bound": 18,
+    "packed": 416,
+    "receipt_bytes_peak": 1468,
+    "utf8_upper": 2936
+  },
+  "supplement_binding_scope": "Current source and stored results sealed together; supplements did not record a historical prestart code hash",
+  "neutral_adapter_runs": 34,
+  "neutral_input_positions": 580,
+  "probe_reference_positions": 528,
+  "new_behavior_tests": 0,
+  "T1_replays": 0,
+  "F_cases_materialized": 0,
+  "comparison_ready": false
+}

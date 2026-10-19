@@ -1,0 +1,356 @@
+{
+  "status": "PASS",
+  "archive_files_verified": 133,
+  "closure_sha256": "df4bb51d44eb4e188e4c7a41e30c4d80d56daac1758d5ec41a75df3ae9da036e",
+  "prestart_sha256": "58f6009f7b5609e3993983bafe554f9029bdca31f82addf9c79fa5eec2120537",
+  "authorization_sha256": "716d2b15bc2565bde2d5439dc720d6823b93a344d2acbe33f92da152d38359c1",
+  "primary": [
+    {
+      "ci": [
+        -0.006591796874999998,
+        -0.003214009602864548
+      ],
+      "condition": "S",
+      "direction": "negative",
+      "level": 0.975,
+      "mask": "Y_33_128",
+      "mean": -0.0048828124999999965,
+      "orientation": "ALL",
+      "per_replicate": [
+        -0.010416666666666657,
+        -0.0013020833333333148,
+        -0.0078125,
+        -0.005208333333333315,
+        -0.005208333333333343,
+        -0.0078125,
+        -0.0078125,
+        -0.0013020833333333148,
+        -0.00390625,
+        -0.0078125,
+        -0.013020833333333343,
+        -0.006510416666666685,
+        -0.010416666666666657,
+        -0.0026041666666666574,
+        -0.0026041666666666574,
+        -0.006510416666666657,
+        -0.01171875,
+        -0.0013020833333333148,
+        -0.0013020833333333426,
+        -0.005208333333333343,
+        0.0026041666666666574,
+        -0.00390625,
+        -0.010416666666666657,
+        -0.0026041666666666574,
+        -0.005208333333333315,
+        0.0013020833333333426,
+        -0.010416666666666685,
+        0.0,
+        -0.009114583333333315,
+        -0.00390625,
+        0.00390625,
+        0.0013020833333333426
+      ],
+      "primary": true,
+      "verdict": "BELEGT"
+    },
+    {
+      "ci": [
+        -0.0067138671875,
+        0.0009765625
+      ],
+      "condition": "W",
+      "direction": "positive",
+      "level": 0.975,
+      "mask": "Y_129_160",
+      "mean": -0.0029296875,
+      "orientation": "ALL",
+      "per_replicate": [
+        -0.00390625,
+        0.0,
+        0.01171875,
+        -0.01171875,
+        0.0,
+        -0.00390625,
+        -0.00390625,
+        0.0,
+        0.015625,
+        -0.0078125,
+        -0.00390625,
+        -0.015625,
+        -0.01171875,
+        0.00390625,
+        0.015625,
+        -0.00390625,
+        -0.00390625,
+        0.01953125,
+        0.01171875,
+        -0.0234375,
+        -0.015625,
+        0.0,
+        -0.00390625,
+        -0.015625,
+        -0.0078125,
+        -0.0078125,
+        -0.0078125,
+        -0.0078125,
+        0.00390625,
+        0.00390625,
+        -0.01171875,
+        -0.0078125
+      ],
+      "primary": true,
+      "verdict": "NICHT_NACHGEWIESEN"
+    }
+  ],
+  "tradeoff": "NICHT_NACHGEWIESEN",
+  "means": {
+    "S": {
+      "G": {
+        "U": 0.09877017100192678,
+        "L": 0.10103564547206166
+      },
+      "G_Y": {
+        "U": 0.1953582763671875,
+        "L": 0.199951171875
+      },
+      "G_init": {
+        "U": 0.17857142857142858,
+        "L": 0.17857142857142858
+      },
+      "G_post": {
+        "U": 0.09767913818359375,
+        "L": 0.0999755859375
+      },
+      "G_skeleton": {
+        "U": 0.0,
+        "L": 0.0
+      },
+      "Y_129_160": {
+        "U": 0.2030029296875,
+        "L": 0.2060546875
+      },
+      "Y_161_256": {
+        "U": 0.19482421875,
+        "L": 0.19962565104166666
+      },
+      "Y_1_32": {
+        "U": 0.2020263671875,
+        "L": 0.2066650390625
+      },
+      "Y_33_128": {
+        "U": 0.19112141927083334,
+        "L": 0.19600423177083334
+      }
+    },
+    "W": {
+      "G": {
+        "U": 0.09867985308285164,
+        "L": 0.1007120062620424
+      },
+      "G_Y": {
+        "U": 0.1951751708984375,
+        "L": 0.1992950439453125
+      },
+      "G_init": {
+        "U": 0.17857142857142858,
+        "L": 0.17857142857142858
+      },
+      "G_post": {
+        "U": 0.09758758544921875,
+        "L": 0.09964752197265625
+      },
+      "G_skeleton": {
+        "U": 0.0,
+        "L": 0.0
+      },
+      "Y_129_160": {
+        "U": 0.206787109375,
+        "L": 0.209716796875
+      },
+      "Y_161_256": {
+        "U": 0.19307454427083334,
+        "L": 0.1966552734375
+      },
+      "Y_1_32": {
+        "U": 0.2020263671875,
+        "L": 0.2066650390625
+      },
+      "Y_33_128": {
+        "U": 0.19112141927083334,
+        "L": 0.19600423177083334
+      }
+    }
+  },
+  "counts": {
+    "paired_targets": 33216,
+    "paired_Y_targets": 16384
+  },
+  "resources": {
+    "U": {
+      "additional_python_peak": 6260,
+      "combined_peak": 0,
+      "combined_upper_bound": 18,
+      "original_frames_peak": 0,
+      "original_frames_upper_bound": 16,
+      "output_slots_peak": 2,
+      "packed": 416,
+      "receipt_bytes_peak": 1064,
+      "utf8_upper": 2128,
+      "boundary_base_arm_bytes": 16027,
+      "boundary_original_objects_bytes": 14755,
+      "boundary_original_payload_bytes": 5760,
+      "boundary_originals": 15,
+      "boundary_output_new_payloads": 0,
+      "boundary_output_payload_equivalent": 768,
+      "boundary_output_slots": 2,
+      "boundary_system_reachable_bytes": 19994,
+      "boundary_valid_cells": 3
+    },
+    "L": {
+      "additional_python_peak": 5976,
+      "combined_peak": 0,
+      "combined_upper_bound": 18,
+      "original_frames_peak": 0,
+      "original_frames_upper_bound": 16,
+      "output_slots_peak": 2,
+      "packed": 416,
+      "receipt_bytes_peak": 937,
+      "utf8_upper": 1874,
+      "boundary_base_arm_bytes": 16011,
+      "boundary_original_objects_bytes": 14755,
+      "boundary_original_payload_bytes": 5760,
+      "boundary_originals": 15,
+      "boundary_output_new_payloads": 0,
+      "boundary_output_payload_equivalent": 768,
+      "boundary_output_slots": 2,
+      "boundary_system_reachable_bytes": 19872,
+      "boundary_valid_cells": 3
+    }
+  },
+  "phase_peaks": {
+    "U": {
+      "feedback": {
+        "retained": 2774,
+        "total": 3438,
+        "transient": 696
+      },
+      "finish": {
+        "retained": 2216,
+        "total": 2272,
+        "transient": 56
+      },
+      "perception": {
+        "retained": 1612,
+        "total": 6260,
+        "transient": 4680
+      }
+    },
+    "L": {
+      "feedback": {
+        "retained": 2661,
+        "total": 3319,
+        "transient": 672
+      },
+      "finish": {
+        "retained": 2216,
+        "total": 2216,
+        "transient": 0
+      },
+      "perception": {
+        "retained": 1612,
+        "total": 5976,
+        "transient": 4380
+      }
+    }
+  },
+  "Z": {
+    "S": {
+      "U": {
+        "Y_targets": 8192,
+        "three_hypotheses": 4025,
+        "Z_present": 6096,
+        "Z_warm": 5704,
+        "Z_cold": 392,
+        "Z_candidate": 1925,
+        "Z_retained": 4171,
+        "Z_selected": 1506,
+        "P_selected": 840,
+        "Z_valid_feedback": 6096
+      },
+      "L": {
+        "Y_targets": 8192,
+        "three_hypotheses": 4025,
+        "Z_present": 6096,
+        "Z_warm": 5704,
+        "Z_cold": 392,
+        "Z_candidate": 1925,
+        "Z_retained": 4171,
+        "Z_selected": 1491,
+        "P_selected": 690,
+        "Z_valid_feedback": 6096
+      }
+    },
+    "W": {
+      "U": {
+        "Y_targets": 8192,
+        "three_hypotheses": 3928,
+        "Z_present": 6190,
+        "Z_warm": 5807,
+        "Z_cold": 383,
+        "Z_candidate": 1879,
+        "Z_retained": 4311,
+        "Z_selected": 1496,
+        "P_selected": 830,
+        "Z_valid_feedback": 6190
+      },
+      "L": {
+        "Y_targets": 8192,
+        "three_hypotheses": 3928,
+        "Z_present": 6190,
+        "Z_warm": 5807,
+        "Z_cold": 383,
+        "Z_candidate": 1879,
+        "Z_retained": 4311,
+        "Z_selected": 1490,
+        "P_selected": 670,
+        "Z_valid_feedback": 6190
+      }
+    }
+  },
+  "lifecycle_totals": {
+    "S": {
+      "all_promotions": 1015,
+      "all_evictions": 951,
+      "Z_promotions": 382,
+      "Z_evictions": 367,
+      "Z_candidate_creations": 395
+    },
+    "W": {
+      "all_promotions": 981,
+      "all_evictions": 917,
+      "Z_promotions": 374,
+      "Z_evictions": 356,
+      "Z_candidate_creations": 384
+    }
+  },
+  "worker": {
+    "L_reference_advances": 66560,
+    "U_reference_advances": 66560,
+    "Y_targets_per_arm": 16384,
+    "arm_frames": 133120,
+    "arms": 128,
+    "cases": 64,
+    "engine_seconds": 667.3617746999953,
+    "neutral_only": false,
+    "source_frames": 66560,
+    "status": "COMPLETE",
+    "targets_per_arm": 33216
+  },
+  "charged_preparation_bytes": 4635399,
+  "supervisor_seconds": 673.4545923,
+  "export_bytes": 8419051,
+  "max_case_expanded": 2254124,
+  "max_case_gzip": 128249,
+  "additional_replays": 0,
+  "analysis_script_sha256": "d3d374e63f64e82faaccaac07091b96231ad9f0c0ba12e311babab83a7041842"
+}

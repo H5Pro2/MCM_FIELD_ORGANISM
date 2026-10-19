@@ -1,0 +1,345 @@
+[
+  {
+    "tau": 0.0,
+    "rows": {
+      "R0": {
+        "exact_retrieval": "CORRECT",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "R2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "R3": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N3": {
+        "exact_retrieval": "WRONG",
+        "signal_approx_retrieval": "WRONG"
+      },
+      "N4": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "P0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      }
+    }
+  },
+  {
+    "tau": 0.00390625,
+    "rows": {
+      "R0": {
+        "exact_retrieval": "CORRECT",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "R2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "R3": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N3": {
+        "exact_retrieval": "WRONG",
+        "signal_approx_retrieval": "WRONG"
+      },
+      "N4": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "P0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      }
+    }
+  },
+  {
+    "tau": 0.0078125,
+    "rows": {
+      "R0": {
+        "exact_retrieval": "CORRECT",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "R3": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "N1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N3": {
+        "exact_retrieval": "WRONG",
+        "signal_approx_retrieval": "WRONG"
+      },
+      "N4": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "P0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      }
+    }
+  },
+  {
+    "tau": 0.015625,
+    "rows": {
+      "R0": {
+        "exact_retrieval": "CORRECT",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R3": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "N1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N3": {
+        "exact_retrieval": "WRONG",
+        "signal_approx_retrieval": "WRONG"
+      },
+      "N4": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "P0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      }
+    }
+  },
+  {
+    "tau": 0.03125,
+    "rows": {
+      "R0": {
+        "exact_retrieval": "CORRECT",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R3": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "N1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N3": {
+        "exact_retrieval": "WRONG",
+        "signal_approx_retrieval": "WRONG"
+      },
+      "N4": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "P0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      }
+    }
+  },
+  {
+    "tau": 0.0625,
+    "rows": {
+      "R0": {
+        "exact_retrieval": "CORRECT",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R3": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "N1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N3": {
+        "exact_retrieval": "WRONG",
+        "signal_approx_retrieval": "WRONG"
+      },
+      "N4": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "P0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      }
+    }
+  },
+  {
+    "tau": 0.125,
+    "rows": {
+      "R0": {
+        "exact_retrieval": "CORRECT",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R3": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "N1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N3": {
+        "exact_retrieval": "WRONG",
+        "signal_approx_retrieval": "WRONG"
+      },
+      "N4": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "P0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      }
+    }
+  }
+]

@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "files": {
+    "claim-format.json": {
+      "bytes": 257,
+      "sha256": "d5215890ea945503b91661a0b4e64c40f68ac981f4c28741e85773eceb0ae271"
+    },
+    "tests.json": {
+      "bytes": 1817,
+      "sha256": "7d13a6e3396fcb2afa819824f45c06b79711701bc0fe45fc4f62011cc451fc5a"
+    },
+    "test_A01_valid_actual_start_path/claim.json": {
+      "bytes": 155,
+      "sha256": "bc635b250069df434af659286e432bffad5b0b498827457eb6f1f1cd94b5882a"
+    },
+    "test_A01_valid_actual_start_path/closure.json": {
+      "bytes": 791,
+      "sha256": "c5a658f98e373ce946e56b3b78003f2dcc79d904cb7669ae9796a9b913afbbf2"
+    },
+    "test_A01_valid_actual_start_path/start-accounting.json": {
+      "bytes": 272,
+      "sha256": "6dd4354d89ad84b2ca06a468b918c3429d3004fc903f3e749c523dfdd96f9265"
+    },
+    "test_A01_valid_actual_start_path/start-time.json": {
+      "bytes": 143,
+      "sha256": "293883fcecc2c7d3771474a36b0ebf1b4ab82dc332c420eec1d7e4c00470f9a0"
+    },
+    "test_A01_valid_actual_start_path/worker-complete.json": {
+      "bytes": 56,
+      "sha256": "3b49cd6d91ff1f369996bf2cc08c4ee6f8c1d80b81d56ecae3967ee7108a7816"
+    },
+    "test_A03_accounting_write_failure_terminal/closure.json": {
+      "bytes": 388,
+      "sha256": "f951097f1d37b4ddff112f04708ef3ebadb4c5246889bffa7a1dd9eb159119c3"
+    },
+    "test_A04_claim_partial_write_failure_terminal/claim.json": {
+      "bytes": 7,
+      "sha256": "32291f548486cbd742a7740016037fa8c1274e3073ec48e2827b9c97fec6d368"
+    },
+    "test_A04_claim_partial_write_failure_terminal/closure.json": {
+      "bytes": 605,
+      "sha256": "9350ed5e80a8e716b6dd78d1c449bb610b384933bf319593f86f82e9896aa4cb"
+    },
+    "test_A04_claim_partial_write_failure_terminal/start-accounting.json": {
+      "bytes": 272,
+      "sha256": "6dd4354d89ad84b2ca06a468b918c3429d3004fc903f3e749c523dfdd96f9265"
+    },
+    "test_A06_occupied_destination_untouched/foreign.txt": {
+      "bytes": 11,
+      "sha256": "b48ed1895bff942135dda568a78b320ec96206710a83c3f2b9ce654d4ca45f4d"
+    },
+    "test_A08_timeout_confirms_worker_end/claim.json": {
+      "bytes": 155,
+      "sha256": "bc635b250069df434af659286e432bffad5b0b498827457eb6f1f1cd94b5882a"
+    },
+    "test_A08_timeout_confirms_worker_end/closure.json": {
+      "bytes": 687,
+      "sha256": "53c5fcd1d094842525d0a1c94046b684d3d33a7cc5fe4ed1f08df4c263c5c06d"
+    },
+    "test_A08_timeout_confirms_worker_end/start-accounting.json": {
+      "bytes": 272,
+      "sha256": "6dd4354d89ad84b2ca06a468b918c3429d3004fc903f3e749c523dfdd96f9265"
+    },
+    "test_A08_timeout_confirms_worker_end/start-time.json": {
+      "bytes": 143,
+      "sha256": "2f3b1b8da42eb7b51fee6b9df19e55aea3be3f116be61c1aa8b9ab31c6d8368d"
+    },
+    "test_A09_process_start_failure_terminal/claim.json": {
+      "bytes": 155,
+      "sha256": "bc635b250069df434af659286e432bffad5b0b498827457eb6f1f1cd94b5882a"
+    },
+    "test_A09_process_start_failure_terminal/closure.json": {
+      "bytes": 709,
+      "sha256": "8c322726f0a9d215706ec9c31af3eb80637993ffd8cf4de4b7456c27e77eb795"
+    },
+    "test_A09_process_start_failure_terminal/start-accounting.json": {
+      "bytes": 272,
+      "sha256": "6dd4354d89ad84b2ca06a468b918c3429d3004fc903f3e749c523dfdd96f9265"
+    },
+    "test_A09_process_start_failure_terminal/start-time.json": {
+      "bytes": 143,
+      "sha256": "718455b7aaab97bf90b71975c8dd022fe056a1d71a34416179bbeb9984337861"
+    }
+  },
+  "policy_replays": 0,
+  "t1_sources": 0
+}

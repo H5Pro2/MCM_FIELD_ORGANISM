@@ -1,0 +1,247 @@
+{
+  "status": "PASS",
+  "authorization_changed_fields": [
+    "status"
+  ],
+  "production_calls": 1,
+  "production_exit_code": 0,
+  "closure": {
+    "calls": {
+      "nj": 57,
+      "receptor": 57
+    },
+    "charged_before_closure": 2396276,
+    "error": null,
+    "final_evaluation_run": false,
+    "partition": "AN-DEV",
+    "status": "MATERIAL_COMPLETE"
+  },
+  "files": 76,
+  "material_bytes": 2396435,
+  "integrity_checks": [
+    "manifest/file set/hash",
+    "PCM domain/bytes/derivations",
+    "A/D shared prefix",
+    "R1/R3 hint identity",
+    "source C timeline and query retiming",
+    "NJ profile, times and projection digests",
+    "eight calibration PCM recipes"
+  ],
+  "scope": "read-only validation, no new receptor calls",
+  "learning_truths": {
+    "R0": [
+      {
+        "target": 3,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 5,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 7,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 9,
+        "root": "AN-DEV/A"
+      }
+    ],
+    "R1": [
+      {
+        "target": 3,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 5,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 7,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 9,
+        "root": "AN-DEV/A"
+      }
+    ],
+    "R2": [
+      {
+        "target": 3,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 5,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 7,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 9,
+        "root": "AN-DEV/A"
+      }
+    ],
+    "R3": [
+      {
+        "target": 3,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 5,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 7,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 9,
+        "root": "AN-DEV/A"
+      }
+    ],
+    "N1": [
+      {
+        "target": 3,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 5,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 7,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 9,
+        "root": "AN-DEV/B"
+      }
+    ],
+    "N2": [
+      {
+        "target": 3,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 5,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 7,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 9,
+        "root": "AN-DEV/C"
+      }
+    ],
+    "N3": [
+      {
+        "target": 3,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 5,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 7,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 9,
+        "root": "AN-DEV/D"
+      }
+    ],
+    "N4": [
+      {
+        "target": 3,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 5,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 7,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 9,
+        "root": "AN-DEV/B"
+      },
+      {
+        "target": 11,
+        "root": "AN-DEV/B"
+      },
+      {
+        "target": 13,
+        "root": "AN-DEV/B"
+      },
+      {
+        "target": 15,
+        "root": "AN-DEV/B"
+      },
+      {
+        "target": 17,
+        "root": "AN-DEV/M"
+      }
+    ],
+    "Z0": [
+      {
+        "target": 3,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 5,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 7,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 9,
+        "root": "AN-DEV/ZERO"
+      }
+    ],
+    "Z1": [
+      {
+        "target": 3,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 5,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 7,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 9,
+        "root": "AN-DEV/NOISE"
+      }
+    ],
+    "P0": [
+      {
+        "target": 3,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 5,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 7,
+        "root": "AN-DEV/A"
+      },
+      {
+        "target": 9,
+        "root": "AN-DEV/A"
+      }
+    ]
+  }
+}

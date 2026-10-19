@@ -1,0 +1,19 @@
+{
+  "bound_code_and_references_verified": true,
+  "three_closure_inventories_verified": true,
+  "inputs": {
+    "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\docs\\S2UC_TECHNISCHE_WIEDERHOLUNG_V2_BINDUNG_20261003.json": "d752fc323cae2c440c5de7ce7ef540d4245a605e4583ff84dc5f04306d1ce254",
+    "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\frame-leaf-qualification-20261003-01\\closure.json": "29f7c12964f0091a4ded89f4ceea4d0bae09497e519fea65542d2d975d0a7d71",
+    "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\technical-repeat-preparation-20261003-02\\closure.json": "f548adef30e2f67fc9a4eeddf32b4718fefd4800c60440134066fb6ee02f1945",
+    "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\_s2uc_frame_leaf_observer_v1.py": "734e1f068e895ddbd2c1c6d90a06e9e594c05c2a8cd46846abcae056234b7095",
+    "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\_s2uc_origin_judge.py": "e7a5926e19d55e1d7c62381643f2ac27edbef401e0b0bdf8d93654de9f915ac8",
+    "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\_s2uc_pair_context_adapter.py": "791b9a60b18426626d5e9761dcb122733ca5f73853a7b6201725fc332d9f3ab1",
+    "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tests\\test_s2uc_repeat_prepare_v1.py": "ee89cff1582573ddb658e0c32c3bab25e715690a57828daced7a379f8392e370",
+    "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\s2uc_frame_leaf_qualify.py": "f1a13943d1478ac39da38eeb4f8c2cbdcea0022d6a748839ca21e385c8e411f0",
+    "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\s2uc_repeat_prepare_v2.py": "1cb0d11b085a8e211108c8150c08a65b316350b274086932f8e9dd972183dee6",
+    "C:\\Python314\\Lib\\unittest\\mock.py": "ca23b847431a5117e911a69130a80b1b93ee714d0da93508e3e9797a3099fecc"
+  },
+  "new_replays": 0,
+  "production_changes": false,
+  "new_authorization": false
+}

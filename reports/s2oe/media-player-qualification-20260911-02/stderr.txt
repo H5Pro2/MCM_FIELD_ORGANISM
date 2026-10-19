@@ -1,0 +1,54 @@
+test_01_private_metadata_limits_everywhere (tests.test_s2oe_player.PlayerQualification.test_01_private_metadata_limits_everywhere) ... ok
+test_02_authorization_required_and_single_use (tests.test_s2oe_player.PlayerQualification.test_02_authorization_required_and_single_use) ... ok
+test_03_projection_is_independent_and_immutable (tests.test_s2oe_player.PlayerQualification.test_03_projection_is_independent_and_immutable) ... ok
+test_04_complete_control_loop_and_one_verification (tests.test_s2oe_player.PlayerQualification.test_04_complete_control_loop_and_one_verification) ... ok
+test_05_early_stop_and_primary_error (tests.test_s2oe_player.PlayerQualification.test_05_early_stop_and_primary_error) ... ok
+test_06_http_origin_token_and_fixed_media (tests.test_s2oe_player.PlayerQualification.test_06_http_origin_token_and_fixed_media) ... ok
+test_07_preview_hash_and_read_account (tests.test_s2oe_player.PlayerQualification.test_07_preview_hash_and_read_account) ... ok
+test_08_browser_desktop_mobile_and_neutral_video (tests.test_s2oe_player.PlayerQualification.test_08_browser_desktop_mobile_and_neutral_video) ... ERROR
+test_09_native_player_stop_after_one_event (tests.test_s2oe_player.PlayerQualification.test_09_native_player_stop_after_one_event) ... ok
+test_10_binding_hash_and_nonselected_source_rejected (tests.test_s2oe_player.PlayerQualification.test_10_binding_hash_and_nonselected_source_rejected) ... ok
+
+======================================================================
+ERROR: test_08_browser_desktop_mobile_and_neutral_video (tests.test_s2oe_player.PlayerQualification.test_08_browser_desktop_mobile_and_neutral_video)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_player.py", line 203, in test_08_browser_desktop_mobile_and_neutral_video
+    page.wait_for_function("document.querySelector('video').currentTime>0.1")
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 12761, in wait_for_function
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.wait_for_function(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\.venv\Lib\site-packages\playwright\_impl\_page.py", line 1151, in wait_for_function
+    return await self._main_frame.wait_for_function(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 940, in wait_for_function
+    await self._channel.send("waitForFunction", self._timeout, params)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Page.wait_for_function: EvalError: Evaluating a string as JavaScript violates the following Content Security Policy directive because 'unsafe-eval' is not an allowed source of script: script-src 'unsafe-inline'".
+
+    at eval (<anonymous>)
+    at predicate (eval at evaluate (:311:30), <anonymous>:4:60)
+    at next (eval at evaluate (:311:30), <anonymous>:29:33)
+
+----------------------------------------------------------------------
+Ran 10 tests in 16.302s
+
+FAILED (errors=1)

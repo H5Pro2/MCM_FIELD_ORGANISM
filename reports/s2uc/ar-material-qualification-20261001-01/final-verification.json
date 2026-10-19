@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "plan_unchanged": true,
+  "bindings_verified": true,
+  "AR_DEV_unproduced": true,
+  "AR_EVAL_unproduced": true,
+  "AR_calibration_and_search_not_run": true,
+  "pending_authorization_only": true
+}

@@ -1,0 +1,6 @@
+test_v6_final_binding_accepts_only_the_prepared_identity_and_resolved_artifacts (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_final_binding_accepts_only_the_prepared_identity_and_resolved_artifacts) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.080s
+
+OK

@@ -1,0 +1,34 @@
+{
+  "tools\\_s2uc_provisional_hint.py": {
+    "bytes": 1711,
+    "sha256": "3fcf1c358548c85ddbec462028a43a96e3ec24a6bffd2948ad87da502f802c8e"
+  },
+  "tools\\s2uc_b2v_check.py": {
+    "bytes": 8243,
+    "sha256": "446e999e309d807acf3ac0e50e7778b8ab43ad4ea8e6032d65b81f8a71eaa593"
+  },
+  "tests\\test_s2uc_provisional_hint.py": {
+    "bytes": 3290,
+    "sha256": "8d9e4e206233d0f4a6fbccae2b386c760acb5f93ca05d6bef9eb134729cc65fc"
+  },
+  "reports\\s2uc\\b2v-20260930-01\\preregistration.json": {
+    "bytes": 2300,
+    "sha256": "e7ac027b4ab860a498637fc5a060622d223f3090583ca959afaa9733a4665ce6"
+  },
+  "reports\\s2uc\\b2v-20260930-01\\replay-console.txt": {
+    "bytes": 6210,
+    "sha256": "618f69657b437e210e8dfc1e17fcbbcbaa00550c49b1f937253392b131a43d6d"
+  },
+  "reports\\s2uc\\b2v-20260930-01\\REPORT.txt": {
+    "bytes": 5118,
+    "sha256": "b3575a452347d2e4b2a1b3289f052e8961a3fb08feb4bb4ff01c85d51a80d9b6"
+  },
+  "reports\\s2uc\\b2v-20260930-01\\result.json": {
+    "bytes": 6208,
+    "sha256": "18a166cec22bafd163184fd6d4bb53f4d8435b1a8df07bf7ca1978716538cca7"
+  },
+  "reports\\s2uc\\b2v-20260930-01\\tests.txt": {
+    "bytes": 2028,
+    "sha256": "e9eb10d66044620ddea1590f6ca34dd2baac3d6c2a40be20f597f34b588894d3"
+  }
+}

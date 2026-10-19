@@ -1,0 +1,89 @@
+E/F Uebertragung auf gespeicherte P2-Rezeptor/NJ-Werte: Abschluss
+
+17/17 Tests PASS (5 neue Pruefertests,12 Referenz-/Abrufregressionen), keine Fehler/Skips. Replay Exit0.
+Vollstaendiger Block g1-g3,69 Ereignisse,58 gespeicherte Frames und11 Abschluesse; alle Frames besitzen unterschiedliche Bandwerte.
+35 Faelle je Arm, jeweils Wiederholung:70 Auswertungen je Arm. Keine ergebnisabhaengige Auswahl.
+Vorregistrierung SHA256 71d9ca0753184f25711a93674ff6e549ca0f6f4f3027638fc1ea32e36aad74b3
+Alle Vorbedingungen bestanden; Daten, Referenzklassen und gebundene Dateien unveraendert. Nur neuer Wiedergabepruefer und Tests.
+Bestand: BOUND_SOURCE_TEST_P2 mit synthetischer Ersatz-PCM-Produktion. Keine Originalquellenwahrnehmung behauptet.
+
+VOLLSTAENDIGE FALLTABELLE MIT HERKUNFT
+Jede Zeile ist einer der35 Faelle. Wiederholungen sind identisch. Entscheidungen und vollstaendige Trefferlisten getrennt.
+Fall | Variante | E-Entscheidung / vollstaendige Treffer | F-Entscheidung / vollstaendige Treffer | F-Zielbewertung
+g1/12 | original | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 1, "formation": "g1-p1", "ordinals": [1, 2, 3, 4], "offset": 1, "factors": [1.0]}] | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 1, "formation": "g1-p1", "ordinals": [1, 2, 3, 4], "offset": 1, "factors": [1.0]}] | TARGET_RETAINED
+g1/12 | half | ABSTAIN_NO_MATCH / [] | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 1, "formation": "g1-p1", "ordinals": [1, 2, 3, 4], "offset": 1, "factors": [0.5]}] | TARGET_RETAINED
+g1/12 | double | ABSTAIN_NO_MATCH / [] | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 1, "formation": "g1-p1", "ordinals": [1, 2, 3, 4], "offset": 1, "factors": [2.0]}] | TARGET_RETAINED
+g1/12 | reverse | ABSTAIN_NO_MATCH / [] | ABSTAIN_NO_MATCH / [] | NO_MATCH
+g1/12 | local | ABSTAIN_NO_MATCH / [] | ABSTAIN_NO_MATCH / [] | NO_MATCH
+g1/24 | original | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 1, "formation": "g1-p1", "ordinals": [1, 2, 3, 4], "offset": 2, "factors": [1.0]}] | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 1, "formation": "g1-p1", "ordinals": [1, 2, 3, 4], "offset": 2, "factors": [1.0]}] | TARGET_RETAINED
+g1/24 | half | ABSTAIN_NO_MATCH / [] | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 1, "formation": "g1-p1", "ordinals": [1, 2, 3, 4], "offset": 2, "factors": [0.5]}] | TARGET_RETAINED
+g1/24 | double | ABSTAIN_NO_MATCH / [] | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 1, "formation": "g1-p1", "ordinals": [1, 2, 3, 4], "offset": 2, "factors": [2.0]}] | TARGET_RETAINED
+g1/24 | reverse | ABSTAIN_NO_MATCH / [] | ABSTAIN_NO_MATCH / [] | NO_MATCH
+g1/24 | local | ABSTAIN_NO_MATCH / [] | ABSTAIN_NO_MATCH / [] | NO_MATCH
+g1/26 | original | ABSTAIN_NO_MATCH / [] | ABSTAIN_NO_MATCH / [] | NO_MATCH
+g1/26 | half | ABSTAIN_NO_MATCH / [] | ABSTAIN_NO_MATCH / [] | NO_MATCH
+g1/26 | double | ABSTAIN_NO_MATCH / [] | ABSTAIN_NO_MATCH / [] | NO_MATCH
+g1/26 | reverse | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 1, "formation": "g1-p1", "ordinals": [1, 2, 3, 4], "offset": 2, "factors": [1.0]}] | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 1, "formation": "g1-p1", "ordinals": [1, 2, 3, 4], "offset": 2, "factors": [1.0]}] | UNIQUE_CONTROL_ORIGIN_UNASSIGNED
+g1/26 | local | ABSTAIN_NO_MATCH / [] | ABSTAIN_NO_MATCH / [] | NO_MATCH
+g2/38 | original | ABSTAIN_NO_MATCH / [] | ABSTAIN_NO_MATCH / [] | NO_MATCH
+g2/38 | half | ABSTAIN_NO_MATCH / [] | ABSTAIN_NO_MATCH / [] | NO_MATCH
+g2/38 | double | ABSTAIN_NO_MATCH / [] | ABSTAIN_NO_MATCH / [] | NO_MATCH
+g2/38 | reverse | PROVISIONAL_CANDIDATE_MATCH / [{"role": "candidate", "generation": 2, "formation": "g2-p2", "ordinals": [32, 33, 34, 35], "offset": 1, "factors": [1.0]}] | PROVISIONAL_CANDIDATE_MATCH / [{"role": "candidate", "generation": 2, "formation": "g2-p2", "ordinals": [32, 33, 34, 35], "offset": 1, "factors": [1.0]}] | UNIQUE_CONTROL_ORIGIN_UNASSIGNED
+g2/38 | local | ABSTAIN_NO_MATCH / [] | ABSTAIN_NO_MATCH / [] | NO_MATCH
+g3/60 | original | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 1, "formation": "g3-p1", "ordinals": [44, 45, 46, 47], "offset": 2, "factors": [1.0]}] | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 1, "formation": "g3-p1", "ordinals": [44, 45, 46, 47], "offset": 2, "factors": [1.0]}] | TARGET_RETAINED
+g3/60 | half | ABSTAIN_NO_MATCH / [] | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 1, "formation": "g3-p1", "ordinals": [44, 45, 46, 47], "offset": 2, "factors": [0.5]}] | TARGET_RETAINED
+g3/60 | double | ABSTAIN_NO_MATCH / [] | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 1, "formation": "g3-p1", "ordinals": [44, 45, 46, 47], "offset": 2, "factors": [2.0]}] | TARGET_RETAINED
+g3/60 | reverse | PROVISIONAL_CANDIDATE_MATCH / [{"role": "candidate", "generation": 2, "formation": "g3-p3", "ordinals": [54, 55, 56, 57], "offset": 0, "factors": [1.0]}] | PROVISIONAL_CANDIDATE_MATCH / [{"role": "candidate", "generation": 2, "formation": "g3-p3", "ordinals": [54, 55, 56, 57], "offset": 0, "factors": [1.0]}] | UNIQUE_CONTROL_ORIGIN_UNASSIGNED
+g3/60 | local | ABSTAIN_NO_MATCH / [] | ABSTAIN_NO_MATCH / [] | NO_MATCH
+g3/67 | original | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 1, "formation": "g3-p1", "ordinals": [44, 45, 46, 47], "offset": 2, "factors": [1.0]}] | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 1, "formation": "g3-p1", "ordinals": [44, 45, 46, 47], "offset": 2, "factors": [1.0]}] | TARGET_RETAINED
+g3/67 | half | ABSTAIN_NO_MATCH / [] | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 1, "formation": "g3-p1", "ordinals": [44, 45, 46, 47], "offset": 2, "factors": [0.5]}] | TARGET_RETAINED
+g3/67 | double | ABSTAIN_NO_MATCH / [] | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 1, "formation": "g3-p1", "ordinals": [44, 45, 46, 47], "offset": 2, "factors": [2.0]}] | TARGET_RETAINED
+g3/67 | reverse | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 2, "formation": "g3-p3", "ordinals": [54, 55, 56, 57], "offset": 0, "factors": [1.0]}] | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 2, "formation": "g3-p3", "ordinals": [54, 55, 56, 57], "offset": 0, "factors": [1.0]}] | UNIQUE_CONTROL_ORIGIN_UNASSIGNED
+g3/67 | local | ABSTAIN_NO_MATCH / [] | ABSTAIN_NO_MATCH / [] | NO_MATCH
+g3/69 | original | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 2, "formation": "g3-p3", "ordinals": [54, 55, 56, 57], "offset": 0, "factors": [1.0]}] | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 2, "formation": "g3-p3", "ordinals": [54, 55, 56, 57], "offset": 0, "factors": [1.0]}] | TARGET_RETAINED
+g3/69 | half | ABSTAIN_NO_MATCH / [] | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 2, "formation": "g3-p3", "ordinals": [54, 55, 56, 57], "offset": 0, "factors": [0.5]}] | TARGET_RETAINED
+g3/69 | double | ABSTAIN_NO_MATCH / [] | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 2, "formation": "g3-p3", "ordinals": [54, 55, 56, 57], "offset": 0, "factors": [2.0]}] | TARGET_RETAINED
+g3/69 | reverse | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 1, "formation": "g3-p1", "ordinals": [44, 45, 46, 47], "offset": 2, "factors": [1.0]}] | CONFIRMED_RETAINED_MATCH / [{"role": "retained", "generation": 1, "formation": "g3-p1", "ordinals": [44, 45, 46, 47], "offset": 2, "factors": [1.0]}] | UNIQUE_CONTROL_ORIGIN_UNASSIGNED
+g3/69 | local | ABSTAIN_NO_MATCH / [] | ABSTAIN_NO_MATCH / [] | NO_MATCH
+
+VORAB FESTGELEGTE BEWERTUNG
+Zusaetzliche eindeutige Zugaenglichkeit10; davon10 richtige Zielabrufe mit gebundener Formation, urspruenglichen Frameordinalen und Position.
+Alle10 Zielgewinne sind bestaetigte Erhaltung: je5 halbierte und verdoppelte Hinweise.
+Keine eindeutigen Gewinne anderer Zielherkunft bei Original-/Halb-/Doppelhinweisen. Verlorene Eindeutigkeit0, neue Konkurrenz0.
+Originalhinweise: E/F je5 richtige bestaetigte Zielabrufe und2 Enthaltungen mangels Treffer.
+Halbierte und verdoppelte Hinweise: E je7 ohne Treffer; F je5 richtige bestaetigte Zielabrufe und2 ohne Treffer.
+Reihenfolgekontrolle: E/F identisch5 eindeutige beobachtete andere Verlaeufe (3 erhalten,2 Kandidaten),2 ohne Treffer.
+Kontrolltreffern wurde kein gewuenschtes Ziel nachtraeglich zugeordnet. Sie sind kein Zielgewinn und nicht automatisch ein Fehlabruf.
+Lokale Skalierung: E/F je7 ohne Treffer. Im gesamten Block keine Mehrdeutigkeit; ABSTAIN_NO_MATCH wird nicht mit ABSTAIN_AMBIGUOUS vermischt.
+
+ERGEBNISUNABHAENGIGE INVARIANTEN
+{"E_subset_F": 35, "F_exact_rational_oracle": 35, "repeats_equal": 70, "read_only_pairs": 140, "shared_state_checks": 90, "close_transitions": 11}
+35/35 E-Treffermengen sind in F mit Faktor1 enthalten.35/35 vollstaendige F-Treffermengen durch unabhaengige exakte Bruchrechnung bestaetigt.
+Die Bruchpruefung kontrolliert einen gemeinsamen Faktor ueber alle96 Komponenten und alle Rollen/Positionen; keine Wiederverwendung des ldexp-Matchers.
+70/70 Wiederholungspaare identisch;140 abgeschlossene Hinweise zustandsneutral.
+90 gemeinsame Zustandsabgleiche und11 identische Abschlussuebergaenge gegen E,F und separaten No-hint-Kontrollarm.
+Je Geschichte frische getrennte Besitzer; gleiche Werte und nicht-hinweisbezogene Ereignisse. Historische Ereignisnummern bleiben im Archiv unveraendert.
+
+RESSOURCEN UND AUFWAND
+Arm | maximale Spur-/Hinweis-/Gesamtframes temporaer | Hinweispositionen | Faktorchecks | skalare Faktorchecks | exakte Bestaetigungsvergleiche | inkrementeller Python-Aufrufpeak
+E | 12/2/12 | 360 | 0 | 0 | 10 | 28799
+F | 12/2/12 | 360 | 1080 | 7184 | 10 | 8492
+no_hint | 12/0/12 | 0 | 0 | 0 | 10 | 6304
+E/F bleiben unter16+2: beobachtet maximal12 Spurframes, maximal2 Hinweisframes; gemeinsames temporaeres Maximum12.
+Rollenmaxima je E/F: Bildung4, Kandidaten4, Erhaltung8; diese Einzelmaxima treten nicht alle gleichzeitig auf.
+E/F durchsuchen je360 Hinweispositionen einschliesslich Wiederholungen. F ergaenzt1080 Faktorchecks mit7184 skalaren Vergleichen.
+Exakte Bestaetigung je10 ganze Spurvergleiche unveraendert. Der No-hint-Kontrollarm ist separater Pruefaufwand.
+Python-Allokationspeaks enthalten Beobachter/Tracing und Initialisierung; kein Prozess-RAM- oder Effizienzvergleich.
+Keine skalierten Speicherbanken. Ableitungswerte und Berichtsdaten gehoeren zur externen Wiedergabe, nicht zum Abrufspeicher.
+
+HERKUNFTSGRENZE
+Originale Hinweispayloads sind STORED_HINT_VALUES. Alle Ableitungen sind POSTHOC_VECTOR_TEST mit Elternereignis, Quellenkennung und vorhandenen Elternhashes.
+Diese Elternhashes sind kein Produktionsbeleg der Ableitung. Keine neue PCM-Verarbeitung, kein neuer Rezeptor-/NJ-Lauf.
+Alle35 Faelle sowie Varianten und Wiederholungen teilen Eingangsdaten und Historien; keine statistisch unabhaengigen Wirksamkeitsnachweise.
+
+EINORDNUNG
+F traegt einen begrenzten Zugangsbefund auch bei unterschiedlichen auditiven Bandwerten: zehn richtige skalierte Zielzugaenge.
+Fehlende neue Konkurrenz in diesem Block widerlegt nicht die zuvor nachgewiesenen Konfliktfaelle. Keine allgemeine Ueberlegenheit.
+Empfehlung: F als getrennte technische Testvariante beibehalten. Der Befund rechtfertigt keine automatische Produktuebernahme oder Kombination mit skalierter Bestaetigung.
+Dieser Uebertragungsvergleich ist abgeschlossen; eine weitere Ausweitung braucht eine konkret begruendete offene Frage.
+Keine Regelveraenderung, Registry-Arbeit oder Quellenproduktion.

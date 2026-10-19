@@ -1,0 +1,7 @@
+test_11_internal_stock_identity_and_eviction (experiments.fw1.test_contract.Contract.test_11_internal_stock_identity_and_eviction) ... ok
+test_12_wrong_event_generation_fail_closed (experiments.fw1.test_contract.Contract.test_12_wrong_event_generation_fail_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.042s
+
+OK

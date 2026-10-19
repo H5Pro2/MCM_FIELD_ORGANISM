@@ -1,0 +1,133 @@
+Historische zeitliche Ausrichtung – Entwicklungsstand, Gesamtqualifikation offen
+2026-10-19 | Auftrag 35c1693b-4fd3-4f5b-b4f1-9ab235b35a22
+Genannter Bezugsauftrag: 1ea22d67-6173-4f2d-bfb9-b738a8fd466b
+
+ERGEBNIS
+Die fehlende Implementierung wurde isoliert unter experiments/temporal_alignment
+erstellt. 27 künstliche Testausführungen bestanden (20 +6 +1); keine Fehlläufe.
+Zwei davon prüfen Promotion/Alignment nach zusätzlicher Bankvalidierung erneut.
+Ein künstliches Nullfenster wurde tatsächlich projiziert:1 Rezeptor-,1 NJ-Aufruf.
+Kein Forschungsversuch und kein formaler390-Aufruf-Größenablauf gestartet.
+Keine vollständige Abnahme Q1–Q5 und keine Startbereitschaft für Forschung behauptet.
+
+KONKRETER BLOCKER FÜR DEN FORMALEN GRÖSSENABLAUF
+Der aktuelle Auftrag verlangt einen nachweislich unverbrauchten ursprünglichen
+Einmallauf und erklärt ausdrücklich keine Ersatzberechtigung. Der Bestandsabgleich
+fand nur das Konzept und seine Dokumentation, keine frühere Implementierung,
+Verbrauchsbilanz oder eigene ursprüngliche Laufberechtigung. Gesucht wurden
+Code-/Ergebnisdateien sowie Auftrags-ID, Konzeptdigest und Alignment-Statusnamen
+in experiments, analyses, tools, reports/s2uc und docs.
+
+Die gelesene Datei zum genannten Bezugsauftrag1ea22... ist an den Projektleiter
+adressiert und enthält dessen Auftrag zur Standprüfung/Entwickleranweisung.
+Sie ist weder mein aktueller Auftrag noch ein Nachweis meines unverbrauchten
+Größenablaufs. Sie wird nicht als Ausführungsberechtigung übernommen.
+Fehlende lokale Dateien belegen keinen Nichtverbrauch; deshalb bleibt die
+Verbrauchslage UNPROVEN. Keine künstlich erzeugte UNUSED-Bescheinigung.
+
+Betroffener Schritt: einmaliger neutraler Gesamtumfang390/390,12+12 Arme,
+132+132 Aufnahmen,60 unabhängige Prüfungen. Zuständig für die fehlende Klärung
+ist der Projektleiter mit der ursprünglichen autoritativen Freigabe-/Verbrauchs-
+zuordnung. Benötigt wird der eigene zugehörige Auftrag samt belastbarem Status
+unverbraucht oder vorhandenen Ausführungsnachweisen. Bei Verbrauch kein Neustart.
+
+entry.formal_gate und full.run weisen einen Start vorher mit
+FORMAL_PRIOR_CONSUMPTION_UNPROVEN zurück. Der vollständige Neutralpfad ist
+vorbereitet, aber durch dieses bewusst geschlossene Gate nicht ausgeführt oder
+endgültig qualifiziert. Eine spätere Öffnung erfordert die geklärte Zuordnung
+und erneute Code-/Startbindung; die vorliegende Lieferung ist keine Einmallerlaubnis.
+
+IMPLEMENTIERUNG
+core.py:
+- Fester76800-Byte-Samplepuffer, lückenlose4800-Sample-Aufnahme, Nachweis des
+  beobachteten Fensterendes, gesperrter Zugriff auf unvollständige Banken.
+- Historische31er-Bank mit vier unverändert geteilten Originalprojektionen und
+  27 Zusatzprojektionen, Zeit-/Ordinal-/Digestvalidierung.
+- Bank an Originalordinale gebunden; Kandidat-Ersetzung, Originalbank-Promotion
+  und retained-Eviction folgen dem unveränderten Kernlebenszyklus.
+- Zusatzabruf ausschließlich nach ABSTAIN_NO_APPROX_CONTEXT. Unveränderte
+  ε/τ, keine Näherungsoptimierung im neuen Raster; Exaktfaktoren0,5/1/2 sichtbar.
+- Alle21 Positionen pro Spur werden geprüft. Konkurrenz zwischen Spuren und
+  mehreren Positionen derselben Spur führt zu verschiedenen Enthaltungsgründen.
+- Nur eindeutiger Faktor1 mit k<=10 liefert V_(k+20); kein Nachfolgerersatz.
+- Eingefrorener target_index und aktuelle Hinweise bleiben unverändert. Noch
+  offene Prognose sperrt weitere Audioaufnahme; Fehler schließen Arm und Puffer.
+- Prospektive Slot-, Bank-, Provenienz-, Receipt- und UTF8-Prüfungen, Cleanup.
+
+oracle.py:
+Getrennte skalare Rekonstruktion aller Positionen/Faktoren, ohne Import des
+produktiven Alignment-Selektors. Künstliche Entscheidungen stimmen mit dem
+Produktionspfad überein. Keine Behauptung von60 bestandenen Gesamtprüfungen.
+
+projector.py:
+Separater fest begrenzter390-Zähler; bestehender100-Aufruf-Einstieg unverändert.
+Unveränderte LogSpectralReceptor-/NJ-Funktionen. Serieller Aufruf, Arbeitsgebiet
+mit tracemalloc gemessen und bei >16MiB zurückgewiesen. Dies ist eine gemessene
+Teilbereichskontrolle, keine zusätzliche16MiB-OS-Speicherquote; die harte gemeinsame
+OS-Grenze bleibt512MiB. Für das künstliche Nullfenster2993051 Bytes gemessen.
+Die Einhaltung für den vollständigen Materialumfang bleibt offen.
+
+full.py:
+Vorbereiteter ausschließlich neutraler Material-/Vergleichspfad für sechs Fälle.
+Neutralrezept A=[310,680,1390,1750], B=[330,700,2180,2490] Hz; nicht materialisiert.
+390 Projektionen mit kanonischen Quellen und ohne einzelne PCM-Fensterexporte;
+keine Forschungsquellen oder Forschungsmode-Option. N/T und Bestandsreferenzen
+teilen unveränderliches Material, halten getrennte Zustände. Zielzugriff erst
+nach eingefrorener Prognose; unabhängiger Basis- und Alignment-Abgleich vorgesehen.
+Diese Aussagen beschreiben vorbereiteten Code, keine gemessene Vollausführung.
+
+entry.py:
+Dauerhafte Fixture-Bilanz, exklusive Versuchsverzeichnisse, Code-/Konzeptbindung,
+Windows-Job512MiB mit maximal2 Prozessen, Kill-on-close, kein Breakaway;
+Worker240s/Supervisor300s, Paketexport16MiB, Bibliotheksthreads1.
+Der formale Größenablauf ist vor Materialerzeugung gesperrt.
+
+KONKRETE PRÜFUNGEN
+fixtures-01:20/20 bestanden,0,485213s; Jobpeak38785024 Bytes.
+  Q1: kausale Grenze, Lücke, alle Fenstergrenzen,76800-Byte-Grenze,
+      27 Callback-Aufrufe und Identität der vier Originalvektoren.
+  Q2: Kernreferenzgleichheit, Promotion der Originalbank, Kandidatersetzung,
+      Eviction, Zukunftssperre, tatsächliches Alignment-Receipt, Cleanup.
+  Q3: unabhängiger Selektorvergleich bei eindeutigem Treffer, keinem Treffer,
+      gleicher Spur/mehreren Lagen, konkurrierenden Spuren, fehlendem Nachfolger,
+      Faktor2, niedrigem Signal und nicht berechtigtem Basisergebnis.
+  Q4:63 Positionsmatches, Quellenlimit, Receipt-/UTF8- und Bankzahlgrenzen.
+  Q5: unvollständiger Abschluss entfernt Puffer und Banken.
+
+focused-02:6/6 bestanden,0,679053s; Jobpeak45359104 Bytes.
+  Nach Ergänzung der strikten Bank-Zeit-/Ordinal-/Digestvalidierung gezielte
+  Wiederprüfung von Promotion und Alignment. Zusätzlich128 Slots akzeptiert,
+  zusätzlicher Vektor zurückgewiesen; Provenienzüberschreitung injiziert und
+  zurückgewiesen; ungültige Bankwerte; Export-/Uhrgrenzen und formales Startgate.
+  Die Startgateprüfung ruft keinen Material-/Policy-Pfad auf.
+
+projector-03:1/1 bestanden,1,452818s; Jobpeak82083840 Bytes,
+  Prozesspeak62783488 Bytes. Ein handgeschriebenes Nullfenster4800 Samples
+  ergibt48 Nullwerte. Genau1 Rezeptor- und1 NJ-Aufruf. Gemessenes Arbeitsgebiet
+  2993051 Bytes. Eine anschließende künstlich gesetzte Zählergrenze390 weist
+  einen weiteren Aufruf vorher zurück; dieser Zählerwert behauptet keine390
+  erfolgten Aufrufe.
+
+Alle Worker Exit0 und beendet; Cleanup in den terminal.json belegt. Keine
+historischen Qualifikationen wiederholt. Entwicklungsprüfungen sind vom
+gesperrten formalen Größenablauf und jedem Forschungsversuch getrennt.
+
+GRENZEN DER LIEFERUNG
+Q4-Gesamtressourcen,390/390 Aufrufe,12+12 Arme,132+132 Aufnahmen und60 unabhängige
+Entscheidungen sind NICHT belegt. Erst deren zulässiger einmaliger Abschluss
+kann die Gesamtqualifikation schließen. Keine wissenschaftliche Nutzenaussage.
+Die Fixture-Zahlen dürfen weder als formaler Einmallaufverbrauch noch als dessen
+Nichtverbrauch vor diesem Fortsetzungsauftrag interpretiert werden.
+
+NÄCHSTER SCHRITT
+Den ursprünglichen eigenen Freigabe-/Verbrauchsnachweis zuordnen. Wenn er einen
+bereits erfolgten Start zeigt, vorhandene Artefakte übernehmen und nicht erneut
+ausführen. Nur bei belegter unverbrauchter Berechtigung den vorbereiteten Pfad
+mit vollständiger Startbindung abschließen. Forschungsberechtigung bleibt aus.
+Keine erneute Konzeptschleife und kein weiteres Fixture-Replay ohne neue Änderung.
+
+BELEGE
+tests.json und terminal.json in fixtures-01/, focused-02/, projector-03/;
+attempts.jsonl, execution-balance.json, delivery-binding.json,
+preservation.json. Drei Projektübersichten auf diesen Teilstand aktualisiert.
+Historische Konzept-, AS480- und Diagnoseartefakte bleiben unverändert.

@@ -1,0 +1,15 @@
+{
+  "status": "AUTHORIZED_ONCE",
+  "action": "RUN_NONPERSISTENT_XYX48_ONCE",
+  "plan_sha256": "d5b3bfab32f1b21ce98c056ec7e3921a97e86e9e575038a41885040206846636",
+  "binding_sha256": "f2c666bba0c75a0d0c61e3d32e523b124cd70f16ab3a7f4877d371b267078437",
+  "output": "reports/s2uc/xyx-counterprobe-20261003-01",
+  "arms": [
+    "U",
+    "M",
+    "E",
+    "K",
+    "P"
+  ],
+  "frames": 48
+}

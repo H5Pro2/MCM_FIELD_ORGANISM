@@ -1,0 +1,50 @@
+{
+  "plan_sha256": "40410b187f813cb546e44cca01ac353f85bdc70d4b29e5b0fc057ac3f6feb5fd",
+  "binding_sha256": "87306a9ef5e67c47fd99d0643a38513dae40ad7f684ccbae898fff7801f9257e",
+  "runner_sha256": "49c664aad605975f653d5bb94f4008154e0316c59dbc2d7df72831af765e6b02",
+  "grid": [
+    0.0,
+    0.00390625,
+    0.0078125,
+    0.015625,
+    0.03125,
+    0.0625,
+    0.125
+  ],
+  "epsilon": 0.0009765625,
+  "frame_amplitudes": [
+    0.0009765625,
+    0.0009765625,
+    0.0009765625,
+    0.0009765625,
+    0.0009765625,
+    0.0009765625,
+    0.0009765625,
+    0.0009765625
+  ],
+  "calibration_interpretation": "constructed magnitude, recipe check only",
+  "material": {
+    "case-N1.json": "bcaaa207cb7bd3453a2c209dfe23eb434d8b1f73c20e85ca264139183f83f101",
+    "case-N2.json": "5d0e6690ad3346e4897b5fe473997d6c5e53547ef0ea52c5d59b1bf898b66235",
+    "case-N3.json": "fe0796e8fc4e967f7151774094ad95de7c80fc034383ac6e08d67d4daceaaead",
+    "case-N4.json": "f53530491b84e32963bfb7273a98cff3a667959906e30b7d9c6a1034527c7c78",
+    "case-P0.json": "ce3f4e1775f17d5b69230ce199f37fc7d610930bcc37fe009fe44c417ac567bf",
+    "case-R0.json": "121c2dbc8a567e747719d9f3c7166a347a7210d2b3e005607d45efde5733abab",
+    "case-R1.json": "27778665ff51d641a089a9aed31ba0a1ec83dacd3dd2e492793b63894e9dd9cd",
+    "case-R2.json": "e745725a59f0fd482c658b30448fd2ac55e6eed3a0d5b73376da9513bb4c42cf",
+    "case-R3.json": "48f284ff8623c3bcb6dee5b610900ecf38dc3c59e509223b611e7ab230b8ba94",
+    "case-Z0.json": "d6165c213849848892b2fc83d3ac328a9b3cf44ba4960feba0ce43dc1240fbc3",
+    "case-Z1.json": "9c05fcefef8e912f0a8945b949e60aaa4413633ff97e964c0f4424aa06ee1bd4",
+    "claim.json": "3c22b7bf33bbea9e159b23af11db4a02fd7be3aace06e75c9ba4152ba32acfd7",
+    "closure.json": "10c9fbfc36fc8146d0ba961b89236f2dec229dc54d1cf40d83c4ecdd1ce74762",
+    "manifest.json": "1531487a9df2800d270dc5eb04992fbdf000afd6504c7089125b7cc58a41fd07",
+    "source-A.json": "c8f4b96242d18bcba2e36340ebbc9a901bca1a53d97dfa348a480e3ed07bea9b",
+    "source-B.json": "2d17a15efcbd399f3b60bfccbcf59651dee34649e30434c6f681166f0e12f664",
+    "source-C.json": "fb3f4ecc4d55da425e79f4a5874e6c4d094ea91023f501c78b0b60e382342e2f",
+    "source-calibration.json": "57272807b1ce1ffacddcc1af6f73dbc99e11e043162145f024cd2b8d36e5e9eb",
+    "source-D.json": "3dbe24ef0f9e6dadf582faaa1e81d05c1b6eb6b30a4a8532bc580832890796b2",
+    "source-noise_R.json": "4526e8b147c7f4480dd1ca905a911a08da0219b1407c552d92509c85f8aa4987",
+    "source-noise_Z.json": "ca72436727a69b6adef259a3dee952d42f6c2ea20d928272ad070a8b4b560cb6"
+  },
+  "continuation": "legacy_v1 for both arms"
+}

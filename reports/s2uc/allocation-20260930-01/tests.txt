@@ -1,0 +1,28 @@
+test_budget_rejects_second_retained_slot (tests.test_s2uc_allocation.AllocationTests.test_budget_rejects_second_retained_slot) ... ok
+test_capacity_is_only_close_logic_change (tests.test_s2uc_allocation.AllocationTests.test_capacity_is_only_close_logic_change) ... ok
+test_confirmed_eviction_and_original_provenance (tests.test_s2uc_allocation.AllocationTests.test_confirmed_eviction_and_original_provenance) ... ok
+test_overlap_incomplete_and_reverse_do_not_confirm (tests.test_s2uc_two_candidates.TwoCandidateTests.test_overlap_incomplete_and_reverse_do_not_confirm) ... ok
+test_owner_cleanup_and_ambiguous_positions (tests.test_s2uc_two_candidates.TwoCandidateTests.test_owner_cleanup_and_ambiguous_positions) ... ok
+test_promote_first_original_after_interruption (tests.test_s2uc_two_candidates.TwoCandidateTests.test_promote_first_original_after_interruption) ... ok
+test_promote_second_leaves_first_oldest (tests.test_s2uc_two_candidates.TwoCandidateTests.test_promote_second_leaves_first_oldest) ... ok
+test_retained_fifo_and_candidate_unchanged_by_confirmation (tests.test_s2uc_two_candidates.TwoCandidateTests.test_retained_fifo_and_candidate_unchanged_by_confirmation) ... ok
+test_single_candidate_path_matches_unchanged_reference (tests.test_s2uc_two_candidates.TwoCandidateTests.test_single_candidate_path_matches_unchanged_reference) ... ok
+test_foreign_owner_and_closed_rejected (tests.test_s2uc_provisional_hint.ProvisionalTests.test_foreign_owner_and_closed_rejected) ... ok
+test_full_budget_and_provenance_no_payload_copy (tests.test_s2uc_provisional_hint.ProvisionalTests.test_full_budget_and_provenance_no_payload_copy) ... ok
+test_multiple_positions_candidate_and_retained (tests.test_s2uc_provisional_hint.ProvisionalTests.test_multiple_positions_candidate_and_retained) ... ok
+test_only_hint_is_overridden (tests.test_s2uc_provisional_hint.ProvisionalTests.test_only_hint_is_overridden) ... ok
+test_repeat_does_not_promote_or_save_replaced_candidate (tests.test_s2uc_provisional_hint.ProvisionalTests.test_repeat_does_not_promote_or_save_replaced_candidate) ... ok
+test_b2_ambiguity_is_not_false_unique_recall (tests.test_s2uc_four_arm.FourArmTests.test_b2_ambiguity_is_not_false_unique_recall) ... ok
+test_b2_full_budget_is_16_plus_two_hints (tests.test_s2uc_four_arm.FourArmTests.test_b2_full_budget_is_16_plus_two_hints) ... ok
+test_b2_overlap_incomplete_and_interruption (tests.test_s2uc_four_arm.FourArmTests.test_b2_overlap_incomplete_and_interruption) ... ok
+test_b2_two_retained_then_fifo_no_refresh (tests.test_s2uc_four_arm.FourArmTests.test_b2_two_retained_then_fifo_no_refresh) ... ok
+test_candidate_not_retrievable_and_hints_do_not_confirm (tests.test_s2uc_four_arm.FourArmTests.test_candidate_not_retrievable_and_hints_do_not_confirm) ... ok
+test_i1_exact_repeat_then_fifo (tests.test_s2uc_four_arm.FourArmTests.test_i1_exact_repeat_then_fifo) ... ok
+test_owner_isolation_and_cleanup (tests.test_s2uc_four_arm.FourArmTests.test_owner_isolation_and_cleanup) ... ok
+test_reference_classes_are_original (tests.test_s2uc_four_arm.FourArmTests.test_reference_classes_are_original) ... ok
+test_temporary_observer_sees_python_frame_locals (tests.test_s2uc_four_arm.FourArmTests.test_temporary_observer_sees_python_frame_locals) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.104s
+
+OK

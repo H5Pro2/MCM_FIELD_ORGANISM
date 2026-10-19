@@ -1,0 +1,39 @@
+{
+  "mode": "legacy",
+  "status": "PASS",
+  "terminal": {
+    "active_case": null,
+    "cleanup": "UNCONFIRMED",
+    "completed_cases": [],
+    "first_failure": "FileNotFoundError:[WinError 2] Das System kann die angegebene Datei nicht finden: 'C:\\\\Users\\\\TV\\\\Documents\\\\MCM_FIELD_ORGANISM\\\\workspace\\\\reports\\\\s2uc\\\\ura1-fs-correction-20261015-01\\\\final\\\\legacy\\\\data\\\\neutral.json.partial'",
+    "followup_failures": [],
+    "retry_allowed": false,
+    "seconds": 0.17524689999845577,
+    "status": "TECHNICAL_ABORT",
+    "worker_ended": true,
+    "worker_started": true,
+    "worker_exitcode": 1,
+    "first_diagnostic": {
+      "phase": "monitor",
+      "operation": "supervise",
+      "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\ura1-fs-correction-20261015-01\\final\\legacy\\data\\neutral.json.partial",
+      "exception": "FileNotFoundError:[WinError 2] Das System kann die angegebene Datei nicht finden: 'C:\\\\Users\\\\TV\\\\Documents\\\\MCM_FIELD_ORGANISM\\\\workspace\\\\reports\\\\s2uc\\\\ura1-fs-correction-20261015-01\\\\final\\\\legacy\\\\data\\\\neutral.json.partial'",
+      "location": "C:\\Python314\\Lib\\pathlib\\__init__.py:654:stat",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\_s2uc_ura1_fs_accounting_v4.py\", line 188, in supervise\n    ledger.check();time.sleep(.01)\n    ~~~~~~~~~~~~^^\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\s2uc_ura1_fs_revision_probe.py\", line 62, in check\n    sum(p.stat().st_size for p in files)\n    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\s2uc_ura1_fs_revision_probe.py\", line 62, in <genexpr>\n    sum(p.stat().st_size for p in files)\n        ~~~~~~^^\n  File \"C:\\Python314\\Lib\\pathlib\\__init__.py\", line 654, in stat\n    return os.stat(self, follow_symlinks=follow_symlinks)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [WinError 2] Das System kann die angegebene Datei nicht finden: 'C:\\\\Users\\\\TV\\\\Documents\\\\MCM_FIELD_ORGANISM\\\\workspace\\\\reports\\\\s2uc\\\\ura1-fs-correction-20261015-01\\\\final\\\\legacy\\\\data\\\\neutral.json.partial'\n"
+    },
+    "partial_files": [],
+    "file_cleanup_confirmed": true
+  },
+  "accepted_inventory": null,
+  "handshake_steps": 1,
+  "job": {
+    "limit_bytes": 536870912,
+    "peak_job_committed_bytes": 27721728,
+    "peak_process_committed_bytes": 14069760,
+    "hard_job_limit": true,
+    "members": "supervisor and inherited worker",
+    "measurement": "Windows JobObjectExtendedLimitInformation",
+    "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap."
+  },
+  "neutral_post_probe_removals": []
+}

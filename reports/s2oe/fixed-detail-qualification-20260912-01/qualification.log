@@ -1,0 +1,21 @@
+test_01_coordinates (tests.test_s2oe_fixed_detail.Tests.test_01_coordinates) ... ok
+test_02_pixel_mapping (tests.test_s2oe_fixed_detail.Tests.test_02_pixel_mapping) ... ok
+test_03_conversion_order_and_legacy (tests.test_s2oe_fixed_detail.Tests.test_03_conversion_order_and_legacy) ... ok
+test_04_native_selection (tests.test_s2oe_fixed_detail.Tests.test_04_native_selection) ... ok
+test_05_order_and_limits (tests.test_s2oe_fixed_detail.Tests.test_05_order_and_limits) ... ok
+test_06_missing_frame (tests.test_s2oe_fixed_detail.Tests.test_06_missing_frame) ... ok
+test_07_bad_time (tests.test_s2oe_fixed_detail.Tests.test_07_bad_time) ... ok
+test_08_spatial_evidence (tests.test_s2oe_fixed_detail.Tests.test_08_spatial_evidence) ... ok
+test_09_gate_closed (tests.test_s2oe_fixed_detail.Tests.test_09_gate_closed) ... ok
+test_10_real_native_worker_and_close (tests.test_s2oe_fixed_detail.Tests.test_10_real_native_worker_and_close) ... ok
+test_11_information_loss_control (tests.test_s2oe_fixed_detail.Tests.test_11_information_loss_control) ... ok
+test_12_complete_envelope (tests.test_s2oe_fixed_detail.Tests.test_12_complete_envelope) ... ok
+test_13_envelope_overflow (tests.test_s2oe_fixed_detail.Tests.test_13_envelope_overflow) ... ok
+test_14_profile_rejection (tests.test_s2oe_fixed_detail.Tests.test_14_profile_rejection) ... ok
+test_15_legacy_selection_equal (tests.test_s2oe_fixed_detail.Tests.test_15_legacy_selection_equal) ... ok
+test_16_start_binding_and_status (tests.test_s2oe_fixed_detail.Tests.test_16_start_binding_and_status) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 1.771s
+
+OK

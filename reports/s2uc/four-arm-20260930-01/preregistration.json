@@ -1,0 +1,82 @@
+{
+  "version": "s2uc.four-arm.preregistration.v1",
+  "created_utc": "2026-09-30T13:04:41.672776+00:00",
+  "scope": "synthetic stored input; neutral development only",
+  "arms": [
+    "I1",
+    "I2",
+    "B1",
+    "B2"
+  ],
+  "predicted_correct": {
+    "g1/12": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "g1/24": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "g1/26": [
+      false,
+      true,
+      false,
+      false
+    ],
+    "g2/38": [
+      false,
+      true,
+      false,
+      false
+    ],
+    "g3/60": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "g3/67": [
+      false,
+      true,
+      false,
+      true
+    ],
+    "g3/69": [
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "false_decision": "ABSTAIN_NO_RETAINED_TRACE",
+  "true_decision": "TRACE_MATCH",
+  "limits_trace_frames": {
+    "I1": 8,
+    "I2": 12,
+    "B1": 12,
+    "B2": 16
+  },
+  "hint_frames_limit": 2,
+  "unchanged_rules": [
+    "exact equality",
+    "no FIFO refresh on repeat",
+    "one candidate in B arms",
+    "disjoint confirmation",
+    "read-only retained-only hints",
+    "FIFO retention",
+    "independent story/arm owners"
+  ],
+  "limits": "Candidate holding is part of admission policy, not independently isolated. No original source or field-memory evidence. Numerical payload is not RAM. Unexpected observations remain reported.",
+  "bindings": {
+    "reports/s2uc/p2-supplier-correction-20260930-01/final/retained-success/product/record.json": "f9f2ce5044c1e9ee6105e3e363d084590271bf7b76f662785dc9f06c0e03955a",
+    "reports/s2uc/p2-supplier-correction-20260930-01/final/retained-success/appendix/provenance.json": "08fbc5bc0bbdbb0f681bc9379170544dfa5400c5697eefd54d5a7fe7580d740a",
+    "tools/_s2ub_candidate_confirmation.py": "4178198b43fbbefd3cd550307ec114540c2167a3ae066e22bde01f5223f0ca8a",
+    "tools/_s2tw_exact_confirmation.py": "90470980a329d0424bec9ba430adbbccaf72bb82145edfefd6e491b6fcec7be9",
+    "tools/_s2tu_retained_trace.py": "bf530380f93c8a1bf0eeae5a4169e81bc99aee10050872e3e5ddc7bfdb88f3f6",
+    "tools/_s2uc_record_codec.py": "43f5532064b11e130535c47afe50a48be418255a054e694253c412c6783ad70f"
+  }
+}

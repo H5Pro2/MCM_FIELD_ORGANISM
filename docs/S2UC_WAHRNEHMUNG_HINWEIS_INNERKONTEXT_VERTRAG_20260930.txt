@@ -1,0 +1,146 @@
+WAHRNEHMUNG -> ZWEIFRAME-HINWEIS -> GETRENNTER INNERKONTEXT
+Statischer Schnittstellenvertrag, 2026-09-30. Keine Implementierung/Ausfuehrung.
+
+ARCHITEKTURENTSCHEIDUNG UND BESTAND
+FactorRecencyArm (tools/_s2uc_factor_recency.py:5) integriert lokal unveraendert
+FactorHintArm.hint und PerceptionRecencyArm.close_segment. F erweitert nur
+lesenden Zugang; ausschliesslich vollstaendige exakte spaetere Beobachtung
+frischt auf. Keine skalierte Bestaetigung, keine Produktfreigabe. Grenzen:
+gebundene Testvektoren, A-Erhaltung kostet D; Eindeutigkeit nach Verdrangung
+beweist keine urspruenglich gemeinte Herkunft. Beleg:
+reports/s2uc/factor-recency-20260930-01/REPORT.txt und result.json.
+
+VORHANDENE ANSCHLUESSE
+- tools/_s2tu_retained_trace.py:24 Frame: 48 Werte, Profil, Owner, Segment,
+  Ordinal. Kein Wahrnehmungsquellen-/Zeitintervallnachweis in diesem Typ.
+- tools/s2uc_pcm_half_check.py:57 process: PCM -> Rezeptor -> NJ-Projektion.
+  Die aktuellen lokalen Pruefer bauen Frame und Hinweispaar selbst auf.
+- tools/s2uc_factor_recency_check.py query/submit: getrennter form/close- und
+  hint-Pfad, bisher vom Pruefer festgelegte Hinweise. Kein laufender Adapter.
+- tools/_s2ub_candidate_confirmation.py:122 form blockiert bei halb gefuelltem
+  Hinweisbuffer. Ein erster hint darf daher nicht zwischen zwei laufenden
+  form-Aufrufen offen bleiben. Zwei hint-Aufrufe muessen zusammen abgeschlossen
+  sein, bevor neue Aufnahme fortgesetzt wird.
+- tools/_s2mr_private_minimal_mcm_runtime.py:384 process_once und ab Zeile 427:
+  COMPLETE_AV_PERCEPTION bildet Speicher ohne Scan; partielle Hinweise scannen
+  ohne Speicherbildung; Ausgabe context_status/hypothesis getrennt.
+  Das ist vorhandene Trennung als Vorbild, keine Anbindung von FactorRecencyArm.
+  Anderer 336-Wert-/AV-Ereignisvertrag, nicht identisch zum lokalen 48-Wert-Pfad.
+- tools/_s2jk_private_end_to_end_context_use.py:144 EndToEndContextUseResult:
+  privater read-only Adapter fuer bereits zugelassenen Wahrnehmungskontext.
+  Seine Zulassungs-/Ergaenzungslogik nicht auf F-Treffer uebertragen: F liefert
+  weder sichere Semantik noch die von diesem Adapter verlangten Kontexttypen.
+- tools/_s2jw_profiled_memory_coordinator.py nutzt B4/TSPM-Profilvertrag;
+  keine Gleichsetzung mit neuem lokalen 1K/2R-Speicher und keine Aenderung daran.
+
+MINIMALER NEUER LOKALER VERTRAG (VORSCHLAG)
+Ein synchroner Single-Owner-Adapter, kein Agentensystem. Genau ein Eingang
+accept_perception(sample) und ein expliziter finish_story(); kein Ziel-/Hintlabel-
+Eingang und keine semantische Quellenwahl. sample enthaelt 48 unveraenderte
+NJ-Werte, Profil, Streamkennung, monotonen Frameindex, Quellintervall und
+Materialisierungsreferenz. Keine spaeteren Inputs, Sollherkunft oder Testrolle.
+Streamstart setzt Phase fest: Paare (1,2),(3,4),... ohne Ueberlappung.
+Dies ist die kleinste Paarbildung; keine Behauptung, jedes gleitende Zweierfenster
+zu untersuchen. Versetzte Paare bleiben eine ausdrueckliche Anschlussgrenze.
+Profil und fester Zeit-/Hopvertrag werden einmal bei Streamstart gebunden.
+Aufeinanderfolgend bedeutet Index+1 und erwarteter Intervallstartabstand dieses
+Vertrags, nicht bloss steigende willkuerliche Ordinale. Luecke, Umordnung,
+Profil-/Streamwechsel: Paar nicht verbinden, Geschichte als unterbrochen
+abschliessen; Neustart explizit mit leerem Owner. Keine stille Zusammenziehung.
+Quellzeit und Beobachtungsordinal getrennt: Datei-Wiederverarbeitung darf neue
+Beobachtungsordinale haben, wird dadurch aber nicht zur neuen Aufnahme.
+
+ABLAUF PRO ZWEIERPAAR
+1. Erstes akzeptiertes Frame nur im Zweiplatz-Paarbuffer halten. Noch kein hint
+   und kein form; deshalb kein blockierter halber Hinweis im Speicher.
+2. Zweites Frame aufnehmen, Nachbarschaft pruefen. Vorzustand binden.
+3. Beide Frames in Originalreihenfolge synchron an hint geben, gleiche generierte
+   Paarsegmentkennung, originale Beobachtungsordinale. Vollstaendiges Ergebnis
+   unveraendert in einen getrennten, nur skalaren Innerkontext-Receipt uebernehmen.
+   Kein form/close waehrend der zwei hint-Aufrufe. Abfrage immer vor Aufnahme
+   beider Frames, um Selbsterzeugung eines Treffers durch dieses Paar auszuschliessen.
+4. Erst danach dieselben Originalwerte ueber form in festen Vierergruppen
+   (1..4),(5..8),... aufnehmen; nach jedem vierten Frame close_segment.
+   Grenzen ausschliesslich aus Streamphase, nie aus einem Abrufresultat ableiten.
+   Auch No-Match/Mehrdeutigkeit aendern die Aufnahme nicht.
+5. Paarreferenzen freigeben; genau einen Receipt nach aussen liefern. Er beschreibt
+   den Abruf-Vorzustand, nicht zwingend den nach anschliessender Aufnahme noch
+   vorhandenen Bestand. Eingangsordinalpaar und Zustandsrevision mitliefern.
+
+finish_story: ein einzelnes uebriges Frame ergibt INSUFFICIENT_PAIR und keinen
+Abruf; es darf regulaer form erhalten, danach unvollstaendige Bildung schliessen
+und verwerfen. Kein Padding, keine Wiederholung zum Fuellen. Anschliessend
+Owner/Buffer/Endmarken/letzten Receipt freigeben. Bei Fehler keine halbe Paarung
+fortsetzen; Owner schliessen und eindeutigen Fehlerstatus ohne Erfolg melden.
+Kein Rollback- oder Wiederholungsframework in diesem Minimalvertrag.
+
+AUSGABE: GETRENNTER INNERKONTEXT, KEIN EINGANG
+Receipt: owner/stream/profile, Eingangsordinalpaar, Quellintervalle,
+Abruf-Zustandsrevision, Entscheidung und vollstaendige matches.
+Je Match: role=candidate/retained, Generation, Originalformation,
+vier Originalordinale, Position, Faktoren. Keine Vektorwerte, kein Trace-Objekt,
+kein Callback und keine Referenz auf mutable Speicherobjekte.
+PROVISIONAL_CANDIDATE_MATCH = Zugang zur vorlaeufigen Kandidatenspur.
+CONFIRMED_RETAINED_MATCH = Zugang zur bestaetigten Erhaltungsspur;
+'bestaetigt' bezeichnet ihren Speicherstatus, nicht sichere Bedeutung der
+aktuellen Wahrnehmung oder deren urspruenglich gemeinte Herkunft.
+ABSTAIN_AMBIGUOUS = alle konkurrierenden Matches ausgeben, auch gemischte Rollen;
+kein Sieger, keine Mittelung. ABSTAIN_NO_MATCH = leere Menge.
+INSUFFICIENT_PAIR/INPUT_ERROR sind Adapterstatus, keine neue Matchingregel.
+Receipt-Typ darf accept_perception nicht akzeptieren. Kein Rueckkanal zur
+Aufnahme, keine automatische Auffrischung und keine Kontext-Vektorergänzung.
+
+PUFFER- UND REFERENZBILANZ
+Speicher unveraendert maximal 16 Spurframes plus 2 Hinweisframes. Adapter darf
+keinen weiteren unabhaengigen Historybuffer einfuehren. Seine genau zwei
+Paarplaetze BELEGEN die zwei Hinweisplaetze gemeinsam mit arm._hints:
+die hint-Framewrapper teilen dieselben unveraenderlichen 48-Werte-Tupel,
+keine Kopie der Werte. Zusaetzlich maximal zwei Wrapperreferenzen im Adapter
+und zwei Wrapperreferenzen im hint-Buffer, separat als Referenzen bilanzieren.
+Nach hint wird nur fuer die Aufnahme noch gehalten; Werte duerfen zwischen
+Paarbuffer und forming geteilt, aber nicht zusaetzlich archiviert werden.
+Vor naechstem Paar alle Adapterreferenzen auf vorheriges Paar loesen.
+Eingang synchron mit Besitzuebergabe/Backpressure: keine Queue und kein drittes
+vorab angenommenes Frame. Producer-Payload ist derselbe uebergebene Datensatz,
+keine zusaetzliche Adapterkopie. Externe Beobachterarchive separat ausweisen.
+
+Maximal 9 Matches: (2 retained+1 candidate)*3 Positionen, je maximal 3 Faktoren.
+Ein ausgehender Receipt, keine interne Liste vergangener Receipts. Maximal 9
+Herkunftszeilen/36 Ordinalreferenzen/27 Faktoren plus Paar-/Profilmetadaten.
+Keine gespeicherten Vektor-/Trace-Referenzen im Receipt. Fuer neuen lokalen
+Vertrag IDs auf 96 UTF-8-Byte, Profil 64 ASCII-Zeichen und nichtnegative
+63-Bit-Ordinale begrenzen; als vorgeschlagene Adaptergrenzen kennzeichnen.
+Receipt hart auf 16384 serialisierte Byte begrenzen, vollstaendige Ausgabe
+oder Fehler; nie Treffer abschneiden. Serialisierungsbuffer/Objektmetadaten
+separat zaehlen; Framebudget ersetzt keine Bytebilanz. Zwei skalare Endmarken,
+Paarphase, Viererphase und Revisionszaehler bleiben ebenfalls explizite Metadaten.
+16+2-Grenze muss per erreichbaren einzigartigen Wertepayloads und zugleich
+per Rollen/Wrapperreferenzen kontrolliert werden; Aliase nicht als neue Inhalte
+verbergen, aber auch nicht doppelt als neue Wahrnehmung zaehlen.
+
+KLEINE GEGENPROBE -- NUR PLAN
+Vorhandene W1..W4-Vektoren verwenden, keine PCM-Erzeugung. Drei frische Geschichten,
+Vorbelegung ueber regulaere form/close-Schritte; Fixturelabels nur beim Beobachter.
+Jeder Adapter sieht allein den Stream und seine feste Paarphase.
+G1: A einmal als Kandidat; laufende zwei Frames W1,W2 -> vorlaeufig A@0 Faktor1.
+G2: A bestaetigt; laufend Halb-W1,Halb-W2 -> bestaetigt A@0 Faktor .5.
+G3: A und D bestaetigt; laufend W2,W3 -> mehrdeutig A@1,D@1 Faktor1.
+Viereraufnahme ist in jedem Zweiframe-Fall unvollstaendig; am Storyende verwerfen.
+Erwartete Treffer vor Aufnahme gegen expliziten direkten F-Abruf vergleichen.
+Pro Geschichte parallel eine Aufnahme-ohne-Abruf-Referenz mit denselben
+Eingangsframes: Endzustand, Reihenfolge, Kandidat und Endmarken identisch.
+G3 feste Fortsetzung W1,W2 als naechstes Paar: kein rueckwirkend korrigierter
+Receipt fuer erstes Paar; identischer Praefix muss vor unbekannter Fortsetzung
+identische Ausgabe erzeugen. Neue Bildungen koennen Zustand erst danach aendern.
+Gezielte Anschlusskontrollen: Indexluecke/Profilwechsel verbindet kein Paar;
+Receipt als Eingang abgewiesen; einzelnes Restframe bleibt ohne Match;
+Ownerwechsel loescht Buffer/Endmarken; volle 16+2-Situation mit Alias-/Wrapper-
+Inventar und maximalem Receipt ohne verdeckte Vektorreferenzen pruefen.
+Keine Wiederholung der Matching-/Recency-Grundversuche: neu sind kausale Paarwahl,
+Reihenfolge Abruf-vor-Aufnahme, Ausgabetyp und vollstaendige Speicherbilanz.
+
+NAECHSTER SCHRITT
+Vorschlag: genau diesen lokalen Adaptervertrag und die kleinen Anschlusskontrollen
+beauftragen. Kein Anschluss an historische 336-AV-Runtime oder Kontextvervoll-
+staendigung ohne eigenen Typ-/Profilnachweis. Kein Produktbetrieb oder allgemeine
+Agentenarchitektur. Registry und Originalquellenlauf bleiben zurueckgestellt.

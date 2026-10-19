@@ -1,0 +1,8 @@
+{
+  "checked_files": 5769,
+  "checked_bytes": 68981109,
+  "changed": [],
+  "missing": [],
+  "after_full_regression": true,
+  "method": "Original byte sizes and SHA256 only; no historical record evaluation"
+}

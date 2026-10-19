@@ -1,0 +1,98 @@
+AUSFUEHRBARER MATERIALPLAN -- HERKUNFTSPRUEFUNG -- 2026-09-30
+Status PLAN_ONLY; keine Produktion oder abschliessende Leistungspruefung.
+Maschinenlesend: docs/S2UC_HERKUNFT_MATERIALPLAN_20260930.json
+Plan-SHA256 81c7edb0ece7716789f414ca9ebb02a060080f0e8bc56e4bc0c36a76a253cba7
+Generator: tools/s2uc_known_origin_material_plan.py
+Version s2uc.known-origin.material.v1, SHA256 7e74ebf59c0ba1bc8b7ee96a5a155f3e61196403787ddbfd6672dcd1ac2bd804
+
+ZWEI PARTITIONEN
+Development und evaluation sind getrennte Herkunftsgraphen. Jede enthaelt
+Basisepisoden A,B,C,D sowie A_half,A_noise,A_tailhalf. A und C bilden zwei
+getrennt angeordnete Ereignisse auf einer gemeinsamen AC-Zeitachse: A[0,19200),
+C[19200,38400). C entsteht aus eigenem Seed/Ablauf. D ist eine andere gesamte
+Episode, deren erste9600Samples bitgleich von A stammen; sein Ende kommt aus
+seinem eigenen Erzeugungsauftrag. Geteilte Anfaenge und alle Ableitungen bleiben
+innerhalb derselben Partition. Keine Ableitung aus NASA oder W1-W4.
+
+Development-Seeds A/B/C/D/Rauschen:
+104729 /130363 /155921 /181081 /205019.
+Evaluation-Seeds A/B/C/D/Rauschen:
+324161 /350377 /376127 /402581 /428759.
+Frequenzen pro vier aufeinanderfolgenden Fenstern, Hz:
+Development A310,530,790,1130; B430,890,670,1490;
+C590,1010,1370,830; D310,530,1730,1970 (Anfang nach Synthese kopiert).
+Evaluation A470,710,1090,1570; B610,1270,910,1810;
+C730,1430,1910,1030; D470,710,2110,2330 (Anfang nach Synthese kopiert).
+
+GENERATOR UND ABLEITUNGEN
+19200 Samples/Episode,48000Hz, vier Fenster4800Samples. Xorshift32 inklusive
+Bitmasken und Reihenfolge vollstaendig im JSON/Code angegeben. Zwei Ziehungen
+legen Startphasen fest. Je Fenster Grundfrequenz f; phasenkontinuierliche
+Integration der vorangegangenen Fenster. Summe zweier Sinustraeger mit
+Frequenzverhaeltnis1:1,5 und je Amplitude1/16; einmal nach Float32-le runden.
+Keine Auswahl oder Pegelanpassung nach resultierenden Vektoren. Alle Basis-
+Episoden haben denselben nominalen Amplitudenansatz, nicht garantiert gleichen
+nachgemessenen Betrag. D-Praefix wird nach Float32-Quantisierung kopiert.
+Ableitungen aus den gespeicherten Float32-Werten von A: globaler Gain1/2;
+bipolares Rauschen +/-2^-12 (Low-Bit von eigenem PRNG pro Sample); oder
+Gain1/2 ausschliesslich im dritten Fenster. Danach einmalFloat32; kein Clipping.
+Bei unzulaessigen Werten Abbruch, keine Anpassung. Rezeptor/NJ unveraendert,
+Code-/Profilbindungen und Python-Runtime im Plan; keine Rauschregel im Matcher.
+C-Quellzeit beginnt bei19200, daher NJ-Snapshotindices40,50,60,70; andere
+Sequenzen0,10,20,30. Replayindices des spaeteren Prueftreibers sind getrennt.
+
+FESTE ACHT FAELLE JE PARTITION
+T0: lernen A,A; Test A1,A2,A3; Herkunft A; positive technische Kontrolle.
+P1: lernen A,A; Test A_half1..3; Herkunft A; Gain-Invarianzziel.
+P2: lernen A,A; Test A_noise1..3; Herkunft A; offenes Rauschrobustheitsziel.
+P3: lernen A,A; Test A_tailhalf1..3; Herkunft A; korrekte Herkunft garantiert
+    keine korrekte Originalfortsetzung.
+N1: lernen A,A; Test B1..3; Herkunft B, nicht im gelernten Bestand.
+N2: lernen A,A; Test C1..3; Herkunft C, benachbartes getrenntes Ereignis.
+N3: lernen A,A; Test D1..3; Herkunft D; Praefix identischT0, verborgene Verzweigung.
+N4: lernen A,A,D,D; Test D1..3; Herkunft D, im Bestand vorhanden, Hinweis mehrdeutig.
+N4 gehoert funktional zur positiven Bestandshherkunft (positive=true), bleibt
+aber der negative Gegenfall gegen eine sichere Einzelidentifikation. Die
+Fall-ID N4 wird nicht als Herkunftslabel an das System gegeben.
+
+Alle Geschichten leer starten, regulaer aufnehmen, feste Paarphase. Primäre
+Pruefposition11 fuerT0/P1/P2/P3/N1/N2/N3, Position19 fuerN4. Insgesamt96
+Aufnahmen/Partition,44 erreichbare Zielpositionen, davon8 vorab festgelegte
+Pruefziele und36 getrennte Lernziele. Keine Vermischung in Erfolgszahlen.
+Herkunftsmap fuer den Pruefer: jede gelernte Vierergruppe auf ihre Basis-ID
+abbilden, einschliesslich wiederholter Vorkommen; technische Frameordinals
+werden durch den Replayablauf festgelegt. Ableitungen bleiben A. Der technische
+Replay erhaelt nur Werte/Profil/Anzahl, nicht diese Identitaeten.
+
+MENGEN UND AUSFUEHRUNGSGRENZE
+Pro Partition7 Sequenzen =134400 Samples,537600 rohe PCM-Byte; diese werden
+als1075200 Hexzeichen in budgetierten JSON-Dateien abgelegt.28 Projektions-
+fenster, genau28 Rezeptor- und28NJ-Aufrufe. Beide Partitionen zusammen56
+Projektionsfenster, keine unbeschraenkte Variantenkombination. Ein Aufruf
+produziert genau EINE Partition; niemals automatisch die zweite oder Tests.
+4MiB pro Ausgabeordner einschliesslich256KiB Abschlussreserve; bestehender
+OutputLedger wird wiederverwendet. Exklusive Ordneranlage verhindert Retry.
+Keine Decoder-/Netz-/Registry-Verwendung. Das ist kein qualifizierter harter
+Prozess-RAM-Vertrag; Arbeitsmenge wird durch feste Schleifen/Sequenzgroessen
+begrenzt. Produktion ist noch nicht neutral end-to-end ausgefuehrt, um keine
+neuen Materialfamilien unter dem Entwicklungsauftrag zu erzeugen.
+
+Nach separatem Auftrag und Erstellung einer passenden AUTHORIZED_ONCE-Datei:
+C:/Python314/python.exe -m tools.s2uc_known_origin_material_plan produce <Autorisierungsdatei>
+Vorlagen S2UC_HERKUNFT_DEVELOPMENT_VORLAGE_20260930.json und
+S2UC_HERKUNFT_EVALUATION_VORLAGE_20260930.json stehen auf PENDING.
+Quelle/Generator/Plan/Runtime muessen gebunden bleiben. Ausgabe pro Partition:
+reports/s2uc/known-origin-<partition>-20260930-01 mit claim, sieben PCM-JSONs,
+28 Projektions-JSONs und closure. Fehler bleibt NOT_EVALUABLE, keine automatische
+Wiederholung. Dieser Plan erteilt keine Produktionsberechtigung.
+
+ENTWICKLUNG UND ABSCHLIESSENDE PRUEFUNG
+W1-W4 bleiben bekannte Regression, NASA explorativ. Die neuen Familien wurden
+nicht erzeugt oder ausgewertet. Unterschiedliche Seeds und disjunkte Herkunft
+verhindern unmittelbare Ableitungslecks; sie belegen weder statistische noch
+allgemeine Unabhaengigkeit. Beide Familien teilen einen synthetischen Generator
+und pruefen nur diese kontrollierte Aufgabenklasse. Frequenzen/Seeds jetzt
+festlegen, nicht spaeter nach Matchresultaten aendern. Nach etwaiger Entwicklung
+Regel und Parameter vor Zugriff auf Evaluation-Werte einfrieren. Erneute
+Anpassung anhand Evaluation verbraucht diesen Bestand als Entwicklung.
+Keine Schwelle oder Rauschrobustheit aus den technischen Tests ableiten.

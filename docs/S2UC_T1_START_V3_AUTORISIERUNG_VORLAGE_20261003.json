@@ -1,0 +1,23 @@
+{
+  "status": "PENDING_SEPARATE_AUTHORIZATION",
+  "action": "T1_MATERIALIZE_AND_RUN_ONCE",
+  "binding_sha256": "78525e2ff688151cc0dfbb9400a40a4a5732df426d52b89e4d6b5067ddc016f3",
+  "plan_sha256": "000e3aae92d7966ac8cde82d108197802843b6b71b426f6d98f4996805dc502e",
+  "qualification_sha256": "6533a4810d0c612fef4c8066c731d94b95898458f004547b5a5cd06e81dbd22f",
+  "output": "reports/s2uc/t1-transfer-20261003-02",
+  "cases": 16,
+  "source_positions": 1280,
+  "arms": [
+    "U",
+    "M",
+    "E",
+    "K",
+    "P"
+  ],
+  "admissions": 6400,
+  "reference_advances": 6400,
+  "total_seconds": 3600,
+  "evidence_status": "SYNTHETIC_TRANSFER_VECTOR_BOUNDARY_ONLY",
+  "start_binding_sha256": "a1bbd35b1f0e6f618a95e3bd544cd95bc143a6498d686bdf746e54afe04945fe",
+  "start_qualification_sha256": "38bdfff8339e0290125d9b992be81673ca2eb8de28a4b7860f7151d0db0ac5c6"
+}

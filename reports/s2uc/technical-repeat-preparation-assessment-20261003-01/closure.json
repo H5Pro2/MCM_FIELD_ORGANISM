@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "files": {
+    "REPORT.md": {
+      "bytes": 7571,
+      "sha256": "d61986a1f039dbc33f296034f0c14f73e926d16f525e1bd89a6635448d44ec90"
+    },
+    "verification.json": {
+      "bytes": 1678,
+      "sha256": "e917ce59f502c292cdcab5644170bbf7492cb788d5454e379efdff797aa6a683"
+    }
+  },
+  "qualification_sha256": "f548adef30e2f67fc9a4eeddf32b4718fefd4800c60440134066fb6ee02f1945"
+}

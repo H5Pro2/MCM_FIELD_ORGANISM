@@ -1,0 +1,17 @@
+test_A10_resources_receipts_and_cleanup (tests.test_s2uc_signal_approx.SignalApproxTests.test_A10_resources_receipts_and_cleanup) ... ok
+test_A11_observer_new_wrong_lost_exact_and_harm (tests.test_s2uc_signal_approx.SignalApproxTests.test_A11_observer_new_wrong_lost_exact_and_harm) ... ok
+test_A12_maximum_competitors_and_invalid_input_cleanup (tests.test_s2uc_signal_approx.SignalApproxTests.test_A12_maximum_competitors_and_invalid_input_cleanup) ... ok
+test_A1_default_and_parameters_locked (tests.test_s2uc_signal_approx.SignalApproxTests.test_A1_default_and_parameters_locked) ... ok
+test_A2_default_legacy_exact_regression (tests.test_s2uc_signal_approx.SignalApproxTests.test_A2_default_legacy_exact_regression) ... ok
+test_A3_epsilon_strict_boundaries_and_null (tests.test_s2uc_signal_approx.SignalApproxTests.test_A3_epsilon_strict_boundaries_and_null) ... ok
+test_A4_tau_inclusive_and_quality_role (tests.test_s2uc_signal_approx.SignalApproxTests.test_A4_tau_inclusive_and_quality_role) ... ok
+test_A5_competition_and_exact_priority (tests.test_s2uc_signal_approx.SignalApproxTests.test_A5_competition_and_exact_priority) ... ok
+test_A6_numeric_failure_invalidates_whole_fallback (tests.test_s2uc_signal_approx.SignalApproxTests.test_A6_numeric_failure_invalidates_whole_fallback) ... ok
+test_A7_missing_successor_and_candidate (tests.test_s2uc_signal_approx.SignalApproxTests.test_A7_missing_successor_and_candidate) ... ok
+test_A8_unchanged_confirmation_refresh (tests.test_s2uc_signal_approx.SignalApproxTests.test_A8_unchanged_confirmation_refresh) ... ok
+test_A9_causal_equal_prefix_and_gate (tests.test_s2uc_signal_approx.SignalApproxTests.test_A9_causal_equal_prefix_and_gate) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 6.475s
+
+OK

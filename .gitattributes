@@ -32,3 +32,6 @@ tools/_s2nh_*.py text eol=lf
 tests/test_s2nh_private_source_binding.py text eol=lf
 reports/s2nh/** text eol=lf
 reports/s2nh/**/*.txt -text
+
+# Research archives contain byte-bound evidence; never normalize their contents.
+reports/** -text

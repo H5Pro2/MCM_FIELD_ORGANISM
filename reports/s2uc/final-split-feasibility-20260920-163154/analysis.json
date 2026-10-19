@@ -1,0 +1,565 @@
+{
+  "scope": "Static source extraction and size calculation only. No project imports, tests or payload execution.",
+  "baseline_source_bytes": 477802,
+  "removed_once": [
+    {
+      "path": "mcm_field_organism/__init__.py",
+      "bytes": 940
+    },
+    {
+      "path": "mcm_field_organism/root_lazy_exports.py",
+      "bytes": 258911
+    },
+    {
+      "path": "reports/s2nd/seal_inventory.py",
+      "bytes": 17470
+    },
+    {
+      "path": "tools/_s2np_private_source_binding.py",
+      "bytes": 15138
+    },
+    {
+      "path": "tools/_s2nu_private_source_binding.py",
+      "bytes": 13635
+    },
+    {
+      "path": "tools/_s2ts_temporal_trace.py",
+      "bytes": 5001
+    },
+    {
+      "path": "tools/_s2ts_temporal_trace_run.py",
+      "bytes": 10468
+    },
+    {
+      "path": "tools/_s2ty_resource_ledger.py",
+      "bytes": 5207
+    },
+    {
+      "path": "tools/_s2uc_run_binding.py",
+      "bytes": 34644
+    }
+  ],
+  "retained_files": [
+    {
+      "path": "mcm_field_organism/broadband_hearing_path.py",
+      "bytes": 7983,
+      "sha256": "a20456b24c04d099ba5ee2da6250e3d83dc657392603c41d816b13ca68a37fb7"
+    },
+    {
+      "path": "mcm_field_organism/carrier_baselines.py",
+      "bytes": 3572,
+      "sha256": "dc891f4f263b17acf7b7b50c7c135d9a3d028cb1b9bdb72c342d72d24f1337ab"
+    },
+    {
+      "path": "mcm_field_organism/controlled_audio_source.py",
+      "bytes": 1237,
+      "sha256": "46744d3b377f1bcd54b7b8128dbd2a264683d45a534273031869aa127b80bd70"
+    },
+    {
+      "path": "mcm_field_organism/log_spectral_receptor.py",
+      "bytes": 7024,
+      "sha256": "26a6bd8f2d190db60c75ad29f275b3bd8b09b6d26d4ad54e4396176c4a36d2b0"
+    },
+    {
+      "path": "tools/_s2nj_private_auditory_output_projection.py",
+      "bytes": 7700,
+      "sha256": "e052cc76cf4c9678e11673d95390dea21634bba8082187567a760faaaf4904e5"
+    },
+    {
+      "path": "tools/_s2tu_retained_trace.py",
+      "bytes": 3846,
+      "sha256": "bf530380f93c8a1bf0eeae5a4169e81bc99aee10050872e3e5ddc7bfdb88f3f6"
+    },
+    {
+      "path": "tools/_s2tw_exact_confirmation.py",
+      "bytes": 1283,
+      "sha256": "90470980a329d0424bec9ba430adbbccaf72bb82145edfefd6e491b6fcec7be9"
+    },
+    {
+      "path": "tools/_s2ty_audio_materialization.py",
+      "bytes": 4090,
+      "sha256": "c332b1eccff35aefc0dbea27c4db78e5b97524ed2f46ab7a6461e3bcc522db72"
+    },
+    {
+      "path": "tools/_s2ub_candidate_confirmation.py",
+      "bytes": 9869,
+      "sha256": "4178198b43fbbefd3cd550307ec114540c2167a3ae066e22bde01f5223f0ca8a"
+    },
+    {
+      "path": "tools/_s2ub_candidate_verification.py",
+      "bytes": 3075,
+      "sha256": "1c25a3afee15c8ada624c93fa81bbfbece1a1b7407502b029798fec84a00cc30"
+    },
+    {
+      "path": "tools/_s2uc_dependencies.py",
+      "bytes": 4937,
+      "sha256": "57e38a7cac23976e2d16274907e9528afb986961e051475362ea0f7b8f65aaf2"
+    },
+    {
+      "path": "tools/_s2uc_evaluation.py",
+      "bytes": 2341,
+      "sha256": "50f458bb1e9693227b119a87b0cf0e71ec1076d0f64427c93426397e33125e7a"
+    },
+    {
+      "path": "tools/_s2uc_neutral_connection.py",
+      "bytes": 8749,
+      "sha256": "25138be284998b37a59661690c9d291881708b47c7eccc7101799b045ee611da"
+    },
+    {
+      "path": "tools/_s2uc_record_codec.py",
+      "bytes": 8529,
+      "sha256": "43f5532064b11e130535c47afe50a48be418255a054e694253c412c6783ad70f"
+    },
+    {
+      "path": "tools/_s2uc_resource_ledger.py",
+      "bytes": 2656,
+      "sha256": "43e3fe248be3b70d2cd05fe0db4a15d20d88272a7761a9a93204837c3ef110be"
+    },
+    {
+      "path": "tools/_s2uc_run_entry.py",
+      "bytes": 13581,
+      "sha256": "1005335a67c6bf089dbc2399fb0b874d062924537b7522982f4c73f030778349"
+    },
+    {
+      "path": "tools/_s2uc_source_adapter.py",
+      "bytes": 1442,
+      "sha256": "011b75a724fab21dd12b66f02e2fb6a4626e7f1d4450ac4612d31fb53e4abead"
+    },
+    {
+      "path": "tools/_s2uc_source_binding.py",
+      "bytes": 6058,
+      "sha256": "3758b0b3291ae9f04d91f704548ae0a77f7bc56be87d189fa89ba48c2e735e78"
+    },
+    {
+      "path": "tools/_s2uc_verification.py",
+      "bytes": 17086,
+      "sha256": "1af8a9e2de68acf29b7ae2755f82330e959e96505867c81b4ba263d0b2f81626"
+    },
+    {
+      "path": "tools/s2uc_run_bound_once.py",
+      "bytes": 1281,
+      "sha256": "bcdd6537958e019bd8ef713e89bba4e10e567d6285852f3725d5cdedd83d0e0e"
+    }
+  ],
+  "retained_bytes": 116339,
+  "extracted_functions": {
+    "tools/_s2nu_private_source_binding.py": [
+      {
+        "name": "S2NUError",
+        "start": 35,
+        "end": 38,
+        "lf_utf8_bytes": 114
+      },
+      {
+        "name": "require",
+        "start": 41,
+        "end": 43,
+        "lf_utf8_bytes": 67
+      },
+      {
+        "name": "native_index",
+        "start": 46,
+        "end": 48,
+        "lf_utf8_bytes": 137
+      },
+      {
+        "name": "groups_payload",
+        "start": 51,
+        "end": 53,
+        "lf_utf8_bytes": 185
+      },
+      {
+        "name": "WindowSpec",
+        "start": 56,
+        "end": 77,
+        "lf_utf8_bytes": 1171
+      },
+      {
+        "name": "prepare_groups",
+        "start": 91,
+        "end": 101,
+        "lf_utf8_bytes": 541
+      },
+      {
+        "name": "group_value",
+        "start": 104,
+        "end": 108,
+        "lf_utf8_bytes": 139
+      },
+      {
+        "name": "sample_value",
+        "start": 111,
+        "end": 129,
+        "lf_utf8_bytes": 762
+      },
+      {
+        "name": "render",
+        "start": 132,
+        "end": 139,
+        "lf_utf8_bytes": 416
+      },
+      {
+        "name": "pcm_window",
+        "start": 142,
+        "end": 147,
+        "lf_utf8_bytes": 271
+      }
+    ],
+    "tools/_s2uc_run_binding.py": [
+      {
+        "name": "_sha",
+        "start": 29,
+        "end": 30,
+        "lf_utf8_bytes": 80
+      },
+      {
+        "name": "_run_pair",
+        "start": 32,
+        "end": 34,
+        "lf_utf8_bytes": 133
+      },
+      {
+        "name": "build",
+        "start": 37,
+        "end": 51,
+        "lf_utf8_bytes": 1445
+      },
+      {
+        "name": "validate",
+        "start": 53,
+        "end": 58,
+        "lf_utf8_bytes": 375
+      },
+      {
+        "name": "reference",
+        "start": 71,
+        "end": 75,
+        "lf_utf8_bytes": 278
+      },
+      {
+        "name": "_resolve_reference",
+        "start": 118,
+        "end": 127,
+        "lf_utf8_bytes": 519
+      },
+      {
+        "name": "_validate_inventory",
+        "start": 158,
+        "end": 166,
+        "lf_utf8_bytes": 766
+      },
+      {
+        "name": "_v6_rows",
+        "start": 169,
+        "end": 181,
+        "lf_utf8_bytes": 595
+      },
+      {
+        "name": "_v6_alternatives",
+        "start": 184,
+        "end": 200,
+        "lf_utf8_bytes": 1249
+      },
+      {
+        "name": "_validate_v6_budget",
+        "start": 203,
+        "end": 230,
+        "lf_utf8_bytes": 1981
+      },
+      {
+        "name": "_v6_test_ids",
+        "start": 237,
+        "end": 247,
+        "lf_utf8_bytes": 566
+      },
+      {
+        "name": "_validate_v6_qualification",
+        "start": 250,
+        "end": 313,
+        "lf_utf8_bytes": 4229
+      },
+      {
+        "name": "load_for_start",
+        "start": 489,
+        "end": 540,
+        "lf_utf8_bytes": 3015
+      }
+    ],
+    "reports/s2nd/seal_inventory.py": [
+      {
+        "name": "canonical",
+        "start": 28,
+        "end": 30,
+        "lf_utf8_bytes": 164
+      },
+      {
+        "name": "digest",
+        "start": 33,
+        "end": 34,
+        "lf_utf8_bytes": 75
+      }
+    ]
+  },
+  "nu_functions_bytes_lf": 3803,
+  "v6_functions_bytes_lf": 15231,
+  "conditional_extraction_floor": 135373,
+  "active_limit": 131072,
+  "floor_excess": 4301,
+  "v6_branch_bytes_lf": 2309,
+  "nu_constants_bytes_lf": 195,
+  "canonical_helpers_bytes_lf": 239,
+  "v6_constants_bytes_lf": 978,
+  "modeled_files": [
+    {
+      "path": "mcm_field_organism/broadband_hearing_path.py",
+      "bytes": 7983,
+      "sha256": "a20456b24c04d099ba5ee2da6250e3d83dc657392603c41d816b13ca68a37fb7"
+    },
+    {
+      "path": "mcm_field_organism/carrier_baselines.py",
+      "bytes": 3572,
+      "sha256": "dc891f4f263b17acf7b7b50c7c135d9a3d028cb1b9bdb72c342d72d24f1337ab"
+    },
+    {
+      "path": "mcm_field_organism/controlled_audio_source.py",
+      "bytes": 1237,
+      "sha256": "46744d3b377f1bcd54b7b8128dbd2a264683d45a534273031869aa127b80bd70"
+    },
+    {
+      "path": "mcm_field_organism/log_spectral_receptor.py",
+      "bytes": 7024,
+      "sha256": "26a6bd8f2d190db60c75ad29f275b3bd8b09b6d26d4ad54e4396176c4a36d2b0"
+    },
+    {
+      "path": "tools/_s2nj_private_auditory_output_projection.py",
+      "bytes": 7700,
+      "sha256": "e052cc76cf4c9678e11673d95390dea21634bba8082187567a760faaaf4904e5"
+    },
+    {
+      "path": "tools/_s2tu_retained_trace.py",
+      "bytes": 3846,
+      "sha256": "bf530380f93c8a1bf0eeae5a4169e81bc99aee10050872e3e5ddc7bfdb88f3f6"
+    },
+    {
+      "path": "tools/_s2tw_exact_confirmation.py",
+      "bytes": 1283,
+      "sha256": "90470980a329d0424bec9ba430adbbccaf72bb82145edfefd6e491b6fcec7be9"
+    },
+    {
+      "path": "tools/_s2ty_audio_materialization.py",
+      "bytes": 4090,
+      "sha256": "c332b1eccff35aefc0dbea27c4db78e5b97524ed2f46ab7a6461e3bcc522db72"
+    },
+    {
+      "path": "tools/_s2ub_candidate_confirmation.py",
+      "bytes": 9869,
+      "sha256": "4178198b43fbbefd3cd550307ec114540c2167a3ae066e22bde01f5223f0ca8a"
+    },
+    {
+      "path": "tools/_s2ub_candidate_verification.py",
+      "bytes": 3075,
+      "sha256": "1c25a3afee15c8ada624c93fa81bbfbece1a1b7407502b029798fec84a00cc30"
+    },
+    {
+      "path": "tools/_s2uc_dependencies.py",
+      "bytes": 4937,
+      "sha256": "57e38a7cac23976e2d16274907e9528afb986961e051475362ea0f7b8f65aaf2"
+    },
+    {
+      "path": "tools/_s2uc_evaluation.py",
+      "bytes": 2341,
+      "sha256": "50f458bb1e9693227b119a87b0cf0e71ec1076d0f64427c93426397e33125e7a"
+    },
+    {
+      "path": "tools/_s2uc_neutral_connection.py",
+      "bytes": 8749,
+      "sha256": "25138be284998b37a59661690c9d291881708b47c7eccc7101799b045ee611da"
+    },
+    {
+      "path": "tools/_s2uc_record_codec.py",
+      "bytes": 8529,
+      "sha256": "43f5532064b11e130535c47afe50a48be418255a054e694253c412c6783ad70f"
+    },
+    {
+      "path": "tools/_s2uc_resource_ledger.py",
+      "bytes": 2656,
+      "sha256": "43e3fe248be3b70d2cd05fe0db4a15d20d88272a7761a9a93204837c3ef110be"
+    },
+    {
+      "path": "tools/_s2uc_run_entry.py",
+      "bytes": 13581,
+      "sha256": "1005335a67c6bf089dbc2399fb0b874d062924537b7522982f4c73f030778349"
+    },
+    {
+      "path": "tools/_s2uc_source_adapter.py",
+      "bytes": 1442,
+      "sha256": "011b75a724fab21dd12b66f02e2fb6a4626e7f1d4450ac4612d31fb53e4abead"
+    },
+    {
+      "path": "tools/_s2uc_source_binding.py",
+      "bytes": 6058,
+      "sha256": "3758b0b3291ae9f04d91f704548ae0a77f7bc56be87d189fa89ba48c2e735e78"
+    },
+    {
+      "path": "tools/_s2uc_verification.py",
+      "bytes": 17086,
+      "sha256": "1af8a9e2de68acf29b7ae2755f82330e959e96505867c81b4ba263d0b2f81626"
+    },
+    {
+      "path": "tools/s2uc_run_bound_once.py",
+      "bytes": 1281,
+      "sha256": "bcdd6537958e019bd8ef713e89bba4e10e567d6285852f3725d5cdedd83d0e0e"
+    },
+    {
+      "path": "tools/_s2uc_pcm_generator.py",
+      "bytes": 4493,
+      "kind": "extracted plus 256 estimated"
+    },
+    {
+      "path": "tools/_s2uc_v6_binding.py",
+      "bytes": 19030,
+      "kind": "extracted plus 512 estimated"
+    },
+    {
+      "path": "tools/_s2uc_source_plan.py",
+      "bytes": 976,
+      "kind": "LF extracted text"
+    },
+    {
+      "path": "MODEL_ONLY/receptor_compatibility.py",
+      "bytes": 0,
+      "kind": "optimistic zero cost, NOT a solved interface"
+    }
+  ],
+  "modeled_source_bytes": 140838,
+  "modeled_active_excess": 9766,
+  "shared_items_estimated": {
+    "active_dependency_sources": 140838,
+    "frozen_source_binding": 19210,
+    "dependency_inventory": 5082,
+    "qualification_summary": 4265,
+    "qualification_protocol": 12538,
+    "qualification_budget": 1060,
+    "qualification_result": 640,
+    "budget_ledger": 1318,
+    "terminal_reserve": 16384
+  },
+  "modeled_shared_bytes": 201335,
+  "shared_limit": 262144,
+  "shared_margin_estimated": 60809,
+  "external": [
+    {
+      "module": "__future__",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "ast",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "dataclasses",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "enum",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "hashlib",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "importlib",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "json",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "math",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "numpy",
+      "kind": "third-party",
+      "version": "2.4.4"
+    },
+    {
+      "module": "os",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "pathlib",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "re",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "struct",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "sys",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "types",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    },
+    {
+      "module": "typing",
+      "kind": "stdlib",
+      "version": "3.14.4"
+    }
+  ],
+  "all_product_hashes_unchanged": true,
+  "baseline_hashes": {
+    "mcm_field_organism/__init__.py": "43bb1a27f4d4d373ec2af17ca128f35df6453fee86723160466543fb603704b6",
+    "mcm_field_organism/broadband_hearing_path.py": "a20456b24c04d099ba5ee2da6250e3d83dc657392603c41d816b13ca68a37fb7",
+    "mcm_field_organism/carrier_baselines.py": "dc891f4f263b17acf7b7b50c7c135d9a3d028cb1b9bdb72c342d72d24f1337ab",
+    "mcm_field_organism/controlled_audio_source.py": "46744d3b377f1bcd54b7b8128dbd2a264683d45a534273031869aa127b80bd70",
+    "mcm_field_organism/log_spectral_receptor.py": "26a6bd8f2d190db60c75ad29f275b3bd8b09b6d26d4ad54e4396176c4a36d2b0",
+    "mcm_field_organism/root_lazy_exports.py": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016",
+    "reports/s2nd/seal_inventory.py": "9f72d2a9fc9676235cf69b23ea690d25f0a782222c54393ecf5b44107f0ce91c",
+    "tools/_s2nj_private_auditory_output_projection.py": "e052cc76cf4c9678e11673d95390dea21634bba8082187567a760faaaf4904e5",
+    "tools/_s2np_private_source_binding.py": "004ea7c8841e5f0b68fe9191604b0a0a7337ac568af2205dca900dd2ae874b12",
+    "tools/_s2nu_private_source_binding.py": "8e0fa79f3ce66ce4228f46a52252de5d207c6cee29fefc42f957aa41dc56bce6",
+    "tools/_s2ts_temporal_trace.py": "64d1e7f9ff54d898996974d960bfb58ac7386165846aeec0ea253079e0a8e6d8",
+    "tools/_s2ts_temporal_trace_run.py": "e084f2aa6806337587284df6873068b6366e88eea2f02fc11bc981c143f8387a",
+    "tools/_s2tu_retained_trace.py": "bf530380f93c8a1bf0eeae5a4169e81bc99aee10050872e3e5ddc7bfdb88f3f6",
+    "tools/_s2tw_exact_confirmation.py": "90470980a329d0424bec9ba430adbbccaf72bb82145edfefd6e491b6fcec7be9",
+    "tools/_s2ty_audio_materialization.py": "c332b1eccff35aefc0dbea27c4db78e5b97524ed2f46ab7a6461e3bcc522db72",
+    "tools/_s2ty_resource_ledger.py": "9c39435dd15db76fbb41090e4073cd2e608d911772595ea123b40eba92e731f1",
+    "tools/_s2ub_candidate_confirmation.py": "4178198b43fbbefd3cd550307ec114540c2167a3ae066e22bde01f5223f0ca8a",
+    "tools/_s2ub_candidate_verification.py": "1c25a3afee15c8ada624c93fa81bbfbece1a1b7407502b029798fec84a00cc30",
+    "tools/_s2uc_dependencies.py": "57e38a7cac23976e2d16274907e9528afb986961e051475362ea0f7b8f65aaf2",
+    "tools/_s2uc_evaluation.py": "50f458bb1e9693227b119a87b0cf0e71ec1076d0f64427c93426397e33125e7a",
+    "tools/_s2uc_neutral_connection.py": "25138be284998b37a59661690c9d291881708b47c7eccc7101799b045ee611da",
+    "tools/_s2uc_record_codec.py": "43f5532064b11e130535c47afe50a48be418255a054e694253c412c6783ad70f",
+    "tools/_s2uc_resource_ledger.py": "43e3fe248be3b70d2cd05fe0db4a15d20d88272a7761a9a93204837c3ef110be",
+    "tools/_s2uc_run_binding.py": "2d2b359078ffbdd89edf36103f41d99ba33fcbdf0e31b4a34b40cc94fe75f591",
+    "tools/_s2uc_run_entry.py": "1005335a67c6bf089dbc2399fb0b874d062924537b7522982f4c73f030778349",
+    "tools/_s2uc_source_adapter.py": "011b75a724fab21dd12b66f02e2fb6a4626e7f1d4450ac4612d31fb53e4abead",
+    "tools/_s2uc_source_binding.py": "3758b0b3291ae9f04d91f704548ae0a77f7bc56be87d189fa89ba48c2e735e78",
+    "tools/_s2uc_verification.py": "1af8a9e2de68acf29b7ae2755f82330e959e96505867c81b4ba263d0b2f81626",
+    "tools/s2uc_run_bound_once.py": "bcdd6537958e019bd8ef713e89bba4e10e567d6285852f3725d5cdedd83d0e0e"
+  },
+  "limitation": "This is a conditional lower bound for moving existing implementations, not a universal minimum for rewriting or minifying algorithms. The receptor-root removal is granted at zero cost for the impossibility test, not claimed implemented or compatible. Shared artifact figures retain prior explicit model allowances; actual future formats must be remeasured."
+}

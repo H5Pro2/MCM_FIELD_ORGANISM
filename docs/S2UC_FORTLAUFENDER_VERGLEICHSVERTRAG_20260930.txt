@@ -1,0 +1,171 @@
+FORTLAUFENDER KONTEXT-/PERSISTENZVERGLEICH: BESTAND UND STATISCHER VERTRAG
+Stand 2026-09-30. Nur Bestandspruefung und Planung; keine Versuchsausfuehrung.
+
+BEFUND UND FESTLEGUNG
+Vorhanden ist eine chronologische Folge von 20 materialisierten auditiven
+48-Werte-Vektoren aus einem einzigen Mediendurchgang. Sie reicht fuer einen
+kleinen Vergleich ab leerem Speicher mit neun erreichbaren Folgepositionen,
+nicht fuer eine belastbare allgemeine Nutzenbewertung. Ausgewaehlt werden
+alle 20 Beobachtungen des Referenzarms, ohne Auswahl nach Werten, Matches,
+Wiederholungen oder Vorhersageergebnissen. Keine Vorhersage wurde berechnet.
+Es handelt sich um ausgeduennte Beobachtung, nicht lueckenloses Audio.
+
+MATERIALBESTAND (Pfade relativ zum Projektverzeichnis workspace)
+1. reports/media-restart-real-20260913-03/reference/record.json
+   plus reports/media-restart-real-20260913-03/objects/<digest>.json:
+   20 vollstaendige AV-Ereignisse, jeweils 48 auditive und 288 visuelle Werte.
+   JSON-Verweise $media_object enthalten den Dateinamen; Nutzinhalt unter value.
+   Verwendet werden nur core.inputs, darin timed_frames.frame modality_id=auditory.
+   Herkunft: MP4 17138816-uhd_3840_2160_30fps.mp4, 83.498.438 Byte,
+   SHA256 df0986f384e156c4dfec234e94b6f6baa3d0f8a9cfd7ba81f14aadf0313450aa.
+   Quelle ist in reports/media-restart-real-20260913-03-binding/binding.json
+   unter manifest gebunden; schema s2oe.full-file-sampled.v1, pass_number=1,
+   window_number=0..19, ordinal=1..20. Originaldatei ausserhalb des Projekts
+   wurde nicht geoeffnet. PCM-/Projektionsherkunft ist pro Position gespeichert.
+   Bisherige Verwendung: Checkpoint-/Restorevergleich. Referenz RECORDING_COMPLETE;
+   Gesamtversuch NOT_EVALUABLE wegen PUBLICATION_POSITION_MISSING. Der gespeicherte
+   Restore-Verifikationsbefund ist keine nachtraegliche erfolgreiche Gesamtabnahme.
+   Referenz allein auswaehlen; Restore und Replay sind keine weiteren Quellen.
+   Eignung: begrenzter retrospektiver Vergleich ausgewaehlter Beobachtungen.
+   Unabhaengig von W1-W4-Montagen, aber kein unbenutzter Holdout und nur eine Quelle.
+
+2. reports/experience-comparison-real-20260919-01/record.json:
+   experienced.inputs enthaelt 24 Ereignisse: 20 vollstaendige AV-Ereignisse
+   aus zweimal zehn Quellfenstern plus vier Teilhinweise. fresh.inputs enthaelt
+   14 Ereignisse desselben zweiten Durchgangs, keine unabhaengige Verlaengerung.
+   Nur erster Durchgang ordinal1..10 liefert zehn chronologische Beobachtungen
+   (48 auditive Werte), vier erreichbare Folgepositionen. Dieselbe MP4 wie1.
+   Quellstart n*24000 Samples, Fenster4800, n=0..9; historischer Runtime-Hop9600
+   ist auch hier NICHT der Quellhop. Bisher Erfahrung-/Frischspeichervergleich.
+   Nicht zusaetzlich aufnehmen: kuerzer, dieselbe Quelle, gezielte Wiederholung
+   und eingefuegte Hinweise im zweiten Durchgang. Keine unabhaengigen 24 Samples.
+
+3. reports/s2ts-temporal-trace-real-20260919-01/record.json:
+   18 gespeicherte endpoints mit half_values_hex (48 Werte), aus vier
+   Quellfenstern nu-s02-w00..03. Erster geordneter Block vier Fenster mit
+   Endsamples28800,33600,38400,43200; danach geplante Wiederholungen/Umordnungen
+   und Formation-/Hinweisphasen. Bereits fuer Temporal-Trace-Pruefung benutzt.
+   Keine lange unabhaengige kontinuierliche Folge; ausgeschlossen.
+
+4. reports/s2uc/p2-supplier-correction-20260930-01/final/retained-success/product/record.json:
+   Codec mit52 Frameeintraegen, fuenf hinterlegten Vektorwertsaetzen; drei
+   Geschichten mit insgesamt58 Vektorereignissen (44 Formation,14 Hinweise).
+   Synthetischer P2-Testbestand, BOUND_SOURCE_TEST_P2, keine Realquellenfreigabe.
+   Wiederverwendete Testplaene; Frameanzahl nicht als unabhaengige Quelle zaehlen.
+
+5. reports/s2uc/pcm-temporal-20260930-01/result.json, processed[0..3].projection.values:
+   vier W1-W4-Vektoren aus sources/s2uc/temporal-chirp-v1/sequence.pcm,
+   vier aneinander anschliessende Fenster zu4800 Samples. Bisher kontrollierte
+   Matching-/Auffrischungs-/Kontext-/Vorhersagetests. Montagen und Wiederholungen
+   vergroessern diesen Bestand nicht. Ausgeschlossen als unabhaengiger Vergleich.
+
+6. Zusaetzlich gesichtet:
+   reports/s2oe/full-file-connection-qualification-20260912-02/native-full/record.json:
+   RECORDING_COMPLETE,20 materialisierte Ereignisse,20 execution.inputs;
+   gemeinsame Bindungen ueber $oc_common. Historische Anschlussqualifikation,
+   kein Nachweis einer laengeren unabhaengigen Folge; nicht zusaetzlich gebunden.
+   reports/s2oe/decoder-uhd-sequence-20260911-01/record.json:
+   Decoderbeleg mit20 ausgewaehlten Fenstern in zwei Durchgaengen; Ereignis-
+   und Ressourcenmetadaten ersetzen keinen zusaetzlichen 48-Werte-Korpus.
+Die Inventur umfasst diese konkreten Bestaende; sie behauptet keine vollstaendige
+Negativsuche ueber jede historische Datei des Repositories.
+
+ZEITLICHE HERKUNFT DES FESTGELEGTEN BESTANDS
+Fuer n=0..19 gilt Quellfenster [67200*n,67200*n+4800) bei48000Hz:
+0,0..0,1s;1,4..1,5s; ...;26,6..26,7s. Dazwischen jeweils1,3s nicht beobachtet.
+Diese regelmaessige Auswahl folgt dem alten Quellenmanifest, nicht der Prognose.
+Belege: tools/_s2oe_media_binding.py selection_time und
+tools/_media_replay_protocol.py receipt; gespeicherte selections binden PCM,
+Manifest und Video-PTS. Der Decoder erreicht EOF bei Audio-Sample1282048;
+das bedeutet nicht, dass jeder Audioabschnitt als Vektor erhalten wurde.
+Die historischen Framezeiten [9600*n,9600*n+4800) sind Runtime-Zeiten, keine
+Originalquellzeiten. Sie bleiben im Herkunftsbeleg erhalten und werden nicht
+als Quellkontinuitaet ausgegeben. Der spaetere Adapter verwendet hop67200,
+window4800,start_sample0 sowie Indices1..20. Keine Aenderung der Vektorwerte.
+Geometrie aller20: auditory.log48.50-18000.w4800.h480.half.v1.
+Die h480-Angabe beschreibt das Rezeptorprofil, nicht die Auswahlkadenz.
+Ein einheitlicher 64-stelliger Profilbezug wird aus der gebundenen historischen
+core.config_digest verwendet (55f1de8602c945749728ce17c74cdff8320d1b5fc72c800f239bc86737db1a1e).
+Keine Vermischung mit W1-W4 oder anderen Profilen; historische Herkunft behalten.
+
+DATEIBINDUNG
+docs/S2UC_FORTLAUFENDER_VERGLEICH_BESTAND_20260930.json enthaelt die20 Positionen,
+Quell-/Runtimezeiten, PCM-/Projektionsdigests und73 Dateihashes einschliesslich
+der benoetigten referenzierten JSON-Objekte. Keine neuen Vektorpayloads exportiert.
+Vor spaeterer Ausfuehrung muessen diese Bindungen unveraendert sein. Abweichung
+ist ein konkreter Eingangsfehler, kein Anlass fuer Ersatzmaterial oder Auswahl.
+
+VERARBEITUNGSVERTRAG
+Ein Owner, ein Stream, einmal leerer Speicher, kein Seed und kein Warmstart aus
+historischen Memory-Zustaenden. Nur die20 Originalwerte in Quellreihenfolge.
+Paare1/2,3/4,...,19/20; unveraenderte Phase vom ersten Quellfenster an.
+Normale Formation in Vierersegmenten, normale Kandidaten-/Bestaetigungs-/
+Auffrischungs-/Verdraengungsregeln. Keine vorgeschaltete Wiederholung, kein
+manuelles Belegen, kein Reset zum Herstellen eines Matches oder seiner Phase.
+Jedes Frame wird genau einmal regulaer aufgenommen, auch nach einer Enthaltung.
+Abruf und eingefrorene Prognosen vor Aufnahme des aktuellen Paares; Zielwert
+darf erst danach gezogen werden. Beobachter hat die Quelldateien, Predictor
+nur bisherigen Speicher und aktuelles Paar, keinen Zugriff auf die ganze Liste.
+Bestehenden ContinuationAdapter/FactorRecencyArm unveraendert verwenden;
+eventuelle reine Dateileser-/Treiberintegration ist erst ein Folgeauftrag.
+
+Zielindices3,5,7,9,11,13,15,17,19: alle neun auswerten, einschliesslich Kaltstart.
+Nach Paar19/20 fehlt Ziel21: NOT_EVALUABLE_END; Prognoseslots freigeben und
+finish_story regulaer ausfuehren. Nicht als Enthaltung/Fehler in Nenner9 zaehlen.
+Keine erfundene Fortsetzung, kein Umlauf zum ersten Fenster, keine Verbindung
+zum anderen Bericht. Die regelmaessigen Auswahlabstaende bleiben ein einziger
+Beobachtungsstream; sie sind keine versteckten Resets. Ein unerwartet fehlendes
+Fenster, Quellen-/Profilwechsel oder abweichender Zeitstempel beendet den Stream
+mit Eingangsfehler; keine stillschweigende Reparatur oder Neuphasierung. Bericht
+enthaelt dann geplante neun und tatsaechlich auswertbare Positionen getrennt.
+
+UNVERAENDERTE PROGNOSE UND BEWERTUNG
+Kontext: nur eindeutiger Match mit eindeutigem Faktor1 und innerhalb derselben
+Viererspur vorhandenem Nachfolger offset+2. Keine skalierte Fortsetzung,
+Matchbevorzugung oder geaenderte Toleranz. Persistenz: letzter Wert des Paares.
+Exakte numerische Gleichheit aller48 Werte zum eingetroffenen Folgeframe;
+Bitgleichheit gegebenenfalls separat. Keine nachtraegliche Schwellenanpassung.
+Je Ziel: Paarindices, Quelle, read_revision, Herkunft/Generation/Rolle/Offset,
+Prognosestatus, Kontext-/Persistenz-Treffer oder Fehler und Enthaltungsgrund.
+Mehrdeutigkeit bleibt ohne konkrete Kontextprognose, auch wenn eine Alternative
+spaeter passen sollte. Gruende getrennt: kein Kontext, Mehrdeutigkeit, kein
+gespeicherter Nachfolger, nicht spezifizierte Faktorfortsetzung.
+Pro Methode: Nenner erreichbarer Ziele, Prognosezahl, Abdeckung, Treffer,
+Fehler, Treffer/Prognosen (bei0 undefiniert), Treffer/alle erreichbaren Ziele.
+Enthaltungen sind weder Fehler noch Treffer. Gemeinsam abgedeckte Positionen:
+beide richtig, nur Kontext richtig, nur Persistenz richtig, beide falsch;
+zusaetzlich konkrete Zielindices. Vorlaeufige/bestaetigte Herkunft separat.
+Keine gewichtete Gesamtnutzenzahl, keine Extrapolation aus neun Zielen.
+Null Kontextabdeckung ist ein gueltiger Befund und rechtfertigt weder neue
+Paarphasen noch Wiederholungen, Ersatzkorpus oder Matchinganpassung.
+
+RESSOURCEN UND ABNAHME EINES SPAETEREN PAKETS
+Speicher1K/2R und16+2 unveraendert; maximal zwei getrennte Prognosevektorslots.
+Ein offenes Prognosepaar; sofort bei Zielankunft auswerten und vor dessen
+Aufnahme freigeben. Beobachterdaten/JSON-Quelle ausserhalb Predictor bilanzieren.
+Abnahme: alle20 Frames einmal aufgenommen, zehn Paarreceipts, neun ausgewertete
+Ziele und ein explizites Ende-ohne-Ziel, feste Phase, kausaler Pull, unveraenderte
+Speicherregeln und freigegebene Slots. Keine zugesicherte Trefferzahl.
+
+MATERIALLUECKE UND KLEINSTER BESCHAFFUNGSSCHRITT
+Fuer diesen kleinen Vergleich ausgewaehlter Beobachtungen fehlt kein Material.
+Fuer eine laengere lueckenlose Originalfolge ist unter den geprueften Bestaenden
+kein geeigneter unabhaengiger Korpus belegt. Fehlend sind die nicht gespeicherten
+Zwischenfenster und eine groessere, unabhaengige Beobachtungsbasis; ein Codec-
+Replay oder eine Montage schliesst diese Luecke nicht.
+Falls lueckenloser Audioeingang gefordert wird: separater Auftrag, genau einen
+vorab anhand von Herkunft/Dauer bestimmten Quellabschnitt mit bestehendem
+Rezeptor/NJ einmal lueckenlos zu materialisieren, Originalhash/Profil/Zeiten
+mitzufuehren und jeden Frame zu behalten. Minimal konkreter Pilotvorschlag:
+erste10s einer vorab gebundenen Projektquelle,100 Fenster zu4800 Samples bei
+48000Hz und Hop4800;49 erreichbare Ziele. Kein statistischer Guetenachweis,
+keine Suche nach Wiederholungen und keine heute erteilte Materialisierungsfreigabe.
+Die externe MP4 ist nicht automatisch als Projektquelle neu freigegeben.
+
+NAECHSTER ENTWICKLUNGSVORSCHLAG
+Projektleiter soll das enge lokale Vergleichspaket auf den gebundenen20
+Beobachtungen beauftragen: kausaler Dateileser/Treiber, unveraenderte Prognose,
+vollstaendige Neun-Ziele-Bilanz. Das klaert zunaechst, welche Abdeckung beim
+regulaeren Speicheraufbau ueberhaupt entsteht. Eine neue Quellenproduktion
+erst gesondert fuer die konkret benannte Kontinuitaets-/Umfangsluecke planen.
+Dieser Vertrag selbst startet weder dieses Paket noch einen Versuch.

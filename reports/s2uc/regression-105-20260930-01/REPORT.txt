@@ -1,0 +1,38 @@
+Ergaenzungsregression vom 30.09.2026
+
+105/105 PASS; 0 Fehler, 0 Fehlschlaege, 0 Skips; Exit 0.
+Nur die Differenz der frueheren 175 Test-IDs zu den bereits ausgefuehrten 79 wurde ausgefuehrt.
+Die 79 Pruefungen wurden nicht wiederholt. Bestehende Tests und neutrale Fixtures blieben unveraendert.
+
+184 unterschiedliche Pruefpflichten sind nun mit PASS belegt, ausdruecklich aus zwei getrennten Ausfuehrungen:
+- 79: reports/s2uc/provenance-appendix-repeat-20260929-01/test-result.json
+- 105: reports/s2uc/regression-105-20260930-01/test-result.json
+Jede ID ist in coverage-184.json ihrem Originalresultat samt JSON-Pointer und SHA-256 zugeordnet.
+Keine fehlende ID, keine Ueberlappung der ausgefuehrten Gruppen.
+
+Code: 62 Dateien, 851840 / 851968 Byte; 128 Byte frei.
+Das vor und nach der Ausfuehrung ermittelte Inventar stimmt vollstaendig mit dem Inventar des 79er-Checks ueberein.
+Keine Codeaenderung und keine Grenzerhoehung.
+Die externen Laufzeitidentitaeten wurden durch die vorhandene Inventarfunktion ebenfalls abgeglichen.
+
+Pruefgruppen:
+tests.test_s2ub_candidate_confirmation: 11 PASS
+tests.test_s2uc_execution_v8: 21 PASS
+tests.test_s2uc_materialization_connection: 46 PASS
+tests.test_s2uc_neutral_connection: 11 PASS
+tests.test_s2uc_prestart_v7: 16 PASS
+
+Testdauer: 336.644 Sekunden.
+Start UTC: 2026-09-30T06:59:00.190413+00:00
+Abschluss UTC einschliesslich Nachkontrolle: 2026-09-30T07:04:58.168201+00:00
+
+841 vorhandene Belegdateien in den drei erfassten bisherigen Ergebnisablaegen sind bytegleich erhalten; Fundstellen und Hashes: preserved-evidence-before.json.
+
+Einzelresultate: test-result.json; Ausfuehrungsprotokoll: unittest.log; erfasste Testausgaben: test-output.log.
+Testauswahl und Ausschlussliste: selection.json. Codeinventar: dependency-inventory.json.
+
+Die konkrete technische Regressionsluecke ist geschlossen. Keine unabhaengige Gesamtabnahme und keine formale Laufqualifikation werden behauptet.
+Die verletzte urspruengliche Erwartung bei g1/24 bleibt bestehen; diese Regression aendert keine Forschungsbefunde.
+Die 640-MiB-Grenze gilt ausschliesslich fuer den Produktkindprozess, nicht fuer den Test-/Elternprozess.
+Reale Quellen und Realstarter bleiben geschlossen.
+Naechster Schritt: fachliche Gesamtabnahme anhand der Primaerbelegketten und der nun vollstaendigen Zuordnung der 184 Pruefpflichten.

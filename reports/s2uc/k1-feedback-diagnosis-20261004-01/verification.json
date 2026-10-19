@@ -1,0 +1,10 @@
+{
+  "archive_unchanged": true,
+  "all_sealed_files_verified": true,
+  "script_sha256": "6f707eacbcd7b8dd064ccdc1cfed7455e00c5bfee81cc8a4fa92e3e225164d98",
+  "records": 36,
+  "all_31_cold_and_first_eligible": true,
+  "all_31_no_later_actual_eligible_same_original_offset": true,
+  "no_policy_imports": true,
+  "no_replays": true
+}

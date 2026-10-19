@@ -1,0 +1,1 @@
+{"cases":[{"bytes":52125,"name":"equal","sha256":"28a7ce6d8cd138d9002a80904888028543c73187144f018afbe00ccc9dba7d41"},{"bytes":52125,"name":"different","sha256":"194e62ebd2b4fc43bb8b22c9c130f3363d2acbcc1808916de6ce7675d1490134"},{"bytes":56135,"name":"failure","sha256":"ea32cbe7ca0eb6d5582d902aa0d8bfc50689941b0c6670bfb2d3d50b98135746"}],"upper":57024}

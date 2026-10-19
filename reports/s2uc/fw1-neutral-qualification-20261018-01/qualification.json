@@ -1,0 +1,94 @@
+{
+  "status": "NEUTRAL_QUALIFIED",
+  "coverage": {
+    "1": {
+      "status": "PASS",
+      "evidence": "unit-attempt-01.txt"
+    },
+    "2": {
+      "status": "PASS",
+      "evidence": "unit-attempt-03.txt"
+    },
+    "3": {
+      "status": "PASS",
+      "evidence": "unit-attempt-03.txt"
+    },
+    "4": {
+      "status": "PASS",
+      "evidence": "unit-attempt-03.txt"
+    },
+    "5": {
+      "status": "PASS",
+      "evidence": "unit-attempt-01.txt"
+    },
+    "6": {
+      "status": "PASS",
+      "evidence": "statistics-final.txt"
+    },
+    "7": {
+      "status": "PASS",
+      "evidence": "statistics-final.txt"
+    },
+    "8": {
+      "status": "PASS",
+      "evidence": "statistics-final.txt"
+    },
+    "9": {
+      "status": "PASS",
+      "evidence": "statistics-final.txt"
+    },
+    "10": {
+      "status": "PASS",
+      "evidence": "unit-attempt-01.txt"
+    },
+    "11": {
+      "status": "PASS",
+      "evidence": "unit-extra-01.txt"
+    },
+    "12": {
+      "status": "PASS",
+      "evidence": "unit-extra-01.txt"
+    },
+    "13": {
+      "status": "PASS",
+      "evidence": "evidence-attempt-01.txt"
+    },
+    "14": {
+      "status": "PASS",
+      "evidence": "execution-ledger.jsonl: archive_mutation reset/output/stock; parent invocation initially failed on inactive ticket assumption"
+    },
+    "15": {
+      "status": "PASS",
+      "evidence": "evidence-attempt-02.txt"
+    },
+    "16": {
+      "status": "PASS",
+      "evidence": "statistics-final.txt"
+    },
+    "17": {
+      "status": "PASS",
+      "evidence": "unit-extra-02.txt"
+    },
+    "18": {
+      "status": "PASS",
+      "evidence": "unit-extra-02.txt"
+    }
+  },
+  "limitations": [
+    "Unit process peaks not measured",
+    "No full-size run",
+    "Three initial unit cleanup ledger entries missing; exceptions preserved",
+    "Neutral verdict labels are not scientific findings"
+  ],
+  "runtime": {
+    "executable": "C:\\Python314\\python.exe",
+    "executable_sha256": "7ca24f26d6e3f463419ee4f537ddd3acd312c38fe45e678cce08572f26a8bd1a",
+    "version": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "architecture": "AMD64",
+    "dlls": {
+      "python3.dll": "1dd696f02326e32e67b52c25b249b3acce3238176212d16e8fb1a050a1455ae9",
+      "python314.dll": "a07f7d09c3121492bb066535c6d0811df5fbc2090cbca7031a97bb47ce1480c9"
+    }
+  }
+}

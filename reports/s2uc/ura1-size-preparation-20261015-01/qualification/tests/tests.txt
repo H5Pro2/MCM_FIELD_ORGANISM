@@ -1,0 +1,11 @@
+test_S01_binding_material_runtime_limits_and_code (tests.test_s2uc_ura1_size_once.SizeTests.test_S01_binding_material_runtime_limits_and_code) ... ok
+test_S02_exclusive_marker_consumed (tests.test_s2uc_ura1_size_once.SizeTests.test_S02_exclusive_marker_consumed) ... ok
+test_S03_small_end_to_end_independent_integrity (tests.test_s2uc_ura1_size_once.SizeTests.test_S03_small_end_to_end_independent_integrity) ... ok
+test_S04_independent_anchors_reject_rehashed_encoder_corruption (tests.test_s2uc_ura1_size_once.SizeTests.test_S04_independent_anchors_reject_rehashed_encoder_corruption) ... ok
+test_S05_dictionary_abort_progress_cleanup (tests.test_s2uc_ura1_size_once.SizeTests.test_S05_dictionary_abort_progress_cleanup) ... ok
+test_S06_small_hull_unchanged_and_large_requires_exact_material (tests.test_s2uc_ura1_size_once.SizeTests.test_S06_small_hull_unchanged_and_large_requires_exact_material) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 7.277s
+
+OK

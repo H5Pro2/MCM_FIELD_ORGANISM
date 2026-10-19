@@ -1,0 +1,38 @@
+{
+  "tools\\_s2uc_factor_hint.py": {
+    "bytes": 2059,
+    "sha256": "f1fdd62043d7939cd7b144eae797f84c94ff3196979d1028798d2af546220e19"
+  },
+  "tools\\s2uc_factor_hint_check.py": {
+    "bytes": 6685,
+    "sha256": "f765ba126a9c9d8a9de80c42865a09428628fbe048dab7532bd71f94284649ec"
+  },
+  "tests\\test_s2uc_factor_hint.py": {
+    "bytes": 2839,
+    "sha256": "f0313f8eb93357df1e41f28a8c608cf3cf2a9f714dfaf6c6727ba1ed38ef5ff7"
+  },
+  "reports\\s2uc\\factor-hint-20260930-01\\preregistration.json": {
+    "bytes": 59638,
+    "sha256": "28db350d0b23afbd53aaefc7ff0fde5b1a440871fec71c5f6cffb67a9e02cde9"
+  },
+  "reports\\s2uc\\factor-hint-20260930-01\\replay-console-input-type-failure.txt": {
+    "bytes": 1590,
+    "sha256": "6b389c582455651882f41ad4827fbdfd15227b3479bfc85a5ed7af8f67119727"
+  },
+  "reports\\s2uc\\factor-hint-20260930-01\\replay-console.txt": {
+    "bytes": 58,
+    "sha256": "7827d1962770ea48f0454f3f07ba29907da39facae70e64e37da0174f0850441"
+  },
+  "reports\\s2uc\\factor-hint-20260930-01\\REPORT.txt": {
+    "bytes": 7929,
+    "sha256": "2e692780bcd6d4c9afd5f632fb88e6b84acb8b03d3e6bfd97ecdc5d529c26b9c"
+  },
+  "reports\\s2uc\\factor-hint-20260930-01\\result.json": {
+    "bytes": 87490,
+    "sha256": "401ca0ba2b1aa9f67493bf5fe0784ba1178d14fa61df43620b10ca3670a32ca6"
+  },
+  "reports\\s2uc\\factor-hint-20260930-01\\tests.txt": {
+    "bytes": 2926,
+    "sha256": "7b044c93d0c63d2865f93b5897386c9b3f0f7534a7d958912211ba3610871e5b"
+  }
+}

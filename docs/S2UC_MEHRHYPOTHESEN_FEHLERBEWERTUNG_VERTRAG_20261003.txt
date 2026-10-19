@@ -1,0 +1,364 @@
+MCM-KI -- Geschlossener technischer Vertrag: Mehrhypothesen-Fehlerbewertung
+2026-10-03 | NUR KONZEPT | KEINE IMPLEMENTIERUNG, KEIN VERSUCH
+
+1. Genau eine optionale Regel und ihr Geltungsbereich
+
+Vorgeschlagene Policy: multi_error_exact_v1, Vergleichsarm U.
+Nur explizit aktiviert; bestehende Standardpfade, M/E/K/P und deren
+Dateien/Bindungen bleiben unveraendert. U verwendet die bestehende direkte
+Promotionsmitnahme von M, exact_v1, legacy_v1, alpha=1/2 und mae48.
+Keine Approximation, Faktorfortsetzung, Parametersuche oder weitere Variante.
+Eine inkompatible Konfiguration ist vor erster Aufnahme abzulehnen.
+
+Die abgenommene Grenze wird gezielt geoeffnet: Herkunftstreffer bleiben
+mehrdeutig, trotzdem duerfen getrennte Fortsetzungshypothesen bewertet und
+fuer eine Prognoseentscheidung verglichen werden. Keine eindeutige Herkunft
+aus einer ausgewaehlten Prognose ableiten. Aufnahme, Bestandsgrenzen,
+Bestaetigung und Verdraengung bleiben unveraendert.
+
+Aus dem vorhandenen Code: FactorRecencyArm.hint verwendet FactorHintArm.hint
+(tools/_s2uc_factor_hint.py). Maximal drei Spuren, jeweils drei Treffer-
+offsets, also neun sichtbare Herkunftstreffer. Fortsetzungsberechtigt sind
+ALLE Treffer mit factors genau [1.0] und Offset0 oder1; Offset2 besitzt
+keinen Nachfolger. Damit maximal3*2=6 Hypothesen. Andere Faktorlisten bleiben
+mit Ausschlussgrund sichtbar; dies entspricht legacy_v1, keiner Kuerzung.
+Bei Nullmustern koennen mehrere Faktoren passen; auch dann keine willkuerliche
+Faktorauswahl. Doppelte identische Schluessel sind Integritaetsfehler.
+
+Die sechs Zellen decken alle moeglichen lebenden Schluessel dieser Policy:
+(Rolle retained/candidate, uint64-Generation, Offset0/1, Qualitaet EXACT).
+Es gibt hier keine APPROXIMATE-Zellen. Sechs statt zwoelf moegliche Zellen
+ist deshalb keine Trefferbegrenzung. Mehr als sechs berechtigte Hypothesen
+oder sechs lebende Zellen waere ein verletztes Invariant, kein Grund zum
+Abschneiden der Liste. Technisch terminal abbrechen und Beleg erhalten.
+
+2. Vollstaendige Auswahlregel, vor Kenntnis des Ziels
+
+Fuer jede berechtigte Hypothese i sei (EC_i,EP_i) ihr bereits gespeichertes
+Fehlerpaar. Fehlende Zelle bedeutet KALT, niemals (0,0). Beide Werte stammen
+immer aus denselben fuer genau diesen Schluessel gueltigen Feedbackereignissen.
+Definiere d_i=EC_i-EP_i in binary64. Beide Werte endlich und nichtnegativ.
+
+Wahl C_i genau dann, wenn i eine warme Hypothese ist, d_i<0 und d_i unter
+ALLEN warmen Hypothesen das eindeutig kleinste d ist. Sonst Wahl P.
+Es gibt keinen Mindestabstand, Epsilon, Supportbonus, Altersbonus oder
+Tie-break nach Rolle, Generation, Reihenfolge oder Versuchserwartung.
+
+Vollstaendige Faelle:
+- Keine berechtigte Hypothese: P, Status NO_ELIGIBLE_CONTEXT.
+- Alle berechtigten Hypothesen kalt: P, Status COLD_ONLY.
+- Kalte Konkurrenz neben warmen Hypothesen: kalt nicht zur Wahl zugelassen,
+  aber vollstaendig eingefroren und nach Ziel ebenso bewertet. Warmes
+  eindeutiges negatives Minimum darf gewinnen; keine optimistische Kaltwahl.
+- Alle warmen d>=0: P, Status NO_ESTIMATED_IMPROVEMENT. Nullwerte als
+  Gleichstand gegen Persistenz ausweisen, positive Werte als deren Vorteil.
+- Zwei oder mehr warme Hypothesen teilen das negative Minimum: P,
+  Status TIED_IMPROVEMENT. Auch wertgleiche Fortsetzungen bleiben getrennte
+  Hypothesen; keine Verschmelzung und kein heimlicher Gleichstandsgewinner.
+- Genau ein negatives Minimum: dessen unveraenderte Fortsetzung, Status
+  SELECTED_BY_ERROR. Kalte Konkurrenz und Herkunftsmehrdeutigkeit bleiben
+  im Receipt sichtbar. Identische Ausgabewerte beweisen keine Herkunft.
+
+Unterschiedlich lange/alte Bewertungshistorien werden NICHT als gleich
+zuverlaessig behauptet. Die Regel vergleicht bewusst nur die je eigene
+EMA-Differenz gegen Persistenz. Kein Vergleich isolierter EC-Werte mit einem
+fremden EP. Keine Beobachtungszaehler, keine kuenstliche Angleichung oder
+Rueckfuellung. Dies ist eine festgelegte Heuristik mit offenem Nutzen;
+kurze oder veraltete Historien koennen Fehlentscheidungen verursachen.
+Die gleiche Regel gilt fuer eine und fuer mehrere berechtigte Hypothesen.
+Im eindeutigen warmen Fall entspricht sie der bestehenden EC<EP-Auswahl.
+
+3. Einfrieren, Vektorhaltung und Kausalitaet
+
+Serialer synchroner Betrieb, nur ein offenes Ziel. Scope und Zielordinal
+wie bisher validieren. Vor Aufnahme des vollstaendigen Hinweispaars:
+1) Alle Herkunftstreffer unveraendert erfassen; getrennte Berechtigung pruefen.
+2) Fuer jede berechtigte Hypothese Schluessel und DIREKTE Referenz auf ihren
+   damaligen unveraenderlichen ORIGINAL-Nachfolgerframe sichern. Keine
+   Referenz auf einen spaeter auszuwechselnden Trace-Slot als Ersatz.
+3) Referenz auf zweiten Original-Hinweisframe fuer P sichern. Dessen values
+   ist die Persistenz. Aktuelles Fehlerpaar lesen, obige Wahl einfrieren.
+4) Ticket vollstaendig publizieren; erst dann normale Aufnahme des Paares.
+
+Feste Referenzliste mit sechs Frame-Slots, ungenutzte Slots None, plus eine
+Persistenz-Frame-Referenz. Ein Frame kann mehrfach referenziert werden;
+jede Referenz kostet Heap, die Originalframe-Identitaet wird nur einmal
+gegen18 gezaehlt. Keine Listen von sechs values-Tupeln, keine sechs
+PredictionReceipt-Objekte, keine Kopien, keine skalierten Vektoren.
+
+Genau zwei Ausgabeplaetze: ein gewaehlter Kontextvektor oder None sowie
+Persistenz; beide sind Aliase auf values eingefrorener Originalframes.
+Gewaehlte Ausgabe ist wiederum nur Alias. Nicht ausgewaehlte Hypothesen
+werden nicht als weitere Ausgabevektoren materialisiert. Ihre Werte bleiben
+in den originalen, mitgezaehlten Frames festgehalten. Beim Feedback wird
+jeweils ein solcher Originalframe direkt an die unveraenderte mae48-
+Berechnung gegeben. Die kurzzeitige Parameterreferenz ist mitzumessen.
+Dies ist keine Rekonstruktion aus aktuellem Memory: genau dasselbe vor dem
+Ziel gebundene immutable Frame-Objekt liefert genau die damalige Fortsetzung.
+
+Ein verlorener Frame wird durch das Ticket gegebenenfalls bis Feedback
+gehalten und zaehlt weiterhin zur Originalframebilanz. Es ist unzulaessig,
+ihn nach Verdraengung als kostenlos, als Beobachterdaten oder als neuen
+Proposal-Speicher aus der Bilanz zu nehmen. Weitere Originalwerte ausser
+diesen sieben Frame-Referenzen und den zwei Ausgabealiasen sind verboten.
+
+Receipt: alle bis zu neun Herkunftstreffer mit Originalordinalen, Faktoren,
+Rolle/Generation/Offset; Berechtigung oder konkreter Ausschlussgrund;
+je berechtigter Hypothese KALT oder damaliges EC/EP/d; Wahl und Wahlgrund.
+Herkunftsstatus und Entscheidungsstatus sind zwei getrennte Felder.
+Das Receipt enthaelt keine 48-Komponenten-Fortsetzungen. Seine Serialisierung
+ist keine fuer Feedback benoetigte zweite Fehlerbank. Beobachterdaten
+duerfen niemals fuer Systemwahl, Wiederherstellung oder Update gelesen werden.
+
+4. Exaktes gepacktes Layout: EIN bytearray mit416 Byte
+
+Little-endian, keine implizite Alignment-Auffuellung ausser explizitem x.
+Alle reservierten Bytes null. Keine zweite gepackte Bank/Byteskopie.
+
+Offset   Laenge  Bedeutung
+0..191     192   6 Zellen je32, bestehendes <QddBBBB4x:
+                generation,EC,EP,role,offset,quality,valid.
+192..207    16   Zielheader <QBBBB4x:
+                target,active,count,choice,reason.
+208..303    96   6 Ticketeintraege je16, <QBBBB4x:
+                generation,role,offset,quality,destination.
+304..399    96   6 Stagingpaare je16, <dd: neues EC,neues EP.
+400..415    16   Steuerung <QBBBB4x:
+                last_promoted,state,commit_mask,reserved,reserved.
+Summe      416
+
+count=0..6; gueltige Ticketeintraege genau0..count-1, Rest null.
+choice=0 fuer P,1..6 fuer den entsprechenden Hypothesenindex plus1.
+destination=255 bis Updateplanung, danach0..5 oder255 fuer verlorenen
+Schluessel. Dies ist nur Publikationsziel, keine veraenderte Hypothesen-ID.
+quality stets0(EXACT). reason enum:0 none,1 NO_ELIGIBLE_CONTEXT,
+2 COLD_ONLY,3 NO_ESTIMATED_IMPROVEMENT,4 TIED_IMPROVEMENT,
+5 SELECTED_BY_ERROR. active0/1. state0 IDLE,1 FREEZING,2 PENDING,
+3 UPDATING,4 ADMITTING,5 CLOSED. commit_mask sechs Bits.
+target uint64 mit bisheriger Grenze<2**63,Generationen uint64 positiv.
+
+Kein zusaetzliches gepacktes Einzelticket. Die voruebergehenden sechs
+Updatepaare sind bereits enthalten. Keine zusaetzliche gepackte Rollback-
+Kopie, kein bytes(buffer), keine Slices, die neue Payloadbanken erzeugen.
+struct.pack_into schreibt direkt in die feste Bank. Python-Skalare und
+kurze unpack-Tupel sind Heapobjekte und voll im16KiB-Limit zu bilanzieren;
+sie duerfen nicht zu einer weiteren persistenten Tabelle werden.
+
+Die alte ErrorMemory-Klasse mit fest12 Zellen und separatem32-Byte-Ticket
+ist NICHT zusaetzlich anzulegen. U braucht eine eigene begrenzte Verwaltung
+dieser einen Bank; bestehende Klassen/Arme bleiben unveraendert. Die
+Promotionsregel wird semantisch identisch auf die sechs Zellslots angewandt,
+nicht durch ungepruefte Verwendung alter12-Slot-Schleifen. Scope/closed
+und Frame-Halter ausserhalb der Bank sind explizit Teil des Python-Heaps.
+ADMITTING wird nur intern aus IDLE/PENDING betreten und kehrt erfolgreich
+in denselben Zustand zurueck; waehrenddessen keine oeffentliche Reentranz.
+
+5. Feedback, Lebenszyklus und atomare Publikation
+
+Vor jedem Feedback dasselbe Sample-/Scope-/Zeit-/Werteprotokoll wie bisher.
+Nur das eingefrorene Ziel ist gueltig. Kein neues Hint-/Memory-Scanning
+zum Wiedergewinnen der Prognosen. Lebendigkeit wird ausschliesslich anhand
+des eingefrorenen Schluessels geprueft, niemals als neue Herkunftswahl.
+
+Fuer ALLE eingefrorenen Hypothesen, gewaehlt oder ungewaehlt, mae48 ihres
+Originalnachfolgers gegen das Ziel berechnen; EP fuer alle aus demselben
+eingefrorenen P berechnen. Aktuelles Sample zuerst vollstaendig validieren.
+Auch verlorene Hypothesen werden als historische Prognosen ausgewertet,
+erhalten aber kein Update einer lebenden Zelle und keine Ersatzidentitaet.
+
+Lebender Schluessel: erste Bewertung speichert (ec,ep) direkt; sonst
+neues EC=(0.5*altes EC)+(0.5*ec), analog EP, genau bisherige Reihenfolge.
+Keine Extrapolation, Normalisierung, Aenderung an mae48 oder alpha.
+Jede solche Hypothese bekommt genau ein Update pro Ziel. Keine neue
+Hypothese darf nach Kenntnis des Ziels in das Ticket eintreten.
+
+Promotion: bestehende M-Regel fuer bereits vorhandene Zellen unveraendert,
+nur nachgewiesene direkte Originalframe-Identitaet. Alle Werte bitgleich;
+echte Verdraengung loescht Zellen. Ticket-Schluessel und Originalframe-
+Referenzen bleiben unveraendert. Ein c-Ticket wird NICHT r-Ticket. Wenn
+sein c vor Feedback promoviert wurde, ist sein Update LOST_GENERATION;
+eine schon mitgenommene r-Zelle bekommt daraus kein zusaetzliches Update.
+Ein nur wertgleich wiedergekehrter Schluessel gilt ebenfalls als neu/kalt.
+
+Die sechs Zellslots werden nicht kompaktiert. Ein Updateplan findet den
+lebenden Schluessel oder reserviert einen freien Slot, unter Beachtung
+aller vorherigen Planreservierungen. Maximal sechs lebende exakte Keys
+sichern Vollstaendigkeit. Konflikt, Dublette, NaN, falsche Generation oder
+fehlender Slot ist terminaler Integritaetsfehler, keine Selektionsregel.
+
+Atomare Operation im seriellen Sinn:
+- Zustand UPDATING; alle oeffentlichen Zugriffe/Reentranz ausser Abbruch
+  gesperrt. Keine Callback-Ausgabe waehrend einer Teilpublikation.
+- Alle Referenzen/Keys, alte Werte und sechs neuen Paare pruefen; Staging-
+  bereich und destination/commit_mask vorbereiten. Noch keine Zelle aendern.
+- Erst nach erfolgreicher Gesamtpruefung alle markierten Zielzellen direkt
+  aus dem Stagingbereich publizieren. Keine doppelte Aktualisierung.
+- Nach vollstaendiger Publikation Ticket/Staging/Referenzen/Ausgaben loesen;
+  IDLE. Erst danach naechste regulaere Aufnahme oder Beobachterabschluss.
+- Bei JEDER Exception einschliesslich BaseException waehrend Freeze,
+  Aufnahme/Promotion oder Feedback terminal schliessen, alle Zellen,
+  Tickets,Staging und Referenzen bereinigen. Teilzustaende nie weiterverwenden.
+
+Dies garantiert keinen Rollback der bereits aufgenommenen Memory und keine
+Thread-/Prozessabsturz-Atomaritaet. Es ist derselbe akzeptierte serielle
+Anspruch: entweder vollstaendige Publikation oder unbrauchbar geschlossener
+Adapter. Diagnosebeobachter sichern Vorzustand und Fehlerstelle getrennt;
+sie duerfen den Systemzustand weder reparieren noch fuer Updates einspeisen.
+Endziel49 wird ohne Feedback zensiert, alle Halter werden freigegeben.
+
+6. Ressourcenbegruendung und Qualifikationspflicht
+
+18 Originalframes,2 Ausgabevektoren,gemeinsam20 bleiben harte Grenzen.
+Vor Freeze maximal12 Bestandsframes,2 forming-Frames und2 aktuelle Paarframes
+=16 Originale. Eingefrorene Nachfolger sind Teil dieser12, P Teil des Paars.
+Die anschliessende Aufnahme erzeugt keine neuen Frames. Promotion/Verlust
+aendert nur Halter; ihre Union bleibt innerhalb dieser16. Beim Feedback
+kommt vor Freigabe hoechstens ein neues Zielframe hinzu, falls der Anschluss
+es bereits als Frame repraesentiert: konservativ17<=18. Das Quellsample
+und dessen Vektorpayload bleiben wie bisher separat als Eingang gezaehlt.
+Nach Feedback endet das Ticket, bevor die naechste Paaraufnahme beginnt.
+Die normale Ablaufgrenze verbietet mehrere offene Tickets; Fehlerpfade
+duerfen keine neuen Frames oder Snapshots anlegen.
+
+Diese Argumentation gilt fuer die festgelegte serielle Lebensdauer, nicht
+fuer beliebige externe Memorymutation. Testweise Verlustereignisse muessen
+dieselbe Halterunion einhalten; zusaetzliche kuenstliche Aufnahme waehrend
+eines offenen Tickets ist kein regulaerer Systempfad.
+
+Referenzliste6, P-Halter,Ausgabealiase,Scope,Steuerobjekt,416er-bytearray samt
+Objektkopf,struct-Objekte soweit neu zur Laufzeit,Promotionstransienten,
+Skalare,unpack-Tupel,Iteratoren und Ausnahmebereinigung vollstaendig gegen
+16384 Byte zusaetzlichen Python-Heap messen. Kein kostenloser Systemhalter
+im Beobachter. Receipt separat<=16384 Byte, transiente UTF8<=32768 Byte wie
+bisher; dessen neue Hypothesenmetadaten auch in der bisherigen Heapmessung
+dort erfassen, wo Systemobjekte gehalten werden. Messfenster umfassen
+Freeze,Auswahl,Aufnahme/Promotion,Feedback und terminale Bereinigung.
+Keine Produktionsteile zum Bestehen aus der Messung ausnehmen.
+
+Layout und Halterzahl sind statisch geschlossen. Der konkrete Python-Peak
+ist heute NICHT GEMESSEN. Eine spaetere Implementierung muss dieses Limit
+neutral nachweisen; bei Ueberschreitung keine fachliche Ausfuehrung und
+keine Budgeterhoehung. Weniger Hypothesen ist keine zulaessige Reparatur.
+
+7. Unveraenderter48er-Kontrast, genau ein neuer Arm
+
+V(x)=48 identische float(x). X=[3/16,5/16,13/16,15/16],
+Y=[3/16,5/16,5/16,15/16],jeweils komponentenweise V.
+Folge X,X,X,X,Y,Y,Y,Y,X,X,X,X,48 Positionen. hop=window=4800,
+start_sample=0,first_ordinal=1,ein Scope. Kein Systemeingang aus Phasenlabels.
+Alle regulaer aufgenommen. Keine Schutzfolgen,Injektionen oder Resets.
+
+Arme U,M,E,K,P: U diese Policy mit vorhandener M-Promotion; M unveraenderte
+Mitnahme-EMA mit Eindeutigkeitsgate; E Reset-EMA; K eindeutiger Kontext sonst
+P; P immer Persistenz. Alle voneinander isoliert,identische Quelle/Memory.
+Kein zusaetzlicher Ablations- oder Mitnahmearm. Spaeter maximal48*5=240
+Arm-Aufnahmen plus240 separat bilanzierte interne Referenzfortschreibungen.
+Das ist keine heutige Ausfuehrungsfreigabe.
+
+Mengen unveraendert:
+G={3,5,7,...,47};H={7,11,15,19,23,27,31,35,39,43,47};N=G ohne H.
+F={19,35}; A_W={23,27,31}; A_R={39,43,47}. Endziel49 zensiert.
+
+Anpassungskriterium unveraendert: in BEIDEN Phasen spaetestens am zweiten
+Ziel der A-Menge (27/43) und danach bessere verfuegbare Alternative waehlen,
+mit vor Ziel eingefrorener Wahl und belegter Abhaengigkeit von vorherigem
+Fehlerfeedback dieser Phase. Nichtkalte lebende Bewertung und berechtigter
+Kontext erforderlich. Kein Erfolg durch fehlenden Kontext,kaltes P oder
+mehrdeutige Enthaltung. Die Herkunft darf mehrdeutig bleiben; eine damit
+vereinbare,explizite Prognoseentscheidung ist von Enthaltung zu unterscheiden.
+Gleichstand-P bleibt als solcher sichtbar,keine strikte Praeferenz behaupten.
+
+Fuer erfahrungsbedingtes P muss mindestens eine warme konkurrierende
+Kontextprognose strikt schlechter bewertet sein und ihr aktueller Ziel-
+fehler tatsaechlich groesser als P sein. Weitere mit P gleichwertige
+Fortsetzungen offenlegen; Gleichstand allein ist kein Anpassungsbeleg.
+Dies konkretisiert den bestehenden Ausschluss kalter/mehrdeutiger Persistenz,
+ersetzt weder die festen Ziele noch die Frist durch ein leichteres Kriterium.
+
+Nur statische Gegenprognose, keine Messung:
+- U bis19 wie M: an19 falsches C,danach X-Fehlerpaar(1/4,1/4).
+- An23 P wegen X-Gleichstand und kaltem Y; NICHT als Anpassung zaehlen.
+  Feedback23 bewertet beide: X=(3/8,1/8),Y=(0,0). Y-Zelle bei24 mitgenommen.
+- An27/31 P: X ist erfahrungsbedingt schlechter,Y gleich P. X-Feedback
+  wird trotz Nichtauswahl weitergefuehrt. Prognose mehrdeutig in Herkunft,
+  aber P ist expliziter Vergleich mit warmen Alternativen.
+- Vor35 X=(15/32,1/32),Y=(0,0); P verfehlt erstmals die Rueckkehr.
+  Nach35 X=(15/64,17/64),Y=(1/4,1/4).
+- An39 X ist einziges negatives d=-1/32; C wird wieder gewaehlt.
+  An43/47 soll diese erfahrungsbedingte Wahl fortbestehen.
+
+Abhaengigkeitsbeleg aus gespeicherten Tickets/Updates,kein Zusatzlauf:
+Vorwechsel-X-Werte haetten an27 C statt P bewirkt; die tatsaechlichen
+Wechselfeedbacks aendern dieses Vorzeichen. Die vor Rueckkehr vorhandenen
+Bewertungen haetten an39 P bewirkt; Feedback35 dreht X ins Negative.
+Solche nachvollziehbare Auswertung ersetzt nicht die Beobachtung der
+tatsaechlich eingefrorenen Entscheidung. Kein Zustandstausch im System.
+
+Nutzen separat: je G,H,N,F,A_W,A_R Fehlersumme/MAE aller fuenf Arme,
+alle Einzeldifferenzen U-M/U-E/U-K/U-P,Gewinne UND Schaeden. Das bisherige
+M-Nettonutzenkriterium bleibt berichtbar; fuer U auf H ebenfalls strikt
+besser als ALLE Vergleichsarme fuer die Bezeichnung NETTONUTZEN.
+Ein erwartbarer Gleichstand U mit K auf H ist kein Nettonutzen gegen K.
+Anpassung kann belegt sein,ohne dass dieses strengere Nutzenkriterium gilt.
+Unabhaengiger Evaluationsnutzen bleibt NICHT_GEPRUEFT.
+
+Fehlt eine erforderliche Entscheidung oder Fehleraktualisierung,ist der
+Anpassungsnachweis nicht erbracht. Bei technischem Fehler NOT_EVALUABLE,
+bei technisch korrektem,aber unguenstigem Verhalten NICHT_NACHGEWIESEN.
+Keine alternative Quelle,Laenge,Maske,Parameter oder Wiederholung nach Befund.
+
+8. Begrenzte technische Gegenfaelle fuer spaetere Qualifikation
+
+Diese Fixtures sind keine natuerlichen Lernbefunde und werden heute nicht
+erzeugt/ausgefuehrt. Numerische Fehlerpaare darin sind explizite technische
+Testdaten,nicht Injektionen in den48er-Kontrast.
+
+T1: Zwei/drei konkurrierende Herkuenfte,alle im Receipt; Wahl aendert nie
+    Herkunftsstatus. Alle berechtigten ungewaehlten Hypothesen erhalten Update.
+T2: Vollstaendige kalte Konkurrenz sowie kalt neben negativem warmem Minimum;
+    kein kalter Nullfehler,alle kalten Zellen nach gueltigem Feedback initial.
+T3: EC=EP,gleiches negatives d verschiedener Keys,wertgleiche Fortsetzungen,
+    negative Null und unterschiedliche alte EC/EP-Paare mit gleichem d:
+    exakte Gleichstandsregel,keine willkuerliche Reihenfolgenentscheidung.
+T4: Kurze/alte verschiedene Historien: nur eigenes EC-EP verwenden;
+    Quell-/Trefferreihenfolge permutieren ohne andere Entscheidung.
+T5: Bis neun Treffer,maximal sechs berechtigte Offsets,fehlende Nachfolger,
+    Faktorlisten ungleich[1.0]; kein berechtigter Treffer wird abgeschnitten.
+    Sechs separat initialisierbare/aktualisierbare Zellen und Stagingpaare.
+T6: Verdrangung/Kandidatenersetzung zwischen Freeze/Feedback: eingefrorene
+    Originalwerte bleiben gleich; verlorener Key kein Update an Nachfolger.
+T7: Direkte Promotion mit offenem c-Ticket: vorhandene Zelle bitgleich nachr,
+    Ticket unveraendert; historischer c-Fehler messbar,kein r-Zusatzupdate.
+    Fremde lebende Hypothesen erhalten weiterhin genau ihr eigenes Update.
+T8: Unveraenderliche Originalframe-Referenzen,keine Neubeschaffung aus aktuellem
+    Store; freigegebene/ersetzte Slots duerfen die Prognose nicht veraendern.
+T9: Doppelte Keys,falscher Scope/Zielordinal,NaN/Inf,fehlender Zielslot:
+    Fehler vor Publikation oder terminale Bereinigung,kein stilles Weglassen.
+T10: Fuer sechs Updates Unterbrechung vor Publikation und nach JEDEM geschriebenen
+     Feld einer jeden Zelle sowie vor Abschlussfreigabe; auch BaseException.
+     Kein nach aussen verwendbarer Teilzustand,alle Halter danach geloest.
+T11: Reentranz waehrend Freeze/Update/Promotion,Endzensur und Doppel-Feedback:
+     gesperrt/bereinigt,kein zweites Update oder altes weiterlebendes Ticket.
+R1: Disabled-Pfad gegen bisherigen Standard bitgleich; U im eindeutigen Fall
+    gleiche Entscheidungen/Fehlerwerte wie M,Memoryzustand alle Arme identisch.
+R2: Vollbelegung,Kaltslotanlage,Promotion mit gehaltenen Verlustframes sowie
+    Fehlerbereinigung:416 Payloadbytes,18 Frames,2 Ausgaben,20 gemeinsam,
+    kompletter zusaetzlicher Python-Peak<=16384,Receipt/UTF8 innerhalb Grenzen.
+
+Jeder Fehlerinjektionspunkt separat benennen und Ergebnis erhalten. Genau
+diese begrenzten Fallfamilien,keine Erfolgssuche in weiteren Naturlauffolgen.
+Technische Qualifikation und eigentlicher48er-Vergleich getrennt freigeben.
+Gesamtes spaeteres Paket inkl.Qualifikation,Quellen,Beobachter und Abschluss
+<=4MiB;256KiB Abschlussreserve. Exklusiver Export,Teilbestand/Fehlerabschluss,
+Code/Laufzeit/Rezept/Masken vor Materialisierung binden. Kein automatischer
+Wiederholungslauf. Jede Budgetverletzung sperrt fachliche Ausfuehrung.
+
+9. Ergebnis und genau ein naechster Schritt
+
+Ein vollstaendiger Exact-Mechanismus ist konzeptionell darstellbar,ohne
+berechtigte Hypothesen abzuschneiden: sechs Keys,416 Byte einschliesslich
+Staging,Originalframe-Aliase statt weiterer Vektorkopien. Python-Peak und
+Fehlerpfadimplementierung bleiben zu qualifizieren; kein heutiger Messbefund.
+Genau ein naechster Vorschlag: dieses eine optionale Entwicklungspaket mit
+T1-T11/R1-R2 implementieren und neutral qualifizieren,nach Projektleiterauftrag.
+Der48er-Vergleich bleibt bis separater Einmallauffreigabe geschlossen.

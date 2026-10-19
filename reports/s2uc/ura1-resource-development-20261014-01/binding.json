@@ -1,0 +1,15 @@
+{
+  "files": {
+    "tools/_s2uc_ura1_stream_archive.py": "fccf9859ce2cee16353ff6d2e7a256f3f482e57549a3f8381552a8bd1908f815",
+    "tools/_s2uc_ura1_resource_neutral.py": "a9c35a91af9ae1626cb2e6b90ef944b86d0e82a7badbc06cc42b39bd33d4fe50",
+    "tools/s2uc_ura1_resource_qualify.py": "a2bc7911f98f325d6b492efc183248ac9d99eef35e4bbf7ad0f209240391bb4f",
+    "tests/test_s2uc_ura1_resource_stream.py": "f69c4f62781be79e21251103e99b0b757ea4e972d3882466c607885135c3f2e4",
+    "docs/S2UC_URA1_NEUTRALER_GROESSENABLAUF_VORSCHLAG_20261014.md": "019d916cab77e25439a019ff4360623b95a47e899967e6716773d53e2e62fff0"
+  },
+  "source_closures": {
+    "ura1-neutral-development-20261014-01": "880dfdf72c8aa0d4cdc02c001a5dd063e1d379d0dccff01c5ec40cc87aa638e5",
+    "ura1-codec-development-20261014-01": "4e8e4e88647981b06ebde1e64cc52375d403cf6114c1659cb2cd8d8b1aab88b5"
+  },
+  "research_ready": false,
+  "large_run_executed": false
+}

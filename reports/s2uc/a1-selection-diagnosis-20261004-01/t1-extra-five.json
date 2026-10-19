@@ -1,0 +1,787 @@
+[
+  {
+    "case": "T1-1-1",
+    "target": 69,
+    "ordinals": [
+      45,
+      46,
+      47,
+      48
+    ],
+    "offset": 1,
+    "before_prediction": {
+      "available_through": 68,
+      "original_successor": 48,
+      "cells": [
+        0.07457558314005534,
+        0.07457558314005534
+      ],
+      "margin": 0.0,
+      "previous_feedback": [
+        {
+          "at": 51,
+          "ec": 0.07457558314005534,
+          "ep": 0.07457558314005534,
+          "cells_after": [
+            0.07457558314005534,
+            0.07457558314005534
+          ],
+          "evidence": "T1-1-1-assessment.json#/rows/24/arms/A1/updates"
+        }
+      ],
+      "prior_context_wins": 0,
+      "prior_context_losses": 0,
+      "prior_ties": 1,
+      "competitors": [
+        {
+          "key": [
+            0,
+            1,
+            1
+          ],
+          "ordinals": [
+            45,
+            46,
+            47,
+            48
+          ],
+          "offset": 1,
+          "original": 48,
+          "before": [
+            0.07457558314005534,
+            0.07457558314005534
+          ],
+          "prior_feedback": [
+            51
+          ]
+        }
+      ],
+      "selected_this_line": false,
+      "selected_original": null,
+      "decision": "NO_ESTIMATED_IMPROVEMENT",
+      "receipt": {
+        "a1_admission": null,
+        "choice": 0,
+        "decision": "NO_ESTIMATED_IMPROVEMENT",
+        "hypotheses": [
+          {
+            "delta": 0.0,
+            "ec": 0.07457558314005534,
+            "eligible": true,
+            "ep": 0.07457558314005534,
+            "evaluation": "TIE_P",
+            "ticket": 0
+          },
+          {
+            "eligible": false,
+            "reason": "NO_SUCCESSOR"
+          }
+        ],
+        "input_indices": [
+          67,
+          68
+        ],
+        "matches": [
+          {
+            "factors": [
+              1.0
+            ],
+            "formation": "p12",
+            "generation": 1,
+            "offset": 1,
+            "ordinals": [
+              45,
+              46,
+              47,
+              48
+            ],
+            "role": "retained"
+          },
+          {
+            "factors": [
+              1.0
+            ],
+            "formation": "p12",
+            "generation": 1,
+            "offset": 2,
+            "ordinals": [
+              45,
+              46,
+              47,
+              48
+            ],
+            "role": "retained"
+          }
+        ],
+        "owner": "comparison",
+        "profile": "81cea2f80e8a7d743440c0997ad529bee33d5cc30a732021a8474ef13fd3ceee",
+        "read_revision": 83,
+        "retained_semantics": "ADMITTED_NOT_FULL_REPEAT_PROOF",
+        "source_intervals": [
+          [
+            316800,
+            321600
+          ],
+          [
+            321600,
+            326400
+          ]
+        ],
+        "status": "ABSTAIN_AMBIGUOUS",
+        "stream": "stream"
+      }
+    },
+    "after_target": {
+      "ec": 0.07457558314005534,
+      "ep": 0.07457558314005534,
+      "actual_match": false,
+      "modal_match": false,
+      "U_error": 0.07457558314005534,
+      "A1_error": 0.07457558314005534,
+      "delta": 0.0,
+      "cells_after": [
+        0.07457558314005534,
+        0.07457558314005534
+      ]
+    },
+    "evidence": {
+      "assessment": "T1-1-1-assessment.json#/rows/33",
+      "receipt": "T1-1-1-A1.json#/forecasts/33"
+    }
+  },
+  {
+    "case": "T1-1-3",
+    "target": 17,
+    "ordinals": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "offset": 0,
+    "before_prediction": {
+      "available_through": 16,
+      "original_successor": 3,
+      "cells": [
+        0.08672873179117839,
+        0.08912928899129231
+      ],
+      "margin": 0.002400557200113923,
+      "previous_feedback": [
+        {
+          "at": 7,
+          "ec": 0.08672873179117839,
+          "ep": 0.08912928899129231,
+          "cells_after": [
+            0.08672873179117839,
+            0.08912928899129231
+          ],
+          "evidence": "T1-1-3-assessment.json#/rows/2/arms/A1/updates"
+        }
+      ],
+      "prior_context_wins": 1,
+      "prior_context_losses": 0,
+      "prior_ties": 0,
+      "competitors": [
+        {
+          "key": [
+            0,
+            1,
+            0
+          ],
+          "ordinals": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "offset": 0,
+          "original": 3,
+          "before": [
+            0.08672873179117839,
+            0.08912928899129231
+          ],
+          "prior_feedback": [
+            7
+          ]
+        }
+      ],
+      "selected_this_line": true,
+      "selected_original": 3,
+      "decision": "SELECTED_BY_ERROR",
+      "receipt": {
+        "a1_admission": null,
+        "choice": 1,
+        "decision": "SELECTED_BY_ERROR",
+        "hypotheses": [
+          {
+            "delta": -0.002400557200113923,
+            "ec": 0.08672873179117839,
+            "eligible": true,
+            "ep": 0.08912928899129231,
+            "evaluation": "BETTER_THAN_P",
+            "ticket": 0
+          }
+        ],
+        "input_indices": [
+          15,
+          16
+        ],
+        "matches": [
+          {
+            "factors": [
+              1.0
+            ],
+            "formation": "p1",
+            "generation": 1,
+            "offset": 0,
+            "ordinals": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "role": "retained"
+          }
+        ],
+        "owner": "comparison",
+        "profile": "365a64d9609119f64e7c50ecda6b93c8b8ad6f08417534d0d61bea5aa623c37a",
+        "read_revision": 18,
+        "retained_semantics": "ADMITTED_NOT_FULL_REPEAT_PROOF",
+        "source_intervals": [
+          [
+            67200,
+            72000
+          ],
+          [
+            72000,
+            76800
+          ]
+        ],
+        "status": "RETAINED_ORIGINAL_MATCH",
+        "stream": "stream"
+      }
+    },
+    "after_target": {
+      "ec": 0.08539581298828125,
+      "ep": 0.0,
+      "actual_match": false,
+      "modal_match": false,
+      "U_error": 0.0,
+      "A1_error": 0.08539581298828125,
+      "delta": 0.08539581298828125,
+      "cells_after": [
+        0.08606227238972983,
+        0.04456464449564616
+      ]
+    },
+    "evidence": {
+      "assessment": "T1-1-3-assessment.json#/rows/7",
+      "receipt": "T1-1-3-A1.json#/forecasts/7"
+    }
+  },
+  {
+    "case": "T1-1-3",
+    "target": 49,
+    "ordinals": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "offset": 0,
+    "before_prediction": {
+      "available_through": 48,
+      "original_successor": 3,
+      "cells": [
+        0.08606227238972983,
+        0.04456464449564616
+      ],
+      "margin": -0.04149762789408367,
+      "previous_feedback": [
+        {
+          "at": 7,
+          "ec": 0.08672873179117839,
+          "ep": 0.08912928899129231,
+          "cells_after": [
+            0.08672873179117839,
+            0.08912928899129231
+          ],
+          "evidence": "T1-1-3-assessment.json#/rows/2/arms/A1/updates"
+        },
+        {
+          "at": 17,
+          "ec": 0.08539581298828125,
+          "ep": 0.0,
+          "cells_after": [
+            0.08606227238972983,
+            0.04456464449564616
+          ],
+          "evidence": "T1-1-3-assessment.json#/rows/7/arms/A1/updates"
+        }
+      ],
+      "prior_context_wins": 1,
+      "prior_context_losses": 1,
+      "prior_ties": 0,
+      "competitors": [
+        {
+          "key": [
+            0,
+            1,
+            0
+          ],
+          "ordinals": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "offset": 0,
+          "original": 3,
+          "before": [
+            0.08606227238972983,
+            0.04456464449564616
+          ],
+          "prior_feedback": [
+            7,
+            17
+          ]
+        }
+      ],
+      "selected_this_line": false,
+      "selected_original": null,
+      "decision": "NO_ESTIMATED_IMPROVEMENT",
+      "receipt": {
+        "a1_admission": null,
+        "choice": 0,
+        "decision": "NO_ESTIMATED_IMPROVEMENT",
+        "hypotheses": [
+          {
+            "delta": 0.04149762789408367,
+            "ec": 0.08606227238972983,
+            "eligible": true,
+            "ep": 0.04456464449564616,
+            "evaluation": "WORSE_THAN_P",
+            "ticket": 0
+          }
+        ],
+        "input_indices": [
+          47,
+          48
+        ],
+        "matches": [
+          {
+            "factors": [
+              1.0
+            ],
+            "formation": "p1",
+            "generation": 1,
+            "offset": 0,
+            "ordinals": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "role": "retained"
+          }
+        ],
+        "owner": "comparison",
+        "profile": "365a64d9609119f64e7c50ecda6b93c8b8ad6f08417534d0d61bea5aa623c37a",
+        "read_revision": 58,
+        "retained_semantics": "ADMITTED_NOT_FULL_REPEAT_PROOF",
+        "source_intervals": [
+          [
+            220800,
+            225600
+          ],
+          [
+            225600,
+            230400
+          ]
+        ],
+        "status": "RETAINED_ORIGINAL_MATCH",
+        "stream": "stream"
+      }
+    },
+    "after_target": {
+      "ec": 0.08539581298828125,
+      "ep": 0.0,
+      "actual_match": false,
+      "modal_match": false,
+      "U_error": 0.0,
+      "A1_error": 0.0,
+      "delta": 0.0,
+      "cells_after": [
+        0.08572904268900554,
+        0.02228232224782308
+      ]
+    },
+    "evidence": {
+      "assessment": "T1-1-3-assessment.json#/rows/23",
+      "receipt": "T1-1-3-A1.json#/forecasts/23"
+    }
+  },
+  {
+    "case": "T1-1-3",
+    "target": 51,
+    "ordinals": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "offset": 0,
+    "before_prediction": {
+      "available_through": 50,
+      "original_successor": 3,
+      "cells": [
+        0.08572904268900554,
+        0.02228232224782308
+      ],
+      "margin": -0.06344672044118246,
+      "previous_feedback": [
+        {
+          "at": 7,
+          "ec": 0.08672873179117839,
+          "ep": 0.08912928899129231,
+          "cells_after": [
+            0.08672873179117839,
+            0.08912928899129231
+          ],
+          "evidence": "T1-1-3-assessment.json#/rows/2/arms/A1/updates"
+        },
+        {
+          "at": 17,
+          "ec": 0.08539581298828125,
+          "ep": 0.0,
+          "cells_after": [
+            0.08606227238972983,
+            0.04456464449564616
+          ],
+          "evidence": "T1-1-3-assessment.json#/rows/7/arms/A1/updates"
+        },
+        {
+          "at": 49,
+          "ec": 0.08539581298828125,
+          "ep": 0.0,
+          "cells_after": [
+            0.08572904268900554,
+            0.02228232224782308
+          ],
+          "evidence": "T1-1-3-assessment.json#/rows/23/arms/A1/updates"
+        }
+      ],
+      "prior_context_wins": 1,
+      "prior_context_losses": 2,
+      "prior_ties": 0,
+      "competitors": [
+        {
+          "key": [
+            0,
+            1,
+            0
+          ],
+          "ordinals": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "offset": 0,
+          "original": 3,
+          "before": [
+            0.08572904268900554,
+            0.02228232224782308
+          ],
+          "prior_feedback": [
+            7,
+            17,
+            49
+          ]
+        },
+        {
+          "key": [
+            1,
+            12,
+            1
+          ],
+          "ordinals": [
+            45,
+            46,
+            47,
+            48
+          ],
+          "offset": 1,
+          "original": 48,
+          "before": null,
+          "prior_feedback": []
+        }
+      ],
+      "selected_this_line": false,
+      "selected_original": null,
+      "decision": "NO_ESTIMATED_IMPROVEMENT",
+      "receipt": {
+        "a1_admission": null,
+        "choice": 0,
+        "decision": "NO_ESTIMATED_IMPROVEMENT",
+        "hypotheses": [
+          {
+            "delta": 0.06344672044118246,
+            "ec": 0.08572904268900554,
+            "eligible": true,
+            "ep": 0.02228232224782308,
+            "evaluation": "WORSE_THAN_P",
+            "ticket": 0
+          },
+          {
+            "delta": null,
+            "ec": null,
+            "eligible": true,
+            "ep": null,
+            "evaluation": "COLD",
+            "ticket": 1
+          },
+          {
+            "eligible": false,
+            "reason": "NO_SUCCESSOR"
+          }
+        ],
+        "input_indices": [
+          49,
+          50
+        ],
+        "matches": [
+          {
+            "factors": [
+              1.0
+            ],
+            "formation": "p1",
+            "generation": 1,
+            "offset": 0,
+            "ordinals": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "role": "retained"
+          },
+          {
+            "factors": [
+              1.0
+            ],
+            "formation": "p12",
+            "generation": 12,
+            "offset": 1,
+            "ordinals": [
+              45,
+              46,
+              47,
+              48
+            ],
+            "role": "candidate"
+          },
+          {
+            "factors": [
+              1.0
+            ],
+            "formation": "p12",
+            "generation": 12,
+            "offset": 2,
+            "ordinals": [
+              45,
+              46,
+              47,
+              48
+            ],
+            "role": "candidate"
+          }
+        ],
+        "owner": "comparison",
+        "profile": "365a64d9609119f64e7c50ecda6b93c8b8ad6f08417534d0d61bea5aa623c37a",
+        "read_revision": 61,
+        "retained_semantics": "ADMITTED_NOT_FULL_REPEAT_PROOF",
+        "source_intervals": [
+          [
+            230400,
+            235200
+          ],
+          [
+            235200,
+            240000
+          ]
+        ],
+        "status": "ABSTAIN_AMBIGUOUS",
+        "stream": "stream"
+      }
+    },
+    "after_target": {
+      "ec": 0.08539581298828125,
+      "ep": 0.0,
+      "actual_match": false,
+      "modal_match": false,
+      "U_error": 0.0,
+      "A1_error": 0.0,
+      "delta": 0.0,
+      "cells_after": [
+        0.0855624278386434,
+        0.01114116112391154
+      ]
+    },
+    "evidence": {
+      "assessment": "T1-1-3-assessment.json#/rows/24",
+      "receipt": "T1-1-3-A1.json#/forecasts/24"
+    }
+  },
+  {
+    "case": "T1-1-4",
+    "target": 73,
+    "ordinals": [
+      45,
+      46,
+      47,
+      48
+    ],
+    "offset": 1,
+    "before_prediction": {
+      "available_through": 72,
+      "original_successor": 48,
+      "cells": [
+        0.08086729049682617,
+        0.08086729049682617
+      ],
+      "margin": 0.0,
+      "previous_feedback": [
+        {
+          "at": 51,
+          "ec": 0.08086729049682617,
+          "ep": 0.08086729049682617,
+          "cells_after": [
+            0.08086729049682617,
+            0.08086729049682617
+          ],
+          "evidence": "T1-1-4-assessment.json#/rows/24/arms/A1/updates"
+        }
+      ],
+      "prior_context_wins": 0,
+      "prior_context_losses": 0,
+      "prior_ties": 1,
+      "competitors": [
+        {
+          "key": [
+            0,
+            1,
+            1
+          ],
+          "ordinals": [
+            45,
+            46,
+            47,
+            48
+          ],
+          "offset": 1,
+          "original": 48,
+          "before": [
+            0.08086729049682617,
+            0.08086729049682617
+          ],
+          "prior_feedback": [
+            51
+          ]
+        }
+      ],
+      "selected_this_line": false,
+      "selected_original": null,
+      "decision": "NO_ESTIMATED_IMPROVEMENT",
+      "receipt": {
+        "a1_admission": null,
+        "choice": 0,
+        "decision": "NO_ESTIMATED_IMPROVEMENT",
+        "hypotheses": [
+          {
+            "delta": 0.0,
+            "ec": 0.08086729049682617,
+            "eligible": true,
+            "ep": 0.08086729049682617,
+            "evaluation": "TIE_P",
+            "ticket": 0
+          },
+          {
+            "eligible": false,
+            "reason": "NO_SUCCESSOR"
+          }
+        ],
+        "input_indices": [
+          71,
+          72
+        ],
+        "matches": [
+          {
+            "factors": [
+              1.0
+            ],
+            "formation": "p12",
+            "generation": 1,
+            "offset": 1,
+            "ordinals": [
+              45,
+              46,
+              47,
+              48
+            ],
+            "role": "retained"
+          },
+          {
+            "factors": [
+              1.0
+            ],
+            "formation": "p12",
+            "generation": 1,
+            "offset": 2,
+            "ordinals": [
+              45,
+              46,
+              47,
+              48
+            ],
+            "role": "retained"
+          }
+        ],
+        "owner": "comparison",
+        "profile": "0b220820d8c2fd4fca64e8da6db066c48c0d79550ce3a2fc91035952a2a3553e",
+        "read_revision": 88,
+        "retained_semantics": "ADMITTED_NOT_FULL_REPEAT_PROOF",
+        "source_intervals": [
+          [
+            336000,
+            340800
+          ],
+          [
+            340800,
+            345600
+          ]
+        ],
+        "status": "ABSTAIN_AMBIGUOUS",
+        "stream": "stream"
+      }
+    },
+    "after_target": {
+      "ec": 0.0,
+      "ep": 0.0,
+      "actual_match": true,
+      "modal_match": false,
+      "U_error": 0.0,
+      "A1_error": 0.0,
+      "delta": 0.0,
+      "cells_after": [
+        0.040433645248413086,
+        0.040433645248413086
+      ]
+    },
+    "evidence": {
+      "assessment": "T1-1-4-assessment.json#/rows/35",
+      "receipt": "T1-1-4-A1.json#/forecasts/35"
+    }
+  }
+]

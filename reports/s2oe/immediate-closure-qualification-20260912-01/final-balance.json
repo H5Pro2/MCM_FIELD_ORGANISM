@@ -1,0 +1,29 @@
+{
+  "version": "s2oe.immediate-closure-balance.v1",
+  "status": "QUALIFIED_CLOSURE",
+  "parts": {
+    "historical_input": 1359778,
+    "sources": 12823,
+    "metadata_before_balance": 5720,
+    "balance_file": 625
+  },
+  "totals": {
+    "metadata": 6345,
+    "total": 1378946
+  },
+  "limits": {
+    "historical_input": 2097152,
+    "sources": 174080,
+    "qualification_metadata": 131072,
+    "real_session_metadata": 65536,
+    "shared": 262144,
+    "total": 4194304
+  },
+  "log_bytes": 525,
+  "violations": [],
+  "prebound_total": 2130361,
+  "test_calls": 1,
+  "passed": 4,
+  "real_parent_reads": 0,
+  "main_gate": false
+}

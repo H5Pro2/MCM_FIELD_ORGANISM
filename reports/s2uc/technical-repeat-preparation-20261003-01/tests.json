@@ -1,0 +1,16 @@
+{
+  "ids": [
+    "tests.test_s2uc_repeat_prepare_v1.IntegrationTests.test_I01_frozen_policy_limits_and_qualified_dependencies",
+    "tests.test_s2uc_repeat_prepare_v1.IntegrationTests.test_I02_authorization_gate_before_any_start",
+    "tests.test_s2uc_repeat_prepare_v1.IntegrationTests.test_I03_watchdog_actual_closure_and_exclusive_start",
+    "tests.test_s2uc_repeat_prepare_v1.IntegrationTests.test_I04_two_neutral_sources_integrated_full_path",
+    "tests.test_s2uc_repeat_prepare_v1.IntegrationTests.test_I05_integrated_resource_guards",
+    "tests.test_s2uc_repeat_prepare_v1.IntegrationTests.test_I06_known_data_evidence_and_time_reserve"
+  ],
+  "count": 6,
+  "success": false,
+  "failures": 1,
+  "errors": 0,
+  "skips": 0,
+  "output": "test_I01_frozen_policy_limits_and_qualified_dependencies (tests.test_s2uc_repeat_prepare_v1.IntegrationTests.test_I01_frozen_policy_limits_and_qualified_dependencies) ... ok\ntest_I02_authorization_gate_before_any_start (tests.test_s2uc_repeat_prepare_v1.IntegrationTests.test_I02_authorization_gate_before_any_start) ... ok\ntest_I03_watchdog_actual_closure_and_exclusive_start (tests.test_s2uc_repeat_prepare_v1.IntegrationTests.test_I03_watchdog_actual_closure_and_exclusive_start) ... FAIL\ntest_I04_two_neutral_sources_integrated_full_path (tests.test_s2uc_repeat_prepare_v1.IntegrationTests.test_I04_two_neutral_sources_integrated_full_path) ... ok\ntest_I05_integrated_resource_guards (tests.test_s2uc_repeat_prepare_v1.IntegrationTests.test_I05_integrated_resource_guards) ... ok\ntest_I06_known_data_evidence_and_time_reserve (tests.test_s2uc_repeat_prepare_v1.IntegrationTests.test_I06_known_data_evidence_and_time_reserve) ... ok\n\n======================================================================\nFAIL: test_I03_watchdog_actual_closure_and_exclusive_start (tests.test_s2uc_repeat_prepare_v1.IntegrationTests.test_I03_watchdog_actual_closure_and_exclusive_start)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tests\\test_s2uc_repeat_prepare_v1.py\", line 93, in test_I03_watchdog_actual_closure_and_exclusive_start\n    self.assertLessEqual(events['deadline_established']['worker_deadline_ns'],events['abort_requested']['monotonic_ns'])\n    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 864241508545100 not less than or equal to 864241507750000\n\n----------------------------------------------------------------------\nRan 6 tests in 145.593s\n\nFAILED (failures=1)\n"
+}

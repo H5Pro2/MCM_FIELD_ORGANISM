@@ -1,0 +1,10 @@
+{
+  "historical_bound_files": 2967,
+  "historical_qualification_files": 43,
+  "research_delivery_files": 43,
+  "prestart_sha256": "8b00f9a27f958307e41673543ae294e8cffe9d2bf36949d2d71b3886b18b5bde",
+  "research_delivery_manifest_sha256": "6e46989d5920a269f3ed2e313e57101b8637950bac4b29f340fb14735a2a56bb",
+  "authorization_sha256": "490b4a9b7a6356d9420f5ab71c7c21e7511f5a4751cdfe8bf951d314f9ec1725",
+  "consumed_marker_sha256": "58f102b7fad55de3a78290a87d55b6358f9cd846c3deb035db66ca74b3f18fe7",
+  "method": "Hash-only preservation check; no research archive decoding or reference replay."
+}

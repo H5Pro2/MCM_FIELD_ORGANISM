@@ -1,0 +1,1 @@
+{"all_before_policy":true,"entries":[{"condition":"A","pair":1,"path":"pair-01-A-source.json","sha256":"d09118cb24c6b9a291e44054de3edfac25a6e1f1249ad723c664eaee68b58f30"},{"condition":"B","pair":1,"path":"pair-01-B-source.json","sha256":"870062168fc7da1d2b3d067fa39c8ccaf1afd8e9388e1c3cfe38ef2512cfb4f9"}],"namespace":"MCM-FW1/neutral/v1"}

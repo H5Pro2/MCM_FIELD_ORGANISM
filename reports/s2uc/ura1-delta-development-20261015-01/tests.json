@@ -1,0 +1,46 @@
+{
+  "status": "PASS_SMALL_STATE_DELTA",
+  "ids": [
+    {
+      "id": "tests.test_s2uc_ura1_delta.DeltaTests.test_T01_full_bytes_numbers_metadata_and_anchors",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_delta.DeltaTests.test_T02_missing_and_swapped_deltas",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_delta.DeltaTests.test_T03_changed_span_and_wrong_initial_state",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_delta.DeltaTests.test_T04_invalid_delta_path_and_value_references",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_delta.DeltaTests.test_T05_management_record_and_write_failure_cleanup",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_delta.DeltaTests.test_T06_live_small_scope_and_original_bindings",
+      "status": "PASS"
+    },
+    {
+      "id": "A01",
+      "status": "PASS"
+    },
+    {
+      "id": "A02",
+      "status": "PASS"
+    },
+    {
+      "id": "I01",
+      "status": "PASS"
+    },
+    {
+      "id": "I02",
+      "status": "PASS"
+    }
+  ],
+  "large_run_executed": false
+}

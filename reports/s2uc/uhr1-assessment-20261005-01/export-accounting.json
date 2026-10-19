@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "research_export_bytes": 15817034,
+  "charged_preparation_bytes": 8212164,
+  "audit_bytes_before_accounting_and_closure": 158853,
+  "reserved_accounting_and_closure_bytes": 16384,
+  "conservative_total_bytes": 24204435,
+  "total_limit_bytes": 67108864,
+  "conservative_admin_including_audit_bytes": 365853,
+  "admin_limit_bytes": 2097152
+}

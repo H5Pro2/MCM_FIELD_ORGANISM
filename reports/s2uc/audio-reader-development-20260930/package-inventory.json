@@ -1,0 +1,45 @@
+{
+  "final_tests": "tests-06.json",
+  "files": [
+    {
+      "path": "tools/_s2uc_bounded_audio.py",
+      "bytes": 11575,
+      "sha256": "d71cab9b5daef66710316084939e6d39d14d16bc32306f41dbd605f3be7c2519"
+    },
+    {
+      "path": "tools/s2uc_audio_worker.py",
+      "bytes": 12137,
+      "sha256": "b4e4c6125c540b48e31c4804725ad418b1ab8960fc88ae4ce6d6f183ef5bf4d0"
+    },
+    {
+      "path": "tools/s2uc_audio_binding.py",
+      "bytes": 1798,
+      "sha256": "afc22fb5ea3585f25e6e524f475eaf950755287eafc8355383ea9bbf5219ea8e"
+    },
+    {
+      "path": "tools/s2uc_audio_qualification.py",
+      "bytes": 2079,
+      "sha256": "3edfef434b794b9047c9097a1557e176b3dc0d107610fab2b427bc0a8f054b7a"
+    },
+    {
+      "path": "tests/test_s2uc_bounded_audio.py",
+      "bytes": 16688,
+      "sha256": "4b177780df9581900fe82f0c68a4212d0323d55295b7d09995c8c3c6c7c7cef2"
+    },
+    {
+      "path": "docs/S2UC_AUDIO_READER_BINDING_20260930.json",
+      "bytes": 140744,
+      "sha256": "3089947ad40211a66866b9d700a103afc319a7af553fe991a3ff175cd82cae3b"
+    },
+    {
+      "path": "docs/S2UC_NASA_100_FENSTER_AUSFUEHRUNGSAUFTRAG_20260930.txt",
+      "bytes": 4513,
+      "sha256": "97a1be9fffd6c4695f60726218fa99d25c61ae2ed62a9d4c2e5cfcf2c8a87acc"
+    },
+    {
+      "path": "docs/S2UC_NASA_100_FENSTER_AUTORISIERUNG_VORLAGE_20260930.json",
+      "bytes": 239,
+      "sha256": "e9ed02232e701111ad812269912ff3800b79fff134dae5744d710d0c8de1cc40"
+    }
+  ]
+}

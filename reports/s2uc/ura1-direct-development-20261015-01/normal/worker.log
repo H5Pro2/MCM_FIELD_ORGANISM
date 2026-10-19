@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\s2uc_ura1_direct_qualify.py", line 152, in <module>
+    if action=='worker':worker(Path(path),mode)
+                        ~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\s2uc_ura1_direct_qualify.py", line 94, in worker
+    decoded=read(path.read_bytes(),expected['original_sha256'],expected['original_bytes'])
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_ura1_archive_decode.py", line 54, in read
+    _check(type(entry) is list and len(entry) == 2 and type(entry[0]) is str, 'MEMBER')
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_ura1_archive_decode.py", line 10, in _check
+    raise ValueError(reason)
+ValueError: MEMBER

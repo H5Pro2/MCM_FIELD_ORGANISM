@@ -1,0 +1,11 @@
+test_N01_research_generation_locked_before_hash (tests.test_s2uc_ura1_prepare_v3.PreparationV3Tests.test_N01_research_generation_locked_before_hash) ... ok
+test_N02_only_neutral_recipe_and_independent_reference (tests.test_s2uc_ura1_prepare_v3.PreparationV3Tests.test_N02_only_neutral_recipe_and_independent_reference) ... ok
+test_N03_source_changes_are_namespace_and_admission_only (tests.test_s2uc_ura1_prepare_v3.PreparationV3Tests.test_N03_source_changes_are_namespace_and_admission_only) ... ok
+test_N04_authorization_required_and_old_kind_rejected (tests.test_s2uc_ura1_prepare_v3.PreparationV3Tests.test_N04_authorization_required_and_old_kind_rejected) ... ok
+test_N05_existing_target_cannot_resume (tests.test_s2uc_ura1_prepare_v3.PreparationV3Tests.test_N05_existing_target_cannot_resume) ... ok
+test_N06_new_target_and_authorization_absent (tests.test_s2uc_ura1_prepare_v3.PreparationV3Tests.test_N06_new_target_and_authorization_absent) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.040s
+
+OK

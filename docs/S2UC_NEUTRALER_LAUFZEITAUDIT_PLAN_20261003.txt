@@ -1,0 +1,67 @@
+MCM-KI -- vorab festgelegter neutraler Laufzeitaudit
+2026-10-03 | NUR DIAGNOSE | KEINE OPERATIVE REPARATUR
+
+Gegenstand: baseline replay der unveraenderten V2-Huelle. Raster32 bleibt
+TIME_LIMIT/NOT_EVALUABLE; keine fehlenden Arme oder Rasterfolgen ausfuehren.
+Alle71 Codebindungen und alle historischen Exporte vor/nach Audit pruefen.
+
+Genau zwei neutrale Fixtures, je80 Positionen; V(x)=48 gleiche float(x).
+A=[V(1/32),V(7/32),V(19/32),V(29/32)].
+B=[V(1/32),V(7/32),V(11/32),V(29/32)].
+N1: A zwanzigmal. N2: A*5,B*5,A*5,B*5.
+Schon der erste Hinweis unterscheidet sich vom Raster (1/32 statt3/16).
+Keine Rastermaterialisierung, keine Suche nach guenstigen Diagnosefaellen.
+N2 muss tatsaechlich gleichzeitig konkurrierende Originalkontexte abrufen.
+
+Feste Matrix: N1 und N2, jeweils M/E/K/P, je einmal TRACE_ON und TRACE_OFF.
+N1: je Arm ON vor OFF. N2: je Arm OFF vor ON. Keine Wiederholungen zum
+Verbessern der Zeiten; keine Warmups oder statistischen Populationstests.
+Zusaetzlich je Fixture genau ein uninstrumentierter Original-V2-M-Lauf mit
+aktivem Originaltrace als semantischer und zeitlicher Anker.
+Insgesamt18 neutrale80er-Replays=1440 Arm-Aufnahmen+1440 Referenzfortschreibungen.
+Frische Zustaende pro Arm/Modus. U wird nicht erneut ausgefuehrt.
+
+Diagnosehooks liegen ausschliesslich in einem neuen Auditmodul. Die originale
+Replayfunktion wird im Speicher mit dokumentierten Beobachtungshooks geladen;
+keine historische Datei oder Policyfunktion wird geaendert. Fachliche
+Operationen, Reihenfolge, Quelle, Aufnahme, Feedback und Freigabe bleiben.
+TRACE_OFF unterdrueckt ausschliesslich den verdächtigen Python-Zeilentrace;
+andere vorhandene Pruefungen und Heapmessung bleiben aktiv.
+TRACE_OFF ist KEIN gueltiger Ersatz fuer Ressourcenbelege. Auch getaktete
+Diagnosemessungen sind keine neue operative Ressourcenqualifikation.
+
+Teilzeiten: verschachtelte, exklusiv summierte Wall-/Prozess-CPU-Zeiten fuer
+experimentelle Adapterberechnung, Referenz, drei Ressourcen-Traceebenen,
+weitere Ressourcenbeobachtung, Belegaufbau, JSON, Quellengate, sonstige Huelle,
+Exportserialisierung sowie open/write/close. Timer- und Dispatchkosten werden
+nicht als kostenlose oder exakt eliminierte Groessen behauptet. Alle
+Kategorien muessen sich zur gemessenen Zeitspanne aufsummieren; Wall-Rest und
+Timerperturbation gegen den Originalanker ausweisen. Dateiausgabe ohne fsync,
+entsprechend dem bisherigen Export; kein physischer Datentraegerdurchsatzbeleg.
+
+Semantik: byteidentische kanonische Fachbelege ON/OFF fuer jeden Arm;
+nur M wird mit dem jeweiligen M-Originalanker verglichen. Keine Gleichheit
+zwischen unterschiedlichen Policies gefordert. Vergleich umfasst alle Decisions/Receipts,
+Fehlerupdates vor/nachher, Aufnahmen/Originalbestaende, Zustandshashes,
+zensiertes Endziel81 und vollstaendige terminale Freigabe. Ausschliesslich
+resources wird aus diesem Fachvergleich entfernt; keine Ergebnisfelder
+wegfiltern. Fehlende oder abweichende Belege verhindern eine positive Abnahme.
+
+Zeitwaechter: zwei reine Prozessproben ohne Policy, normaler Exit und
+Deadline-Abbruch. Deadlinefestlegung, Abbruchanforderung, bestaetigtes
+Workerende nach join und Beginn/Ende der Abschlussverwaltung separat mit
+monotoner Zeit und UTC protokollieren. Bestaetigungszeit ist Beobachtungszeit,
+nicht rueckdatierter tatsaechlicher Todeszeitpunkt. Historischer Workerstop
+bleibt unbekannt. Kein Patch der operativen supervise-Funktion.
+
+Auditgrenzen: hoechstens900 Sekunden fuer die neutrale Diagnosematrix,
+16MiB neue Diagnoseexporte. Keine Erweiterung der verbrauchten Rasterdeadline.
+Bei technischen Problemen Diagnosefehler erhalten; keine Rasterarbeit daraus.
+Vor Matrixbeginn Bindung von Auditcode, Tests, diesem Plan und71 Altdateien;
+exklusiver Auditordner, Ergebnis-/Hashabschluss und vollstaendige Test-IDs.
+
+Abnahme: gemessene Hauptkostenursache, unveraenderte Fachbelege, getrennte
+Zeitwaechterereignisse und genau ein minimaler Reparaturvorschlag einschliesslich
+notwendiger Aequivalenz-/Ressourcenpruefung. Kein Geschwindigkeitsvergleich
+zwischen Policies aus ungleichen Beobachtungsmethoden. Kein Reparatur- oder
+Evaluationsauftrag aus diesem Plan.

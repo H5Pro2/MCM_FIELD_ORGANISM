@@ -1,0 +1,70 @@
+VOLLSTAENDIG BESTIMMTER NAECHSTER AUSFUEHRUNGSAUFTRAG -- NOCH NICHT FREIGEGEBEN
+2026-09-30. Implementierung/Neutraltests abgeschlossen; keine NASA-Dekodierung.
+
+ENTSCHEIDUNGSGEGENSTAND
+Genau ein Materialisierungsversuch der ersten10 Sekunden der gebundenen
+NASA-Projektdatei mit tools/s2uc_audio_worker.py. Keine Wiederholung bei Fehler.
+100 lueckenlose Fenster, keine Suche/Parameteranpassung/anderen Abschnitte.
+Rezeptor/NJ wie im Beschaffungsvertrag unveraendert. Kein49-Ziele-Vergleich
+innerhalb dieses Aufrufs. Dessen spaetere Auswertung braucht eine getrennte
+Beauftragung; der bisherige20er-Treiber wird nicht als100er-Treiber ausgegeben.
+
+BINDUNG
+Datei: C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/sources/media/NASA Earthrise Realtime Apollo 8.mp4
+Groesse13547755 Byte, SHA256
+9a061d639c17849e52ace712c8752b5d377123a9eec99df896728098bd783d74.
+Intervall[0,10), Audiospur erste in Containerreihenfolge,48000Hz.
+Ausgabe100mal4800Samples, Quellzeiten[4800*n,4800*(n+1)), n=0..99.
+NJ-Snapshotindex10*n (Profilhop480), Streamindex n+1; keine Zeitverschiebung.
+Laufzeit-/Codebindung: docs/S2UC_AUDIO_READER_BINDING_20260930.json
+SHA256 3089947ad40211a66866b9d700a103afc319a7af553fe991a3ff175cd82cae3b
+572 Dateien einschliesslich PyAV16.1.0, FFmpeg-DLLs, NumPy2.4.4,
+Python3.14-Runtime und aktueller Fachmodule. Unveraenderte Bindung ist
+Voraussetzung; kein stilles Neuschreiben der Bindung fuer eine Ausfuehrung.
+
+FESTER AUFRUF NACH EXPLIZITER FREIGABE
+Arbeitsverzeichnis: C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace
+C:/Python314/python.exe -m tools.s2uc_audio_worker materialize docs/S2UC_NASA_100_FENSTER_AUTORISIERUNG_20260930.json
+
+Die vorhandene *_VORLAGE_20260930.json steht auf PENDING und kann nicht starten.
+Erst nach ausdruecklichem Materialisierungsauftrag darf eine Kopie unter dem
+oben genannten Autorisierungspfad mit status AUTHORIZED_ONCE erstellt werden;
+alle anderen Felder bleiben exakt gleich. Das ist eine lokale Auftragsbindung,
+keine neue Registry-Infrastruktur und keine eigenstaendige fachliche Freigabe.
+Ausgabeordner reports/s2uc/nasa-contiguous-materialization-20260930-01 muss neu
+sein. Exklusive Ordneranlage/claim verhindern erneuten automatischen Verbrauch.
+Nicht entfernen oder zur Wiederholung wiederverwenden. Exit0 nur bei
+MATERIALIZATION_COMPLETE, sonst Exit1 oder Vorpruefungsfehler ohne Decoderstart.
+
+GRENZEN UND ABNAHME
+640MiB Prozess-/Job-Commit, ein Prozess, Kill-on-close; Job-Mitgliedschaft
+vor Imports und nochmals vor Decoderstart geprueft. Kein ungeschuetzter Pfad.
+300s Gesamtwatchdog,30s pro Anfrage,32MiB Decoder-Lesebyte,2048 demuxte Pakete
+aller Spuren,512 dekodierte Audioframes,524288 Samples/Kanal inklusive Ueberhang,
+65536 Samples/Kanal pro Batch,8 Kanaele. Nur erste Audiospur dekodieren.
+4MiB Gesamtausgabe inklusive Bindung/Claim und256KiB reserviertem Abschluss.
+100 Rezeptor- und100 NJ-Aufrufe, kein PCM-Dauerexport. Windowbuffer19200Byte
+plus aktueller Decoderbatch/Konversionsarrays; kein kompletter PCM-Puffer.
+
+Erfolg:100 window-NNN.json mit48 Werten, Profil, Originalzeitfragmenten,
+PCM-/Projektionsdigest; closure.json bestaetigt480000 akzeptierte Samples,
+100 Fenster,100/100 Rezeptor-/NJ-Aufrufe und geschlossene Handles/Prozess.
+Die Einzelprojektionen behalten alle Vektoren inklusive Nullwerte.
+Fehler: NOT_EVALUABLE mit Phase/Grund, Anzahl bereits abgelegter Fenster und
+OS-Bilanz, keine Auswertung eines Teilbestands. Keine Grenzerhoehung oder Retry.
+Fehlende Zeitdaten, Anfangsluecke, Overlap, Format-/Profilfehler oder vorzeitiges
+EOF sind Abbruchgruende; kein Auffuellen/Seek/Resampling. Hashpruefung und
+Decoder verwenden denselben gegen Schreiben/Loeschen gesperrten Dateihandle.
+
+NOCH NICHT DURCH NEUTRALTESTS BELEGT
+Ob NASA[0,10) die PTS-/Priming-/Edit-List-Bedingungen mit diesem Decoder erfuellt;
+ob Quellcodec und Datenmenge innerhalb aller Grenzen bleiben; tatsaechliche
+Vektorwerte, Kontextabdeckung und Vorhersagefehler. Metadatendauer allein ist
+kein Decodiernachweis. Nicht auf ein guenstigeres Intervall ausweichen.
+
+SPAEHERE VERGLEICHSENTSCHEIDUNG
+Nur vollstaendiger gebundener Bestand: leerer Speicher, feste Paare1/2..99/100,
+49 Ziele3..99, Ziel101 NOT_EVALUABLE_END. Unveraendertes Matching/Faktor1,
+Bestaetigung und Persistenz; keine Prognosegüte als Erfolgsvoraussetzung.
+Die49-Ziele-Integration wird erst mit eigenem Auftrag vorbereitet/geprueft;
+keine automatische Auswertung durch den hier bestimmten Materialisierungsaufruf.

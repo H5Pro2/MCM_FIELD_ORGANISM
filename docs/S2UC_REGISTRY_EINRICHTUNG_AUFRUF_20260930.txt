@@ -1,0 +1,48 @@
+S2UC: gepruefter PowerShell-7-Einrichtungsweg
+
+Skript: C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\docs\Setup-S2UCRegistry.ps1
+SHA256: 83d3024a0c725d8b61f442c84ad023673359c3d3aed1161e00b747783519655e
+Host: C:\Users\TV\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.exe (64 Bit, 7.6.5)
+Unveraenderte effektive Richtlinie: RemoteSigned; keine Gruppenrichtlinie gesetzt.
+Windows PowerShell 5.1 mit Restricted wird fuer diesen Weg nicht verwendet.
+Keine Richtlinienaenderung, kein Bypass und keine erneute fachliche Freigabe.
+
+Praktische Kompatibilitaetspruefung im exakten Host mit -NoProfile -NonInteractive -File:
+SelfTest: Exit 0, SELFTEST_PASS; native SDDL-Konvertierung und 24-Byte-SA-Struktur
+bestaetigt; gueltige DACL akzeptiert, fuenf falsche DACLs und zwei abweichende Inhalte
+abgewiesen. Inspect: Exit 2, MISSING_KEYS; drei HKLM64-Schluessel fehlen.
+Install in der nicht erhoehten Sitzung: Exit 1, ADMINISTRATOR_TOKEN_REQUIRED;
+keine Schluessel angelegt. RegistryKey-ACL-/Handle-APIs im Host lesend bestaetigt.
+Die tatsaechliche administrative Anlage ist noch nicht ausgefuehrt oder bewiesen.
+Pruefbeleg: docs/S2UC_POWERSHELL7_KOMPATIBILITAET_20260930.json.
+
+Genau erforderlicher Aufruf aus einer regulaeren PowerShell-Sitzung:
+$setup = Start-Process -FilePath 'C:\Users\TV\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.exe' -Verb RunAs -WindowStyle Hidden -Wait -PassThru -ArgumentList '-NoProfile -NonInteractive -File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\docs\Setup-S2UCRegistry.ps1" -Mode Install'
+$setup.ExitCode
+
+Konkrete Benutzerinteraktion: In der erscheinenden Windows-UAC-Abfrage fuer den
+oben genannten pwsh.exe-Prozess auf Ja klicken, gegebenenfalls Administrator-
+anmeldedaten eingeben. Das ist die Windows-Rechteerhoehung, keine erneute fachliche
+Einmallauffreigabe. Abbrechen fuehrt zu keiner Einrichtung. Der Installationsprozess
+laeuft ohne zusaetzliches sichtbares Konsolenfenster; der Aufruf wartet und gibt
+seinen Exitcode aus. 0 bedeutet erfolgreichen Skriptabschluss, 1 einen Stopp.
+Bei bereits erhoehter Sitzung kann stattdessen der direkte -File-Aufruf verwendet
+werden. Die aktuelle Agentensitzung hat weiterhin keinen Administratortoken.
+
+Begrenzung und Nachpruefung
+Nur SOFTWARE\MCM_FIELD_ORGANISM, ...\S2UC, ...\ApprovedOneShots in HKLM64.
+Neue Schluessel: Eigentuemer Administratoren, geschuetzte DACL; SYSTEM und
+Administratoren Vollzugriff, authentifizierte Benutzer nur ReadKey, CI-Vererbung.
+Alle bestehenden Ziele werden vor erster Anlage geprueft; abweichende ACLs,
+Registry-Werte oder fremde Unterordner stoppen. Keine vorhandenen ACLs werden
+geaendert. Konkurrierende Anlage stoppt ohne Ueberschreiben. Teilweise neu angelegte
+Schluessel bleiben bei Fehler dokumentierbar; kein automatisches Loeschen.
+Keine Autorisierungswerte, kein Claim und kein Quellenstart im Einrichtungsskript.
+
+Nach erfolgreicher Einrichtung prueft der Entwickler alle drei Schluessel im
+regulaeren Ausfuehrungskonto zusaetzlich mit dem unveraenderten produktiven Leser
+s2uc_productive_once.registry_acl. Erst nach dessen Annahme folgen die autorisierte
+Vorpruefung, die gebundene Autorisierung und genau ein Quellenversuch.
+Alle 76 qualifizierten operativen Codehashes unveraendert. Das separate
+Einrichtungsskript ist durch diese Kompatibilitaetspruefung, nicht durch die
+historischen 226 Tests, beschrieben. Der Versuch bleibt unverbraucht.

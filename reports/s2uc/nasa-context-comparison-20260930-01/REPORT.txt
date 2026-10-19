@@ -1,0 +1,100 @@
+NASA-KONTEXTVERGLEICH AUF100 GESPEICHERTEN FENSTERN -- 2026-09-30
+Status LOCAL_COMPARISON_COMPLETE.20/20 fokussierte Tests PASS, keine Fehler.
+Genau ein vollstaendiger lokaler Vergleich; keine neue Quellenverarbeitung.
+
+BESTAND UND BINDUNG
+Ausschliesslich reports/s2uc/nasa-contiguous-materialization-20260930-01,
+window-001.json bis window-100.json. Materialisierung abgenommen/geschlossen,
+MATERIALIZATION_COMPLETE; ihre Einmalfreigabe bleibt verbraucht.
+Inventar-SHA256 f675ebaffa330ef64a6f1689e0fcd23cba3e76263bcfc6cb23c70e71507f0baa.
+Vor Zugriff durch Predictor prueft der getrennte Leser alle gebundenen Dateien,
+100 Projektionsdigests, Profile und Quellintervalle [0,480000) bei48000Hz.
+Quellzeitfragmente, Snapshotindices0,10,...,990 und Profilbindung erhalten.
+Der Leser hat observerseitig zur Integritaetspruefung Zugriff auf den Bestand;
+der Predictor erhaelt weder Dateileser noch zukuenftige Vektoren oder Iterator.
+Rohbytes werden geprueft gecacht, ohne spaeter ungebundene Dateien nachzuladen.
+Codebindung vor Ergebnisberechnung: ../nasa-context-comparison-development-20260930/precomparison-binding.json.
+Nach Abschluss sind Code- und Bestandsbindungen unveraendert bestaetigt.
+
+VOLLSTAENDIGER ERGEBNISBEFUND
+Alle49 Ziele3,5,...,99 einschliesslich Kaltstart ausgewertet.
+Kontext: Abdeckung0/49, Treffer0, Fehler0,49 Enthaltungen ABSTAIN_NO_CONTEXT.
+Mehrdeutigkeit0; kein-Nachfolger0; nicht spezifizierte Faktorfortsetzung0.
+Bedingte Kontext-Trefferrate undefiniert. Trefferanteil ueber alle Ziele0/49.
+Persistenz: Abdeckung49/49, Treffer0, Fehler49, Enthaltungen0; Trefferrate0/49.
+Gemeinsam abgedeckte Positionen0: beide richtig0, nur Kontext richtig0,
+nur Persistenz richtig0, beide falsch0. Keine vorlaeufige Kandidatenprognose,
+keine bestaetigte Erhaltungsprognose. Enthaltung ist weder Treffer noch Fehler.
+Jede einzelne Zielbewertung samt Herkunft und Vorzustandsrevision in result.json.
+
+SPEICHERAUFBAU GETRENNT VON PROGNOSE
+25 regulaere Viererformationen. Ein Kandidat neu angelegt,24mal ersetzt,
+insgesamt25 Kandidatengenerationen. TRACE_PROMOTED0, TRACE_CONFIRMED0,
+TRACE_CONFIRMED_RECENT0; keine bestaetigte Erhaltung. Keine manuelle Vorbelegung,
+keine Wiederholung, kein Reset und keine Auswahl anhand erfolgreicher Matches.
+25 Originalrueckgaben der bestehenden close_segment-Methode separat protokolliert;
+Profiler beobachtet Rueckgaben, ohne die Speichermethode zu ersetzen.
+
+KAUSALITAET UND INTEGRATION
+100 Frames exakt einmal aufgenommen, feste50 Paare1/2..99/100.100 Kontrollen
+bestaetigen Prognose vor jeweiliger Paaraufnahme. Alle49 Zielzugriffe werden
+an vorhandene passende Prognose und Paarindices gebunden; vor deren Freigabe
+wird der Zielvektor nicht an den Predictor geliefert. Danach Auswertung und
+Slotfreigabe vor Aufnahme des Zielvektors. Die Prognose kann dabei Enthaltung
+sein; ein Erfolg wird zum Oeffnen des Gates nicht verlangt.
+Nach jedem der100 Eingangsframes vollstaendige Zustandsidentitaet einschliesslich
+Endmarken/Wassermarken zum bisherigen PairContextAdapter ohne Vorhersage.
+Auch nach Abschluss identisch, Owner geschlossen, Kandidat/Erhaltung/Hint-/
+Paarbuffer leer. Ziel101 NOT_EVALUABLE_END, ausserhalb Nenner49. Slots frei.
+Keine Matching-, Faktor-, Bestaetigungs-, Auffrischungs- oder Prognoseregel geaendert.
+
+FOKUSSIERTE TESTS
+../nasa-context-comparison-development-20260930/tests.json und tests.txt:
+7 neue Testmethoden plus7 vorhandene Continuation- und6 PairAdapter-Tests.
+Neue Kontrollen: falsches Inventar/manipulierte Datei; fehlende Prognose an
+ALLEN49 Zielpositionen vor Vektorlieferung abgewiesen; positive49 Gate-/Paar-
+Bindungen mit neutralem Probeobjekt; falsches Ziel/Paar; Quellzeit-/Profil-/
+Projektionsdigestfehler; Fehlerfreigabe bei offener Prognose; neutrale regulaere
+Aufnahme/Zustandsidentitaet/Endfreigabe. Positive Probeobjekte testen nur Gates,
+keine Vorhersagequalitaet. Der tatsaechliche100er-Vergleich prueft die reale
+Integration mit unveraenderten Adaptern und allen Originalvektoren.
+
+RESSOURCEN
+Gemessener Predictorpeak8 unterschiedliche Frames plus1 Ausgabeslot,
+gemeinsamer Peak9;48144 instrumentierte Messpunkte.
+16+2 plus2 getrennte Prognoseslots eingehalten; Vollbelegung und konkrete
+Kontextprognose in DIESEM Bestand nicht erreicht. Ausgabeobjekt konservativ
+maximal1956 Python-Byte. Vorhandene Grenztests decken andere Rollen ab.
+Leser separat: 502817 Cache-Nutzbytes, 519101 gelesene Byte,
+Initialisierungs-Allokationspeak972877 Python-Byte.
+Beobachter separat:100 vollstaendige Zustandssnapshots,50 Paarreceipts,
+49 Zielbewertungen,25 Formationsreceipts,49 Gate- und100 Aufnahmepruefbelege;
+externer Referenzadapter. JSON-Messstand vor seiner eigenen Groessenangabe
+721049 Byte, kein konstantes Beobachter-RAM-Budget behauptet.
+Gesamter instrumentierter Python-Allokationspeak126138060 Byte,
+inklusive Leser, Referenz und Beobachter. Dauer64711911700ns. Kein RSS-Wert,
+kein Produkt-RAM-Messwert und kein Decoderverbrauch; Decoderaufrufe0.
+
+GEAENDERTE DATEIEN
+Neu tools/s2uc_nasa_comparison.py und tests/test_s2uc_nasa_comparison.py.
+Neuer Entwicklungsbelegordner nasa-context-comparison-development-20260930
+und dieser Ergebnisordner. AKTUELLER_FORSCHUNGSWEG.md aktualisiert.
+Alter20er-Treiber sowie fachliche Adapter/Speichermodule unveraendert.
+Vorhandene fremde Aenderungen erhalten, keine Commits oder Pushes.
+
+AUSSAGE UND NAECHSTER VORSCHLAG
+Auf diesem festen lueckenlosen NASA-Abschnitt entsteht bei regulaerem Aufbau
+keine Kontextabdeckung. Der Befund belegt keinen Kontextnutzen. Unterschiedliche
+Quelle/Beobachtungszahl/Zeitspanne erlauben keinen isolierten Schluss zur
+Kontinuitaetswirkung gegenueber dem frueheren20er-Bestand. Die Groesse der
+49 Persistenzfehler und die Naehe zwischen Kandidaten/Folgeformationen wurden
+nicht untersucht; fehlende exakte Gleichheit ist kein Nachweis fehlender
+naeherungsweiser Wiederkehr.
+Naechster Vorschlag: einen rein beobachterseitigen Abweichungsvertrag auf
+DIESEM fest gebundenen Bestand vorbereiten. Vorab ungewichtete mittlere und
+maximale absolute48-Werte-Abweichung fuer alle49 Persistenzziele und alle24
+Uebergaenge vom bestehenden Kandidaten zur naechsten Viererformation festlegen.
+Keine Nutzensumme, Schwellenoptimierung, neue Matchingregel oder Quellensuche.
+Damit lassen sich Abweichungsgroessen beurteilen, bevor der Projektleiter
+ueberhaupt eine Aenderung des Exaktheitskriteriums erwaegt. Heute keine solche
+Zusatzanalyse ausgefuehrt; kein automatischer Folgeauftrag.

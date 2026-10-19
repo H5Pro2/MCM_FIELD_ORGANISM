@@ -601,10 +601,13 @@ class S2JVFormationOwnerSnapshotV1:
 class S2JVFormationResultV1:
     poststate: S2JVCompositeStateV1
     receipt: S2JVFormationReceiptV1
+    tspm_transition_receipt: tspm1.TSPM1TransitionReceipt
     ledger: S2JVResourceLedgerV1
     owner_poststate: S2JVFormationOwnerSnapshotV1
     result_digest: str
     schema: str = S2JW_COORDINATOR_SCHEMA
+    auditory_ppb1_readout: tspm1.PPB1Readout | None = None
+    visual_ppb1_readout: tspm1.PPB1Readout | None = None
 
     def payload_without_digest(self) -> dict[str, object]:
         owner = self.owner_poststate.payload_without_digest()
@@ -613,6 +616,7 @@ class S2JVFormationResultV1:
             "schema": self.schema,
             "poststate_digest": self.poststate.state_digest,
             "receipt_digest": self.receipt.receipt_digest,
+            "tspm_transition_receipt_digest": self.tspm_transition_receipt.receipt_digest,
             "ledger_digest": self.ledger.ledger_digest,
             "owner_poststate_without_commit_digest": owner,
         }
@@ -669,6 +673,7 @@ def _advance_tspm_candidate(
         config.tspm_config.config_binding_digest,
         state.composite_state_digest,
         source.tspm_exposure.exposure_digest,
+        owner._ppb_update_mode,
     )
     return tspm_owner.consume_once(config.tspm_config, state, source.tspm_exposure)
 
@@ -684,6 +689,7 @@ class S2JVFormationOwner:
         authorized_config_digest: str,
         authorized_prestate_digest: str,
         authorized_input_digest: str,
+        ppb_update_mode: str = tspm1.PPB_UPDATE_HISTORICAL,
     ) -> None:
         self._owner_id = _identifier(owner_id, "owner_id")
         self._authorization_id = _identifier(authorization_id, "authorization_id")
@@ -703,6 +709,15 @@ class S2JVFormationOwner:
         self._authorized_config_digest = authorized_config_digest
         self._authorized_prestate_digest = authorized_prestate_digest
         self._authorized_input_digest = authorized_input_digest
+        _require(
+            ppb_update_mode in {
+                tspm1.PPB_UPDATE_HISTORICAL,
+                tspm1.PPB_UPDATE_IDENTITY_PRESERVING,
+            },
+            S2JW_INVALID,
+            "unknown PPB update mode",
+        )
+        self._ppb_update_mode = ppb_update_mode
         self._status = "AUTHORIZED"
         self._attempt_count = 0
         self._use_count = 0
@@ -841,18 +856,26 @@ class S2JVFormationOwner:
                 temporary = S2JVFormationResultV1(
                     poststate,
                     receipt,
+                    tspm_result.receipt,
                     ledger,
                     projected_owner,
                     "",
+                    S2JW_COORDINATOR_SCHEMA,
+                    tspm_result.auditory_ppb1_readout,
+                    tspm_result.visual_ppb1_readout,
                 )
                 result_digest = _digest(temporary.payload_without_digest())
                 self._committed_result_digest = result_digest
                 result = S2JVFormationResultV1(
                     poststate,
                     receipt,
+                    tspm_result.receipt,
                     ledger,
                     _owner_snapshot(self),
                     result_digest,
+                    S2JW_COORDINATOR_SCHEMA,
+                    tspm_result.auditory_ppb1_readout,
+                    tspm_result.visual_ppb1_readout,
                 )
                 _require(
                     result.result_digest == _digest(result.payload_without_digest())

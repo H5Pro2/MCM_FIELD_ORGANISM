@@ -1,0 +1,102 @@
+{
+  "profile": "EXPERIENCE_COMPARISON_24M_V1",
+  "basis": "Physical files in qualification, real binding and real output directories plus five active new source files. Existing software prerequisites remain hash-bound by the retained inventory. No deduplication of physical copies. This accounting parses stored JSON only; no repeated technical verification or functional evaluation.",
+  "observed_before_this_balance_file": {
+    "total": 3951574,
+    "metadata": 189715,
+    "sources": 59428,
+    "verification_including_claim": 45647,
+    "states": 2396510,
+    "inputs": 485328,
+    "steps": 208986,
+    "scans": 426954,
+    "nj": 38468,
+    "formations": 65688,
+    "generations": 34850,
+    "shared": 198434
+  },
+  "balance_file_metadata_allowance": 8192,
+  "charged_with_balance_allowance": {
+    "total": 3959766,
+    "metadata": 197907,
+    "sources": 59428,
+    "verification": 45647,
+    "shared": 198434
+  },
+  "limits": {
+    "total": 25165824,
+    "metadata": 3145728,
+    "sources": 524288,
+    "verification": 262144,
+    "shared": 786432
+  },
+  "real_record_parts": {
+    "states": {"count": 32, "bytes": 1308607, "largest": 53976, "item_limit": 98304},
+    "inputs": {"count": 38, "bytes": 314997, "largest": 9153, "item_limit": 16384},
+    "steps": {"count": 38, "bytes": 104698, "largest": 2826, "item_limit": 16384},
+    "scans": {"count": 16, "bytes": 207704, "largest": 16080, "item_limit": 32767},
+    "nj": {"count": 34, "bytes": 19234, "largest": 573, "item_limit": 1024},
+    "formations": {"count": 30, "bytes": 32844, "largest": 1102, "item_limit": 1536},
+    "generations": {"count": 30, "bytes": 17529, "largest": 601, "item_limit": 1536}
+  },
+  "files": {
+    "qualification/final-balance.json": 1085,
+    "qualification/inventory.json": 13032,
+    "qualification/metrics.json": 52,
+    "qualification/native-evaluation.json": 66582,
+    "qualification/native-record.json": 1670795,
+    "qualification/native-verification.json": 22811,
+    "qualification/preflight.json": 1775,
+    "qualification/preregistration.json": 1381,
+    "qualification/qualification.claim": 93,
+    "qualification/REPORT.md": 7534,
+    "qualification/result.json": 1539,
+    "qualification/stderr.txt": 2479,
+    "qualification/stdout.txt": 0,
+    "prebinding/authorization.json": 278,
+    "prebinding/binding.json": 7350,
+    "prebinding/budget.json": 1775,
+    "real/binding.json": 7350,
+    "real/dispatch.json": 289,
+    "real/evaluation.json": 35602,
+    "real/record.json": 2034144,
+    "real/REPORT.md": 6396,
+    "real/verification.claim": 4,
+    "real/verification.json": 22832,
+    "tools/_experience_comparison.py": 11698,
+    "tools/_experience_verification.py": 10830,
+    "tools/_experience_entry.py": 3100,
+    "tests/test_experience_comparison.py": 10797,
+    "reports/run_experience_comparison_once.py": 9971
+  },
+  "file_prefixes": {
+    "qualification": "reports/experience-comparison-qualification-20260919-01",
+    "prebinding": "reports/experience-comparison-real-20260919-01-binding",
+    "real": "reports/experience-comparison-real-20260919-01"
+  },
+  "temporary_peak": {
+    "measured": false,
+    "prebound_joint_peak_including_temporary_publication_copy": 20619300,
+    "temporary_files_retained": 0
+  },
+  "media_work": {
+    "input_stock_bytes": 83498438,
+    "container_read_bytes": 401434996,
+    "container_read_limit": 1001981256,
+    "read_counters_complete": true,
+    "audio_analyses": 22,
+    "nj_projections": 22,
+    "visual_analyses": 22,
+    "decoder_windows": 20,
+    "decoder_passes": 2,
+    "packets": 716,
+    "decoded_video_frames": 276,
+    "decoded_audio_frames": 432,
+    "decoded_audio_samples": 442368
+  },
+  "violations": [],
+  "main_calls": 1,
+  "technical_verifications": 1,
+  "functional_evaluations": 1,
+  "main_gate": false
+}

@@ -1,0 +1,122 @@
+{
+  "transitions": 32,
+  "targets": 324,
+  "first_break_counts": {
+    "NO_PRIOR_ADMITTED_EXACT_PAIR": 123,
+    "NO_LIVE_MATCH": 198,
+    "NO_PRIOR_FEEDBACK": 2,
+    "NO_ELIGIBLE_SUCCESSOR": 1
+  },
+  "obstacle_counts": {
+    "NO_PRIOR_ADMITTED_EXACT_PAIR": 123,
+    "NO_LIVE_MODAL_SUCCESSOR": 324,
+    "NO_LIVE_ACTUAL_SUCCESSOR": 323,
+    "NO_EARLIER_FULLY_IN_PHASE_HINT_TARGET": 32,
+    "HISTORY_EXISTS_BUT_NO_LIVE_MATCH": 198,
+    "NO_PRIOR_FEEDBACK_FOR_ELIGIBLE_KEYS": 2,
+    "NO_PHASE_FEEDBACK_FOR_ELIGIBLE_KEYS": 2,
+    "NO_STRICT_ESTIMATED_ADVANTAGE": 2,
+    "SHORT_PHASE_FEWER_THAN_TWO_FULLY_IN_PHASE_HINT_TARGETS": 4,
+    "LIVE_MATCH_WITHOUT_ELIGIBLE_SUCCESSOR": 1
+  },
+  "historical_diagnostic_target_counts": {
+    "CANDIDATE_REPLACEMENT": 177,
+    "SUCCESSOR_OUTSIDE_TRACE_OFFSET2": 86,
+    "PAIR_CROSSES_SEGMENT_BOUNDARY": 80,
+    "PRIOR_PAIR_OVERLAPS_CURRENT_HINT_NOT_ADMITTED": 17,
+    "SEGMENT_NOT_COMPLETE_AT_RETRIEVAL": 7
+  },
+  "lifecycle_counts": {
+    "CANDIDATE_REPLACEMENT": 216,
+    "PROMOTION_PRESERVES_ORIGINAL_CHANGES_KEY": 4
+  },
+  "historical_pair_targets": 201,
+  "no_historical_pair_even_overlapping": 110,
+  "only_overlapping_not_admitted_pair_targets": 13,
+  "historical_eligible_original_targets": 135,
+  "replaced_eligible_original_targets": 133,
+  "replaced_modal_original_targets": 108,
+  "historical_modal_triplet_targets": 165,
+  "live_match_targets": 3,
+  "eligible_targets": 2,
+  "warm_targets": 0,
+  "modal_not_realized": 72,
+  "short_transitions": [
+    {
+      "case": "T1-2-1",
+      "phase": 3,
+      "classification": "POTENZIELL_PRUEFBARER_UEBERGANG",
+      "start": 41,
+      "end": 44,
+      "mode": "R",
+      "targets": [
+        43
+      ],
+      "count": 1,
+      "deadline_target": 43,
+      "fewer_than_two_scoring_opportunities": true,
+      "passed": false,
+      "first_break_counts": {
+        "NO_PRIOR_ADMITTED_EXACT_PAIR": 1
+      }
+    },
+    {
+      "case": "T1-2-2",
+      "phase": 3,
+      "classification": "POTENZIELL_PRUEFBARER_UEBERGANG",
+      "start": 41,
+      "end": 44,
+      "mode": "R",
+      "targets": [
+        43
+      ],
+      "count": 1,
+      "deadline_target": 43,
+      "fewer_than_two_scoring_opportunities": true,
+      "passed": false,
+      "first_break_counts": {
+        "NO_LIVE_MATCH": 1
+      }
+    },
+    {
+      "case": "T1-2-3",
+      "phase": 3,
+      "classification": "POTENZIELL_PRUEFBARER_UEBERGANG",
+      "start": 41,
+      "end": 44,
+      "mode": "R",
+      "targets": [
+        43
+      ],
+      "count": 1,
+      "deadline_target": 43,
+      "fewer_than_two_scoring_opportunities": true,
+      "passed": false,
+      "first_break_counts": {
+        "NO_PRIOR_ADMITTED_EXACT_PAIR": 1
+      }
+    },
+    {
+      "case": "T1-2-4",
+      "phase": 3,
+      "classification": "POTENZIELL_PRUEFBARER_UEBERGANG",
+      "start": 41,
+      "end": 44,
+      "mode": "R",
+      "targets": [
+        43
+      ],
+      "count": 1,
+      "deadline_target": 43,
+      "fewer_than_two_scoring_opportunities": true,
+      "passed": false,
+      "first_break_counts": {
+        "NO_LIVE_MATCH": 1
+      }
+    }
+  ],
+  "missing_evidence": [],
+  "no_policy_replays": true,
+  "no_new_sources": true,
+  "scope": "32 potenziell pruefbare Uebergaenge; prior initial phases and I/H transitions excluded from primary denominator"
+}

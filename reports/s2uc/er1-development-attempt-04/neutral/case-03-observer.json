@@ -1,0 +1,1 @@
+{"cost_balance":{"better_targets":[31,35],"equal_targets":[3,5,7,9,11,13,15,17,19,21,23,25,27,29,33,37,39,41,43],"gain":0.5,"harm":0,"max_harm":0.0,"worse_targets":[]},"counts":{"affected_targets":2,"block_events_per_arm":11,"unique_differing_origins":2},"full_provenance_archive":"case-03.gz"}

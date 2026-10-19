@@ -1,0 +1,1 @@
+{"artifacts":{"manifest":{"bytes":24662,"path":"manifest.json","sha256":"517ebb0546cf48a9d4b628b021fc607db4ca450ceaf93c860048a5355250e228"}},"authorization":{"kind":"SYNTHETIC_PROVENANCE_TEST","real_sources":false},"contract_id":"s2uc.resources.separate-code-artifacts.v9","run_id":"SYNTHETIC-PROVENANCE-00000","version":"s2uc.provenance-neutral-test-binding.v1"}

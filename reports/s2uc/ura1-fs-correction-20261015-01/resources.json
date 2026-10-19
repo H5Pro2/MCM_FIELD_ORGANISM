@@ -1,0 +1,90 @@
+{
+  "limits": {
+    "total_seconds": 57600,
+    "worker_seconds": 54000,
+    "completion_reserve": 3600,
+    "job": 536870912,
+    "preparation": 8388608,
+    "source_total": 2097152,
+    "source_case": 32768,
+    "archives": 33554432,
+    "gzip": 524288,
+    "encoded": 4194304,
+    "dictionary": 4194304,
+    "record": 262144,
+    "nodes": 65536,
+    "edges": 262144,
+    "indices": 65536,
+    "collections": 16,
+    "temp": 67108864,
+    "export": 67108864,
+    "administration": 2097152,
+    "closure": 1048576
+  },
+  "probe_total_seconds": 2.1904946000140626,
+  "maximum_job_peak": 28057600,
+  "terminal_records": [
+    {
+      "mode": "admin",
+      "slot_bytes": 16384,
+      "payload_bytes": 1875,
+      "first_diagnostic_bytes": 1386
+    },
+    {
+      "mode": "create",
+      "slot_bytes": 16384,
+      "payload_bytes": 302,
+      "first_diagnostic_bytes": 3
+    },
+    {
+      "mode": "delete",
+      "slot_bytes": 16384,
+      "payload_bytes": 301,
+      "first_diagnostic_bytes": 3
+    },
+    {
+      "mode": "export",
+      "slot_bytes": 16384,
+      "payload_bytes": 1888,
+      "first_diagnostic_bytes": 1396
+    },
+    {
+      "mode": "io",
+      "slot_bytes": 16384,
+      "payload_bytes": 3383,
+      "first_diagnostic_bytes": 2727
+    },
+    {
+      "mode": "legacy",
+      "slot_bytes": 16384,
+      "payload_bytes": 2184,
+      "first_diagnostic_bytes": 1614
+    },
+    {
+      "mode": "permission",
+      "slot_bytes": 16384,
+      "payload_bytes": 3626,
+      "first_diagnostic_bytes": 2944
+    },
+    {
+      "mode": "rename",
+      "slot_bytes": 16384,
+      "payload_bytes": 301,
+      "first_diagnostic_bytes": 3
+    },
+    {
+      "mode": "temp",
+      "slot_bytes": 16384,
+      "payload_bytes": 1872,
+      "first_diagnostic_bytes": 1384
+    },
+    {
+      "mode": "unstable",
+      "slot_bytes": 16384,
+      "payload_bytes": 2112,
+      "first_diagnostic_bytes": 1602
+    }
+  ],
+  "package_bytes_before_binding": 400252,
+  "research_started": false
+}

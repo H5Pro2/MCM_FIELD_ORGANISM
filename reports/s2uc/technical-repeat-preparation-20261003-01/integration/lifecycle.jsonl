@@ -1,0 +1,4 @@
+{"event":"deadline_established","monotonic_ns":864241540803200,"total_deadline_ns":865141540803200,"total_deadline_utc":"2026-10-03T14:38:57.762838+00:00","utc":"2026-10-03T14:23:57.762838+00:00","worker_deadline_ns":865111540803200,"worker_deadline_utc":"2026-10-03T14:38:27.762838+00:00"}
+{"alive":false,"event":"worker_end_confirmed","exitcode":0,"monotonic_ns":864384531520300,"utc":"2026-10-03T14:26:20.755087+00:00"}
+{"event":"closure_admin_started","monotonic_ns":864384532152900,"utc":"2026-10-03T14:26:20.755717+00:00"}
+{"closure_file_sha256":"61ac5f134abd52c5be91b08c737ebdbcccb834f3588c43c080559f07d4835f7d","event":"closure_admin_finished","monotonic_ns":864384771500900,"total_deadline_met":true,"utc":"2026-10-03T14:26:20.995068+00:00"}

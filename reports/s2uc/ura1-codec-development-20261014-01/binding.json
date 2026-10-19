@@ -1,0 +1,12 @@
+{
+  "files": {
+    "docs/S2UC_URA1_ARCHIVFORMAT_V1.md": "9f28daf51b79e6365e286522cd55b048e6d69a79fe62c7fe5c8e78f9580b0c31",
+    "tests/test_s2uc_ura1_archive_codec.py": "92eee5d2978c14b89146d683f3adc2f4eb8f16b3222701c02b4d3b7ee74a71e0",
+    "tools/_s2uc_ura1_archive_decode.py": "36e6025e36dad58c501af0e9c29284d3d314142705106b357e3bf97352bde5d8",
+    "tools/_s2uc_ura1_archive_encode.py": "a6314f8d2e6b8f6722117d8996053581956c4d52f4731e896a7fbfc4bf9422d8",
+    "tools/s2uc_ura1_archive_codec_qualify.py": "bef18a638e8d76be52dda01e53e593d7bd49fb83ba639e3e3031865cd730d643"
+  },
+  "policy_runs": 0,
+  "research_ready": false,
+  "source_closure_sha256": "880dfdf72c8aa0d4cdc02c001a5dd063e1d379d0dccff01c5ec40cc87aa638e5"
+}

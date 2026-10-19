@@ -1,0 +1,22 @@
+Separate XYX-Vergleichsvorbereitung -- NICHT AUSGEFUEHRT
+
+Arbeitsverzeichnis:
+C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace
+
+C:/Python314/python.exe -m tools.s2uc_xyx_prepare run --authorization docs/S2UC_XYX_AUTORISIERUNG_20261003.json
+
+Nur nach separater Einmallauffreigabe: aus der gebundenen Vorlage
+S2UC_XYX_AUTORISIERUNG_VORLAGE_20261003.json die operative Datei erstellen;
+ausschliesslich status auf AUTHORIZED_ONCE aendern. Heute bleibt die
+Vorlage PENDING_SEPARATE_AUTHORIZATION,keine operative Datei wird erstellt.
+
+Genau48 Positionen X*4,Y*4,X*4 mit Y-Fortsetzung9/16,Arme U/M/E/K/P.
+Neue Quelle wird erst nach Bindungs-/Autorisierungs-/Qualifikationspruefung
+und exklusiver Beanspruchung des neuen Ausgabeordners materialisiert.
+Keine CLI-Option fuer andere Rezeptur,Arme,Fristen oder Ausgabeziele.
+Alte Autorisierung und alter Vergleich bleiben verbraucht/unveraendert.
+
+Gemeinsames4MiB-Budget umfasst549025 Byte wiederverwendete Policyqualifikation,
+die neue Vorbereitungsqualifikation sowie Vergleich/Auswertung;
+256KiB Abschlussreserve. Bei Fehler Teilbestand und Abschluss erhalten,
+keine automatische Wiederholung. Bestehende Defaults bleiben deaktiviert.

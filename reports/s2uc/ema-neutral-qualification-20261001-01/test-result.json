@@ -1,0 +1,16 @@
+{
+  "tests": 11,
+  "failures": 0,
+  "errors": 1,
+  "skips": 0,
+  "success": false,
+  "code_unchanged": true,
+  "failure_details": [],
+  "error_details": [
+    [
+      "test_E11_active_memory_identity_and_existing_frame_budget (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E11_active_memory_identity_and_existing_frame_budget)",
+      "Traceback (most recent call last):\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tests\\test_s2uc_paired_error_ema.py\", line 257, in test_E11_active_memory_identity_and_existing_frame_budget\n    try:result=replay.replay(values,PROFILE,count=16)\n               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\_s2uc_paired_error_replay.py\", line 16, in replay\n    a=PairedErrorAdapter(FactorRecencyArm(profile,'owner'),'stream',\n        selection_policy='paired_error_ema_v1' if arm=='E' else 'disabled')\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\_s2uc_paired_error_ema.py\", line 115, in __init__\n    self._selection_policy=selection_policy\n    ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\_s2uc_paired_error_ema.py\", line 101, in __setattr__\n    super().__setattr__(name,value)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\_s2uc_signal_approx_adapter.py\", line 26, in __setattr__\n    super().__setattr__(name,value)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\_s2uc_continuation_adapter.py\", line 34, in __setattr__\n    def __setattr__(self,name,value):\n    \n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\_s2uc_signal_approx_compare.py\", line 19, in trace\n    super().trace(frame,event,arg)\n    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\s2uc_context_prediction_check.py\", line 53, in trace\n    for x in cursor.f_locals.values():visit(x)\n                                      ~~~~~^^^\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\s2uc_context_prediction_check.py\", line 41, in visit\n    if x.pending_prediction is not None:outputs.append(x.pending_prediction)\n       ^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'PairedErrorAdapter' object has no attribute 'pending_prediction'. Did you mean: 'release_prediction'?\n"
+    ]
+  ],
+  "counterprobe_executed": false
+}

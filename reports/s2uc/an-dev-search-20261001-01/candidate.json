@@ -1,0 +1,14 @@
+{
+  "status": "DEV_CANDIDATE_NOT_EVAL_AUTHORIZED",
+  "epsilon": 3.3647428814553505e-05,
+  "epsilon_hex": "0x1.1a414d9cf9967p-15",
+  "tau": 0.03125,
+  "tau_hex": "0x1.0000000000000p-5",
+  "profile_digest": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+  "plan_sha256": "71a356d34c49d84377faa3d3618ad644174154483f22a99689bf52c2694a1dbb",
+  "binding_sha256": "232795808dd51294907d19b041fd1a12a5c4fc273b34a2910b34f7a19661973d",
+  "selection_sha256": "224f84d161f8954ad707b4cb0bce1b646d439aba2d533ffc9f88cad55f0886c2",
+  "selected_result_sha256": "fc5c0282f62fe4ef671d5774b61849f16547092d9c1ed63aac0e73c7b262203c",
+  "evaluation_execution_authorized": false,
+  "requires_review_of_observer_correction": true
+}

@@ -1,0 +1,13 @@
+{
+  "research_materializations": 0,
+  "research_replays": 0,
+  "prequalification": [
+    "Eight focused test groups: initial Q1 failure due to Python 3.14 class metadata; seven others passed.",
+    "Q1 retry exposed test-helper default constructor still pointing at U; fixture binding corrected, production unchanged.",
+    "Q1 targeted retry passed.",
+    "One additional 48-frame paired neutral export-size/resource inspection; not a full-size pass.",
+    "First prepare stopped before code binding because zlib is built-in on this runtime; runtime binding corrected to include Python DLL, exact existing plan reused.",
+    "Bound qualification: eight groups passed before the single full neutral pass."
+  ],
+  "scope": "Only new ULZ1 files and project status documents changed; existing U and sealed reports preserved."
+}

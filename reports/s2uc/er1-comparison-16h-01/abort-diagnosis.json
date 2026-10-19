@@ -1,0 +1,136 @@
+{
+  "kind": "POST_ABORT_READ_ONLY_DIAGNOSIS",
+  "first_failure": "ValueError:ARCHIVE_STOCK",
+  "checks": "Existing closure/source hashes and existing archive fields only; no policy or reference replay, no archive requalification.",
+  "diagnostic": [
+    {
+      "arm": "E",
+      "frame": 224,
+      "observation_end": {
+        "10": 224,
+        "9": 208
+      },
+      "string_key_order": [
+        "10",
+        "9"
+      ],
+      "integer_key_order": [
+        "9",
+        "10"
+      ],
+      "same_mapping_after_json_normalization": true,
+      "canonical_text_differs": true
+    },
+    {
+      "arm": "F",
+      "frame": 344,
+      "observation_end": {
+        "10": 344,
+        "9": 336
+      },
+      "string_key_order": [
+        "10",
+        "9"
+      ],
+      "integer_key_order": [
+        "9",
+        "10"
+      ],
+      "same_mapping_after_json_normalization": true,
+      "canonical_text_differs": true
+    }
+  ],
+  "policy_resources": {
+    "E": {
+      "additional_python_peak": 5526,
+      "boundary_peaks": {
+        "base_arm_bytes": 19487,
+        "original_objects_bytes": 18211,
+        "original_payload_bytes": 5760,
+        "originals": 15,
+        "output_new_payloads": 0,
+        "output_payload_equivalent": 768,
+        "output_slots": 2,
+        "system_reachable_bytes": 22939,
+        "valid_cells": 3
+      },
+      "combined_peak": 0,
+      "combined_upper_bound": 18,
+      "limits_note": "Boundary census is not an intra-operation whole-process peak; additional heap includes operation transients.",
+      "measured_operations": 1536,
+      "original_frames_peak": 0,
+      "original_frames_upper_bound": 16,
+      "output_slots_peak": 2,
+      "packed": 416,
+      "phase_peaks": {
+        "feedback": {
+          "retained": 2518,
+          "total": 3145,
+          "transient": 632
+        },
+        "finish": {
+          "retained": 2221,
+          "total": 2277,
+          "transient": 56
+        },
+        "perception": {
+          "retained": 1612,
+          "total": 5526,
+          "transient": 3914
+        }
+      },
+      "receipt_bytes_peak": 785,
+      "utf8_upper": 1570,
+      "whole_conservative_peak": 26951
+    },
+    "F": {
+      "additional_python_peak": 5527,
+      "boundary_peaks": {
+        "base_arm_bytes": 19487,
+        "original_objects_bytes": 18211,
+        "original_payload_bytes": 5760,
+        "originals": 15,
+        "output_new_payloads": 0,
+        "output_payload_equivalent": 768,
+        "output_slots": 2,
+        "system_reachable_bytes": 22939,
+        "valid_cells": 3
+      },
+      "combined_peak": 0,
+      "combined_upper_bound": 18,
+      "limits_note": "Boundary census is not an intra-operation whole-process peak; additional heap includes operation transients.",
+      "measured_operations": 1536,
+      "original_frames_peak": 0,
+      "original_frames_upper_bound": 16,
+      "output_slots_peak": 2,
+      "packed": 416,
+      "phase_peaks": {
+        "feedback": {
+          "retained": 2517,
+          "total": 3149,
+          "transient": 632
+        },
+        "finish": {
+          "retained": 2221,
+          "total": 2277,
+          "transient": 56
+        },
+        "perception": {
+          "retained": 1612,
+          "total": 5527,
+          "transient": 3915
+        }
+      },
+      "receipt_bytes_peak": 784,
+      "utf8_upper": 1568,
+      "whole_conservative_peak": 26946
+    }
+  },
+  "archive_sizes": {
+    "gzip": 180449,
+    "encoded": 1054538
+  },
+  "original_closure_hash": "4613e0eb96ef3ca1d0ff74fa243993c177103fd26bbd8fa5da6bd680301904bc",
+  "source_manifest_hash": "e932f00681189d8b1e268b9b9a2ef1f8e56c760e26fe2c3364685f5427a154e3",
+  "qualification_of_case": false
+}

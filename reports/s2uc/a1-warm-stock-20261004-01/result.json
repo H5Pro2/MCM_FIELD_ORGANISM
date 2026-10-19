@@ -1,0 +1,210 @@
+{
+  "status": "PASS",
+  "initial_cells": 6,
+  "original_identity": true,
+  "measurements": {
+    "heap": {
+      "resources": {
+        "additional_python_peak": 5590,
+        "original_frames_peak": 0,
+        "output_slots_peak": 0,
+        "combined_peak": 0,
+        "original_frames_upper_bound": 16,
+        "combined_upper_bound": 18,
+        "packed": 416,
+        "receipt_bytes_peak": 765,
+        "utf8_upper": 1530,
+        "calls": [
+          {
+            "operation": "receipt",
+            "retained": 1500,
+            "transient": 4090,
+            "total": 5590
+          }
+        ]
+      },
+      "receipt": {
+        "status": "RETAINED_ORIGINAL_MATCH",
+        "stream": "stream",
+        "owner": "neutral-a1",
+        "profile": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "input_indices": [
+          23,
+          24
+        ],
+        "source_intervals": [
+          [
+            0,
+            4800
+          ],
+          [
+            4800,
+            9600
+          ]
+        ],
+        "read_revision": 1,
+        "decision": "SELECTED_BY_ERROR",
+        "choice": 1,
+        "matches": [
+          {
+            "role": "retained",
+            "generation": 3,
+            "formation": "p5",
+            "ordinals": [
+              17,
+              18,
+              19,
+              20
+            ],
+            "offset": 0,
+            "factors": [
+              1.0
+            ]
+          }
+        ],
+        "hypotheses": [
+          {
+            "eligible": true,
+            "ticket": 0,
+            "ec": 0.001,
+            "ep": 0.002,
+            "delta": -0.001,
+            "evaluation": "BETTER_THAN_P"
+          }
+        ],
+        "retained_semantics": "ADMITTED_NOT_FULL_REPEAT_PROOF",
+        "a1_admission": {
+          "reason": "PARTIAL_RETRIEVAL_ADMISSION",
+          "full_repeat": false,
+          "ordinals": [
+            17,
+            18,
+            19,
+            20
+          ],
+          "offset": 0,
+          "hints": [
+            23,
+            24
+          ],
+          "old_key": [
+            1,
+            3
+          ],
+          "new_key": [
+            0,
+            3
+          ],
+          "victim": {
+            "generation": 1,
+            "ordinals": [
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        }
+      }
+    },
+    "trace": {
+      "resources": {
+        "additional_python_peak": 0,
+        "original_frames_peak": 16,
+        "output_slots_peak": 2,
+        "combined_peak": 16,
+        "original_frames_upper_bound": 0,
+        "combined_upper_bound": 0,
+        "packed": 416,
+        "receipt_bytes_peak": 765,
+        "utf8_upper": 1530,
+        "calls": []
+      },
+      "receipt": {
+        "status": "RETAINED_ORIGINAL_MATCH",
+        "stream": "stream",
+        "owner": "neutral-a1",
+        "profile": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "input_indices": [
+          23,
+          24
+        ],
+        "source_intervals": [
+          [
+            0,
+            4800
+          ],
+          [
+            4800,
+            9600
+          ]
+        ],
+        "read_revision": 1,
+        "decision": "SELECTED_BY_ERROR",
+        "choice": 1,
+        "matches": [
+          {
+            "role": "retained",
+            "generation": 3,
+            "formation": "p5",
+            "ordinals": [
+              17,
+              18,
+              19,
+              20
+            ],
+            "offset": 0,
+            "factors": [
+              1.0
+            ]
+          }
+        ],
+        "hypotheses": [
+          {
+            "eligible": true,
+            "ticket": 0,
+            "ec": 0.001,
+            "ep": 0.002,
+            "delta": -0.001,
+            "evaluation": "BETTER_THAN_P"
+          }
+        ],
+        "retained_semantics": "ADMITTED_NOT_FULL_REPEAT_PROOF",
+        "a1_admission": {
+          "reason": "PARTIAL_RETRIEVAL_ADMISSION",
+          "full_repeat": false,
+          "ordinals": [
+            17,
+            18,
+            19,
+            20
+          ],
+          "offset": 0,
+          "hints": [
+            23,
+            24
+          ],
+          "old_key": [
+            1,
+            3
+          ],
+          "new_key": [
+            0,
+            3
+          ],
+          "victim": {
+            "generation": 1,
+            "ordinals": [
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cleanup": true,
+  "neutral_only": true
+}

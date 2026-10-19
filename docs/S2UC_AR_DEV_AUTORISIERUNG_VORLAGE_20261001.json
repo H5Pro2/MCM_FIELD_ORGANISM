@@ -1,0 +1,8 @@
+{
+  "status": "PENDING",
+  "action": "PRODUCE_AR_PARTITION",
+  "partition": "AR-DEV",
+  "binding_sha256": "87306a9ef5e67c47fd99d0643a38513dae40ad7f684ccbae898fff7801f9257e",
+  "plan_sha256": "40410b187f813cb546e44cca01ac353f85bdc70d4b29e5b0fc057ac3f6feb5fd",
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]"
+}

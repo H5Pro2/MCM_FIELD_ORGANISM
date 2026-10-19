@@ -1,0 +1,8 @@
+test_02_frozen_relearning_repeated_events (experiments.fw1.test_contract.Contract.test_02_frozen_relearning_repeated_events) ... ok
+test_03_partial_publication_fails_closed (experiments.fw1.test_contract.Contract.test_03_partial_publication_fails_closed) ... ok
+test_04_duplicate_input_rejected (experiments.fw1.test_contract.Contract.test_04_duplicate_input_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.019s
+
+OK

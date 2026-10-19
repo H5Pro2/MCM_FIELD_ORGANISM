@@ -1,0 +1,520 @@
+{
+  "status": "PASS",
+  "tests": 12,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "test_ids": [
+    "tests.test_s2uc_signal_approx.SignalApproxTests.test_A10_resources_receipts_and_cleanup",
+    "tests.test_s2uc_signal_approx.SignalApproxTests.test_A11_observer_new_wrong_lost_exact_and_harm",
+    "tests.test_s2uc_signal_approx.SignalApproxTests.test_A12_maximum_competitors_and_invalid_input_cleanup",
+    "tests.test_s2uc_signal_approx.SignalApproxTests.test_A1_default_and_parameters_locked",
+    "tests.test_s2uc_signal_approx.SignalApproxTests.test_A2_default_legacy_exact_regression",
+    "tests.test_s2uc_signal_approx.SignalApproxTests.test_A3_epsilon_strict_boundaries_and_null",
+    "tests.test_s2uc_signal_approx.SignalApproxTests.test_A4_tau_inclusive_and_quality_role",
+    "tests.test_s2uc_signal_approx.SignalApproxTests.test_A5_competition_and_exact_priority",
+    "tests.test_s2uc_signal_approx.SignalApproxTests.test_A6_numeric_failure_invalidates_whole_fallback",
+    "tests.test_s2uc_signal_approx.SignalApproxTests.test_A7_missing_successor_and_candidate",
+    "tests.test_s2uc_signal_approx.SignalApproxTests.test_A8_unchanged_confirmation_refresh",
+    "tests.test_s2uc_signal_approx.SignalApproxTests.test_A9_causal_equal_prefix_and_gate"
+  ],
+  "facts": {
+    "resources": {
+      "frame_peak": 8,
+      "output_slots_peak": 2,
+      "combined_peak": 9,
+      "output_python_bytes_peak": 3824,
+      "samples": 6857,
+      "receipt_bytes_peak": 535,
+      "scalar_pair_comparisons": 3,
+      "temporary_numeric_vectors_peak": 0,
+      "match_metadata_peak": 1,
+      "receipt_transient_utf8_bytes_peak": 948,
+      "receipt_python_bytes_peak": 1030
+    },
+    "observer": {
+      "comparison": {
+        "policies": {
+          "legacy": {
+            "origin_and_prediction": {
+              "total": 4,
+              "origin_counts": {
+                "ABSTAIN": 3,
+                "CORRECT": 1
+              },
+              "positive_origin_counts": {
+                "ABSTAIN": 2,
+                "CORRECT": 1
+              },
+              "negative_origin_counts": {
+                "ABSTAIN": 1
+              },
+              "assignment_coverage": 0.25,
+              "context_coverage": 0.25,
+              "positive_correct_fraction": 0.3333333333333333,
+              "negative_wrong_fraction": 0.0,
+              "correct_rejections": 1,
+              "roles": {
+                "retained": 1
+              },
+              "prediction_abstentions": {
+                "ABSTAIN_NO_CONTEXT": 3
+              },
+              "paired": {
+                "count": 1,
+                "persistence_mae": 4.0,
+                "context_mae": 0.0,
+                "delta": 4.0,
+                "better": 1,
+                "equal": 0,
+                "worse": 0
+              },
+              "full_coverage": {
+                "count": 4,
+                "persistence_mae": 2.984375,
+                "observer_hybrid_mae": 1.984375,
+                "delta": 1.0
+              },
+              "harm_rows": []
+            },
+            "total": 4,
+            "context_covered": 1,
+            "assignment_covered": 1,
+            "rows": [
+              {
+                "case_id": "positive",
+                "target": 11,
+                "positive": true,
+                "origin_category": "ABSTAIN",
+                "assigned_root": null,
+                "true_root": "neutral/A",
+                "role": null,
+                "assignment_covered": false,
+                "correct_rejection": false,
+                "prediction_status": "ABSTAIN_NO_CONTEXT",
+                "context_covered": false,
+                "persistence_mae": 3.96875,
+                "context_mae": null,
+                "paired_delta": null,
+                "observer_hybrid_mae": 3.96875,
+                "full_delta": 0.0
+              },
+              {
+                "case_id": "false",
+                "target": 11,
+                "positive": false,
+                "origin_category": "ABSTAIN",
+                "assigned_root": null,
+                "true_root": "neutral/B",
+                "role": null,
+                "assignment_covered": false,
+                "correct_rejection": true,
+                "prediction_status": "ABSTAIN_NO_CONTEXT",
+                "context_covered": false,
+                "persistence_mae": 3.96875,
+                "context_mae": null,
+                "paired_delta": null,
+                "observer_hybrid_mae": 3.96875,
+                "full_delta": 0.0
+              },
+              {
+                "case_id": "loss",
+                "target": 11,
+                "positive": true,
+                "origin_category": "CORRECT",
+                "assigned_root": "neutral/A",
+                "true_root": "neutral/A",
+                "role": "retained",
+                "assignment_covered": true,
+                "correct_rejection": false,
+                "prediction_status": "PREDICTED_RETAINED",
+                "context_covered": true,
+                "persistence_mae": 4.0,
+                "context_mae": 0.0,
+                "paired_delta": 4.0,
+                "observer_hybrid_mae": 0.0,
+                "full_delta": 4.0
+              },
+              {
+                "case_id": "harm",
+                "target": 11,
+                "positive": true,
+                "origin_category": "ABSTAIN",
+                "assigned_root": null,
+                "true_root": "neutral/A",
+                "role": null,
+                "assignment_covered": false,
+                "correct_rejection": false,
+                "prediction_status": "ABSTAIN_NO_CONTEXT",
+                "context_covered": false,
+                "persistence_mae": 0.0,
+                "context_mae": null,
+                "paired_delta": null,
+                "observer_hybrid_mae": 0.0,
+                "full_delta": 0.0
+              }
+            ]
+          },
+          "scaled": {
+            "origin_and_prediction": {
+              "total": 4,
+              "origin_counts": {
+                "CORRECT": 2,
+                "WRONG": 1,
+                "ABSTAIN": 1
+              },
+              "positive_origin_counts": {
+                "CORRECT": 2,
+                "ABSTAIN": 1
+              },
+              "negative_origin_counts": {
+                "WRONG": 1
+              },
+              "assignment_coverage": 0.75,
+              "context_coverage": 0.75,
+              "positive_correct_fraction": 0.6666666666666666,
+              "negative_wrong_fraction": 1.0,
+              "correct_rejections": 0,
+              "roles": {
+                "retained": 3
+              },
+              "prediction_abstentions": {
+                "ABSTAIN_NO_CONTEXT": 1
+              },
+              "paired": {
+                "count": 3,
+                "persistence_mae": 2.6458333333333335,
+                "context_mae": 1.3229166666666667,
+                "delta": 1.3229166666666667,
+                "better": 2,
+                "equal": 0,
+                "worse": 1
+              },
+              "full_coverage": {
+                "count": 4,
+                "persistence_mae": 2.984375,
+                "observer_hybrid_mae": 1.9921875,
+                "delta": 0.9921875
+              },
+              "harm_rows": [
+                {
+                  "case_id": "harm",
+                  "target": 11,
+                  "positive": true,
+                  "origin_category": "CORRECT",
+                  "assigned_root": "neutral/A",
+                  "true_root": "neutral/A",
+                  "role": "retained",
+                  "assignment_covered": true,
+                  "correct_rejection": false,
+                  "prediction_status": "PREDICTED_RETAINED",
+                  "context_covered": true,
+                  "persistence_mae": 0.0,
+                  "context_mae": 3.96875,
+                  "paired_delta": -3.96875,
+                  "observer_hybrid_mae": 3.96875,
+                  "full_delta": -3.96875
+                }
+              ]
+            },
+            "total": 4,
+            "context_covered": 3,
+            "assignment_covered": 3,
+            "rows": [
+              {
+                "case_id": "positive",
+                "target": 11,
+                "positive": true,
+                "origin_category": "CORRECT",
+                "assigned_root": "neutral/A",
+                "true_root": "neutral/A",
+                "role": "retained",
+                "assignment_covered": true,
+                "correct_rejection": false,
+                "prediction_status": "PREDICTED_RETAINED",
+                "context_covered": true,
+                "persistence_mae": 3.96875,
+                "context_mae": 0.0,
+                "paired_delta": 3.96875,
+                "observer_hybrid_mae": 0.0,
+                "full_delta": 3.96875
+              },
+              {
+                "case_id": "false",
+                "target": 11,
+                "positive": false,
+                "origin_category": "WRONG",
+                "assigned_root": "neutral/A",
+                "true_root": "neutral/B",
+                "role": "retained",
+                "assignment_covered": true,
+                "correct_rejection": false,
+                "prediction_status": "PREDICTED_RETAINED",
+                "context_covered": true,
+                "persistence_mae": 3.96875,
+                "context_mae": 0.0,
+                "paired_delta": 3.96875,
+                "observer_hybrid_mae": 0.0,
+                "full_delta": 3.96875
+              },
+              {
+                "case_id": "loss",
+                "target": 11,
+                "positive": true,
+                "origin_category": "ABSTAIN",
+                "assigned_root": null,
+                "true_root": "neutral/A",
+                "role": null,
+                "assignment_covered": false,
+                "correct_rejection": false,
+                "prediction_status": "ABSTAIN_NO_CONTEXT",
+                "context_covered": false,
+                "persistence_mae": 4.0,
+                "context_mae": null,
+                "paired_delta": null,
+                "observer_hybrid_mae": 4.0,
+                "full_delta": 0.0
+              },
+              {
+                "case_id": "harm",
+                "target": 11,
+                "positive": true,
+                "origin_category": "CORRECT",
+                "assigned_root": "neutral/A",
+                "true_root": "neutral/A",
+                "role": "retained",
+                "assignment_covered": true,
+                "correct_rejection": false,
+                "prediction_status": "PREDICTED_RETAINED",
+                "context_covered": true,
+                "persistence_mae": 0.0,
+                "context_mae": 3.96875,
+                "paired_delta": -3.96875,
+                "observer_hybrid_mae": 3.96875,
+                "full_delta": -3.96875
+              }
+            ]
+          }
+        },
+        "paired": {
+          "scaled_vs_legacy": {
+            "rows": [],
+            "count": 0,
+            "left_mae": null,
+            "right_mae": null,
+            "delta": null,
+            "better": 0,
+            "equal": 0,
+            "worse": 0,
+            "harms": []
+          },
+          "scaled_vs_persistence": {
+            "rows": [
+              {
+                "case_id": "positive",
+                "target": 11,
+                "left": 0.0,
+                "right": 3.96875,
+                "delta": 3.96875
+              },
+              {
+                "case_id": "false",
+                "target": 11,
+                "left": 0.0,
+                "right": 3.96875,
+                "delta": 3.96875
+              },
+              {
+                "case_id": "harm",
+                "target": 11,
+                "left": 3.96875,
+                "right": 0.0,
+                "delta": -3.96875
+              }
+            ],
+            "count": 3,
+            "left_mae": 1.3229166666666667,
+            "right_mae": 2.6458333333333335,
+            "delta": 1.3229166666666667,
+            "better": 2,
+            "equal": 0,
+            "worse": 1,
+            "harms": [
+              {
+                "case_id": "harm",
+                "target": 11,
+                "left": 3.96875,
+                "right": 0.0,
+                "delta": -3.96875
+              }
+            ]
+          },
+          "legacy_vs_persistence": {
+            "rows": [
+              {
+                "case_id": "loss",
+                "target": 11,
+                "left": 0.0,
+                "right": 4.0,
+                "delta": 4.0
+              }
+            ],
+            "count": 1,
+            "left_mae": 0.0,
+            "right_mae": 4.0,
+            "delta": 4.0,
+            "better": 1,
+            "equal": 0,
+            "worse": 0,
+            "harms": []
+          }
+        },
+        "full_rows": [
+          {
+            "case_id": "positive",
+            "target": 11,
+            "persistence": 3.96875,
+            "legacy": 3.96875,
+            "scaled": 0.0,
+            "scaled_vs_persistence": 3.96875,
+            "scaled_vs_legacy": 3.96875
+          },
+          {
+            "case_id": "false",
+            "target": 11,
+            "persistence": 3.96875,
+            "legacy": 3.96875,
+            "scaled": 0.0,
+            "scaled_vs_persistence": 3.96875,
+            "scaled_vs_legacy": 3.96875
+          },
+          {
+            "case_id": "loss",
+            "target": 11,
+            "persistence": 4.0,
+            "legacy": 0.0,
+            "scaled": 4.0,
+            "scaled_vs_persistence": 0.0,
+            "scaled_vs_legacy": -4.0
+          },
+          {
+            "case_id": "harm",
+            "target": 11,
+            "persistence": 0.0,
+            "legacy": 0.0,
+            "scaled": 3.96875,
+            "scaled_vs_persistence": -3.96875,
+            "scaled_vs_legacy": -3.96875
+          }
+        ],
+        "full_means": {
+          "persistence": 2.984375,
+          "legacy": 1.984375,
+          "scaled": 1.9921875,
+          "scaled_vs_persistence": 0.9921875,
+          "scaled_vs_legacy": -0.0078125
+        },
+        "harms_against_persistence": [
+          {
+            "case_id": "harm",
+            "target": 11,
+            "persistence": 0.0,
+            "legacy": 0.0,
+            "scaled": 3.96875,
+            "scaled_vs_persistence": -3.96875,
+            "scaled_vs_legacy": -3.96875
+          }
+        ],
+        "harms_against_legacy": [
+          {
+            "case_id": "loss",
+            "target": 11,
+            "persistence": 4.0,
+            "legacy": 0.0,
+            "scaled": 4.0,
+            "scaled_vs_persistence": 0.0,
+            "scaled_vs_legacy": -4.0
+          },
+          {
+            "case_id": "harm",
+            "target": 11,
+            "persistence": 0.0,
+            "legacy": 0.0,
+            "scaled": 3.96875,
+            "scaled_vs_persistence": -3.96875,
+            "scaled_vs_legacy": -3.96875
+          }
+        ],
+        "learning_targets": {
+          "positive": [
+            3,
+            5,
+            7,
+            9
+          ],
+          "false": [
+            3,
+            5,
+            7,
+            9
+          ],
+          "loss": [
+            3,
+            5,
+            7,
+            9
+          ],
+          "harm": [
+            3,
+            5,
+            7,
+            9
+          ]
+        }
+      },
+      "schema_mapping": {
+        "legacy": "exact retrieval with legacy_v1 continuation",
+        "scaled": "signal_approx retrieval with legacy_v1 continuation; NO factor_scaled_v1"
+      },
+      "additional_wrong": [
+        "false"
+      ],
+      "lost_exact_assignments": [
+        "loss"
+      ],
+      "signal_lost_exact_assignments": [
+        "loss"
+      ],
+      "lost_correct_exact": [
+        "loss"
+      ],
+      "admissible_no_new_wrong": false
+    },
+    "maximum_competition_resources": {
+      "frame_peak": 15,
+      "output_slots_peak": 1,
+      "combined_peak": 15,
+      "output_python_bytes_peak": 3561,
+      "samples": 22764,
+      "receipt_bytes_peak": 1856,
+      "scalar_pair_comparisons": 27,
+      "temporary_numeric_vectors_peak": 0,
+      "match_metadata_peak": 9,
+      "receipt_transient_utf8_bytes_peak": 3590,
+      "receipt_python_bytes_peak": 3672
+    },
+    "default_exact_histories": 4
+  },
+  "code_bindings": {
+    "tools/_s2uc_signal_approx_adapter.py": "78a2e4fc781f9188b7fdd4aaf7268664160e5b2ae803b27e6df6a18f51f7a882",
+    "tools/_s2uc_signal_approx_compare.py": "c6507aae329aa0151d6488039064e1dce712481a0a65b48192b6466e4300fe0f",
+    "tests/test_s2uc_signal_approx.py": "03b90d573dcb261e448b0e2e62536f26cfd13097e319ea1b0419fae25649dfbf",
+    "tools/_s2uc_factor_hint.py": "f1fdd62043d7939cd7b144eae797f84c94ff3196979d1028798d2af546220e19",
+    "tools/_s2uc_factor_recency.py": "0eba81b522edbb628507d372091829e657ce5ee1bb20f44a0f78e34ef80c06e1",
+    "tools/_s2uc_pair_context_adapter.py": "791b9a60b18426626d5e9761dcb122733ca5f73853a7b6201725fc332d9f3ab1",
+    "tools/_s2uc_continuation_adapter.py": "00173b0388d54db8eb5d057e47ed76c7d93538bc731712cd1c1ef8096f0df07e",
+    "tools/_s2uc_perception_recency.py": "816d0eebfe1815764ddcbcd4b47ccb57584005ca973bde74be7eb2d7ae2ae86c"
+  },
+  "parameters": "Neutral hand-set epsilon/tau only; no research calibration or search",
+  "families_unproduced": true
+}

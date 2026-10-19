@@ -1,0 +1,373 @@
+RW1 – Forschungsprüfvertrag: exakte historische Rasterwiedererkennung
+Stand 2026-10-19 | Dokumentation, keine Laufnummer und keine Startfreigabe
+Eigener Auftrag: 48dfa109-2aec-51dc-91e1-271f3198a127
+Fortsetzung des Vertragsauftrags 0dd00043-0b24-48e4-acca-91f3b663771d
+Projektleiterbezug: 0c3420e1-c5e4-472e-b4f0-bf15ffda7838
+Projekt: MCM_FIELD_ORGANISM
+
+1. FRAGE, STATUS UND VERBINDLICHE GRUNDLAGE
+Ermöglicht die zusätzliche historische Rasterbank korrekte Wiedererkennung
+samt zeitlich passender Fortsetzung bei verschobenen bekannten Verläufen,
+ohne zusätzliche Fremdzuordnungen?
+
+Grundlage ist die abgenommene technische Lieferung:
+reports/s2uc/temporal-alignment-development-20261019-01/
+qualification-6d248902/delivery-binding.json
+SHA256 cccadae5a649066941246dbd6cbe2179c4d8c36d7db28109cbd83042c57285c8.
+Der dortige Neutralversuch ist abgeschlossen; seine Berechtigung ist verbraucht.
+Der frühere historische Verbrauch bleibt UNPROVEN. Beides wird nicht umgedeutet.
+Gemessene 63 Slots und ein Positionsmatch sind keine Messung der künstlich
+geprüften Maxima 128 Slots und 63 Positionsmatches. Forschungsnutzen ist offen.
+
+Dieser Auftrag erstellt ausschließlich diesen Vertrag, die drei Standseinordnungen
+und Dokumentationsbelege. Keine PCM-Erzeugung, Rezeptor-/NJ-Aufrufe, neuen Tests,
+Policy-Aufnahmen, Neutralwiederholungen oder Forschungsausführung. Nachfolgende
+Abschnitte beschreiben einen später separat zu beauftragenden Ablauf. Die
+Vertragsabnahme allein verbraucht und erteilt keine Versuchserlaubnis.
+
+2. FESTE ANORDNUNG UND GEGENPROGNOSE
+Genau zwei neue synthetische Audioquellen A und B. Genau sechs Fälle in Reihenfolge
+A0, A480, A2400, B0, B480, B2400; je Fall zuerst N, danach T, vollständig frisch.
+Je Arm Lernfolge A,A (je vier Frames), danach ein Querytriplett aus A oder B.
+Jeder Arm hat elf Aufnahmen und fünf Prognosen auf Frame 3,5,7,9,11.
+Hauptziel ist ausschließlich Frame 11. Frames 3,5,7 sind Lernziele; Frame 9 ist
+Übergangsziel. Diese Nebenbefunde werden vollständig getrennt berichtet.
+
+N: qualifizierter Grundabruf signal_approx_v1, legacy_v1 unverändert.
+T: derselbe Abruf plus qualifizierter exakter historischer Rasterzusatz.
+P: ausschließlich observerseitige Persistenz des zweiten aktuellen Hinweises;
+kein dritter produktiver Arm. Bei Enthaltung verwendet N beziehungsweise T P.
+Zwölf isolierte Bestandsreferenzen prüfen die unveränderte Kernfortschreibung.
+
+Hypothese: T erkennt in A480 und A2400 zusätzlich die korrekte ursprüngliche
+Spur am richtigen Rasteranfang und liefert deren passenden Nachfolger; N tut
+dies dort nicht. B liefert keine zusätzliche falsche Herkunftszuordnung. Das
+gleichgewichtete Hauptzielmittel von T sinkt strikt gegenüber N und P.
+Dies ist eine prüfbare Erwartung, kein vorweggenommenes Ergebnis. Insbesondere
+kann eine schon erfolgreiche N-Entscheidung die Zusatznutzenhypothese widerlegen.
+
+3. NEUES QUELLENREZEPT – VOR MATERIALISIERUNG FESTGELEGT
+Fs=48000 Samples/s, mono, Nsamples=19200 je Quelle, vier Abschnitte zu4800.
+Neue Frequenzen in Hz, unveränderliche Reihenfolge:
+  A = (430, 830, 1470, 1930)
+  B = (450, 850, 2330, 2710)
+Die ersten beiden B-Frequenzen liegen jeweils20Hz oberhalb von A; spätere
+Abschnitte unterscheiden sich stärker. Dies begründet einen festen Gegenfall,
+garantiert aber weder Ähnlichkeit im Rezeptorraum noch eine bestimmte Entscheidung.
+Keine Messung dieser neuen Quellen liegt dieser Wahl zugrunde.
+
+Für jeden ganzzahligen Sampleindex n=0,...,19199 und jeweiliges Frequenz-
+Vierertupel f gilt exakt folgende Auswertungsfolge in Python:
+  k,t = divmod(n,4800)
+  c = math.fsum(f[j]*0.1 for j in range(k)) + (f[k]*t)/48000
+  u = math.sin((2.0*math.pi)*c)
+  v = math.sin(((2.0*math.pi)*(1.5*c))+math.pi/4.0)
+  x64 = (u+v)/16.0
+  x32 = struct.unpack('<f',struct.pack('<f',x64))[0]
+Ausgabe sind in dieser Reihenfolge19200 struct.pack('<f',x32)-Werte, insgesamt
+76800 Bytes pro Quelle, IEEE754 binary32 little-endian ohne Header.
+Zwischenrechnungen binary64 in der angegebenen Klammerung, keine FMA-Umschreibung,
+kein Vektorisieren der Sinusauswertung, keine Zufallsquelle, keine Normalisierung,
+kein Clipping, kein Fade, kein Resampling, kein Padding. Betrag höchstens1/8.
+Die Phasen werden über Abschnittsgrenzen nach obiger Formel fortgesetzt.
+math.pi/math.sin/math.fsum stammen aus der vor Start gebundenen Python314-Runtime;
+Plattform-/Bibliotheksabweichungen werden nicht als garantierte Bitidentität
+ausgegeben. Runtime und Binärabhängigkeiten werden deshalb vorher gehasht.
+
+Die Konstruktion folgt einer bekannten festen Formel; die Frequenzen und späteren
+Quellbytes sind neu. Kein Laden oder Kopieren der AS480- oder Neutralquellen.
+Keine Vorschau, Rezeptor-Vorauswertung, Kandidatensuche oder Materialauswahl nach
+Abrufresultaten. Nach Materialisierung keine Frequenz-, Phasen-, Amplituden-,
+Versatz-, Schwellen- oder Falländerung. Auch ein ungünstiges Ergebnis bleibt stehen.
+Beide Quellen werden genau einmal im späteren autorisierten Ablauf erzeugt.
+Ihre Digests entstehen dabei als Integritätsbelege, nicht als heutige Messung.
+
+4. QUELLINTERVALLE, LOGISCHE ZEIT UND ZUGRIFF
+Alle Intervalle halb offen [Beginn,Ende), Angaben in Samples.
+Frame i hat im Arm die logische Zeit [4800*(i-1),4800*i).
+Frames1..4 lesen A[0,4800), A[4800,9600), A[9600,14400), A[14400,19200).
+Frames5..8 wiederholen exakt diese vier A-Intervalle; keine Neusynthese.
+Queryframes9,10,11 haben folgende Quellintervalle für X=A beziehungsweise B:
+
+Fall      Frame9            Frame10            Frame11 (Hauptziel)
+A0/B0     X[0,4800)        X[4800,9600)       X[9600,14400)
+A480/B480 X[480,5280)      X[5280,10080)      X[10080,14880)
+A2400     A[2400,7200)     A[7200,12000)      A[12000,16800)
+B2400     B[2400,7200)     B[7200,12000)      B[12000,16800)
+
+Das Hauptziel beginnt logisch bei T=48000 und endet bei52800. Es sind immer
+4800 vollständig zukünftige Samples, nicht ein um den Versatz verkürztes Ziel.
+Die Hinweise liegen logisch [38400,43200) und [43200,48000). Dieselben Hinweise,
+Zielintervalle, Aufnahmegelegenheiten und Blockgrenzen gelten für N und T.
+Quellzeit und logische Replayzeit sind im Observermanifest getrennte Felder.
+
+Der Material-/Auswertungsbereich kennt A/B, Frequenzen und Versatz und archiviert
+die beiden kompletten Quelldateien. Der produktive Adapter erhält nur das aktuell
+zugelassene Fenster, seinen48er-Vektor und technische Besitzer-/Stream-/Zeitdaten.
+Keine Fallnamen, Labels, Versätze, Frequenzlisten, Dateipfade, Zielwerte oder
+generatorkundigen Auswahlhilfen gelangen in Auswahl, Lernen oder Bankanker.
+Der privilegierte Observer darf Material vorrechnen; das ist keine produktive
+Verfügbarkeit. Sein Reader muss vor Lesen jedes Zielvektors UND Zielrohfensters
+eine bereits eingefrorene Prognose und ihren Vorzustand verlangen. Das zugrunde
+liegende in-process Gate ist eine geprüfte Zugriffskonvention, keine behauptete
+Betriebssystem-Isolation zwischen Observer und Policy.
+
+Der aktuelle Zielwert darf erst nach dem Freeze zur Auswertung und danach zur
+regulären Aufnahme gelangen. Zielkenntnis darf niemals zur Auswahl eines Matches
+oder zur Änderung der Prognose dienen. Fehlende Freeze-/Zugriffsbelege sind ein
+technischer Fehler. Nachträgliche Behauptung von Kausalität genügt nicht.
+
+5. REPRÄSENTATION, HISTORISCHE BANK UND ENTSCHEIDUNG
+Unverändertes qualifiziertes LogSpectralReceptor-Profil:48000Hz, Fenster4800,
+Hop480,48 Bänder50..18000Hz, bestehende Hann-/FFT-/Reduktionsimplementierung.
+NJ halbiert den Rezeptorausgang genau einmal; kein zusätzlicher Filter.
+epsilon=float.fromhex('0x1.1a414d9cf9967p-15'), tau=1/32 bleiben unverändert.
+Runtime, Rezeptor, NJ, Adapter und unabhängige Prüfer werden vor Start gebunden.
+
+Für jeden vollständig beobachteten Vierframe-Block mit logischem Beginn b:
+  V_k = Projektion [b+k*480,b+k*480+4800), k=0,...,30.
+Die vier Originale V_0,V_10,V_20,V_30 werden geteilt, nicht erneut projiziert.
+27 weitere historische Fenster entstehen seriell nach vollständigem Blockende.
+In den zwei A-Lernblöcken entspricht jedes der A-Quelllage[k*480,k*480+4800).
+Bankbau und Quellenbindung erfolgen unabhängig von späteren Treffern.
+Die fällige Prognose wird vor Bankaufnahme gegen den vorherigen Bestand eingefroren.
+Promotion erhält Originalbank und Originalordinale; Wiederholung ersetzt diese
+nicht. Ersetzung/Eviction/Cleanup entfernen die zugehörige Bank. Vier grobe
+bestätigte Frames beweisen keine zusätzliche Bestätigung aller inneren Fenster.
+
+Beide Arme führen denselben begrenzten Bankbau aus; N verwendet nur den
+unveränderten Grundabruf. T nutzt die zusätzlichen Rasterwerte nur dann, wenn
+der Grundabruf ABSTAIN_NO_APPROX_CONTEXT liefert. Vorherige positive, mehrdeutige
+oder anders gesperrte Entscheidungen werden nicht überschrieben.
+Prüfung aller Paare(V_k,V_(k+10)), k=0..20, aller zulässigen ursprünglichen
+Spuren und Faktoren0,5/1/2 mit qualifizierter exakter ldexp-Gleichheit der96
+Koordinaten. Signalgates bleiben aktiv. Kein Näherungsscore für neue Rasterlagen.
+Mehrere Spuren: ABSTAIN_TRACE_AMBIGUOUS. Mehrere Positionen einer Spur:
+ABSTAIN_ALIGNMENT_AMBIGUOUS, auch bei gleichen Nachfolgern. Nur eine Position
+einer Spur mit einzigem Faktor1 und k<=10 darf V_(k+20) liefern. k>10 hat keinen
+vollständigen Nachfolger. Andere Faktoren liefern keine neue Fortsetzung.
+Kein früher Abbruch der Konkurrenzsuche nach dem ersten Treffer.
+
+Die zusätzliche Repräsentationsnutzung ist die Intervention. Gleiche verfügbare
+Historie und Ressourcenobergrenzen bedeuten ausdrücklich nicht identische
+effektiv genutzte Merkmale oder unveränderten Wahrnehmungsspeicher.
+
+6. VORAB GEBUNDENE AUSWERTUNG
+Alle fünf Entscheidungen jedes Arms werden unabhängig gegen eingefrorenen
+Vorzustand geprüft: Basisentscheidung, Rastertreffermenge, Status, technische
+Spurherkunft, Position, Faktor, Nachfolger, Persistenz, Zeit und Receipt.
+Der unabhängige skalare Prüfer darf keinen produktiven Selektor als Orakel
+aufrufen. Bestandsreferenzvergleich nach jeder Aufnahme ist ein separater Beleg.
+Zusätzlich N/T-Kernzustände sowie Banken bei gleicher Historie vergleichen.
+Keine erneute Rezeptor-/NJ-Auswertung zur Archivprüfung; gespeicherte Projektionen
+und ihre Integritäts-/Intervallbelege verwenden.
+
+Korrekte Hauptzuordnung in A setzt zusammen voraus:
+  eindeutige ursprüngliche gelernte A-Spur (Originalordinale1..4, retained1
+  nach qualifiziertem Lebenszyklus), eindeutiger richtiger Anfang, Faktor1,
+  vorhandener richtiger historischer Nachfolger und bitgleicher Zielvektor.
+Erwartete Rasterindizes: A0 k=0, A480 k=1, A2400 k=5.
+Beim Grundabruf entspricht Originaloffset j dem Rasterindex10*j. Keine Rundung
+von k=1/5 auf0. Ausgabe mit richtiger Quelle, aber falscher Zeit ist kein Erfolg.
+Receipt-Rolle/Generation und Originalordinale müssen unabhängig hergeleitet
+werden; die Erwartung wird nicht als Label in den Adapter eingespeist.
+Falls die erhaltene Originalherkunft fehlt, ist dies zu berichten und nicht durch
+die zweite A-Aufnahme umzubenennen. Ein zufällig passender Zahlenvektor allein
+beweist keine korrekte Herkunft oder Position.
+
+In B0/B480/B2400 ist jede eindeutige behauptete Zuordnung zur gelernten A-Spur
+eine Fremdzuordnung, auch bei niedrigem Fehler. Eindeutige Erkennung ohne
+verfügbaren Nachfolger zählt ebenfalls als Herkunftsbehauptung; mehrdeutige
+Treffermengen werden separat ausgewiesen, nicht als eindeutiger Erfolg.
+
+Fehler je Entscheidung:
+  E = math.fsum(abs(yhat[j]-y[j]) for j in range(48))/48.
+yhat ist Kontext, falls ausgegeben, sonst P; P ist der zweite aktuelle Hinweis.
+Separat Kontext-MAE nur bei tatsächlichem Kontext, sonst null/fehlend und kein
+ersatzweiser Nullfehler. Mittel jeweils math.fsum in fester Fallreihenfolge /6.
+Alle48 Einzelabweichungen, E_N,E_T,E_P, Delta(T-N), Delta(T-P), Gewinne,
+Gleichstände und Verluste berichten. Keine Toleranz für die strikte Mittelprüfung,
+keine Rundung vor Urteil; binary64-Werte mit float.hex zusätzlich archivieren.
+
+Vier notwendige Bedingungen für Zusatznutzen, S1 UND S2 UND S3 UND S4:
+S1: In BEIDEN Fällen A480 und A2400 ist T korrekt nach obiger Gesamtkonjunktion
+    und N nicht korrekt. N bereits korrekt bedeutet in diesem Fall kein Zusatz.
+S2: In KEINEM B-Fall entsteht eine zusätzliche eindeutige Fremdzuordnung:
+    nicht(Fremd_T und nicht Fremd_N), pro Fall statt nur als Summenvergleich.
+    Bereits vorhandene und insgesamt verbleibende Fremdzuordnungen offen nennen.
+S3: Keine korrekte N-Hauptzuordnung in A0/A480/A2400 geht unter T verloren.
+    A0 ist die ausdrücklich unverschobene Kontrolle. Falls N dort nicht korrekt
+    ist, Kontrollvoraussetzung als nicht erfüllt berichten; kein Erfolg allein
+    aufgrund einer leeren Menge korrekter Kontrollen. Für Erfolg muss A0 in
+    N und T korrekt sein. Nebenzielfehler und -zuordnungen zusätzlich ausweisen.
+S4: Arithmetisches gleichgewichtetes Mittel der sechs Hauptzielfehler von T
+    ist strikt kleiner als das von N UND strikt kleiner als das von P.
+
+Einzelschäden bleiben auch bei erfüllter Konjunktion sichtbar: jeder höhere
+MAE, jede verlorene korrekte Zuordnung, zusätzliche falsche Position/Herkunft,
+Enthaltung oder Mehrdeutigkeit. Kein Wegmitteln und keine Fallentfernung.
+Nebenbefunde:18 Lernziele und6 Übergangsziele je Policy,6 Hauptziele je Policy;
+zusammen30 N- und30 T-Entscheidungen sowie30 unterschiedliche P-Bewertungen.
+Diese Nebenmittel ändern die vorab definierte Hauptentscheidung nicht.
+
+7. HINWEISKOLLISIONEN UND URTEILSHIERARCHIE
+Vor dem Forschungsurteil observerseitig alle neun A-Hauptquery/B-Hauptquery-
+Paarungen prüfen: identischer kompletter Zweiframehinweis (96 Koordinaten)
+bei identischem relevanten eingefrorenen Speicherbestand, aber verschiedene
+Quellenherkunft. Exakte Vergleiche verwenden die gespeicherten binary64-Werte.
+Ein solcher Fall heißt Hinweiskollision/IDENTIFIABILITY_LIMIT. Bei zusätzlich
+verschiedenen Zielvektoren ist auch die nächste Fortsetzung nicht aus diesen
+Hinweisen bestimmbar. Gleiche Ziele beseitigen die Herkunftsgrenze nicht.
+Innerhalb einer Quelle auftretende Positionskollisionen separat ausweisen;
+qualifizierte Enthaltung darf nicht nachträglich als korrekte Zeitlage zählen.
+Auch die Paarfaktoren0,5/1/2 und operative Mehrdeutigkeiten werden protokolliert;
+eine skalierte Ähnlichkeit ist nicht mit bitgleicher Eingangsevidenz gleichzusetzen.
+
+Urteil in fester Reihenfolge:
+1. TECHNICAL_FAILURE bei verletztem Gate, Integrität, Numerik, Budget, Zähler,
+   unabhängigem Entscheidungsvergleich oder fehlendem vollständigem Abschluss.
+   Kein wissenschaftliches Gesamt-/Teil-Erfolgsurteil; vorhandene Daten nur
+   technische Diagnose. Kein automatischer Retry und keine Nachgenerierung.
+2. Bei technisch gültigem vollständigem Ablauf: Kollisionen separat markieren.
+   Liegt eine Herkunftskollision vor, Gesamturteil IDENTIFIABILITY_LIMIT; S1..S4
+   und Fehler trotzdem vollständig berichten, keine allgemeine Nutzenabnahme.
+3. Ohne diese Kollision und mit S1..S4 sämtlich wahr: ADDITIONAL_BENEFIT_ON_GRID.
+4. Sonst NO_ADDITIONAL_BENEFIT, mit einzeln benannten falschen Bedingungen.
+
+Wissenschaftlich negatives Ergebnis, schlechter Fehler oder Mehrdeutigkeit sind
+kein technischer Abbruchgrund. Alle sechs Fälle fertig auswerten, sofern technisch
+zulässig. Quellenrezept und Hypothese werden danach nicht rückwirkend angepasst.
+
+8. UMFANG UND RESSOURCEN – UNVERÄNDERTE OBERGRENZEN
+Statische Bilanz des späteren einen Ablaufs:
+  6*11 =66 Basisprojektionen;
+  6*2 vollständige Lernblöcke*27 =324 Zusatzprojektionen;
+  genau390 Rezeptor- und390 NJ-Aufrufe, jeweils Started UND Completed gezählt;
+  genau2 Quellen,12 frische Policy-Arme,12 frische Bestandsreferenzen;
+  132 Policy-Aufnahmen und132 Referenzaufnahmen;60 unabhängige Entscheidungen;
+  alle12 Arme und12 Referenzen vollständig schließen.
+Material einmal gemeinsam für N/T/Referenzen, Zustände strikt getrennt.
+Kein erneuter Projektionslauf pro Arm, kein Reset zur Budgetumgehung. Drei
+Queryframes bilden keine weitere vollständige Vierframebank. Abruf selbst
+erzeugt null Projektionen. Der alte100er-Einstieg bleibt unverändert geschlossen.
+
+Gleichzeitige Grenzen pro seriell aktivem produktiven Arm:
+  maximal4 Banken zu31 Vektoren inklusive Aufbau; insgesamt128 Vektorslots
+  einschließlich Original-/Hinweis-/Ausgabeslots, keine versteckten Kopien;
+  128*48*8=49152 Bytes Wertepayload, Objektkosten zusätzlich im Job;
+  Rohsamplepuffer19200*4=76800 Bytes;
+  Zusatzprovenienz/Bankindizes65536 Bytes;
+  höchstens63 Positionsmatches,189 Faktorprüfungen zu96 Koordinaten;
+  Receipt16384 Bytes; transientes UTF8 gesamt32768 Bytes;
+  serielles Rezeptorarbeitsgebiet16777216 Bytes, gemessen wie qualifiziert
+  mittels tracemalloc und Ablehnung; keine separate harte OS-Teilquote behaupten.
+Gemeinsamer Windows-Job536870912 Bytes, maximal2 Prozesse, Kill-on-close,
+kein Breakaway. Worker240s, Supervisor300s einschließlich technischer
+Abschlussbindung. Numerische Bibliotheksthreads1. Keine Batch-FFT31er-Stapel.
+
+Gesamtexport höchstens16777216 Bytes:
+  Vorbereitung8388608, Material4194304, Vergleich3145728, Abschluss1048576.
+Die übernommene Entwicklungslieferung zählt in den Gesamtrahmen; keine
+kostenfreie Auslagerung nach Observer, keine Duplikate großer Altarchive.
+Die Vorbereitung umfasst Bindungen, Vertrags-/Übersichtssicherung und später
+gezielte Anschlussbelege; frühere Lieferung zuletzt4562275 Bytes als belegter
+Stand, neue tatsächliche Größen vor Start separat feststellen.
+Material: zwei Quellen153600 Bytes;390 Projektionsrecords zu maximal8192 Bytes
+=3194880; verbleiben845824 Bytes für Manifest/Rezept innerhalb4MiB.
+Keine390 einzelnen PCM-Fensterexporte (7488000 Bytes); Fenster durch Quelle,
+Intervall und Digest nachweisen. Manifest speichert auch Profil-/Projektionshashes.
+Jede Partition und Gesamtmenge vor weiterer Dateiablage kontrollieren; kein
+stilles Kürzen, Entfernen negativer Fälle oder Erhöhen eines Limits.
+Redaktionelle Abschlussarbeit ist zeitlich getrennt; sie wird nicht nachträglich
+als innerhalb der gemessenen Supervisorzeit ausgeführt dargestellt.
+
+9. TECHNISCHE RESTARBEITEN – ERST NACH ENTWICKLUNGSAUFTRAG
+Die Bank, Auswahl, Basisorakel und Neutralqualifikation sind vorhanden. Der
+bisherige Einstieg ist ausdrücklich neutral-only; full.py hat NEUTRAL-Konstanten
+und scientific_verdict=None. Ein anderer Dateiname oder Austausch der Frequenzen
+allein wäre keine korrekte Forschungsanbindung.
+
+R1: Separaten Forschungseinstieg und Materialmodus ergänzen, der ausschließlich
+dieses Rezept/diese Fälle akzeptiert. Bestehendes gateway.py mit verbrauchtem
+Neutralauftrag und dessen Ziel/Berechtigung unverändert erhalten. Keine Änderung
+historischer Auftragskonstanten zur Wiederverwendung eines alten Verbrauchsmarkers.
+Neue Mode-/Auftrags-/Empfänger-/Rezept-/Code-/Runtime-/Zielbindung; eigener
+exklusiver Verbrauch vor Workerstart und Material, kein --force/reset/retry.
+Die konkrete neue Ausführungserlaubnis liegt heute NICHT vor.
+
+R2: Forschungsauswertung gemäß Abschnitten6/7 anschließen: Herkunft und
+Rasterposition aus Receipt samt Originalbindung, unabhängige48er-Fehlerrechnung,
+alle Einzelverluste, neun Kollisionspaare, S1..S4 und feste Urteilshierarchie.
+Ein unabhängiger Archivprüfer rekonstruiert die Urteilseingaben aus gebundenen
+Vorzuständen/Projektionen; keine Rekonstruktion aus dem Urteil selbst.
+
+R3: Ergebnis-/Intervallmanifest und technische Abschlussbindung um Rezeptdigest,
+Freeze-/Zugriffsnachweise, Vorzustände und Auswertungsbelege erweitern. Den neuen
+Export innerhalb bestehender Partitionen vorab dimensionieren. Vollständige
+Bestands-/Bankübereinstimmung N/T und Referenzen explizit ablegen. Rezeptor, NJ,
+Schwellen, core.py-Entscheidungsregeln und Lernlebenszyklus nicht fachlich ändern.
+
+Gezielte spätere Anschlussprüfungen ausschließlich mit künstlichen kleinen
+Fixtures/Mock-I/O, keine neuen Forschungs-PCM oder Rezeptor-/NJ-Aufrufe:
+C1: Fehlender/falscher Auftrag, Mode, Empfänger, Code, Runtime, Rezept oder Ziel
+    sperrt vor Material. Neutralberechtigung wird im Forschungsmodus abgewiesen.
+C2: Exklusiver Verbrauch, PID/Nonce/Jobmitgliedschaft und zweiter Worker-Eintritt;
+    fehlender Abschluss erneuert keine Erlaubnis; direkter Aufruf bleibt gesperrt.
+C3: Alle sechs Intervallabbildungen, voller100ms-Horizont und Freeze vor jedem
+    Zielread; Sentinel verhindert Ziel-/Label-/Versatzzugriff durch die Policy.
+C4: Observerurteile an künstlichen Receipts: beide Zusatztreffer, nur einer,
+    N bereits korrekt, falsche Position/Quelle, fehlender Nachfolger, Kontrollverlust,
+    strikte Mittelgleichheit, echte Verbesserung und Einzelverschlechterung.
+C5: Bitgleiche A/B-Hinweise mit gleichen und verschiedenen Zielen; unterschiedliche
+    Vorzustände; Positionsmehrdeutigkeit. Urteilshierarchie einschließlich
+    technischem Fehler vor wissenschaftlicher Auswertung prüfen.
+C6: Exportgrenzen, vollständige Zähler/Abschluss/Cleanup und unabhängige
+    Archivrekonstruktion mit kleinen synthetischen Datensätzen; keine produktive
+    Entscheidung als eigenes Prüforakel. Keine Kürzung bei überschrittenem Budget.
+
+Die bestehenden27 Entwicklungs- und8 Anschlussprüfungen sowie der390er-Neutral-
+Gesamtversuch werden übernommen, nicht wiederholt. Geänderte neue Verbindungen
+erhalten nur ihre gezielten Prüfungen. Falls dabei eine Änderung des qualifizierten
+Kerns oder größerer Ressourcenbedarf nötig wird: konkrete Abweichung melden,
+nicht mit einer weiteren Neutralserie oder Schwellenänderung selbst freigeben.
+
+10. START-, ABBRUCH- UND ABSCHLUSSENTSCHEIDUNG
+Vor einem späteren Forschungsstart müssen Vertragsabnahme, technische R1..R3-
+Lieferung mit C1..C6-Belegen und separate konkrete Einmalausführungsfreigabe
+vorliegen. Finaler Code/Runtime/Rezept/Vertrag/Prüfnachweise und unverbrauchte
+neue Berechtigung werden vor Material gebunden. Vorhandene Zielverzeichnisse,
+fehlende Herkunftsbindung oder unklare Verbrauchslage sperren den Einstieg.
+Der heute erstellte Vertrag enthält keinen vorbereiteten ausführbaren Startbefehl,
+weil der Forschungseinstieg noch nicht implementiert und nicht freigegeben ist.
+
+Technischer Abbruch bei nichtfinite Zahlen, falscher Form/Profil/Clock,
+Zeitlücken, unerlaubtem Future-/Quellenzugriff, Hashabweichung, falschen Zählern,
+Referenz-/Orakelabweichung, Budget-/Zeit-/Jobverletzung oder Cleanupfehler.
+Started/Completed-Zähler dauerhaft schreiben; bei Abbruch vorhandene Belege
+erhalten, Ressourcen schließen, Verbrauch nicht zurücksetzen. Unklarer Abschluss
+ist kein Nichtverbrauchsnachweis. Kein automatischer zweiter Lauf.
+
+Späterer Forschungsabschluss enthält sechs Hauptfallzeilen, sämtliche60
+Entscheidungen plus30 P-Werte, Einzelverluste, Kollisionsmatrix, S1..S4,
+Gesamturteil, Ressourcenpeaks, exakte Zähler, technische Abschlussbindung und
+unveränderte Altbindungsreferenzen. Keine Ergebnisprüfung über neue Projektionen.
+Beim heutigen Dokumentationsabschluss: Vertragspfad/-hash, drei aktualisierte
+Übersichten, bytegenau erhaltene Vorgänger und Hashnachweis der technischen
+Grundlage. Ausführungszähler dieses Vertragsauftrags bleiben null.
+
+11. AUSSAGEGRENZE UND EMPFOHLENER ANSCHLUSS
+Ein positives Ergebnis wäre allein ein Nachweis exakter Wiederkehr auf den
+festgelegten480-Sample-Rasterpositionen bei erweitertem Wahrnehmungsspeicher,
+zwei kontrollierten Quellen und sechs deterministischen Fällen. Kein statistischer
+Robustheitsbeleg, keine allgemeine Verschiebungsrobustheit, keine Invarianz gegen
+Tempo/Rauschen/Amplitude, keine verbesserte Erfahrungsbildung oder Verdichtung,
+keine feldinterne Memory, Semantik oder allgemeine Herkunftserkennung.
+Das historische Rohmaterial ist temporärer Sensorpuffer beziehungsweise getrenntes
+Prüfarchiv, keine nachträglich als MCM-Memory umbenannte Quelldatenbank.
+AS480 bleibt abgeschlossen; U und der Fehlerbewertungszweig bleiben unverändert.
+
+Empfehlung: Projektleiter entscheidet über diesen einen Vertrag. Bei Abnahme als
+nächstes ein begrenztes Entwicklerpaket R1..R3 mit ausschließlich C1..C6 beauftragen.
+Erst aus dessen überprüfter Lieferung folgt eine getrennte Entscheidung über
+genau einen Forschungslauf. Kein weiterer Vertrag nur zur Bestätigung und kein
+erneuter neutraler390er-Ablauf ohne konkret begründeten neuen Sachentscheid.

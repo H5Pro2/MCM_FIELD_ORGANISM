@@ -1,0 +1,205 @@
+{
+  "product_path": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/provenance-appendix-repeat-20260929-01/cases/1/S2UC-V9-NEUTRAL-24d3c37e79294229b83f5e7d6de1e3bc",
+  "product_status": "CLOSED_NEUTRAL_VERIFIED",
+  "appendix_status": "PUBLISHED",
+  "product_inputs_unchanged": true,
+  "budget": {
+    "categories": {
+      "code": 851840,
+      "error": 0,
+      "metadata": 28432,
+      "minimal": 0,
+      "record": 193150,
+      "staging": 0,
+      "static_shared": 180438,
+      "terminal": 8590,
+      "verification": 77760
+    },
+    "main_accounts": {
+      "code": 851840,
+      "metadata": 28432,
+      "record": 193150,
+      "shared": 189028,
+      "staging": 0,
+      "verification": 77760
+    },
+    "total_bytes": 1340210,
+    "violations": [],
+    "within_limits": true
+  },
+  "publication_steps": [
+    {
+      "account": {
+        "categories": {
+          "code": 851840,
+          "error": 0,
+          "metadata": 28432,
+          "minimal": 0,
+          "record": 193150,
+          "staging": 13167,
+          "static_shared": 167271,
+          "terminal": 1644,
+          "verification": 2466
+        },
+        "main_accounts": {
+          "code": 851840,
+          "metadata": 28432,
+          "record": 193150,
+          "shared": 168915,
+          "staging": 13167,
+          "verification": 2466
+        },
+        "total_bytes": 1257970,
+        "violations": [],
+        "within_limits": true
+      },
+      "file": "dependency-inventory.json",
+      "placement": "staging"
+    },
+    {
+      "account": {
+        "categories": {
+          "code": 851840,
+          "error": 0,
+          "metadata": 28432,
+          "minimal": 0,
+          "record": 193150,
+          "staging": 0,
+          "static_shared": 180438,
+          "terminal": 1644,
+          "verification": 2466
+        },
+        "main_accounts": {
+          "code": 851840,
+          "metadata": 28432,
+          "record": 193150,
+          "shared": 182082,
+          "staging": 0,
+          "verification": 2466
+        },
+        "total_bytes": 1257970,
+        "violations": [],
+        "within_limits": true
+      },
+      "file": "dependency-inventory.json",
+      "placement": "static_shared"
+    },
+    {
+      "account": {
+        "categories": {
+          "code": 851840,
+          "error": 0,
+          "metadata": 28432,
+          "minimal": 0,
+          "record": 193150,
+          "staging": 75294,
+          "static_shared": 180438,
+          "terminal": 1644,
+          "verification": 2466
+        },
+        "main_accounts": {
+          "code": 851840,
+          "metadata": 28432,
+          "record": 193150,
+          "shared": 182082,
+          "staging": 75294,
+          "verification": 2466
+        },
+        "total_bytes": 1333264,
+        "violations": [],
+        "within_limits": true
+      },
+      "file": "provenance.json",
+      "placement": "staging"
+    },
+    {
+      "account": {
+        "categories": {
+          "code": 851840,
+          "error": 0,
+          "metadata": 28432,
+          "minimal": 0,
+          "record": 193150,
+          "staging": 0,
+          "static_shared": 180438,
+          "terminal": 1644,
+          "verification": 77760
+        },
+        "main_accounts": {
+          "code": 851840,
+          "metadata": 28432,
+          "record": 193150,
+          "shared": 182082,
+          "staging": 0,
+          "verification": 77760
+        },
+        "total_bytes": 1333264,
+        "violations": [],
+        "within_limits": true
+      },
+      "file": "provenance.json",
+      "placement": "verification"
+    },
+    {
+      "account": {
+        "categories": {
+          "code": 851840,
+          "error": 0,
+          "metadata": 28432,
+          "minimal": 0,
+          "record": 193150,
+          "staging": 6946,
+          "static_shared": 180438,
+          "terminal": 1644,
+          "verification": 77760
+        },
+        "main_accounts": {
+          "code": 851840,
+          "metadata": 28432,
+          "record": 193150,
+          "shared": 182082,
+          "staging": 6946,
+          "verification": 77760
+        },
+        "total_bytes": 1340210,
+        "violations": [],
+        "within_limits": true
+      },
+      "file": "appendix-terminal.json",
+      "placement": "staging"
+    },
+    {
+      "account": {
+        "categories": {
+          "code": 851840,
+          "error": 0,
+          "metadata": 28432,
+          "minimal": 0,
+          "record": 193150,
+          "staging": 0,
+          "static_shared": 180438,
+          "terminal": 8590,
+          "verification": 77760
+        },
+        "main_accounts": {
+          "code": 851840,
+          "metadata": 28432,
+          "record": 193150,
+          "shared": 189028,
+          "staging": 0,
+          "verification": 77760
+        },
+        "total_bytes": 1340210,
+        "violations": [],
+        "within_limits": true
+      },
+      "file": "appendix-terminal.json",
+      "placement": "terminal"
+    }
+  ],
+  "verification_bytes": 2466,
+  "provenance_bytes": 75294,
+  "common_verification_limit": 131072,
+  "staging_peak": 75294,
+  "total_peak": 1340210
+}

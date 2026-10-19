@@ -1,0 +1,27 @@
+test_01_profile_and_old_limits (experience_tests.Qualification.test_01_profile_and_old_limits) ... ok
+test_02_joint_budget_equality_and_overflow (experience_tests.Qualification.test_02_joint_budget_equality_and_overflow) ... ok
+test_03_each_class_limit (experience_tests.Qualification.test_03_each_class_limit) ... ok
+test_04_shared_and_duplicate_paths (experience_tests.Qualification.test_04_shared_and_duplicate_paths) ... ok
+test_05_exact_sequences_and_counts (experience_tests.Qualification.test_05_exact_sequences_and_counts) ... ok
+test_06_manifest_immutability (experience_tests.Qualification.test_06_manifest_immutability) ... ok
+test_07_same_input_distinct_local_ordinal (experience_tests.Qualification.test_07_same_input_distinct_local_ordinal) ... ok
+test_08_position_error (experience_tests.Qualification.test_08_position_error) ... ok
+test_09_time_sequence (experience_tests.Qualification.test_09_time_sequence) ... ok
+test_10_origin_classes (experience_tests.Qualification.test_10_origin_classes) ... ok
+test_11_update_and_replacement_provenance (experience_tests.Qualification.test_11_update_and_replacement_provenance) ... ok
+test_12_evaluation_gate (experience_tests.Qualification.test_12_evaluation_gate) ... ok
+test_13_native_isolation_close (experience_tests.Qualification.test_13_native_isolation_close) ... ok
+test_14_materialization_failure_preserves_progress (experience_tests.Qualification.test_14_materialization_failure_preserves_progress) ... ok
+test_15_complete_native_comparison (experience_tests.Qualification.test_15_complete_native_comparison) ... ok
+test_16_gate_remains_closed (experience_tests.Qualification.test_16_gate_remains_closed) ... ok
+test_17_profile_manipulation (experience_tests.Qualification.test_17_profile_manipulation) ... ok
+test_18_readonly_missing_evidence (experience_tests.Qualification.test_18_readonly_missing_evidence) ... ok
+test_19_closed_main_entry (experience_tests.Qualification.test_19_closed_main_entry) ... ok
+test_20_real_mode_rejects_neutral_supplier (experience_tests.Qualification.test_20_real_mode_rejects_neutral_supplier) ... ok
+test_21_gains_losses_and_negative_results (experience_tests.Qualification.test_21_gains_losses_and_negative_results) ... ok
+test_22_neutral_full_resource_reservation (experience_tests.Qualification.test_22_neutral_full_resource_reservation) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 18.476s
+
+OK

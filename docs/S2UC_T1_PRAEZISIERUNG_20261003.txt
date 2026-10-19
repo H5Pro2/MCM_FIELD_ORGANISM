@@ -1,0 +1,24 @@
+Verbindliche Präzisierung zur T1-Vorbereitung, Projektleiterauftrag 2026-10-03.
+
+T1-Vertrag abgenommen für separate Implementierung der Quellen-/Auswertungshülle
+und neutrale Qualifikation. Keine T1-Materialisierung oder Ausführung freigegeben.
+Die historische Entwurfsfassung des Vertrags bleibt unverändert erhalten.
+
+Die20 strukturell negativen I/H-Kontrollen bleiben im Nenner52. Sie werden
+zusätzlich nach I/H ausgewiesen, einschließlich tatsächlicher Prognosefehler.
+Mechanismuskriterium nicht bestanden bedeutet weder Vorhersagefehler noch
+unangemessene Enthaltung. Schwelle26/52 und4/13 je Herkunftsgruppe unverändert.
+
+G_w ist ausschließlich das feste späte Zeitfenster11,13,...,79 der S0-Fälle.
+Es ist kein Nachweis warmer Fehlerzellen. Tatsächliche Wärme wird je lebendem
+Key aus ec/ep und dessen vorziellicher Feedbackkette festgestellt.
+Zielmenge und Stabilitätsvergleich bleiben unverändert.
+
+Float64-LE/Base64 speichert die48 Werte je Position verlustfrei innerhalb der
+bestehenden65536-Byte-Quelldateigrenze. Bibliothek, Zustand, Bank und Modus
+werden getrennt als Beobachter-Provenienz exportiert; sie erreichen die Policy
+nicht. Keine Normalisierung oder Quantisierung der ausgegebenen Werte.
+
+Qualifikation verwendet ausschließlich MCM-QUALIFICATION-ONLY-v1,
+Replikate ab100 und Q-Kennungen. Die reservierte T1-Hashdomäne wird weder für
+Tests noch Piloten ausgewertet. Kein operativer Autorisierungsstatus entsteht.

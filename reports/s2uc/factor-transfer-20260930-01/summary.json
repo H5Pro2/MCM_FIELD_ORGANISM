@@ -1,0 +1,59 @@
+{
+  "cases_per_arm": 35,
+  "evaluations_per_arm_including_repeat": 70,
+  "comparison_counts": {
+    "additional_access": 10,
+    "correct_target_gain": 10,
+    "other_origin_gain": 0,
+    "lost_uniqueness": 0,
+    "new_competition": 0
+  },
+  "by_variant": {
+    "original": {
+      "E": {
+        "TARGET_RETAINED": 5,
+        "NO_MATCH": 2
+      },
+      "F": {
+        "TARGET_RETAINED": 5,
+        "NO_MATCH": 2
+      }
+    },
+    "half": {
+      "E": {
+        "NO_MATCH": 7
+      },
+      "F": {
+        "TARGET_RETAINED": 5,
+        "NO_MATCH": 2
+      }
+    },
+    "double": {
+      "E": {
+        "NO_MATCH": 7
+      },
+      "F": {
+        "TARGET_RETAINED": 5,
+        "NO_MATCH": 2
+      }
+    },
+    "reverse": {
+      "E": {
+        "NO_MATCH": 2,
+        "UNIQUE_CONTROL_ORIGIN_UNASSIGNED": 5
+      },
+      "F": {
+        "NO_MATCH": 2,
+        "UNIQUE_CONTROL_ORIGIN_UNASSIGNED": 5
+      }
+    },
+    "local": {
+      "E": {
+        "NO_MATCH": 7
+      },
+      "F": {
+        "NO_MATCH": 7
+      }
+    }
+  }
+}

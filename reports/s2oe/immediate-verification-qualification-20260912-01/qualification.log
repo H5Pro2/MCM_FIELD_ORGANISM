@@ -1,0 +1,12 @@
+test_01_native_proof_readonly (tests.test_s2oe_immediate_verification.VerificationTests.test_01_native_proof_readonly) ... ok
+test_02_parent_tampered (tests.test_s2oe_immediate_verification.VerificationTests.test_02_parent_tampered) ... ok
+test_03_event_order_tampered (tests.test_s2oe_immediate_verification.VerificationTests.test_03_event_order_tampered) ... ok
+test_04_presentation_tampered (tests.test_s2oe_immediate_verification.VerificationTests.test_04_presentation_tampered) ... ok
+test_05_formation_link_tampered (tests.test_s2oe_immediate_verification.VerificationTests.test_05_formation_link_tampered) ... ok
+test_06_evaluation_gate (tests.test_s2oe_immediate_verification.VerificationTests.test_06_evaluation_gate) ... ok
+test_07_entry_gate (tests.test_s2oe_immediate_verification.VerificationTests.test_07_entry_gate) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.782s
+
+OK

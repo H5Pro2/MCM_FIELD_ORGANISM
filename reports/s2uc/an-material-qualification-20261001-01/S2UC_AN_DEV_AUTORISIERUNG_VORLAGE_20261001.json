@@ -1,0 +1,8 @@
+{
+  "status": "PENDING",
+  "action": "PRODUCE_AN_PARTITION",
+  "partition": "AN-DEV",
+  "binding_sha256": "063e67caa15ff21c20305e1e09854208ff43c053aa74d95bc9cadfebbf6847b0",
+  "plan_sha256": "71a356d34c49d84377faa3d3618ad644174154483f22a99689bf52c2694a1dbb",
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]"
+}

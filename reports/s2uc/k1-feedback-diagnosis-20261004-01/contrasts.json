@@ -1,0 +1,1155 @@
+[
+  {
+    "case": "F1",
+    "target": 19,
+    "chain": {
+      "arm": "K1",
+      "original_ordinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "offset": 0,
+      "original_successor": 3,
+      "input_positions": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "admission_positions": [
+        2,
+        2,
+        4,
+        4
+      ],
+      "formation": {
+        "index": 4,
+        "kind": "ORIGINAL_ADMITTED",
+        "old_key": null,
+        "new_key": [
+          1,
+          1,
+          0
+        ],
+        "event_ref": "F1-K1.json#/events/3"
+      },
+      "first_eligible_forecast": {
+        "target": 11,
+        "key": [
+          1,
+          1,
+          0
+        ],
+        "cold": true,
+        "ec": null,
+        "ep": null,
+        "feedback": "ACCEPTED",
+        "raw_errors": [
+          0.0,
+          0.0078125
+        ],
+        "prior_feedback": [],
+        "promotion_lineage": [],
+        "forecast_ref": "F1-K1.json#/forecasts/4/hypotheses/0",
+        "hypothesis_ref": "F1-K1.json#/rows/4/hypotheses/0",
+        "feedback_ref": "F1-K1.json#/rows/4/updates/0"
+      },
+      "current": {
+        "target": 19,
+        "key": [
+          0,
+          1,
+          0
+        ],
+        "cold": false,
+        "ec": 0.0,
+        "ep": 0.0078125,
+        "feedback": "ACCEPTED",
+        "raw_errors": [
+          0.0,
+          0.0078125
+        ],
+        "prior_feedback": [
+          11
+        ],
+        "promotion_lineage": [
+          {
+            "at": 12,
+            "new_key": [
+              0,
+              1,
+              0
+            ],
+            "old_key": [
+              1,
+              1,
+              0
+            ]
+          }
+        ],
+        "forecast_ref": "F1-K1.json#/forecasts/8/hypotheses/0",
+        "hypothesis_ref": "F1-K1.json#/rows/8/hypotheses/0",
+        "feedback_ref": "F1-K1.json#/rows/8/updates/0"
+      },
+      "previous_eligible_forecasts": [
+        {
+          "target": 11,
+          "key": [
+            1,
+            1,
+            0
+          ],
+          "cold": true,
+          "ec": null,
+          "ep": null,
+          "feedback": "ACCEPTED",
+          "raw_errors": [
+            0.0,
+            0.0078125
+          ],
+          "prior_feedback": [],
+          "promotion_lineage": [],
+          "forecast_ref": "F1-K1.json#/forecasts/4/hypotheses/0",
+          "hypothesis_ref": "F1-K1.json#/rows/4/hypotheses/0",
+          "feedback_ref": "F1-K1.json#/rows/4/updates/0"
+        }
+      ],
+      "next_eligible_forecast": {
+        "target": 27,
+        "key": [
+          0,
+          1,
+          0
+        ],
+        "cold": false,
+        "ec": 0.0,
+        "ep": 0.0078125,
+        "feedback": "ACCEPTED",
+        "raw_errors": [
+          0.0,
+          0.0078125
+        ],
+        "prior_feedback": [
+          11,
+          19
+        ],
+        "promotion_lineage": [
+          {
+            "at": 12,
+            "new_key": [
+              0,
+              1,
+              0
+            ],
+            "old_key": [
+              1,
+              1,
+              0
+            ]
+          }
+        ],
+        "forecast_ref": "F1-K1.json#/forecasts/12/hypotheses/0",
+        "hypothesis_ref": "F1-K1.json#/rows/12/hypotheses/0",
+        "feedback_ref": "F1-K1.json#/rows/12/updates/0"
+      },
+      "appearances": [
+        {
+          "target": 11,
+          "key": [
+            1,
+            1,
+            0
+          ],
+          "cold": true,
+          "ec": null,
+          "ep": null,
+          "feedback": "ACCEPTED",
+          "raw_errors": [
+            0.0,
+            0.0078125
+          ],
+          "prior_feedback": [],
+          "promotion_lineage": [],
+          "forecast_ref": "F1-K1.json#/forecasts/4/hypotheses/0",
+          "hypothesis_ref": "F1-K1.json#/rows/4/hypotheses/0",
+          "feedback_ref": "F1-K1.json#/rows/4/updates/0"
+        },
+        {
+          "target": 19,
+          "key": [
+            0,
+            1,
+            0
+          ],
+          "cold": false,
+          "ec": 0.0,
+          "ep": 0.0078125,
+          "feedback": "ACCEPTED",
+          "raw_errors": [
+            0.0,
+            0.0078125
+          ],
+          "prior_feedback": [
+            11
+          ],
+          "promotion_lineage": [
+            {
+              "at": 12,
+              "new_key": [
+                0,
+                1,
+                0
+              ],
+              "old_key": [
+                1,
+                1,
+                0
+              ]
+            }
+          ],
+          "forecast_ref": "F1-K1.json#/forecasts/8/hypotheses/0",
+          "hypothesis_ref": "F1-K1.json#/rows/8/hypotheses/0",
+          "feedback_ref": "F1-K1.json#/rows/8/updates/0"
+        },
+        {
+          "target": 27,
+          "key": [
+            0,
+            1,
+            0
+          ],
+          "cold": false,
+          "ec": 0.0,
+          "ep": 0.0078125,
+          "feedback": "ACCEPTED",
+          "raw_errors": [
+            0.0,
+            0.0078125
+          ],
+          "prior_feedback": [
+            11,
+            19
+          ],
+          "promotion_lineage": [
+            {
+              "at": 12,
+              "new_key": [
+                0,
+                1,
+                0
+              ],
+              "old_key": [
+                1,
+                1,
+                0
+              ]
+            }
+          ],
+          "forecast_ref": "F1-K1.json#/forecasts/12/hypotheses/0",
+          "hypothesis_ref": "F1-K1.json#/rows/12/hypotheses/0",
+          "feedback_ref": "F1-K1.json#/rows/12/updates/0"
+        },
+        {
+          "target": 35,
+          "key": [
+            0,
+            1,
+            0
+          ],
+          "cold": false,
+          "ec": 0.0,
+          "ep": 0.0078125,
+          "feedback": "ACCEPTED",
+          "raw_errors": [
+            0.0,
+            0.0078125
+          ],
+          "prior_feedback": [
+            11,
+            19,
+            27
+          ],
+          "promotion_lineage": [
+            {
+              "at": 12,
+              "new_key": [
+                0,
+                1,
+                0
+              ],
+              "old_key": [
+                1,
+                1,
+                0
+              ]
+            }
+          ],
+          "forecast_ref": "F1-K1.json#/forecasts/16/hypotheses/0",
+          "hypothesis_ref": "F1-K1.json#/rows/16/hypotheses/0",
+          "feedback_ref": "F1-K1.json#/rows/16/updates/0"
+        },
+        {
+          "target": 43,
+          "key": [
+            0,
+            1,
+            0
+          ],
+          "cold": false,
+          "ec": 0.0,
+          "ep": 0.0078125,
+          "feedback": "ACCEPTED",
+          "raw_errors": [
+            0.0,
+            0.0078125
+          ],
+          "prior_feedback": [
+            11,
+            19,
+            27,
+            35
+          ],
+          "promotion_lineage": [
+            {
+              "at": 12,
+              "new_key": [
+                0,
+                1,
+                0
+              ],
+              "old_key": [
+                1,
+                1,
+                0
+              ]
+            }
+          ],
+          "forecast_ref": "F1-K1.json#/forecasts/20/hypotheses/0",
+          "hypothesis_ref": "F1-K1.json#/rows/20/hypotheses/0",
+          "feedback_ref": "F1-K1.json#/rows/20/updates/0"
+        },
+        {
+          "target": 51,
+          "key": [
+            0,
+            1,
+            0
+          ],
+          "cold": false,
+          "ec": 0.0,
+          "ep": 0.0078125,
+          "feedback": "ACCEPTED",
+          "raw_errors": [
+            0.0,
+            0.0078125
+          ],
+          "prior_feedback": [
+            11,
+            19,
+            27,
+            35,
+            43
+          ],
+          "promotion_lineage": [
+            {
+              "at": 12,
+              "new_key": [
+                0,
+                1,
+                0
+              ],
+              "old_key": [
+                1,
+                1,
+                0
+              ]
+            }
+          ],
+          "forecast_ref": "F1-K1.json#/forecasts/24/hypotheses/0",
+          "hypothesis_ref": "F1-K1.json#/rows/24/hypotheses/0",
+          "feedback_ref": "F1-K1.json#/rows/24/updates/0"
+        },
+        {
+          "target": 59,
+          "key": [
+            0,
+            1,
+            0
+          ],
+          "cold": false,
+          "ec": 0.0,
+          "ep": 0.0078125,
+          "feedback": "ACCEPTED",
+          "raw_errors": [
+            0.0,
+            0.0078125
+          ],
+          "prior_feedback": [
+            11,
+            19,
+            27,
+            35,
+            43,
+            51
+          ],
+          "promotion_lineage": [
+            {
+              "at": 12,
+              "new_key": [
+                0,
+                1,
+                0
+              ],
+              "old_key": [
+                1,
+                1,
+                0
+              ]
+            }
+          ],
+          "forecast_ref": "F1-K1.json#/forecasts/28/hypotheses/0",
+          "hypothesis_ref": "F1-K1.json#/rows/28/hypotheses/0",
+          "feedback_ref": "F1-K1.json#/rows/28/updates/0"
+        }
+      ],
+      "key_changes": [
+        {
+          "index": 4,
+          "kind": "ORIGINAL_ADMITTED",
+          "old_key": null,
+          "new_key": [
+            1,
+            1,
+            0
+          ],
+          "event_ref": "F1-K1.json#/events/3"
+        },
+        {
+          "index": 12,
+          "kind": "PROMOTED_SAME_ORIGINAL",
+          "old_key": [
+            1,
+            1,
+            0
+          ],
+          "new_key": [
+            0,
+            1,
+            0
+          ],
+          "event_ref": "F1-K1.json#/events/11"
+        }
+      ],
+      "removal": null,
+      "present_at_last_admission": true,
+      "end": "STORY_END_AFTER_80",
+      "cleanup_verified": true,
+      "later_value_equal_hints": [
+        {
+          "target": 27,
+          "censored": false,
+          "actually_eligible": true,
+          "evidence": "F1-source.json#/values (decoded positions 25,26; originals 1,2)"
+        },
+        {
+          "target": 35,
+          "censored": false,
+          "actually_eligible": true,
+          "evidence": "F1-source.json#/values (decoded positions 33,34; originals 1,2)"
+        },
+        {
+          "target": 43,
+          "censored": false,
+          "actually_eligible": true,
+          "evidence": "F1-source.json#/values (decoded positions 41,42; originals 1,2)"
+        },
+        {
+          "target": 51,
+          "censored": false,
+          "actually_eligible": true,
+          "evidence": "F1-source.json#/values (decoded positions 49,50; originals 1,2)"
+        },
+        {
+          "target": 59,
+          "censored": false,
+          "actually_eligible": true,
+          "evidence": "F1-source.json#/values (decoded positions 57,58; originals 1,2)"
+        }
+      ],
+      "diagnosis": "ACCEPTED_LATER_RETRIEVAL",
+      "cold_at_target_cause": "SEE_CHAIN",
+      "future_hint_scope": "Read-only value comparison; missing original means NOT a live eligible retrieval",
+      "cell_evidence_scope": "Accepted update is directly recorded. Promotion cell preservation is certified by saved reference_equal and frozen code, not a separate post-promotion cell dump."
+    },
+    "counterpart": {
+      "arm": "U",
+      "original_ordinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "offset": 0,
+      "original_successor": 3,
+      "input_positions": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "admission_positions": [
+        2,
+        2,
+        4,
+        4
+      ],
+      "formation": {
+        "index": 4,
+        "kind": "ORIGINAL_ADMITTED",
+        "old_key": null,
+        "new_key": [
+          1,
+          1,
+          0
+        ],
+        "event_ref": "F1-U.json#/events/3"
+      },
+      "first_eligible_forecast": null,
+      "current": null,
+      "previous_eligible_forecasts": [],
+      "next_eligible_forecast": null,
+      "appearances": [],
+      "key_changes": [
+        {
+          "index": 4,
+          "kind": "ORIGINAL_ADMITTED",
+          "old_key": null,
+          "new_key": [
+            1,
+            1,
+            0
+          ],
+          "event_ref": "F1-U.json#/events/3"
+        },
+        {
+          "index": 8,
+          "kind": "CANDIDATE_REPLACED",
+          "old_key": [
+            1,
+            1,
+            0
+          ],
+          "new_key": null,
+          "event_ref": "F1-U.json#/events/7"
+        }
+      ],
+      "removal": {
+        "index": 8,
+        "kind": "CANDIDATE_REPLACED",
+        "old_key": [
+          1,
+          1,
+          0
+        ],
+        "new_key": null,
+        "event_ref": "F1-U.json#/events/7"
+      },
+      "present_at_last_admission": false,
+      "end": null,
+      "cleanup_verified": true,
+      "later_value_equal_hints": [
+        {
+          "target": 27,
+          "censored": false,
+          "actually_eligible": false,
+          "evidence": "F1-source.json#/values (decoded positions 25,26; originals 1,2)"
+        },
+        {
+          "target": 35,
+          "censored": false,
+          "actually_eligible": false,
+          "evidence": "F1-source.json#/values (decoded positions 33,34; originals 1,2)"
+        },
+        {
+          "target": 43,
+          "censored": false,
+          "actually_eligible": false,
+          "evidence": "F1-source.json#/values (decoded positions 41,42; originals 1,2)"
+        },
+        {
+          "target": 51,
+          "censored": false,
+          "actually_eligible": false,
+          "evidence": "F1-source.json#/values (decoded positions 49,50; originals 1,2)"
+        },
+        {
+          "target": 59,
+          "censored": false,
+          "actually_eligible": false,
+          "evidence": "F1-source.json#/values (decoded positions 57,58; originals 1,2)"
+        }
+      ],
+      "diagnosis": "NOT_RECORDED",
+      "cold_at_target_cause": "SEE_CHAIN",
+      "future_hint_scope": "Read-only value comparison; missing original means NOT a live eligible retrieval",
+      "cell_evidence_scope": "Accepted update is directly recorded. Promotion cell preservation is certified by saved reference_equal and frozen code, not a separate post-promotion cell dump."
+    }
+  },
+  {
+    "case": "F2",
+    "target": 23,
+    "chain": {
+      "arm": "U",
+      "original_ordinals": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "offset": 0,
+      "original_successor": 7,
+      "input_positions": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "admission_positions": [
+        6,
+        6,
+        8,
+        8
+      ],
+      "formation": {
+        "index": 8,
+        "kind": "ORIGINAL_ADMITTED",
+        "old_key": null,
+        "new_key": [
+          1,
+          2,
+          0
+        ],
+        "event_ref": "F2-U.json#/events/7"
+      },
+      "first_eligible_forecast": {
+        "target": 11,
+        "key": [
+          1,
+          2,
+          0
+        ],
+        "cold": true,
+        "ec": null,
+        "ep": null,
+        "feedback": "ACCEPTED",
+        "raw_errors": [
+          0.0,
+          0.0078125
+        ],
+        "prior_feedback": [],
+        "promotion_lineage": [],
+        "forecast_ref": "F2-U.json#/forecasts/4/hypotheses/0",
+        "hypothesis_ref": "F2-U.json#/rows/4/hypotheses/0",
+        "feedback_ref": "F2-U.json#/rows/4/updates/0"
+      },
+      "current": {
+        "target": 23,
+        "key": [
+          0,
+          1,
+          0
+        ],
+        "cold": false,
+        "ec": 0.0,
+        "ep": 0.0078125,
+        "feedback": "ACCEPTED",
+        "raw_errors": [
+          0.0,
+          0.0078125
+        ],
+        "prior_feedback": [
+          11
+        ],
+        "promotion_lineage": [
+          {
+            "at": 12,
+            "new_key": [
+              0,
+              1,
+              0
+            ],
+            "old_key": [
+              1,
+              2,
+              0
+            ]
+          }
+        ],
+        "forecast_ref": "F2-U.json#/forecasts/10/hypotheses/0",
+        "hypothesis_ref": "F2-U.json#/rows/10/hypotheses/0",
+        "feedback_ref": "F2-U.json#/rows/10/updates/0"
+      },
+      "previous_eligible_forecasts": [
+        {
+          "target": 11,
+          "key": [
+            1,
+            2,
+            0
+          ],
+          "cold": true,
+          "ec": null,
+          "ep": null,
+          "feedback": "ACCEPTED",
+          "raw_errors": [
+            0.0,
+            0.0078125
+          ],
+          "prior_feedback": [],
+          "promotion_lineage": [],
+          "forecast_ref": "F2-U.json#/forecasts/4/hypotheses/0",
+          "hypothesis_ref": "F2-U.json#/rows/4/hypotheses/0",
+          "feedback_ref": "F2-U.json#/rows/4/updates/0"
+        }
+      ],
+      "next_eligible_forecast": {
+        "target": 27,
+        "key": [
+          0,
+          1,
+          0
+        ],
+        "cold": false,
+        "ec": 0.0,
+        "ep": 0.0078125,
+        "feedback": "ACCEPTED",
+        "raw_errors": [
+          0.0,
+          0.0078125
+        ],
+        "prior_feedback": [
+          11,
+          23
+        ],
+        "promotion_lineage": [
+          {
+            "at": 12,
+            "new_key": [
+              0,
+              1,
+              0
+            ],
+            "old_key": [
+              1,
+              2,
+              0
+            ]
+          }
+        ],
+        "forecast_ref": "F2-U.json#/forecasts/12/hypotheses/0",
+        "hypothesis_ref": "F2-U.json#/rows/12/hypotheses/0",
+        "feedback_ref": "F2-U.json#/rows/12/updates/0"
+      },
+      "appearances": [
+        {
+          "target": 11,
+          "key": [
+            1,
+            2,
+            0
+          ],
+          "cold": true,
+          "ec": null,
+          "ep": null,
+          "feedback": "ACCEPTED",
+          "raw_errors": [
+            0.0,
+            0.0078125
+          ],
+          "prior_feedback": [],
+          "promotion_lineage": [],
+          "forecast_ref": "F2-U.json#/forecasts/4/hypotheses/0",
+          "hypothesis_ref": "F2-U.json#/rows/4/hypotheses/0",
+          "feedback_ref": "F2-U.json#/rows/4/updates/0"
+        },
+        {
+          "target": 23,
+          "key": [
+            0,
+            1,
+            0
+          ],
+          "cold": false,
+          "ec": 0.0,
+          "ep": 0.0078125,
+          "feedback": "ACCEPTED",
+          "raw_errors": [
+            0.0,
+            0.0078125
+          ],
+          "prior_feedback": [
+            11
+          ],
+          "promotion_lineage": [
+            {
+              "at": 12,
+              "new_key": [
+                0,
+                1,
+                0
+              ],
+              "old_key": [
+                1,
+                2,
+                0
+              ]
+            }
+          ],
+          "forecast_ref": "F2-U.json#/forecasts/10/hypotheses/0",
+          "hypothesis_ref": "F2-U.json#/rows/10/hypotheses/0",
+          "feedback_ref": "F2-U.json#/rows/10/updates/0"
+        },
+        {
+          "target": 27,
+          "key": [
+            0,
+            1,
+            0
+          ],
+          "cold": false,
+          "ec": 0.0,
+          "ep": 0.0078125,
+          "feedback": "ACCEPTED",
+          "raw_errors": [
+            0.0,
+            0.0078125
+          ],
+          "prior_feedback": [
+            11,
+            23
+          ],
+          "promotion_lineage": [
+            {
+              "at": 12,
+              "new_key": [
+                0,
+                1,
+                0
+              ],
+              "old_key": [
+                1,
+                2,
+                0
+              ]
+            }
+          ],
+          "forecast_ref": "F2-U.json#/forecasts/12/hypotheses/0",
+          "hypothesis_ref": "F2-U.json#/rows/12/hypotheses/0",
+          "feedback_ref": "F2-U.json#/rows/12/updates/0"
+        },
+        {
+          "target": 39,
+          "key": [
+            0,
+            1,
+            0
+          ],
+          "cold": false,
+          "ec": 0.0,
+          "ep": 0.0078125,
+          "feedback": "ACCEPTED",
+          "raw_errors": [
+            0.0,
+            0.0078125
+          ],
+          "prior_feedback": [
+            11,
+            23,
+            27
+          ],
+          "promotion_lineage": [
+            {
+              "at": 12,
+              "new_key": [
+                0,
+                1,
+                0
+              ],
+              "old_key": [
+                1,
+                2,
+                0
+              ]
+            }
+          ],
+          "forecast_ref": "F2-U.json#/forecasts/18/hypotheses/0",
+          "hypothesis_ref": "F2-U.json#/rows/18/hypotheses/0",
+          "feedback_ref": "F2-U.json#/rows/18/updates/0"
+        },
+        {
+          "target": 43,
+          "key": [
+            0,
+            1,
+            0
+          ],
+          "cold": false,
+          "ec": 0.0,
+          "ep": 0.0078125,
+          "feedback": "ACCEPTED",
+          "raw_errors": [
+            0.0,
+            0.0078125
+          ],
+          "prior_feedback": [
+            11,
+            23,
+            27,
+            39
+          ],
+          "promotion_lineage": [
+            {
+              "at": 12,
+              "new_key": [
+                0,
+                1,
+                0
+              ],
+              "old_key": [
+                1,
+                2,
+                0
+              ]
+            }
+          ],
+          "forecast_ref": "F2-U.json#/forecasts/20/hypotheses/0",
+          "hypothesis_ref": "F2-U.json#/rows/20/hypotheses/0",
+          "feedback_ref": "F2-U.json#/rows/20/updates/0"
+        },
+        {
+          "target": 55,
+          "key": [
+            0,
+            1,
+            0
+          ],
+          "cold": false,
+          "ec": 0.0,
+          "ep": 0.0078125,
+          "feedback": "ACCEPTED",
+          "raw_errors": [
+            0.0,
+            0.0078125
+          ],
+          "prior_feedback": [
+            11,
+            23,
+            27,
+            39,
+            43
+          ],
+          "promotion_lineage": [
+            {
+              "at": 12,
+              "new_key": [
+                0,
+                1,
+                0
+              ],
+              "old_key": [
+                1,
+                2,
+                0
+              ]
+            }
+          ],
+          "forecast_ref": "F2-U.json#/forecasts/26/hypotheses/0",
+          "hypothesis_ref": "F2-U.json#/rows/26/hypotheses/0",
+          "feedback_ref": "F2-U.json#/rows/26/updates/0"
+        },
+        {
+          "target": 59,
+          "key": [
+            0,
+            1,
+            0
+          ],
+          "cold": false,
+          "ec": 0.0,
+          "ep": 0.0078125,
+          "feedback": "ACCEPTED",
+          "raw_errors": [
+            0.0,
+            0.0078125
+          ],
+          "prior_feedback": [
+            11,
+            23,
+            27,
+            39,
+            43,
+            55
+          ],
+          "promotion_lineage": [
+            {
+              "at": 12,
+              "new_key": [
+                0,
+                1,
+                0
+              ],
+              "old_key": [
+                1,
+                2,
+                0
+              ]
+            }
+          ],
+          "forecast_ref": "F2-U.json#/forecasts/28/hypotheses/0",
+          "hypothesis_ref": "F2-U.json#/rows/28/hypotheses/0",
+          "feedback_ref": "F2-U.json#/rows/28/updates/0"
+        }
+      ],
+      "key_changes": [
+        {
+          "index": 8,
+          "kind": "ORIGINAL_ADMITTED",
+          "old_key": null,
+          "new_key": [
+            1,
+            2,
+            0
+          ],
+          "event_ref": "F2-U.json#/events/7"
+        },
+        {
+          "index": 12,
+          "kind": "PROMOTED_SAME_ORIGINAL",
+          "old_key": [
+            1,
+            2,
+            0
+          ],
+          "new_key": [
+            0,
+            1,
+            0
+          ],
+          "event_ref": "F2-U.json#/events/11"
+        }
+      ],
+      "removal": null,
+      "present_at_last_admission": true,
+      "end": "STORY_END_AFTER_80",
+      "cleanup_verified": true,
+      "later_value_equal_hints": [
+        {
+          "target": 27,
+          "censored": false,
+          "actually_eligible": true,
+          "evidence": "F2-source.json#/values (decoded positions 25,26; originals 5,6)"
+        },
+        {
+          "target": 39,
+          "censored": false,
+          "actually_eligible": true,
+          "evidence": "F2-source.json#/values (decoded positions 37,38; originals 5,6)"
+        },
+        {
+          "target": 43,
+          "censored": false,
+          "actually_eligible": true,
+          "evidence": "F2-source.json#/values (decoded positions 41,42; originals 5,6)"
+        },
+        {
+          "target": 55,
+          "censored": false,
+          "actually_eligible": true,
+          "evidence": "F2-source.json#/values (decoded positions 53,54; originals 5,6)"
+        },
+        {
+          "target": 59,
+          "censored": false,
+          "actually_eligible": true,
+          "evidence": "F2-source.json#/values (decoded positions 57,58; originals 5,6)"
+        }
+      ],
+      "diagnosis": "ACCEPTED_LATER_RETRIEVAL",
+      "cold_at_target_cause": "SEE_CHAIN",
+      "future_hint_scope": "Read-only value comparison; missing original means NOT a live eligible retrieval",
+      "cell_evidence_scope": "Accepted update is directly recorded. Promotion cell preservation is certified by saved reference_equal and frozen code, not a separate post-promotion cell dump."
+    },
+    "counterpart": {
+      "arm": "K1",
+      "original_ordinals": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "offset": 0,
+      "original_successor": 7,
+      "input_positions": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "admission_positions": [
+        6,
+        6,
+        8,
+        8
+      ],
+      "formation": null,
+      "first_eligible_forecast": null,
+      "current": null,
+      "previous_eligible_forecasts": [],
+      "next_eligible_forecast": null,
+      "appearances": [],
+      "key_changes": [],
+      "removal": null,
+      "present_at_last_admission": false,
+      "end": null,
+      "cleanup_verified": true,
+      "later_value_equal_hints": [
+        {
+          "target": 27,
+          "censored": false,
+          "actually_eligible": false,
+          "evidence": "F2-source.json#/values (decoded positions 25,26; originals 5,6)"
+        },
+        {
+          "target": 39,
+          "censored": false,
+          "actually_eligible": false,
+          "evidence": "F2-source.json#/values (decoded positions 37,38; originals 5,6)"
+        },
+        {
+          "target": 43,
+          "censored": false,
+          "actually_eligible": false,
+          "evidence": "F2-source.json#/values (decoded positions 41,42; originals 5,6)"
+        },
+        {
+          "target": 55,
+          "censored": false,
+          "actually_eligible": false,
+          "evidence": "F2-source.json#/values (decoded positions 53,54; originals 5,6)"
+        },
+        {
+          "target": 59,
+          "censored": false,
+          "actually_eligible": false,
+          "evidence": "F2-source.json#/values (decoded positions 57,58; originals 5,6)"
+        }
+      ],
+      "diagnosis": "NOT_RECORDED",
+      "cold_at_target_cause": "SEE_CHAIN",
+      "future_hint_scope": "Read-only value comparison; missing original means NOT a live eligible retrieval",
+      "cell_evidence_scope": "Accepted update is directly recorded. Promotion cell preservation is certified by saved reference_equal and frozen code, not a separate post-promotion cell dump."
+    }
+  }
+]

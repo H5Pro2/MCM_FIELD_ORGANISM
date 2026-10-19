@@ -1,0 +1,69 @@
+{
+  "schema": "MCM-UH1-specification-v1",
+  "status": "SPECIFIED_PENDING_ACCEPTANCE_NO_IMPLEMENTATION_OR_REPLAY",
+  "known_sources": true,
+  "research_authorized": false,
+  "implementation_authorized": false,
+  "hx1_authorization_consumed": true,
+  "source_binding_sha256": "4fe4a3d7796c2dee2e29868eec0279b724800f98a12da3a361579f4bb4da02b6",
+  "contract_sha256": "90275575d8028d262c40b207a1ac327fc728c28b4f0a98844b53881dbd90d4f1",
+  "files": {
+    "docs/S2UC_UH1_PRUEFVERTRAG_20261004.md": {
+      "bytes": 23717,
+      "sha256": "90275575d8028d262c40b207a1ac327fc728c28b4f0a98844b53881dbd90d4f1"
+    },
+    "docs/S2UC_UH1_QUELLENBINDUNG_20261004.json": {
+      "bytes": 19827,
+      "sha256": "4fe4a3d7796c2dee2e29868eec0279b724800f98a12da3a361579f4bb4da02b6"
+    },
+    "docs/S2UC_HX1_V1_20261004_CODEBINDUNG.json": {
+      "bytes": 14389,
+      "sha256": "66dfca57e696747b9125333f58666afab7dd23745c69ba0a78deea7250e1bf1c"
+    },
+    "docs/S2UC_HX1_PRUEFVERTRAG_20261004.md": {
+      "bytes": 28753,
+      "sha256": "ecc61e0ff23f8d5114884b96a7ab06b890df6fe11fbfc7d6d70246d26782babf"
+    },
+    "docs/S2UC_HX1_SPEICHERGRENZE_ERGAENZUNGSBINDUNG_20261004.json": {
+      "bytes": 3231,
+      "sha256": "b134eb66d8c633debc46901be0ea7ea0c518dd18f004cdb52491e9b6362af580"
+    }
+  },
+  "static_checks": {
+    "existing_source_hashes_verified": 64,
+    "existing_source_bytes": 396416,
+    "original_hx1_production_files_unchanged": 139,
+    "source_materializations": 0,
+    "policy_replays": 0,
+    "neutral_tests_executed": 0,
+    "bootstrap_matrix_generated": false,
+    "research_output_exists": false
+  },
+  "bootstrap": {
+    "draws": 10000,
+    "namespace": "MCM-UH1/bootstrap/v1/z={z}/orientation={o}/k={k}",
+    "orientations": 2,
+    "draws_per_orientation": 16,
+    "replicate_formula": "2*(uint64_be_sha256_prefix8 mod 16)+1+orientation",
+    "matrix_byte_encoding": "replicate-1, z then orientation then k",
+    "primary_quantiles": [
+      "1/40",
+      "39/40"
+    ],
+    "matrix_generation": "ONLY_AFTER_SEPARATE_DEVELOPMENT_AUTHORIZATION"
+  },
+  "resource_limits": {
+    "total_seconds": 3600,
+    "worker_deadline_seconds_from_supervisor_start": 3540,
+    "terminal_reserve_seconds": 60,
+    "aggregate_process_bytes": 536870912,
+    "total_export_bytes": 67108864,
+    "preparation_bytes": 8388608,
+    "source_total_bytes": 2097152,
+    "case_total_bytes": 33554432,
+    "admin_bytes": 2097152,
+    "terminal_reserve_bytes": 1048576,
+    "H_numeric_bytes": 4096,
+    "H_own_heap_bytes": 32768
+  }
+}

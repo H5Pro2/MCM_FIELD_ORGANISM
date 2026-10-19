@@ -1,0 +1,262 @@
+{
+  "INTERPRETER_BASE": {
+    "intervals": 1,
+    "duration_ms": 100.2753,
+    "sampled_intervals": 1,
+    "sample_count": 8,
+    "sampled_max": {
+      "working_set": 16519168,
+      "private_commit": 11153408
+    }
+  },
+  "IMPORTS": {
+    "intervals": 1,
+    "duration_ms": 231.4395,
+    "sampled_intervals": 1,
+    "sample_count": 23,
+    "sampled_max": {
+      "working_set": 33447936,
+      "private_commit": 428806144
+    }
+  },
+  "IMPORTED_BASE": {
+    "intervals": 1,
+    "duration_ms": 100.1233,
+    "sampled_intervals": 1,
+    "sample_count": 9,
+    "sampled_max": {
+      "working_set": 33533952,
+      "private_commit": 428806144
+    }
+  },
+  "PRESTART_VALIDATION": {
+    "intervals": 1,
+    "duration_ms": 4878.2489,
+    "sampled_intervals": 1,
+    "sample_count": 468,
+    "sampled_max": {
+      "working_set": 69455872,
+      "private_commit": 462536704
+    }
+  },
+  "MATERIALIZATION": {
+    "intervals": 58,
+    "duration_ms": 392.1149,
+    "sampled_intervals": 37,
+    "sample_count": 38,
+    "sampled_max": {
+      "working_set": 52518912,
+      "private_commit": 445071360
+    }
+  },
+  "CONNECTION": {
+    "intervals": 1,
+    "duration_ms": 399.9202,
+    "sampled_intervals": 1,
+    "sample_count": 39,
+    "sampled_max": {
+      "working_set": 52518912,
+      "private_commit": 445071360
+    }
+  },
+  "OWNER_CLEANUP": {
+    "intervals": 2,
+    "duration_ms": 0.0489,
+    "sampled_intervals": 0,
+    "sample_count": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  "SOURCE_COMPLETION": {
+    "intervals": 1,
+    "duration_ms": 0.0383,
+    "sampled_intervals": 0,
+    "sample_count": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  "CODEC_ENCODE": {
+    "intervals": 1,
+    "duration_ms": 9.7067,
+    "sampled_intervals": 1,
+    "sample_count": 1,
+    "sampled_max": {
+      "working_set": 49524736,
+      "private_commit": 441921536
+    }
+  },
+  "CODEC_DECODE": {
+    "intervals": 2,
+    "duration_ms": 11.6628,
+    "sampled_intervals": 1,
+    "sample_count": 1,
+    "sampled_max": {
+      "working_set": 50585600,
+      "private_commit": 443179008
+    }
+  },
+  "REREAD_publication.tmp": {
+    "intervals": 4,
+    "duration_ms": 25.6291,
+    "sampled_intervals": 2,
+    "sample_count": 2,
+    "sampled_max": {
+      "working_set": 50855936,
+      "private_commit": 443711488
+    }
+  },
+  "REREAD_record.json": {
+    "intervals": 2,
+    "duration_ms": 0.3292,
+    "sampled_intervals": 0,
+    "sample_count": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  "PUBLISH_record.json": {
+    "intervals": 1,
+    "duration_ms": 301.8688,
+    "sampled_intervals": 1,
+    "sample_count": 29,
+    "sampled_max": {
+      "working_set": 50216960,
+      "private_commit": 442507264
+    }
+  },
+  "TECHNICAL_VERIFICATION": {
+    "intervals": 1,
+    "duration_ms": 29.8614,
+    "sampled_intervals": 1,
+    "sample_count": 2,
+    "sampled_max": {
+      "working_set": 50790400,
+      "private_commit": 443179008
+    }
+  },
+  "REREAD_verification.json": {
+    "intervals": 2,
+    "duration_ms": 0.39530000000000004,
+    "sampled_intervals": 0,
+    "sample_count": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  "PUBLISH_verification.json": {
+    "intervals": 1,
+    "duration_ms": 328.3352,
+    "sampled_intervals": 1,
+    "sample_count": 32,
+    "sampled_max": {
+      "working_set": 50839552,
+      "private_commit": 443179008
+    }
+  },
+  "REREAD_error.json": {
+    "intervals": 2,
+    "duration_ms": 0.26030000000000003,
+    "sampled_intervals": 0,
+    "sample_count": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  "PUBLISH_error.json": {
+    "intervals": 1,
+    "duration_ms": 307.3167,
+    "sampled_intervals": 1,
+    "sample_count": 29,
+    "sampled_max": {
+      "working_set": 50855936,
+      "private_commit": 443711488
+    }
+  },
+  "REREAD_terminal.json": {
+    "intervals": 3,
+    "duration_ms": 0.4184,
+    "sampled_intervals": 0,
+    "sample_count": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  "PUBLISH_terminal.json": {
+    "intervals": 1,
+    "duration_ms": 309.333,
+    "sampled_intervals": 1,
+    "sample_count": 29,
+    "sampled_max": {
+      "working_set": 50868224,
+      "private_commit": 443711488
+    }
+  },
+  "REREAD_terminal-minimal.json": {
+    "intervals": 1,
+    "duration_ms": 0.0722,
+    "sampled_intervals": 0,
+    "sample_count": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  "PUBLICATION_FINISH": {
+    "intervals": 1,
+    "duration_ms": 596.7489,
+    "sampled_intervals": 1,
+    "sample_count": 57,
+    "sampled_max": {
+      "working_set": 50868224,
+      "private_commit": 443711488
+    }
+  },
+  "ERROR_CLOSURE": {
+    "intervals": 1,
+    "duration_ms": 1800.337,
+    "sampled_intervals": 1,
+    "sample_count": 171,
+    "sampled_max": {
+      "working_set": 50868224,
+      "private_commit": 443711488
+    }
+  },
+  "RUN": {
+    "intervals": 1,
+    "duration_ms": 8075.1314,
+    "sampled_intervals": 1,
+    "sample_count": 772,
+    "sampled_max": {
+      "working_set": 69455872,
+      "private_commit": 462536704
+    }
+  },
+  "RESULT_EXPORT": {
+    "intervals": 1,
+    "duration_ms": 1.8456,
+    "sampled_intervals": 0,
+    "sample_count": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  "FINAL_HOLD": {
+    "intervals": 1,
+    "duration_ms": 13.4956,
+    "sampled_intervals": 1,
+    "sample_count": 2,
+    "sampled_max": {
+      "working_set": 50872320,
+      "private_commit": 443711488
+    }
+  }
+}

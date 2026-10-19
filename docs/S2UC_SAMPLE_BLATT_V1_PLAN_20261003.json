@@ -1,0 +1,38 @@
+{
+  "cases": [
+    "N1",
+    "N2"
+  ],
+  "frames": 80,
+  "arms": [
+    "M",
+    "E",
+    "K",
+    "P"
+  ],
+  "orders": {
+    "N1": [
+      "OLD",
+      "NEW"
+    ],
+    "N2": [
+      "NEW",
+      "OLD"
+    ]
+  },
+  "input": "fresh json.load of saved neutral source per replay; source preparation outside replay timer",
+  "old": "FrameLeafBudgetObserver",
+  "new": "SampleLeafBudgetObserver",
+  "trace": true,
+  "diagnostic_counters": false,
+  "direct_call": true,
+  "mock_frames": false,
+  "replays": 16,
+  "admissions": 1280,
+  "reference_advances": 1280,
+  "seconds": 900,
+  "bytes": 16777216,
+  "comparisons": "all non-resource functional fields; complete meter; separately full resources with every difference retained",
+  "tests": "S01-S10 in parent before spawning fresh matrix worker; no warmups or time repetitions",
+  "projection": "Retain historical6330.087716s and class4760.361887s; apply weakest measured NEW/OLD ratio only as explicitly unproved transfer scenario; keep25pct and180+30+60s allowances. Also compare neutral80s context maxima,charging80s for48s; stack overhead transfer remains unknown."
+}

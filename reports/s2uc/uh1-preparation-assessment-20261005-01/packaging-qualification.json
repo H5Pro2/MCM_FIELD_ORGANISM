@@ -1,0 +1,24 @@
+{
+  "status": "PASS_PACKAGING_CORRECTION",
+  "changed_functions": [
+    "seal",
+    "verify_archive"
+  ],
+  "all_other_ast_nodes_equal": true,
+  "changed_bound_files": [
+    "tools/s2uc_uh1.py"
+  ],
+  "neutral_full_size_repeated": false,
+  "original_code_binding_sha256": "819746b671810a57d83be9512f71c4a26247fa01bf5e2cc6065934238a8389e4",
+  "updated_code_binding_sha256": "be97c28b0c26facd4b22eef3f351b1d07c46d115709260b4eb717a36cd88778e",
+  "targeted_checks": [
+    "exact_gzip_reconstruction",
+    "truncated",
+    "missing",
+    "wrong_hash",
+    "duplicate",
+    "oversized"
+  ],
+  "test_fixture_correction": "First fixture lacked tests.json; supplied required test receipt, no production change.",
+  "reason": "Shared LZMA bundle, original replay files unchanged."
+}

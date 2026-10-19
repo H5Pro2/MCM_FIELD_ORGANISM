@@ -1,0 +1,139 @@
+{
+  "count": 20,
+  "success": true,
+  "errors": 0,
+  "failures": 0,
+  "tests": [
+    {
+      "id": "tests.test_s2uc_nasa_comparison.NasaComparisonTests.test_all_49_gate_targets_and_pair_bindings",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_nasa_comparison.NasaComparisonTests.test_all_49_missing_forecasts_block_before_delivery",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_nasa_comparison.NasaComparisonTests.test_error_releases_forecast_and_cache",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_nasa_comparison.NasaComparisonTests.test_inventory_and_bound_file_fail_closed",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_nasa_comparison.NasaComparisonTests.test_neutral_admission_state_and_end_release",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_nasa_comparison.NasaComparisonTests.test_source_time_profile_digest_mutations",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_nasa_comparison.NasaComparisonTests.test_wrong_target_or_pair_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_continuation_adapter.ContinuationTests.test_before_admission_and_immutable",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_continuation_adapter.ContinuationTests.test_error_close_release_and_no_feedback",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_continuation_adapter.ContinuationTests.test_evaluation_failure_releases_slots",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_continuation_adapter.ContinuationTests.test_eviction_does_not_change_prediction",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_continuation_adapter.ContinuationTests.test_factor_and_end_abstain",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_continuation_adapter.ContinuationTests.test_methods_unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_continuation_adapter.ContinuationTests.test_one_ulp_not_tolerated",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_gap_terminates_no_cross_pair",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_no_self_match_and_admission_once",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_receipt_has_no_payload",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_receipt_not_input",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_remainder_and_reset",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_scope_and_time_errors",
+      "status": "PASS"
+    }
+  ],
+  "negative_future_targets": [
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21,
+    23,
+    25,
+    27,
+    29,
+    31,
+    33,
+    35,
+    37,
+    39,
+    41,
+    43,
+    45,
+    47,
+    49,
+    51,
+    53,
+    55,
+    57,
+    59,
+    61,
+    63,
+    65,
+    67,
+    69,
+    71,
+    73,
+    75,
+    77,
+    79,
+    81,
+    83,
+    85,
+    87,
+    89,
+    91,
+    93,
+    95,
+    97,
+    99
+  ]
+}

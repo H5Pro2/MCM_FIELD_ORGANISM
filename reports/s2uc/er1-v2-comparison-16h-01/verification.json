@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "workflow": "35ed7d72-d2bc-4a38-9376-6a4f15897bfb",
+  "prestart_sha256": "0d67e76c14afa1e74a19dd7190857e68a19062abd26fd2af484c85b761a8f2b7",
+  "binding_files": 2979,
+  "qualification_files": 72,
+  "closure_files": 135,
+  "sources": 32,
+  "source_manifest_sha256": "c02123440d8e6e5c47816284329c694703e055f98671ef93f273fd75ba1452da",
+  "cases": 32,
+  "execution_totals": {
+    "archive_reference": 64,
+    "extra_policy_measurement": 0,
+    "live_reference": 64,
+    "policy": 64
+  },
+  "statistics_reference_equal": true,
+  "cost_reference_equal": true,
+  "mechanism_aggregates_equal": true,
+  "mechanism_archive_checks": "ARCHIVE_MECHANISMS on every completed case; reconstructed observer and independent policy reference",
+  "historical_files": 2967,
+  "historical_qualification": 43,
+  "historical_abort_files": 43,
+  "authorization_sha256": "2189f18704e814d0fc1a8570e25b4d3f8fa5aa504dcbc4ce5d228c2ff5a779be",
+  "consumed_sha256": "29867ef3d3ec3c08e32d3f16f3836d5fb981cd3d71bb3af45e6cb6909e54b16e",
+  "start_sha256": "9ca4bc0cf361b341e021e1aba65ec3728dc6dc685d3dd10ee123caaea3dc8fa5",
+  "terminal_sha256": "13d1b260fd494b36ae4fac6c63fd2ac85e35c0486341b4f6e141425c2124341c",
+  "closure_sha256": "26c82f5e0b37f93569180603a709898d45305fb6747249a77becda31741209b2",
+  "resource_peaks": {
+    "gzip_bytes": 180593,
+    "encoded_bytes": 1055121,
+    "dictionary": 1000786,
+    "nodes": 14678,
+    "edges": 134010,
+    "indices": 10292,
+    "collections": 14,
+    "record_peak": 16845,
+    "observer_deep": 4947590,
+    "mechanisms_deep": 64087
+  },
+  "archives_total": 5485911,
+  "inventory_before_report": {
+    "source": 238048,
+    "archive": 5485911,
+    "admin": 283151,
+    "closure": 32150,
+    "temp": 0
+  }
+}

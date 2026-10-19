@@ -1,0 +1,491 @@
+test_01_full_parent_and_exact_extract (tests.test_s2oe_immediate_visual_input.InputTests.test_01_full_parent_and_exact_extract) ... ERROR
+test_02_missing_parent (tests.test_s2oe_immediate_visual_input.InputTests.test_02_missing_parent) ... ERROR
+test_03_tampered_parent (tests.test_s2oe_immediate_visual_input.InputTests.test_03_tampered_parent) ... ERROR
+test_04_wrong_event (tests.test_s2oe_immediate_visual_input.InputTests.test_04_wrong_event) ... ERROR
+test_05_missing_values (tests.test_s2oe_immediate_visual_input.InputTests.test_05_missing_values) ... ERROR
+test_06_tampered_excerpt (tests.test_s2oe_immediate_visual_input.InputTests.test_06_tampered_excerpt) ... ERROR
+test_07_wrong_profile (tests.test_s2oe_immediate_visual_input.InputTests.test_07_wrong_profile) ... ERROR
+test_08_source_binding (tests.test_s2oe_immediate_visual_input.InputTests.test_08_source_binding) ... ERROR
+test_09_read_bytes_not_storage_multiplicity (tests.test_s2oe_immediate_visual_input.InputTests.test_09_read_bytes_not_storage_multiplicity) ... ERROR
+test_10_scope_closed (tests.test_s2oe_immediate_visual_input.InputTests.test_10_scope_closed) ... ERROR
+test_11_historical_limit (tests.test_s2oe_immediate_visual_input.InputTests.test_11_historical_limit) ... ERROR
+test_12_global_limit (tests.test_s2oe_immediate_visual_input.InputTests.test_12_global_limit) ... ERROR
+test_13_existing_class_limits (tests.test_s2oe_immediate_visual_input.InputTests.test_13_existing_class_limits) ... ERROR
+test_14_native_empty_formation_immediate (tests.test_s2oe_immediate_visual_input.InputTests.test_14_native_empty_formation_immediate) ... ERROR
+test_15_extraction_immutable (tests.test_s2oe_immediate_visual_input.InputTests.test_15_extraction_immutable) ... ERROR
+test_16_real_gate_closed (tests.test_s2oe_immediate_visual_input.InputTests.test_16_real_gate_closed) ... ERROR
+test_17_shared_limit (tests.test_s2oe_immediate_visual_input.InputTests.test_17_shared_limit) ... ERROR
+test_18_invalid_parent_structure (tests.test_s2oe_immediate_visual_input.InputTests.test_18_invalid_parent_structure) ... ERROR
+
+======================================================================
+ERROR: test_01_full_parent_and_exact_extract (tests.test_s2oe_immediate_visual_input.InputTests.test_01_full_parent_and_exact_extract)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 42, in setUp
+    self.raw,self.binding = fixture(self.path)
+                            ~~~~~~~^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 22, in fixture
+    bound = n.bind_event(config=config,event_id="media-event-03",ordinal=3,
+        event_type="COMPLETE_AV_PERCEPTION",field_start_tick=300000000,
+        common_time=n.CommonFieldTime("s2ob-caller-field-clock",400000000,500000000),
+        raw_audio=raw,pcm_digest="1"*64,visual=visual,rgb_digest="2"*64,visual_time_binding=vt)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 86, in bind_event
+    require(full and type(visual_time_binding) is CommonFieldTime
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        and visual.field_time == visual_time_binding
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        and visual_time_binding.window_start_tick <= common_time.window_start_tick
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        < common_time.window_end_tick, "VISUAL_TIME_BINDING_INVALID")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 30, in require
+    raise S2NNError(code)
+tools._s2nn_private_half_runtime_binding.S2NNError: VISUAL_TIME_BINDING_INVALID
+
+======================================================================
+ERROR: test_02_missing_parent (tests.test_s2oe_immediate_visual_input.InputTests.test_02_missing_parent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 42, in setUp
+    self.raw,self.binding = fixture(self.path)
+                            ~~~~~~~^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 22, in fixture
+    bound = n.bind_event(config=config,event_id="media-event-03",ordinal=3,
+        event_type="COMPLETE_AV_PERCEPTION",field_start_tick=300000000,
+        common_time=n.CommonFieldTime("s2ob-caller-field-clock",400000000,500000000),
+        raw_audio=raw,pcm_digest="1"*64,visual=visual,rgb_digest="2"*64,visual_time_binding=vt)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 86, in bind_event
+    require(full and type(visual_time_binding) is CommonFieldTime
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        and visual.field_time == visual_time_binding
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        and visual_time_binding.window_start_tick <= common_time.window_start_tick
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        < common_time.window_end_tick, "VISUAL_TIME_BINDING_INVALID")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 30, in require
+    raise S2NNError(code)
+tools._s2nn_private_half_runtime_binding.S2NNError: VISUAL_TIME_BINDING_INVALID
+
+======================================================================
+ERROR: test_03_tampered_parent (tests.test_s2oe_immediate_visual_input.InputTests.test_03_tampered_parent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 42, in setUp
+    self.raw,self.binding = fixture(self.path)
+                            ~~~~~~~^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 22, in fixture
+    bound = n.bind_event(config=config,event_id="media-event-03",ordinal=3,
+        event_type="COMPLETE_AV_PERCEPTION",field_start_tick=300000000,
+        common_time=n.CommonFieldTime("s2ob-caller-field-clock",400000000,500000000),
+        raw_audio=raw,pcm_digest="1"*64,visual=visual,rgb_digest="2"*64,visual_time_binding=vt)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 86, in bind_event
+    require(full and type(visual_time_binding) is CommonFieldTime
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        and visual.field_time == visual_time_binding
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        and visual_time_binding.window_start_tick <= common_time.window_start_tick
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        < common_time.window_end_tick, "VISUAL_TIME_BINDING_INVALID")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 30, in require
+    raise S2NNError(code)
+tools._s2nn_private_half_runtime_binding.S2NNError: VISUAL_TIME_BINDING_INVALID
+
+======================================================================
+ERROR: test_04_wrong_event (tests.test_s2oe_immediate_visual_input.InputTests.test_04_wrong_event)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 42, in setUp
+    self.raw,self.binding = fixture(self.path)
+                            ~~~~~~~^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 22, in fixture
+    bound = n.bind_event(config=config,event_id="media-event-03",ordinal=3,
+        event_type="COMPLETE_AV_PERCEPTION",field_start_tick=300000000,
+        common_time=n.CommonFieldTime("s2ob-caller-field-clock",400000000,500000000),
+        raw_audio=raw,pcm_digest="1"*64,visual=visual,rgb_digest="2"*64,visual_time_binding=vt)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 86, in bind_event
+    require(full and type(visual_time_binding) is CommonFieldTime
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        and visual.field_time == visual_time_binding
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        and visual_time_binding.window_start_tick <= common_time.window_start_tick
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        < common_time.window_end_tick, "VISUAL_TIME_BINDING_INVALID")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 30, in require
+    raise S2NNError(code)
+tools._s2nn_private_half_runtime_binding.S2NNError: VISUAL_TIME_BINDING_INVALID
+
+======================================================================
+ERROR: test_05_missing_values (tests.test_s2oe_immediate_visual_input.InputTests.test_05_missing_values)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 42, in setUp
+    self.raw,self.binding = fixture(self.path)
+                            ~~~~~~~^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 22, in fixture
+    bound = n.bind_event(config=config,event_id="media-event-03",ordinal=3,
+        event_type="COMPLETE_AV_PERCEPTION",field_start_tick=300000000,
+        common_time=n.CommonFieldTime("s2ob-caller-field-clock",400000000,500000000),
+        raw_audio=raw,pcm_digest="1"*64,visual=visual,rgb_digest="2"*64,visual_time_binding=vt)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 86, in bind_event
+    require(full and type(visual_time_binding) is CommonFieldTime
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        and visual.field_time == visual_time_binding
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        and visual_time_binding.window_start_tick <= common_time.window_start_tick
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        < common_time.window_end_tick, "VISUAL_TIME_BINDING_INVALID")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 30, in require
+    raise S2NNError(code)
+tools._s2nn_private_half_runtime_binding.S2NNError: VISUAL_TIME_BINDING_INVALID
+
+======================================================================
+ERROR: test_06_tampered_excerpt (tests.test_s2oe_immediate_visual_input.InputTests.test_06_tampered_excerpt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 42, in setUp
+    self.raw,self.binding = fixture(self.path)
+                            ~~~~~~~^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 22, in fixture
+    bound = n.bind_event(config=config,event_id="media-event-03",ordinal=3,
+        event_type="COMPLETE_AV_PERCEPTION",field_start_tick=300000000,
+        common_time=n.CommonFieldTime("s2ob-caller-field-clock",400000000,500000000),
+        raw_audio=raw,pcm_digest="1"*64,visual=visual,rgb_digest="2"*64,visual_time_binding=vt)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 86, in bind_event
+    require(full and type(visual_time_binding) is CommonFieldTime
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        and visual.field_time == visual_time_binding
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        and visual_time_binding.window_start_tick <= common_time.window_start_tick
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        < common_time.window_end_tick, "VISUAL_TIME_BINDING_INVALID")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 30, in require
+    raise S2NNError(code)
+tools._s2nn_private_half_runtime_binding.S2NNError: VISUAL_TIME_BINDING_INVALID
+
+======================================================================
+ERROR: test_07_wrong_profile (tests.test_s2oe_immediate_visual_input.InputTests.test_07_wrong_profile)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 42, in setUp
+    self.raw,self.binding = fixture(self.path)
+                            ~~~~~~~^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 22, in fixture
+    bound = n.bind_event(config=config,event_id="media-event-03",ordinal=3,
+        event_type="COMPLETE_AV_PERCEPTION",field_start_tick=300000000,
+        common_time=n.CommonFieldTime("s2ob-caller-field-clock",400000000,500000000),
+        raw_audio=raw,pcm_digest="1"*64,visual=visual,rgb_digest="2"*64,visual_time_binding=vt)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 86, in bind_event
+    require(full and type(visual_time_binding) is CommonFieldTime
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        and visual.field_time == visual_time_binding
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        and visual_time_binding.window_start_tick <= common_time.window_start_tick
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        < common_time.window_end_tick, "VISUAL_TIME_BINDING_INVALID")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 30, in require
+    raise S2NNError(code)
+tools._s2nn_private_half_runtime_binding.S2NNError: VISUAL_TIME_BINDING_INVALID
+
+======================================================================
+ERROR: test_08_source_binding (tests.test_s2oe_immediate_visual_input.InputTests.test_08_source_binding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 42, in setUp
+    self.raw,self.binding = fixture(self.path)
+                            ~~~~~~~^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 22, in fixture
+    bound = n.bind_event(config=config,event_id="media-event-03",ordinal=3,
+        event_type="COMPLETE_AV_PERCEPTION",field_start_tick=300000000,
+        common_time=n.CommonFieldTime("s2ob-caller-field-clock",400000000,500000000),
+        raw_audio=raw,pcm_digest="1"*64,visual=visual,rgb_digest="2"*64,visual_time_binding=vt)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 86, in bind_event
+    require(full and type(visual_time_binding) is CommonFieldTime
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        and visual.field_time == visual_time_binding
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        and visual_time_binding.window_start_tick <= common_time.window_start_tick
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        < common_time.window_end_tick, "VISUAL_TIME_BINDING_INVALID")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 30, in require
+    raise S2NNError(code)
+tools._s2nn_private_half_runtime_binding.S2NNError: VISUAL_TIME_BINDING_INVALID
+
+======================================================================
+ERROR: test_09_read_bytes_not_storage_multiplicity (tests.test_s2oe_immediate_visual_input.InputTests.test_09_read_bytes_not_storage_multiplicity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 42, in setUp
+    self.raw,self.binding = fixture(self.path)
+                            ~~~~~~~^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 22, in fixture
+    bound = n.bind_event(config=config,event_id="media-event-03",ordinal=3,
+        event_type="COMPLETE_AV_PERCEPTION",field_start_tick=300000000,
+        common_time=n.CommonFieldTime("s2ob-caller-field-clock",400000000,500000000),
+        raw_audio=raw,pcm_digest="1"*64,visual=visual,rgb_digest="2"*64,visual_time_binding=vt)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 86, in bind_event
+    require(full and type(visual_time_binding) is CommonFieldTime
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        and visual.field_time == visual_time_binding
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        and visual_time_binding.window_start_tick <= common_time.window_start_tick
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        < common_time.window_end_tick, "VISUAL_TIME_BINDING_INVALID")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 30, in require
+    raise S2NNError(code)
+tools._s2nn_private_half_runtime_binding.S2NNError: VISUAL_TIME_BINDING_INVALID
+
+======================================================================
+ERROR: test_10_scope_closed (tests.test_s2oe_immediate_visual_input.InputTests.test_10_scope_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 42, in setUp
+    self.raw,self.binding = fixture(self.path)
+                            ~~~~~~~^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 22, in fixture
+    bound = n.bind_event(config=config,event_id="media-event-03",ordinal=3,
+        event_type="COMPLETE_AV_PERCEPTION",field_start_tick=300000000,
+        common_time=n.CommonFieldTime("s2ob-caller-field-clock",400000000,500000000),
+        raw_audio=raw,pcm_digest="1"*64,visual=visual,rgb_digest="2"*64,visual_time_binding=vt)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 86, in bind_event
+    require(full and type(visual_time_binding) is CommonFieldTime
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        and visual.field_time == visual_time_binding
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        and visual_time_binding.window_start_tick <= common_time.window_start_tick
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        < common_time.window_end_tick, "VISUAL_TIME_BINDING_INVALID")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 30, in require
+    raise S2NNError(code)
+tools._s2nn_private_half_runtime_binding.S2NNError: VISUAL_TIME_BINDING_INVALID
+
+======================================================================
+ERROR: test_11_historical_limit (tests.test_s2oe_immediate_visual_input.InputTests.test_11_historical_limit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 42, in setUp
+    self.raw,self.binding = fixture(self.path)
+                            ~~~~~~~^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 22, in fixture
+    bound = n.bind_event(config=config,event_id="media-event-03",ordinal=3,
+        event_type="COMPLETE_AV_PERCEPTION",field_start_tick=300000000,
+        common_time=n.CommonFieldTime("s2ob-caller-field-clock",400000000,500000000),
+        raw_audio=raw,pcm_digest="1"*64,visual=visual,rgb_digest="2"*64,visual_time_binding=vt)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 86, in bind_event
+    require(full and type(visual_time_binding) is CommonFieldTime
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        and visual.field_time == visual_time_binding
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        and visual_time_binding.window_start_tick <= common_time.window_start_tick
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        < common_time.window_end_tick, "VISUAL_TIME_BINDING_INVALID")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 30, in require
+    raise S2NNError(code)
+tools._s2nn_private_half_runtime_binding.S2NNError: VISUAL_TIME_BINDING_INVALID
+
+======================================================================
+ERROR: test_12_global_limit (tests.test_s2oe_immediate_visual_input.InputTests.test_12_global_limit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 42, in setUp
+    self.raw,self.binding = fixture(self.path)
+                            ~~~~~~~^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 22, in fixture
+    bound = n.bind_event(config=config,event_id="media-event-03",ordinal=3,
+        event_type="COMPLETE_AV_PERCEPTION",field_start_tick=300000000,
+        common_time=n.CommonFieldTime("s2ob-caller-field-clock",400000000,500000000),
+        raw_audio=raw,pcm_digest="1"*64,visual=visual,rgb_digest="2"*64,visual_time_binding=vt)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 86, in bind_event
+    require(full and type(visual_time_binding) is CommonFieldTime
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        and visual.field_time == visual_time_binding
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        and visual_time_binding.window_start_tick <= common_time.window_start_tick
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        < common_time.window_end_tick, "VISUAL_TIME_BINDING_INVALID")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 30, in require
+    raise S2NNError(code)
+tools._s2nn_private_half_runtime_binding.S2NNError: VISUAL_TIME_BINDING_INVALID
+
+======================================================================
+ERROR: test_13_existing_class_limits (tests.test_s2oe_immediate_visual_input.InputTests.test_13_existing_class_limits)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 42, in setUp
+    self.raw,self.binding = fixture(self.path)
+                            ~~~~~~~^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 22, in fixture
+    bound = n.bind_event(config=config,event_id="media-event-03",ordinal=3,
+        event_type="COMPLETE_AV_PERCEPTION",field_start_tick=300000000,
+        common_time=n.CommonFieldTime("s2ob-caller-field-clock",400000000,500000000),
+        raw_audio=raw,pcm_digest="1"*64,visual=visual,rgb_digest="2"*64,visual_time_binding=vt)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 86, in bind_event
+    require(full and type(visual_time_binding) is CommonFieldTime
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        and visual.field_time == visual_time_binding
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        and visual_time_binding.window_start_tick <= common_time.window_start_tick
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        < common_time.window_end_tick, "VISUAL_TIME_BINDING_INVALID")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 30, in require
+    raise S2NNError(code)
+tools._s2nn_private_half_runtime_binding.S2NNError: VISUAL_TIME_BINDING_INVALID
+
+======================================================================
+ERROR: test_14_native_empty_formation_immediate (tests.test_s2oe_immediate_visual_input.InputTests.test_14_native_empty_formation_immediate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 42, in setUp
+    self.raw,self.binding = fixture(self.path)
+                            ~~~~~~~^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 22, in fixture
+    bound = n.bind_event(config=config,event_id="media-event-03",ordinal=3,
+        event_type="COMPLETE_AV_PERCEPTION",field_start_tick=300000000,
+        common_time=n.CommonFieldTime("s2ob-caller-field-clock",400000000,500000000),
+        raw_audio=raw,pcm_digest="1"*64,visual=visual,rgb_digest="2"*64,visual_time_binding=vt)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 86, in bind_event
+    require(full and type(visual_time_binding) is CommonFieldTime
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        and visual.field_time == visual_time_binding
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        and visual_time_binding.window_start_tick <= common_time.window_start_tick
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        < common_time.window_end_tick, "VISUAL_TIME_BINDING_INVALID")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 30, in require
+    raise S2NNError(code)
+tools._s2nn_private_half_runtime_binding.S2NNError: VISUAL_TIME_BINDING_INVALID
+
+======================================================================
+ERROR: test_15_extraction_immutable (tests.test_s2oe_immediate_visual_input.InputTests.test_15_extraction_immutable)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 42, in setUp
+    self.raw,self.binding = fixture(self.path)
+                            ~~~~~~~^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 22, in fixture
+    bound = n.bind_event(config=config,event_id="media-event-03",ordinal=3,
+        event_type="COMPLETE_AV_PERCEPTION",field_start_tick=300000000,
+        common_time=n.CommonFieldTime("s2ob-caller-field-clock",400000000,500000000),
+        raw_audio=raw,pcm_digest="1"*64,visual=visual,rgb_digest="2"*64,visual_time_binding=vt)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 86, in bind_event
+    require(full and type(visual_time_binding) is CommonFieldTime
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        and visual.field_time == visual_time_binding
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        and visual_time_binding.window_start_tick <= common_time.window_start_tick
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        < common_time.window_end_tick, "VISUAL_TIME_BINDING_INVALID")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 30, in require
+    raise S2NNError(code)
+tools._s2nn_private_half_runtime_binding.S2NNError: VISUAL_TIME_BINDING_INVALID
+
+======================================================================
+ERROR: test_16_real_gate_closed (tests.test_s2oe_immediate_visual_input.InputTests.test_16_real_gate_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 42, in setUp
+    self.raw,self.binding = fixture(self.path)
+                            ~~~~~~~^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 22, in fixture
+    bound = n.bind_event(config=config,event_id="media-event-03",ordinal=3,
+        event_type="COMPLETE_AV_PERCEPTION",field_start_tick=300000000,
+        common_time=n.CommonFieldTime("s2ob-caller-field-clock",400000000,500000000),
+        raw_audio=raw,pcm_digest="1"*64,visual=visual,rgb_digest="2"*64,visual_time_binding=vt)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 86, in bind_event
+    require(full and type(visual_time_binding) is CommonFieldTime
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        and visual.field_time == visual_time_binding
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        and visual_time_binding.window_start_tick <= common_time.window_start_tick
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        < common_time.window_end_tick, "VISUAL_TIME_BINDING_INVALID")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 30, in require
+    raise S2NNError(code)
+tools._s2nn_private_half_runtime_binding.S2NNError: VISUAL_TIME_BINDING_INVALID
+
+======================================================================
+ERROR: test_17_shared_limit (tests.test_s2oe_immediate_visual_input.InputTests.test_17_shared_limit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 42, in setUp
+    self.raw,self.binding = fixture(self.path)
+                            ~~~~~~~^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 22, in fixture
+    bound = n.bind_event(config=config,event_id="media-event-03",ordinal=3,
+        event_type="COMPLETE_AV_PERCEPTION",field_start_tick=300000000,
+        common_time=n.CommonFieldTime("s2ob-caller-field-clock",400000000,500000000),
+        raw_audio=raw,pcm_digest="1"*64,visual=visual,rgb_digest="2"*64,visual_time_binding=vt)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 86, in bind_event
+    require(full and type(visual_time_binding) is CommonFieldTime
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        and visual.field_time == visual_time_binding
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        and visual_time_binding.window_start_tick <= common_time.window_start_tick
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        < common_time.window_end_tick, "VISUAL_TIME_BINDING_INVALID")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 30, in require
+    raise S2NNError(code)
+tools._s2nn_private_half_runtime_binding.S2NNError: VISUAL_TIME_BINDING_INVALID
+
+======================================================================
+ERROR: test_18_invalid_parent_structure (tests.test_s2oe_immediate_visual_input.InputTests.test_18_invalid_parent_structure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 42, in setUp
+    self.raw,self.binding = fixture(self.path)
+                            ~~~~~~~^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 22, in fixture
+    bound = n.bind_event(config=config,event_id="media-event-03",ordinal=3,
+        event_type="COMPLETE_AV_PERCEPTION",field_start_tick=300000000,
+        common_time=n.CommonFieldTime("s2ob-caller-field-clock",400000000,500000000),
+        raw_audio=raw,pcm_digest="1"*64,visual=visual,rgb_digest="2"*64,visual_time_binding=vt)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 86, in bind_event
+    require(full and type(visual_time_binding) is CommonFieldTime
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        and visual.field_time == visual_time_binding
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        and visual_time_binding.window_start_tick <= common_time.window_start_tick
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        < common_time.window_end_tick, "VISUAL_TIME_BINDING_INVALID")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nn_private_half_runtime_binding.py", line 30, in require
+    raise S2NNError(code)
+tools._s2nn_private_half_runtime_binding.S2NNError: VISUAL_TIME_BINDING_INVALID
+
+----------------------------------------------------------------------
+Ran 18 tests in 1.630s
+
+FAILED (errors=18)

@@ -1,0 +1,13 @@
+test_cue_channels (tests.test_structure_av_sources.Tests.test_cue_channels) ... ok
+test_cue_geometry_error (tests.test_structure_av_sources.Tests.test_cue_geometry_error) ... ok
+test_cue_parent_tamper (tests.test_structure_av_sources.Tests.test_cue_parent_tamper) ... ok
+test_manifest_order_repeated_source (tests.test_structure_av_sources.Tests.test_manifest_order_repeated_source) ... ok
+test_readonly_and_missing_source (tests.test_structure_av_sources.Tests.test_readonly_and_missing_source) ... ok
+test_source_tamper (tests.test_structure_av_sources.Tests.test_source_tamper) ... ok
+test_time_tamper (tests.test_structure_av_sources.Tests.test_time_tamper) ... ok
+test_times (tests.test_structure_av_sources.Tests.test_times) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.036s
+
+OK

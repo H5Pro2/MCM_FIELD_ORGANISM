@@ -1,0 +1,106 @@
+{
+  "kind": "ADMINISTRATIVE_BLOCKER_NOT_AUTHORIZATION",
+  "observed_at": "2026-09-30T12:40:25.005497+00:00",
+  "rights": {
+    "admin_token_enabled": false,
+    "requested_parent": "HKLM64\\SOFTWARE",
+    "requested_access": "KEY_CREATE_SUB_KEY | KEY_WOW64_64KEY",
+    "registry_mutation_attempted": false,
+    "create_subkey_access_granted": false,
+    "winerror": 5,
+    "error": "[WinError 5] Zugriff verweigert"
+  },
+  "registry": [
+    {
+      "key": "SOFTWARE\\MCM_FIELD_ORGANISM",
+      "exists": false,
+      "winerror": 2
+    },
+    {
+      "key": "SOFTWARE\\MCM_FIELD_ORGANISM\\S2UC",
+      "exists": false,
+      "winerror": 2
+    },
+    {
+      "key": "SOFTWARE\\MCM_FIELD_ORGANISM\\S2UC\\ApprovedOneShots",
+      "exists": false,
+      "winerror": 2
+    }
+  ],
+  "qualification": {
+    "inventory": {
+      "path": "reports/s2uc/p3-implementation-20260930-01/inventory.json",
+      "bytes": 15805,
+      "sha256": "c7f5b9c99c86394969912a68e817925f7168cb2b3827da9b82c512e31275fe42"
+    },
+    "result": {
+      "path": "reports/s2uc/p3-implementation-20260930-01/test-result.json",
+      "bytes": 54681,
+      "sha256": "38a0cdac2c779ada26c32bf9005e3ad73380041dda91ff628b62a262d2b645c8"
+    },
+    "protocol": {
+      "path": "reports/s2uc/p3-implementation-20260930-01/protocol.json",
+      "bytes": 17587,
+      "sha256": "27c0aa07ce0cec9a5b15424e16e10369c6f2b038cae9c7e9df9805fbfe3ff446"
+    },
+    "ledger": {
+      "path": "reports/s2uc/p3-implementation-20260930-01/ledger.json",
+      "bytes": 12047,
+      "sha256": "a22f04424b506c215116144e992d1d73b4f1bc89c105bba1cb9d00808263f173"
+    }
+  },
+  "qualification_valid": true,
+  "qualification_files": 48,
+  "code_files": 76,
+  "code_bytes": 978115,
+  "source_context": {
+    "path": "reports/s2uc/preparation-p1-20260930-01/attempt-01/preparation/source-context.json",
+    "bytes": 50818,
+    "sha256": "6acb200eb1b70382969cbeb2d1c74f3e8953937d28e708eda83c6ce7a9c4a6f1"
+  },
+  "source_plan": {
+    "path": "reports/s2nu/s2nu-source-preseal-20260909-01/execution-plan.json",
+    "bytes": 44937,
+    "sha256": "6e64fbd5b7e86f16156b6d68bd5f7dbda3fefa8f223b2a31114bf3293eaa5f10"
+  },
+  "outputs": [
+    {
+      "role": "product",
+      "path": "reports/s2uc-source-comparison-real-20260920-02",
+      "exists": false,
+      "symlink": false,
+      "junction": false,
+      "canonical": true
+    },
+    {
+      "role": "observer",
+      "path": "reports/s2uc-source-comparison-real-20260920-02-observer",
+      "exists": false,
+      "symlink": false,
+      "junction": false,
+      "canonical": true
+    },
+    {
+      "role": "appendix",
+      "path": "reports/s2uc-source-comparison-real-20260920-02-appendix",
+      "exists": false,
+      "symlink": false,
+      "junction": false,
+      "canonical": true
+    },
+    {
+      "role": "admission",
+      "path": "reports/s2uc-source-comparison-real-20260920-02-admission",
+      "exists": false,
+      "symlink": false,
+      "junction": false,
+      "canonical": true
+    }
+  ],
+  "claim_created": false,
+  "source_production": false,
+  "authorization_created": false,
+  "approval_origin": "Projectleiter relay in current conversation; source task 01a0bf05-fd0f-7b82-aca9-ce70a6dbd1eb",
+  "relayed_user_statement": "Okay, dann gib jetzt bitte dem Entwickler neue Anweisung",
+  "status": "BLOCKED_ADMINISTRATIVE_RIGHTS"
+}

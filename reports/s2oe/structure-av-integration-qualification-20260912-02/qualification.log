@@ -1,0 +1,9 @@
+test_evaluation_gate (tests.test_structure_av_integration.Tests.test_evaluation_gate) ... ok
+test_main_gate (tests.test_structure_av_integration.Tests.test_main_gate) ... ok
+test_native_five_event_composition (tests.test_structure_av_integration.Tests.test_native_five_event_composition) ... ok
+test_no_direct_advance_in_composition (tests.test_structure_av_integration.Tests.test_no_direct_advance_in_composition) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 3.318s
+
+OK

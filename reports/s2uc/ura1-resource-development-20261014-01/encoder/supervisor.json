@@ -1,0 +1,76 @@
+{
+  "active_process_limit": 2,
+  "baseline": {
+    "lifetime_peak_commit": 10792960,
+    "private_bytes": 10792960,
+    "working_set": 17764352
+  },
+  "combined_sample_peak": 51650560,
+  "job": {
+    "hard_job_limit": true,
+    "limit_bytes": 536870912,
+    "measurement": "Windows JobObjectExtendedLimitInformation",
+    "members": "supervisor and inherited worker",
+    "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap.",
+    "peak_job_committed_bytes": 51650560,
+    "peak_process_committed_bytes": 37703680
+  },
+  "mode": "encoder",
+  "phases": {
+    "complete": {
+      "combined_sample_peak": 50126848,
+      "samples": 7,
+      "supervisor_peak": 14065664,
+      "worker_peak": 36061184
+    },
+    "fault_case_cleanup": {
+      "combined_sample_peak": 50126848,
+      "samples": 1,
+      "supervisor_peak": 14065664,
+      "worker_peak": 36061184
+    },
+    "fault_case_encoder_and_file_output": {
+      "combined_sample_peak": 51650560,
+      "samples": 459,
+      "supervisor_peak": 15200256,
+      "worker_peak": 36528128
+    },
+    "imports_and_initialization": {
+      "combined_sample_peak": 50364416,
+      "samples": 145,
+      "supervisor_peak": 12660736,
+      "worker_peak": 37703680
+    },
+    "processing_R": {
+      "combined_sample_peak": 49516544,
+      "samples": 58,
+      "supervisor_peak": 13066240,
+      "worker_peak": 36450304
+    },
+    "processing_U": {
+      "combined_sample_peak": 48279552,
+      "samples": 15,
+      "supervisor_peak": 12795904,
+      "worker_peak": 35483648
+    },
+    "startup": {
+      "combined_sample_peak": 25133056,
+      "samples": 13,
+      "supervisor_peak": 12120064,
+      "worker_peak": 13012992
+    },
+    "transition": {
+      "combined_sample_peak": 48279552,
+      "samples": 1,
+      "supervisor_peak": 12795904,
+      "worker_peak": 35483648
+    }
+  },
+  "seconds": 7.924388499999623,
+  "status": "PASS",
+  "supervisor_pid": 8560,
+  "verified_same_job": true,
+  "worker_exitcode": 0,
+  "worker_pid": 13328,
+  "worker_status": "PASS"
+}

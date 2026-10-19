@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "date": "2026-10-14",
+  "preparation_bytes": 4690185,
+  "research_export_bytes": 10476702,
+  "research_admin_bytes": 262749,
+  "assessment_files_before_accounting": {
+    "build_report.py": {
+      "bytes": 20568,
+      "sha256": "b0aea31f139f99facd1e2a5b4b59cc04fcdf677120372d317fd6fd27ae7e94a9"
+    },
+    "REPORT.md": {
+      "bytes": 25910,
+      "sha256": "6b2907bfc5fa84e6b12f59382bd55fd9bae7235e626a71e1bef294cce421fcdb"
+    },
+    "verification.json": {
+      "bytes": 119255,
+      "sha256": "33a2fefabb51232cdcc4c5745c88175deebb123012b90fb347d1a4a66b586618"
+    },
+    "verify_archive.py": {
+      "bytes": 23237,
+      "sha256": "b818b5698c58f602ca0b7d5644267fa866092cb35c741ff735d943dd07def216"
+    }
+  },
+  "assessment_bytes_before_accounting": 188970,
+  "overview_new_text_bytes": {
+    "README.md": 1612,
+    "AKTUELLER_FORSCHUNGSWEG.md": 1612,
+    "docs/README.md": 1621
+  },
+  "overview_new_text_total": 4845,
+  "accounting_and_closure_reserve": 16384,
+  "conservative_total_bytes": 15377086,
+  "total_limit_bytes": 67108864,
+  "conservative_admin_bytes": 472948,
+  "admin_limit_bytes": 2097152,
+  "scope": "New overview content charged; pre-existing historical overviews are not duplicated research exports."
+}

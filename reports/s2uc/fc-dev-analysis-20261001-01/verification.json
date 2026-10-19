@@ -1,0 +1,303 @@
+{
+  "status": "PASS",
+  "material_unchanged": true,
+  "code_plan_bindings_unchanged": true,
+  "FC_EVAL_unproduced": true,
+  "resources": {
+    "F1": {
+      "legacy": {
+        "frame_peak": 8,
+        "output_slots_peak": 2,
+        "combined_peak": 9,
+        "output_python_bytes_peak": 3642,
+        "samples": 7705,
+        "scaling_calls": 0,
+        "builder_components": 0,
+        "builder_peak_components": 0,
+        "transient_output_slots_peak": 0,
+        "temporary_vector_lists": 0
+      },
+      "scaled": {
+        "frame_peak": 8,
+        "output_slots_peak": 2,
+        "combined_peak": 9,
+        "output_python_bytes_peak": 3642,
+        "samples": 7726,
+        "scaling_calls": 0,
+        "builder_components": 0,
+        "builder_peak_components": 0,
+        "transient_output_slots_peak": 0,
+        "temporary_vector_lists": 0
+      }
+    },
+    "FH": {
+      "legacy": {
+        "frame_peak": 8,
+        "output_slots_peak": 2,
+        "combined_peak": 9,
+        "output_python_bytes_peak": 3642,
+        "samples": 7687,
+        "scaling_calls": 0,
+        "builder_components": 0,
+        "builder_peak_components": 0,
+        "transient_output_slots_peak": 0,
+        "temporary_vector_lists": 0
+      },
+      "scaled": {
+        "frame_peak": 8,
+        "output_slots_peak": 2,
+        "combined_peak": 9,
+        "output_python_bytes_peak": 3642,
+        "samples": 8219,
+        "scaling_calls": 1,
+        "builder_components": 0,
+        "builder_peak_components": 48,
+        "transient_output_slots_peak": 2,
+        "temporary_vector_lists": 0
+      }
+    },
+    "FD": {
+      "legacy": {
+        "frame_peak": 8,
+        "output_slots_peak": 2,
+        "combined_peak": 9,
+        "output_python_bytes_peak": 3642,
+        "samples": 7687,
+        "scaling_calls": 0,
+        "builder_components": 0,
+        "builder_peak_components": 0,
+        "transient_output_slots_peak": 0,
+        "temporary_vector_lists": 0
+      },
+      "scaled": {
+        "frame_peak": 8,
+        "output_slots_peak": 2,
+        "combined_peak": 9,
+        "output_python_bytes_peak": 3642,
+        "samples": 8219,
+        "scaling_calls": 1,
+        "builder_components": 0,
+        "builder_peak_components": 48,
+        "transient_output_slots_peak": 2,
+        "temporary_vector_lists": 0
+      }
+    },
+    "GH": {
+      "legacy": {
+        "frame_peak": 8,
+        "output_slots_peak": 2,
+        "combined_peak": 9,
+        "output_python_bytes_peak": 3642,
+        "samples": 7687,
+        "scaling_calls": 0,
+        "builder_components": 0,
+        "builder_peak_components": 0,
+        "transient_output_slots_peak": 0,
+        "temporary_vector_lists": 0
+      },
+      "scaled": {
+        "frame_peak": 8,
+        "output_slots_peak": 2,
+        "combined_peak": 9,
+        "output_python_bytes_peak": 3642,
+        "samples": 8219,
+        "scaling_calls": 1,
+        "builder_components": 0,
+        "builder_peak_components": 48,
+        "transient_output_slots_peak": 2,
+        "temporary_vector_lists": 0
+      }
+    },
+    "GD": {
+      "legacy": {
+        "frame_peak": 8,
+        "output_slots_peak": 2,
+        "combined_peak": 9,
+        "output_python_bytes_peak": 3642,
+        "samples": 7687,
+        "scaling_calls": 0,
+        "builder_components": 0,
+        "builder_peak_components": 0,
+        "transient_output_slots_peak": 0,
+        "temporary_vector_lists": 0
+      },
+      "scaled": {
+        "frame_peak": 8,
+        "output_slots_peak": 2,
+        "combined_peak": 9,
+        "output_python_bytes_peak": 3642,
+        "samples": 8219,
+        "scaling_calls": 1,
+        "builder_components": 0,
+        "builder_peak_components": 48,
+        "transient_output_slots_peak": 2,
+        "temporary_vector_lists": 0
+      }
+    },
+    "GR": {
+      "legacy": {
+        "frame_peak": 8,
+        "output_slots_peak": 2,
+        "combined_peak": 9,
+        "output_python_bytes_peak": 3642,
+        "samples": 7687,
+        "scaling_calls": 0,
+        "builder_components": 0,
+        "builder_peak_components": 0,
+        "transient_output_slots_peak": 0,
+        "temporary_vector_lists": 0
+      },
+      "scaled": {
+        "frame_peak": 8,
+        "output_slots_peak": 2,
+        "combined_peak": 9,
+        "output_python_bytes_peak": 3642,
+        "samples": 8219,
+        "scaling_calls": 1,
+        "builder_components": 0,
+        "builder_peak_components": 48,
+        "transient_output_slots_peak": 2,
+        "temporary_vector_lists": 0
+      }
+    },
+    "GP": {
+      "legacy": {
+        "frame_peak": 8,
+        "output_slots_peak": 2,
+        "combined_peak": 9,
+        "output_python_bytes_peak": 3642,
+        "samples": 7687,
+        "scaling_calls": 0,
+        "builder_components": 0,
+        "builder_peak_components": 0,
+        "transient_output_slots_peak": 0,
+        "temporary_vector_lists": 0
+      },
+      "scaled": {
+        "frame_peak": 8,
+        "output_slots_peak": 2,
+        "combined_peak": 9,
+        "output_python_bytes_peak": 3642,
+        "samples": 8219,
+        "scaling_calls": 1,
+        "builder_components": 0,
+        "builder_peak_components": 48,
+        "transient_output_slots_peak": 2,
+        "temporary_vector_lists": 0
+      }
+    },
+    "AM": {
+      "legacy": {
+        "frame_peak": 12,
+        "output_slots_peak": 2,
+        "combined_peak": 13,
+        "output_python_bytes_peak": 3642,
+        "samples": 16721,
+        "scaling_calls": 0,
+        "builder_components": 0,
+        "builder_peak_components": 0,
+        "transient_output_slots_peak": 0,
+        "temporary_vector_lists": 0
+      },
+      "scaled": {
+        "frame_peak": 12,
+        "output_slots_peak": 2,
+        "combined_peak": 13,
+        "output_python_bytes_peak": 3642,
+        "samples": 16749,
+        "scaling_calls": 0,
+        "builder_components": 0,
+        "builder_peak_components": 0,
+        "transient_output_slots_peak": 0,
+        "temporary_vector_lists": 0
+      }
+    },
+    "ZF": {
+      "legacy": {
+        "frame_peak": 8,
+        "output_slots_peak": 1,
+        "combined_peak": 9,
+        "output_python_bytes_peak": 2066,
+        "samples": 13709,
+        "scaling_calls": 0,
+        "builder_components": 0,
+        "builder_peak_components": 0,
+        "transient_output_slots_peak": 0,
+        "temporary_vector_lists": 0
+      },
+      "scaled": {
+        "frame_peak": 8,
+        "output_slots_peak": 1,
+        "combined_peak": 9,
+        "output_python_bytes_peak": 2066,
+        "samples": 13748,
+        "scaling_calls": 0,
+        "builder_components": 0,
+        "builder_peak_components": 0,
+        "transient_output_slots_peak": 0,
+        "temporary_vector_lists": 0
+      }
+    },
+    "EN": {
+      "legacy": {
+        "frame_peak": 8,
+        "output_slots_peak": 2,
+        "combined_peak": 9,
+        "output_python_bytes_peak": 3642,
+        "samples": 7687,
+        "scaling_calls": 0,
+        "builder_components": 0,
+        "builder_peak_components": 0,
+        "transient_output_slots_peak": 0,
+        "temporary_vector_lists": 0
+      },
+      "scaled": {
+        "frame_peak": 8,
+        "output_slots_peak": 2,
+        "combined_peak": 9,
+        "output_python_bytes_peak": 3642,
+        "samples": 7710,
+        "scaling_calls": 0,
+        "builder_components": 0,
+        "builder_peak_components": 0,
+        "transient_output_slots_peak": 0,
+        "temporary_vector_lists": 0
+      }
+    },
+    "NM": {
+      "legacy": {
+        "frame_peak": 8,
+        "output_slots_peak": 2,
+        "combined_peak": 9,
+        "output_python_bytes_peak": 3642,
+        "samples": 6809,
+        "scaling_calls": 0,
+        "builder_components": 0,
+        "builder_peak_components": 0,
+        "transient_output_slots_peak": 0,
+        "temporary_vector_lists": 0
+      },
+      "scaled": {
+        "frame_peak": 8,
+        "output_slots_peak": 2,
+        "combined_peak": 9,
+        "output_python_bytes_peak": 3642,
+        "samples": 6823,
+        "scaling_calls": 0,
+        "builder_components": 0,
+        "builder_peak_components": 0,
+        "transient_output_slots_peak": 0,
+        "temporary_vector_lists": 0
+      }
+    }
+  },
+  "material_bytes": 112057,
+  "closure": {
+    "case_files": 11,
+    "case_frames": 129,
+    "charged_before_closure": 111915,
+    "error": null,
+    "production_partition": "FC-DEV",
+    "status": "MATERIAL_COMPLETE"
+  }
+}

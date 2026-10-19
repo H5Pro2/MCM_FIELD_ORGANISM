@@ -1,0 +1,986 @@
+{
+  "evaluation_allowed": false,
+  "exit_code": 0,
+  "product": {
+    "accounting_complete": true,
+    "actual": {
+      "categories": {
+        "code": 775187,
+        "error": 0,
+        "metadata": 27068,
+        "minimal": 0,
+        "record": 193150,
+        "staging": 0,
+        "static_shared": 102659,
+        "terminal": 1644,
+        "verification": 2466
+      },
+      "main_accounts": {
+        "code": 775187,
+        "metadata": 27068,
+        "record": 193150,
+        "shared": 104303,
+        "staging": 0,
+        "verification": 2466
+      },
+      "total_bytes": 1102174,
+      "violations": [],
+      "within_limits": true
+    },
+    "candidate_gain_loss_status": "NOT_MEASURED",
+    "evaluation": {
+      "candidate_decision_changes": [
+        {
+          "actual": [
+            "ABSTAIN_NO_RETAINED_TRACE",
+            "TRACE_MATCH"
+          ],
+          "expected": [
+            "ABSTAIN_AMBIGUOUS_RETAINED_TRACE",
+            "TRACE_MATCH"
+          ],
+          "key": [
+            "g1",
+            24
+          ]
+        },
+        {
+          "actual": [
+            "TRACE_MATCH",
+            "ABSTAIN_NO_RETAINED_TRACE"
+          ],
+          "expected": [
+            "TRACE_MATCH",
+            "ABSTAIN_NO_RETAINED_TRACE"
+          ],
+          "key": [
+            "g1",
+            26
+          ]
+        },
+        {
+          "actual": [
+            "TRACE_MATCH",
+            "ABSTAIN_NO_RETAINED_TRACE"
+          ],
+          "expected": [
+            "TRACE_MATCH",
+            "ABSTAIN_NO_RETAINED_TRACE"
+          ],
+          "key": [
+            "g2",
+            38
+          ]
+        },
+        {
+          "actual": [
+            "TRACE_MATCH",
+            "ABSTAIN_NO_RETAINED_TRACE"
+          ],
+          "expected": [
+            "TRACE_MATCH",
+            "ABSTAIN_NO_RETAINED_TRACE"
+          ],
+          "key": [
+            "g3",
+            67
+          ]
+        }
+      ],
+      "candidate_gains": [],
+      "candidate_losses": [],
+      "confirmed_expectations": [
+        {
+          "actual": [
+            "TRACE_MATCH",
+            "TRACE_MATCH"
+          ],
+          "expected": [
+            "TRACE_MATCH",
+            "TRACE_MATCH"
+          ],
+          "key": [
+            "g1",
+            12
+          ]
+        },
+        {
+          "actual": [
+            "TRACE_MATCH",
+            "ABSTAIN_NO_RETAINED_TRACE"
+          ],
+          "expected": [
+            "TRACE_MATCH",
+            "ABSTAIN_NO_RETAINED_TRACE"
+          ],
+          "key": [
+            "g1",
+            26
+          ]
+        },
+        {
+          "actual": [
+            "TRACE_MATCH",
+            "ABSTAIN_NO_RETAINED_TRACE"
+          ],
+          "expected": [
+            "TRACE_MATCH",
+            "ABSTAIN_NO_RETAINED_TRACE"
+          ],
+          "key": [
+            "g2",
+            38
+          ]
+        },
+        {
+          "actual": [
+            "TRACE_MATCH",
+            "TRACE_MATCH"
+          ],
+          "expected": [
+            "TRACE_MATCH",
+            "TRACE_MATCH"
+          ],
+          "key": [
+            "g3",
+            60
+          ]
+        },
+        {
+          "actual": [
+            "TRACE_MATCH",
+            "ABSTAIN_NO_RETAINED_TRACE"
+          ],
+          "expected": [
+            "TRACE_MATCH",
+            "ABSTAIN_NO_RETAINED_TRACE"
+          ],
+          "key": [
+            "g3",
+            67
+          ]
+        },
+        {
+          "actual": [
+            "TRACE_MATCH",
+            "TRACE_MATCH"
+          ],
+          "expected": [
+            "TRACE_MATCH",
+            "TRACE_MATCH"
+          ],
+          "key": [
+            "g3",
+            69
+          ]
+        }
+      ],
+      "hint_count": 7,
+      "hint_decisions": [
+        {
+          "candidate": "TRACE_MATCH",
+          "immediate": "TRACE_MATCH",
+          "ordinal": 12,
+          "story": "g1"
+        },
+        {
+          "candidate": "TRACE_MATCH",
+          "immediate": "ABSTAIN_NO_RETAINED_TRACE",
+          "ordinal": 24,
+          "story": "g1"
+        },
+        {
+          "candidate": "ABSTAIN_NO_RETAINED_TRACE",
+          "immediate": "TRACE_MATCH",
+          "ordinal": 26,
+          "story": "g1"
+        },
+        {
+          "candidate": "ABSTAIN_NO_RETAINED_TRACE",
+          "immediate": "TRACE_MATCH",
+          "ordinal": 38,
+          "story": "g2"
+        },
+        {
+          "candidate": "TRACE_MATCH",
+          "immediate": "TRACE_MATCH",
+          "ordinal": 60,
+          "story": "g3"
+        },
+        {
+          "candidate": "ABSTAIN_NO_RETAINED_TRACE",
+          "immediate": "TRACE_MATCH",
+          "ordinal": 67,
+          "story": "g3"
+        },
+        {
+          "candidate": "TRACE_MATCH",
+          "immediate": "TRACE_MATCH",
+          "ordinal": 69,
+          "story": "g3"
+        }
+      ],
+      "status": "EVALUATED",
+      "violated_expectations": [
+        {
+          "actual": [
+            "ABSTAIN_NO_RETAINED_TRACE",
+            "TRACE_MATCH"
+          ],
+          "expected": [
+            "ABSTAIN_AMBIGUOUS_RETAINED_TRACE",
+            "TRACE_MATCH"
+          ],
+          "key": [
+            "g1",
+            24
+          ]
+        }
+      ]
+    },
+    "evaluation_allowed": true,
+    "inputs": [
+      {
+        "bytes": 940,
+        "category": "code",
+        "path": "mcm_field_organism/__init__.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "43bb1a27f4d4d373ec2af17ca128f35df6453fee86723160466543fb603704b6"
+      },
+      {
+        "bytes": 7983,
+        "category": "code",
+        "path": "mcm_field_organism/broadband_hearing_path.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "a20456b24c04d099ba5ee2da6250e3d83dc657392603c41d816b13ca68a37fb7"
+      },
+      {
+        "bytes": 3572,
+        "category": "code",
+        "path": "mcm_field_organism/carrier_baselines.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "dc891f4f263b17acf7b7b50c7c135d9a3d028cb1b9bdb72c342d72d24f1337ab"
+      },
+      {
+        "bytes": 1237,
+        "category": "code",
+        "path": "mcm_field_organism/controlled_audio_source.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "46744d3b377f1bcd54b7b8128dbd2a264683d45a534273031869aa127b80bd70"
+      },
+      {
+        "bytes": 7024,
+        "category": "code",
+        "path": "mcm_field_organism/log_spectral_receptor.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "26a6bd8f2d190db60c75ad29f275b3bd8b09b6d26d4ad54e4396176c4a36d2b0"
+      },
+      {
+        "bytes": 258911,
+        "category": "code",
+        "path": "mcm_field_organism/root_lazy_exports.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+      },
+      {
+        "bytes": 17470,
+        "category": "code",
+        "path": "reports/s2nd/seal_inventory.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "9f72d2a9fc9676235cf69b23ea690d25f0a782222c54393ecf5b44107f0ce91c"
+      },
+      {
+        "bytes": 10978,
+        "category": "code",
+        "path": "reports/s2uc/v8-process-limit-corrected-20260920/limit.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "9c4cb7ebe57dae107b317ffaef45b6522af26d970cd8a6ee2e08d0954d7b5b12"
+      },
+      {
+        "bytes": 10811,
+        "category": "code",
+        "path": "reports/s2uc/v8-process-memory-20260920/measure.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "6dcbed6abb4d79d107dab55b2809119b4d9f34f4f5ccc942030723bfcd0238e6"
+      },
+      {
+        "bytes": 58,
+        "category": "code",
+        "path": "tests/__init__.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "37b08bc7ac66af8aafb9b9fe352dec58be3ba62bf031e5eefd7e53e2a9f510b5"
+      },
+      {
+        "bytes": 10667,
+        "category": "code",
+        "path": "tests/test_s2ub_candidate_confirmation.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "30f0d586930ce60d1ed76b8e2df2af1664f16305d6fb80b7322bc6ededc4fe6c"
+      },
+      {
+        "bytes": 24620,
+        "category": "code",
+        "path": "tests/test_s2uc_execution_v8.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "9a30da7e42bf930f249aed3d29cf24316f20ecce3b1b0ff90f25e37765fc0fcc"
+      },
+      {
+        "bytes": 63774,
+        "category": "code",
+        "path": "tests/test_s2uc_materialization_connection.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "f84059d2fab384ec72b2c6f4d2d80ef95ee9e6efe8fdab9523b4b3a19f24a2f7"
+      },
+      {
+        "bytes": 11299,
+        "category": "code",
+        "path": "tests/test_s2uc_neutral_connection.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "e5409715d351d61f232cdc10caa61b7c881d081836d0f1c67fa8d20c667f84d4"
+      },
+      {
+        "bytes": 17571,
+        "category": "code",
+        "path": "tests/test_s2uc_prestart_v7.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "d0daf7d33e5cfe3fd9a8ec090724282ac82990c14d5854ea9cfb554b543feaf9"
+      },
+      {
+        "bytes": 18798,
+        "category": "code",
+        "path": "tests/test_s2uc_publication_v7.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "cca38c6818d0099b6a70dc2f6b3ab1db29b15e79448f2e0b5501d39d999462da"
+      },
+      {
+        "bytes": 14374,
+        "category": "code",
+        "path": "tests/test_s2uc_resource_contract_v7.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "e49ee1b8964d06b7ff922462cba26cd99f6f9b89d7f6ec908ad7fc973fbb4fd2"
+      },
+      {
+        "bytes": 18103,
+        "category": "code",
+        "path": "tests/test_s2uc_source_execution.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "16184bf8a0f4998cdbd6c5abfb601f569614729cb17d022e080b2ccf74d928ec"
+      },
+      {
+        "bytes": 5288,
+        "category": "code",
+        "path": "tests/test_s2uc_source_process_guard.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "e2edf8bab9c1f0205b6dcd4f8802c9ec760ec445118bdd86d1868ee149632dc5"
+      },
+      {
+        "bytes": 7700,
+        "category": "code",
+        "path": "tools/_s2nj_private_auditory_output_projection.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "e052cc76cf4c9678e11673d95390dea21634bba8082187567a760faaaf4904e5"
+      },
+      {
+        "bytes": 15138,
+        "category": "code",
+        "path": "tools/_s2np_private_source_binding.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "004ea7c8841e5f0b68fe9191604b0a0a7337ac568af2205dca900dd2ae874b12"
+      },
+      {
+        "bytes": 13635,
+        "category": "code",
+        "path": "tools/_s2nu_private_source_binding.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "8e0fa79f3ce66ce4228f46a52252de5d207c6cee29fefc42f957aa41dc56bce6"
+      },
+      {
+        "bytes": 5001,
+        "category": "code",
+        "path": "tools/_s2ts_temporal_trace.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "64d1e7f9ff54d898996974d960bfb58ac7386165846aeec0ea253079e0a8e6d8"
+      },
+      {
+        "bytes": 10468,
+        "category": "code",
+        "path": "tools/_s2ts_temporal_trace_run.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "e084f2aa6806337587284df6873068b6366e88eea2f02fc11bc981c143f8387a"
+      },
+      {
+        "bytes": 3846,
+        "category": "code",
+        "path": "tools/_s2tu_retained_trace.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "bf530380f93c8a1bf0eeae5a4169e81bc99aee10050872e3e5ddc7bfdb88f3f6"
+      },
+      {
+        "bytes": 1283,
+        "category": "code",
+        "path": "tools/_s2tw_exact_confirmation.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "90470980a329d0424bec9ba430adbbccaf72bb82145edfefd6e491b6fcec7be9"
+      },
+      {
+        "bytes": 4090,
+        "category": "code",
+        "path": "tools/_s2ty_audio_materialization.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "c332b1eccff35aefc0dbea27c4db78e5b97524ed2f46ab7a6461e3bcc522db72"
+      },
+      {
+        "bytes": 5207,
+        "category": "code",
+        "path": "tools/_s2ty_resource_ledger.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "9c39435dd15db76fbb41090e4073cd2e608d911772595ea123b40eba92e731f1"
+      },
+      {
+        "bytes": 9869,
+        "category": "code",
+        "path": "tools/_s2ub_candidate_confirmation.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "4178198b43fbbefd3cd550307ec114540c2167a3ae066e22bde01f5223f0ca8a"
+      },
+      {
+        "bytes": 3075,
+        "category": "code",
+        "path": "tools/_s2ub_candidate_verification.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "1c25a3afee15c8ada624c93fa81bbfbece1a1b7407502b029798fec84a00cc30"
+      },
+      {
+        "bytes": 7347,
+        "category": "code",
+        "path": "tools/_s2uc_binding_v8.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "f10554a0b7d598d24a5f2cbfcfbf4e146b33e74989861e0c4be80cd328a65b90"
+      },
+      {
+        "bytes": 4937,
+        "category": "code",
+        "path": "tools/_s2uc_dependencies.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "57e38a7cac23976e2d16274907e9528afb986961e051475362ea0f7b8f65aaf2"
+      },
+      {
+        "bytes": 2341,
+        "category": "code",
+        "path": "tools/_s2uc_evaluation.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "50f458bb1e9693227b119a87b0cf0e71ec1076d0f64427c93426397e33125e7a"
+      },
+      {
+        "bytes": 11461,
+        "category": "code",
+        "path": "tools/_s2uc_execution_v8.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "252544aab12f3f664c84dfd03f161182229a437d25d42066a5fed00b7d3acb57"
+      },
+      {
+        "bytes": 8982,
+        "category": "code",
+        "path": "tools/_s2uc_inventory_v7.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "c070fea8fe154b14f6c4a96ea0171d2dcb5dc8a2c41120544e76e8665705901e"
+      },
+      {
+        "bytes": 8836,
+        "category": "code",
+        "path": "tools/_s2uc_neutral_connection.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "27fa0812e8da3b84e585d785ad687be8fcc480ef328503457f4803f6c9d05a3b"
+      },
+      {
+        "bytes": 9367,
+        "category": "code",
+        "path": "tools/_s2uc_prestart_v7.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "3615ce07c10912e2c0c044e4c50eaaaa2c7851c511a5ac2436f77bb4c93a41e0"
+      },
+      {
+        "bytes": 14606,
+        "category": "code",
+        "path": "tools/_s2uc_publication_v7.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "21c79a6346f6534c2262d964fe230b7256e19c1bad1768de366b5a05f67795db"
+      },
+      {
+        "bytes": 2582,
+        "category": "code",
+        "path": "tools/_s2uc_qualification_v9.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "12ebe4b5e1634dca8622a2846cc710a749faed6c03815c5d36e499c18104cf0b"
+      },
+      {
+        "bytes": 8529,
+        "category": "code",
+        "path": "tools/_s2uc_record_codec.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "43f5532064b11e130535c47afe50a48be418255a054e694253c412c6783ad70f"
+      },
+      {
+        "bytes": 7351,
+        "category": "code",
+        "path": "tools/_s2uc_resource_contract_v7.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "a38a48100ada6b47f6d563572cdc02921610ed8ce922d3554683a305d2ce544a"
+      },
+      {
+        "bytes": 2705,
+        "category": "code",
+        "path": "tools/_s2uc_resource_ledger.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "43e3fe248be3b70d2cd05fe0db4a15d20d88272a7761a9a93204837c3ef110be"
+      },
+      {
+        "bytes": 911,
+        "category": "code",
+        "path": "tools/_s2uc_resources_v8.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "62d000968c604abd735e9fdf9592969f203b3beda2bd42bb4c8c90c07b05b17e"
+      },
+      {
+        "bytes": 913,
+        "category": "code",
+        "path": "tools/_s2uc_resources_v9.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "f49155f74a6add45936b2c106132041ba619863c7b1c1171ffcf68b7075270b1"
+      },
+      {
+        "bytes": 35066,
+        "category": "code",
+        "path": "tools/_s2uc_run_binding.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "459e6049a1fe975f986abca0a9943afba868aab5edf23f45c1777eda247a8b78"
+      },
+      {
+        "bytes": 13581,
+        "category": "code",
+        "path": "tools/_s2uc_run_entry.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "1005335a67c6bf089dbc2399fb0b874d062924537b7522982f4c73f030778349"
+      },
+      {
+        "bytes": 1442,
+        "category": "code",
+        "path": "tools/_s2uc_source_adapter.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "011b75a724fab21dd12b66f02e2fb6a4626e7f1d4450ac4612d31fb53e4abead"
+      },
+      {
+        "bytes": 6058,
+        "category": "code",
+        "path": "tools/_s2uc_source_binding.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "3758b0b3291ae9f04d91f704548ae0a77f7bc56be87d189fa89ba48c2e735e78"
+      },
+      {
+        "bytes": 3418,
+        "category": "code",
+        "path": "tools/_s2uc_source_context_v9.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "0caf85ccbd8159d09400602f67391ee313042edb3774222dda03716c24c2c6f9"
+      },
+      {
+        "bytes": 1470,
+        "category": "code",
+        "path": "tools/_s2uc_source_execution.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "f870f3d930f10dd5af1d32d4d23965c0993ed9fa07f8c6c49d3366a5743a28a1"
+      },
+      {
+        "bytes": 8817,
+        "category": "code",
+        "path": "tools/_s2uc_source_execution_binding.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "155821ab7a6bb29d671f7ca061b157d58fbe9ef257b17e71f74c758a807c2325"
+      },
+      {
+        "bytes": 17086,
+        "category": "code",
+        "path": "tools/_s2uc_verification.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "1af8a9e2de68acf29b7ae2755f82330e959e96505867c81b4ba263d0b2f81626"
+      },
+      {
+        "bytes": 1072,
+        "category": "code",
+        "path": "tools/s2uc_run_bound_once.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "f3250dba8334b41858dece27f9a77e8e517cf1c1461c6960ef95883f523865dc"
+      },
+      {
+        "bytes": 6168,
+        "category": "code",
+        "path": "tools/s2uc_source_process_once.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "e28f971a9776a205cfb0aecdcc229b844014e64038bd071c55c312d1ab4c64db"
+      },
+      {
+        "bytes": 7351,
+        "category": "code",
+        "path": "tools/s2uc_v9_neutral_check.py",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "c373fc7dfdbee300b6b2e7cde2d66c065c1985914aa44ff9890a0089bc161d06"
+      },
+      {
+        "bytes": 24662,
+        "category": "metadata",
+        "path": "manifest.json",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\provenance-appendix-development-20260920\\final\\cases\\7\\bundle",
+        "sha256": "c1d7885ca46c7de996e0ee9b2bec3faf3c92c208f5aa94a007249fd5b6db4c6f"
+      },
+      {
+        "bytes": 44937,
+        "category": "static_shared",
+        "path": "reports/s2nu/s2nu-source-preseal-20260909-01/execution-plan.json",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+        "sha256": "6e64fbd5b7e86f16156b6d68bd5f7dbda3fefa8f223b2a31114bf3293eaa5f10"
+      },
+      {
+        "bytes": 18266,
+        "category": "static_shared",
+        "path": "source-binding.json",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\provenance-appendix-development-20260920\\final\\cases\\7\\bundle",
+        "sha256": "69e6947c168aa0301ac5447ec374e912c3e5ea4d0a4afdd07ecb970bed69053e"
+      },
+      {
+        "bytes": 11829,
+        "category": "static_shared",
+        "path": "dependency-inventory.json",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\provenance-appendix-development-20260920\\final\\cases\\7\\bundle",
+        "sha256": "d8cfb6213167d818d33c7c7140361730ae6370107081912b99513b41d634d654"
+      },
+      {
+        "bytes": 376,
+        "category": "static_shared",
+        "path": "qualification-summary.json",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\provenance-appendix-development-20260920\\final\\cases\\7\\bundle",
+        "sha256": "f2182db346306546825201bf5a2a8dcbef7c35508a2e4bc71cd729b28e280e4f"
+      },
+      {
+        "bytes": 20545,
+        "category": "static_shared",
+        "path": "qualification-protocol.json",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\provenance-appendix-development-20260920\\final\\cases\\7\\bundle",
+        "sha256": "22a852c68fc7415399942b34694e13367076b04d2b434703878e63f79ce48039"
+      },
+      {
+        "bytes": 346,
+        "category": "static_shared",
+        "path": "qualification-budget.json",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\provenance-appendix-development-20260920\\final\\cases\\7\\bundle",
+        "sha256": "f45468049336834a063c94080d1f9357970ce8e06c2fdaebef095acd47979978"
+      },
+      {
+        "bytes": 364,
+        "category": "static_shared",
+        "path": "qualification-result.json",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\provenance-appendix-development-20260920\\final\\cases\\7\\bundle",
+        "sha256": "e83dc4c14e4ba00ee7b319e41615fa10f2cb4c4b4a0060a19a05676ad895a1e6"
+      },
+      {
+        "bytes": 3551,
+        "category": "static_shared",
+        "path": "resource-ledger.json",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\provenance-appendix-development-20260920\\final\\cases\\7\\bundle",
+        "sha256": "da7287f37ff0f9b5b33a9a10b384fb89eaa4bd21b6a1beeb3d451940d7a87f01"
+      },
+      {
+        "bytes": 2445,
+        "category": "static_shared",
+        "path": "resource-contract.json",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\provenance-appendix-development-20260920\\final\\cases\\7\\bundle",
+        "sha256": "f610c0b2135299c04167095c3efc641c5876da00169095a5c5b0d9186ee9baa9"
+      },
+      {
+        "bytes": 2406,
+        "category": "metadata",
+        "path": "execution-binding.json",
+        "root": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\provenance-appendix-development-20260920\\final\\cases\\7\\bundle",
+        "sha256": "d4c03f52c88bf6768f0c40b08c61d65a7c10e8c82e5f48f725aa3273b4280606"
+      }
+    ],
+    "inspection_errors": [],
+    "missing_durable_evidence": [],
+    "observed_total_bytes": 1102174,
+    "owner_cleanup": [
+      {
+        "closed": true,
+        "fallback": false,
+        "initialized": true,
+        "owner": "s2uc-g1-tw"
+      },
+      {
+        "closed": true,
+        "fallback": false,
+        "initialized": true,
+        "owner": "s2uc-g1-candidate"
+      },
+      {
+        "closed": true,
+        "fallback": false,
+        "initialized": true,
+        "owner": "s2uc-g2-tw"
+      },
+      {
+        "closed": true,
+        "fallback": false,
+        "initialized": true,
+        "owner": "s2uc-g2-candidate"
+      },
+      {
+        "closed": true,
+        "fallback": false,
+        "initialized": true,
+        "owner": "s2uc-g3-tw"
+      },
+      {
+        "closed": true,
+        "fallback": false,
+        "initialized": true,
+        "owner": "s2uc-g3-candidate"
+      }
+    ],
+    "prestart_binding": {
+      "bytes": 2406,
+      "path": "execution-binding.json",
+      "sha256": "d4c03f52c88bf6768f0c40b08c61d65a7c10e8c82e5f48f725aa3273b4280606"
+    },
+    "prestart_unchanged": true,
+    "primary_error": null,
+    "real_execution_authorized": false,
+    "reservations": {
+      "failure_after_publication": {
+        "contract_id": "s2uc.resources.separate-code-artifacts.v9",
+        "kind": "reservation",
+        "limits": {
+          "code": 851968,
+          "error": 16384,
+          "metadata": 65536,
+          "minimal": 16384,
+          "record": 262144,
+          "shared": 262144,
+          "staging": 245760,
+          "static_shared": 196608,
+          "terminal": 16384,
+          "total": 4194304,
+          "verification": 262144
+        },
+        "phase": "failure_after_publication",
+        "reserved": {
+          "categories": {
+            "code": 775187,
+            "error": 16384,
+            "metadata": 27068,
+            "minimal": 0,
+            "record": 245760,
+            "staging": 245760,
+            "static_shared": 102659,
+            "terminal": 16384,
+            "verification": 131072
+          },
+          "main_accounts": {
+            "code": 775187,
+            "metadata": 27068,
+            "record": 245760,
+            "shared": 135427,
+            "staging": 245760,
+            "verification": 131072
+          },
+          "total_bytes": 1560274,
+          "violations": [],
+          "within_limits": true
+        },
+        "reserves": {
+          "record": 245760,
+          "verification": 131072
+        },
+        "version": "s2uc.resource-ledger.v9"
+      },
+      "failure_before_publication": {
+        "contract_id": "s2uc.resources.separate-code-artifacts.v9",
+        "kind": "reservation",
+        "limits": {
+          "code": 851968,
+          "error": 16384,
+          "metadata": 65536,
+          "minimal": 16384,
+          "record": 262144,
+          "shared": 262144,
+          "staging": 245760,
+          "static_shared": 196608,
+          "terminal": 16384,
+          "total": 4194304,
+          "verification": 262144
+        },
+        "phase": "failure_before_publication",
+        "reserved": {
+          "categories": {
+            "code": 775187,
+            "error": 16384,
+            "metadata": 27068,
+            "minimal": 0,
+            "record": 0,
+            "staging": 245760,
+            "static_shared": 102659,
+            "terminal": 16384,
+            "verification": 0
+          },
+          "main_accounts": {
+            "code": 775187,
+            "metadata": 27068,
+            "record": 0,
+            "shared": 135427,
+            "staging": 245760,
+            "verification": 0
+          },
+          "total_bytes": 1183442,
+          "violations": [],
+          "within_limits": true
+        },
+        "reserves": {
+          "record": 245760,
+          "verification": 131072
+        },
+        "version": "s2uc.resource-ledger.v9"
+      },
+      "minimal_with_terminal": {
+        "contract_id": "s2uc.resources.separate-code-artifacts.v9",
+        "kind": "reservation",
+        "limits": {
+          "code": 851968,
+          "error": 16384,
+          "metadata": 65536,
+          "minimal": 16384,
+          "record": 262144,
+          "shared": 262144,
+          "staging": 245760,
+          "static_shared": 196608,
+          "terminal": 16384,
+          "total": 4194304,
+          "verification": 262144
+        },
+        "phase": "failure_after_publication",
+        "reserved": {
+          "categories": {
+            "code": 775187,
+            "error": 16384,
+            "metadata": 27068,
+            "minimal": 16384,
+            "record": 245760,
+            "staging": 245760,
+            "static_shared": 102659,
+            "terminal": 16384,
+            "verification": 131072
+          },
+          "main_accounts": {
+            "code": 775187,
+            "metadata": 27068,
+            "record": 245760,
+            "shared": 151811,
+            "staging": 245760,
+            "verification": 131072
+          },
+          "total_bytes": 1576658,
+          "violations": [],
+          "within_limits": true
+        },
+        "reserves": {
+          "record": 245760,
+          "verification": 131072
+        },
+        "version": "s2uc.resource-ledger.v9"
+      },
+      "success": {
+        "contract_id": "s2uc.resources.separate-code-artifacts.v9",
+        "kind": "reservation",
+        "limits": {
+          "code": 851968,
+          "error": 16384,
+          "metadata": 65536,
+          "minimal": 16384,
+          "record": 262144,
+          "shared": 262144,
+          "staging": 245760,
+          "static_shared": 196608,
+          "terminal": 16384,
+          "total": 4194304,
+          "verification": 262144
+        },
+        "phase": "success",
+        "reserved": {
+          "categories": {
+            "code": 775187,
+            "error": 0,
+            "metadata": 27068,
+            "minimal": 0,
+            "record": 245760,
+            "staging": 245760,
+            "static_shared": 102659,
+            "terminal": 16384,
+            "verification": 131072
+          },
+          "main_accounts": {
+            "code": 775187,
+            "metadata": 27068,
+            "record": 245760,
+            "shared": 119043,
+            "staging": 245760,
+            "verification": 131072
+          },
+          "total_bytes": 1543890,
+          "violations": [],
+          "within_limits": true
+        },
+        "reserves": {
+          "record": 245760,
+          "verification": 131072
+        },
+        "version": "s2uc.resource-ledger.v9"
+      }
+    },
+    "result_inventory": [
+      {
+        "bytes": 193150,
+        "category": "record",
+        "path": "record.json",
+        "sha256": "61987723685280df9f47e72cb7c0fdf0d8a01fbe0a338076545a9fd4b44b1658"
+      },
+      {
+        "bytes": 1644,
+        "category": "terminal",
+        "path": "terminal.json",
+        "sha256": "e1a89bc7d1e0fdead92fa94529001daa917402a0bfd7e39732db39966c6c7c18"
+      },
+      {
+        "bytes": 2466,
+        "category": "verification",
+        "path": "verification.json",
+        "sha256": "12f578f6961b38406d948001337e57b96004b37235cf6a265974477b40dbab20"
+      }
+    ],
+    "run_id": "S2UC-V9-NEUTRAL-47a6867440c0414dbf73fc37f33b6e63",
+    "scope": "NEUTRAL_NONZERO_V9",
+    "secondary_errors": [],
+    "source_completion": {
+      "attempts": 58,
+      "counters": {
+        "audio_analyses": 58,
+        "nj_projections": 58,
+        "pcm_hashes": 58
+      },
+      "reached_step": "NJ",
+      "status": "COMPLETE",
+      "successes": 58
+    },
+    "staging_cleanup_observations": [],
+    "status": "CLOSED_NEUTRAL_VERIFIED",
+    "unclassified_bytes": 0,
+    "version": "s2uc.neutral-integration.v9"
+  },
+  "real_execution_authorized": false,
+  "status": "PRODUCT_RESULT_PRESENT"
+}

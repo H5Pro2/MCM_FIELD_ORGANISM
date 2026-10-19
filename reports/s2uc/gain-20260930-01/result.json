@@ -1,0 +1,3669 @@
+{
+  "preregistration_sha256": "90e5093d1baaa7e1350d98835835ff08d75861e69c6c23ffd5662a41db5176d2",
+  "preconditions": {
+    "shape": true,
+    "finite_nonnegative": true,
+    "nonzero": true,
+    "normal_reversible": true,
+    "ordered_distinct": true,
+    "hint_suitability": true
+  },
+  "arms": {
+    "E": {
+      "AA": {
+        "transitions": [
+          {
+            "step": 1,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_CREATED",
+              "generation": null,
+              "candidate_generation": 1,
+              "evicted": null
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_CREATED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 2,
+            "receipt": {
+              "action": "TRACE_PROMOTED",
+              "generation": 1,
+              "candidate_generation": 1,
+              "evicted": null
+            },
+            "state": {
+              "candidates": [],
+              "retained": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ]
+            },
+            "expected_action": "TRACE_PROMOTED",
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "hints": [
+          {
+            "source": "A",
+            "repeat": 0,
+            "result": {
+              "decision": "CONFIRMED_RETAINED_MATCH",
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "CONFIRMED_RETAINED_MATCH",
+              1
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "A",
+            "repeat": 1,
+            "result": {
+              "decision": "CONFIRMED_RETAINED_MATCH",
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "CONFIRMED_RETAINED_MATCH",
+              1
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "A",
+            "repeat": 0,
+            "result": {
+              "decision": "CONFIRMED_RETAINED_MATCH",
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "CONFIRMED_RETAINED_MATCH",
+              1
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "A",
+            "repeat": 1,
+            "result": {
+              "decision": "CONFIRMED_RETAINED_MATCH",
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "CONFIRMED_RETAINED_MATCH",
+              1
+            ],
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "final": {
+          "candidates": [],
+          "retained": [
+            {
+              "generation": 1,
+              "formation": "step1",
+              "ordinals": [
+                10,
+                11,
+                12,
+                13
+              ]
+            }
+          ]
+        },
+        "state_prediction": "CONFIRMED",
+        "meter": {
+          "whole_trace_comparisons": 1,
+          "hint_positions_checked": 12,
+          "traced_call_ns": 77403400,
+          "roles": {
+            "retained_frames": 4,
+            "candidate_frames": 4,
+            "forming_frames": 4,
+            "trace_frames": 8,
+            "hint_frames": 1
+          },
+          "temporary_trace": 8,
+          "temporary_hint": 2,
+          "temporary_total": 8,
+          "factor_tests": 0,
+          "scalar_factor_tests": 0,
+          "traced_incremental_call_peak_bytes": 27237
+        },
+        "no_hint_control_equal": true
+      },
+      "AH": {
+        "transitions": [
+          {
+            "step": 1,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_CREATED",
+              "generation": null,
+              "candidate_generation": 1,
+              "evicted": null
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_CREATED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 2,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_REPLACED",
+              "generation": null,
+              "candidate_generation": 2,
+              "evicted": 1
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 2,
+                  "formation": "step2",
+                  "ordinals": [
+                    20,
+                    21,
+                    22,
+                    23
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_REPLACED",
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "hints": [
+          {
+            "source": "A",
+            "repeat": 0,
+            "result": {
+              "decision": "ABSTAIN_NO_MATCH",
+              "matches": []
+            },
+            "expected": [
+              "ABSTAIN_NO_MATCH",
+              null
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "A",
+            "repeat": 1,
+            "result": {
+              "decision": "ABSTAIN_NO_MATCH",
+              "matches": []
+            },
+            "expected": [
+              "ABSTAIN_NO_MATCH",
+              null
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "H",
+            "repeat": 0,
+            "result": {
+              "decision": "PROVISIONAL_CANDIDATE_MATCH",
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 2,
+                  "formation": "step2",
+                  "ordinals": [
+                    20,
+                    21,
+                    22,
+                    23
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "PROVISIONAL_CANDIDATE_MATCH",
+              2
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "H",
+            "repeat": 1,
+            "result": {
+              "decision": "PROVISIONAL_CANDIDATE_MATCH",
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 2,
+                  "formation": "step2",
+                  "ordinals": [
+                    20,
+                    21,
+                    22,
+                    23
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "PROVISIONAL_CANDIDATE_MATCH",
+              2
+            ],
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "final": {
+          "candidates": [
+            {
+              "generation": 2,
+              "formation": "step2",
+              "ordinals": [
+                20,
+                21,
+                22,
+                23
+              ]
+            }
+          ],
+          "retained": []
+        },
+        "state_prediction": "CONFIRMED",
+        "meter": {
+          "whole_trace_comparisons": 1,
+          "hint_positions_checked": 12,
+          "traced_call_ns": 76282300,
+          "roles": {
+            "retained_frames": 0,
+            "candidate_frames": 4,
+            "forming_frames": 4,
+            "trace_frames": 8,
+            "hint_frames": 1
+          },
+          "temporary_trace": 8,
+          "temporary_hint": 2,
+          "temporary_total": 8,
+          "factor_tests": 0,
+          "scalar_factor_tests": 0,
+          "traced_incremental_call_peak_bytes": 6032
+        },
+        "no_hint_control_equal": true
+      },
+      "HA": {
+        "transitions": [
+          {
+            "step": 1,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_CREATED",
+              "generation": null,
+              "candidate_generation": 1,
+              "evicted": null
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_CREATED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 2,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_REPLACED",
+              "generation": null,
+              "candidate_generation": 2,
+              "evicted": 1
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 2,
+                  "formation": "step2",
+                  "ordinals": [
+                    20,
+                    21,
+                    22,
+                    23
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_REPLACED",
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "hints": [
+          {
+            "source": "H",
+            "repeat": 0,
+            "result": {
+              "decision": "ABSTAIN_NO_MATCH",
+              "matches": []
+            },
+            "expected": [
+              "ABSTAIN_NO_MATCH",
+              null
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "H",
+            "repeat": 1,
+            "result": {
+              "decision": "ABSTAIN_NO_MATCH",
+              "matches": []
+            },
+            "expected": [
+              "ABSTAIN_NO_MATCH",
+              null
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "A",
+            "repeat": 0,
+            "result": {
+              "decision": "PROVISIONAL_CANDIDATE_MATCH",
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 2,
+                  "formation": "step2",
+                  "ordinals": [
+                    20,
+                    21,
+                    22,
+                    23
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "PROVISIONAL_CANDIDATE_MATCH",
+              2
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "A",
+            "repeat": 1,
+            "result": {
+              "decision": "PROVISIONAL_CANDIDATE_MATCH",
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 2,
+                  "formation": "step2",
+                  "ordinals": [
+                    20,
+                    21,
+                    22,
+                    23
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "PROVISIONAL_CANDIDATE_MATCH",
+              2
+            ],
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "final": {
+          "candidates": [
+            {
+              "generation": 2,
+              "formation": "step2",
+              "ordinals": [
+                20,
+                21,
+                22,
+                23
+              ]
+            }
+          ],
+          "retained": []
+        },
+        "state_prediction": "CONFIRMED",
+        "meter": {
+          "whole_trace_comparisons": 1,
+          "hint_positions_checked": 12,
+          "traced_call_ns": 72036200,
+          "roles": {
+            "retained_frames": 0,
+            "candidate_frames": 4,
+            "forming_frames": 4,
+            "trace_frames": 8,
+            "hint_frames": 1
+          },
+          "temporary_trace": 8,
+          "temporary_hint": 2,
+          "temporary_total": 8,
+          "factor_tests": 0,
+          "scalar_factor_tests": 0,
+          "traced_incremental_call_peak_bytes": 6032
+        },
+        "no_hint_control_equal": true
+      },
+      "AR": {
+        "transitions": [
+          {
+            "step": 1,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_CREATED",
+              "generation": null,
+              "candidate_generation": 1,
+              "evicted": null
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_CREATED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 2,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_REPLACED",
+              "generation": null,
+              "candidate_generation": 2,
+              "evicted": 1
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 2,
+                  "formation": "step2",
+                  "ordinals": [
+                    20,
+                    21,
+                    22,
+                    23
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_REPLACED",
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "hints": [
+          {
+            "source": "A",
+            "repeat": 0,
+            "result": {
+              "decision": "ABSTAIN_NO_MATCH",
+              "matches": []
+            },
+            "expected": [
+              "ABSTAIN_NO_MATCH",
+              null
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "A",
+            "repeat": 1,
+            "result": {
+              "decision": "ABSTAIN_NO_MATCH",
+              "matches": []
+            },
+            "expected": [
+              "ABSTAIN_NO_MATCH",
+              null
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "R",
+            "repeat": 0,
+            "result": {
+              "decision": "PROVISIONAL_CANDIDATE_MATCH",
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 2,
+                  "formation": "step2",
+                  "ordinals": [
+                    20,
+                    21,
+                    22,
+                    23
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "PROVISIONAL_CANDIDATE_MATCH",
+              2
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "R",
+            "repeat": 1,
+            "result": {
+              "decision": "PROVISIONAL_CANDIDATE_MATCH",
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 2,
+                  "formation": "step2",
+                  "ordinals": [
+                    20,
+                    21,
+                    22,
+                    23
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "PROVISIONAL_CANDIDATE_MATCH",
+              2
+            ],
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "final": {
+          "candidates": [
+            {
+              "generation": 2,
+              "formation": "step2",
+              "ordinals": [
+                20,
+                21,
+                22,
+                23
+              ]
+            }
+          ],
+          "retained": []
+        },
+        "state_prediction": "CONFIRMED",
+        "meter": {
+          "whole_trace_comparisons": 1,
+          "hint_positions_checked": 12,
+          "traced_call_ns": 69914500,
+          "roles": {
+            "retained_frames": 0,
+            "candidate_frames": 4,
+            "forming_frames": 4,
+            "trace_frames": 8,
+            "hint_frames": 1
+          },
+          "temporary_trace": 8,
+          "temporary_hint": 2,
+          "temporary_total": 8,
+          "factor_tests": 0,
+          "scalar_factor_tests": 0,
+          "traced_incremental_call_peak_bytes": 6032
+        },
+        "no_hint_control_equal": true
+      },
+      "AL": {
+        "transitions": [
+          {
+            "step": 1,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_CREATED",
+              "generation": null,
+              "candidate_generation": 1,
+              "evicted": null
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_CREATED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 2,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_REPLACED",
+              "generation": null,
+              "candidate_generation": 2,
+              "evicted": 1
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 2,
+                  "formation": "step2",
+                  "ordinals": [
+                    20,
+                    21,
+                    22,
+                    23
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_REPLACED",
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "hints": [
+          {
+            "source": "A",
+            "repeat": 0,
+            "result": {
+              "decision": "ABSTAIN_NO_MATCH",
+              "matches": []
+            },
+            "expected": [
+              "ABSTAIN_NO_MATCH",
+              null
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "A",
+            "repeat": 1,
+            "result": {
+              "decision": "ABSTAIN_NO_MATCH",
+              "matches": []
+            },
+            "expected": [
+              "ABSTAIN_NO_MATCH",
+              null
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "L",
+            "repeat": 0,
+            "result": {
+              "decision": "PROVISIONAL_CANDIDATE_MATCH",
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 2,
+                  "formation": "step2",
+                  "ordinals": [
+                    20,
+                    21,
+                    22,
+                    23
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "PROVISIONAL_CANDIDATE_MATCH",
+              2
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "L",
+            "repeat": 1,
+            "result": {
+              "decision": "PROVISIONAL_CANDIDATE_MATCH",
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 2,
+                  "formation": "step2",
+                  "ordinals": [
+                    20,
+                    21,
+                    22,
+                    23
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "PROVISIONAL_CANDIDATE_MATCH",
+              2
+            ],
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "final": {
+          "candidates": [
+            {
+              "generation": 2,
+              "formation": "step2",
+              "ordinals": [
+                20,
+                21,
+                22,
+                23
+              ]
+            }
+          ],
+          "retained": []
+        },
+        "state_prediction": "CONFIRMED",
+        "meter": {
+          "whole_trace_comparisons": 1,
+          "hint_positions_checked": 12,
+          "traced_call_ns": 74365600,
+          "roles": {
+            "retained_frames": 0,
+            "candidate_frames": 4,
+            "forming_frames": 4,
+            "trace_frames": 8,
+            "hint_frames": 1
+          },
+          "temporary_trace": 8,
+          "temporary_hint": 2,
+          "temporary_total": 8,
+          "factor_tests": 0,
+          "scalar_factor_tests": 0,
+          "traced_incremental_call_peak_bytes": 6032
+        },
+        "no_hint_control_equal": true
+      },
+      "drift": {
+        "transitions": [
+          {
+            "step": 1,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_CREATED",
+              "generation": null,
+              "candidate_generation": 1,
+              "evicted": null
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_CREATED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 2,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_REPLACED",
+              "generation": null,
+              "candidate_generation": 2,
+              "evicted": 1
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 2,
+                  "formation": "step2",
+                  "ordinals": [
+                    20,
+                    21,
+                    22,
+                    23
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_REPLACED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 3,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_REPLACED",
+              "generation": null,
+              "candidate_generation": 3,
+              "evicted": 2
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 3,
+                  "formation": "step3",
+                  "ordinals": [
+                    30,
+                    31,
+                    32,
+                    33
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_REPLACED",
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "hints": [
+          {
+            "source": "A",
+            "repeat": 0,
+            "result": {
+              "decision": "ABSTAIN_NO_MATCH",
+              "matches": []
+            },
+            "expected": [
+              "ABSTAIN_NO_MATCH",
+              null
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "A",
+            "repeat": 1,
+            "result": {
+              "decision": "ABSTAIN_NO_MATCH",
+              "matches": []
+            },
+            "expected": [
+              "ABSTAIN_NO_MATCH",
+              null
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "Q",
+            "repeat": 0,
+            "result": {
+              "decision": "PROVISIONAL_CANDIDATE_MATCH",
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 3,
+                  "formation": "step3",
+                  "ordinals": [
+                    30,
+                    31,
+                    32,
+                    33
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "PROVISIONAL_CANDIDATE_MATCH",
+              3
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "Q",
+            "repeat": 1,
+            "result": {
+              "decision": "PROVISIONAL_CANDIDATE_MATCH",
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 3,
+                  "formation": "step3",
+                  "ordinals": [
+                    30,
+                    31,
+                    32,
+                    33
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "PROVISIONAL_CANDIDATE_MATCH",
+              3
+            ],
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "final": {
+          "candidates": [
+            {
+              "generation": 3,
+              "formation": "step3",
+              "ordinals": [
+                30,
+                31,
+                32,
+                33
+              ]
+            }
+          ],
+          "retained": []
+        },
+        "state_prediction": "CONFIRMED",
+        "meter": {
+          "whole_trace_comparisons": 2,
+          "hint_positions_checked": 12,
+          "traced_call_ns": 97831900,
+          "roles": {
+            "retained_frames": 0,
+            "candidate_frames": 4,
+            "forming_frames": 4,
+            "trace_frames": 8,
+            "hint_frames": 1
+          },
+          "temporary_trace": 8,
+          "temporary_hint": 2,
+          "temporary_total": 8,
+          "factor_tests": 0,
+          "scalar_factor_tests": 0,
+          "traced_incremental_call_peak_bytes": 6064
+        },
+        "no_hint_control_equal": true
+      },
+      "retained_collision": {
+        "transitions": [
+          {
+            "step": 1,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_CREATED",
+              "generation": null,
+              "candidate_generation": 1,
+              "evicted": null
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_CREATED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 2,
+            "receipt": {
+              "action": "TRACE_PROMOTED",
+              "generation": 1,
+              "candidate_generation": 1,
+              "evicted": null
+            },
+            "state": {
+              "candidates": [],
+              "retained": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ]
+            },
+            "expected_action": "TRACE_PROMOTED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 3,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_CREATED",
+              "generation": null,
+              "candidate_generation": 2,
+              "evicted": null
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 2,
+                  "formation": "step3",
+                  "ordinals": [
+                    30,
+                    31,
+                    32,
+                    33
+                  ]
+                }
+              ],
+              "retained": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ]
+            },
+            "expected_action": "TRACE_CANDIDATE_CREATED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 4,
+            "receipt": {
+              "action": "TRACE_PROMOTED",
+              "generation": 2,
+              "candidate_generation": 2,
+              "evicted": null
+            },
+            "state": {
+              "candidates": [],
+              "retained": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                },
+                {
+                  "generation": 2,
+                  "formation": "step3",
+                  "ordinals": [
+                    30,
+                    31,
+                    32,
+                    33
+                  ]
+                }
+              ]
+            },
+            "expected_action": "TRACE_PROMOTED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 5,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_CREATED",
+              "generation": null,
+              "candidate_generation": 3,
+              "evicted": null
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 3,
+                  "formation": "step5",
+                  "ordinals": [
+                    50,
+                    51,
+                    52,
+                    53
+                  ]
+                }
+              ],
+              "retained": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                },
+                {
+                  "generation": 2,
+                  "formation": "step3",
+                  "ordinals": [
+                    30,
+                    31,
+                    32,
+                    33
+                  ]
+                }
+              ]
+            },
+            "expected_action": "TRACE_CANDIDATE_CREATED",
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "hints": [
+          {
+            "source": "A",
+            "repeat": 0,
+            "result": {
+              "decision": "CONFIRMED_RETAINED_MATCH",
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "CONFIRMED_RETAINED_MATCH",
+              1
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "A",
+            "repeat": 1,
+            "result": {
+              "decision": "CONFIRMED_RETAINED_MATCH",
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "CONFIRMED_RETAINED_MATCH",
+              1
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "H",
+            "repeat": 0,
+            "result": {
+              "decision": "PROVISIONAL_CANDIDATE_MATCH",
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 3,
+                  "formation": "step5",
+                  "ordinals": [
+                    50,
+                    51,
+                    52,
+                    53
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "PROVISIONAL_CANDIDATE_MATCH",
+              5
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "H",
+            "repeat": 1,
+            "result": {
+              "decision": "PROVISIONAL_CANDIDATE_MATCH",
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 3,
+                  "formation": "step5",
+                  "ordinals": [
+                    50,
+                    51,
+                    52,
+                    53
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "PROVISIONAL_CANDIDATE_MATCH",
+              5
+            ],
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "final": {
+          "candidates": [
+            {
+              "generation": 3,
+              "formation": "step5",
+              "ordinals": [
+                50,
+                51,
+                52,
+                53
+              ]
+            }
+          ],
+          "retained": [
+            {
+              "generation": 1,
+              "formation": "step1",
+              "ordinals": [
+                10,
+                11,
+                12,
+                13
+              ]
+            },
+            {
+              "generation": 2,
+              "formation": "step3",
+              "ordinals": [
+                30,
+                31,
+                32,
+                33
+              ]
+            }
+          ]
+        },
+        "state_prediction": "CONFIRMED",
+        "meter": {
+          "whole_trace_comparisons": 6,
+          "hint_positions_checked": 36,
+          "traced_call_ns": 205293400,
+          "roles": {
+            "retained_frames": 8,
+            "candidate_frames": 4,
+            "forming_frames": 4,
+            "trace_frames": 12,
+            "hint_frames": 1
+          },
+          "temporary_trace": 12,
+          "temporary_hint": 2,
+          "temporary_total": 14,
+          "factor_tests": 0,
+          "scalar_factor_tests": 0,
+          "traced_incremental_call_peak_bytes": 7288
+        },
+        "no_hint_control_equal": true
+      },
+      "candidate_collision": {
+        "transitions": [
+          {
+            "step": 1,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_CREATED",
+              "generation": null,
+              "candidate_generation": 1,
+              "evicted": null
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_CREATED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 2,
+            "receipt": {
+              "action": "TRACE_PROMOTED",
+              "generation": 1,
+              "candidate_generation": 1,
+              "evicted": null
+            },
+            "state": {
+              "candidates": [],
+              "retained": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ]
+            },
+            "expected_action": "TRACE_PROMOTED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 3,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_CREATED",
+              "generation": null,
+              "candidate_generation": 2,
+              "evicted": null
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 2,
+                  "formation": "step3",
+                  "ordinals": [
+                    30,
+                    31,
+                    32,
+                    33
+                  ]
+                }
+              ],
+              "retained": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ]
+            },
+            "expected_action": "TRACE_CANDIDATE_CREATED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 4,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_REPLACED",
+              "generation": null,
+              "candidate_generation": 3,
+              "evicted": 2
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 3,
+                  "formation": "step4",
+                  "ordinals": [
+                    40,
+                    41,
+                    42,
+                    43
+                  ]
+                }
+              ],
+              "retained": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ]
+            },
+            "expected_action": "TRACE_CANDIDATE_REPLACED",
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "hints": [
+          {
+            "source": "A",
+            "repeat": 0,
+            "result": {
+              "decision": "CONFIRMED_RETAINED_MATCH",
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "CONFIRMED_RETAINED_MATCH",
+              1
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "A",
+            "repeat": 1,
+            "result": {
+              "decision": "CONFIRMED_RETAINED_MATCH",
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "CONFIRMED_RETAINED_MATCH",
+              1
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "H",
+            "repeat": 0,
+            "result": {
+              "decision": "PROVISIONAL_CANDIDATE_MATCH",
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 3,
+                  "formation": "step4",
+                  "ordinals": [
+                    40,
+                    41,
+                    42,
+                    43
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "PROVISIONAL_CANDIDATE_MATCH",
+              4
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "H",
+            "repeat": 1,
+            "result": {
+              "decision": "PROVISIONAL_CANDIDATE_MATCH",
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 3,
+                  "formation": "step4",
+                  "ordinals": [
+                    40,
+                    41,
+                    42,
+                    43
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "PROVISIONAL_CANDIDATE_MATCH",
+              4
+            ],
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "final": {
+          "candidates": [
+            {
+              "generation": 3,
+              "formation": "step4",
+              "ordinals": [
+                40,
+                41,
+                42,
+                43
+              ]
+            }
+          ],
+          "retained": [
+            {
+              "generation": 1,
+              "formation": "step1",
+              "ordinals": [
+                10,
+                11,
+                12,
+                13
+              ]
+            }
+          ]
+        },
+        "state_prediction": "CONFIRMED",
+        "meter": {
+          "whole_trace_comparisons": 4,
+          "hint_positions_checked": 24,
+          "traced_call_ns": 145376800,
+          "roles": {
+            "retained_frames": 4,
+            "candidate_frames": 4,
+            "forming_frames": 4,
+            "trace_frames": 12,
+            "hint_frames": 1
+          },
+          "temporary_trace": 12,
+          "temporary_hint": 2,
+          "temporary_total": 12,
+          "factor_tests": 0,
+          "scalar_factor_tests": 0,
+          "traced_incremental_call_peak_bytes": 6520
+        },
+        "no_hint_control_equal": true
+      },
+      "boundary": {
+        "hint": {
+          "decision": "CONFIRMED_RETAINED_MATCH",
+          "matches": [
+            {
+              "role": "retained",
+              "generation": 1,
+              "formation": "step1",
+              "ordinals": [
+                10,
+                11,
+                12,
+                13
+              ],
+              "offset": 0
+            }
+          ]
+        },
+        "close": {
+          "action": "TRACE_CANDIDATE_REPLACED",
+          "generation": null,
+          "candidate_generation": 4,
+          "evicted": 3
+        },
+        "meter": {
+          "whole_trace_comparisons": 9,
+          "hint_positions_checked": 9,
+          "traced_call_ns": 184401100,
+          "roles": {
+            "retained_frames": 8,
+            "candidate_frames": 4,
+            "forming_frames": 4,
+            "trace_frames": 16,
+            "hint_frames": 1
+          },
+          "temporary_trace": 16,
+          "temporary_hint": 2,
+          "temporary_total": 18,
+          "factor_tests": 0,
+          "scalar_factor_tests": 0,
+          "traced_incremental_call_peak_bytes": 7312
+        }
+      }
+    },
+    "G": {
+      "AA": {
+        "transitions": [
+          {
+            "step": 1,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_CREATED",
+              "generation": null,
+              "candidate_generation": 1,
+              "evicted": null,
+              "matches": []
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_CREATED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 2,
+            "receipt": {
+              "action": "TRACE_PROMOTED",
+              "generation": 1,
+              "candidate_generation": 1,
+              "evicted": null,
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "factors": [
+                    1.0
+                  ]
+                }
+              ]
+            },
+            "state": {
+              "candidates": [],
+              "retained": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ]
+            },
+            "expected_action": "TRACE_PROMOTED",
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "hints": [
+          {
+            "source": "A",
+            "repeat": 0,
+            "result": {
+              "decision": "CONFIRMED_RETAINED_MATCH",
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "CONFIRMED_RETAINED_MATCH",
+              1
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "A",
+            "repeat": 1,
+            "result": {
+              "decision": "CONFIRMED_RETAINED_MATCH",
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "CONFIRMED_RETAINED_MATCH",
+              1
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "A",
+            "repeat": 0,
+            "result": {
+              "decision": "CONFIRMED_RETAINED_MATCH",
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "CONFIRMED_RETAINED_MATCH",
+              1
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "A",
+            "repeat": 1,
+            "result": {
+              "decision": "CONFIRMED_RETAINED_MATCH",
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "CONFIRMED_RETAINED_MATCH",
+              1
+            ],
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "final": {
+          "candidates": [],
+          "retained": [
+            {
+              "generation": 1,
+              "formation": "step1",
+              "ordinals": [
+                10,
+                11,
+                12,
+                13
+              ]
+            }
+          ]
+        },
+        "state_prediction": "CONFIRMED",
+        "meter": {
+          "whole_trace_comparisons": 0,
+          "hint_positions_checked": 12,
+          "traced_call_ns": 82219700,
+          "roles": {
+            "retained_frames": 4,
+            "candidate_frames": 4,
+            "forming_frames": 4,
+            "trace_frames": 8,
+            "hint_frames": 1
+          },
+          "temporary_trace": 8,
+          "temporary_hint": 2,
+          "temporary_total": 8,
+          "factor_tests": 3,
+          "scalar_factor_tests": 194,
+          "traced_incremental_call_peak_bytes": 8516
+        },
+        "no_hint_control_equal": true
+      },
+      "AH": {
+        "transitions": [
+          {
+            "step": 1,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_CREATED",
+              "generation": null,
+              "candidate_generation": 1,
+              "evicted": null,
+              "matches": []
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_CREATED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 2,
+            "receipt": {
+              "action": "TRACE_PROMOTED",
+              "generation": 1,
+              "candidate_generation": 1,
+              "evicted": null,
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "factors": [
+                    0.5
+                  ]
+                }
+              ]
+            },
+            "state": {
+              "candidates": [],
+              "retained": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ]
+            },
+            "expected_action": "TRACE_PROMOTED",
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "hints": [
+          {
+            "source": "A",
+            "repeat": 0,
+            "result": {
+              "decision": "CONFIRMED_RETAINED_MATCH",
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "CONFIRMED_RETAINED_MATCH",
+              1
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "A",
+            "repeat": 1,
+            "result": {
+              "decision": "CONFIRMED_RETAINED_MATCH",
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "CONFIRMED_RETAINED_MATCH",
+              1
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "H",
+            "repeat": 0,
+            "result": {
+              "decision": "ABSTAIN_NO_MATCH",
+              "matches": []
+            },
+            "expected": [
+              "ABSTAIN_NO_MATCH",
+              null
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "H",
+            "repeat": 1,
+            "result": {
+              "decision": "ABSTAIN_NO_MATCH",
+              "matches": []
+            },
+            "expected": [
+              "ABSTAIN_NO_MATCH",
+              null
+            ],
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "final": {
+          "candidates": [],
+          "retained": [
+            {
+              "generation": 1,
+              "formation": "step1",
+              "ordinals": [
+                10,
+                11,
+                12,
+                13
+              ]
+            }
+          ]
+        },
+        "state_prediction": "CONFIRMED",
+        "meter": {
+          "whole_trace_comparisons": 0,
+          "hint_positions_checked": 12,
+          "traced_call_ns": 82430200,
+          "roles": {
+            "retained_frames": 4,
+            "candidate_frames": 4,
+            "forming_frames": 4,
+            "trace_frames": 8,
+            "hint_frames": 1
+          },
+          "temporary_trace": 8,
+          "temporary_hint": 2,
+          "temporary_total": 8,
+          "factor_tests": 3,
+          "scalar_factor_tests": 194,
+          "traced_incremental_call_peak_bytes": 6384
+        },
+        "no_hint_control_equal": true
+      },
+      "HA": {
+        "transitions": [
+          {
+            "step": 1,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_CREATED",
+              "generation": null,
+              "candidate_generation": 1,
+              "evicted": null,
+              "matches": []
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_CREATED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 2,
+            "receipt": {
+              "action": "TRACE_PROMOTED",
+              "generation": 1,
+              "candidate_generation": 1,
+              "evicted": null,
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "factors": [
+                    2.0
+                  ]
+                }
+              ]
+            },
+            "state": {
+              "candidates": [],
+              "retained": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ]
+            },
+            "expected_action": "TRACE_PROMOTED",
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "hints": [
+          {
+            "source": "H",
+            "repeat": 0,
+            "result": {
+              "decision": "CONFIRMED_RETAINED_MATCH",
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "CONFIRMED_RETAINED_MATCH",
+              1
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "H",
+            "repeat": 1,
+            "result": {
+              "decision": "CONFIRMED_RETAINED_MATCH",
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "CONFIRMED_RETAINED_MATCH",
+              1
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "A",
+            "repeat": 0,
+            "result": {
+              "decision": "ABSTAIN_NO_MATCH",
+              "matches": []
+            },
+            "expected": [
+              "ABSTAIN_NO_MATCH",
+              null
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "A",
+            "repeat": 1,
+            "result": {
+              "decision": "ABSTAIN_NO_MATCH",
+              "matches": []
+            },
+            "expected": [
+              "ABSTAIN_NO_MATCH",
+              null
+            ],
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "final": {
+          "candidates": [],
+          "retained": [
+            {
+              "generation": 1,
+              "formation": "step1",
+              "ordinals": [
+                10,
+                11,
+                12,
+                13
+              ]
+            }
+          ]
+        },
+        "state_prediction": "CONFIRMED",
+        "meter": {
+          "whole_trace_comparisons": 0,
+          "hint_positions_checked": 12,
+          "traced_call_ns": 78458500,
+          "roles": {
+            "retained_frames": 4,
+            "candidate_frames": 4,
+            "forming_frames": 4,
+            "trace_frames": 8,
+            "hint_frames": 1
+          },
+          "temporary_trace": 8,
+          "temporary_hint": 2,
+          "temporary_total": 8,
+          "factor_tests": 3,
+          "scalar_factor_tests": 194,
+          "traced_incremental_call_peak_bytes": 6360
+        },
+        "no_hint_control_equal": true
+      },
+      "AR": {
+        "transitions": [
+          {
+            "step": 1,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_CREATED",
+              "generation": null,
+              "candidate_generation": 1,
+              "evicted": null,
+              "matches": []
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_CREATED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 2,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_REPLACED",
+              "generation": null,
+              "candidate_generation": 2,
+              "evicted": 1,
+              "matches": []
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 2,
+                  "formation": "step2",
+                  "ordinals": [
+                    20,
+                    21,
+                    22,
+                    23
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_REPLACED",
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "hints": [
+          {
+            "source": "A",
+            "repeat": 0,
+            "result": {
+              "decision": "ABSTAIN_NO_MATCH",
+              "matches": []
+            },
+            "expected": [
+              "ABSTAIN_NO_MATCH",
+              null
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "A",
+            "repeat": 1,
+            "result": {
+              "decision": "ABSTAIN_NO_MATCH",
+              "matches": []
+            },
+            "expected": [
+              "ABSTAIN_NO_MATCH",
+              null
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "R",
+            "repeat": 0,
+            "result": {
+              "decision": "PROVISIONAL_CANDIDATE_MATCH",
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 2,
+                  "formation": "step2",
+                  "ordinals": [
+                    20,
+                    21,
+                    22,
+                    23
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "PROVISIONAL_CANDIDATE_MATCH",
+              2
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "R",
+            "repeat": 1,
+            "result": {
+              "decision": "PROVISIONAL_CANDIDATE_MATCH",
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 2,
+                  "formation": "step2",
+                  "ordinals": [
+                    20,
+                    21,
+                    22,
+                    23
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "PROVISIONAL_CANDIDATE_MATCH",
+              2
+            ],
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "final": {
+          "candidates": [
+            {
+              "generation": 2,
+              "formation": "step2",
+              "ordinals": [
+                20,
+                21,
+                22,
+                23
+              ]
+            }
+          ],
+          "retained": []
+        },
+        "state_prediction": "CONFIRMED",
+        "meter": {
+          "whole_trace_comparisons": 0,
+          "hint_positions_checked": 12,
+          "traced_call_ns": 76613900,
+          "roles": {
+            "retained_frames": 0,
+            "candidate_frames": 4,
+            "forming_frames": 4,
+            "trace_frames": 8,
+            "hint_frames": 1
+          },
+          "temporary_trace": 8,
+          "temporary_hint": 2,
+          "temporary_total": 8,
+          "factor_tests": 3,
+          "scalar_factor_tests": 3,
+          "traced_incremental_call_peak_bytes": 6000
+        },
+        "no_hint_control_equal": true
+      },
+      "AL": {
+        "transitions": [
+          {
+            "step": 1,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_CREATED",
+              "generation": null,
+              "candidate_generation": 1,
+              "evicted": null,
+              "matches": []
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_CREATED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 2,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_REPLACED",
+              "generation": null,
+              "candidate_generation": 2,
+              "evicted": 1,
+              "matches": []
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 2,
+                  "formation": "step2",
+                  "ordinals": [
+                    20,
+                    21,
+                    22,
+                    23
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_REPLACED",
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "hints": [
+          {
+            "source": "A",
+            "repeat": 0,
+            "result": {
+              "decision": "ABSTAIN_NO_MATCH",
+              "matches": []
+            },
+            "expected": [
+              "ABSTAIN_NO_MATCH",
+              null
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "A",
+            "repeat": 1,
+            "result": {
+              "decision": "ABSTAIN_NO_MATCH",
+              "matches": []
+            },
+            "expected": [
+              "ABSTAIN_NO_MATCH",
+              null
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "L",
+            "repeat": 0,
+            "result": {
+              "decision": "PROVISIONAL_CANDIDATE_MATCH",
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 2,
+                  "formation": "step2",
+                  "ordinals": [
+                    20,
+                    21,
+                    22,
+                    23
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "PROVISIONAL_CANDIDATE_MATCH",
+              2
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "L",
+            "repeat": 1,
+            "result": {
+              "decision": "PROVISIONAL_CANDIDATE_MATCH",
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 2,
+                  "formation": "step2",
+                  "ordinals": [
+                    20,
+                    21,
+                    22,
+                    23
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "PROVISIONAL_CANDIDATE_MATCH",
+              2
+            ],
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "final": {
+          "candidates": [
+            {
+              "generation": 2,
+              "formation": "step2",
+              "ordinals": [
+                20,
+                21,
+                22,
+                23
+              ]
+            }
+          ],
+          "retained": []
+        },
+        "state_prediction": "CONFIRMED",
+        "meter": {
+          "whole_trace_comparisons": 0,
+          "hint_positions_checked": 12,
+          "traced_call_ns": 74611500,
+          "roles": {
+            "retained_frames": 0,
+            "candidate_frames": 4,
+            "forming_frames": 4,
+            "trace_frames": 8,
+            "hint_frames": 1
+          },
+          "temporary_trace": 8,
+          "temporary_hint": 2,
+          "temporary_total": 8,
+          "factor_tests": 3,
+          "scalar_factor_tests": 51,
+          "traced_incremental_call_peak_bytes": 6000
+        },
+        "no_hint_control_equal": true
+      },
+      "drift": {
+        "transitions": [
+          {
+            "step": 1,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_CREATED",
+              "generation": null,
+              "candidate_generation": 1,
+              "evicted": null,
+              "matches": []
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_CREATED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 2,
+            "receipt": {
+              "action": "TRACE_PROMOTED",
+              "generation": 1,
+              "candidate_generation": 1,
+              "evicted": null,
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "factors": [
+                    0.5
+                  ]
+                }
+              ]
+            },
+            "state": {
+              "candidates": [],
+              "retained": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ]
+            },
+            "expected_action": "TRACE_PROMOTED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 3,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_CREATED",
+              "generation": null,
+              "candidate_generation": 2,
+              "evicted": null,
+              "matches": []
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 2,
+                  "formation": "step3",
+                  "ordinals": [
+                    30,
+                    31,
+                    32,
+                    33
+                  ]
+                }
+              ],
+              "retained": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ]
+            },
+            "expected_action": "TRACE_CANDIDATE_CREATED",
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "hints": [
+          {
+            "source": "A",
+            "repeat": 0,
+            "result": {
+              "decision": "CONFIRMED_RETAINED_MATCH",
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "CONFIRMED_RETAINED_MATCH",
+              1
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "A",
+            "repeat": 1,
+            "result": {
+              "decision": "CONFIRMED_RETAINED_MATCH",
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "CONFIRMED_RETAINED_MATCH",
+              1
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "Q",
+            "repeat": 0,
+            "result": {
+              "decision": "PROVISIONAL_CANDIDATE_MATCH",
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 2,
+                  "formation": "step3",
+                  "ordinals": [
+                    30,
+                    31,
+                    32,
+                    33
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "PROVISIONAL_CANDIDATE_MATCH",
+              3
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "Q",
+            "repeat": 1,
+            "result": {
+              "decision": "PROVISIONAL_CANDIDATE_MATCH",
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 2,
+                  "formation": "step3",
+                  "ordinals": [
+                    30,
+                    31,
+                    32,
+                    33
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "PROVISIONAL_CANDIDATE_MATCH",
+              3
+            ],
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "final": {
+          "candidates": [
+            {
+              "generation": 2,
+              "formation": "step3",
+              "ordinals": [
+                30,
+                31,
+                32,
+                33
+              ]
+            }
+          ],
+          "retained": [
+            {
+              "generation": 1,
+              "formation": "step1",
+              "ordinals": [
+                10,
+                11,
+                12,
+                13
+              ]
+            }
+          ]
+        },
+        "state_prediction": "CONFIRMED",
+        "meter": {
+          "whole_trace_comparisons": 0,
+          "hint_positions_checked": 24,
+          "traced_call_ns": 111229800,
+          "roles": {
+            "retained_frames": 4,
+            "candidate_frames": 4,
+            "forming_frames": 4,
+            "trace_frames": 8,
+            "hint_frames": 1
+          },
+          "temporary_trace": 8,
+          "temporary_hint": 2,
+          "temporary_total": 10,
+          "factor_tests": 6,
+          "scalar_factor_tests": 197,
+          "traced_incremental_call_peak_bytes": 6416
+        },
+        "no_hint_control_equal": true
+      },
+      "retained_collision": {
+        "transitions": [
+          {
+            "step": 1,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_CREATED",
+              "generation": null,
+              "candidate_generation": 1,
+              "evicted": null,
+              "matches": []
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_CREATED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 2,
+            "receipt": {
+              "action": "TRACE_PROMOTED",
+              "generation": 1,
+              "candidate_generation": 1,
+              "evicted": null,
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "factors": [
+                    1.0
+                  ]
+                }
+              ]
+            },
+            "state": {
+              "candidates": [],
+              "retained": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ]
+            },
+            "expected_action": "TRACE_PROMOTED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 3,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_CREATED",
+              "generation": null,
+              "candidate_generation": 2,
+              "evicted": null,
+              "matches": []
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 2,
+                  "formation": "step3",
+                  "ordinals": [
+                    30,
+                    31,
+                    32,
+                    33
+                  ]
+                }
+              ],
+              "retained": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ]
+            },
+            "expected_action": "TRACE_CANDIDATE_CREATED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 4,
+            "receipt": {
+              "action": "TRACE_PROMOTED",
+              "generation": 2,
+              "candidate_generation": 2,
+              "evicted": null,
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 2,
+                  "formation": "step3",
+                  "ordinals": [
+                    30,
+                    31,
+                    32,
+                    33
+                  ],
+                  "factors": [
+                    1.0
+                  ]
+                }
+              ]
+            },
+            "state": {
+              "candidates": [],
+              "retained": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                },
+                {
+                  "generation": 2,
+                  "formation": "step3",
+                  "ordinals": [
+                    30,
+                    31,
+                    32,
+                    33
+                  ]
+                }
+              ]
+            },
+            "expected_action": "TRACE_PROMOTED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 5,
+            "receipt": {
+              "action": "ABSTAIN_AMBIGUOUS_CONFIRMATION",
+              "generation": null,
+              "candidate_generation": null,
+              "evicted": null,
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "factors": [
+                    0.5
+                  ]
+                },
+                {
+                  "role": "retained",
+                  "generation": 2,
+                  "formation": "step3",
+                  "ordinals": [
+                    30,
+                    31,
+                    32,
+                    33
+                  ],
+                  "factors": [
+                    2.0
+                  ]
+                }
+              ]
+            },
+            "state": {
+              "candidates": [],
+              "retained": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                },
+                {
+                  "generation": 2,
+                  "formation": "step3",
+                  "ordinals": [
+                    30,
+                    31,
+                    32,
+                    33
+                  ]
+                }
+              ]
+            },
+            "expected_action": "ABSTAIN_AMBIGUOUS_CONFIRMATION",
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "hints": [
+          {
+            "source": "A",
+            "repeat": 0,
+            "result": {
+              "decision": "CONFIRMED_RETAINED_MATCH",
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "CONFIRMED_RETAINED_MATCH",
+              1
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "A",
+            "repeat": 1,
+            "result": {
+              "decision": "CONFIRMED_RETAINED_MATCH",
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "CONFIRMED_RETAINED_MATCH",
+              1
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "H",
+            "repeat": 0,
+            "result": {
+              "decision": "ABSTAIN_NO_MATCH",
+              "matches": []
+            },
+            "expected": [
+              "ABSTAIN_NO_MATCH",
+              null
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "H",
+            "repeat": 1,
+            "result": {
+              "decision": "ABSTAIN_NO_MATCH",
+              "matches": []
+            },
+            "expected": [
+              "ABSTAIN_NO_MATCH",
+              null
+            ],
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "final": {
+          "candidates": [],
+          "retained": [
+            {
+              "generation": 1,
+              "formation": "step1",
+              "ordinals": [
+                10,
+                11,
+                12,
+                13
+              ]
+            },
+            {
+              "generation": 2,
+              "formation": "step3",
+              "ordinals": [
+                30,
+                31,
+                32,
+                33
+              ]
+            }
+          ]
+        },
+        "state_prediction": "CONFIRMED",
+        "meter": {
+          "whole_trace_comparisons": 0,
+          "hint_positions_checked": 24,
+          "traced_call_ns": 172287000,
+          "roles": {
+            "retained_frames": 8,
+            "candidate_frames": 4,
+            "forming_frames": 4,
+            "trace_frames": 12,
+            "hint_frames": 1
+          },
+          "temporary_trace": 12,
+          "temporary_hint": 2,
+          "temporary_total": 12,
+          "factor_tests": 18,
+          "scalar_factor_tests": 782,
+          "traced_incremental_call_peak_bytes": 7752
+        },
+        "no_hint_control_equal": true
+      },
+      "candidate_collision": {
+        "transitions": [
+          {
+            "step": 1,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_CREATED",
+              "generation": null,
+              "candidate_generation": 1,
+              "evicted": null,
+              "matches": []
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ],
+              "retained": []
+            },
+            "expected_action": "TRACE_CANDIDATE_CREATED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 2,
+            "receipt": {
+              "action": "TRACE_PROMOTED",
+              "generation": 1,
+              "candidate_generation": 1,
+              "evicted": null,
+              "matches": [
+                {
+                  "role": "candidate",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "factors": [
+                    1.0
+                  ]
+                }
+              ]
+            },
+            "state": {
+              "candidates": [],
+              "retained": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ]
+            },
+            "expected_action": "TRACE_PROMOTED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 3,
+            "receipt": {
+              "action": "TRACE_CANDIDATE_CREATED",
+              "generation": null,
+              "candidate_generation": 2,
+              "evicted": null,
+              "matches": []
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 2,
+                  "formation": "step3",
+                  "ordinals": [
+                    30,
+                    31,
+                    32,
+                    33
+                  ]
+                }
+              ],
+              "retained": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ]
+            },
+            "expected_action": "TRACE_CANDIDATE_CREATED",
+            "prediction": "CONFIRMED"
+          },
+          {
+            "step": 4,
+            "receipt": {
+              "action": "ABSTAIN_AMBIGUOUS_CONFIRMATION",
+              "generation": null,
+              "candidate_generation": null,
+              "evicted": null,
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "factors": [
+                    0.5
+                  ]
+                },
+                {
+                  "role": "candidate",
+                  "generation": 2,
+                  "formation": "step3",
+                  "ordinals": [
+                    30,
+                    31,
+                    32,
+                    33
+                  ],
+                  "factors": [
+                    2.0
+                  ]
+                }
+              ]
+            },
+            "state": {
+              "candidates": [
+                {
+                  "generation": 2,
+                  "formation": "step3",
+                  "ordinals": [
+                    30,
+                    31,
+                    32,
+                    33
+                  ]
+                }
+              ],
+              "retained": [
+                {
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ]
+                }
+              ]
+            },
+            "expected_action": "ABSTAIN_AMBIGUOUS_CONFIRMATION",
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "hints": [
+          {
+            "source": "A",
+            "repeat": 0,
+            "result": {
+              "decision": "CONFIRMED_RETAINED_MATCH",
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "CONFIRMED_RETAINED_MATCH",
+              1
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "A",
+            "repeat": 1,
+            "result": {
+              "decision": "CONFIRMED_RETAINED_MATCH",
+              "matches": [
+                {
+                  "role": "retained",
+                  "generation": 1,
+                  "formation": "step1",
+                  "ordinals": [
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "offset": 0
+                }
+              ]
+            },
+            "expected": [
+              "CONFIRMED_RETAINED_MATCH",
+              1
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "H",
+            "repeat": 0,
+            "result": {
+              "decision": "ABSTAIN_NO_MATCH",
+              "matches": []
+            },
+            "expected": [
+              "ABSTAIN_NO_MATCH",
+              null
+            ],
+            "prediction": "CONFIRMED"
+          },
+          {
+            "source": "H",
+            "repeat": 1,
+            "result": {
+              "decision": "ABSTAIN_NO_MATCH",
+              "matches": []
+            },
+            "expected": [
+              "ABSTAIN_NO_MATCH",
+              null
+            ],
+            "prediction": "CONFIRMED"
+          }
+        ],
+        "final": {
+          "candidates": [
+            {
+              "generation": 2,
+              "formation": "step3",
+              "ordinals": [
+                30,
+                31,
+                32,
+                33
+              ]
+            }
+          ],
+          "retained": [
+            {
+              "generation": 1,
+              "formation": "step1",
+              "ordinals": [
+                10,
+                11,
+                12,
+                13
+              ]
+            }
+          ]
+        },
+        "state_prediction": "CONFIRMED",
+        "meter": {
+          "whole_trace_comparisons": 0,
+          "hint_positions_checked": 24,
+          "traced_call_ns": 141882200,
+          "roles": {
+            "retained_frames": 4,
+            "candidate_frames": 4,
+            "forming_frames": 4,
+            "trace_frames": 12,
+            "hint_frames": 1
+          },
+          "temporary_trace": 12,
+          "temporary_hint": 2,
+          "temporary_total": 12,
+          "factor_tests": 12,
+          "scalar_factor_tests": 585,
+          "traced_incremental_call_peak_bytes": 7368
+        },
+        "no_hint_control_equal": true
+      },
+      "boundary": {
+        "hint": {
+          "decision": "CONFIRMED_RETAINED_MATCH",
+          "matches": [
+            {
+              "role": "retained",
+              "generation": 1,
+              "formation": "step1",
+              "ordinals": [
+                10,
+                11,
+                12,
+                13
+              ],
+              "offset": 0
+            }
+          ]
+        },
+        "close": {
+          "action": "TRACE_CANDIDATE_REPLACED",
+          "generation": null,
+          "candidate_generation": 4,
+          "evicted": 3,
+          "matches": []
+        },
+        "meter": {
+          "whole_trace_comparisons": 0,
+          "hint_positions_checked": 9,
+          "traced_call_ns": 173893000,
+          "roles": {
+            "retained_frames": 8,
+            "candidate_frames": 4,
+            "forming_frames": 4,
+            "trace_frames": 16,
+            "hint_frames": 1
+          },
+          "temporary_trace": 16,
+          "temporary_hint": 2,
+          "temporary_total": 18,
+          "factor_tests": 27,
+          "scalar_factor_tests": 505,
+          "traced_incremental_call_peak_bytes": 7280
+        }
+      }
+    }
+  },
+  "status": "EVALUATED_SYNTHETIC_VECTORS",
+  "bindings_unchanged": true,
+  "notes": [
+    "Matching factors are source-relative, not chained. Original payload is never overwritten.",
+    "Ambiguous confirmation is an explicitly preregistered added abstention rule across candidate and retained roles.",
+    "Temporary sources contain only references (max3); factors max3 per source; provenance metadata has no numeric vector copies.",
+    "tracemalloc call peaks include Python observer/tracing objects, exclude earlier allocations; not process RAM or pure algorithm memory.",
+    "Factor/scalar counts are observed helper calls. Reference whole-trace counts are not directly scalar-comparable.",
+    "Existing exact hint method is inherited unchanged."
+  ]
+}

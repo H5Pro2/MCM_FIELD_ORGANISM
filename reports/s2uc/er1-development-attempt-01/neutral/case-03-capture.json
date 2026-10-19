@@ -1,0 +1,47 @@
+{
+  "collections": {
+    "/E/events": {
+      "bytes": 1018508,
+      "count": 132,
+      "sha256": "14c0ec0d88ea3818b64a716199e69a2ed2bc983acd752447e20c0b0254f6eeea"
+    },
+    "/E/forecasts": {
+      "bytes": 26164,
+      "count": 22,
+      "sha256": "e56def76437d651b12f8606670605ae2835128edf6892ae25653707e8a8f76d6"
+    },
+    "/E/internal": {
+      "bytes": 4820620,
+      "count": 504,
+      "sha256": "481d0ecd920d7c7dddbd6a186e20650a9a173e8c9438d46e2dfb17cb81540bda"
+    },
+    "/E/rows": {
+      "bytes": 1270,
+      "count": 21,
+      "sha256": "43744321bcfd05cc277281f65d019c137674716954b9f97aa8fdc0fe42a9fee7"
+    },
+    "/F/events": {
+      "bytes": 1049844,
+      "count": 132,
+      "sha256": "e36b6cb71f2c4eb366c6c35ad1f1b1d124710be3bb48121a52cc7dc55161b733"
+    },
+    "/F/forecasts": {
+      "bytes": 25795,
+      "count": 22,
+      "sha256": "b38178d3848252b06108fbe3e545c5bc49cbc069c5c9c899a3ca056a69f4a98c"
+    },
+    "/F/internal": {
+      "bytes": 4966884,
+      "count": 508,
+      "sha256": "5ccc4ec44bca2f4cfa586d7c09b11ce499e831365c9dc0895e6e07f02067ea9f"
+    },
+    "/F/rows": {
+      "bytes": 1214,
+      "count": 21,
+      "sha256": "18d3d91241938a38c853665886d1e6706bfca0e6d0ebac2d4cdbae6c0ca53cc2"
+    }
+  },
+  "folded_sha256": "ddb92d63deec81ba7f671a811eee3c38ec8376a47ec6937d1106f7abd0e95ed6",
+  "format": "URA1_CAPTURE_ANCHORS_V1",
+  "origin": "canonical records before reference encoder traversal"
+}

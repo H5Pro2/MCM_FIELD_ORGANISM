@@ -1,0 +1,112 @@
+{
+  "closures": 20,
+  "unique_archived_files_rehashed": 329,
+  "all_categories_and_totals_match": true,
+  "all_within_limits": true,
+  "all_accounting_complete": true,
+  "all_observed_owners_closed": true,
+  "all_neutral_gates_closed": true,
+  "source_files_still_match_inventory": true,
+  "totals": [
+    {
+      "archive": "closures/001",
+      "bytes": 824491,
+      "matches": true
+    },
+    {
+      "archive": "closures/002",
+      "bytes": 824545,
+      "matches": true
+    },
+    {
+      "archive": "closures/003",
+      "bytes": 828238,
+      "matches": true
+    },
+    {
+      "archive": "closures/004",
+      "bytes": 828252,
+      "matches": true
+    },
+    {
+      "archive": "closures/005",
+      "bytes": 828247,
+      "matches": true
+    },
+    {
+      "archive": "closures/006",
+      "bytes": 828234,
+      "matches": true
+    },
+    {
+      "archive": "closures/007",
+      "bytes": 1011742,
+      "matches": true
+    },
+    {
+      "archive": "closures/008",
+      "bytes": 1007626,
+      "matches": true
+    },
+    {
+      "archive": "closures/009",
+      "bytes": 828241,
+      "matches": true
+    },
+    {
+      "archive": "closures/010",
+      "bytes": 832295,
+      "matches": true
+    },
+    {
+      "archive": "closures/011",
+      "bytes": 1011742,
+      "matches": true
+    },
+    {
+      "archive": "closures/012",
+      "bytes": 824483,
+      "matches": true
+    },
+    {
+      "archive": "closures/013",
+      "bytes": 1011841,
+      "matches": true
+    },
+    {
+      "archive": "closures/014",
+      "bytes": 1011742,
+      "matches": true
+    },
+    {
+      "archive": "closures/015",
+      "bytes": 1011742,
+      "matches": true
+    },
+    {
+      "archive": "closures/016",
+      "bytes": 897752,
+      "matches": true
+    },
+    {
+      "archive": "closures/017",
+      "bytes": 1011742,
+      "matches": true
+    },
+    {
+      "archive": "closures/018",
+      "bytes": 1015239,
+      "matches": true
+    },
+    {
+      "archive": "closures/019",
+      "bytes": 824861,
+      "matches": true
+    },
+    {
+      "archive": "closures/020",
+      "bytes": 822864,
+      "matches": true
+    }
+  ]
+}

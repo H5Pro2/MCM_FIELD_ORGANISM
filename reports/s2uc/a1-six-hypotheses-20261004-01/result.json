@@ -1,0 +1,378 @@
+{
+  "status": "PASS",
+  "six_eligible": true,
+  "factor_excluded": true,
+  "cleanup": true,
+  "measurements": {
+    "heap": {
+      "resources": {
+        "additional_python_peak": 6679,
+        "original_frames_peak": 0,
+        "output_slots_peak": 0,
+        "combined_peak": 0,
+        "original_frames_upper_bound": 16,
+        "combined_upper_bound": 18,
+        "packed": 416,
+        "receipt_bytes_peak": 1473,
+        "utf8_upper": 2946,
+        "calls": [
+          {
+            "operation": "receipt",
+            "retained": 1500,
+            "transient": 5179,
+            "total": 6679
+          }
+        ]
+      },
+      "receipt": {
+        "status": "ABSTAIN_AMBIGUOUS",
+        "stream": "stream",
+        "owner": "neutral-a1",
+        "profile": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "input_indices": [
+          23,
+          24
+        ],
+        "source_intervals": [
+          [
+            0,
+            4800
+          ],
+          [
+            4800,
+            9600
+          ]
+        ],
+        "read_revision": 0,
+        "decision": "COLD_ONLY",
+        "choice": 0,
+        "matches": [
+          {
+            "role": "retained",
+            "generation": 1,
+            "formation": "p1",
+            "ordinals": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "offset": 0,
+            "factors": [
+              1.0
+            ]
+          },
+          {
+            "role": "retained",
+            "generation": 1,
+            "formation": "p1",
+            "ordinals": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "offset": 1,
+            "factors": [
+              1.0
+            ]
+          },
+          {
+            "role": "retained",
+            "generation": 2,
+            "formation": "p3",
+            "ordinals": [
+              9,
+              10,
+              11,
+              12
+            ],
+            "offset": 0,
+            "factors": [
+              1.0
+            ]
+          },
+          {
+            "role": "retained",
+            "generation": 2,
+            "formation": "p3",
+            "ordinals": [
+              9,
+              10,
+              11,
+              12
+            ],
+            "offset": 1,
+            "factors": [
+              1.0
+            ]
+          },
+          {
+            "role": "candidate",
+            "generation": 3,
+            "formation": "p5",
+            "ordinals": [
+              17,
+              18,
+              19,
+              20
+            ],
+            "offset": 0,
+            "factors": [
+              1.0
+            ]
+          },
+          {
+            "role": "candidate",
+            "generation": 3,
+            "formation": "p5",
+            "ordinals": [
+              17,
+              18,
+              19,
+              20
+            ],
+            "offset": 1,
+            "factors": [
+              1.0
+            ]
+          }
+        ],
+        "hypotheses": [
+          {
+            "eligible": true,
+            "ticket": 0,
+            "ec": null,
+            "ep": null,
+            "delta": null,
+            "evaluation": "COLD"
+          },
+          {
+            "eligible": true,
+            "ticket": 1,
+            "ec": null,
+            "ep": null,
+            "delta": null,
+            "evaluation": "COLD"
+          },
+          {
+            "eligible": true,
+            "ticket": 2,
+            "ec": null,
+            "ep": null,
+            "delta": null,
+            "evaluation": "COLD"
+          },
+          {
+            "eligible": true,
+            "ticket": 3,
+            "ec": null,
+            "ep": null,
+            "delta": null,
+            "evaluation": "COLD"
+          },
+          {
+            "eligible": true,
+            "ticket": 4,
+            "ec": null,
+            "ep": null,
+            "delta": null,
+            "evaluation": "COLD"
+          },
+          {
+            "eligible": true,
+            "ticket": 5,
+            "ec": null,
+            "ep": null,
+            "delta": null,
+            "evaluation": "COLD"
+          }
+        ],
+        "retained_semantics": "ADMITTED_NOT_FULL_REPEAT_PROOF",
+        "a1_admission": null
+      }
+    },
+    "trace": {
+      "resources": {
+        "additional_python_peak": 0,
+        "original_frames_peak": 16,
+        "output_slots_peak": 1,
+        "combined_peak": 17,
+        "original_frames_upper_bound": 0,
+        "combined_upper_bound": 0,
+        "packed": 416,
+        "receipt_bytes_peak": 1473,
+        "utf8_upper": 2946,
+        "calls": []
+      },
+      "receipt": {
+        "status": "ABSTAIN_AMBIGUOUS",
+        "stream": "stream",
+        "owner": "neutral-a1",
+        "profile": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "input_indices": [
+          23,
+          24
+        ],
+        "source_intervals": [
+          [
+            0,
+            4800
+          ],
+          [
+            4800,
+            9600
+          ]
+        ],
+        "read_revision": 0,
+        "decision": "COLD_ONLY",
+        "choice": 0,
+        "matches": [
+          {
+            "role": "retained",
+            "generation": 1,
+            "formation": "p1",
+            "ordinals": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "offset": 0,
+            "factors": [
+              1.0
+            ]
+          },
+          {
+            "role": "retained",
+            "generation": 1,
+            "formation": "p1",
+            "ordinals": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "offset": 1,
+            "factors": [
+              1.0
+            ]
+          },
+          {
+            "role": "retained",
+            "generation": 2,
+            "formation": "p3",
+            "ordinals": [
+              9,
+              10,
+              11,
+              12
+            ],
+            "offset": 0,
+            "factors": [
+              1.0
+            ]
+          },
+          {
+            "role": "retained",
+            "generation": 2,
+            "formation": "p3",
+            "ordinals": [
+              9,
+              10,
+              11,
+              12
+            ],
+            "offset": 1,
+            "factors": [
+              1.0
+            ]
+          },
+          {
+            "role": "candidate",
+            "generation": 3,
+            "formation": "p5",
+            "ordinals": [
+              17,
+              18,
+              19,
+              20
+            ],
+            "offset": 0,
+            "factors": [
+              1.0
+            ]
+          },
+          {
+            "role": "candidate",
+            "generation": 3,
+            "formation": "p5",
+            "ordinals": [
+              17,
+              18,
+              19,
+              20
+            ],
+            "offset": 1,
+            "factors": [
+              1.0
+            ]
+          }
+        ],
+        "hypotheses": [
+          {
+            "eligible": true,
+            "ticket": 0,
+            "ec": null,
+            "ep": null,
+            "delta": null,
+            "evaluation": "COLD"
+          },
+          {
+            "eligible": true,
+            "ticket": 1,
+            "ec": null,
+            "ep": null,
+            "delta": null,
+            "evaluation": "COLD"
+          },
+          {
+            "eligible": true,
+            "ticket": 2,
+            "ec": null,
+            "ep": null,
+            "delta": null,
+            "evaluation": "COLD"
+          },
+          {
+            "eligible": true,
+            "ticket": 3,
+            "ec": null,
+            "ep": null,
+            "delta": null,
+            "evaluation": "COLD"
+          },
+          {
+            "eligible": true,
+            "ticket": 4,
+            "ec": null,
+            "ep": null,
+            "delta": null,
+            "evaluation": "COLD"
+          },
+          {
+            "eligible": true,
+            "ticket": 5,
+            "ec": null,
+            "ep": null,
+            "delta": null,
+            "evaluation": "COLD"
+          }
+        ],
+        "retained_semantics": "ADMITTED_NOT_FULL_REPEAT_PROOF",
+        "a1_admission": null
+      }
+    }
+  },
+  "neutral_only": true
+}

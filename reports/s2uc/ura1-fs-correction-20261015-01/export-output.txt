@@ -1,0 +1,1 @@
+{"mode": "export", "status": "PASS", "seconds": 0.3069699999978184, "job_peak": 27512832, "first_failure": "InventoryError:budget:export:C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\ura1-fs-correction-20261015-01\\export\\data:LIMIT:67125249>67108864", "steps": 0}

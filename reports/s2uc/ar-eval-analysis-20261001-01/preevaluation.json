@@ -1,0 +1,33 @@
+{
+  "plan_sha256": "40410b187f813cb546e44cca01ac353f85bdc70d4b29e5b0fc057ac3f6feb5fd",
+  "binding_sha256": "87306a9ef5e67c47fd99d0643a38513dae40ad7f684ccbae898fff7801f9257e",
+  "runner_sha256": "9a7b879413fb38911c87b40cbe562c8fae1dedd9bb0c7cc1cc37a4e932aeab8f",
+  "fixed_tau": 0.015625,
+  "epsilon": 0.0009765625,
+  "frame_amplitudes": [],
+  "calibration_interpretation": "No evaluation calibration; epsilon frozen from Development",
+  "material": {
+    "case-N1.json": "dc2a74adb0852bf45ca6df63de1c6af8a60ac7a87536c601d4e7b83d10f29621",
+    "case-N2.json": "c19d1605b5feddc615f5a708502c780b4e8e8a391931c5ef9ab39cdbf09dc0ae",
+    "case-N3.json": "51d856847cabb75ee9d8e882edf5117e4d7a5c4025cf6ad0990e2e045f075a6c",
+    "case-N4.json": "843e19b669b95fa2750359a0e9bb0df30da30b7a712e1e955a061a94517fb587",
+    "case-P0.json": "9df5cede41fd8d6250ce3118e1f1b1e4bd7832fe66042d8048b0c971f3b14def",
+    "case-R0.json": "6b485b74b85017478c3371982e614b3ea767796a5c485d83be7d08c60a8a3979",
+    "case-R1.json": "8f0759008a6946c28dac1e5e5565f68a46e6e465fad7afdbaa4a86f4ea13f4ed",
+    "case-R2.json": "0b88587eed1f13dab90f91dfe5881fed5a5d350d8e58451ff66bdf62290e158c",
+    "case-R3.json": "9a7947ca5ccd040a6b4f4635da181cf1c89b3df0983353ca01b85f3c38475f9b",
+    "case-Z0.json": "fb6d979098dd99bdf0d96301243240f8afb0440f176c3d5d5e7362f1b9b31c77",
+    "case-Z1.json": "830db876b7fa97ab0bf1342d5d59d50bd7b7f47bdf3aba3b8a943ba8e5af0577",
+    "claim.json": "901c4a0a6d67b9fdbe893dc056f3181e8d418af49f35af841a8d81de6866877c",
+    "closure.json": "453f6cdb6f256c9943b308ef8efc46dda876cb151a316911fd2070925986454f",
+    "manifest.json": "d7097dfa41970561551a8ca82bf4c6904f51792e5ae3ae181e5d4089095df44a",
+    "source-A.json": "a2af986847d112b1f5689dda92991f4f65dcb29f69ceb6f566e183dbcc0024ac",
+    "source-B.json": "3f63cf64a634aa5e7f7e191b8eb08229059f97a6e892d9b9347a437bda4e62de",
+    "source-C.json": "9fe86e6b5fdcd5df7bbd9be98b6a80262288cb75abd8de16c54ab2739312569d",
+    "source-calibration.json": "459164f6d716d6fb5ed5d9cabbf87f5b3e59a855f371546891d0b11e20bfcf63",
+    "source-D.json": "bea2f3d76fb14ec038374d9cd4e19f5635a667899cf5af020269ebffccedcc58",
+    "source-noise_R.json": "f31d5b42264661f06a5e79704ba3c6cd35f46c5993f32ca1c7956ab7d74d3854",
+    "source-noise_Z.json": "abbea9efc329c3492e9e0653eeb39a82d71536d7ff85743156e2eb8ecc67b344"
+  },
+  "continuation": "legacy_v1 for both arms"
+}

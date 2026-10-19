@@ -1,0 +1,18 @@
+{
+  "actual_before_verification": 110776,
+  "bound_total": 254397,
+  "boundary": "Stored prefix, timestamps, shape, digest and resource bindings; no decoder or numerical sample reconstruction.",
+  "decoder_status": "DECODER_SEQUENCE_COMPLETE",
+  "files": {
+    "reports\\s2oe\\decoder-uhd-sequence-20260911-01\\binding.json": 8612,
+    "reports\\s2oe\\decoder-uhd-sequence-20260911-01\\decoder.claim": 28,
+    "reports\\s2oe\\decoder-uhd-sequence-20260911-01\\qualification.claim": 5,
+    "reports\\s2oe\\decoder-uhd-sequence-20260911-01\\qualification.json": 158,
+    "reports\\s2oe\\decoder-uhd-sequence-20260911-01\\qualification.log": 793,
+    "reports\\s2oe\\decoder-uhd-sequence-20260911-01\\record.json": 35184,
+    "reports\\s2oe\\decoder-uhd-sequence-20260911-01\\verification.claim": 15
+  },
+  "read_only": true,
+  "record_sha256": "2082ac5e521aa984c969806bb7d3b0a7f15e0e51db86127a9230dad96123387c",
+  "status": "EVIDENCE_VALID"
+}

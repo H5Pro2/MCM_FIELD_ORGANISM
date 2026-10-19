@@ -1,0 +1,182 @@
+{
+  "binding_sha256": "96890aed744bb89fe6c5922deffe8ee1aaa78136c1a084c270cb3e26eff50e66",
+  "counters": {
+    "audio_frames": 0,
+    "audio_samples": 0,
+    "container_read_bytes": 171256136,
+    "packets": 4,
+    "passes": 1,
+    "selected_windows": 0,
+    "video_frames": 1
+  },
+  "decoder_calls": 1,
+  "failure": {
+    "code": "DECODER_MEMORY_LIMIT",
+    "detail": {
+      "active_process_limit": 1,
+      "exact_failure_location_known": false,
+      "flags": 8968,
+      "job_commit_limit": 536870912,
+      "job_confirmed_before_media": true,
+      "last_confirmed_phase": {
+        "kind": "phase",
+        "operation": "packet_decode",
+        "phase": "VIDEO",
+        "sequence": 2
+      },
+      "memory_limit_messages": [
+        9
+      ],
+      "memory_limit_notification": true,
+      "original_worker_error": {
+        "errno": 1094995529,
+        "error": "DECODER_WORKER_FAILED",
+        "exception_module": "av.error",
+        "exception_type": "InvalidDataError",
+        "traceback": [
+          {
+            "file": "packet.py",
+            "function": "av.packet.Packet.decode",
+            "line": 271
+          },
+          {
+            "file": "stream.py",
+            "function": "av.video.stream.VideoStream.decode",
+            "line": 42
+          },
+          {
+            "file": "stream.py",
+            "function": "av.video.stream.VideoStream.decode",
+            "line": 51
+          },
+          {
+            "file": "context.pyx",
+            "function": "av.codec.context.CodecContext.decode",
+            "line": 447
+          },
+          {
+            "file": "context.pyx",
+            "function": "av.codec.context.CodecContext._send_packet_and_recv",
+            "line": 339
+          },
+          {
+            "file": "error.pyx",
+            "function": "av.error.err_check",
+            "line": 424
+          }
+        ]
+      },
+      "peak_job_commit": 535515136,
+      "peak_process_commit": 528936960,
+      "process_commit_limit": 536870912,
+      "process_exit_before_cancel": null,
+      "queue_capacity": 1,
+      "read_counters_complete": true,
+      "request_seconds": 30.0,
+      "slot_bytes": 6240000,
+      "version": "s2oe.decoder-job.v2-phase-diagnostic"
+    },
+    "exception_type": "WorkerError",
+    "traceback": [
+      {
+        "file": "diagnose_media_first_window.py",
+        "function": "diagnose",
+        "line": 100
+      },
+      {
+        "file": "_s2oe_decoder_worker.py",
+        "function": "select",
+        "line": 330
+      },
+      {
+        "file": "_s2oe_decoder_worker.py",
+        "function": "_rpc",
+        "line": 311
+      }
+    ]
+  },
+  "field": 0,
+  "gates_opened": false,
+  "last_confirmed_phase": {
+    "kind": "phase",
+    "operation": "packet_decode",
+    "phase": "VIDEO",
+    "sequence": 2
+  },
+  "memory": 0,
+  "nj": 0,
+  "receptors": 0,
+  "resources": {
+    "active_process_limit": 1,
+    "exact_failure_location_known": false,
+    "flags": 8968,
+    "job_commit_limit": 536870912,
+    "job_confirmed_before_media": true,
+    "last_confirmed_phase": {
+      "kind": "phase",
+      "operation": "packet_decode",
+      "phase": "VIDEO",
+      "sequence": 2
+    },
+    "memory_limit_messages": [
+      9
+    ],
+    "memory_limit_notification": true,
+    "original_worker_error": {
+      "errno": 1094995529,
+      "error": "DECODER_WORKER_FAILED",
+      "exception_module": "av.error",
+      "exception_type": "InvalidDataError",
+      "traceback": [
+        {
+          "file": "packet.py",
+          "function": "av.packet.Packet.decode",
+          "line": 271
+        },
+        {
+          "file": "stream.py",
+          "function": "av.video.stream.VideoStream.decode",
+          "line": 42
+        },
+        {
+          "file": "stream.py",
+          "function": "av.video.stream.VideoStream.decode",
+          "line": 51
+        },
+        {
+          "file": "context.pyx",
+          "function": "av.codec.context.CodecContext.decode",
+          "line": 447
+        },
+        {
+          "file": "context.pyx",
+          "function": "av.codec.context.CodecContext._send_packet_and_recv",
+          "line": 339
+        },
+        {
+          "file": "error.pyx",
+          "function": "av.error.err_check",
+          "line": 424
+        }
+      ]
+    },
+    "peak_job_commit": 535515136,
+    "peak_process_commit": 528936960,
+    "process_commit_limit": 536870912,
+    "process_exit_before_cancel": null,
+    "queue_capacity": 1,
+    "read_counters_complete": false,
+    "request_seconds": 30.0,
+    "slot_bytes": 6240000,
+    "version": "s2oe.decoder-job.v2-phase-diagnostic",
+    "worker_closed": true,
+    "worker_exit_code": 1
+  },
+  "runtime": 0,
+  "selection": {
+    "repeat": 1,
+    "window": 0
+  },
+  "source_binding_sha256": "7d306c851a74eeccb00c6aca3b5397372c6d8e450f217cb12a457f08bae5e6d3",
+  "status": "NOT_EVALUABLE"
+}

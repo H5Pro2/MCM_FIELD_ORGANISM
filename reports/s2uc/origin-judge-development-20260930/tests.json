@@ -1,0 +1,135 @@
+{
+  "tests_run": 24,
+  "success": true,
+  "errors": 0,
+  "failures": 0,
+  "skips": 0,
+  "tests": [
+    {
+      "id": "tests.test_s2uc_origin_judge.JudgeTests.test_T0_N3_same_system_output_different_truth",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_origin_judge.JudgeTests.test_abstention_and_full_coverage",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_origin_judge.JudgeTests.test_ambiguity_is_not_resolved_with_labels",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_origin_judge.JudgeTests.test_candidate_and_retained_roles",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_origin_judge.JudgeTests.test_evaluator_learning_separation_and_budget",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_origin_judge.JudgeTests.test_factor_recognition_without_prediction",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_origin_judge.JudgeTests.test_gate_before_iterator_pull",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_origin_judge.JudgeTests.test_known_mae_and_harm_preserved",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_origin_judge.JudgeTests.test_material_plan_no_generation_and_partition_closure",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_origin_judge.JudgeTests.test_material_production_requires_authorization",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_origin_judge.JudgeTests.test_unbound_origin_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_continuation_adapter.ContinuationTests.test_before_admission_and_immutable",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_continuation_adapter.ContinuationTests.test_error_close_release_and_no_feedback",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_continuation_adapter.ContinuationTests.test_evaluation_failure_releases_slots",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_continuation_adapter.ContinuationTests.test_eviction_does_not_change_prediction",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_continuation_adapter.ContinuationTests.test_factor_and_end_abstain",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_continuation_adapter.ContinuationTests.test_methods_unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_continuation_adapter.ContinuationTests.test_one_ulp_not_tolerated",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_gap_terminates_no_cross_pair",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_no_self_match_and_admission_once",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_receipt_has_no_payload",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_receipt_not_input",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_remainder_and_reset",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_scope_and_time_errors",
+      "status": "PASS"
+    }
+  ],
+  "facts": {
+    "T0_N3_identical_forecast": true,
+    "resources": {
+      "frame_peak": 8,
+      "output_slots_peak": 2,
+      "combined_peak": 9,
+      "output_python_bytes_peak": 3642,
+      "samples": 7438
+    },
+    "technical_control": {
+      "case_id": "T0-regression",
+      "target": 11,
+      "positive": true,
+      "origin_category": "CORRECT",
+      "assigned_root": "A",
+      "true_root": "A",
+      "role": "retained",
+      "assignment_covered": true,
+      "correct_rejection": false,
+      "prediction_status": "PREDICTED_RETAINED",
+      "context_covered": true,
+      "persistence_mae": 0.004260602352116879,
+      "context_mae": 0.0,
+      "paired_delta": 0.004260602352116879,
+      "observer_hybrid_mae": 0.0,
+      "full_delta": 0.004260602352116879
+    }
+  },
+  "material_production_calls": 0,
+  "final_performance_evaluation": false
+}

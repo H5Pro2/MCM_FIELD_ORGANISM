@@ -1,0 +1,106 @@
+{
+  "status": "PASS_SMALL_RESOURCE_QUALIFICATION",
+  "research_ready": false,
+  "files": {
+    "binding.json": {
+      "bytes": 927,
+      "sha256": "42fa5450d0c8c6c3148b2da701dc5bfa40c44a987802fb888894420242dfd735"
+    },
+    "decoder/gate": {
+      "bytes": 8,
+      "sha256": "1c34f88707b55e6104c4eb20e71ffa3d33e414b71ef689a15fad0640d0ac58cb"
+    },
+    "decoder/phase.txt": {
+      "bytes": 8,
+      "sha256": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d"
+    },
+    "decoder/supervisor.json": {
+      "bytes": 2315,
+      "sha256": "e31a6bfbc17949af278cb42bfa063c4d1f1a09d276c81bf7ebf1c0602aad2020"
+    },
+    "decoder/worker.json": {
+      "bytes": 5539,
+      "sha256": "9b3f5b1bcb39d45eaca7dff80b08af40441d0d7f1f30aaa848d92efb6b0453f8"
+    },
+    "decoder/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "encoder/gate": {
+      "bytes": 8,
+      "sha256": "1c34f88707b55e6104c4eb20e71ffa3d33e414b71ef689a15fad0640d0ac58cb"
+    },
+    "encoder/phase.txt": {
+      "bytes": 8,
+      "sha256": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d"
+    },
+    "encoder/supervisor.json": {
+      "bytes": 2141,
+      "sha256": "50e4018fdcea96ed9181223423002e5c51236b21996c3e8a6ae1c1cb06e32359"
+    },
+    "encoder/worker.json": {
+      "bytes": 5090,
+      "sha256": "b05fc471fe6bfe9f1f00e307654683b5d38cd9701155a5ef8cdc7e1e6b86d27c"
+    },
+    "encoder/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "memory/gate": {
+      "bytes": 8,
+      "sha256": "1c34f88707b55e6104c4eb20e71ffa3d33e414b71ef689a15fad0640d0ac58cb"
+    },
+    "memory/phase.txt": {
+      "bytes": 8,
+      "sha256": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d"
+    },
+    "memory/supervisor.json": {
+      "bytes": 1475,
+      "sha256": "3ed7182399d4273358b3c09d8a46805a37ef2464113b16affccb968bd05fcfb9"
+    },
+    "memory/worker.json": {
+      "bytes": 1582,
+      "sha256": "f3469aa1a21066129c31904b7e9412eb0c1e628bbe9d59b860cf19cc30775129"
+    },
+    "memory/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "normal/D_hand_case.dag.json.gz": {
+      "bytes": 24009,
+      "sha256": "91317f60a0a5fc50e7a52c7efdef635e10edced8f778951ccceffeaf061bae5b"
+    },
+    "normal/gate": {
+      "bytes": 8,
+      "sha256": "1c34f88707b55e6104c4eb20e71ffa3d33e414b71ef689a15fad0640d0ac58cb"
+    },
+    "normal/lifecycle_trace.dag.json.gz": {
+      "bytes": 19768,
+      "sha256": "34d420309bb99c6b1a9d4bd8c6b73fb564dfdc2031c0daf4fb94a465c4f32425"
+    },
+    "normal/phase.txt": {
+      "bytes": 8,
+      "sha256": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d"
+    },
+    "normal/supervisor.json": {
+      "bytes": 2865,
+      "sha256": "51d5f1470349269156944e3a7ddd6fe5ced8dd8098e79d9111dddb4e4836f994"
+    },
+    "normal/worker.json": {
+      "bytes": 10991,
+      "sha256": "3a2706774aa337c84658f7a99d91567d3cc1d0cad7f4f8d66a1fa8b386e0e9ca"
+    },
+    "normal/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "REPORT.md": {
+      "bytes": 17281,
+      "sha256": "6857f04281b1a9e1e81bb4d8fcee1d172796815ab0c0637e4d0226058941d6e7"
+    },
+    "tests.json": {
+      "bytes": 984,
+      "sha256": "21a920e292ee84db3c3d47b9b60d24da1d86597bde4bdb6e31d9751bae195d2a"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+test_01_stage_order (tests.test_checkpoint_transfer_entry.EntryTests.test_01_stage_order) ... ok
+test_02_child_failure_progress (tests.test_checkpoint_transfer_entry.EntryTests.test_02_child_failure_progress) ... ok
+test_03_missing_checkpoint (tests.test_checkpoint_transfer_entry.EntryTests.test_03_missing_checkpoint) ... ok
+test_04_single_claim (tests.test_checkpoint_transfer_entry.EntryTests.test_04_single_claim) ... ok
+test_05_logs (tests.test_checkpoint_transfer_entry.EntryTests.test_05_logs) ... ok
+test_06_log_overflow (tests.test_checkpoint_transfer_entry.EntryTests.test_06_log_overflow) ... ok
+test_07_timeout (tests.test_checkpoint_transfer_entry.EntryTests.test_07_timeout) ... ok
+test_08_all_positions (tests.test_checkpoint_transfer_entry.EntryTests.test_08_all_positions) ... ok
+test_09_global_budget (tests.test_checkpoint_transfer_entry.EntryTests.test_09_global_budget) ... ok
+test_10_exact_budget (tests.test_checkpoint_transfer_entry.EntryTests.test_10_exact_budget) ... ok
+test_11_components (tests.test_checkpoint_transfer_entry.EntryTests.test_11_components) ... ok
+test_12_evaluation_block (tests.test_checkpoint_transfer_entry.EntryTests.test_12_evaluation_block) ... ok
+test_13_manifest_values (tests.test_checkpoint_transfer_entry.EntryTests.test_13_manifest_values) ... ok
+test_14_primary_error (tests.test_checkpoint_transfer_entry.EntryTests.test_14_primary_error) ... ok
+test_15_no_ready_admission (tests.test_checkpoint_transfer_entry.EntryTests.test_15_no_ready_admission) ... ok
+test_16_gate_unchanged (tests.test_checkpoint_transfer_entry.EntryTests.test_16_gate_unchanged) ... ok
+test_17_reference_uninterrupted (tests.test_checkpoint_transfer_entry.EntryTests.test_17_reference_uninterrupted) ... ok
+test_18_save_boundary (tests.test_checkpoint_transfer_entry.EntryTests.test_18_save_boundary) ... ok
+test_19_restore_consumption (tests.test_checkpoint_transfer_entry.EntryTests.test_19_restore_consumption) ... ok
+test_20_worker_primary_failure (tests.test_checkpoint_transfer_entry.EntryTests.test_20_worker_primary_failure) ... Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_checkpoint_transfer_entry.py", line 154, in worker
+    session.next(event)
+    ~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_checkpoint_transfer_entry.py", line 125, in next
+    if event.ordinal==fail_at:raise e.c.CheckpointError('NEUTRAL_FORMATION_FAILURE')
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tools._memory_checkpoint.CheckpointError: NEUTRAL_FORMATION_FAILURE
+ok
+test_21_total_verifier_and_abstention (tests.test_checkpoint_transfer_entry.EntryTests.test_21_total_verifier_and_abstention) ... ok
+test_22_total_process_identity (tests.test_checkpoint_transfer_entry.EntryTests.test_22_total_process_identity) ... ok
+test_23_valid_negative_evaluation (tests.test_checkpoint_transfer_entry.EntryTests.test_23_valid_negative_evaluation) ... ok
+test_24_incomplete_comparison (tests.test_checkpoint_transfer_entry.EntryTests.test_24_incomplete_comparison) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.380s
+
+OK

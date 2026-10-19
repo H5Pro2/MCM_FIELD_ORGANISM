@@ -1,0 +1,113 @@
+{
+  "enabled": true,
+  "trace_pass": false,
+  "frames": 2,
+  "forecasts": [
+    {
+      "status": "ABSTAIN_NO_MATCH",
+      "stream": "neutral-stream",
+      "owner": "neutral-owner",
+      "profile": "2be3ec4d3ba89885f2c29f20e73358de23eaab4cca55269916fd81415887893c",
+      "input_indices": [
+        1,
+        2
+      ],
+      "source_intervals": [
+        [
+          0,
+          4800
+        ],
+        [
+          4800,
+          9600
+        ]
+      ],
+      "read_revision": 0,
+      "decision": "NO_ELIGIBLE_CONTEXT",
+      "choice": 0,
+      "matches": [],
+      "hypotheses": []
+    }
+  ],
+  "updates": [],
+  "outputs": [],
+  "admissions": [
+    {
+      "index": 1,
+      "before": {
+        "candidate": null,
+        "retained": [],
+        "forming": [],
+        "candidate_serial": 0,
+        "retained_serial": 0,
+        "observation_end": {}
+      },
+      "after": {
+        "candidate": null,
+        "retained": [],
+        "forming": [],
+        "candidate_serial": 0,
+        "retained_serial": 0,
+        "observation_end": {}
+      },
+      "cells": []
+    },
+    {
+      "index": 2,
+      "before": {
+        "candidate": null,
+        "retained": [],
+        "forming": [],
+        "candidate_serial": 0,
+        "retained_serial": 0,
+        "observation_end": {}
+      },
+      "after": {
+        "candidate": null,
+        "retained": [],
+        "forming": [
+          1,
+          2
+        ],
+        "candidate_serial": 0,
+        "retained_serial": 0,
+        "observation_end": {}
+      },
+      "cells": []
+    }
+  ],
+  "resources": {
+    "additional_python_peak": 3189,
+    "original_frames_peak": 0,
+    "output_slots_peak": 0,
+    "combined_peak": 0,
+    "original_frames_upper_bound": 2,
+    "combined_upper_bound": 4,
+    "packed": 416,
+    "receipt_bytes_peak": 311,
+    "utf8_upper": 622,
+    "calls": [
+      {
+        "operation": "perception",
+        "retained": 1479,
+        "transient": 499,
+        "total": 1978
+      },
+      {
+        "operation": "perception",
+        "retained": 1507,
+        "transient": 1682,
+        "total": 3189
+      },
+      {
+        "operation": "finish",
+        "retained": 1967,
+        "transient": 104,
+        "total": 2071
+      }
+    ]
+  },
+  "reference_equal": true,
+  "cleanup": true,
+  "neutral_only": true
+}

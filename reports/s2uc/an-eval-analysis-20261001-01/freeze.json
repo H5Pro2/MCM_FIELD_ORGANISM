@@ -1,0 +1,418 @@
+{
+  "status": "FROZEN_BEFORE_AN_EVAL_PRODUCTION",
+  "epsilon": 3.3647428814553505e-05,
+  "tau": 0.03125,
+  "epsilon_hex": "0x1.1a414d9cf9967p-15",
+  "tau_hex": "0x1.0000000000000p-5",
+  "runner_sha256": "f3967725b751a82e531ed1f350506de7dcbf944fbb250b6710400f36c741860c",
+  "corrected_dev_runner_sha256": "6d167194bdf922c981431ca2185a9a4c60ca2f7671e745c7a03bf8d4b2c15cb8",
+  "plan_sha256": "71a356d34c49d84377faa3d3618ad644174154483f22a99689bf52c2694a1dbb",
+  "binding_sha256": "232795808dd51294907d19b041fd1a12a5c4fc273b34a2910b34f7a19661973d",
+  "authorization_sha256": "2f87b427504cfdba6258b21ffabacafbcccebd61da66ff48024ad54886c917fb",
+  "code": {
+    "mcm_field_organism/broadband_hearing_path.py": "a20456b24c04d099ba5ee2da6250e3d83dc657392603c41d816b13ca68a37fb7",
+    "mcm_field_organism/log_spectral_receptor.py": "26a6bd8f2d190db60c75ad29f275b3bd8b09b6d26d4ad54e4396176c4a36d2b0",
+    "tests/test_s2uc_an_material.py": "ab9788ca7a2538725d431a413521cb7675605aebc3829426602117287dbb1d41",
+    "tools/_s2nj_private_auditory_output_projection.py": "e052cc76cf4c9678e11673d95390dea21634bba8082187567a760faaaf4904e5",
+    "tools/_s2oe_decoder_worker.py": "8bceb1960b67404deea270cbe426d1fad8c6affd19d315d34d6504a283fca47e",
+    "tools/_s2oe_isolation_log.py": "cf43d6e5422fa9776f03322c2a8e6446f0c4dc4d2f9445a54ce5b594db029278",
+    "tools/_s2oe_media_decoder.py": "9462319ac6880f5d0d1e21a03c505ef0ebe24b8d75ced4ae7989963b65a2aeca",
+    "tools/_s2tu_retained_trace.py": "bf530380f93c8a1bf0eeae5a4169e81bc99aee10050872e3e5ddc7bfdb88f3f6",
+    "tools/_s2tw_exact_confirmation.py": "90470980a329d0424bec9ba430adbbccaf72bb82145edfefd6e491b6fcec7be9",
+    "tools/_s2ub_candidate_confirmation.py": "4178198b43fbbefd3cd550307ec114540c2167a3ae066e22bde01f5223f0ca8a",
+    "tools/_s2uc_allocation.py": "e333866a96d5924672d9e71d1abb67a23e18578babc56f01583e3b17fcbbebd1",
+    "tools/_s2uc_bounded_audio.py": "d71cab9b5daef66710316084939e6d39d14d16bc32306f41dbd605f3be7c2519",
+    "tools/_s2uc_continuation_adapter.py": "00173b0388d54db8eb5d057e47ed76c7d93538bc731712cd1c1ef8096f0df07e",
+    "tools/_s2uc_factor_continuation_compare.py": "7f62e6a26f692320bb0218c67e785bb035ae7d122e15034c62a878ff73a39e28",
+    "tools/_s2uc_factor_hint.py": "f1fdd62043d7939cd7b144eae797f84c94ff3196979d1028798d2af546220e19",
+    "tools/_s2uc_factor_recency.py": "0eba81b522edbb628507d372091829e657ce5ee1bb20f44a0f78e34ef80c06e1",
+    "tools/_s2uc_four_arm.py": "214805475c8794663026798b95f88f4b6e5cd6455d474a4eb75b1ee2c5e5a16b",
+    "tools/_s2uc_origin_judge.py": "e7a5926e19d55e1d7c62381643f2ac27edbef401e0b0bdf8d93654de9f915ac8",
+    "tools/_s2uc_pair_context_adapter.py": "791b9a60b18426626d5e9761dcb122733ca5f73853a7b6201725fc332d9f3ab1",
+    "tools/_s2uc_perception_recency.py": "816d0eebfe1815764ddcbcd4b47ccb57584005ca973bde74be7eb2d7ae2ae86c",
+    "tools/_s2uc_provisional_hint.py": "3fcf1c358548c85ddbec462028a43a96e3ec24a6bffd2948ad87da502f802c8e",
+    "tools/_s2uc_record_codec.py": "43f5532064b11e130535c47afe50a48be418255a054e694253c412c6783ad70f",
+    "tools/_s2uc_signal_approx_adapter.py": "78a2e4fc781f9188b7fdd4aaf7268664160e5b2ae803b27e6df6a18f51f7a882",
+    "tools/_s2uc_signal_approx_compare.py": "c6507aae329aa0151d6488039064e1dce712481a0a65b48192b6466e4300fe0f",
+    "tools/_s2uc_two_candidates.py": "e75da4a1e63ff1b844f8b9e8de62922cea4fa5f549f6b8b37d7a2774f291995e",
+    "tools/s2uc_allocation_check.py": "9b403df9d6f2a2f4186c78e1d74e2298f023f8b0a420860995112333398bd4e8",
+    "tools/s2uc_an_compare.py": "7779cf01f8ae0583ab58c947b5bc79c6da975d230dc132d479ef44abcb77bc8e",
+    "tools/s2uc_an_material.py": "40f270c6ef48ff7a8695c30e715955a6b0af2998091ff8905a775f32b53c8aaa",
+    "tools/s2uc_an_prepare.py": "6f338cc6c59af7a292ed580777b13b3f02d3e50bd0649841f01f4a810b305bce",
+    "tools/s2uc_an_qualify.py": "e49d261debea0e92a3337a145022907bbb2ac0b58838c196fe7784238d5adbd3",
+    "tools/s2uc_ar_compare.py": "a6e39e1684d01554ae2233ff6f539a9399219d5fb5963c3db12da97a66deffae",
+    "tools/s2uc_ar_material.py": "9f4d31386f789e7ee5aeea284410be7fe3857e576194aefa46140050adf67590",
+    "tools/s2uc_audio_worker.py": "b4e4c6125c540b48e31c4804725ad418b1ab8960fc88ae4ce6d6f183ef5bf4d0",
+    "tools/s2uc_b2v_check.py": "446e999e309d807acf3ac0e50e7778b8ab43ad4ea8e6032d65b81f8a71eaa593",
+    "tools/s2uc_context_prediction_check.py": "79a4c8d3fa547556077da3c7161e1bfce16b6ee02a06238c4aa322ced461c5db",
+    "tools/s2uc_continuous_comparison.py": "1e864341ce77fea1a17bc754080bf2d6f6cc5fa2f502569dcc311d888ef3ee50",
+    "tools/s2uc_deviation_observer.py": "0920acaa365cd45427b7ec653771a20e44ac9b09dc5b746a71a97da135592101",
+    "tools/s2uc_factor_hint_check.py": "f765ba126a9c9d8a9de80c42865a09428628fbe048dab7532bd71f94284649ec",
+    "tools/s2uc_factor_material.py": "fcf6e4a20ddd1dfc7575f2568d1248905ae46ac4c86976e83e7cee13d01496a4",
+    "tools/s2uc_factor_recency_check.py": "1abab1a41cd2d1e6f5841524cb67abfaf536de1f3644e0c3251b2772fdbf3ab3",
+    "tools/s2uc_four_arm_check.py": "ba0566f18f54790b5d9e57deb1e067eb38a6b21f2fcb4dc5d4521a7e6c2afc67",
+    "tools/s2uc_k2_check.py": "5773fca13edac4b2a82201167d31d640b465f11cd1b6538173f2ab49de550c1d",
+    "tools/s2uc_known_origin_material_plan.py": "7e74ebf59c0ba1bc8b7ee96a5a155f3e61196403787ddbfd6672dcd1ac2bd804",
+    "tools/s2uc_pair_context_check.py": "751784fed0b8a30dbe4a20b3ba5701dee8c3a3cad7b9b3cd705f80cc68245c8f",
+    "tools/s2uc_pcm_half_check.py": "2c3b8649b9b65d466b4c7a92a655c4c93e90c89d974891d47c477dae627eefa0",
+    "tools/s2uc_pcm_temporal_check.py": "f975af4fac222ac6c3c005351c76d872ba26ec6fd538129c7bd3b02d78298ea5"
+  },
+  "profile": {
+    "profile_id": "s2nj.auditory.hann48.output-half.v1",
+    "geometry_id": "auditory.log48.50-18000.w4800.h480.half.v1",
+    "raw_profile_digest": "5c6b2b19281a44023497b435a96b1051905af4bbac493cae7e699ea1320392c7",
+    "factor_hex": "0x1.0000000000000p-1",
+    "operation": "binary64-multiply-once-after-raw-reduction",
+    "output_domain": "finite-0-through-1-inclusive",
+    "rounding": "qualified-binary64-nearest-even",
+    "subnormal_policy": "preserve-native-rounded-result-report-underflow-no-flush-or-clamp",
+    "max_output_bytes": 16384
+  },
+  "spec": {
+    "partition": "AN-EVAL",
+    "kind": "EVAL",
+    "episodes": {
+      "A": {
+        "seed": 1310001,
+        "frequencies_hz": [
+          490,
+          760,
+          1120,
+          1620
+        ],
+        "root": "AN-EVAL/A",
+        "source_stream": "AN-EVAL/AC",
+        "source_start_sample": 0,
+        "copy_prefix_from": null
+      },
+      "B": {
+        "seed": 1310007,
+        "frequencies_hz": [
+          670,
+          1320,
+          970,
+          1860
+        ],
+        "root": "AN-EVAL/B",
+        "source_stream": "AN-EVAL/B",
+        "source_start_sample": 0,
+        "copy_prefix_from": null
+      },
+      "C": {
+        "seed": 1310013,
+        "frequencies_hz": [
+          790,
+          1480,
+          1960,
+          1080
+        ],
+        "root": "AN-EVAL/C",
+        "source_stream": "AN-EVAL/AC",
+        "source_start_sample": 19200,
+        "copy_prefix_from": null
+      },
+      "D": {
+        "seed": 1310019,
+        "frequencies_hz": [
+          490,
+          760,
+          2160,
+          2420
+        ],
+        "root": "AN-EVAL/D",
+        "source_stream": "AN-EVAL/D",
+        "source_start_sample": 0,
+        "copy_prefix_from": "A"
+      }
+    },
+    "noise_R": {
+      "seed": 1310031,
+      "samples": 9600,
+      "amplitude": 0.000244140625
+    },
+    "noise_Z": {
+      "seed": 1310037,
+      "samples": 14400,
+      "amplitude": 0.00048828125
+    },
+    "calibration": null,
+    "small_signal_gain": 0.000244140625,
+    "cases": {
+      "R0": {
+        "learn": [
+          "A",
+          "A"
+        ],
+        "truth": "AN-EVAL/A",
+        "positive": true,
+        "test_index": 11,
+        "query_start_samples": [
+          0,
+          4800,
+          9600
+        ],
+        "operation": "R0"
+      },
+      "R1": {
+        "learn": [
+          "A",
+          "A"
+        ],
+        "truth": "AN-EVAL/A",
+        "positive": true,
+        "test_index": 11,
+        "query_start_samples": [
+          0,
+          4800,
+          9600
+        ],
+        "operation": "R1"
+      },
+      "R2": {
+        "learn": [
+          "A",
+          "A"
+        ],
+        "truth": "AN-EVAL/A",
+        "positive": true,
+        "test_index": 11,
+        "query_start_samples": [
+          0,
+          4800,
+          9600
+        ],
+        "operation": "R2"
+      },
+      "R3": {
+        "learn": [
+          "A",
+          "A"
+        ],
+        "truth": "AN-EVAL/A",
+        "positive": true,
+        "test_index": 11,
+        "query_start_samples": [
+          0,
+          4800,
+          9600
+        ],
+        "operation": "R3"
+      },
+      "N1": {
+        "learn": [
+          "A",
+          "A"
+        ],
+        "truth": "AN-EVAL/B",
+        "positive": false,
+        "test_index": 11,
+        "query_start_samples": [
+          0,
+          4800,
+          9600
+        ],
+        "operation": "N1"
+      },
+      "N2": {
+        "learn": [
+          "A",
+          "A"
+        ],
+        "truth": "AN-EVAL/C",
+        "positive": false,
+        "test_index": 11,
+        "query_start_samples": [
+          0,
+          4800,
+          9600
+        ],
+        "operation": "N2"
+      },
+      "N3": {
+        "learn": [
+          "A",
+          "A"
+        ],
+        "truth": "AN-EVAL/D",
+        "positive": false,
+        "test_index": 11,
+        "query_start_samples": [
+          0,
+          4800,
+          9600
+        ],
+        "operation": "N3"
+      },
+      "N4": {
+        "learn": [
+          "A",
+          "A",
+          "B",
+          "B"
+        ],
+        "truth": "AN-EVAL/M",
+        "positive": false,
+        "test_index": 19,
+        "query_start_samples": [
+          0,
+          4800,
+          9600
+        ],
+        "operation": "N4"
+      },
+      "Z0": {
+        "learn": [
+          "A",
+          "A"
+        ],
+        "truth": "AN-EVAL/ZERO",
+        "positive": false,
+        "test_index": 11,
+        "query_start_samples": [
+          0,
+          4800,
+          9600
+        ],
+        "operation": "Z0"
+      },
+      "Z1": {
+        "learn": [
+          "A",
+          "A"
+        ],
+        "truth": "AN-EVAL/NOISE",
+        "positive": false,
+        "test_index": 11,
+        "query_start_samples": [
+          0,
+          4800,
+          9600
+        ],
+        "operation": "Z1"
+      },
+      "P0": {
+        "learn": [
+          "A",
+          "A"
+        ],
+        "truth": "AN-EVAL/A",
+        "positive": true,
+        "test_index": 11,
+        "query_start_samples": [
+          0,
+          4800,
+          9600
+        ],
+        "operation": "P0"
+      }
+    },
+    "output_directory": "reports/s2uc/audio-nj-material-an-eval-01",
+    "windows": 49,
+    "pcm_bytes": 940800
+  },
+  "dev_files": {
+    "reports/s2uc/an-dev-search-20261001-01/all-harms.json": "348256e741809b3f226b5444c256c4f0d76152ebadca484dea9e17cd7e8ee416",
+    "reports/s2uc/an-dev-search-20261001-01/candidate.json": "da05dafeaa4f4e28bfb1bc05bd2debfffae737e1f5177c10420028cec4e3ebe4",
+    "reports/s2uc/an-dev-search-20261001-01/decision-tables.json": "583a14b1aa64c05d03b2d8b415b6ac7e5f25d32f8e773b9a7b0ee4bad6388c44",
+    "reports/s2uc/an-dev-search-20261001-01/final-verification.json": "5b56dece6b69c5585dca45f424a0d2e45231b97232ee22fc12ac0a8ac2a3c6e8",
+    "reports/s2uc/an-dev-search-20261001-01/inventory.json": "2326c2f827b3f5d341baf2b74b8838b595fb798f095e82fa51b15595e24d7aac",
+    "reports/s2uc/an-dev-search-20261001-01/material-verification.json": "1d6a88ca25d502c2590ecb22d658c6c51fa13b063be548210e399225df7d0f75",
+    "reports/s2uc/an-dev-search-20261001-01/observer-correction.json": "d014e2ca6b5e63f137080ea18556fa9ead2cea1758bacd071f9632da4fcd6c14",
+    "reports/s2uc/an-dev-search-20261001-01/overview.json": "48e840216ba00f30112aa7fd827f6c26e815954f5ecfa81350b263b22b2866f1",
+    "reports/s2uc/an-dev-search-20261001-01/preproduction.json": "a8f4c351206358822f272bfb39513e74c1bcea8200af78c2784e4187632d0d19",
+    "reports/s2uc/an-dev-search-20261001-01/presearch-attempt1.json": "65ff55b00b51666ce7c41347c015da0ec5c344f150c787bb7cb24890983f9543",
+    "reports/s2uc/an-dev-search-20261001-01/presearch-corrected-binding.json": "85b666384580198adc08b1263a1d77379c7705634af81d78520a4428de6814d6",
+    "reports/s2uc/an-dev-search-20261001-01/presearch.json": "6481e085906f2eaf6c324c1f551b0b9bc275cfef3938fbc3c603fc5a07f47537",
+    "reports/s2uc/an-dev-search-20261001-01/REPORT.txt": "a9ca96a7f32905342d9d63d27d4f58d88b2caad1d5a6cff56f984df717ac6c4d",
+    "reports/s2uc/an-dev-search-20261001-01/resource-ledger.json": "133e4977c8f3d5df3c30269a182a572e8826c78eabae741a63513b3a528ef965",
+    "reports/s2uc/an-dev-search-20261001-01/run_search.py": "6d167194bdf922c981431ca2185a9a4c60ca2f7671e745c7a03bf8d4b2c15cb8",
+    "reports/s2uc/an-dev-search-20261001-01/run_search_attempt1.py.txt": "cf3a0e99ad04e7af1504fa8e966a4a3d90d0616edcdc1a17e8ee898a2a307702",
+    "reports/s2uc/an-dev-search-20261001-01/selection-inputs.json": "46f01024ebb83a14cb79481cda5e4d7f9500ce5e0bd1d0c77a881da9b5fffecc",
+    "reports/s2uc/an-dev-search-20261001-01/selection.json": "224f84d161f8954ad707b4cb0bce1b646d439aba2d533ffc9f88cad55f0886c2",
+    "reports/s2uc/an-dev-search-20261001-01/summarize_saved.py": "13ac996421868fdebb8a67854147dfb257502b0ff15c899d2dbdbac63f24a758",
+    "reports/s2uc/an-dev-search-20261001-01/tau-0.json": "3bf51a3f3775c521bd75e645f238f81dfaa9dc5642140bfa933b6d9d669298a6",
+    "reports/s2uc/an-dev-search-20261001-01/tau-1.json": "de9d141e7577b217c738d3c173470874fc753d3da81c3135dd87abacbe7b1459",
+    "reports/s2uc/an-dev-search-20261001-01/tau-2.json": "d5636149e635c8cc4421873d0e3575ec305f701de89313e457b9589c4005a6cb",
+    "reports/s2uc/an-dev-search-20261001-01/tau-3.json": "b6f11cd9372ecd9f08a9dae6268d62c4573c3995aab72258b117a33b06b5c98e",
+    "reports/s2uc/an-dev-search-20261001-01/tau-4.json": "fc5c0282f62fe4ef671d5774b61849f16547092d9c1ed63aac0e73c7b262203c",
+    "reports/s2uc/an-dev-search-20261001-01/tau-5.json": "527797be6e01da8a225eb9d5cddc3d019a1f81419c492379cc66f2e3ef65651d",
+    "reports/s2uc/an-dev-search-20261001-01/tau-6.json": "4d2c1280e315d620e1dbb2dcb58d7145344c3ec6c0f9b44f34ac4e53f05957dd",
+    "reports/s2uc/an-dev-search-20261001-01/verification.json": "3f148e6b32be416df1224953bc00b9489dd60f198dd83684200fba960e1bd742",
+    "reports/s2uc/audio-nj-material-an-dev-01/A-0.json": "7278d3b5de0a8ea4818945c57a44ea3eca544cc312904e5e67966bc680f66356",
+    "reports/s2uc/audio-nj-material-an-dev-01/A-1.json": "2c4903ebab22d598520ce374215a871f65bbf08f14748f4d89f042101b4a3f0d",
+    "reports/s2uc/audio-nj-material-an-dev-01/A-2.json": "c3967d5b992ecf679c0b38740d4a73a388f2f47084078b5e92c624296ef2e81b",
+    "reports/s2uc/audio-nj-material-an-dev-01/A-3.json": "d0bc0eafc5ceef6091b5cf53de302eec734d038e6d4a537875105051da2b6a02",
+    "reports/s2uc/audio-nj-material-an-dev-01/A-pcm.json": "42d0ded94c7f9dfdcf46854ebaf0ca7fe1f83df719e67a536d4d863cb563c6e4",
+    "reports/s2uc/audio-nj-material-an-dev-01/B-0.json": "898d721dad81938c3208b3eea9da5d04d336f1262224b09e55721ac41ea0711c",
+    "reports/s2uc/audio-nj-material-an-dev-01/B-1.json": "229f78471576b29cf76d1a5cb9bfe479287031ff8b9abd3ad7c4cbdacdeaf571",
+    "reports/s2uc/audio-nj-material-an-dev-01/B-2.json": "8721cedfb5da83be816eeaa052879fd945e765de77664809312300a276ded691",
+    "reports/s2uc/audio-nj-material-an-dev-01/B-3.json": "6c0f47864a23569376c7845057d5604760093471199b04d2f983c992f828390a",
+    "reports/s2uc/audio-nj-material-an-dev-01/B-pcm.json": "3be53a66863764a2fbbe8b88d6035a2c1362143939e0478b4e2d1bea18c54e32",
+    "reports/s2uc/audio-nj-material-an-dev-01/C-0.json": "f4359cc533d77a38d1f3409b1178243c0cf552056c2309a1c569ab35a4181665",
+    "reports/s2uc/audio-nj-material-an-dev-01/C-1.json": "cb53237cf5f78b826a64f3dec5fb14cc5d71769cb6e2fe4c6667994296c696ed",
+    "reports/s2uc/audio-nj-material-an-dev-01/C-2.json": "3c570ae9b9a1a5b7445736e1f3c05e761f850c38b38644799c3085f2c570e23f",
+    "reports/s2uc/audio-nj-material-an-dev-01/C-3.json": "8791b3dcd13def6d4aaee881bbf1969a84aab7994faf44f65c46217fab0cc71d",
+    "reports/s2uc/audio-nj-material-an-dev-01/C-pcm.json": "c258bc49608f56d52afcae5c4f9cdf01d21e76ebb2f28b0d7bce2f6f79a8e157",
+    "reports/s2uc/audio-nj-material-an-dev-01/calibration-0.json": "75c381a84bff49562e67cfaaeea12c8d89decf412cb09723e82e05974e25ddf3",
+    "reports/s2uc/audio-nj-material-an-dev-01/calibration-1.json": "c5f513f3e49226eb3d69d3a902b66cf93e833c6f73308076df4ffa31437eb4a9",
+    "reports/s2uc/audio-nj-material-an-dev-01/calibration-2.json": "f5c4543e4f366c507154482a1b338343af22820f7d513d647555a1957fb4de97",
+    "reports/s2uc/audio-nj-material-an-dev-01/calibration-3.json": "a88bb0ff43943e8b2afd2f6217a177ea12c7b291f0a1de2159b836ef030996c1",
+    "reports/s2uc/audio-nj-material-an-dev-01/calibration-4.json": "d9417394479baf7eea84f550ebbff7f2cda49a21f30b3083ef7363778ca8143e",
+    "reports/s2uc/audio-nj-material-an-dev-01/calibration-5.json": "bd95dcc95164941f45809b37fd57566ef27ddde7de2559a2c3aeb44904c49afe",
+    "reports/s2uc/audio-nj-material-an-dev-01/calibration-6.json": "350cff29a354244a60d1acddc8b430ff23f97ff28cde76c771c6939a924b4b09",
+    "reports/s2uc/audio-nj-material-an-dev-01/calibration-7.json": "93b488b1b91d72885bac7d71efb79c99eaed2ffd3d4c4a852b90fa9968f00a47",
+    "reports/s2uc/audio-nj-material-an-dev-01/calibration-pcm.json": "0ca603bdaf4c40c6130175bdefede110679863833fbe43a0c1f291623e307488",
+    "reports/s2uc/audio-nj-material-an-dev-01/claim.json": "e725d02775ea85d2e2c05b8f2d53b907c768ffebd55dd43e6c9f6dbfcd68f08a",
+    "reports/s2uc/audio-nj-material-an-dev-01/closure.json": "c0df1b6cdaebb592267f41ccf0eaee9f7c7ef530472f0b7a27aa3d43efe64833",
+    "reports/s2uc/audio-nj-material-an-dev-01/D-0.json": "7278d3b5de0a8ea4818945c57a44ea3eca544cc312904e5e67966bc680f66356",
+    "reports/s2uc/audio-nj-material-an-dev-01/D-1.json": "2c4903ebab22d598520ce374215a871f65bbf08f14748f4d89f042101b4a3f0d",
+    "reports/s2uc/audio-nj-material-an-dev-01/D-2.json": "ea829d09b4601cc65ec6a91df03046107abc53d437f37fbee2603f9c976c8667",
+    "reports/s2uc/audio-nj-material-an-dev-01/D-3.json": "4cef0783b15a469987a38169378918d31eccd1b3c5c676f413be0f6b143b2bce",
+    "reports/s2uc/audio-nj-material-an-dev-01/D-pcm.json": "0c4e718a2fbe02421d5caadb3dc5c66c4118e471e44a6179068da7d7403a884b",
+    "reports/s2uc/audio-nj-material-an-dev-01/manifest.json": "324816cb4511938afa3cd4f8a3110034eb2c24d5cd1903e71c4fa008eb703314",
+    "reports/s2uc/audio-nj-material-an-dev-01/N1-0.json": "898d721dad81938c3208b3eea9da5d04d336f1262224b09e55721ac41ea0711c",
+    "reports/s2uc/audio-nj-material-an-dev-01/N1-1.json": "229f78471576b29cf76d1a5cb9bfe479287031ff8b9abd3ad7c4cbdacdeaf571",
+    "reports/s2uc/audio-nj-material-an-dev-01/N1-2.json": "8721cedfb5da83be816eeaa052879fd945e765de77664809312300a276ded691",
+    "reports/s2uc/audio-nj-material-an-dev-01/N1-pcm.json": "7fc94a2cd4ff8e6e3fe4f80c913b96b5ccdf4266564602c498b43c036fe1acbf",
+    "reports/s2uc/audio-nj-material-an-dev-01/N2-0.json": "f08e48e36adf8cf5c2acc8ad8be541280dc931adb3e0acfa9cd4ac19859c185c",
+    "reports/s2uc/audio-nj-material-an-dev-01/N2-1.json": "6141aa2fa4977d9f0b163dc1eacb8b5461a6df2a50f94e9b2ef09d2cd0168bcc",
+    "reports/s2uc/audio-nj-material-an-dev-01/N2-2.json": "9e5b100bf1683bbbf4134e856ed0bfbfaae5f880ab7342299a59fe815778d1ce",
+    "reports/s2uc/audio-nj-material-an-dev-01/N2-pcm.json": "9b8561180bbfa409828101e47a9d100dea910aee40fb7fae54b08c43677a6fbc",
+    "reports/s2uc/audio-nj-material-an-dev-01/N3-0.json": "7278d3b5de0a8ea4818945c57a44ea3eca544cc312904e5e67966bc680f66356",
+    "reports/s2uc/audio-nj-material-an-dev-01/N3-1.json": "2c4903ebab22d598520ce374215a871f65bbf08f14748f4d89f042101b4a3f0d",
+    "reports/s2uc/audio-nj-material-an-dev-01/N3-2.json": "ea829d09b4601cc65ec6a91df03046107abc53d437f37fbee2603f9c976c8667",
+    "reports/s2uc/audio-nj-material-an-dev-01/N3-pcm.json": "1ab1fe81bc39c4bca91d3046640702e1ed0cc1f4f1247f2ae6d84ff48870c625",
+    "reports/s2uc/audio-nj-material-an-dev-01/N4-0.json": "d05e8e0a9e267e3975d15692bd0e232753758147f556a1d876b1f505e75be0d5",
+    "reports/s2uc/audio-nj-material-an-dev-01/N4-1.json": "e4d146781f2bd1937a567ee6849dd1020d1900c4a2377ea752ceba2d09160510",
+    "reports/s2uc/audio-nj-material-an-dev-01/N4-2.json": "4ecfa42f4b243d239252ba52e94ac92c76cb15f95ebaddfc0850249e5b0aefa7",
+    "reports/s2uc/audio-nj-material-an-dev-01/N4-pcm.json": "72965e6de63c110862f85df5fa74c71757cef3287b0ce25ab22f7bb6a8c496ee",
+    "reports/s2uc/audio-nj-material-an-dev-01/P0-0.json": "f51c70cc14d2e732ac6fd1680b347b7b405ef2179dbf03bbd88c1112bfc868ce",
+    "reports/s2uc/audio-nj-material-an-dev-01/P0-1.json": "655217678ae760b60f35da81dc52613a593ca870eebd0a16144c0d9fafb30656",
+    "reports/s2uc/audio-nj-material-an-dev-01/P0-2.json": "898c2eb0e608a00ce321fca600e6a17de84b1ec62351f583ce0fa21baf7895f0",
+    "reports/s2uc/audio-nj-material-an-dev-01/P0-pcm.json": "767d8786d0deb6ef7725abadee02dacb3026c58de9e2af46b36f5b238ad5fa67",
+    "reports/s2uc/audio-nj-material-an-dev-01/R0-0.json": "7278d3b5de0a8ea4818945c57a44ea3eca544cc312904e5e67966bc680f66356",
+    "reports/s2uc/audio-nj-material-an-dev-01/R0-1.json": "2c4903ebab22d598520ce374215a871f65bbf08f14748f4d89f042101b4a3f0d",
+    "reports/s2uc/audio-nj-material-an-dev-01/R0-2.json": "c3967d5b992ecf679c0b38740d4a73a388f2f47084078b5e92c624296ef2e81b",
+    "reports/s2uc/audio-nj-material-an-dev-01/R0-pcm.json": "37b3c4039e49e7de697e425a495e50ffd546edffe83c18fb04740ddf30f8dea2",
+    "reports/s2uc/audio-nj-material-an-dev-01/R1-0.json": "d0712aaf3bd3b23874e2ffb6d37044c8103a774c49ddd2553500ee0ebf5788ae",
+    "reports/s2uc/audio-nj-material-an-dev-01/R1-1.json": "8a0c37a5ceb495a25b5441a82cb0c0bc0eed2fcd400c483a965920be189325df",
+    "reports/s2uc/audio-nj-material-an-dev-01/R1-2.json": "c3967d5b992ecf679c0b38740d4a73a388f2f47084078b5e92c624296ef2e81b",
+    "reports/s2uc/audio-nj-material-an-dev-01/R1-pcm.json": "9c969dee95084087afb843d9a52f7bb99b77a38a94d16136db8d1bbafd6d4f4c",
+    "reports/s2uc/audio-nj-material-an-dev-01/R2-0.json": "0348db1142ddae026dbb9ddfa39e640a97e5c9b28cf50540f0f471ba4d29455b",
+    "reports/s2uc/audio-nj-material-an-dev-01/R2-1.json": "cf00f90fefc4e9684a776c43a1e4dec0825c607aacf0a2cb943739dae640c231",
+    "reports/s2uc/audio-nj-material-an-dev-01/R2-2.json": "c3967d5b992ecf679c0b38740d4a73a388f2f47084078b5e92c624296ef2e81b",
+    "reports/s2uc/audio-nj-material-an-dev-01/R2-pcm.json": "8ba410f08b2c846ea7436cca7c282ecb310e6e23e8ed760a164585a40f8b2607",
+    "reports/s2uc/audio-nj-material-an-dev-01/R3-0.json": "d0712aaf3bd3b23874e2ffb6d37044c8103a774c49ddd2553500ee0ebf5788ae",
+    "reports/s2uc/audio-nj-material-an-dev-01/R3-1.json": "8a0c37a5ceb495a25b5441a82cb0c0bc0eed2fcd400c483a965920be189325df",
+    "reports/s2uc/audio-nj-material-an-dev-01/R3-2.json": "b721a3f77858a6300b791be3f15671f11130dddaef3c0912ee3767c2c603e2ad",
+    "reports/s2uc/audio-nj-material-an-dev-01/R3-pcm.json": "be25b19445f07c7333f5a0b3e58d1ef3eb2dedb3ad4432d35d8faf6b81d11ba4",
+    "reports/s2uc/audio-nj-material-an-dev-01/Z0-0.json": "2d40e98323a362b124e039ab90855ffff3be8f72553e976a5ed42b9a018eb8ce",
+    "reports/s2uc/audio-nj-material-an-dev-01/Z0-1.json": "0fdf4f532a6c7567d02742390d3cb4863ddc1c42984ade46dd989941519ef74f",
+    "reports/s2uc/audio-nj-material-an-dev-01/Z0-2.json": "ff599d8854c7522b2b1d0019acf63dfab00243d34343fab804c2543e86ad4062",
+    "reports/s2uc/audio-nj-material-an-dev-01/Z0-pcm.json": "90364757531600599877870f9ac5175968ba8b5e6d1599d1c38b0079fc1b7da1",
+    "reports/s2uc/audio-nj-material-an-dev-01/Z1-0.json": "ade70d2a6a42983693ebf8f76a1e7b23062fd21ddb120ef188b2825f9269100b",
+    "reports/s2uc/audio-nj-material-an-dev-01/Z1-1.json": "b0a9d29f82f2e8c3d711dd09f20e0b14aacbbecf65d30eb9b8db42e68b6eff51",
+    "reports/s2uc/audio-nj-material-an-dev-01/Z1-2.json": "45c24ecb2aa0390f2aa9ca58f10e218dc666eee1217a471ed27b1339e854d17c",
+    "reports/s2uc/audio-nj-material-an-dev-01/Z1-pcm.json": "a0fa2a7a41768639cc039f159d4d9ceb8156efb2771989e8e187ed217a6248c7"
+  }
+}

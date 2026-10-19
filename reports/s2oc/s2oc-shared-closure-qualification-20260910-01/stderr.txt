@@ -1,0 +1,80 @@
+..............EE..........
+======================================================================
+ERROR: test_15_neutral_success_and_native_verifier (tests.test_s2oc_shared_closure.SharedClosureTests.test_15_neutral_success_and_native_verifier)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oc_shared_closure.py", line 184, in test_15_neutral_success_and_native_verifier
+    rows=record["execution"]["rows"]
+         ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+
+======================================================================
+ERROR: test_16_primary_error_after_formation (tests.test_s2oc_shared_closure.SharedClosureTests.test_16_primary_error_after_formation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ob_private_state_evidence.py", line 44, in encode
+    for slot,key,dimension in vectors(body):
+                              ~~~~~~~^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ob_private_state_evidence.py", line 30, in vectors
+    banks=((body["b4_state"]["entries"],9,(("values",336),)),
+            ~~~~^^^^^^^^^^^^
+KeyError: 'b4_state'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ob_private_caller_binding.py", line 329, in __setitem__
+    wire=state_wire.encode(native)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ob_private_state_evidence.py", line 60, in encode
+    raise StateEvidenceError("STATE_NATIVE_FORM_INVALID") from exc
+tools._s2ob_private_state_evidence.StateEvidenceError: STATE_NATIVE_FORM_INVALID
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oc_shared_closure.py", line 194, in test_16_primary_error_after_formation
+    entry.MAIN_GATE=True;session=entry.open_session(c,INV,OUT/"failure",neutral=True);MET["sessions"]+=1
+                                 ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2oc_bound_session.py", line 136, in open_session
+    c._check_progress_budget()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2oc_bound_session.py", line 59, in _check_progress_budget
+    self._last_budget = alternatives(success, failure, self._common, phase="EVIDENCE",
+                        ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        ordinal=min(len(self._runtime.rows)+1,len(self._manifest.events)), completed=len(self._runtime.rows))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2oc_bound_session.py", line 17, in alternatives
+    rows = {name: shared.ledger(*pair, common, attachments=ATTACHMENTS)
+                  ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2oc_shared_binding.py", line 235, in ledger
+    wr, ws = pack(record, session, common)
+             ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2oc_shared_binding.py", line 211, in pack
+    r, s = transform(record, session, common)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2oc_shared_binding.py", line 195, in transform
+    record, session = deepcopy(record), deepcopy(session)
+                      ~~~~~~~~^^^^^^^^
+  File "C:\Python314\Lib\copy.py", line 131, in deepcopy
+    y = copier(x, memo)
+  File "C:\Python314\Lib\copy.py", line 202, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Python314\Lib\copy.py", line 131, in deepcopy
+    y = copier(x, memo)
+  File "C:\Python314\Lib\copy.py", line 202, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Python314\Lib\copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "C:\Python314\Lib\copy.py", line 267, in _reconstruct
+    y[key] = value
+    ~^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ob_private_caller_binding.py", line 333, in __setitem__
+    raise S2OBError(exc.code,exc.balance) from exc
+tools._s2ob_private_caller_binding.S2OBError: STATE_NATIVE_FORM_INVALID
+
+----------------------------------------------------------------------
+Ran 26 tests in 6.097s
+
+FAILED (errors=2)

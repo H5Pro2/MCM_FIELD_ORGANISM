@@ -1,0 +1,77 @@
+test_common_ledger_uses_alternative_closures_and_rejects_overflow (tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_common_ledger_uses_alternative_closures_and_rejects_overflow) ... ok
+test_complete_neutral_connection_materializes_once_per_endpoint_and_verifies (tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_complete_neutral_connection_materializes_once_per_endpoint_and_verifies) ... ok
+test_entry_resets_gate_after_manifest_failure (tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_entry_resets_gate_after_manifest_failure) ... ok
+test_failure_between_arm_calls_has_independent_progress_verification (tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_failure_between_arm_calls_has_independent_progress_verification) ... ok
+test_failure_between_stories_preserves_completed_story_and_marks_remaining (tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_failure_between_stories_preserves_completed_story_and_marks_remaining) ... ok
+test_failure_verifier_rejects_prior_and_prefix_receipt_manipulations (tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_failure_verifier_rejects_prior_and_prefix_receipt_manipulations) ... ok
+test_file_entry_rejects_closed_gate_without_invoking_materializer (tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_file_entry_rejects_closed_gate_without_invoking_materializer) ... ok
+test_first_owner_close_failure_does_not_prevent_second_owner_close (tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_first_owner_close_failure_does_not_prevent_second_owner_close) ... ok
+test_manifest_binds_all_three_shapes_and_has_no_evaluation_labels (tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_manifest_binds_all_three_shapes_and_has_no_evaluation_labels) ... ok
+test_owner_close_failure_after_complete_story_stops_without_next_story (tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_owner_close_failure_after_complete_story_stops_without_next_story) ... ok
+test_verifier_rejects_missing_swapped_and_snapshot_manipulations (tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_verifier_rejects_missing_swapped_and_snapshot_manipulations) ... ok
+test_codec_failure_after_connection_retains_completed_progress_and_blocks_evaluation (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_codec_failure_after_connection_retains_completed_progress_and_blocks_evaluation) ... ok
+test_codec_keeps_historical_v1_record_form_readable (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_codec_keeps_historical_v1_record_form_readable) ... ok
+test_evaluation_rejects_missing_and_duplicate_expected_receipts (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_evaluation_rejects_missing_and_duplicate_expected_receipts) ... ok
+test_existing_output_directory_is_never_modified (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_existing_output_directory_is_never_modified) ... ok
+test_failure_budget_counts_error_receipt_and_terminal_separately (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_failure_budget_counts_error_receipt_and_terminal_separately) ... ok
+test_final_binding_validates_referenced_qualification_and_budget_before_supplier (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_final_binding_validates_referenced_qualification_and_budget_before_supplier) ... ok
+test_full_entry_failure_blocks_evaluation_and_resets_gate (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_entry_failure_blocks_evaluation_and_resets_gate) ... ok
+test_full_entry_rejects_actual_reserve_overflow_and_resets_gate (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_entry_rejects_actual_reserve_overflow_and_resets_gate) ... ok
+test_full_entry_serializes_reloads_verifies_and_only_then_evaluates (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_entry_serializes_reloads_verifies_and_only_then_evaluates) ... ok
+test_full_entry_verification_failure_publishes_terminal_and_blocks_evaluation (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_entry_verification_failure_publishes_terminal_and_blocks_evaluation) ... ok
+test_full_neutral_materialization_roundtrip_and_reloaded_verification (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_neutral_materialization_roundtrip_and_reloaded_verification) ... ok
+test_last_endpoint_failure_preserves_attempt_and_success_difference (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_last_endpoint_failure_preserves_attempt_and_success_difference) ... ok
+test_ledger_separates_record_reserve_from_absolute_record_limit (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_ledger_separates_record_reserve_from_absolute_record_limit) ... ok
+test_materialization_failure_in_second_story_roundtrips_and_verifies_prefix (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_materialization_failure_in_second_story_roundtrips_and_verifies_prefix) ... ok
+test_owner_close_error_after_neutral_materialization_stops_and_roundtrips (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_owner_close_error_after_neutral_materialization_stops_and_roundtrips) ... ok
+test_prepared_run_identity_is_accepted_and_unknown_identity_is_rejected (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_prepared_run_identity_is_accepted_and_unknown_identity_is_rejected) ... ok
+test_record_preflight_rejects_oversized_metadata_before_publication (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_record_preflight_rejects_oversized_metadata_before_publication) ... ok
+test_record_write_failure_preserves_primary_error_and_closes_gate (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_record_write_failure_preserves_primary_error_and_closes_gate) ... ok
+test_reloaded_record_rejects_manipulated_materialization_origin (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_reloaded_record_rejects_manipulated_materialization_origin) ... ok
+test_source_adapter_uses_all_bound_positions_without_deduplication (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_source_adapter_uses_all_bound_positions_without_deduplication) ... ok
+test_starter_rejects_code_binding_before_supplier (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_starter_rejects_code_binding_before_supplier) ... ok
+test_starter_requires_authorization_before_supplier_and_runs_neutral_path (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_starter_requires_authorization_before_supplier_and_runs_neutral_path) ... ok
+test_static_run_binding_covers_sources_uses_and_all_expectations (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_static_run_binding_covers_sources_uses_and_all_expectations) ... ok
+test_terminal_write_failure_preserves_primary_codec_error (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_terminal_write_failure_preserves_primary_codec_error) ... ok
+test_unbudgetable_error_terminal_publishes_bounded_minimal_evidence (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_unbudgetable_error_terminal_publishes_bounded_minimal_evidence) ... ok
+test_v2_codec_full_neutral_structure_with_distinct_vectors_fits_record_reserve (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v2_codec_full_neutral_structure_with_distinct_vectors_fits_record_reserve)
+The bound also covers the complete neutral connection shape, not only frames. ... ok
+test_v2_codec_keeps_binary64_values_and_separate_frame_identities (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v2_codec_keeps_binary64_values_and_separate_frame_identities) ... ok
+test_v2_codec_worst_case_distinct_vectors_stays_within_its_bound (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v2_codec_worst_case_distinct_vectors_stays_within_its_bound) ... ok
+test_v3_codec_references_event_values_hex_without_losing_long_binary64_forms (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v3_codec_references_event_values_hex_without_losing_long_binary64_forms) ... ok
+test_v6_final_binding_accepts_only_the_prepared_identity_and_resolved_artifacts (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_final_binding_accepts_only_the_prepared_identity_and_resolved_artifacts) ... ok
+test_v6_starter_rejects_actual_final_file_above_bound_reserve (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_actual_final_file_above_bound_reserve) ... ok
+test_v6_starter_rejects_changed_reserves_and_qualification_artifact_sizes (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_changed_reserves_and_qualification_artifact_sizes) ... ok
+test_v6_starter_rejects_duplicate_negative_missing_and_noninteger_items (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_duplicate_negative_missing_and_noninteger_items) ... ok
+test_v6_starter_rejects_empty_qualification_artifacts (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_empty_qualification_artifacts) ... ok
+test_v6_starter_rejects_inconsistent_branch_contributions_with_current_digests (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_inconsistent_branch_contributions_with_current_digests) ... ok
+test_v6_starter_rejects_mismatched_qualification_ids_results_tests_and_code (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_mismatched_qualification_ids_results_tests_and_code) ... 
+  test_v6_starter_rejects_mismatched_qualification_ids_results_tests_and_code (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_mismatched_qualification_ids_results_tests_and_code) (target='summary', mutation='code') ... FAIL
+test_v6_starter_rejects_missing_or_extra_branches_and_contribution_keys (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_missing_or_extra_branches_and_contribution_keys) ... ok
+test_v6_starter_rejects_undercounted_single_item_with_current_digests (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_undercounted_single_item_with_current_digests) ... ok
+test_verifier_rejects_missing_and_manipulated_source_completion (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_verifier_rejects_missing_and_manipulated_source_completion) ... ok
+
+======================================================================
+FAIL: test_v6_starter_rejects_mismatched_qualification_ids_results_tests_and_code (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_mismatched_qualification_ids_results_tests_and_code) (target='summary', mutation='code')
+----------------------------------------------------------------------
+ValueError: FINAL_DEPENDENCY_INVALID
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_materialization_connection.py", line 344, in test_v6_starter_rejects_mismatched_qualification_ids_results_tests_and_code
+    self._assert_v6_starter_budget_rejection(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._v6_neutral_fixture(Path(root), mutate_qualification=change),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        error="FINAL_QUALIFICATION_INVALID", budget_reached=False)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_materialization_connection.py", line 216, in _assert_v6_starter_budget_rejection
+    with self.assertRaisesRegex(ValueError, f"^{error}$"):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "^FINAL_QUALIFICATION_INVALID$" does not match "FINAL_DEPENDENCY_INVALID"
+
+----------------------------------------------------------------------
+Ran 50 tests in 10.747s
+
+FAILED (failures=1)

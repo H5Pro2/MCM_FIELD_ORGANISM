@@ -1,0 +1,154 @@
+KONTEXTGESTUETZTE NAECHSTFRAME-VORHERSAGE -- STATISCHER VERTRAG
+2026-09-30. Keine Implementierung, Materialisierung oder Versuchsausfuehrung.
+
+GEGENPROGNOSE UND GRENZE
+Eine gespeicherte Fortsetzung kann bei passender Wiederkehr den naechsten
+Frame besser vorhersagen als Persistenz. Bei abweichender Fortsetzung kann
+sie schlechter sein. Treffer sind kontrollierter Vorhersagenutzen, keine
+allgemeine Wahrnehmungsverbesserung. Ausgabe beeinflusst niemals Wahrnehmung,
+Aufnahme, Bestätigung oder Auffrischung. Keine neue Abruf-/Matchingregel.
+
+GEBUNDENES MATERIAL
+W1..W4: sources/s2uc/temporal-chirp-v1/sequence.pcm,
+SHA256 4774f24ad52ec7e431c360ec1f2d18c663584d1ed3fbffa83fa0f4fe3d5442a6.
+Je 4800 Samples bei48000Hz; Intervalle [0,4800),[4800,9600),[9600,14400),
+[14400,19200). Einzelfensterhashes in provenance.json neben der Quelle.
+Vektoren: reports/s2uc/pcm-temporal-20260930-01/result.json,
+processed[0..3].projection.values. Alle sechs Fensterpaare sind bereits als
+ungleich/nicht proportional unter .5,1,2 dokumentiert. Keine Neuberechnung.
+A=W1/W2/W3/W4; D=W4/W2/W3/W1. D und abweichende Eingabefolgen sind synthetische
+Montagen. Neue Streamordinale sind Beobachtungsreihenfolge, keine neue Aufnahme.
+Quellfensterherkunft separat vom monotonen synthetischen Wiedergabezeitplan
+speichern; insbesondere Rueckspruenge nicht als Originalzeitkontinuitaet ausgeben.
+
+VORHERSAGEVERTRAG
+Nach jedem vollstaendigen automatisch gebildeten Paar (Indices1/2,3/4,...)
+wird vor der Aufnahme dieses Paares und vor Zugang zum Folgeframe ein separater
+Vorhersagereceipt festgelegt. Abrufzustand und Herkunft sind dieselben wie im
+Kontextreceipt. Fuer einen Match an Offset o liegt die gespeicherte Fortsetzung
+bei o+2, falls o+2<4. Offset2 hat keine gespeicherte Fortsetzung.
+Keine Fortsetzung ueber Spurende oder ueber andere Spuren hinweg erfinden.
+
+Minimaler erster Vergleich beschraenkt Prognosen auf eindeutigen Match mit
+eindeutigem Faktor1. Weder skalierte Fortsetzungen berechnen noch Faktoren
+nachtraeglich aus dem Folgeframe bestimmen. Nichttrivialer Faktor -> explizite
+Enthaltung FACTOR_CONTINUATION_NOT_SPECIFIED. Das ist eine Grenze der neuen
+Vorhersageausgabe, keine Aenderung am vollstaendigen F-Abrufreceipt.
+Ein eindeutiger Kandidatenmatch darf eine vorlaeufig gekennzeichnete Prognose
+liefern; Erhaltungsstatus bestaetigt nur Speicherstatus. Die fuenf Hauptfaelle
+verwenden bestaetigte Spuren oder leeren Speicher, kein neuer Kandidatenversuch.
+Mehrere passende Herkuenfte bleiben mehrdeutig: alle Herkunfts-/Fortsetzungs-
+positionen dokumentieren, keine Auswahl und keine gemittelte Prognose.
+Auch gleiche Fortsetzungswerte wuerden Herkunftsmehrdeutigkeit nicht aufheben.
+Fehlender Kontext -> ABSTAIN_NO_CONTEXT; Spurende -> ABSTAIN_NO_SUCCESSOR.
+
+Referenz ohne Gedaechtniskontext: vorhergesagter Vektor ist unveraendert der
+zweite/zuletzt wahrgenommene Frame des Paares. Kein Zugriff auf Memory oder
+Herkunft. Beide Verfahren sehen dasselbe aktuelle Paar; der Kontextarm nutzt
+zusaetzlich ausschliesslich bereits gespeicherte Vergangenheit.
+
+KAUSALE ANSCHLUSSLUECKE UND MINIMALER UMSETZUNGSSCHRITT
+tools/_s2uc_pair_context_adapter.py: accept_perception erzeugt Kontextreceipt
+vor form, gibt ihn aber erst NACH Aufnahme beider Frames zurueck. Ein spaeteres
+Nachschlagen der Fortsetzung kann deshalb bereits verdraengten Zustand sehen.
+Nicht nach der Rueckgabe einfach in den aktuellen Speicher greifen.
+Kleinste gezielte Erweiterung: zwischen abgeschlossenen hint-Aufrufen und erstem
+_admit eine rein lesende Fortsetzungsprojektion im selben synchronen Schritt.
+Sie kopiert/uebernimmt nur den zulaessigen einzelnen Nachfolgervektor in einen
+abgetrennten PredictionReceipt. Kein Callback, keine Rueckspeisung; Predictor
+bekommt keinen Streamiterator und keine spaeteren Sampleobjekte.
+Baseline gleichzeitig aus pair[1] binden. Erst dann Aufnahme unveraendert.
+Ein Pull-Treiber darf next() fuer Frame3 erst aufrufen, nachdem beide
+Vorhersagen unveraenderlich vorliegen. Es reicht nicht, den dritten Frame in
+einer schon zugaenglichen Liste nur angeblich spaeter zu verwenden.
+Metadaten: aktuelle Paarindices, Zielindex i+1, read_revision, Profil, Status,
+Herkunft/Generation/Offset, Folgeposition, Vorhersagevektor bei eindeutiger Ausgabe.
+Evaluator getrennt: kennt Sollfolge und vergleicht nach tatsaechlichem Eintreffen.
+Eingangsadapter akzeptiert PredictionReceipt so wenig wie ContextReceipt als Frame.
+
+FESTE FAELLE, JE FRISCHE GESCHICHTE
+Seeds durch regulaere Aufnahme: A-A ergibt Original-A Generation1;
+A-A-D-D ergibt A Generation1, D Generation2. Keine Seedwerte als Zielhinweis
+an Predictor. Rollen/Bezeichnungen bleiben ausschliesslich im Beobachter.
+Je Fall genau erstes Paar und der unmittelbar folgende Frame; kein Nachwaehlen.
+
+ID | Bestand | laufende Frames 1,2,3 | Matchoffset | Kontextprognose | Persistenz | Ergebnis
+K1 | A       | W1,W2,W3             | A@0        | W3              | W2         | Kontext Treffer, Referenz falsch
+K2 | A       | W1,W2,W2             | A@0        | W3              | W2         | Kontext falsch, Referenz Treffer
+K3 | leer    | W1,W2,W2             | keiner     | Enthaltung      | W2         | Kontext ohne Abdeckung, Referenz Treffer
+K4 | A,D     | W2,W3,W4             | A@1,D@1    | mehrdeutig: A->W4,D->W1 | W3 | keine eindeutige Kontextprognose, Referenz falsch
+K5 | A       | W3,W4,W1             | A@2        | keine Fortsetzung | W4       | Enthaltung, Referenz falsch
+
+K1 und K2 haben identischen Bestand und identischen aktuellen Praefix: dieselbe
+Kontextprognose MUSS vor Frame3 ausgegeben werden. Unterschiedliche Vorhersagen
+waeren ein Zukunftsleck oder eine unerlaubte Fallauswahl.
+K4: dass W4 zu einer Alternative passt, wird nur deskriptiv protokolliert,
+nicht als eindeutiger Treffer gewertet. Verlorene/andere Herkunft bleibt sichtbar.
+
+FESTE PAARBILDUNG EXPLIZIT GEPRUEFT
+Jede Geschichte startet mit eigener Phase und leerem Paarbuffer. Das aktuelle
+Paar liegt immer auf Streamposition1/2. Gespeicherter Matchoffset ist davon
+unabhaengig: 0 in K1/K2,1 in K4,2 in K5. So sind alle vorgesehenen Positionen
+mit dem bestehenden nichtgleitenden Adapter erreichbar. Ein durchlaufendes
+W1/W2/W3/W4 wuerde dagegen nur W1/W2 und W3/W4 abfragen, nicht W2/W3.
+Daher keine nachtraegliche Phasenverschiebung; fuenf getrennte Geschichten
+sind hier Teil des vorab festen Versuchsdesigns. Frame3 ist Restframe, einmal
+aufnehmen; bei finish_story unvollstaendige Bildung regulaer verwerfen.
+Kein neues Hintpaar mit Frame2/3 und kein kuenstliches viertes Eingabeframe.
+
+BEWERTUNG
+Alle Vergleiche exakt ueber alle48 Werte, ohne Toleranz; Bitgleichheit separat.
+Treffer: genau eine zulaessige Prognose und alle48 Werte gleich Frame3.
+Fehlvorhersage: genau eine Prognose, mindestens ein Wert abweichend.
+Mehrdeutigkeit: mehrere Kontextmatchherkuenfte; keine einzelne Prognose.
+Enthaltung: kein Kontext/kein Nachfolger/nicht spezifizierte Faktorforschung.
+Abdeckung = eindeutige Prognosen / alle Faelle mit tatsaechlichem Folgeframe.
+Bedingte Trefferrate = Treffer / eindeutige Prognosen; bei0 undefiniert.
+Zusaetzlich Trefferanteil ueber alle Faelle, Fehlvorhersagezahl und jede
+Enthaltungsursache separat. Fehlender Folgeframe waere NICHT_AUSWERTBAR,
+nicht Treffer oder falsche Vorhersage; in den fuenf Faellen nicht vorgesehen.
+
+Vorhersage fuer diese bewusst kontrastierende, nicht repraesentative Auswahl:
+Kontext:1 Treffer,1 Fehler,1 Mehrdeutigkeit,2 Enthaltungen; Abdeckung2/5,
+bedingte Trefferrate1/2. Referenz:2 Treffer,3 Fehler,Abdeckung5/5.
+Gemeinsam abgedeckte K1/K2: einmal hilft Kontext, einmal schadet er.
+K3 zeigt fehlende Kontextabdeckung trotz korrekter Referenz. K4/K5 belegen
+Grenzen; Enthaltung ist weder Fehlvorhersage noch automatischer Nutzengewinn.
+Keinen Gesamtvorteil aus diesem Fallmix ableiten und keine Gewichtung optimieren.
+
+TEMPORAERE DATEN UND LEBENSDAUER
+Das bisherige reine Kontextreceipt bleibt payloadfrei. Die neue getrennte
+Prognose braucht dagegen explizit bis zu zwei Vektorslots: ein Kontextnachfolger
+und ein Persistenzvektor, je48 Binary64-Werte (zusammen768 logische Wertebytes).
+Diese sind NICHT heimlich in16+2 enthalten. Konservativer Gesamtvertrag:
+16 Speicherframes +2 Paar-/Hinweisframes +2 Vorhersage-Ausgabevektoren =20
+Frameaequivalente, obwohl Aliase physisch Werte teilen koennen. Speicher selbst
+bleibt1K/2R und16+2; die zwei separaten Prognoseslots sind ein offener zusaetzlicher
+Ressourcenposten fuer das naechste Paket, keine bereits gemessene/allgemeine Freigabe.
+Keine ganzen Traceobjekte festhalten, nur immutable48-Werte-Tupel mit Skalardaten.
+Auch bei spaeterer Verdraengung bleibt die vorab eingefrorene Ausgabe bis zur
+Auswertung gebunden; danach beide Vektorreferenzen sofort freigeben, kein Archiv.
+Bei Mehrdeutigkeit nur Herkunfts-/Folgepositionsmetadaten (max9), keine neun
+Fortsetzungsvektoren puffern. Kontextstatus/Matchliste bereits begrenzt; neue
+Vorhersagemetadaten separat maximal16384 serialisierte Byte plus48Werte je
+zulaessiger Prognose. JSON/Hexexport nur im extern bilanzierten Beobachter.
+
+Hoechstens ein offenes Vorhersagepaar: bei Eingang von Frame i+1 sofort auswerten
+und freigeben, BEVOR das Frame in die naechste Paarbildung uebergeht. Der aktuelle
+Eingang teilt dessen vorgesehenen Paarplatz; keine dritte Eingangsqueue.
+Im konkreten Dreiframe-Test entstehen maximal8 Erhaltungsframes+3 Bildungsframes;
+Prognosen/Reference und Beobachter trotzdem separat zaehlen. Physische Python-
+Objekte, Aliasreferenzen und logische Payloads getrennt messen. Kein Bytegleichheits-
+oder RAM-Vorteil aus Framegrenzen behaupten. Ownerende/Fehler leert Prognoseslots.
+
+MINIMALE SPAETERE PRUEFUNG
+Eine kleine lesende Fortsetzungsprojektion am Vorzustand plus ein separater
+Evaluator; bestehende Matching-/Aufnahme-/Auffrischungsmethoden unveraendert.
+Fuenf Geschichten mit gespeicherten Vektoren. Enforce-Pull-Quelle protokolliert,
+dass Frame3 vor Ausgabe nicht angefordert wurde; Praefixgleichheit K1/K2.
+Speicheraufnahme gegen bisherigen Adapter ohne Prognose vergleichen inklusive
+Endmarken; keine unterdrueckten/doppelten Frames. Spurende, Mehrdeutigkeit,
+Receipt-Rueckspeisung und Freigabe der zwei Slots gezielt pruefen.
+Keine neue PCM-Produktion, Registry oder Runtime-Ersetzung. Naechster Vorschlag:
+diesen engen Vorhersagevertrag einschliesslich offen ausgewiesenem Zwei-Slot-
+Ausgabebudget beauftragen, nicht schon einen Wahrnehmungsnutzen behaupten.

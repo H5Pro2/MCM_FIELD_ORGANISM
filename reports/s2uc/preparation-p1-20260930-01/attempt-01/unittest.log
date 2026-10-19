@@ -1,0 +1,9 @@
+test_bound_file_mutations (tests.test_s2uc_comparison_preparation.PreparationTests.test_bound_file_mutations) ... ok
+test_code_runtime_and_resource_boundaries (tests.test_s2uc_comparison_preparation.PreparationTests.test_code_runtime_and_resource_boundaries) ... ok
+test_complete_preparation_and_closed_starters (tests.test_s2uc_comparison_preparation.PreparationTests.test_complete_preparation_and_closed_starters) ... ok
+test_missing_failed_duplicate_and_stale_original_evidence (tests.test_s2uc_comparison_preparation.PreparationTests.test_missing_failed_duplicate_and_stale_original_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 30.008s
+
+OK

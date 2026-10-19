@@ -1,0 +1,16 @@
+{
+  "final_worker_seconds": 147.34701969998423,
+  "final_job_peak_bytes": 48762880,
+  "job_limit": 536870912,
+  "output_bytes_before_resource_and_delivery": {
+    "er1-v2-witness-audit-20261018-01": 488691,
+    "er1-v2-witness-audit-20261018-02": 2084618,
+    "er1-v2-witness-audit-20261018-03": 91595
+  },
+  "checker_bytes": 52245,
+  "archives_serial": true,
+  "policy_executions": 0,
+  "new_sources": 0,
+  "bootstrap_draws": 0,
+  "development_second_final_peak_unavailable": true
+}

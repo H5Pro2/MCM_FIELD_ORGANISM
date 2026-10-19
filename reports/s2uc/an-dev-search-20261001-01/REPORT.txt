@@ -1,0 +1,163 @@
+MCM S2UC -- AN-DEV: einmalige PCM-/NJ-Produktion und Siebener-Auswertung
+2026-10-01
+
+ERGEBNIS UND ENTSCHEIDUNGSVORSCHLAG
+DEVELOPMENT_CANDIDATE_ONLY. Fuer eine getrennte kontrollierte Audio-Evaluation
+fachlich geeignet: zwei zusaetzliche korrekte R1/R2-Zuordnungen, keine neuen
+falschen Einzelzuordnungen, keine verlorenen exakten Zuordnungen.
+Kein Evaluationsnachweis; keine allgemeine Audio-Robustheit und keine
+schaedigungsfreie Fortsetzung nachgewiesen. AN-EVAL unproduziert/unausgewertet.
+
+epsilon_AUDIO = 3.3647428814553505e-05
+tau_AUDIO = 0.03125 = 1/32
+Die unveraenderte Auswahlfunktion maximiert nur R1/R2-Zugewinn unter Verbot
+zusaetzlicher falscher Einzelzuordnungen; bei Gleichstand kleinstes tau.
+MAE, R3 und negative Faelle beeinflussen die Auswahl nicht als Nutzenmass.
+Keine Gitterverfeinerung, keine neue Stoeramplitude, keine Policy-Aktivierung.
+
+PRODUKTION UND MATERIALPRUEFUNG
+Autorisierung aus gebundener Vorlage, ausschliesslich PENDING auf
+AUTHORIZED_ONCE geaendert. Vor Produktion Code/Plan/Python/NumPy/Profile
+geprueft und Runner gebunden. Genau ein Produktionsaufruf: MATERIAL_COMPLETE,
+Exit0, 57 Rezeptor-/57 NJ-Aufrufe.76 Dateien,2396435/4194304 Byte inklusive
+Abschluss. Kein Ersatzmaterial, keine Wiederholung der Produktion.
+Exportleser bestaetigt Manifest/Dateihashes, PCM-Domaene und -Ableitungen,
+A/D-Praefix, R1/R3-Hinweisgleichheit, Quellzeiten und Query-Retiming,
+Herkunft sowie NJ-Profile und Projektionsdigests. Kein Rezeptoraufruf bei
+Auswertung. Material am Ende bytegleich zum vor der Suche versiegelten Export.
+
+KALIBRATION
+Ausschliesslich Maximum der acht exportierten AN-DEV-NJ-Rauschframe-Mittelwerte:
+0: 1.689500150467005e-05
+1: 1.620398525858017e-05
+2: 1.62449203673934e-05
+3: 1.666778128226281e-05
+4: 3.311739343528112e-05
+5: 3.331255818289796e-05
+6: 3.3647428814553505e-05
+7: 3.358495305365721e-05
+Keine Uebernahme des neutralen epsilon oder AR-epsilon2^-10.
+Diese endliche synthetische Rauschreferenz ist keine universelle Rauschgrenze.
+
+ALLE SIEBEN VORGEGEBENEN EINSTELLUNGEN
+Tau     | korrekte R1/R2 | neue falsche Pruefzuordnungen | verlorene Exakte | neue falsche Lernzuordnungen
+0       | 0 | 0 | 0 | 0
+1/256   | 0 | 0 | 0 | 0
+1/128   | 0 | 0 | 0 | 0
+1/64    | 1 | 0 | 0 | 0
+1/32    | 2 | 0 | 0 | 0
+1/16    | 2 | 0 | 0 | 0
+1/8     | 2 | 0 | 0 | 0
+Alle sieben zulaessig.1/32,1/16,1/8 erreichen denselben Zugewinn2;
+kleinstes tau1/32 ausgewaehlt. Bei allen sieben keine verlorenen exakten,
+signalbedingt verlorenen exakten oder verlorenen korrekten exakten Pruefzuordnungen.
+Alle sieben vollstaendigen Resultate tau-0.json bis tau-6.json bleiben erhalten.
+Keine Auswahl oder Mischung einzelner Geschichten zwischen Einstellungen.
+
+AUSGEWAEHLTES TAU: HERKUNFT UND ABDECKUNG
+Exakter Abruf:1 korrekt,9 Enthaltungen,1 falsch; konkrete Kontextabdeckung2/11.
+Signal-/Naeherungsabruf:4 korrekt,6 Enthaltungen,1 falsch; Kontextabdeckung5/11.
+R0 korrekt; R1/R2/R3 zusaetzlich korrekt. N1/N2/N4/Z0/Z1/P0 Enthaltung.
+P0 ist trotz korrekter Low-Signal-Enthaltung verlorene positive Abdeckung;
+kein verlorener Exakttreffer, da auch exakter Abruf dort keinen Treffer hatte.
+N3: wahre D-Herkunft bei identischen A-Hinweisen, beide Arme ordnen falsch A zu.
+Dieser bestehende Herkunftsfehler wird nicht als neuer Fehler verdeckt und
+auch nicht durch einen guten MAE-Wert aufgehoben.
+Alle Enthaltungsbelege mit Receiptstatus in decision-tables.json;
+Z0/Z1/P0 beim gewaehlten tau ABSTAIN_LOW_SIGNAL.
+
+PRUEFZIELE BEI TAU1/32
+Fall | Herkunft exakt | Herkunft neu | Persistenz-MAE | Exaktschema-MAE | Naeherungsschema-MAE
+R0 | CORRECT | CORRECT | 0.00236142214755105 | 0 | 0
+R1 | ABSTAIN | CORRECT | 0.00237635223359923 | 0.00237635223359923 | 0
+R2 | ABSTAIN | CORRECT | 0.00239130040056309 | 0.00239130040056309 | 0
+R3 | ABSTAIN | CORRECT | 0 | 0 | 0.00237635223359923
+N1 | ABSTAIN | ABSTAIN | 0.00282706650150723 | 0.00282706650150723 | 0.00282706650150723
+N2 | ABSTAIN | ABSTAIN | 0.00257538973282736 | 0.00257538973282736 | 0.00257538973282736
+N3 | WRONG   | WRONG   | 0.00320925919970318 | 0.00319934549464962 | 0.00319934549464962
+N4 | ABSTAIN | ABSTAIN | 0.00186275363314154 | 0.00186275363314154 | 0.00186275363314154
+Z0 | ABSTAIN | ABSTAIN | 0 | 0 | 0
+Z1 | ABSTAIN | ABSTAIN | 4.59028253570731e-06 | 4.59028253570731e-06 | 4.59028253570731e-06
+P0 | ABSTAIN | ABSTAIN | 5.76519078991955e-07 | 5.76519078991955e-07 | 5.76519078991955e-07
+Die Schemata verwenden beobachterseitig Kontext-sonst-Persistenz fuer alle
+elf Ziele. Konkrete Kontext-MAE bleiben bei Enthaltung null, nicht0.
+Gemeinsame Kontextmasken und Paarvergleiche separat in jedem Ergebnis.
+Vollabdeckungs-Mittelwerte:
+{
+  "persistence": 0.0016007918773188517,
+  "exact_retrieval": 0.0013852158907184332,
+  "signal_approx_retrieval": 0.0011678249452126979,
+  "signal_approx_retrieval_vs_persistence": 0.00043296693210615394,
+  "signal_approx_retrieval_vs_exact_retrieval": 0.0002173909455057354
+}
+
+SAEMTLICHE PROGNOSESCHAEDEN
+Tau0,1/256,1/128: keine gemessenen Pruef-/Lernziel-MAE-Schaeden.
+Tau1/64,1/32,1/16,1/8: jeweils R3-Schaden gegen Persistenz und exaktes Schema.
+R3-MAE0.0023763522335992263 statt0, trotz korrekter Herkunft.
+Keine weiteren gemessenen Schaeden gegen Persistenz oder exaktes Schema;
+auch das exakte Schema zeigt hier keinen Schaden gegen Persistenz.
+Keine Lernziel-Schaeden in den48 Lernzielen je Einstellung. Vollstaendige
+Einzelfall- und Delta-Listen in all-harms.json, ohne Verrechnung mit Gewinnen.
+
+GETRENNTE LERNZIELE UND KAUSALITAET
+Jede Einstellung:11 Pruefziele,48 Lernziele,129 Aufnahmen je Arm.
+Lernziel-Herkunft aus der vorab bekannten Genealogie; positiv, falls die
+Herkunft in einem vollstaendigen Viererblock vor dem Hinweis verfuegbar ist.
+Auch das erste Query-Ziel9 bzw17 gehoert zu den Lernzielen; dessen Herkunft
+stammt aus der Querygenealogie. Feste Zeitgrenzen in material-verification.json.
+48 Einzelresultate je Einstellung in learning_cases, eigene learning_summary;
+keine Zusammenrechnung mit den11 Pruefzielen und keine gepoolte Erfolgsquote.
+Leerer Startspeicher je Geschichte/Arm/Einstellung. Beide Arme legacy_v1.
+Vorhersage vor Zugriff auf Ziel, einmalige Aufnahme, Speicherzustaende nach
+jedem Frame gleich zur Referenz und zwischen Armen, Ausgabeslots freigegeben.
+R1/R3 und R0/N3 vor Folgeframe identische Prognosen/Zustaende nachgewiesen.
+Postpruefung aller sieben gespeicherten Ergebnisse ohne erneuten Replay PASS.
+
+RESSOURCEN
+Gemessene Peaks ueber alle sieben vollstaendigen Einstellungen:
+12 Frames,2 Ausgaben,13 gemeinsam; Receipt558 Byte,
+transiente Receipt-UTF8 971 Byte, keine temporaeren48er-Distanzkopien.
+Grenzen18+2 und Receiptgrenzen eingehalten. Details resource-ledger.json.
+Dies ist Adapter-/Slotbeobachtung, kein harter Prozess-RAM-Beleg fuer
+Exportarchiv, NumPy oder das gesamte Betriebssystem.
+
+TRANSPARENTE ABWEICHUNG IM BERICHTSSKRIPT
+Der erste Auswertungsversuch brach nach dem R0-Vergleich bei tau0 waehrend
+der Lernzielaufbereitung mit IndexError ab. Ursache: Ziel9 wurde noch als
+Index in den acht Lernframes behandelt statt als Querygenealogie.
+Korrigiert ausschliesslich diese Beobachterzuordnung; alle elf Grenzplaene
+statisch gegen die festgelegte Genealogie geprueft. Alte Skriptfassung und
+Vorbindung erhalten; korrigierten Runner vor Fortsetzung separat gebunden.
+Keine Materialproduktion, Projektion, Algorithmus-, Parameter- oder
+Auswahlregelaenderung. Danach genau sieben Einstellungen vollstaendig
+abgeschlossen, Exit0. Der Abbruch verursachte einen zusaetzlichen R0-Replay
+bei tau0:11 Aufnahmen je Arm. Er ist kein achtes Einstellungsresultat und
+geht nicht in Auswahl/Quoten ein. Insgesamt903 Aufnahmen je Arm in den sieben
+vollstaendigen Einstellungen, plus11 im abgebrochenen Beobachterversuch.
+Dieser Ablaufhinweis gehoert ausdruecklich zur Abnahme; keine Behauptung,
+dass vor den sieben Abschluessen keinerlei zusaetzlicher Replay stattfand.
+Beleg: observer-correction.json, run_search_attempt1.py.txt,
+presearch-attempt1.json und presearch-corrected-binding.json.
+
+STATUS UND NAECHSTER SCHRITT
+Projektleiter: AN-DEV-Ergebnis einschliesslich dokumentierter Beobachter-
+korrektur pruefen und abnehmen. Anschliessend getrennte AN-EVAL-Produktion
+und genau eine Auswertung mit epsilon_AUDIO/tau_AUDIO wie oben beauftragen,
+vorher Code/Profil/Herkunft/Parameter einfrieren. Keine neue Kalibration oder
+Suche auf AN-EVAL. Evaluation muss neue falsche Einzelzuordnungen ausschliessen
+und mindestens einen R1/R2-Zugewinn bestaetigen; Verluste und Schaeden separat.
+AN-EVAL bleibt bis dahin unproduziert. Exakter Abruf und legacy_v1 Standard;
+signal_approx_v1 ausschliesslich explizit waehlbar und experimentell.
+
+ARTEFAKTE
+Material: reports/s2uc/audio-nj-material-an-dev-01
+Autorisierung: docs/S2UC_AN_DEV_AUTORISIERUNG_20261001.json
+preproduction.json: Bindung vor Produktion.
+presearch.json: acht Kalibrationswerte, feste epsilon/Gitter/Materialhashes.
+tau-0.json bis tau-6.json: alle Rohresultate und getrennten Lernresultate.
+selection-inputs.json/selection.json: ausschliessliche Auswahlgrundlage.
+decision-tables.json/all-harms.json: Herkunft, Abdeckung, Verluste, alle Schaeden.
+verification.json/final-verification.json/resource-ledger.json: Nachweise.
+Parameterkandidat: candidate.json, keine Evaluation-Autorisierung.
+inventory.json: Hashinventar aller Abschlussartefakte.

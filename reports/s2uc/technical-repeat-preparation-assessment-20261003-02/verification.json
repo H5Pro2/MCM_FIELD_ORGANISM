@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "history": {
+    "reports/s2uc/raster32-evaluation-20261003-01": {
+      "checked_files": 367,
+      "closure_sha256": "dec036ddd216cf876597a81c861c7f81657da7b7833701f54683eab6c40756d9"
+    },
+    "reports/s2uc/raster32-assessment-20261003-01": {
+      "checked_files": 7,
+      "closure_sha256": "63af5b1ac1e3822ad8220b7caa7ef9657d0e51da39a8616bc21ee3d264c72d3d"
+    }
+  },
+  "qualification_closure_sha256": "757b340c38b0485ccbbed9f935f210b4d662877c55f3db0b4e67d9e0fff7885c",
+  "original_failed_qualification_sha256": "4f775325539cc54298cb20b2deeb3fd03e06d82f28b5ed1d3f5bc0756ac947bc",
+  "current_documents": {
+    "README.md": "141a04c283c67bb36a612583e08d00b1b1e85fe19828248d200a6f8fe3a6281c",
+    "AKTUELLER_FORSCHUNGSWEG.md": "508af96365be9826929356796dcd2dfd8c52011700ad70fc928c8ac38065226a"
+  },
+  "operative_output_exists": false,
+  "authorization_status": "PENDING_SEPARATE_AUTHORIZATION",
+  "bound_code_files": 85,
+  "bound_reference_files": 182
+}

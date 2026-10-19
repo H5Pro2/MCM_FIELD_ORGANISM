@@ -1,0 +1,1 @@
+{"baseline_observer":"SampleLeafBudgetObserver","input_preparation":{"cpu_ns":0,"wall_ns":5252200},"path":["worker","execute","frozen execute","timed call","integrated_baseline (M/E/K/P)","frozen replay"],"test_or_mock_dispatch_frames":false,"trace_released":true,"trace_scope":"Unchanged frozen replay coverage, including its original isolated-heap exclusion"}

@@ -1,0 +1,56 @@
+{
+  "scope": "All top-level reports/s2uc/*/*source*.json numeric48 exports at preparation; not all historical modalities or nested fixtures",
+  "known_building_blocks": true,
+  "entries": [
+    {
+      "path": "reports/s2uc/multi-counterprobe-20261003-01/source.json",
+      "sha256": "723605276480775ad28f16ab64666a26cc8f80b07ea0e262a7781a5b1da10af1",
+      "bytes": 16226,
+      "length": 48,
+      "profile": "ef47df2c82e18be613550ef964756b4a861e772bd5dcd7f791c4c46e4947481f",
+      "blocks": [
+        "196245d65c4b8537a0c3bf485704b5a2bb8037bed87563e94c80927ad46ab0f7",
+        "ee25b84d9252a0a97f16ad98020529c1828c46fb0890b687d7246f129b0e94dc"
+      ],
+      "prefixes": {
+        "4": "ee25b84d9252a0a97f16ad98020529c1828c46fb0890b687d7246f129b0e94dc",
+        "8": "95dcfa4f8c241aa8b6bf768dd688c067861d34c2bf32140a7283274a89aeea38",
+        "12": "d08fa3747155d48624cd2dd26967af41c4b6885d01916d71e9951f63a7f6493c",
+        "16": "525133d76198f0236b04e0ffc753c8ad218c1aa569769de4c2e6108f1af660a6",
+        "20": "472516b1b14bb81d068647f3f8544a1b0faf7245cc6dce757bd43293189c5dfa",
+        "24": "9ac7b88ed3ffe21e7a30aec357a43278a1dd5edb37290d378bbd4073e3a7ce0c",
+        "28": "f561f93c286e8b9d099da3bce1e1cbe3300dba7d92e23e362efd16c19051dc4b",
+        "32": "83f9dc14ace2fe435d96f628e2e2d91a414b2b208d74bd71a5549dc3cc17a3e0",
+        "36": "154ec65fdc8ba305974d6e536b5dfb6a23b97ee615f19da564502fd2a3ffb080",
+        "40": "e12fc78ee11876b983f58706c3e238597d7eb8338ff3cf67e1ac8d023c281a63",
+        "44": "c6c17b83b3132db93fe629de2818c61ae6e31391d06c36ba55b74a8f57eeb67e",
+        "48": "ef47df2c82e18be613550ef964756b4a861e772bd5dcd7f791c4c46e4947481f"
+      }
+    },
+    {
+      "path": "reports/s2uc/xyx-counterprobe-20261003-01/source.json",
+      "sha256": "1a21cdce17a5924b662319ac28204c61d5d9b8df716646bfdffb0f600eb63b5a",
+      "bytes": 16226,
+      "length": 48,
+      "profile": "15a3732e72bd4b1ad052ced0176abbc0e54700c194a61d77a0dc3e7798b3a835",
+      "blocks": [
+        "a199870f2ba6395e044664e084810cd700fed8adecbab8661d15ce82c64e8e5a",
+        "ee25b84d9252a0a97f16ad98020529c1828c46fb0890b687d7246f129b0e94dc"
+      ],
+      "prefixes": {
+        "4": "ee25b84d9252a0a97f16ad98020529c1828c46fb0890b687d7246f129b0e94dc",
+        "8": "95dcfa4f8c241aa8b6bf768dd688c067861d34c2bf32140a7283274a89aeea38",
+        "12": "d08fa3747155d48624cd2dd26967af41c4b6885d01916d71e9951f63a7f6493c",
+        "16": "525133d76198f0236b04e0ffc753c8ad218c1aa569769de4c2e6108f1af660a6",
+        "20": "9ce3b5fef2b5690a2542b9f790c591ed63b2a0536aa4ac3c345cbb2f24784681",
+        "24": "aee3eb3d0b7659a654eff172c1438cb978c4444af4c2d377793b0e106fdf89b4",
+        "28": "bc2eb79eb5a2a5edeb7011c7f578961971e219ab1aac3cc69632a2186dabf747",
+        "32": "9086e7a4ea73a791e773f4790315709819b44352ebbd3b018daff6da91a90500",
+        "36": "2cb07f7aed43087df6dfbbef6e61c1cc9d0a2ff3f683f7a434c887997ffcd705",
+        "40": "72ea3a32cecfb4ece106d1304ec8c77fdf9ab8c148f80501ede7e0aac13d2eab",
+        "44": "5be00d68231d8575f7852aa43d2edc973a761503ce5d08d7debe9957fe68289a",
+        "48": "15a3732e72bd4b1ad052ced0176abbc0e54700c194a61d77a0dc3e7798b3a835"
+      }
+    }
+  ]
+}

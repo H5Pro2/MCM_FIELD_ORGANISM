@@ -1,0 +1,35 @@
+VORBEREITETER AUFRUF -- NICHT AUSGEFUEHRT
+
+Arbeitsverzeichnis:
+C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace
+
+Nach gesonderter ausdruecklicher Freigabe der echten Gegenprobe:
+& 'C:\Python314\python.exe' -m tools.s2uc_ema_stock run --authorization 'docs/S2UC_EMA_BESTAND_AUTORISIERUNG_20261001.json'
+
+Die Autorisierungsdatei wurde NICHT erzeugt. Die Datei
+S2UC_EMA_BESTAND_AUTORISIERUNG_VORLAGE_20261001.json enthaelt nur eine
+PENDING_SEPARATE_AUTHORIZATION-Vorlage mit gebundenen Hashes. Erst nach der
+gesonderten Entscheidung darf eine Autorisierung mit status AUTHORIZED_ONCE
+und ansonsten exakt gleichen Feldern unter dem obigen Autorisierungspfad
+bereitgestellt werden. Das Vorhandensein der Vorlage autorisiert keinen Lauf.
+
+Der Einstieg prueft vor jeder Materialerzeugung Plan, Vertrag, Code und
+Python-Laufzeit sowie den vollstaendigen Autorisierungsinhalt. Er beansprucht
+den festen Zielordner exklusiv vor der Materialerzeugung:
+reports/s2uc/ema-stock-counterprobe-20261001-01
+
+Ein vorhandener Zielordner sperrt jeden weiteren Versuch. Nach Fehler oder
+Abbruch bleiben Teilbestand und Abschluss erhalten. Kein automatischer
+Neustart, kein Ersatzmaterial, keine Parameteranpassung.
+
+Geplanter Umfang: eine Geschichte mit64 Frames, E/K/P je einmal,
+192 Versuchsarm-Aufnahmen plus192 interne Referenz-Fortschreibungen.
+Keine200er-Erweiterung. Quelle, Beobachter, Plan, Auswertung und Abschluss
+teilen das4MiB-Exportbudget mit256KiB Abschlussreserve.
+
+Neutrale Qualifikation (bereits vorbereitet; keine echte Gegenprobe):
+& 'C:\Python314\python.exe' -m tools.s2uc_ema_stock qualify --output 'reports/s2uc/ema-stock-neutral-qualification-20261001-02'
+
+Der Qualifikationsordner wird ebenfalls exklusiv erzeugt. Wiederholte
+Entwicklungstests benoetigen einen eigenen Ordner; sie erneuern keine
+Einmallauffreigabe fuer die echte Gegenprobe.

@@ -1,0 +1,13 @@
+test_budget (tests.test_s2oe_detail_closure.Tests.test_budget) ... ok
+test_equal_and_different_regular (tests.test_s2oe_detail_closure.Tests.test_equal_and_different_regular) ... ok
+test_evaluation_gate (tests.test_s2oe_detail_closure.Tests.test_evaluation_gate) ... ok
+test_incomplete (tests.test_s2oe_detail_closure.Tests.test_incomplete) ... ok
+test_manipulated_binding (tests.test_s2oe_detail_closure.Tests.test_manipulated_binding) ... ok
+test_pair_mismatch (tests.test_s2oe_detail_closure.Tests.test_pair_mismatch) ... ok
+test_partial_stop (tests.test_s2oe_detail_closure.Tests.test_partial_stop) ... ok
+test_success_once (tests.test_s2oe_detail_closure.Tests.test_success_once) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.965s
+
+OK

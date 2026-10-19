@@ -1,0 +1,82 @@
+{
+  "active_process_limit": 2,
+  "baseline": {
+    "lifetime_peak_commit": 10608640,
+    "private_bytes": 10608640,
+    "working_set": 17616896
+  },
+  "combined_sample_peak": 52609024,
+  "job": {
+    "hard_job_limit": true,
+    "limit_bytes": 536870912,
+    "measurement": "Windows JobObjectExtendedLimitInformation",
+    "members": "supervisor and inherited worker",
+    "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap.",
+    "peak_job_committed_bytes": 60456960,
+    "peak_process_committed_bytes": 46571520
+  },
+  "mode": "decoder",
+  "phases": {
+    "complete": {
+      "combined_sample_peak": 51384320,
+      "samples": 5,
+      "supervisor_peak": 13885440,
+      "worker_peak": 37498880
+    },
+    "fault_case_cleanup": {
+      "combined_sample_peak": 50855936,
+      "samples": 2,
+      "supervisor_peak": 13885440,
+      "worker_peak": 36970496
+    },
+    "fault_case_encoder_and_file_output": {
+      "combined_sample_peak": 52609024,
+      "samples": 454,
+      "supervisor_peak": 15028224,
+      "worker_peak": 38113280
+    },
+    "fault_case_stream_decoder": {
+      "combined_sample_peak": 52060160,
+      "samples": 1,
+      "supervisor_peak": 13885440,
+      "worker_peak": 38174720
+    },
+    "imports_and_initialization": {
+      "combined_sample_peak": 49942528,
+      "samples": 141,
+      "supervisor_peak": 12480512,
+      "worker_peak": 37462016
+    },
+    "processing_R": {
+      "combined_sample_peak": 50466816,
+      "samples": 60,
+      "supervisor_peak": 12886016,
+      "worker_peak": 37580800
+    },
+    "processing_U": {
+      "combined_sample_peak": 50139136,
+      "samples": 14,
+      "supervisor_peak": 12615680,
+      "worker_peak": 37523456
+    },
+    "startup": {
+      "combined_sample_peak": 24821760,
+      "samples": 12,
+      "supervisor_peak": 11935744,
+      "worker_peak": 12886016
+    },
+    "transition": {
+      "combined_sample_peak": 49950720,
+      "samples": 1,
+      "supervisor_peak": 12480512,
+      "worker_peak": 37470208
+    }
+  },
+  "seconds": 7.875621099999989,
+  "status": "PASS",
+  "supervisor_pid": 13364,
+  "verified_same_job": true,
+  "worker_exitcode": 0,
+  "worker_pid": 13728,
+  "worker_status": "PASS"
+}

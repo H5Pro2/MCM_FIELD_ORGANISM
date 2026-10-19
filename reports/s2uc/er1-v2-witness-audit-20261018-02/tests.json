@@ -1,0 +1,16 @@
+{
+  "count": 10,
+  "ids": [
+    "test_final.Qualification.test_asymmetric_promotion",
+    "test_final.Qualification.test_broken_origin",
+    "test_final.Qualification.test_duplicate",
+    "test_final.Qualification.test_false_feedback_time",
+    "test_final.Qualification.test_false_offset",
+    "test_final.Qualification.test_feedback_line_break",
+    "test_final.Qualification.test_missing_countervictim",
+    "test_final.Qualification.test_omission",
+    "test_final.Qualification.test_positive",
+    "test_final.Qualification.test_target_deduplication"
+  ],
+  "status": "PASS"
+}

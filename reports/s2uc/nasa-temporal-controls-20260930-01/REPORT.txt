@@ -1,0 +1,76 @@
+NASA: FESTER ZEITLICHER KONTROLLVERGLEICH -- 2026-09-30
+Status OBSERVER_CONTROL_COMPLETE;10/10 Tests PASS.
+
+Auswahl und Formeln vor Berechnung in preregistration.json gebunden.
+Frames: t=53,55,...,99, Nachbar t-1, zeitfern t-51;24 gleiche Ziele.
+Formationen: j=14,...,25, Nachbar j-1, zeitfern j-13;12 gleiche Ziele.
+MAE, Maximum absoluter Differenz, mittlere absolute Betraege x/y unveraendert.
+Delta=MAE zeitfern minus MAE benachbart; positives Delta bedeutet geringere
+Nachbarabweichung. Exakte Vorzeichen, keine Schwelle oder Toleranz.
+
+ERGEBNISSE AUF IDENTISCHEN ZIELTEILMENGEN
+frames: Nachbar geringer 21, gleich 0, groesser 3 (N=24).
+Arm / Kennwert | Minimum | Median | Mittel | Maximum
+near / mae | 0.000179967649372 | 0.000311392778773 | 0.000493803824959 | 0.00228109075336
+near / max_abs | 0.00126620636743 | 0.00216993541358 | 0.00509127848901 | 0.0341850174096
+near / mean_abs_x | 0.00138415137922 | 0.00147008503387 | 0.00153731846117 | 0.0024143795369
+near / mean_abs_y | 0.00134116760219 | 0.0015141864627 | 0.00169877433359 | 0.00389195533619
+far / mae | 0.000226034437916 | 0.000871120165621 | 0.00144239267088 | 0.00565480880416
+far / max_abs | 0.00140697173583 | 0.00539096824863 | 0.0137711367388 | 0.0665629515759
+far / mean_abs_x | 4.13760857909e-10 | 0.00153903804188 | 0.00185768152034 | 0.00705984299253
+far / mean_abs_y | 0.00134116760219 | 0.0015141864627 | 0.00169877433359 | 0.00389195533619
+Delta MAE | -0.000752140767197 | 0.000409953951346 | 0.000948588845921 | 0.00547484115479
+Ziele mit groesserer Nachbarabweichung: [85, 89, 95]
+
+formations: Nachbar geringer 11, gleich 0, groesser 1 (N=12).
+Arm / Kennwert | Minimum | Median | Mittel | Maximum
+near / mae | 0.000239545024579 | 0.000325386979171 | 0.000540902562636 | 0.00113532306027
+near / max_abs | 0.00194029420593 | 0.00364744686953 | 0.0140486594181 | 0.03822128149
+near / mean_abs_x | 0.00140393913561 | 0.00149823190319 | 0.00161874111611 | 0.00240822821674
+near / mean_abs_y | 0.00140393913561 | 0.00149120117623 | 0.00161756932829 | 0.00240822821674
+far / mae | 0.000332926240121 | 0.00107348437352 | 0.00141656937229 | 0.00404696031276
+far / max_abs | 0.00280714204361 | 0.00841506274872 | 0.0255308344061 | 0.0934846171553
+far / mean_abs_x | 2.79704228788e-05 | 0.00158493296108 | 0.00189552449713 | 0.00547775019971
+far / mean_abs_y | 0.00140393913561 | 0.00149120117623 | 0.00161756932829 | 0.00240822821674
+Delta MAE | -0.00077883660426 | 0.000410572136174 | 0.00087566680965 | 0.00380741528819
+Ziele mit groesserer Nachbarabweichung: [23]
+
+EINZELWERTE UND HERKUNFT
+frames.csv und formations.csv enthalten fuer jedes Ziel beide vollstaendigen
+Kennwertsaetze, Delta, Vorzeichenklasse und Originalframeordinals. result.json
+enthaelt dieselben Daten plus Verteilungszusammenfassungen. Zielframes und
+Zielformationen sind in beiden Armen identisch, ihre mittleren absoluten
+Betraege daher ebenfalls. Keine Vermischung der24/12-Zielteilmengen mit den
+frueheren49/24 Gesamtheiten: jeder Nachbarschaftswert wurde exakt gegen den
+zugehoerigen Einzelwert der vorigen Analyse abgeglichen.
+Formationszuordnung aus formation_receipts und protokollierten Kandidaten-
+Zustaenden; Segment, Generation, vier Ordinale und alle Werte geprueft.
+
+EINORDNUNG
+Unmittelbare Nachbarn liegen nach der ungewichteten MAE in diesem festgelegten
+Abschnitt ueberwiegend naeher als die festen zeitfernen Kontrollen. Das gilt
+nicht fuer jedes Ziel. Die Signalbetraege stehen mit im Bericht: die zeitfernen
+Referenzen haben eine andere Betragsverteilung. Glatte zeitliche Veraenderung
+oder nichtstationaere Signalstaerke koennen zum Befund beitragen; eine
+strukturelle Wiederkehr oder ihr Mechanismus sind damit nicht isoliert.
+Die Ziele ueberlappen zeitlich bzw. gehoeren zu einer einzigen Quelle; keine
+Signifikanz-/Generalisierungsaussage und kein statistisch unabhaengiger Holdout.
+Kein Nachweis wiedererkennbarer Erfahrungen oder nuetzlicher Kontextprognosen.
+Keine neue Aehnlichkeitsschwelle, Matchinganpassung oder weitere Lag-Suche.
+
+TESTS UND DATEIEN
+Vier neue Tests: vollstaendige Indexregeln samt Endpunkten; bekannte Delta-
+Vorzeichen und gleiche Zielbetraege; Nullwerte/positionsgleiche192-Werte-Faelle;
+manipulierte Formationsherkunft. Sechs bisherige Arithmetiktests unveraendert.
+Alle10 PASS; tests.json nennt Test-IDs. Historische Datei-/Codebindungen vor
+und nach Berechnung unveraendert. Kein Decoder-/Rezeptor-/NJ-/Memory-Aufruf.
+Neu tools/s2uc_temporal_controls.py, tests/test_s2uc_temporal_controls.py,
+dieser Ergebnisordner; Forschungsweg mit beiden Beobachteranalysen ergaenzt.
+Historische Berichte bleiben erhalten und unveraendert.
+
+NAECHSTE FACHLICHE ENTSCHEIDUNG
+Empfehlung: Zeitabstandskontrollen hier abschliessen. Vor jeder Erweiterung
+des Matchings muss der Projektleiter ein separates Kriterium fuer Wieder-
+erkennung und deren Nutzen bestimmen, das ueber blosse zeitliche Naehe hinaus-
+geht. Den deskriptiven Nachbarschaftsbefund nicht direkt als Toleranzwert fuer
+Memory uebernehmen. Keine weitere Ausfuehrung oder neue Zeitabstaende vorgeschaltet.

@@ -1,0 +1,111 @@
+MCM S2UC - Development-Herkunftspruefung - 2026-09-30
+
+ERGEBNIS: Paket vollstaendig. Neutrale Qualifikation PASS; Development einmalig MATERIAL_COMPLETE; acht Pruefziele und 36 Lernziele getrennt ausgewertet. Evaluation geschlossen.
+
+1. Umfang und Bindung
+Weitergegebener Projektleiterauftrag: neutraler vollstaendiger Produktionspfad, danach genau eine Development-Produktion und unveraenderte Auswertung. Keine Evaluation-Produktion, keine Schwellen-, Matching-, Seed- oder Parameteranpassung; kein Commit/Push.
+Plan-SHA256: 81c7edb0ece7716789f414ca9ebb02a060080f0e8bc56e4bc0c36a76a253cba7
+Generator-SHA256: 7e74ebf59c0ba1bc8b7ee96a5a155f3e61196403787ddbfd6672dcd1ac2bd804
+Weitere Code-, Laufzeit- und Profilbindungen: bindings.json sowie ../known-origin-neutral-qualification-20260930-01/preproduction-bindings.json. Vor und nach Produktion/Auswertung identisch bestaetigt (final-verification.json).
+Neue Dateien: tools/s2uc_known_origin_development.py; docs/S2UC_HERKUNFT_DEVELOPMENT_AUTORISIERUNG_20260930.json; drei getrennte Berichtsablaegen fuer neutrale Qualifikation, Development-Material und Development-Auswertung. AKTUELLER_FORSCHUNGSWEG.md erhaelt einen neuen obersten Stand. Bestehende Implementierungen bleiben unveraendert.
+
+2. Neutrale technische Qualifikation
+Konfiguration qualification/* ausserhalb beider Familien: Seeds 510001,510007,510013,510019,510031 und getrennte Frequenzen. neutral-plan.json dokumentiert alle Parameter vor Testausfuehrung.
+Test success: unveraenderte Synthese, sieben PCM-Exporte und 28 echte Rezeptor-/NJ-Projektionen. Geprueft: Byteumfang/Hashes, endliche PCM-Domaene, gemeinsame A/D-Anfaenge, Gain/Rauschen/Tailgain, Profil-/Projektionsdigests, Quellzeiten und Abschluss.
+Test output-cap: reduzierte Ledgergrenze nur im neutralen Test; OUTPUT_LIMIT vor erstem PCM-Export, NOT_EVALUABLE mit reserviertem Abschluss innerhalb Grenze.
+Test projection-error: injizierter neutraler Projektionsfehler nach erstem PCM-Export; NOT_EVALUABLE, null vollstaendige Fenster, Teilbestand und Abschluss erhalten.
+Alle drei Testordner verweigern einen zweiten Aufruf bereits durch exklusive Ordneranlage; Hashes bleiben dabei unveraendert. Diese Verweigerungstests sind keine Development-Wiederholung.
+Neutrale Testnaht ersetzt ausschliesslich ROOT, PLAN_PATH und die exakte neutrale Planvalidierung. Erfolgspfad benutzt echte Synthese/Rezeptor/NJ/Export; Fehlerfaelle haben ausdruecklich dokumentierte Injektionen. Die originale Familienvalidierung wurde separat vor/nachher unveraendert ausgefuehrt.
+Belege: ../known-origin-neutral-qualification-20260930-01/tests.json, neutral-integrity.json, die drei closure.json und regression-tests.txt/json.
+Regression: tests.test_s2uc_origin_judge (11), tests.test_s2uc_continuation_adapter (7), tests.test_s2uc_pair_context_adapter (6): 24/24 PASS, keine Fehler/Skips. Bekannte technische Regression, keine neue Leistungsstichprobe.
+
+3. Einmalige Development-Produktion und Integritaet
+Genau ein expliziter produce-Aufruf, Exit 0, MATERIAL_COMPLETE. Sieben Sequenzen, 134400 Samples, 537600 PCM-Byte, 28 Projektionsfenster, 28 Rezeptor- und 28 NJ-Aufrufe. Kein Retry.
+Materialausgabe einschliesslich claim/closure: 1169539 / 4194304 Byte; Abschlussreserve 262144 Byte. 37 Dateien. Observer-Auswertungen liegen separat und sind nicht in dieser Materialbilanz enthalten.
+Genealogie aus vorgebundenem Manifest: A_half/A_noise/A_tailhalf stammen von A; D teilt die ersten 9600 Samples bitgenau mit A, besitzt aber eine eigene Fortsetzung. B und C sind getrennte synthetische Erzeugungen. C folgt A im gemeinsamen AC-Quellstrom ab Sample19200.
+Alle Varianten bitweise aus gespeichertem Float32-A geprueft; Rauschen mit separater skalarer PRNG-Nachrechnung. Kein erneuter Basisgeneratorlauf fuer Development. Quellzeiten C:19200..38400, Snapshots40/50/60/70; sonst0..19200, Snapshots0/10/20/30. Replay ordnet gespeicherte Werte in eigene Fallzeit ein; originale Quellzeiten bleiben im Materialmanifest erhalten.
+Integritaet und Einzeldatei-SHA256: integrity.json. Positive Labels, Herkunft und Fallmatrix stammen vor Auswertung aus dem gebundenen Plan; keine Anpassung an Matches.
+
+4. Acht vorab bestimmte Pruefziele
+Fall | Ziel | Herkunftsbewertung | Prognosestatus | Persistenz-MAE | Kontext-MAE | Delta Persistenz-Kontext
+T0 | 11 | CORRECT | PREDICTED_RETAINED | 0.0016886282393 | 0 | 0.0016886282393
+P1 | 11 | CORRECT | FACTOR_CONTINUATION_NOT_SPECIFIED | 0.000844314119649 | nicht definiert | nicht definiert
+P2 | 11 | ABSTAIN | ABSTAIN_NO_CONTEXT | 0.00168892886995 | nicht definiert | nicht definiert
+P3 | 11 | CORRECT | PREDICTED_RETAINED | 0.00163257896272 | 0.000811916290228 | 0.000820662672495
+N1 | 11 | ABSTAIN | ABSTAIN_NO_CONTEXT | 0.00310655304003 | nicht definiert | nicht definiert
+N2 | 11 | ABSTAIN | ABSTAIN_NO_CONTEXT | 0.00255484013123 | nicht definiert | nicht definiert
+N3 | 11 | WRONG | PREDICTED_RETAINED | 0.00323519764662 | 0.0032205515993 | 1.46460473229e-05
+N4 | 19 | AMBIGUOUS | AMBIGUOUS_CONTEXT | 0.00323519764662 | nicht definiert | nicht definiert
+
+Zuordnung: 3 korrekt, 1 falsch, 1 mehrdeutig, 3 Enthaltungen. Einzelzuordnung4/8 (50%); Kontextprognose3/8 (37,5%); Persistenz8/8.
+Positive Bestandshherkunft5:3 korrekt,1 Enthaltung,1 mehrdeutig; korrekte Zuordnung3/5. Negative3:2 korrekte Zurueckweisungen,1 falsche Einzelzuordnung (1/3). N4 ist planmaessig positiv bezueglich vorhandener Herkunft, aber Gegenfall gegen Eindeutigkeit.
+Alle vier Einzelzuordnungen stammen aus retained; keine candidate-Einzelzuordnung an den acht Pruefzielen. P1 erkennt die Herkunft, liefert aber keine spezifizierte Faktorfortsetzung. P2 hat keine Zuordnung. N4 bleibt mehrdeutig.
+Gepaarte drei Ziele: mittlere Persistenz-MAE 0.00218546828288, Kontext-MAE 0.00134415596318, Delta 0.000841312319705. Besser3, gleich0, schlechter0.
+Vollabdeckung acht Ziele, festes Observer-Schema Kontext-sonst-Persistenz: Persistenz-MAE 0.00224827983202, Schema-MAE 0.00193278771213, Delta 0.000315492119889. Kein Produkt-Fallback implementiert.
+
+5. Fehler und Schadensfaelle
+Kein MAE-Schadensfall gegen Persistenz auf den acht Pruefzielen oder 36 Lernzielen (alle Einzelwerte/result.json; harm_rows jeweils leer). Das bedeutet nicht fehlerfreie Herkunft oder fehlerfreie Fortsetzung.
+N3: falsche Einzelzuordnung zu A statt D, Kontext-MAE 0.0032205515993. Kontext liegt hier lediglich 1.46460473229e-05 unter Persistenz. Der kleine MAE-Vorteil hebt den Herkunftsfehler nicht auf.
+P3: korrekte Herkunft A, aber unzutreffende Originalfortsetzung gegen halbiertes Zielfenster; Kontext-MAE 0.000811916290228. Trotzdem geringerer Fehler als Persistenz auf diesem konkreten Signal.
+P2: positive Rauschvariante ohne Abdeckung. N4: Mehrdeutigkeit ohne Kontextprognose. Keine stillen Auslassungen oder Labelreparaturen.
+
+6. 36 getrennte Lernziele (keine Prueferfolgszahlen)
+Alle anderen erreichbaren Ziele, einschliesslich Uebergang zum Query, werden separat als learning_rows archiviert. Die zusaetzliche positive Lernklassifikation bedeutet: wahre Basis bereits in einer vor dem Hinweispaar abgeschlossenen Vierergruppe vorhanden. Sie ist eine diagnostische Observer-Definition, kein nachtraegliches Pruefkriterium.
+{
+  "total": 36,
+  "origin_counts": {
+    "ABSTAIN": 17,
+    "CORRECT": 13,
+    "WRONG": 5,
+    "AMBIGUOUS": 1
+  },
+  "positive_origin_counts": {
+    "CORRECT": 13,
+    "AMBIGUOUS": 1
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 17,
+    "WRONG": 5
+  },
+  "assignment_coverage": 0.5,
+  "context_coverage": 0.25,
+  "positive_correct_fraction": 0.9285714285714286,
+  "negative_wrong_fraction": 0.22727272727272727,
+  "correct_rejections": 17,
+  "roles": {
+    "candidate": 17,
+    "retained": 1
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 17,
+    "ABSTAIN_NO_SUCCESSOR": 9,
+    "AMBIGUOUS_CONTEXT": 1
+  },
+  "paired": {
+    "count": 9,
+    "persistence_mae": 0.0018604692845559786,
+    "context_mae": 0.0003578390665890154,
+    "delta": 0.0015026302179669633,
+    "better": 9,
+    "equal": 0,
+    "worse": 0
+  },
+  "full_coverage": {
+    "count": 36,
+    "persistence_mae": 0.002537938125161855,
+    "observer_hybrid_mae": 0.002162280570670114,
+    "delta": 0.0003756575544917408
+  },
+  "harm_rows": []
+}
+Falsche Herkunftszuordnungen unter Lernzielen: N1@9, N2@9, N3@9, N4@9, N4@11. Diese Ziele enthalten Uebergaenge nach einem Paar am Episodenende; keine zugelassene Kontextfortsetzung wird daraus erzwungen.
+
+7. Kausalitaet und Ressourcen
+96 Frames regulaer genau einmal aufgenommen,44 erreichbare Ziele =8 Pruefziele+36 Lernziele. Jede Prognose vor Anforderung des Zielframes und vor Hinweisaufnahme eingefroren. Speicherzustand nach jedem Frame und nach Abschluss identisch zur unveraenderten Referenz. Ausgabeslots nach Verbrauch/Abschluss freigegeben.
+T0/N3: eingefrorene Prognosen sowie erste zehn Systemzustaende exakt identisch, bevor die unterschiedliche Fortsetzung aufgenommen wird. Verborgene Herkunft ist aus gleichem Vorzustand/Praefix nicht eindeutig bestimmbar.
+Instrumentierte Peaks aller Faelle: Frames 12, Ausgabeslots 2, gemeinsamer Peak 13. Observerarchive sind nicht die Systemmemory und werden getrennt gespeichert. Kein harter Prozess-RAM-Nachweis beansprucht.
+
+8. Aussagegrenze und naechster Vorschlag
+Gemessen: positiver mittlerer MAE-Unterschied auf diesem kleinen synthetischen Development-Bestand bei begrenzter Abdeckung; Herkunftsfehler und Rauschluecke bleiben. Keine abschliessende Leistungspruefung, keine statistische Generalisierung, keine natuerliche Identitaet/Semantik.
+Empfehlung an Projektleiter: Paket fachlich abnehmen und als naechsten begrenzten Schritt die unveraenderten Regeln samt Auswertung fuer eine separat zu beauftragende einmalige Evaluation einfrieren. Vorher keine Matchinglockerung aus acht Development-Faellen ableiten. Rauschrobustheit und skalierte Fortsetzung als getrennte spaetere Entwicklungsziele entscheiden; N3 bleibt eine Identifizierbarkeitsgrenze.
+Evaluation-Vorlage unveraendert PENDING; kein Evaluation-Materialordner. Keine erneute Development-Produktion vorgeschlagen.

@@ -1,0 +1,29 @@
+{
+  "status": "INSUFFICIENT_DEMONSTRATED_RESERVE",
+  "measurement": {
+    "historical_max_start_gap_s": 48.458863,
+    "worst_neutral_new_old_ratio": 0.781602082318262,
+    "neutral_phase_seconds": {
+      "materialization": 0.0001746,
+      "source_validation": 0.0192963,
+      "manifest": 0.0062935,
+      "export": 0.071298,
+      "resource_check": 5.01e-05,
+      "case_assessment": 0.688451,
+      "aggregation": 2.65e-05,
+      "U_replay": 0.2210487
+    }
+  },
+  "extrapolation": {
+    "baseline_seconds": 6060.087716412061,
+    "administration_seconds": 180,
+    "U_seconds": 30,
+    "closure_seconds": 60,
+    "contingency_factor": 1.25,
+    "total_seconds": 6330.087716412061,
+    "limit": 3600,
+    "reserve_seconds": -2730.087716412061
+  },
+  "assumptions": "128 arms each at historical worst interval times weakest observed improvement and1.25 contingency; administration includes materialization/check/export/verification; no formal worst-case proof",
+  "recommendation": "DO_NOT_START_WITHOUT_SEPARATE_DECISION_ON_INSUFFICIENT_RESERVE"
+}

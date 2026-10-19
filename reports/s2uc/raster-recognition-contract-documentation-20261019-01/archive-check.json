@@ -1,0 +1,46 @@
+{
+  "all_match": true,
+  "contract": {
+    "bytes": 24353,
+    "sha256": "f8150752bb0008bafef95dad301c25022f4aae83b523c2ed60d3d3f2f7cc2bfe"
+  },
+  "current_code": {
+    "experiments/temporal_alignment/connection_tests.py": {
+      "bytes": 4126,
+      "sha256": "f8c486da3a30d9ac0314b6f0c3462b660853fb59c6bdf0198a7f918636aa7fd3"
+    },
+    "experiments/temporal_alignment/core.py": {
+      "bytes": 8593,
+      "sha256": "070e158bc60e9f4946c3c8c1ff4495edaa9764b8a1c9982e2b6e69f735065de9"
+    },
+    "experiments/temporal_alignment/entry.py": {
+      "bytes": 4760,
+      "sha256": "3467694ba80d954f4b7aeea5fa2b2d807b88a2ce05dd5c8f35e9e6ff1e538fd6"
+    },
+    "experiments/temporal_alignment/full.py": {
+      "bytes": 8015,
+      "sha256": "09eca7c550f44084aa128675665b3729e7c7188f575084ebb427b6bac0b58fb6"
+    },
+    "experiments/temporal_alignment/gateway.py": {
+      "bytes": 9947,
+      "sha256": "9bfe7f71db9fb4b63a543be8bd28f67a9708cde8a3b53e705b107fe3dbcd9504"
+    },
+    "experiments/temporal_alignment/oracle.py": {
+      "bytes": 1537,
+      "sha256": "ef945f3f77c6a39cf24bba9836ef161cc76adb6a9dc6cc03069a4e243c1f8bfa"
+    },
+    "experiments/temporal_alignment/projector.py": {
+      "bytes": 2052,
+      "sha256": "51adbc92e809b648af5e9ee5e2ac9b5226f12b3babcdb48eeaa78a904177257e"
+    },
+    "experiments/temporal_alignment/tests.py": {
+      "bytes": 12609,
+      "sha256": "ee4a98eeeede9788731327d19ec12dcc09cf5ae6232d8abdda80143b7d8e09ed"
+    }
+  },
+  "inherited_delivery_sha256": "cccadae5a649066941246dbd6cbe2179c4d8c36d7db28109cbd83042c57285c8",
+  "overview_previous_hashes_match": true,
+  "snapshots_lossless": true,
+  "verified_code_files": 8,
+  "verified_inherited_files": 445
+}

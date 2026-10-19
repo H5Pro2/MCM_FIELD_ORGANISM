@@ -1,0 +1,13 @@
+test_T01_export_report_failure (tests.test_s2uc_ura1_terminal_v3.TerminalTests.test_T01_export_report_failure) ... ok
+test_T02_admin_report_failure (tests.test_s2uc_ura1_terminal_v3.TerminalTests.test_T02_admin_report_failure) ... ok
+test_T03_deadline_saved (tests.test_s2uc_ura1_terminal_v3.TerminalTests.test_T03_deadline_saved) ... ok
+test_T04_first_cause_and_progress (tests.test_s2uc_ura1_terminal_v3.TerminalTests.test_T04_first_cause_and_progress) ... ok
+test_T05_missing_worker_report (tests.test_s2uc_ura1_terminal_v3.TerminalTests.test_T05_missing_worker_report) ... ok
+test_T06_reserve_admission (tests.test_s2uc_ura1_terminal_v3.TerminalTests.test_T06_reserve_admission) ... ok
+test_T07_global_reserve (tests.test_s2uc_ura1_terminal_v3.TerminalTests.test_T07_global_reserve) ... ok
+test_T08_worker_adapter_records_before_report_failure (tests.test_s2uc_ura1_terminal_v3.TerminalTests.test_T08_worker_adapter_records_before_report_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.548s
+
+OK

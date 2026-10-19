@@ -1,0 +1,1 @@
+{"mode": "legacy", "status": "PASS", "seconds": 0.17524689999845577, "job_peak": 27721728, "first_failure": "FileNotFoundError:[WinError 2] Das System kann die angegebene Datei nicht finden: 'C:\\\\Users\\\\TV\\\\Documents\\\\MCM_FIELD_ORGANISM\\\\workspace\\\\reports\\\\s2uc\\\\ura1-fs-correction-20261015-01\\\\final\\\\legacy\\\\data\\\\neutral.json.partial'", "steps": 1}

@@ -1,0 +1,650 @@
+{
+  "command": [
+    "C:\\Python314\\python.exe",
+    "-m",
+    "unittest",
+    "-v",
+    "tests.test_s2uc_prestart_v7",
+    "tests.test_s2uc_resource_contract_v7",
+    "tests.test_s2uc_neutral_connection",
+    "tests.test_s2uc_materialization_connection",
+    "tests.test_s2ub_candidate_confirmation"
+  ],
+  "exit_code": 0,
+  "tests": [
+    {
+      "id": "tests.test_s2uc_prestart_v7.V7PrestartTests.test_changed_source_hash_and_consistent_undercount_are_rejected",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_prestart_v7.V7PrestartTests.test_complete_union_includes_bound_tests_packages_and_actual_sizes",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_prestart_v7.V7PrestartTests.test_disk_change_after_binding_is_rejected",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_prestart_v7.V7PrestartTests.test_duplicate_json_keys_and_evidence_claims_rejected",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_prestart_v7.V7PrestartTests.test_external_identity_and_bound_entry_set_cannot_be_forged",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_prestart_v7.V7PrestartTests.test_external_installation_hash_measures_bytes_despite_unchanged_version",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_prestart_v7.V7PrestartTests.test_invalid_v7_starter_also_keeps_supplier_zero_gate_closed_and_output_absent",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_prestart_v7.V7PrestartTests.test_missing_transitive_test_dependency_with_consistent_digests_fails",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_prestart_v7.V7PrestartTests.test_missing_unknown_and_unregistered_static_evidence_fail",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_prestart_v7.V7PrestartTests.test_project_hardlink_and_noncanonical_path_rejected",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_prestart_v7.V7PrestartTests.test_reservation_and_actual_inventories_cannot_be_mixed",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_prestart_v7.V7PrestartTests.test_roles_paths_categories_and_contract_are_not_binding_controlled",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_prestart_v7.V7PrestartTests.test_starter_always_stops_valid_v7_before_supplier_adapter_gate_and_output",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_prestart_v7.V7PrestartTests.test_static_subcap_and_metadata_combined_cap_use_real_bytes",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_prestart_v7.V7PrestartTests.test_true_code_budget_exact_and_plus_one_use_disk_bytes",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_prestart_v7.V7PrestartTests.test_v6_v7_mixing_fails_in_both_directions",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_resource_contract_v7.V7ResourceLedgerTests.test_all_closure_alternatives_match_independent_sums",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_resource_contract_v7.V7ResourceLedgerTests.test_both_reserve_boundaries_are_distinct_from_absolute_limits",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_resource_contract_v7.V7ResourceLedgerTests.test_consistent_false_file_size_and_totals_rejected_against_disk",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_resource_contract_v7.V7ResourceLedgerTests.test_contract_values_immutable_and_report_copies_independent",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_resource_contract_v7.V7ResourceLedgerTests.test_duplicate_unknown_and_invalid_assignments_rejected",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_resource_contract_v7.V7ResourceLedgerTests.test_every_absolute_category_boundary_uses_actual_files",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_resource_contract_v7.V7ResourceLedgerTests.test_invalid_reservation_sizes_and_categories_rejected",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_resource_contract_v7.V7ResourceLedgerTests.test_missing_and_unassigned_real_files_rejected",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_resource_contract_v7.V7ResourceLedgerTests.test_phase_forbids_published_files_before_publication_even_if_empty",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_resource_contract_v7.V7ResourceLedgerTests.test_required_artifacts_and_single_staging_file_enforced",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_resource_contract_v7.V7ResourceLedgerTests.test_reservation_cannot_substitute_for_measurement",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_resource_contract_v7.V7ResourceLedgerTests.test_same_length_changed_file_hash_and_relabelled_category_rejected",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_resource_contract_v7.V7ResourceLedgerTests.test_shared_boundary_counts_subaccounts_without_double_counting",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_resource_contract_v7.V7ResourceLedgerTests.test_total_boundary_on_disk_and_isolated_arithmetic",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_common_ledger_uses_alternative_closures_and_rejects_overflow",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_complete_neutral_connection_materializes_once_per_endpoint_and_verifies",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_entry_resets_gate_after_manifest_failure",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_failure_between_arm_calls_has_independent_progress_verification",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_failure_between_stories_preserves_completed_story_and_marks_remaining",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_failure_verifier_rejects_prior_and_prefix_receipt_manipulations",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_file_entry_rejects_closed_gate_without_invoking_materializer",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_first_owner_close_failure_does_not_prevent_second_owner_close",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_manifest_binds_all_three_shapes_and_has_no_evaluation_labels",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_owner_close_failure_after_complete_story_stops_without_next_story",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_verifier_rejects_missing_swapped_and_snapshot_manipulations",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_authorization_gate_and_isolated_neutral_execution",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_codec_failure_after_connection_retains_completed_progress_and_blocks_evaluation",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_codec_keeps_historical_v1_record_form_readable",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_evaluation_rejects_missing_and_duplicate_expected_receipts",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_existing_output_directory_is_never_modified",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_failure_budget_counts_error_receipt_and_terminal_separately",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_final_binding_validates_referenced_qualification_and_budget_before_supplier",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_entry_failure_blocks_evaluation_and_resets_gate",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_entry_rejects_actual_reserve_overflow_and_resets_gate",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_entry_serializes_reloads_verifies_and_only_then_evaluates",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_entry_verification_failure_publishes_terminal_and_blocks_evaluation",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_neutral_materialization_roundtrip_and_reloaded_verification",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_last_endpoint_failure_preserves_attempt_and_success_difference",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_ledger_separates_record_reserve_from_absolute_record_limit",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_materialization_failure_in_second_story_roundtrips_and_verifies_prefix",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_owner_close_error_after_neutral_materialization_stops_and_roundtrips",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_prepared_run_identity_is_accepted_and_unknown_identity_is_rejected",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_real_starter_rejects_structurally_valid_legacy_binding",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_record_preflight_rejects_oversized_metadata_before_publication",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_record_write_failure_preserves_primary_error_and_closes_gate",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_reloaded_record_rejects_manipulated_materialization_origin",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_source_adapter_uses_all_bound_positions_without_deduplication",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_starter_rejects_code_binding_before_supplier",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_static_run_binding_covers_sources_uses_and_all_expectations",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_terminal_write_failure_preserves_primary_codec_error",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_unbudgetable_error_terminal_publishes_bounded_minimal_evidence",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v2_codec_full_neutral_structure_with_distinct_vectors_fits_record_reserve",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v2_codec_keeps_binary64_values_and_separate_frame_identities",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v2_codec_worst_case_distinct_vectors_stays_within_its_bound",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v3_codec_references_event_values_hex_without_losing_long_binary64_forms",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_dependency_closure_includes_transitive_delayed_and_package_imports",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_dependency_scanner_follows_nested_relative_and_delayed_imports",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_final_binding_accepts_only_the_prepared_identity_and_resolved_artifacts",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_real_starter_rejects_complete_but_oversized_dependencies",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_real_starter_rejects_matching_but_incomplete_dependencies",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_real_starter_rejects_omitted_delayed_transitive_and_package_files",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_real_starter_rejects_synthetic_qualification",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_validation_rejects_actual_final_file_above_bound_reserve",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_validation_rejects_changed_reserves_and_qualification_artifact_sizes",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_validation_rejects_duplicate_negative_missing_and_noninteger_items",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_validation_rejects_empty_qualification_artifacts",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_validation_rejects_inconsistent_branch_contributions_with_current_digests",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_validation_rejects_mismatched_qualification_ids_results_tests_and_code",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_validation_rejects_missing_or_extra_branches_and_contribution_keys",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_validation_rejects_undercounted_single_item_with_current_digests",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_verifier_rejects_missing_and_manipulated_source_completion",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2ub_candidate_confirmation.CandidateConfirmationTests.test_candidate_is_lost_when_interruption_precedes_second_exact_observation",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2ub_candidate_confirmation.CandidateConfirmationTests.test_confirmed_trace_survives_one_off_pressure_while_candidate_is_lost",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2ub_candidate_confirmation.CandidateConfirmationTests.test_frame_budget_is_reached_during_formation_and_hints_are_separate",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2ub_candidate_confirmation.CandidateConfirmationTests.test_hints_read_only_and_never_read_candidate",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2ub_candidate_confirmation.CandidateConfirmationTests.test_immediate_arm_uses_tw_confirmation_and_two_retained_slots",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2ub_candidate_confirmation.CandidateConfirmationTests.test_independent_hint_replay_covers_offsets_ambiguity_and_candidate_exclusion",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2ub_candidate_confirmation.CandidateConfirmationTests.test_independent_replay_matches_every_receipt_for_documented_cases",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2ub_candidate_confirmation.CandidateConfirmationTests.test_owner_close_rejects_new_inputs_without_state_change_in_both_arms",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2ub_candidate_confirmation.CandidateConfirmationTests.test_partial_reverse_and_overlap_do_not_promote",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2ub_candidate_confirmation.CandidateConfirmationTests.test_retained_exact_confirmation_leaves_other_candidate_unchanged",
+      "result": "ok"
+    },
+    {
+      "id": "tests.test_s2ub_candidate_confirmation.CandidateConfirmationTests.test_second_confirmed_trace_replaces_only_retained_generation",
+      "result": "ok"
+    }
+  ],
+  "test_count": 98,
+  "summary": [
+    "",
+    "----------------------------------------------------------------------",
+    "Ran 98 tests in 134.266s",
+    "",
+    "OK"
+  ],
+  "scope": "neutral development regression; not formal qualification",
+  "code_files": [
+    {
+      "path": "mcm_field_organism/__init__.py",
+      "bytes": 940,
+      "sha256": "43bb1a27f4d4d373ec2af17ca128f35df6453fee86723160466543fb603704b6",
+      "category": "code"
+    },
+    {
+      "path": "mcm_field_organism/broadband_hearing_path.py",
+      "bytes": 7983,
+      "sha256": "a20456b24c04d099ba5ee2da6250e3d83dc657392603c41d816b13ca68a37fb7",
+      "category": "code"
+    },
+    {
+      "path": "mcm_field_organism/carrier_baselines.py",
+      "bytes": 3572,
+      "sha256": "dc891f4f263b17acf7b7b50c7c135d9a3d028cb1b9bdb72c342d72d24f1337ab",
+      "category": "code"
+    },
+    {
+      "path": "mcm_field_organism/controlled_audio_source.py",
+      "bytes": 1237,
+      "sha256": "46744d3b377f1bcd54b7b8128dbd2a264683d45a534273031869aa127b80bd70",
+      "category": "code"
+    },
+    {
+      "path": "mcm_field_organism/log_spectral_receptor.py",
+      "bytes": 7024,
+      "sha256": "26a6bd8f2d190db60c75ad29f275b3bd8b09b6d26d4ad54e4396176c4a36d2b0",
+      "category": "code"
+    },
+    {
+      "path": "mcm_field_organism/root_lazy_exports.py",
+      "bytes": 258911,
+      "sha256": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016",
+      "category": "code"
+    },
+    {
+      "path": "reports/s2nd/seal_inventory.py",
+      "bytes": 17470,
+      "sha256": "9f72d2a9fc9676235cf69b23ea690d25f0a782222c54393ecf5b44107f0ce91c",
+      "category": "code"
+    },
+    {
+      "path": "tests/__init__.py",
+      "bytes": 58,
+      "sha256": "37b08bc7ac66af8aafb9b9fe352dec58be3ba62bf031e5eefd7e53e2a9f510b5",
+      "category": "code"
+    },
+    {
+      "path": "tests/test_s2ub_candidate_confirmation.py",
+      "bytes": 10667,
+      "sha256": "30f0d586930ce60d1ed76b8e2df2af1664f16305d6fb80b7322bc6ededc4fe6c",
+      "category": "code"
+    },
+    {
+      "path": "tests/test_s2uc_materialization_connection.py",
+      "bytes": 63774,
+      "sha256": "f84059d2fab384ec72b2c6f4d2d80ef95ee9e6efe8fdab9523b4b3a19f24a2f7",
+      "category": "code"
+    },
+    {
+      "path": "tests/test_s2uc_neutral_connection.py",
+      "bytes": 11299,
+      "sha256": "e5409715d351d61f232cdc10caa61b7c881d081836d0f1c67fa8d20c667f84d4",
+      "category": "code"
+    },
+    {
+      "path": "tests/test_s2uc_prestart_v7.py",
+      "bytes": 17571,
+      "sha256": "d0daf7d33e5cfe3fd9a8ec090724282ac82990c14d5854ea9cfb554b543feaf9",
+      "category": "code"
+    },
+    {
+      "path": "tests/test_s2uc_resource_contract_v7.py",
+      "bytes": 14374,
+      "sha256": "e49ee1b8964d06b7ff922462cba26cd99f6f9b89d7f6ec908ad7fc973fbb4fd2",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2nj_private_auditory_output_projection.py",
+      "bytes": 7700,
+      "sha256": "e052cc76cf4c9678e11673d95390dea21634bba8082187567a760faaaf4904e5",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2np_private_source_binding.py",
+      "bytes": 15138,
+      "sha256": "004ea7c8841e5f0b68fe9191604b0a0a7337ac568af2205dca900dd2ae874b12",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2nu_private_source_binding.py",
+      "bytes": 13635,
+      "sha256": "8e0fa79f3ce66ce4228f46a52252de5d207c6cee29fefc42f957aa41dc56bce6",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2ts_temporal_trace.py",
+      "bytes": 5001,
+      "sha256": "64d1e7f9ff54d898996974d960bfb58ac7386165846aeec0ea253079e0a8e6d8",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2ts_temporal_trace_run.py",
+      "bytes": 10468,
+      "sha256": "e084f2aa6806337587284df6873068b6366e88eea2f02fc11bc981c143f8387a",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2tu_retained_trace.py",
+      "bytes": 3846,
+      "sha256": "bf530380f93c8a1bf0eeae5a4169e81bc99aee10050872e3e5ddc7bfdb88f3f6",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2tw_exact_confirmation.py",
+      "bytes": 1283,
+      "sha256": "90470980a329d0424bec9ba430adbbccaf72bb82145edfefd6e491b6fcec7be9",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2ty_audio_materialization.py",
+      "bytes": 4090,
+      "sha256": "c332b1eccff35aefc0dbea27c4db78e5b97524ed2f46ab7a6461e3bcc522db72",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2ty_resource_ledger.py",
+      "bytes": 5207,
+      "sha256": "9c39435dd15db76fbb41090e4073cd2e608d911772595ea123b40eba92e731f1",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2ub_candidate_confirmation.py",
+      "bytes": 9869,
+      "sha256": "4178198b43fbbefd3cd550307ec114540c2167a3ae066e22bde01f5223f0ca8a",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2ub_candidate_verification.py",
+      "bytes": 3075,
+      "sha256": "1c25a3afee15c8ada624c93fa81bbfbece1a1b7407502b029798fec84a00cc30",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2uc_dependencies.py",
+      "bytes": 4937,
+      "sha256": "57e38a7cac23976e2d16274907e9528afb986961e051475362ea0f7b8f65aaf2",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2uc_evaluation.py",
+      "bytes": 2341,
+      "sha256": "50f458bb1e9693227b119a87b0cf0e71ec1076d0f64427c93426397e33125e7a",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2uc_inventory_v7.py",
+      "bytes": 8841,
+      "sha256": "1cfcdfc64e4db353584a4a5a8c9b9aeee58499958ffc0cbb039fce405ddef1ce",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2uc_neutral_connection.py",
+      "bytes": 8749,
+      "sha256": "25138be284998b37a59661690c9d291881708b47c7eccc7101799b045ee611da",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2uc_prestart_v7.py",
+      "bytes": 9367,
+      "sha256": "3615ce07c10912e2c0c044e4c50eaaaa2c7851c511a5ac2436f77bb4c93a41e0",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2uc_record_codec.py",
+      "bytes": 8529,
+      "sha256": "43f5532064b11e130535c47afe50a48be418255a054e694253c412c6783ad70f",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2uc_resource_contract_v7.py",
+      "bytes": 7351,
+      "sha256": "a38a48100ada6b47f6d563572cdc02921610ed8ce922d3554683a305d2ce544a",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2uc_resource_ledger.py",
+      "bytes": 2705,
+      "sha256": "43e3fe248be3b70d2cd05fe0db4a15d20d88272a7761a9a93204837c3ef110be",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2uc_run_binding.py",
+      "bytes": 34951,
+      "sha256": "138cc9b15589c38dc16e3be670503850cd593fc2d5191414ff589fcabe46d33c",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2uc_run_entry.py",
+      "bytes": 13581,
+      "sha256": "1005335a67c6bf089dbc2399fb0b874d062924537b7522982f4c73f030778349",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2uc_source_adapter.py",
+      "bytes": 1442,
+      "sha256": "011b75a724fab21dd12b66f02e2fb6a4626e7f1d4450ac4612d31fb53e4abead",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2uc_source_binding.py",
+      "bytes": 6058,
+      "sha256": "3758b0b3291ae9f04d91f704548ae0a77f7bc56be87d189fa89ba48c2e735e78",
+      "category": "code"
+    },
+    {
+      "path": "tools/_s2uc_verification.py",
+      "bytes": 17086,
+      "sha256": "1af8a9e2de68acf29b7ae2755f82330e959e96505867c81b4ba263d0b2f81626",
+      "category": "code"
+    },
+    {
+      "path": "tools/s2uc_run_bound_once.py",
+      "bytes": 1309,
+      "sha256": "25210fb3f76b632842abbf4b387fd7f89c78209d60e97a291c597aa408ee123f",
+      "category": "code"
+    }
+  ],
+  "inventory_report_sha256": "7e65c3211294ba2dfdb8ac819a1bd96c2993b97d528c36c1fb6cc1b14798bcad",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "8a3090653c5171093b64543f55a882e3c5752d429af40302ad092e313728e048"
+}

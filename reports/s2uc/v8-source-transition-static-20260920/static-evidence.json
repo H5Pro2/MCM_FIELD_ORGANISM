@@ -1,0 +1,1600 @@
+{
+  "scope": "STATIC_ONLY; standard-library JSON/AST/file reads; no project imports, no tests, no source production",
+  "source_plan": {
+    "path": "reports\\s2nu\\s2nu-source-preseal-20260909-01\\execution-plan.json",
+    "sha256": "6e64fbd5b7e86f16156b6d68bd5f7dbda3fefa8f223b2a31114bf3293eaa5f10",
+    "execution_digest": "1d2787da42fe01e6bb960ad545bcfbf96a3e4abd036ce91033b325c450d7f2c7"
+  },
+  "sources": [
+    {
+      "channels": 1,
+      "clock_id": "audio.sample",
+      "format": "PCM_F32LE",
+      "nj_snapshot_index": 50,
+      "ordinal": 6,
+      "pcm_byte_count": 19200,
+      "pcm_sha256": "50e67af67fee98adc0ccda22430178e938d4c676072852915fa45e0447031b61",
+      "recipe": {
+        "expression_id": 2,
+        "groups": [
+          {
+            "partials": [
+              {
+                "amplitude_ratio": [
+                  4,
+                  20
+                ],
+                "frequency_ratio": [
+                  430,
+                  1
+                ]
+              },
+              {
+                "amplitude_ratio": [
+                  2,
+                  20
+                ],
+                "frequency_ratio": [
+                  1290,
+                  1
+                ]
+              },
+              {
+                "amplitude_ratio": [
+                  1,
+                  20
+                ],
+                "frequency_ratio": [
+                  3870,
+                  1
+                ]
+              }
+            ],
+            "seed": "s2nu-pcm-001"
+          },
+          {
+            "partials": [
+              {
+                "amplitude_ratio": [
+                  4,
+                  20
+                ],
+                "frequency_ratio": [
+                  710,
+                  1
+                ]
+              },
+              {
+                "amplitude_ratio": [
+                  2,
+                  20
+                ],
+                "frequency_ratio": [
+                  2130,
+                  1
+                ]
+              },
+              {
+                "amplitude_ratio": [
+                  1,
+                  20
+                ],
+                "frequency_ratio": [
+                  6390,
+                  1
+                ]
+              }
+            ],
+            "seed": "s2nu-pcm-002"
+          },
+          {
+            "partials": [
+              {
+                "amplitude_ratio": [
+                  1,
+                  20
+                ],
+                "frequency_ratio": [
+                  5870,
+                  1
+                ]
+              }
+            ],
+            "seed": "s2nu-pcm-003"
+          }
+        ],
+        "rounding": "binary64-expression-then-single-f32le",
+        "sample_count": 4800,
+        "sample_rate": 48000,
+        "schema": "s2nu.pcm-window-recipe.v1",
+        "synthesis_window_index": 0
+      },
+      "recipe_digest": "d256ce20f4e0c3ab22a9468081cf4aad0c9f9d9d55f13f3774b33278c008d69b",
+      "source_digest": "f2bae4f432e353585f2972c32a8fe734ec772e908d8d7fc65dd13d2f64483115",
+      "source_id": "nu-s02-w00",
+      "stream_id": "s02",
+      "window_end_sample": 28800,
+      "window_ordinal": 0,
+      "window_start_sample": 24000
+    },
+    {
+      "channels": 1,
+      "clock_id": "audio.sample",
+      "format": "PCM_F32LE",
+      "nj_snapshot_index": 60,
+      "ordinal": 7,
+      "pcm_byte_count": 19200,
+      "pcm_sha256": "6eed63affabbb8c19d00e8a780e851418eb267beff96769108506373251c1c2a",
+      "recipe": {
+        "expression_id": 2,
+        "groups": [
+          {
+            "partials": [
+              {
+                "amplitude_ratio": [
+                  4,
+                  20
+                ],
+                "frequency_ratio": [
+                  430,
+                  1
+                ]
+              },
+              {
+                "amplitude_ratio": [
+                  2,
+                  20
+                ],
+                "frequency_ratio": [
+                  1290,
+                  1
+                ]
+              },
+              {
+                "amplitude_ratio": [
+                  1,
+                  20
+                ],
+                "frequency_ratio": [
+                  3870,
+                  1
+                ]
+              }
+            ],
+            "seed": "s2nu-pcm-001"
+          },
+          {
+            "partials": [
+              {
+                "amplitude_ratio": [
+                  4,
+                  20
+                ],
+                "frequency_ratio": [
+                  710,
+                  1
+                ]
+              },
+              {
+                "amplitude_ratio": [
+                  2,
+                  20
+                ],
+                "frequency_ratio": [
+                  2130,
+                  1
+                ]
+              },
+              {
+                "amplitude_ratio": [
+                  1,
+                  20
+                ],
+                "frequency_ratio": [
+                  6390,
+                  1
+                ]
+              }
+            ],
+            "seed": "s2nu-pcm-002"
+          },
+          {
+            "partials": [
+              {
+                "amplitude_ratio": [
+                  1,
+                  20
+                ],
+                "frequency_ratio": [
+                  5870,
+                  1
+                ]
+              }
+            ],
+            "seed": "s2nu-pcm-003"
+          }
+        ],
+        "rounding": "binary64-expression-then-single-f32le",
+        "sample_count": 4800,
+        "sample_rate": 48000,
+        "schema": "s2nu.pcm-window-recipe.v1",
+        "synthesis_window_index": 1
+      },
+      "recipe_digest": "369e5eef09ec906ba47816bfd7fd60e60c80988420f06f103083ae65cdeb31fc",
+      "source_digest": "8faf2256e513336045137e4d9269a46f435f2f2a04a5587f24f8dfb17a3043c7",
+      "source_id": "nu-s02-w01",
+      "stream_id": "s02",
+      "window_end_sample": 33600,
+      "window_ordinal": 1,
+      "window_start_sample": 28800
+    },
+    {
+      "channels": 1,
+      "clock_id": "audio.sample",
+      "format": "PCM_F32LE",
+      "nj_snapshot_index": 70,
+      "ordinal": 8,
+      "pcm_byte_count": 19200,
+      "pcm_sha256": "17c626793f126ef30b0568cd4a12186da1ed6ffc5da947c0f418916b1eeaafa8",
+      "recipe": {
+        "expression_id": 2,
+        "groups": [
+          {
+            "partials": [
+              {
+                "amplitude_ratio": [
+                  4,
+                  20
+                ],
+                "frequency_ratio": [
+                  430,
+                  1
+                ]
+              },
+              {
+                "amplitude_ratio": [
+                  2,
+                  20
+                ],
+                "frequency_ratio": [
+                  1290,
+                  1
+                ]
+              },
+              {
+                "amplitude_ratio": [
+                  1,
+                  20
+                ],
+                "frequency_ratio": [
+                  3870,
+                  1
+                ]
+              }
+            ],
+            "seed": "s2nu-pcm-001"
+          },
+          {
+            "partials": [
+              {
+                "amplitude_ratio": [
+                  4,
+                  20
+                ],
+                "frequency_ratio": [
+                  710,
+                  1
+                ]
+              },
+              {
+                "amplitude_ratio": [
+                  2,
+                  20
+                ],
+                "frequency_ratio": [
+                  2130,
+                  1
+                ]
+              },
+              {
+                "amplitude_ratio": [
+                  1,
+                  20
+                ],
+                "frequency_ratio": [
+                  6390,
+                  1
+                ]
+              }
+            ],
+            "seed": "s2nu-pcm-002"
+          },
+          {
+            "partials": [
+              {
+                "amplitude_ratio": [
+                  1,
+                  20
+                ],
+                "frequency_ratio": [
+                  5870,
+                  1
+                ]
+              }
+            ],
+            "seed": "s2nu-pcm-003"
+          }
+        ],
+        "rounding": "binary64-expression-then-single-f32le",
+        "sample_count": 4800,
+        "sample_rate": 48000,
+        "schema": "s2nu.pcm-window-recipe.v1",
+        "synthesis_window_index": 2
+      },
+      "recipe_digest": "69489f271b69a55d6b7cf5eddda91b81e8cabbb1fd5a3ffb8aec054cc47c6c7f",
+      "source_digest": "e4e6638fa666e2fe6cb03a2961862079eb1eba40ba5460057a065a2a8b9e74b9",
+      "source_id": "nu-s02-w02",
+      "stream_id": "s02",
+      "window_end_sample": 38400,
+      "window_ordinal": 2,
+      "window_start_sample": 33600
+    },
+    {
+      "channels": 1,
+      "clock_id": "audio.sample",
+      "format": "PCM_F32LE",
+      "nj_snapshot_index": 80,
+      "ordinal": 9,
+      "pcm_byte_count": 19200,
+      "pcm_sha256": "29d2e5a3b99945ebb6f9a7c01fa22f42441ea76bd1e0e5898ccbf5bdc2c1a1c8",
+      "recipe": {
+        "expression_id": 2,
+        "groups": [
+          {
+            "partials": [
+              {
+                "amplitude_ratio": [
+                  4,
+                  20
+                ],
+                "frequency_ratio": [
+                  430,
+                  1
+                ]
+              },
+              {
+                "amplitude_ratio": [
+                  2,
+                  20
+                ],
+                "frequency_ratio": [
+                  1290,
+                  1
+                ]
+              },
+              {
+                "amplitude_ratio": [
+                  1,
+                  20
+                ],
+                "frequency_ratio": [
+                  3870,
+                  1
+                ]
+              }
+            ],
+            "seed": "s2nu-pcm-001"
+          },
+          {
+            "partials": [
+              {
+                "amplitude_ratio": [
+                  4,
+                  20
+                ],
+                "frequency_ratio": [
+                  710,
+                  1
+                ]
+              },
+              {
+                "amplitude_ratio": [
+                  2,
+                  20
+                ],
+                "frequency_ratio": [
+                  2130,
+                  1
+                ]
+              },
+              {
+                "amplitude_ratio": [
+                  1,
+                  20
+                ],
+                "frequency_ratio": [
+                  6390,
+                  1
+                ]
+              }
+            ],
+            "seed": "s2nu-pcm-002"
+          },
+          {
+            "partials": [
+              {
+                "amplitude_ratio": [
+                  1,
+                  20
+                ],
+                "frequency_ratio": [
+                  5870,
+                  1
+                ]
+              }
+            ],
+            "seed": "s2nu-pcm-003"
+          }
+        ],
+        "rounding": "binary64-expression-then-single-f32le",
+        "sample_count": 4800,
+        "sample_rate": 48000,
+        "schema": "s2nu.pcm-window-recipe.v1",
+        "synthesis_window_index": 3
+      },
+      "recipe_digest": "840c75e404d967656e9fba485d418c40c4489e6addb3614a2bb4c6c72562a755",
+      "source_digest": "a0259e9bc83eca2eaab64cf66cdaa09529ecc29ae47ac90c7014c44b10c33215",
+      "source_id": "nu-s02-w03",
+      "stream_id": "s02",
+      "window_end_sample": 43200,
+      "window_ordinal": 3,
+      "window_start_sample": 38400
+    },
+    {
+      "channels": 1,
+      "clock_id": "audio.sample",
+      "format": "PCM_F32LE",
+      "nj_snapshot_index": 90,
+      "ordinal": 10,
+      "pcm_byte_count": 19200,
+      "pcm_sha256": "68c73c6cddd0b41cb021af744e172bda7a06b76ff4dc869c2ed2f69b245ac658",
+      "recipe": {
+        "expression_id": 2,
+        "groups": [
+          {
+            "partials": [
+              {
+                "amplitude_ratio": [
+                  4,
+                  20
+                ],
+                "frequency_ratio": [
+                  430,
+                  1
+                ]
+              },
+              {
+                "amplitude_ratio": [
+                  2,
+                  20
+                ],
+                "frequency_ratio": [
+                  1290,
+                  1
+                ]
+              },
+              {
+                "amplitude_ratio": [
+                  1,
+                  20
+                ],
+                "frequency_ratio": [
+                  3870,
+                  1
+                ]
+              }
+            ],
+            "seed": "s2nu-pcm-001"
+          },
+          {
+            "partials": [
+              {
+                "amplitude_ratio": [
+                  4,
+                  20
+                ],
+                "frequency_ratio": [
+                  710,
+                  1
+                ]
+              },
+              {
+                "amplitude_ratio": [
+                  2,
+                  20
+                ],
+                "frequency_ratio": [
+                  2130,
+                  1
+                ]
+              },
+              {
+                "amplitude_ratio": [
+                  1,
+                  20
+                ],
+                "frequency_ratio": [
+                  6390,
+                  1
+                ]
+              }
+            ],
+            "seed": "s2nu-pcm-002"
+          },
+          {
+            "partials": [
+              {
+                "amplitude_ratio": [
+                  1,
+                  20
+                ],
+                "frequency_ratio": [
+                  5870,
+                  1
+                ]
+              }
+            ],
+            "seed": "s2nu-pcm-003"
+          }
+        ],
+        "rounding": "binary64-expression-then-single-f32le",
+        "sample_count": 4800,
+        "sample_rate": 48000,
+        "schema": "s2nu.pcm-window-recipe.v1",
+        "synthesis_window_index": 4
+      },
+      "recipe_digest": "6084b834cd430e20cdc992ae36e2cc49b93b28c7c81265321a7f731b1396be4e",
+      "source_digest": "8d16b36eb8b5e021d974805a0cdc58e8aeb8b98dcd74f26634f9f74bfd20eeba",
+      "source_id": "nu-s02-w04",
+      "stream_id": "s02",
+      "window_end_sample": 48000,
+      "window_ordinal": 4,
+      "window_start_sample": 43200
+    }
+  ],
+  "uses_per_symbol": {
+    "a": 11,
+    "b": 13,
+    "c": 18,
+    "d": 15,
+    "e": 1
+  },
+  "uses": 58,
+  "only_pcm_hash_differs_between_neutral_and_real_endpoints": true,
+  "profile": {
+    "half": {
+      "factor_hex": "0x1.0000000000000p-1",
+      "geometry_id": "auditory.log48.50-18000.w4800.h480.half.v1",
+      "max_output_bytes": 16384,
+      "operation": "binary64-multiply-once-after-raw-reduction",
+      "output_domain": "finite-0-through-1-inclusive",
+      "profile_id": "s2nj.auditory.hann48.output-half.v1",
+      "raw_profile_digest": "5c6b2b19281a44023497b435a96b1051905af4bbac493cae7e699ea1320392c7",
+      "rounding": "qualified-binary64-nearest-even",
+      "subnormal_policy": "preserve-native-rounded-result-report-underflow-no-flush-or-clamp"
+    },
+    "half_profile_digest": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+    "nj_source_sha256": "e052cc76cf4c9678e11673d95390dea21634bba8082187567a760faaaf4904e5",
+    "projection_executed": false,
+    "raw": {
+      "config": {
+        "band_count": 48,
+        "hop_size": 480,
+        "max_frequency": 18000.0,
+        "min_frequency": 50.0,
+        "sample_rate": 48000,
+        "window_size": 4800
+      },
+      "fft": "numpy.fft.rfft.norm-none",
+      "geometry_id": "auditory.log48.50-18000.w4800.h480.v1",
+      "receptor_sha256": "26a6bd8f2d190db60c75ad29f275b3bd8b09b6d26d4ad54e4396176c4a36d2b0",
+      "reduction": "sqrt-sum-square-weighted-amplitude",
+      "schema": "s2nj.bound-unscaled-auditory-profile.v1",
+      "window": "numpy.hanning.symmetric"
+    },
+    "raw_profile_digest": "5c6b2b19281a44023497b435a96b1051905af4bbac493cae7e699ea1320392c7"
+  },
+  "targets": {
+    "g1/12": {
+      "formations": [
+        "g1-p1",
+        "g1-p2"
+      ],
+      "target": "A"
+    },
+    "g1/24": {
+      "formations": [
+        "g1-p1",
+        "g1-p2"
+      ],
+      "target": "A"
+    },
+    "g1/26": {
+      "formations": [
+        "g1-p3"
+      ],
+      "target": "B"
+    },
+    "g2/38": {
+      "formations": [
+        "g2-p1"
+      ],
+      "target": "A"
+    },
+    "g3/60": {
+      "formations": [
+        "g3-p1"
+      ],
+      "target": "A"
+    },
+    "g3/67": {
+      "formations": [
+        "g3-p1"
+      ],
+      "target": "A"
+    },
+    "g3/69": {
+      "formations": [
+        "g3-p3",
+        "g3-p4"
+      ],
+      "target": "B"
+    }
+  },
+  "real_manifest_digest": "a357979bf70dd6b90b0db9c7f3098e8b28fbb612e10792dcb588c6fe29062fca",
+  "neutral_manifest_digest": "da506fabb55b87cf8f0063529bb53d08d86723ee9af81bdc532a54b7baa50c27",
+  "current_code": {
+    "files": 46,
+    "bytes": 720842,
+    "limit": 720896,
+    "remaining": 54,
+    "all_bound_files_unchanged": true,
+    "full_framework_bytes": 21789,
+    "product_tests_bytes": 699053
+  },
+  "estimates": [
+    {
+      "component": "Quellen-/Ausfuehrungsbinder",
+      "production_low": 3000,
+      "production_high": 5000,
+      "test_low": 2500,
+      "test_high": 4000
+    },
+    {
+      "component": "Gemeinsamer Lebenszyklus und Publikationskontext",
+      "production_low": 1200,
+      "production_high": 2200,
+      "test_low": 1800,
+      "test_high": 3000
+    },
+    {
+      "component": "Gebundener NU-Supplieranschluss",
+      "production_low": 400,
+      "production_high": 800,
+      "test_low": 1200,
+      "test_high": 2000
+    },
+    {
+      "component": "Begrenzter Prozesseinstieg und Eintrittsnachweis",
+      "production_low": 1500,
+      "production_high": 2800,
+      "test_low": 1800,
+      "test_high": 3000
+    },
+    {
+      "component": "Qualifikationsbelegleser und vollstaendiges Inventar",
+      "production_low": 1600,
+      "production_high": 2800,
+      "test_low": 1800,
+      "test_high": 3000
+    },
+    {
+      "component": "Nichtnull-Recordform und Grenzgegenproben",
+      "production_low": 0,
+      "production_high": 300,
+      "test_low": 1500,
+      "test_high": 2500
+    }
+  ],
+  "estimated_net_addition": [
+    18300,
+    31400
+  ],
+  "estimated_total": [
+    739142,
+    752242
+  ],
+  "estimated_deficit": [
+    18246,
+    31346
+  ],
+  "estimate_status": "engineering planning range, not implemented/measured code and not a proven lower/upper bound",
+  "source_spans": [
+    {
+      "path": "tools/_s2uc_binding_v8.py",
+      "function": "current",
+      "line": 21,
+      "end_line": 22,
+      "bytes": 127
+    },
+    {
+      "path": "tools/_s2uc_binding_v8.py",
+      "function": "manifest",
+      "line": 25,
+      "end_line": 33,
+      "bytes": 453
+    },
+    {
+      "path": "tools/_s2uc_binding_v8.py",
+      "function": "sources",
+      "line": 36,
+      "end_line": 40,
+      "bytes": 296
+    },
+    {
+      "path": "tools/_s2uc_binding_v8.py",
+      "function": "contract",
+      "line": 43,
+      "end_line": 48,
+      "bytes": 333
+    },
+    {
+      "path": "tools/_s2uc_binding_v8.py",
+      "function": "test_ids",
+      "line": 51,
+      "end_line": 59,
+      "bytes": 425
+    },
+    {
+      "path": "tools/_s2uc_binding_v8.py",
+      "function": "evidence",
+      "line": 62,
+      "end_line": 73,
+      "bytes": 924
+    },
+    {
+      "path": "tools/_s2uc_binding_v8.py",
+      "function": "accounting",
+      "line": 76,
+      "end_line": 86,
+      "bytes": 778
+    },
+    {
+      "path": "tools/_s2uc_binding_v8.py",
+      "function": "validate",
+      "line": 89,
+      "end_line": 136,
+      "bytes": 3379
+    },
+    {
+      "path": "tools/_s2uc_execution_v8.py",
+      "function": "_receipt",
+      "line": 88,
+      "end_line": 104,
+      "bytes": 1254
+    },
+    {
+      "path": "tools/_s2uc_execution_v8.py",
+      "function": "verify_materialized",
+      "line": 107,
+      "end_line": 140,
+      "bytes": 2373
+    },
+    {
+      "path": "tools/_s2uc_execution_v8.py",
+      "function": "run_neutral",
+      "line": 162,
+      "end_line": 213,
+      "bytes": 3317
+    },
+    {
+      "path": "tools/_s2uc_execution_v8.py",
+      "function": "__init__",
+      "line": 23,
+      "end_line": 26,
+      "bytes": 134
+    },
+    {
+      "path": "tools/_s2uc_execution_v8.py",
+      "function": "__call__",
+      "line": 28,
+      "end_line": 34,
+      "bytes": 411
+    },
+    {
+      "path": "tools/_s2uc_execution_v8.py",
+      "function": "snapshot",
+      "line": 36,
+      "end_line": 44,
+      "bytes": 620
+    },
+    {
+      "path": "tools/_s2uc_execution_v8.py",
+      "function": "__init__",
+      "line": 49,
+      "end_line": 52,
+      "bytes": 102
+    },
+    {
+      "path": "tools/_s2uc_execution_v8.py",
+      "function": "create",
+      "line": 54,
+      "end_line": 62,
+      "bytes": 264
+    },
+    {
+      "path": "tools/_s2uc_execution_v8.py",
+      "function": "close",
+      "line": 64,
+      "end_line": 85,
+      "bytes": 961
+    },
+    {
+      "path": "tools/_s2uc_execution_v8.py",
+      "function": "__init__",
+      "line": 148,
+      "end_line": 153,
+      "bytes": 363
+    },
+    {
+      "path": "tools/_s2uc_execution_v8.py",
+      "function": "check_record",
+      "line": 155,
+      "end_line": 156,
+      "bytes": 135
+    },
+    {
+      "path": "tools/_s2uc_execution_v8.py",
+      "function": "verify_record",
+      "line": 158,
+      "end_line": 159,
+      "bytes": 138
+    },
+    {
+      "path": "tools/_s2uc_publication_v7.py",
+      "function": "_error",
+      "line": 23,
+      "end_line": 24,
+      "bytes": 96
+    },
+    {
+      "path": "tools/_s2uc_publication_v7.py",
+      "function": "_read",
+      "line": 27,
+      "end_line": 28,
+      "bytes": 48
+    },
+    {
+      "path": "tools/_s2uc_publication_v7.py",
+      "function": "_write",
+      "line": 31,
+      "end_line": 36,
+      "bytes": 211
+    },
+    {
+      "path": "tools/_s2uc_publication_v7.py",
+      "function": "audit",
+      "line": 216,
+      "end_line": 220,
+      "bytes": 287
+    },
+    {
+      "path": "tools/_s2uc_publication_v7.py",
+      "function": "publish_neutral",
+      "line": 223,
+      "end_line": 231,
+      "bytes": 677
+    },
+    {
+      "path": "tools/_s2uc_publication_v7.py",
+      "function": "_finish_record",
+      "line": 234,
+      "end_line": 275,
+      "bytes": 2523
+    },
+    {
+      "path": "tools/_s2uc_publication_v7.py",
+      "function": "__init__",
+      "line": 43,
+      "end_line": 50,
+      "bytes": 456
+    },
+    {
+      "path": "tools/_s2uc_publication_v7.py",
+      "function": "reset",
+      "line": 52,
+      "end_line": 57,
+      "bytes": 189
+    },
+    {
+      "path": "tools/_s2uc_publication_v7.py",
+      "function": "check_record",
+      "line": 59,
+      "end_line": 62,
+      "bytes": 310
+    },
+    {
+      "path": "tools/_s2uc_publication_v7.py",
+      "function": "verify_record",
+      "line": 64,
+      "end_line": 65,
+      "bytes": 177
+    },
+    {
+      "path": "tools/_s2uc_publication_v7.py",
+      "function": "snapshot",
+      "line": 67,
+      "end_line": 116,
+      "bytes": 3204
+    },
+    {
+      "path": "tools/_s2uc_publication_v7.py",
+      "function": "atomic",
+      "line": 118,
+      "end_line": 137,
+      "bytes": 1449
+    },
+    {
+      "path": "tools/_s2uc_publication_v7.py",
+      "function": "cleanup",
+      "line": 139,
+      "end_line": 147,
+      "bytes": 417
+    },
+    {
+      "path": "tools/_s2uc_publication_v7.py",
+      "function": "references",
+      "line": 149,
+      "end_line": 151,
+      "bytes": 165
+    },
+    {
+      "path": "tools/_s2uc_publication_v7.py",
+      "function": "receipt",
+      "line": 153,
+      "end_line": 161,
+      "bytes": 688
+    },
+    {
+      "path": "tools/_s2uc_publication_v7.py",
+      "function": "failure",
+      "line": 163,
+      "end_line": 179,
+      "bytes": 759
+    },
+    {
+      "path": "tools/_s2uc_publication_v7.py",
+      "function": "finish",
+      "line": 181,
+      "end_line": 213,
+      "bytes": 1919
+    },
+    {
+      "path": "tools/_s2uc_publication_v7.py",
+      "function": "attempt",
+      "line": 168,
+      "end_line": 175,
+      "bytes": 339
+    },
+    {
+      "path": "tools/s2uc_run_bound_once.py",
+      "function": "nu_payload_supplier",
+      "line": 8,
+      "end_line": 13,
+      "bytes": 358
+    },
+    {
+      "path": "tools/s2uc_run_bound_once.py",
+      "function": "start",
+      "line": 17,
+      "end_line": 22,
+      "bytes": 303
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "write",
+      "line": 24,
+      "end_line": 25,
+      "bytes": 87
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "seal",
+      "line": 28,
+      "end_line": 45,
+      "bytes": 1136
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "fixture",
+      "line": 48,
+      "end_line": 56,
+      "bytes": 512
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "setUpClass",
+      "line": 61,
+      "end_line": 62,
+      "bytes": 67
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "setUp",
+      "line": 64,
+      "end_line": 68,
+      "bytes": 250
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "supplier",
+      "line": 70,
+      "end_line": 72,
+      "bytes": 115
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "run_neutral",
+      "line": 74,
+      "end_line": 77,
+      "bytes": 232
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "check_accounting",
+      "line": 79,
+      "end_line": 89,
+      "bytes": 859
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "test_v8_revision_changes_only_code_cap_and_counts_every_bound_suite",
+      "line": 91,
+      "end_line": 106,
+      "bytes": 1167
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "test_strict_binding_rejects_development_authorization_identity_and_v7_mix",
+      "line": 108,
+      "end_line": 121,
+      "bytes": 1183
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "test_binding_rejects_consistently_undercounted_inventory_and_false_roles",
+      "line": 123,
+      "end_line": 131,
+      "bytes": 734
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "test_public_starter_unconditionally_stops_before_supplier_adapter_and_run",
+      "line": 133,
+      "end_line": 144,
+      "bytes": 979
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "test_full_58_materializations_share_identical_values_between_both_arms",
+      "line": 146,
+      "end_line": 170,
+      "bytes": 1764
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "test_failed_attempt_58_keeps_57_successes_and_original_error",
+      "line": 172,
+      "end_line": 184,
+      "bytes": 1023
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "test_missing_or_manipulated_receipts_and_full_completion_are_rejected",
+      "line": 186,
+      "end_line": 223,
+      "bytes": 3032
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "test_counter_phases_supplier_hash_receptor_and_projection_failures",
+      "line": 225,
+      "end_line": 243,
+      "bytes": 1540
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "test_failure_between_arm_calls_preserves_pending_materialization",
+      "line": 245,
+      "end_line": 254,
+      "bytes": 721
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "test_constructor_failure_closes_both_registered_owners_and_resets_gate",
+      "line": 256,
+      "end_line": 267,
+      "bytes": 791
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "test_owner_close_failure_is_primary_and_cleanup_closes_both",
+      "line": 269,
+      "end_line": 277,
+      "bytes": 639
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "test_codec_failure_preserves_connection_error_and_closed_owners",
+      "line": 279,
+      "end_line": 286,
+      "bytes": 612
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "test_full_source_completion_error_does_not_overwrite_an_aborted_record",
+      "line": 288,
+      "end_line": 294,
+      "bytes": 481
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "test_existing_output_and_repeated_use_never_invoke_supplier",
+      "line": 296,
+      "end_line": 303,
+      "bytes": 642
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "test_process_restart_with_existing_output_remains_closed",
+      "line": 305,
+      "end_line": 322,
+      "bytes": 864
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "test_failed_execution_consumes_identity_and_blocks_retry",
+      "line": 324,
+      "end_line": 334,
+      "bytes": 658
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "test_second_story_constructor_failure_preserves_completed_source_prefix",
+      "line": 336,
+      "end_line": 347,
+      "bytes": 891
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "test_last_owner_failure_keeps_full_source_completion",
+      "line": 349,
+      "end_line": 360,
+      "bytes": 830
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "test_publication_failures_use_shared_core_and_keep_verification",
+      "line": 362,
+      "end_line": 371,
+      "bytes": 707
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "test_staging_cleanup_failure_is_counted_and_no_second_temporary_is_created",
+      "line": 373,
+      "end_line": 385,
+      "bytes": 813
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "test_neutral_wrapper_still_rejects_materialized_records",
+      "line": 387,
+      "end_line": 392,
+      "bytes": 435
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "observe",
+      "line": 148,
+      "end_line": 153,
+      "bytes": 289
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "supplier",
+      "line": 173,
+      "end_line": 176,
+      "bytes": 231
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "fail",
+      "line": 258,
+      "end_line": 260,
+      "bytes": 145
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "fail",
+      "line": 280,
+      "end_line": 280,
+      "bytes": 96
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "fail",
+      "line": 289,
+      "end_line": 289,
+      "bytes": 85
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "fail",
+      "line": 325,
+      "end_line": 327,
+      "bytes": 145
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "fail",
+      "line": 338,
+      "end_line": 340,
+      "bytes": 192
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "fail",
+      "line": 351,
+      "end_line": 353,
+      "bytes": 158
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "fail",
+      "line": 364,
+      "end_line": 366,
+      "bytes": 157
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "fail",
+      "line": 376,
+      "end_line": 377,
+      "bytes": 128
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "cannot_clean",
+      "line": 378,
+      "end_line": 380,
+      "bytes": 180
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "call",
+      "line": 150,
+      "end_line": 152,
+      "bytes": 154
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "function": "supplier",
+      "line": 231,
+      "end_line": 233,
+      "bytes": 181
+    },
+    {
+      "path": "reports/s2uc/v8-process-limit-corrected-20260920/limit.py",
+      "function": "api",
+      "line": 21,
+      "end_line": 22,
+      "bytes": 88
+    },
+    {
+      "path": "reports/s2uc/v8-process-limit-corrected-20260920/limit.py",
+      "function": "need",
+      "line": 31,
+      "end_line": 32,
+      "bytes": 89
+    },
+    {
+      "path": "reports/s2uc/v8-process-limit-corrected-20260920/limit.py",
+      "function": "evidence",
+      "line": 33,
+      "end_line": 38,
+      "bytes": 378
+    },
+    {
+      "path": "reports/s2uc/v8-process-limit-corrected-20260920/limit.py",
+      "function": "load",
+      "line": 40,
+      "end_line": 40,
+      "bytes": 47
+    },
+    {
+      "path": "reports/s2uc/v8-process-limit-corrected-20260920/limit.py",
+      "function": "child",
+      "line": 42,
+      "end_line": 92,
+      "bytes": 2646
+    },
+    {
+      "path": "reports/s2uc/v8-process-limit-corrected-20260920/limit.py",
+      "function": "prepare",
+      "line": 94,
+      "end_line": 115,
+      "bytes": 1379
+    },
+    {
+      "path": "reports/s2uc/v8-process-limit-corrected-20260920/limit.py",
+      "function": "observe",
+      "line": 117,
+      "end_line": 160,
+      "bytes": 2456
+    },
+    {
+      "path": "reports/s2uc/v8-process-limit-corrected-20260920/limit.py",
+      "function": "analyze",
+      "line": 162,
+      "end_line": 195,
+      "bytes": 2380
+    },
+    {
+      "path": "reports/s2uc/v8-process-limit-corrected-20260920/limit.py",
+      "function": "supplier",
+      "line": 81,
+      "end_line": 86,
+      "bytes": 206
+    },
+    {
+      "path": "reports/s2uc/v8-process-memory-20260920/measure.py",
+      "function": "save",
+      "line": 13,
+      "end_line": 14,
+      "bytes": 97
+    },
+    {
+      "path": "reports/s2uc/v8-process-memory-20260920/measure.py",
+      "function": "sha",
+      "line": 16,
+      "end_line": 17,
+      "bytes": 72
+    },
+    {
+      "path": "reports/s2uc/v8-process-memory-20260920/measure.py",
+      "function": "child",
+      "line": 19,
+      "end_line": 95,
+      "bytes": 3519
+    },
+    {
+      "path": "reports/s2uc/v8-process-memory-20260920/measure.py",
+      "function": "native_api",
+      "line": 97,
+      "end_line": 118,
+      "bytes": 1423
+    },
+    {
+      "path": "reports/s2uc/v8-process-memory-20260920/measure.py",
+      "function": "prepare",
+      "line": 120,
+      "end_line": 155,
+      "bytes": 2536
+    },
+    {
+      "path": "reports/s2uc/v8-process-memory-20260920/measure.py",
+      "function": "observe",
+      "line": 157,
+      "end_line": 194,
+      "bytes": 2550
+    },
+    {
+      "path": "reports/s2uc/v8-process-memory-20260920/measure.py",
+      "function": "mark",
+      "line": 24,
+      "end_line": 27,
+      "bytes": 207
+    },
+    {
+      "path": "reports/s2uc/v8-process-memory-20260920/measure.py",
+      "function": "phase",
+      "line": 29,
+      "end_line": 32,
+      "bytes": 130
+    },
+    {
+      "path": "reports/s2uc/v8-process-memory-20260920/measure.py",
+      "function": "wrap",
+      "line": 43,
+      "end_line": 47,
+      "bytes": 202
+    },
+    {
+      "path": "reports/s2uc/v8-process-memory-20260920/measure.py",
+      "function": "read",
+      "line": 60,
+      "end_line": 61,
+      "bytes": 88
+    },
+    {
+      "path": "reports/s2uc/v8-process-memory-20260920/measure.py",
+      "function": "atomic",
+      "line": 64,
+      "end_line": 65,
+      "bytes": 120
+    },
+    {
+      "path": "reports/s2uc/v8-process-memory-20260920/measure.py",
+      "function": "replace",
+      "line": 69,
+      "end_line": 75,
+      "bytes": 331
+    },
+    {
+      "path": "reports/s2uc/v8-process-memory-20260920/measure.py",
+      "function": "supplier",
+      "line": 78,
+      "end_line": 83,
+      "bytes": 237
+    },
+    {
+      "path": "reports/s2uc/v8-process-memory-20260920/measure.py",
+      "function": "open_process",
+      "line": 109,
+      "end_line": 112,
+      "bytes": 160
+    },
+    {
+      "path": "reports/s2uc/v8-process-memory-20260920/measure.py",
+      "function": "read",
+      "line": 113,
+      "end_line": 117,
+      "bytes": 395
+    },
+    {
+      "path": "reports/s2uc/v8-process-memory-20260920/measure.py",
+      "function": "call",
+      "line": 45,
+      "end_line": 46,
+      "bytes": 99
+    }
+  ],
+  "readset": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 10594,
+      "sha256": "c99ffb7e052f1611744f72d79007d927ef7fdb5d8d5831506652275c2403973b"
+    },
+    {
+      "path": "AKTUELLER_FORSCHUNGSWEG.md",
+      "bytes": 1253683,
+      "sha256": "8cf78cad37ab59df0007696680f0b8885eb98be09a4528386c7119a64a3e64a1"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5693,
+      "sha256": "383e4d59d3dac9c66227c5b131b3b19ee5441796b2ffa677aad0772b4ad31d97"
+    },
+    {
+      "path": "docs/S2UC_ENTSCHEIDUNGSPAKET_NEUER_EINMALLAUF.md",
+      "bytes": 5525,
+      "sha256": "5efeb63dcce568af9f0c79a66c50b95111a679869d469cdf90e068f33a6ac2bd"
+    },
+    {
+      "path": "docs/S2UC_FINALE_LAUFBINDUNG_VORBEREITUNG.md",
+      "bytes": 6983,
+      "sha256": "ac640db3321cf32a301c1426cb2877d36ce7e20bccd82365d1ddf9385a41f66a"
+    },
+    {
+      "path": "docs/S2UC_QUELLENVERGLEICH_BINDUNG.md",
+      "bytes": 13608,
+      "sha256": "8281367435031a2a57af41717e718c9266fbbaf370cbf0e52f62605b18eae661"
+    },
+    {
+      "path": "reports/s2uc/v8-process-limit-corrected-20260920/limit.py",
+      "bytes": 10978,
+      "sha256": "9c4cb7ebe57dae107b317ffaef45b6522af26d970cd8a6ee2e08d0954d7b5b12"
+    },
+    {
+      "path": "reports/s2uc/v8-process-memory-20260920/measure.py",
+      "bytes": 10811,
+      "sha256": "6dcbed6abb4d79d107dab55b2809119b4d9f34f4f5ccc942030723bfcd0238e6"
+    },
+    {
+      "path": "reports\\s2nu\\s2nu-source-preseal-20260909-01\\execution-plan.json",
+      "bytes": 44937,
+      "sha256": "6e64fbd5b7e86f16156b6d68bd5f7dbda3fefa8f223b2a31114bf3293eaa5f10"
+    },
+    {
+      "path": "reports\\s2uc\\S2UC_RUN_BINDING_20260920_V14.json",
+      "bytes": 19210,
+      "sha256": "353915dbdb1fe481f76c5dd4bcbc42582998353d7c243b29232e4115629d94ea"
+    },
+    {
+      "path": "reports\\s2uc\\v8-neutral-integration-development-20260920\\final\\closures\\011\\inputs\\44-manifest.json",
+      "bytes": 24546,
+      "sha256": "b5f32eb2108c839d021aef3c1d406d3bcbbf9f7002d5bc4a0c971ad3317fc6b5"
+    },
+    {
+      "path": "reports\\s2uc\\v8-process-limit-corrected-20260920\\used-inventory.json",
+      "bytes": 12795,
+      "sha256": "bed6f134f087dc4d654563b20eaf9bc377b787cad5910fd66e7981e5d0582871"
+    },
+    {
+      "path": "tests/test_s2uc_execution_v8.py",
+      "bytes": 24620,
+      "sha256": "9a30da7e42bf930f249aed3d29cf24316f20ecce3b1b0ff90f25e37765fc0fcc"
+    },
+    {
+      "path": "tools/_s2nu_private_source_binding.py",
+      "bytes": 13635,
+      "sha256": "8e0fa79f3ce66ce4228f46a52252de5d207c6cee29fefc42f957aa41dc56bce6"
+    },
+    {
+      "path": "tools/_s2ts_temporal_trace_run.py",
+      "bytes": 10468,
+      "sha256": "e084f2aa6806337587284df6873068b6366e88eea2f02fc11bc981c143f8387a"
+    },
+    {
+      "path": "tools/_s2ty_audio_materialization.py",
+      "bytes": 4090,
+      "sha256": "c332b1eccff35aefc0dbea27c4db78e5b97524ed2f46ab7a6461e3bcc522db72"
+    },
+    {
+      "path": "tools/_s2uc_binding_v8.py",
+      "bytes": 7347,
+      "sha256": "f10554a0b7d598d24a5f2cbfcfbf4e146b33e74989861e0c4be80cd328a65b90"
+    },
+    {
+      "path": "tools/_s2uc_evaluation.py",
+      "bytes": 2341,
+      "sha256": "50f458bb1e9693227b119a87b0cf0e71ec1076d0f64427c93426397e33125e7a"
+    },
+    {
+      "path": "tools/_s2uc_execution_v8.py",
+      "bytes": 11226,
+      "sha256": "bf2f0ec2d91ec2afaa299a4ff7ce3aa15656bc24d49be2304fa6c59d12dba179"
+    },
+    {
+      "path": "tools/_s2uc_prestart_v7.py",
+      "bytes": 9367,
+      "sha256": "3615ce07c10912e2c0c044e4c50eaaaa2c7851c511a5ac2436f77bb4c93a41e0"
+    },
+    {
+      "path": "tools/_s2uc_publication_v7.py",
+      "bytes": 14606,
+      "sha256": "21c79a6346f6534c2262d964fe230b7256e19c1bad1768de366b5a05f67795db"
+    },
+    {
+      "path": "tools/_s2uc_run_binding.py",
+      "bytes": 35066,
+      "sha256": "459e6049a1fe975f986abca0a9943afba868aab5edf23f45c1777eda247a8b78"
+    },
+    {
+      "path": "tools/_s2uc_source_adapter.py",
+      "bytes": 1442,
+      "sha256": "011b75a724fab21dd12b66f02e2fb6a4626e7f1d4450ac4612d31fb53e4abead"
+    },
+    {
+      "path": "tools/_s2uc_source_binding.py",
+      "bytes": 6058,
+      "sha256": "3758b0b3291ae9f04d91f704548ae0a77f7bc56be87d189fa89ba48c2e735e78"
+    },
+    {
+      "path": "tools/s2uc_run_bound_once.py",
+      "bytes": 1072,
+      "sha256": "f3250dba8334b41858dece27f9a77e8e517cf1c1461c6960ef95883f523865dc"
+    }
+  ]
+}

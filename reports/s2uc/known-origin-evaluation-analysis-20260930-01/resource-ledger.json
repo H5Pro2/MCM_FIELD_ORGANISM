@@ -1,0 +1,8 @@
+{
+  "material_bytes": 1169505,
+  "binding_bytes": 208474,
+  "observer_bytes_excluding_this_ledger": 1303199,
+  "material_limit": 4194304,
+  "closure_reserve": 262144,
+  "hard_process_ram_measured": false
+}

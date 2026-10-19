@@ -1,0 +1,206 @@
+MCM-KI -- Begrenzte prospektive Evaluation der eingefrorenen Policy
+2026-10-03 | KONZEPT ZUR ABNAHME | KEINE MATERIALISIERUNGS-/LAUFFREIGABE
+
+1. Frage, Ausgangspunkt und Aussagegrenze
+
+Der abgeschlossene XYX-Entwicklungskontrast belegt Auswahl X->Y->X,
+H-Nettonutzen und G-Gesamtnutzen. Seine Einmalfreigabe ist verbraucht.
+Referenz: reports/s2uc/xyx-assessment-20261003-01/REPORT.md und closure.json.
+Dieser eine Vertrag fragt: Traegt die eingefrorene Auswahlregel auch auf
+einem vollstaendigen, vorab festgelegten kleinen Raster neuer Zeitverlaeufe,
+einschliesslich stabiler Folgen, Wechseln, Rueckkehr und Anfangskosten?
+
+Es handelt sich um neue Testverlaeufe derselben konstruierten Aufgabenfamilie.
+Werte, Viererblockstruktur und exakte Hinweise stammen aus der Entwicklung.
+Die Wahl dieser Familie ist durch Entwicklungswissen beeinflusst; sie ist
+keine unabhaengige reale Quellenpopulation. Vollstaendige neue Folgen sind
+nicht gleichbedeutend mit unabhaengigen Teilmustern: bekannte Bloecke und
+Praefixe koennen wiederkehren. Keine Behauptung von Audio-/Video-, Rausch-,
+Semantik-, Feld-Memory- oder allgemeiner Generalisierung. Auch ein Erfolg
+heisst ausschliesslich: prospektive Rasterevaluation in dieser Familie.
+Unabhaengige Generalisierung ausserhalb dieser Familie bleibt NICHT_GEPRUEFT.
+
+2. Unveraenderlicher Pruefling und Baselines
+
+Einfrieren auf die 64 Codehashes in docs/S2UC_XYX_BINDUNG_20261003.json;
+SHA256 dieser Bindung:
+f2c666bba0c75a0d0c61e3d32e523b124cd70f16ab3a7f4877d371b267078437.
+U=multi_error_exact_v1; M=Mitnahme-EMA mit Eindeutigkeitsgate;
+E=Reset-EMA mit Eindeutigkeitsgate; K=eindeutiger Kontext sonst Persistenz;
+P=Persistenz. exact_v1, legacy_v1, mae48, alpha=1/2, Promotion, Aufnahme,
+Vergessen und Auswahl unveraendert. Defaults deaktiviert. Keine weitere
+Policyvariante, Schwelle, Gewichtung oder nachtraegliche Tie-break-Regel.
+Alle fuenf Arme erhalten dieselbe Quelle, je Fall frischen leeren Zustand;
+keine Uebernahme von Entwicklungsspeichern oder vorherigen Evaluationsfaellen.
+Innerhalb eines Falles kein Reset, Schutzbestand oder gezieltes Einspeisen.
+
+3. Vollstaendiges Quellenverfahren und endlicher Umfang
+
+V(a)=48 gleiche Komponenten float(a).
+X=[V(3/16),V(5/16),V(13/16),V(15/16)].
+Y=[V(3/16),V(5/16),V(9/16),V(15/16)].
+Fuer JEDE der 16 binaeren Woerter w aus {X,Y}^4 und JEDE Dauer d aus {3,5}
+entsteht genau ein Fall: jedes Zeichen von w wird durch d ganze Bloecke
+ersetzt, dann werden die vier Phasen aneinandergehaengt. Gleiche benachbarte
+Zeichen erzeugen keine Wechsel, keine Resets und keine Sonderereignisse.
+Feste Ordnung: d=3 vor d=5, darin lexikographisch XXXX bis YYYY mit X<Y.
+Fall-ID nur im Beobachter: D3-XXXX bis D5-YYYY. Keine Zufallsauswahl.
+
+Genau 32 Faelle: 16 mit48 und16 mit80 Quellpositionen, insgesamt2048.
+Fuenf Arme:10240 Arm-Aufnahmen plus10240 interne Referenzfortschreibungen.
+Vier stabile Faelle (XXXX/YYYY je Dauer),28 wechselnde Faelle.
+Es gibt48 echte Phasenwechsel insgesamt,24 je Dauer. Alle werden bewertet.
+Diese Zahlen sind aus dem Rezept abgeleitete Sollzahlen, keine Laufmessung.
+Alle Positionen regulaer aufnehmen: first_ordinal=1, start_sample=0,
+hop=window=4800, ein frischer technischer Scope je Fall/Arm, gleiche
+Profilkonfiguration. Systemeingang nur Wahrnehmung plus technische Zeit-
+und Scopeangaben; Fallname, X/Y, Phase und Sollfortsetzung nur Beobachter.
+
+Keine Suche nach guenstigen Woertern, Dauern oder Werten. Vollstaendiges
+Raster statt Stichprobe; keine Signifikanz-/Populationsbehauptung aus32
+verwandten Faellen. Beide Dauern und beide Richtungen bleiben enthalten,
+auch wenn eine Teilgruppe ausnahmslos scheitert. Kein optionales Nachlegen.
+
+4. Ueberpruefbare Trennung von Entwicklung und Evaluation
+
+Vor jeder Erzeugung: Projektleiter nimmt diesen Vertrag ab; dessen Bytes,
+64 Codehashes, neue Quellen-/Maskenspezifikation, neuer Generator, Auswerter,
+Runtime und Ressourcenplan werden in EINER neuen Vorbereitung gebunden.
+Die alte XYX-Huelle darf nicht mit einem anderen Plan betrieben werden.
+Vorbereitung und spaeterer Einmallauf brauchen getrennte aktuelle Auftraege.
+
+Der Generator implementiert ausschliesslich Abschnitt3, ohne Adapterimport,
+Scorezugriff, Filter oder Rueckkopplung. Qualifikation verwendet abstrakte
+Fixtures ausserhalb des Rasters; keine Pilotlaeufe mit Evaluationsfaellen.
+Das vollstaendige Manifest wird nach separater Materialisierungsfreigabe
+vor dem ersten Policyaufruf versiegelt:32 IDs, Rezept, alle Quellenhashes,
+Zeitangaben und erwartete Masken. Keine Fallauswahl nach Ergebnissen.
+Ein Abgleich gegen bekannte Entwicklungsmanifeste dokumentiert identische
+ganze Folgen und bekannte Teilmuster. Er darf keinen Fall ersetzen oder
+entfernen. Identische ganze Folgen erhalten das Kennzeichen WIEDERVERWENDET;
+damit ist der Anspruch eines vollstaendig neuen Evaluationssatzes verfehlt,
+auch wenn weiterhin alle32 festgelegten Faelle deskriptiv berichtet werden.
+
+Vor erstem Ergebnis werden Vertrags-/Code-/Manifesthashes und Freigabe
+zeitlich dokumentiert; danach sind Parameter und Erfolgskriterien gesperrt.
+Einmalige exklusive Ausgabe, feste Reihenfolge, vollstaendiges Start-/End-
+und Abbruchjournal. Projektleiter kann Chronologie und Vollstaendigkeit aus
+den gebundenen Artefakten pruefen. Das ist eine auditable Verfahrensgrenze,
+keine kryptographische Garantie unbekannter menschlicher Vorversuche.
+Ein neuer Dateiname oder Seed ersetzt diese Schritte nicht. Es gibt keinen
+Seed und keine ergebnisabhaengige Nachziehung. Nach Ergebniskenntnis wird
+dieser Satz Entwicklungsmaterial fuer jede spaetere Policyaenderung; er darf
+dann nicht erneut als unberuehrte Evaluation dieser Aenderung gelten.
+
+5. Zielmengen, Kausalitaet und Verfuegbarkeit
+
+Je Fall mit L Positionen: G={3,5,...,L-1}; H={7,11,...,L-1}; N=G ohne H.
+Erstes Fortsetzungsziel3 bleibt in G/N. Endziel L+1 ausschliesslich zensiert.
+Je Block b ab1 liegt das Hauptziel bei4*b-1. Fuer jede echte neue Phase
+beginnend mit Block b0 sind ihre Hauptziele t_j=4*(b0+j-1)-1, j=1..d.
+F enthaelt t_1 jedes echten Wechsels; A enthaelt t_2..t_d. S sind alle
+H-Ziele in den vier vollstaendig stabilen Faellen. F/A/S sind Diagnosen,
+keine weiteren Summanden neben G/H/N. Neue Phasen bei gleichem Zeichen
+begrunden weder F noch A. Wechsel und Rueckkehr getrennt: Rueckkehr liegt
+vor, wenn das neue Zeichen bereits in einer frueheren Phase aufgetreten ist.
+
+Alle Prognosen vor Kenntnis des jeweiligen Zielwerts einfrieren. Keys,
+Originalframeordinalen, Fortsetzungswerte, Receipt/Read-Revision, Zeitgrenze,
+alle Treffer und Fehlerpaare vor/nach Feedback aufbewahren. Gleichwertige
+Originalspuren sind zulaessig, aber ihre tatsaechliche Herkunft und
+Feedbackkette muessen nachgewiesen sein; keine Ticketindex-Identifikation.
+
+Je H-Ziel getrennt erfassen: keine berechtigte Hypothese; Sollfortsetzung
+nicht vorhanden; Sollfortsetzung vorhanden aber kalt; warm vorhanden;
+Konkurrenz vorhanden; P wegen Gleichstand oder fehlender Verbesserung;
+tatsaechliche warme Kontextwahl. Vorhandensein erfordert einen lebenden
+berechtigten Originalnachfolger des richtigen Typs, nicht nur einen
+aehnlichen Ausgangswert. Keine Retrospektive, die verlorene Keys belebt.
+Fehlende Verfuegbarkeit ist ein fachlicher Befund, kein technischer Fehler.
+Sie entfernt kein Ziel aus G/H oder aus dem Anpassungsnenner.
+
+6. Vorab festgelegte, getrennte Erfolgskriterien
+
+ANPASSUNG: Ein Wechsel besteht genau dann, wenn U spaetestens am dritten
+Hauptziel t_3 die richtige nichtpersistente Originalfortsetzung warm mit
+SELECTED_BY_ERROR waehlt und diese bis t_d durchgehend richtig waehlt.
+Mindestens ein vorheriges Feedback derselben neuen Phase muss zur gewaehlten
+lebenden Fehlerzelle beigetragen haben. Eindeutig kleinstes negatives d,
+Originalherkunft und vorzielliche Kette sind zu belegen. P, Kaltwahl oder
+rein numerischer Zufallstreffer zaehlen nicht. Ein nicht verfuegbarer
+Sollkontext verfehlt das Kriterium und wird zusaetzlich als Ursache gezahlt.
+Vorab gesetzte Forschungsschwelle: mindestens39 von48 Wechseln bestehen
+(mindestens80 Prozent); zusaetzlich mindestens18 von24 je Dauer bestehen
+(75 Prozent). Diese Zielmarken sind normative Abnahmekriterien, keine aus
+XYX gemessenen oder statistisch kalibrierten Wahrscheinlichkeiten.
+Anpassungslatenz fuer jeden Wechsel, Erstverluste und spaetere Rueckfaelle
+vollstaendig berichten. Bedingte Erfolgsraten bei vorhandenem warmem Kontext
+nur diagnostisch mit eigenem Zaehler/Nenner; nie als Ersatz fuer48.
+
+H-NETTONUTZEN und G-GESAMTNUTZEN: Je Fall/Arm MAE auf H bzw.G berechnen,
+dann gleichgewichtetes Mittel der32 Fall-MAEs (kein Uebergewicht langer
+Faelle). Je Kriterium muss U strikt unter JEDER Baseline M/E/K/P liegen.
+Gleichstand genuegt nicht. Beide Kriterien voneinander und von Anpassung
+unabhaengig entscheiden; zusaetzlich positionsgewichtete Werte berichten,
+aber nicht fuer das primaere Urteil verwenden. Fehlende Prognose-/Fehler-
+belege machen die betroffene Gesamtauswertung NOT_EVALUABLE, kein Weglassen.
+
+STABILITAET/SCHADEN: S nach gleichem Fallgewicht auswerten. Warmstabiler
+Teil S_w={11,15,...,L-1} nur in den vier stabilen Faellen: U darf gegen
+keine Baseline groessere MAE haben. Kalte Anfangskosten bleiben in S/G/H.
+Zusaetzliche feste Schadensgrenze: In KEINEM der32 Faelle darf die G-MAE
+von U die G-MAE einer Baseline um mehr als1/32 uebersteigen. Gleichheit
+an dieser Grenze ist erlaubt. 1/32 ist eine vorab gesetzte Toleranz im
+Wertebereich0..1, keine Behauptung allgemeiner Unbedenklichkeit.
+Je Baseline alle Ziel- und Falldifferenzen, Zahl/Summe/Maximum der Gewinne
+und Schaeden, schlechtesten Fall, stabile/wechselnde Faelle, beide Dauern
+und beide Wechselrichtungen berichten. Kleine Schaeden nicht verbergen.
+
+Kein undifferenziertes Gesamturteil: Anpassung, H-Nutzen, G-Nutzen,
+Stabilitaet/Schadensgrenze und Verfuegbarkeit getrennt ausgeben.
+Die Aussage 'alle gesetzten Rasterkriterien erfuellt' ist nur bei allen
+vier erfolgreichen Kriterien und gueltigen vollstaendigen Belegen erlaubt.
+Technisch korrektes Verfehlen=NICHT_NACHGEWIESEN fuer genau das Kriterium;
+verletzte Schadensgrenze ausdruecklich SCHADENSGRENZE_VERLETZT.
+Kein Nutzen kompensiert stillschweigend eine gescheiterte Anpassung.
+
+7. Ressourcen und Abbruch, vor jeder spaeteren Ausfuehrung zu binden
+
+Unveraenderter Policyrahmen pro aktivem Arm:2 retained+1 candidate,
+maximal6 berechtigte Hypothesen,416 gepackte Bytes inkl.Ticket/Staging,
+18 Originalframes,2 Ausgabeplaetze,20 gemeinsam,16384 Zusatz-Pythonbytes
+inkl.Halter/Transienten/Bereinigung; Receipt<=16384, UTF8<=32768 Bytes.
+Arme/Faelle seriell, Zustandsfreigabe nach jedem Arm. Quellen-/Beobachter-
+speicher separat bilanzieren, keine Policyhalter dorthin auslagern.
+Bounds als Bounds, nicht erhobene Peaks als null; kein Gesamtprozess-RAM-
+Nachweis aus dem kleinen Policyheap. Qualifikation549025 Bytes und alte
+XYX-Vorbereitung49280 Bytes duerfen nur mit gepruefter Eignung wiederverwendet
+werden; sie ersetzen keine Qualifikation der neuen Quellen-/Auswertungshuelle.
+
+Fester vorgeschlagener Gesamtexportdeckel fuer dieses groessere Raster:
+67108864 Bytes (64 MiB), davon1048576 Bytes Abschlussreserve. Alle Quellen,
+neuen Vorbereitungsbelege, Einzelfallexporte, Auswertungen und wiederverwendeten
+Qualifikationsbelege sind einmal einzurechnen; auch referenzierte Dateien
+sind nicht kostenlos. Keine Erhoehung nach Ergebnisbeginn. Das ist ein neuer
+Vertragsvorschlag, keine Aenderung des alten XYX-Deckels von4 MiB.
+Vorbereitung muss die Einhaltung strukturell/mit neutralen Fixtures absichern,
+ohne Rasterpilot. Maximal2048 Quellpositionen und10240+10240 Fortschreibungen;
+zusaetzlich harte Laufzeitgrenze60 Minuten fuer die gesamte spaetere Ausfuehrung
+einschliesslich Materialisierung und Export. Budget-/Zeitueberschreitung:
+terminaler Teilabschluss, Ergebnis unvollstaendig/NOT_EVALUABLE, kein Nachlauf.
+Kein Stopp wegen schlechter Scores; technische Ungueltigkeit, Ressourcen-
+verletzung oder externe Unterbrechung stoppen dagegen mit erhaltenen Belegen.
+Keine automatische Wiederholung, Reparatur mit Fortsetzung oder Ersatzfolge.
+
+8. Abnahme und genau ein naechster Schritt
+
+Heute nur dieser Vertrag und Synchronisation der Standseintraege. Keine
+Quelle erzeugt, kein Generator/Auswerter implementiert, keine Tests,
+Simulationen, Vorversiegelungen oder Replays ausgefuehrt. Keine neue Laufnummer.
+Policy, Defaults, alte Bindungen, Autorisierung und Originalexporte erhalten.
+
+Empfehlung an den Projektleiter: nach fachlicher Abnahme genau eine getrennte
+technische Vorbereitung fuer diesen32-Fall-Vertrag beauftragen. Ihr Ergebnis
+muss Generatortrennung, vollstaendiges Raster, Kausalbelege, negative
+Auswertungsfaelle und Ressourcenabschluss pruefbar binden. Erst danach ist
+ueber eine separate einmalige Materialisierung/Ausfuehrung zu entscheiden.

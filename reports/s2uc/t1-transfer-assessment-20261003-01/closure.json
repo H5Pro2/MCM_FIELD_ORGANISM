@@ -1,0 +1,32 @@
+{
+  "status": "CLOSED_TECHNICAL_ABORT_NOT_EVALUABLE",
+  "files": {
+    "launch_once.py": {
+      "bytes": 2250,
+      "sha256": "e564352f8cdea8150caa4a15d4996d6a6e32f5b9a4e94a0ccb98d2cd73b7342b"
+    },
+    "preflight.json": {
+      "bytes": 535,
+      "sha256": "7934f14f01b92ce75dbebdff22c9d1544d5ba7505c2794d7fee00e0fa6ed038f"
+    },
+    "REPORT.md": {
+      "bytes": 5170,
+      "sha256": "c078971b1a8448ed65937cc08e5a0bf7009dc07075138d7b862bdafdd51ff61a"
+    },
+    "result.json": {
+      "bytes": 23348,
+      "sha256": "862563048c79a2149b1e78945cdf38a085ad322611dd584a51685ea0c50aef92"
+    }
+  },
+  "run_directory_unchanged": true,
+  "retry": false,
+  "resume": false,
+  "external_report_cap": 524288,
+  "charged_with_reserved_external_report": 7124274,
+  "export_limit": 67108864,
+  "closure_reserve": 1048576,
+  "authorization_consumed": true,
+  "elapsed_to_external_closure_seconds": 139.9493465,
+  "external_report_actual_bytes": 32284,
+  "actual_total_bytes": 6632270
+}

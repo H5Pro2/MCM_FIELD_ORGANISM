@@ -1,0 +1,120 @@
+{
+  "version": "s2uc.dependency-inventory.v1",
+  "files": [
+    {
+      "path": "tools/s2uc_run_bound_once.py",
+      "bytes": 1244,
+      "sha256": "c829c4d71dda749a73e0c22fb8377bb3ade6f785f42f3c8c8b7de352dd8c8d93",
+      "role": "runtime"
+    },
+    {
+      "path": "tools/_s2uc_run_binding.py",
+      "bytes": 3640,
+      "sha256": "029b5e30bbcac46fcbedf20c45859949a5de51d4ca8ef1d5d5fb1ed58142ed64",
+      "role": "runtime"
+    },
+    {
+      "path": "tools/_s2uc_source_binding.py",
+      "bytes": 6058,
+      "sha256": "3758b0b3291ae9f04d91f704548ae0a77f7bc56be87d189fa89ba48c2e735e78",
+      "role": "runtime"
+    },
+    {
+      "path": "tools/_s2ts_temporal_trace_run.py",
+      "bytes": 10468,
+      "sha256": "e084f2aa6806337587284df6873068b6366e88eea2f02fc11bc981c143f8387a",
+      "role": "evidence"
+    },
+    {
+      "path": "tools/_s2uc_run_entry.py",
+      "bytes": 10505,
+      "sha256": "63ac6c2d3ef059132005c8b9d07bea29ddd70a58e3ea6db6168697e81b195e0a",
+      "role": "runtime"
+    },
+    {
+      "path": "tools/_s2uc_source_adapter.py",
+      "bytes": 1442,
+      "sha256": "011b75a724fab21dd12b66f02e2fb6a4626e7f1d4450ac4612d31fb53e4abead",
+      "role": "runtime"
+    },
+    {
+      "path": "tools/_s2ty_audio_materialization.py",
+      "bytes": 4090,
+      "sha256": "c332b1eccff35aefc0dbea27c4db78e5b97524ed2f46ab7a6461e3bcc522db72",
+      "role": "runtime"
+    },
+    {
+      "path": "tools/_s2nj_private_auditory_output_projection.py",
+      "bytes": 7700,
+      "sha256": "e052cc76cf4c9678e11673d95390dea21634bba8082187567a760faaaf4904e5",
+      "role": "runtime"
+    },
+    {
+      "path": "tools/_s2uc_neutral_connection.py",
+      "bytes": 8749,
+      "sha256": "25138be284998b37a59661690c9d291881708b47c7eccc7101799b045ee611da",
+      "role": "runtime"
+    },
+    {
+      "path": "tools/_s2ub_candidate_confirmation.py",
+      "bytes": 9869,
+      "sha256": "4178198b43fbbefd3cd550307ec114540c2167a3ae066e22bde01f5223f0ca8a",
+      "role": "runtime"
+    },
+    {
+      "path": "tools/_s2tu_retained_trace.py",
+      "bytes": 3846,
+      "sha256": "bf530380f93c8a1bf0eeae5a4169e81bc99aee10050872e3e5ddc7bfdb88f3f6",
+      "role": "runtime"
+    },
+    {
+      "path": "tools/_s2tw_exact_confirmation.py",
+      "bytes": 1283,
+      "sha256": "90470980a329d0424bec9ba430adbbccaf72bb82145edfefd6e491b6fcec7be9",
+      "role": "runtime"
+    },
+    {
+      "path": "tools/_s2uc_record_codec.py",
+      "bytes": 2490,
+      "sha256": "f8029b43ff55a766ba26ab7e7240e83e17037e6adecb37a9b4bd97d025270290",
+      "role": "runtime"
+    },
+    {
+      "path": "tools/_s2uc_verification.py",
+      "bytes": 17086,
+      "sha256": "1af8a9e2de68acf29b7ae2755f82330e959e96505867c81b4ba263d0b2f81626",
+      "role": "runtime"
+    },
+    {
+      "path": "tools/_s2uc_evaluation.py",
+      "bytes": 2341,
+      "sha256": "50f458bb1e9693227b119a87b0cf0e71ec1076d0f64427c93426397e33125e7a",
+      "role": "runtime"
+    },
+    {
+      "path": "tools/_s2uc_resource_ledger.py",
+      "bytes": 2447,
+      "sha256": "f2714a6cc5ec60a221fd8b8fca9fb8b291cca77c95772ec82f788c033b65cc3d",
+      "role": "runtime"
+    },
+    {
+      "path": "mcm_field_organism/log_spectral_receptor.py",
+      "bytes": 7024,
+      "sha256": "26a6bd8f2d190db60c75ad29f275b3bd8b09b6d26d4ad54e4396176c4a36d2b0",
+      "role": "runtime"
+    },
+    {
+      "path": "mcm_field_organism/broadband_hearing_path.py",
+      "bytes": 7983,
+      "sha256": "a20456b24c04d099ba5ee2da6250e3d83dc657392603c41d816b13ca68a37fb7",
+      "role": "runtime"
+    }
+  ],
+  "external": [
+    {
+      "name": "numpy",
+      "binding": "S2-NJ raw profile / runtime environment",
+      "version": "2.4.4"
+    }
+  ]
+}

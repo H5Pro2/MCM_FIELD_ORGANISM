@@ -1,0 +1,155 @@
+{
+  "id": "K05c_K06c",
+  "status": "PASS",
+  "evidence": {
+    "expiry": {
+      "frames": 24,
+      "forecasts": [
+        {
+          "target": 3,
+          "ticket_sha256": "6f930b6768ff23dad8a5690cd3428d7762f37abb2056a00f4f55dfea306e4e87",
+          "unchanged_across_admission": true
+        },
+        {
+          "target": 5,
+          "ticket_sha256": "eaf337a20253d5516dbb1e683236a32664b28ed2b10c5822f727875193db1b5e",
+          "unchanged_across_admission": true
+        },
+        {
+          "target": 7,
+          "ticket_sha256": "22800d98eaf43ed02cab85d30a716f885d855f982f384e18019ed4a1d32763f3",
+          "unchanged_across_admission": true
+        },
+        {
+          "target": 9,
+          "ticket_sha256": "b28b5572638ef722c91c92f5e192500ea3dc654a847ef2841a8794c5e3b0b718",
+          "unchanged_across_admission": true
+        },
+        {
+          "target": 11,
+          "ticket_sha256": "255b2d97a342a87ec5675ce5f2e210d300183eb242fccca6cc046e438f8c3a21",
+          "unchanged_across_admission": true
+        },
+        {
+          "target": 13,
+          "ticket_sha256": "38e671cc913a384be0cf0400923641dd41a8e41dc83c055254f83c16afe1732f",
+          "unchanged_across_admission": true
+        },
+        {
+          "target": 15,
+          "ticket_sha256": "651b52eaae24f884300666df5f5e370ddb5b22ae01ab7a9c23108673a0a98b6d",
+          "unchanged_across_admission": true
+        },
+        {
+          "target": 17,
+          "ticket_sha256": "14d7c1b4590616631f4a8e79417f16175a28b4f4534e8dfbf899adf9c139ccd7",
+          "unchanged_across_admission": true
+        },
+        {
+          "target": 19,
+          "ticket_sha256": "0bd6a96749e482726d4ad020f1d49940c9bef076f3f4ffc6cfcd5082a1cad3ac",
+          "unchanged_across_admission": true
+        },
+        {
+          "target": 21,
+          "ticket_sha256": "72c928a78e305d71adf1de500f7f058688629d31269a765e18c06a5860464e52",
+          "unchanged_across_admission": true
+        },
+        {
+          "target": 23,
+          "ticket_sha256": "d6710f1bbac4e8d4858fdae9b869977f337c70671d97eb9a23f7146930340aef",
+          "unchanged_across_admission": true
+        },
+        {
+          "target": 25,
+          "ticket_sha256": "f6f0be351f532b0bedcab7af5d0c859442d00e4e56cdc19902fff20621107ae5",
+          "unchanged_across_admission": true
+        }
+      ],
+      "cleanup": true
+    },
+    "promotion": {
+      "frames": 12,
+      "forecasts": [
+        {
+          "target": 3,
+          "ticket_sha256": "6f930b6768ff23dad8a5690cd3428d7762f37abb2056a00f4f55dfea306e4e87",
+          "unchanged_across_admission": true
+        },
+        {
+          "target": 5,
+          "ticket_sha256": "eaf337a20253d5516dbb1e683236a32664b28ed2b10c5822f727875193db1b5e",
+          "unchanged_across_admission": true
+        },
+        {
+          "target": 7,
+          "ticket_sha256": "ce9970e5f0824cef24b44b960102b086e7dc4da4cf1f0ea712e5309fcdb14d5c",
+          "unchanged_across_admission": true
+        },
+        {
+          "target": 9,
+          "ticket_sha256": "8ac0e53446aba039f1779b23477cf8edd5bab7478e7143a8e4746fc03a08227a",
+          "unchanged_across_admission": true
+        },
+        {
+          "target": 11,
+          "ticket_sha256": "0eaa43e2dc4ac55b2a57eeb04a870a6530f50b39bf2b7a1a28dc9af719ac9583",
+          "unchanged_across_admission": true
+        },
+        {
+          "target": 13,
+          "ticket_sha256": "38e671cc913a384be0cf0400923641dd41a8e41dc83c055254f83c16afe1732f",
+          "unchanged_across_admission": true
+        }
+      ],
+      "cleanup": true
+    },
+    "replacement": {
+      "frames": 16,
+      "forecasts": [
+        {
+          "target": 3,
+          "ticket_sha256": "6f930b6768ff23dad8a5690cd3428d7762f37abb2056a00f4f55dfea306e4e87",
+          "unchanged_across_admission": true
+        },
+        {
+          "target": 5,
+          "ticket_sha256": "eaf337a20253d5516dbb1e683236a32664b28ed2b10c5822f727875193db1b5e",
+          "unchanged_across_admission": true
+        },
+        {
+          "target": 7,
+          "ticket_sha256": "e5275449b4be3462f321404d34748648cab19987eb7bfc1109352babab56d487",
+          "unchanged_across_admission": true
+        },
+        {
+          "target": 9,
+          "ticket_sha256": "c1247e599dec7d5c5a0766d107e4308ea05cf57e1b326062d7fae9a5818d5580",
+          "unchanged_across_admission": true
+        },
+        {
+          "target": 11,
+          "ticket_sha256": "0eaa43e2dc4ac55b2a57eeb04a870a6530f50b39bf2b7a1a28dc9af719ac9583",
+          "unchanged_across_admission": true
+        },
+        {
+          "target": 13,
+          "ticket_sha256": "aff684e0f4143d2285a5ed057fa1e8e46cca6853f3db310d5258aeb21ed81197",
+          "unchanged_across_admission": true
+        },
+        {
+          "target": 15,
+          "ticket_sha256": "fdfa56c89e377b3461f659d8d2089cbe0990e1cb3e8906113b074a203aff7028",
+          "unchanged_across_admission": true
+        },
+        {
+          "target": 17,
+          "ticket_sha256": "02ebff10b94db49b9684e5a35b655131fa10e480f3e0c689359f20788c1c6a3d",
+          "unchanged_across_admission": true
+        }
+      ],
+      "cleanup": true
+    }
+  },
+  "reserved_research_cases_generated": 0
+}

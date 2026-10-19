@@ -1,0 +1,130 @@
+MCM S2UC -- AN-EVAL: einmalige Produktion und eingefrorene Einzelauswertung
+2026-10-01
+
+ERGEBNIS
+SYNTHETIC_PCM_NJ_CRITERIA_MET: zwei zusaetzliche korrekte R1/R2-Zuordnungen,
+keine zusaetzlichen falschen Einzelzuordnungen, keine verlorenen exakten,
+signalbedingt verlorenen exakten oder verlorenen korrekten Exaktzuordnungen.
+Die festgelegten Kriterien sind in diesem kontrollierten synthetischen
+PCM-/Rezeptor-/NJ-Pfad erfuellt. Keine allgemeine natuerliche Wiedererkennung
+und keine schaedigungsfreie Fortsetzung nachgewiesen.
+
+PARAMETER UND VORHERIGE BINDUNG
+epsilon_AUDIO=3.3647428814553505e-05 (0x1.1a414d9cf9967p-15)
+tau_AUDIO=0.03125=1/32 (0x1.0000000000000p-5)
+Exakt aus gespeichertem DEV-Auswahlbeleg uebernommen, keine neue Kalibration.
+freeze.json vor Produktion: korrigierter Auswertungsrunner, lokaler Code,
+Python-/NumPy-Bindung, Profil, Materialplan, Herkunftslabels und Parameter.
+103 DEV-Dateien inklusive Material und Auswertung vorher gehasht und am
+Ende unveraendert bestaetigt. Der DEV-Beobachterfix ist unveraendert uebernommen.
+Evaluation-Runner ohne Kalibrations- und Parameterauswahlaufruf.
+
+PRODUKTION UND PARTITIONSTRENNUNG
+Genau ein AN-EVAL-Produktionsaufruf: MATERIAL_COMPLETE,Exit0.
+49 Rezeptor-/49 NJ-Aufrufe, 67 Dateien,
+2061032/4194304 Byte einschliesslich Abschluss.
+Keine Kalibrationsdateien, keine Ersatzdaten, kein Wiederholungsversuch.
+Seeds von DEV/EVAL disjunkt; vier Basis-PCM-Hashes ebenfalls disjunkt.
+Herkunft, PCM-Ableitungen, Zeitpunkte/Retiming, Profile und Projektionsdigests
+durch unveraenderten Leser geprueft. EVAL-Material nach Auswertung bytegleich.
+Beide Partitionen teilen das synthetische Rezept; keine Behauptung allgemeiner
+Unabhaengigkeit aus verschiedenen Seeds. Keine gemeinsame Erfolgsquote.
+closure.json ist der Materialabschluss; die separate Auswertung ist in
+verification.json und final-verification.json belegt.
+
+HERKUNFT, SIGNALVERLUST UND ABDECKUNG
+Exakt:1 korrekt,9 Enthaltungen,1 falsch; Kontextabdeckung2/11.
+Signal-/Naeherungsabruf:4 korrekt,6 Enthaltungen,1 falsch; Kontextabdeckung5/11.
+R0/R1/R2/R3 korrekt; N1/N2/N4/Z0/Z1/P0 enthalten sich.
+P0: positive Herkunft wegen geringem Signal unabgedeckt. Kein verlorener
+Exakttreffer, da auch der exakte Abruf dort keine Zuordnung lieferte.
+N3: beide Arme ordnen trotz wahrer D-Herkunft dem A-Kontext zu. Gemeinsamer
+Anfang bleibt Identifizierbarkeitsgrenze. Der bestehende Fehler wird sichtbar
+ausgewiesen, obwohl er gegenueber der exakten Referenz nicht zusaetzlich ist.
+Alle Receipt-/Enthaltungsgruende in origin-and-abstentions.json.
+
+ELF PRUEFZIELE
+Fall | Herkunft exakt | Herkunft neu | Persistenz-MAE | Exaktschema-MAE | Naeherungsschema-MAE
+R0 | CORRECT | CORRECT | 0.00183430379475573 | 0 | 0
+R1 | ABSTAIN | CORRECT | 0.00184846133054054 | 0.00184846133054054 | 0
+R2 | ABSTAIN | CORRECT | 0.00186263947192223 | 0.00186263947192223 | 0
+R3 | ABSTAIN | CORRECT | 0 | 0 | 0.00184846133054054
+N1 | ABSTAIN | ABSTAIN | 0.00283774427941151 | 0.00283774427941151 | 0.00283774427941151
+N2 | ABSTAIN | ABSTAIN | 0.00274927459756353 | 0.00274927459756353 | 0.00274927459756353
+N3 | WRONG   | WRONG   | 0.00321638953172618 | 0.00320217737924339 | 0.00320217737924339
+N4 | ABSTAIN | ABSTAIN | 0.00221339056768566 | 0.00221339056768566 | 0.00221339056768566
+Z0 | ABSTAIN | ABSTAIN | 0 | 0 | 0
+Z1 | ABSTAIN | ABSTAIN | 4.50859475802995e-06 | 4.50859475802995e-06 | 4.50859475802995e-06
+P0 | ABSTAIN | ABSTAIN | 4.47828074891536e-07 | 4.47828074891536e-07 | 4.47828074891536e-07
+Schema-MAE bezeichnet den festen Beobachter Kontext-sonst-Persistenz.
+Konkrete Kontext-MAE bei Enthaltung null, niemals als0 ausgegeben.
+Gemeinsame Kontext-Zielmasken und Paarvergleiche in result.json/summary.
+
+DEV / EVAL GETRENNT, BEI DEMSELBEN AUSGEWAEHLTEN PARAMETER
+AN-DEV Vollabdeckungs-Mittelwerte:
+{
+  "persistence": 0.0016007918773188517,
+  "exact_retrieval": 0.0013852158907184332,
+  "signal_approx_retrieval": 0.0011678249452126979,
+  "signal_approx_retrieval_vs_persistence": 0.00043296693210615394,
+  "signal_approx_retrieval_vs_exact_retrieval": 0.0002173909455057354
+}
+AN-EVAL Vollabdeckungs-Mittelwerte:
+{
+  "persistence": 0.0015061054542216642,
+  "exact_retrieval": 0.0013380585499272529,
+  "signal_approx_retrieval": 0.0011687276888434138,
+  "signal_approx_retrieval_vs_persistence": 0.0003373777653782504,
+  "signal_approx_retrieval_vs_exact_retrieval": 0.0001693308610838391
+}
+Beide jeweils elf Pruefziele und 48 getrennte Lernziele.
+DEV ist Auswahlmaterial; EVAL prueft genau eine vorher festgelegte Einstellung.
+Keine gepoolte Quote. Vollstaendige Gegenueberstellung dev-eval-comparison.json.
+
+PROGNOSESCHAEDEN
+EVAL R3: korrekte Herkunft, aber MAE0.0018484613305405366 statt0 gegen
+Persistenz und exaktes Schema. DEV R3 separat:0.0023763522335992263 statt0.
+Keine weiteren beobachteten Pruefziel-Schaeden gegen diese Baselines;
+auch das exakte Schema zeigt hier keinen Schaden gegen Persistenz.
+Keine beobachteten Lernziel-Schaeden oder zusaetzlichen Lern-Herkunftsfehler
+in den48 EVAL-Lernzielen. Alle Einzelfaelle/Delta-Werte in all-harms.json,
+Lernziel-Einzelwerte und eigener Bericht in result.json/learning_cases.
+Mittlere Gewinne heben weder R3-Schaden noch N3-Herkunftsfehler auf.
+
+KAUSALITAET, SPEICHER UND RESSOURCEN
+Ein Auswertungsaufruf, eine Einstellung, Exit0; kein Auswertungsabbruch,
+keine Wiederholung und keine Aenderung am eingefrorenen Runner.
+129 Aufnahmen je Arm, leerer Start je Geschichte, beide Arme legacy_v1.
+Vorhersage vor Zielzugriff, jeder Frame einmal aufgenommen, Speicherzustand
+nach jedem Frame identisch zur Referenz und zwischen beiden Armen,
+Ausgabeslots am Ende freigegeben. R1/R3 und R0/N3 geben vor Folgeframe
+identische Vorhersagen aus. Gespeicherte Nachweise ohne Replay nachgeprueft.
+Peaks:12 Frames,2 Ausgaben,
+13 gemeinsam. Receipt557 Byte,
+transiente Receipt-UTF8 970 Byte,
+0 temporaere48er-Distanzkopien.
+Grenzen18+2 eingehalten; kein harter Prozess-RAM-Beleg fuer gesamten Export,
+NumPy oder Betriebssystem. Einzelmessungen resource-ledger.json.
+
+ENTSCHEIDUNGSVORSCHLAG
+Projektleiter: Befund als begrenzten Nachweis verbesserter Wiedererkennung
+bei den vorgegebenen synthetischen PCM-Stoerungen abnehmen. signal_approx_v1
+explizit waehlbar und experimentell lassen; exakter Abruf und legacy_v1
+bleiben Standard. Keine automatische Skalierungskombination oder Aktivierung.
+Naechster sinnvoller Entwicklungsauftrag waere ein begrenzter Konzeptvertrag
+zur Trennung von Herkunftszuordnung und Fortsetzungsnutzen: R3 zeigt, dass
+korrekte Herkunft noch keine verlaessliche Fortsetzung garantiert. Erst
+eine unabhaengig pruefbare Hypothese/Gegenprobe definieren, keine nachtraeglich
+auf R3 zugeschnittene Regel einbauen. Kein weiterer Versuch heute.
+AN-DEV und AN-EVAL sind nun bekanntes Material, nicht erneut unberuehrte Tests.
+
+BELEGE
+freeze.json: Bindung vor Produktion.
+preevaluation.json: Evaluationsexport vor genau einer Auswertung.
+result.json: alle elf Pruef- und48 Lernziele, Zustaende/Receipts/Ressourcen.
+criteria.json: fachliche Kriterien; keine nachtraegliche Parameterwahl.
+partition-verification.json: Seeds/PCM-Trennung, Mengen/Produktionsabschluss.
+verification.json/final-verification.json: Integritaet, Kausalitaet, Freigabe.
+dev-eval-comparison.json: getrennte Ergebnisse, keine gemeinsame Erfolgsquote.
+all-harms.json/origin-and-abstentions.json/resource-ledger.json: Detailbelege.
+inventory.json: Dateihashes dieses Abschlusses.

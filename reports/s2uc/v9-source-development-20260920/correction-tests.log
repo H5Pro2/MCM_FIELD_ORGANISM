@@ -1,0 +1,14 @@
+test_fixed_sources_targets_profiles_and_order (tests.test_s2uc_source_execution.SourceExecutionTests.test_fixed_sources_targets_profiles_and_order) ... ok
+test_prepared_supplier_is_lazy_fixed_five_uncached_no_copy (tests.test_s2uc_source_execution.SourceExecutionTests.test_prepared_supplier_is_lazy_fixed_five_uncached_no_copy) ... ok
+test_public_real_entry_unconditionally_closed (tests.test_s2uc_source_execution.SourceExecutionTests.test_public_real_entry_unconditionally_closed) ... ok
+test_source_preparation_reader_has_no_authority (tests.test_s2uc_source_execution.SourceExecutionTests.test_source_preparation_reader_has_no_authority) ... ok
+test_constructor_failure_zero_sources_closes_owners (tests.test_s2uc_source_execution.SourceExecutionTests.test_constructor_failure_zero_sources_closes_owners) ... ok
+test_nonzero_pending_receipt_and_owner_constructor_failure (tests.test_s2uc_source_execution.SourceExecutionTests.test_nonzero_pending_receipt_and_owner_constructor_failure) ... ok
+test_publication_terminal_failure_counts_minimal_and_record (tests.test_s2uc_source_execution.SourceExecutionTests.test_publication_terminal_failure_counts_minimal_and_record) ... ok
+test_staging_failure_counts_all_remaining_bytes (tests.test_s2uc_source_execution.SourceExecutionTests.test_staging_failure_counts_all_remaining_bytes) ... ok
+test_external_child_abort_never_substitutes_product_closure (tests.test_s2uc_source_process_guard.SourceProcessTests.test_external_child_abort_never_substitutes_product_closure) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 76.388s
+
+OK

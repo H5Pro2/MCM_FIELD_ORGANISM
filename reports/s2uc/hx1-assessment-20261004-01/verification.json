@@ -1,0 +1,1577 @@
+{
+  "status": "PASS_ARCHIVE_VERIFICATION",
+  "closure_sha256": "f56ee877c5df6353068cbc3d7b531b609ec9984a8f80f79149e2ed7c411543b7",
+  "authorization_consumed": true,
+  "prestart_sha256": "e8cb8f935d28a5624239aafdbab75d0cb8246b665045442afcc9ec4a8931d36e",
+  "supplement_sha256": "b134eb66d8c633debc46901be0ea7ea0c518dd18f004cdb52491e9b6362af580",
+  "authorization_sha256": "8a38b46bd44fd0622dc6ef10a3e8dfa4163c4290f9f29eff2c31cc39ce5ed098",
+  "production_files_verified": 139,
+  "files_verified": 133,
+  "counts": {
+    "Q_targets_per_arm": 16384,
+    "arm_frames": 196608,
+    "arms": 192,
+    "cases": 64,
+    "engine_seconds": 381.3336653999286,
+    "neutral_only": false,
+    "reference_advances": 196608,
+    "source_frames": 65536,
+    "status": "COMPLETE",
+    "targets_per_arm": 32704
+  },
+  "G_DN_positions": 8192,
+  "G_pair_checks": [
+    {
+      "replicate": 1,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 2,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 3,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 4,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 5,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 6,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 7,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 8,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 9,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 10,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 11,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 12,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 13,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 14,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 15,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 16,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 17,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 18,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 19,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 20,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 21,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 22,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 23,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 24,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 25,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 26,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 27,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 28,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 29,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 30,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 31,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    },
+    {
+      "replicate": 32,
+      "positions": 256,
+      "pre_output_error_post_bit_equal": true
+    }
+  ],
+  "primary": [
+    {
+      "ci": [
+        "-317241350939394698065/4722366482869645213696",
+        "-1463870567555412547789/23611832414348226068480"
+      ],
+      "mean": "-38139178293830018017/590295810358705651712",
+      "name": "D:U-G",
+      "pairs": [
+        "-357684233855320373/4611686018427387904",
+        "-255079601609558445/4611686018427387904",
+        "-86762508214112841/1152921504606846976",
+        "-551728543478987529/9223372036854775808",
+        "-500927616909165415/9223372036854775808",
+        "-645571147801828453/9223372036854775808",
+        "-145286685527234833/2305843009213693952",
+        "-152595371455460523/2305843009213693952",
+        "-648241467560244409/9223372036854775808",
+        "-446241947322643977/9223372036854775808",
+        "-607206750844210897/9223372036854775808",
+        "-513143316915770243/9223372036854775808",
+        "-147276133943134419/2305843009213693952",
+        "-142208277349485369/2305843009213693952",
+        "-1218136746729723689/18446744073709551616",
+        "-40560335345530761/576460752303423488",
+        "-648560642167468483/9223372036854775808",
+        "-644086443929122543/9223372036854775808",
+        "-602562372837853063/9223372036854775808",
+        "-136506339644577693/2305843009213693952",
+        "-669435914573951151/9223372036854775808",
+        "-632488968156533413/9223372036854775808",
+        "-293383213933914849/4611686018427387904",
+        "-592283422156504737/9223372036854775808",
+        "-1215896454261161653/18446744073709551616",
+        "-301315601086054867/4611686018427387904",
+        "-310490466358589127/4611686018427387904",
+        "-1043693189046224451/18446744073709551616",
+        "-1185488808216963275/18446744073709551616",
+        "-79021895517412243/1152921504606846976",
+        "-510918188567890033/9223372036854775808",
+        "-1235893487637317221/18446744073709551616"
+      ],
+      "verdict": "BELEGT"
+    },
+    {
+      "ci": [
+        "-1087/16384",
+        "-499/8192"
+      ],
+      "mean": "-1043/16384",
+      "name": "D:U-P",
+      "pairs": [
+        "-77/1024",
+        "-29/512",
+        "-39/512",
+        "-61/1024",
+        "-53/1024",
+        "-71/1024",
+        "-63/1024",
+        "-65/1024",
+        "-69/1024",
+        "-51/1024",
+        "-65/1024",
+        "-27/512",
+        "-1/16",
+        "-61/1024",
+        "-69/1024",
+        "-71/1024",
+        "-71/1024",
+        "-69/1024",
+        "-1/16",
+        "-29/512",
+        "-73/1024",
+        "-35/512",
+        "-63/1024",
+        "-1/16",
+        "-71/1024",
+        "-67/1024",
+        "-33/512",
+        "-29/512",
+        "-33/512",
+        "-35/512",
+        "-27/512",
+        "-9/128"
+      ],
+      "verdict": "BELEGT"
+    },
+    {
+      "ci": [
+        "-579/8192",
+        "-81213/1310720"
+      ],
+      "mean": "-2175/32768",
+      "name": "interaction",
+      "pairs": [
+        "-31/512",
+        "-3/64",
+        "-33/512",
+        "-69/1024",
+        "-73/1024",
+        "-75/1024",
+        "-9/128",
+        "-81/1024",
+        "-35/512",
+        "-69/1024",
+        "-59/1024",
+        "-13/256",
+        "-15/256",
+        "-19/256",
+        "-97/1024",
+        "-67/1024",
+        "-5/64",
+        "-39/512",
+        "-15/256",
+        "-39/512",
+        "-63/1024",
+        "-15/256",
+        "-81/1024",
+        "-35/512",
+        "-67/1024",
+        "-51/1024",
+        "-63/1024",
+        "-1/16",
+        "-75/1024",
+        "-37/512",
+        "-45/1024",
+        "-35/512"
+      ],
+      "verdict": "BELEGT"
+    }
+  ],
+  "verdict": "HINWEISNUTZEN_BELEGT",
+  "classes": {
+    "D:V0": 437,
+    "D:V1": 575,
+    "D:V3": 5572,
+    "D:V2": 1608,
+    "N:V0": 576,
+    "N:V1": 976,
+    "N:V3": 4679,
+    "N:V2": 1961
+  },
+  "diagnosis": [
+    {
+      "condition": "D",
+      "classification": "V0",
+      "comparison": "U/G",
+      "count": 437,
+      "gain": "94264326160594213/9007199254740992",
+      "harm": "237664751750702111/36028797018963968",
+      "net": "139392552891674741/36028797018963968"
+    },
+    {
+      "condition": "D",
+      "classification": "V0",
+      "comparison": "U/P",
+      "count": 437,
+      "gain": "0",
+      "harm": "0",
+      "net": "0"
+    },
+    {
+      "condition": "D",
+      "classification": "V1",
+      "comparison": "U/G",
+      "count": 575,
+      "gain": "5015578629934635/562949953421312",
+      "harm": "604043441542464091/72057594037927936",
+      "net": "37950623089169189/72057594037927936"
+    },
+    {
+      "condition": "D",
+      "classification": "V1",
+      "comparison": "U/P",
+      "count": 575,
+      "gain": "0",
+      "harm": "0",
+      "net": "0"
+    },
+    {
+      "condition": "D",
+      "classification": "V2",
+      "comparison": "U/G",
+      "count": 1608,
+      "gain": "286046761202171071/18014398509481984",
+      "harm": "868971792379301381/72057594037927936",
+      "net": "275215252429382903/72057594037927936"
+    },
+    {
+      "condition": "D",
+      "classification": "V2",
+      "comparison": "U/P",
+      "count": 1608,
+      "gain": "0",
+      "harm": "0",
+      "net": "0"
+    },
+    {
+      "condition": "D",
+      "classification": "V3",
+      "comparison": "U/G",
+      "count": 5572,
+      "gain": "532484809085564655/562949953421312",
+      "harm": "30610828250424159397/72057594037927936",
+      "net": "37547227312528116443/72057594037927936"
+    },
+    {
+      "condition": "D",
+      "classification": "V3",
+      "comparison": "U/P",
+      "count": 5572,
+      "gain": "3829/4",
+      "harm": "1743/4",
+      "net": "1043/2"
+    },
+    {
+      "condition": "N",
+      "classification": "V0",
+      "comparison": "U/G",
+      "count": 576,
+      "gain": "44068365239274375/4503599627370496",
+      "harm": "246254962815046505/36028797018963968",
+      "net": "106291959099148495/36028797018963968"
+    },
+    {
+      "condition": "N",
+      "classification": "V0",
+      "comparison": "U/P",
+      "count": 576,
+      "gain": "0",
+      "harm": "0",
+      "net": "0"
+    },
+    {
+      "condition": "N",
+      "classification": "V1",
+      "comparison": "U/G",
+      "count": 976,
+      "gain": "253092225526317097/18014398509481984",
+      "harm": "223856177872833941/18014398509481984",
+      "net": "7309011913370789/4503599627370496"
+    },
+    {
+      "condition": "N",
+      "classification": "V1",
+      "comparison": "U/P",
+      "count": 976,
+      "gain": "0",
+      "harm": "0",
+      "net": "0"
+    },
+    {
+      "condition": "N",
+      "classification": "V2",
+      "comparison": "U/G",
+      "count": 1961,
+      "gain": "153749640444729661/9007199254740992",
+      "harm": "1148492177366169521/72057594037927936",
+      "net": "81504946191667767/72057594037927936"
+    },
+    {
+      "condition": "N",
+      "classification": "V2",
+      "comparison": "U/P",
+      "count": 1961,
+      "gain": "0",
+      "harm": "0",
+      "net": "0"
+    },
+    {
+      "condition": "N",
+      "classification": "V3",
+      "comparison": "U/G",
+      "count": 4679,
+      "gain": "20151012623427668179/36028797018963968",
+      "harm": "20877598383076265461/36028797018963968",
+      "net": "-363292879824298641/18014398509481984"
+    },
+    {
+      "condition": "N",
+      "classification": "V3",
+      "comparison": "U/P",
+      "count": 4679,
+      "gain": "2295/4",
+      "harm": "596",
+      "net": "-89/4"
+    }
+  ],
+  "source_cross_tables": [
+    {
+      "replicate": 1,
+      "condition": "D",
+      "counts": [
+        96,
+        32,
+        32,
+        96
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 1,
+      "condition": "N",
+      "counts": [
+        68,
+        60,
+        60,
+        68
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 2,
+      "condition": "D",
+      "counts": [
+        32,
+        96,
+        96,
+        32
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 2,
+      "condition": "N",
+      "counts": [
+        63,
+        65,
+        65,
+        63
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 3,
+      "condition": "D",
+      "counts": [
+        96,
+        32,
+        32,
+        96
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 3,
+      "condition": "N",
+      "counts": [
+        67,
+        61,
+        61,
+        67
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 4,
+      "condition": "D",
+      "counts": [
+        32,
+        96,
+        96,
+        32
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 4,
+      "condition": "N",
+      "counts": [
+        65,
+        63,
+        63,
+        65
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 5,
+      "condition": "D",
+      "counts": [
+        96,
+        32,
+        32,
+        96
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 5,
+      "condition": "N",
+      "counts": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 6,
+      "condition": "D",
+      "counts": [
+        32,
+        96,
+        96,
+        32
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 6,
+      "condition": "N",
+      "counts": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 7,
+      "condition": "D",
+      "counts": [
+        96,
+        32,
+        32,
+        96
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 7,
+      "condition": "N",
+      "counts": [
+        67,
+        61,
+        61,
+        67
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 8,
+      "condition": "D",
+      "counts": [
+        32,
+        96,
+        96,
+        32
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 8,
+      "condition": "N",
+      "counts": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 9,
+      "condition": "D",
+      "counts": [
+        96,
+        32,
+        32,
+        96
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 9,
+      "condition": "N",
+      "counts": [
+        63,
+        65,
+        65,
+        63
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 10,
+      "condition": "D",
+      "counts": [
+        32,
+        96,
+        96,
+        32
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 10,
+      "condition": "N",
+      "counts": [
+        65,
+        63,
+        63,
+        65
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 11,
+      "condition": "D",
+      "counts": [
+        96,
+        32,
+        32,
+        96
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 11,
+      "condition": "N",
+      "counts": [
+        66,
+        62,
+        62,
+        66
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 12,
+      "condition": "D",
+      "counts": [
+        32,
+        96,
+        96,
+        32
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 12,
+      "condition": "N",
+      "counts": [
+        55,
+        73,
+        73,
+        55
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 13,
+      "condition": "D",
+      "counts": [
+        96,
+        32,
+        32,
+        96
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 13,
+      "condition": "N",
+      "counts": [
+        67,
+        61,
+        61,
+        67
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 14,
+      "condition": "D",
+      "counts": [
+        32,
+        96,
+        96,
+        32
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 14,
+      "condition": "N",
+      "counts": [
+        61,
+        67,
+        67,
+        61
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 15,
+      "condition": "D",
+      "counts": [
+        96,
+        32,
+        32,
+        96
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 15,
+      "condition": "N",
+      "counts": [
+        62,
+        66,
+        66,
+        62
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 16,
+      "condition": "D",
+      "counts": [
+        32,
+        96,
+        96,
+        32
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 16,
+      "condition": "N",
+      "counts": [
+        60,
+        68,
+        68,
+        60
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 17,
+      "condition": "D",
+      "counts": [
+        96,
+        32,
+        32,
+        96
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 17,
+      "condition": "N",
+      "counts": [
+        69,
+        59,
+        59,
+        69
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 18,
+      "condition": "D",
+      "counts": [
+        32,
+        96,
+        96,
+        32
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 18,
+      "condition": "N",
+      "counts": [
+        61,
+        67,
+        67,
+        61
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 19,
+      "condition": "D",
+      "counts": [
+        96,
+        32,
+        32,
+        96
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 19,
+      "condition": "N",
+      "counts": [
+        57,
+        71,
+        71,
+        57
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 20,
+      "condition": "D",
+      "counts": [
+        32,
+        96,
+        96,
+        32
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 20,
+      "condition": "N",
+      "counts": [
+        67,
+        61,
+        61,
+        67
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 21,
+      "condition": "D",
+      "counts": [
+        96,
+        32,
+        32,
+        96
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 21,
+      "condition": "N",
+      "counts": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 22,
+      "condition": "D",
+      "counts": [
+        32,
+        96,
+        96,
+        32
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 22,
+      "condition": "N",
+      "counts": [
+        57,
+        71,
+        71,
+        57
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 23,
+      "condition": "D",
+      "counts": [
+        96,
+        32,
+        32,
+        96
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 23,
+      "condition": "N",
+      "counts": [
+        65,
+        63,
+        63,
+        65
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 24,
+      "condition": "D",
+      "counts": [
+        32,
+        96,
+        96,
+        32
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 24,
+      "condition": "N",
+      "counts": [
+        62,
+        66,
+        66,
+        62
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 25,
+      "condition": "D",
+      "counts": [
+        96,
+        32,
+        32,
+        96
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 25,
+      "condition": "N",
+      "counts": [
+        59,
+        69,
+        69,
+        59
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 26,
+      "condition": "D",
+      "counts": [
+        32,
+        96,
+        96,
+        32
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 26,
+      "condition": "N",
+      "counts": [
+        63,
+        65,
+        65,
+        63
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 27,
+      "condition": "D",
+      "counts": [
+        96,
+        32,
+        32,
+        96
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 27,
+      "condition": "N",
+      "counts": [
+        66,
+        62,
+        62,
+        66
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 28,
+      "condition": "D",
+      "counts": [
+        32,
+        96,
+        96,
+        32
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 28,
+      "condition": "N",
+      "counts": [
+        67,
+        61,
+        61,
+        67
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 29,
+      "condition": "D",
+      "counts": [
+        96,
+        32,
+        32,
+        96
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 29,
+      "condition": "N",
+      "counts": [
+        60,
+        68,
+        68,
+        60
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 30,
+      "condition": "D",
+      "counts": [
+        32,
+        96,
+        96,
+        32
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 30,
+      "condition": "N",
+      "counts": [
+        66,
+        62,
+        62,
+        66
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 31,
+      "condition": "D",
+      "counts": [
+        96,
+        32,
+        32,
+        96
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 31,
+      "condition": "N",
+      "counts": [
+        63,
+        65,
+        65,
+        63
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 32,
+      "condition": "D",
+      "counts": [
+        32,
+        96,
+        96,
+        32
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    },
+    {
+      "replicate": 32,
+      "condition": "N",
+      "counts": [
+        63,
+        65,
+        65,
+        63
+      ],
+      "draws": {
+        "continuation": 255,
+        "dependent-A": 127,
+        "dependent-B": 127,
+        "null-cue": 255
+      }
+    }
+  ],
+  "maxima": {
+    "U": {
+      "additional_python_peak": 5298,
+      "boundary_peaks": {
+        "base_arm_bytes": 17183,
+        "original_objects_bytes": 15907,
+        "original_payload_bytes": 5760,
+        "originals": 15,
+        "output_new_payloads": 0,
+        "output_payload_equivalent": 768,
+        "output_slots": 2,
+        "system_reachable_bytes": 20875,
+        "valid_cells": 3
+      },
+      "combined_peak": 0,
+      "combined_upper_bound": 18,
+      "original_frames_peak": 0,
+      "original_frames_upper_bound": 16,
+      "output_slots_peak": 2,
+      "packed": 416,
+      "phase_peaks": {
+        "feedback": {
+          "retained": 2499,
+          "total": 3160,
+          "transient": 680
+        },
+        "finish": {
+          "retained": 2369,
+          "total": 2425,
+          "transient": 56
+        },
+        "perception": {
+          "retained": 1612,
+          "total": 5298,
+          "transient": 3718
+        }
+      },
+      "receipt_bytes_peak": 782,
+      "utf8_upper": 1564
+    },
+    "G": {
+      "bank": 400,
+      "output_slots": 1,
+      "own_heap_peak": 3441,
+      "receipt_bytes": 0
+    },
+    "P": {
+      "bank": 0,
+      "output_slots": 1,
+      "own_heap_peak": 2049,
+      "receipt_bytes": 0
+    }
+  },
+  "source_file_max": 6194,
+  "case_compressed_max": 111261,
+  "case_expanded_max": 1856670,
+  "process_memory": {
+    "hard_job_limit": true,
+    "limit_bytes": 536870912,
+    "measurement": "Windows JobObjectExtendedLimitInformation",
+    "members": "supervisor and inherited worker",
+    "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap.",
+    "peak_job_committed_bytes": 124964864,
+    "peak_process_committed_bytes": 91758592
+  },
+  "supervisor_seconds": 387.3872142,
+  "export_bytes": 7627178,
+  "preparation_bytes": 5108345,
+  "export_plus_preparation_bytes": 12735523,
+  "source_total_bytes": 396416,
+  "case_total_bytes": 6828263,
+  "admin_total_bytes": 386546,
+  "terminal_bytes": 15953,
+  "secondary_records_verified": 90,
+  "diagnosis_records_verified": 512,
+  "primary_bootstrap_independently_verified": true,
+  "policy_replays_in_this_verification": 0,
+  "source_materializations_in_this_verification": 0
+}

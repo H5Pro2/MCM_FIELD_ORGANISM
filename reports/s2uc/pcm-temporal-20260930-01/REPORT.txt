@@ -1,0 +1,119 @@
+ZEITLICHE PCM-GEGENPROBE -- ABGESCHLOSSEN
+Ausfuehrungskennung: pcm-temporal-20260930-01.
+Signal und Kriterien vor Auswertung in preregistration.json gesichert.
+Keine Parameteranpassung, keine Aenderung an E/F, Bestaetigung, Rezeptor oder NJ.
+
+EINGABE
+19200 mono Float32-LE-Samples bei 48000 Hz; 76800 Byte; 0.4 Sekunden.
+Durchgehender Chirp nach festgelegter globaler Formel, 400 bis knapp 4000 Hz.
+Alle Samples endlich, maximaler Absolutwert 0.125. Zweite Erzeugung bytegleich.
+Quelle: sources/s2uc/temporal-chirp-v1/sequence.pcm
+SHA256: 4774f24ad52ec7e431c360ec1f2d18c663584d1ed3fbffa83fa0f4fe3d5442a6
+Herkunft: provenance.json neben der Quelle; zusaetzlich input-binding.json.
+W2/W3 halbiert aus gespeicherten Bytes: beide bitexakt rueckverdoppelbar,
+keine Unterlaeufe, keine subnormalen Halbwerte, je 4800 Nichtnullsamples.
+Vier Original- und zwei Halbfenster verarbeitet: 6 Rezeptor-/6 NJ-Aufrufe.
+
+FAKTORBEZIEHUNG
+W2 und W3: 96/96 Rezeptorwerte sowie 96/96 NJ-Werte numerisch und bitexakt
+halbiert. Alle absoluten Abweichungen und ULP-Abstaende sind 0.
+Vollstaendige 192 Stufen-/Bandvergleiche: band-comparisons.csv und result.json.
+Alle sechs verarbeiteten 48-Band-Vektoren einschliesslich Originale in result.json.
+
+ZEITLICHE UNTERSCHEIDBARKEIT UND ABRUF
+Alle sechs Originalfensterpaare unterscheiden sich in allen 48 Baendern,
+sowohl vor als auch nach NJ. Keine Gleichheit unter Faktoren 0.5,1,2.
+E Original: CONFIRMED_RETAINED_MATCH, einzige Position 1.
+F Original: CONFIRMED_RETAINED_MATCH, einzige Position 1, Faktor 1.
+E Halbhinweis: ABSTAIN_NO_MATCH, leere Treffermenge.
+F Halbhinweis: CONFIRMED_RETAINED_MATCH, einzige Position 1, Faktor 0.5.
+E/F Umkehrhinweis W3/W2: ABSTAIN_NO_MATCH, leere Treffermengen.
+Alle Treffer: retained, Generation 1, Herkunft origin-1, Originalordinale 1..4.
+Zweite Praesentation: identische Werte mit Ordinalen 5..8; technische
+Testwiedergabe, keine zweite Quellenaufnahme. Beide Speicherzustaende identisch.
+Alle 12 Hinweise (3 Faelle x 2 Arme x 2 Wiederholungen) zustandsneutral;
+Wiederholungen identisch. Alle Treffermengen entsprechen unabhaengiger
+Fraction-Vergleichsrechnung; keine zusaetzlichen Treffer unterdrueckt.
+
+PRUEFUNGEN
+21/21 unittest-Pruefungen PASS, 0 Fehler/Fehlschlaege/Skips, siehe tests.txt.
+Module: test_s2uc_pcm_temporal (4), test_s2uc_pcm_half (5),
+test_s2uc_factor_hint (7), test_s2uc_factor_transfer (5).
+Laufinterne Bindungs-, Eingabe-, Rueckfuehrungs-, Zustands-, Budget- und
+Treffermengenpruefungen bestanden. Codebindungen vor/nach Lauf unveraendert.
+
+RESSOURCEN
+PCM-Dateien: 76800 Byte Quelle plus zweimal 19200 Byte Ableitungen=115200 Byte.
+Beide Arme: maximal 8 Spurframes und 2 Hinweisframes; gemeinsames beobachtetes
+Maximum 8 Frames (Einzelmaxima zu verschiedenen Zeitpunkten), Grenze 16+2 gewahrt.
+Je Arm 18 Positionspruefungen fuer sechs Hinweise; F 54 Faktorpruefungen mit
+530 skalaren Vergleichen. E 0 Faktorpruefungen.
+Erzeugung, Reproduktion, Ableitung, sechs Verarbeitungen und Vergleichsbeobachter
+getrennt gemessen (Details unten). Memory-Zeit umfasst Beobachter und Oracle.
+Tracemalloc erfasst Python-Allokationen, keinen vollstaendigen nativen NumPy-
+oder Prozess-RAM. Peaks sind nicht addierbar. Erster Verarbeitungsschritt
+enthaelt Imports; keine Effizienzaussage aus dem Zeitunterschied ableiten.
+Memory-Aufrufpeaks enthalten Tracing; kein separater unbeobachteter RAM-Nachweis.
+{
+  "generation": {
+    "elapsed_ns": 62198900,
+    "incremental_python_peak_bytes": 156484,
+    "net_python_bytes": 77204
+  },
+  "reproduction": {
+    "elapsed_ns": 67203500,
+    "incremental_python_peak_bytes": 156145,
+    "net_python_bytes": 76865
+  },
+  "processing": [
+    {
+      "elapsed_ns": 413201600,
+      "incremental_python_peak_bytes": 10462352,
+      "net_python_bytes": 7599512
+    },
+    {
+      "elapsed_ns": 21051200,
+      "incremental_python_peak_bytes": 2871275,
+      "net_python_bytes": 8903
+    },
+    {
+      "elapsed_ns": 23710700,
+      "incremental_python_peak_bytes": 2871320,
+      "net_python_bytes": 8956
+    },
+    {
+      "elapsed_ns": 22495400,
+      "incremental_python_peak_bytes": 2871259,
+      "net_python_bytes": 8903
+    },
+    {
+      "elapsed_ns": 22131800,
+      "incremental_python_peak_bytes": 2871304,
+      "net_python_bytes": 8956
+    },
+    {
+      "elapsed_ns": 22047600,
+      "incremental_python_peak_bytes": 2871190,
+      "net_python_bytes": 8850
+    }
+  ],
+  "comparison_observer": {
+    "elapsed_ns": 6351700,
+    "incremental_python_peak_bytes": 150448,
+    "net_python_bytes": 149936
+  },
+  "memory_with_observer_elapsed_ns": 224962700
+}
+Ableitungen: [{"elapsed_ns": 36667900, "incremental_python_peak_bytes": 519936, "net_python_bytes": 19841}, {"elapsed_ns": 36918100, "incremental_python_peak_bytes": 519737, "net_python_bytes": 19642}]
+
+FACHLICHER BEFUND UND GRENZE
+F gewinnt fuer diesen gebundenen synthetischen Zeitverlauf einen eindeutigen
+faktorgebundenen Zugang an der vorab festgelegten Position. Dies erweitert den
+Einzelfensterbefund um eine selektive Position in einer vierteiligen Folge.
+Keine allgemeine zeitliche Identitaet, Robustheit fuer beliebige Pegel/Quellen
+oder Memory als feldinterne Organisation nachgewiesen.
+Registry und zurueckgestellter Originalquellenlauf unberuehrt.
+Naechster fachlicher Vorschlag: Konkurrenz durch eine zweite gespeicherte
+Erfahrung mit gemeinsamem W2/W3-Hinweis, aber anderem Aussenkontext, statisch
+planen. Sie prueft, ob der hier eindeutige Zugang bei unzureichendem Hinweis
+korrekt mehrdeutig wird. Keine Ausfuehrung oder weitere Signalproduktion daraus.

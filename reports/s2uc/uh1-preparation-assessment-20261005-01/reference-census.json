@@ -1,0 +1,9 @@
+{
+  "neutral_frames": 24,
+  "boundary_peaks": {
+    "reference": 7696,
+    "input": 1584
+  },
+  "reference_closed_bytes": 798,
+  "note": "Independent small reference census, not process peak; no research inputs."
+}

@@ -1,0 +1,20 @@
+{
+  "count": 12,
+  "errors": 0,
+  "failures": 0,
+  "ids": [
+    "test_adapter.Mapping.test_conflicting_duplicate_errors",
+    "test_adapter.Mapping.test_crossed_pair",
+    "test_adapter.Mapping.test_crossed_receipt",
+    "test_adapter.Mapping.test_crossed_summary",
+    "test_adapter.Mapping.test_positive",
+    "test_adapter.Mapping.test_swapped_condition",
+    "test_adapter.Mapping.test_swapped_receipt",
+    "test_adapter.Mapping.test_unique_gain_harm_and_multiplicity",
+    "test_adapter.Mapping.test_wrong_revision",
+    "test_adapter.Mapping.test_wrong_source_content",
+    "test_adapter.Mapping.test_wrong_source_file",
+    "test_adapter.Mapping.test_wrong_source_hash"
+  ],
+  "status": "PASS"
+}

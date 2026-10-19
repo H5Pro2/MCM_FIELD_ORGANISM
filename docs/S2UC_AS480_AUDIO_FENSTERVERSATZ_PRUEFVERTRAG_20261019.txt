@@ -1,0 +1,275 @@
+AS480 – feste auditive Fensterverschiebung, begrenzter Prüfvertrag v1
+2026-10-19 | Auftrag 8c66b2e5-c568-4578-946f-564b58dc2164
+
+STATUS
+Geschlossener konzeptioneller Vertrag. Nur dieses Dokument und die
+Projektübersichten sind jetzt autorisiert. Keine Implementierung, PCM-Erzeugung,
+Rezeptorauswertung, Qualifikation oder Forschungsdurchführung erfolgt daraus.
+FW1, seine Diagnose und ULZ1 bleiben abgeschlossen. U bleibt unverändert.
+AS480 verwendet keine U-Fehlerbewertung und kombiniert keine neuen Regeln.
+
+1. EINZIGE FRAGE UND FESTE ARME
+Kann der vorhandene Signal-/Näherungsabruf bei festem Quellfensterversatz +480
+Samples eine gelernte Audioepisode zusätzlich korrekt abrufen, ohne ähnlich
+beginnende fremde Episoden zusätzlich falsch zuzuordnen, und zugleich den
+gleichgewichteten Vierfallfehler gegenüber exaktem Abruf und Persistenz senken?
+
+E: SignalApproxAdapter mit retrieval_policy='exact_v1', policy='legacy_v1'.
+N: derselbe Adapter mit retrieval_policy='signal_approx_v1', policy='legacy_v1',
+tau=0.03125 (0x1.0000000000000p-5),
+epsilon=3.3647428814553505e-05 (0x1.1a414d9cf9967p-15).
+Die Hexwerte definieren die binary64-Werte. Keine Kalibration/Parametersuche.
+Persistenz P ist der zweite Hinweisframe, kein zusätzlicher laufender Arm.
+Bei fehlender zulässiger Kontextfortsetzung benutzen E/N jeweils P.
+Exakte Faktoren 0.5/1/2 bleiben im Abruf; legacy_v1 liefert nur bei eindeutigem
+Faktor1 und vorhandenem Nachfolger eine Kontextfortsetzung. Keine Skalierung.
+N: unveränderte Signalzulassung, exakte Priorität, relative L1-Distanz, Faktor1
+im Näherungspfad, globale numerische Enthaltung, keine Wahl des nächsten Nachbarn.
+Mehrere zulässige Matches bleiben mehrdeutig. Alle drei Offsets bleiben aktiv.
+
+2. VOLLSTÄNDIGES PCM-REZEPT – VOR JEDER MESSUNG FEST
+Genau zwei synthetische Monoquellen, A und B, je 19200 Samples, 48000 Hz,
+PCM IEEE754 binary32 little-endian. Keine Zufallszahlen oder Seeds.
+Vier Abschnitte von je 4800 Samples:
+                 Abschnitt0 Abschnitt1 Abschnitt2 Abschnitt3
+A Frequenz Hz:       380        740       1260       1820
+B Frequenz Hz:       400        760       2140       2380
+Diese neuen Festlegungen beruhen auf keiner erzeugten PCM-/Rezeptormessung.
+20-Hz-Abstände der ersten zwei Abschnitte definieren den ähnlichen Gegenfall;
+sie garantieren weder Rezeptorähnlichkeit noch Trennbarkeit bei tau.
+
+Für n=0,...,19199: k=n//4800, t=n%4800.
+c = math.fsum(f[j]*0.1 für j=0,...,k-1) + (f[k]*t)/48000
+u = math.sin((2.0*math.pi)*c)
+v = math.sin(((2.0*math.pi)*(1.5*c)) + math.pi/4.0)
+x64 = (u+v)/16.0
+x32 = struct.unpack('<f',struct.pack('<f',x64))[0]
+Die Multiplikationen/Additionen erfolgen in der angegebenen Klammerung,
+binary64, ohne FMA; genau eine finale binary32-Rundung. Keine Normierung.
+Die zwei Sinusamplituden betragen jeweils 1/16, Anfangsphasen 0 und pi/4;
+die zweite Frequenz ist jeweils 1.5*f. Abschnittsübergänge sind phasenstetig
+nach der integrierten Frequenzformel, ohne Crossfade/Interpolation/Padding.
+Amplitudenbetrag höchstens 1/8; Nichtendlich-/Bereichsverletzung ist Fehler,
+kein Anlass für Clipping oder Ersatzmaterial. Länge niemals nach Messung ändern.
+CPython, libm/Betriebssystem, NumPy, Rezeptor/NJ und Skript müssen vor Erzeugung
+gebunden werden: die Formel allein behauptet keine plattformgleichen Sinusbits.
+Zwei kanonische Quelldateien à 76800 Bytes, zusammen 153600 Bytes.
+
+3. QUELLINTERVALLE UND REZEPTORZEIT
+Alle Intervalle sind halb offen, Sampleindizes nullbasiert.
+Rezeptor: sample_rate=48000, window_size=4800, hop_size=480, band_count=48,
+min_frequency=50.0, max_frequency=18000.0. Unverändertes Hann/FFT-Verfahren;
+NJ s2nj.auditory.hann48.output-half.v1 genau einmal je Projektion.
+project_window analysiert EIN vollständiges 4800-Sample-Fenster direkt.
+hop_size=480 bedeutet hier nicht zehn analyze-Aufrufe und nicht externen
+Fensterschritt480. Kein Rolling-Rezeptor und kein Vorlauf mit Nullsamples.
+
+Fall | Quelle | Hinweis0       | Hinweis1       | Ziel
+A0   | A      | [0,4800)       | [4800,9600)    | [9600,14400)
+A480 | A      | [480,5280)     | [5280,10080)   | [10080,14880)
+B0   | B      | [0,4800)       | [4800,9600)    | [9600,14400)
+B480 | B      | [480,5280)     | [5280,10080)   | [10080,14880)
+Die zusätzlichen 480 Samples stammen regulär aus Abschnitt3 der vordefinierten
+Quelle. Hinweise überlappen weder einander noch das zugehörige Zielfenster.
+Der verschobene zweite Hinweis enthält Daten jenseits der UNVERSCHOBENEN
+Grenze9600, aber keine Daten aus seinem eigenen Ziel ab10080. Maßgeblich ist
+die tatsächliche verschobene Prognosegrenze, nicht das unverschobene Etikett.
+Keine weitere Verschiebung, kein Resampling, keine Suche, kein Gain/Rauschen.
+
+4. LERNPRÄFIX, BESTAND UND ABFRAGE
+Jeder Fall und jeder E/N-Arm startet mit neuer, leerer FactorRecencyArm-Instanz.
+Pro Fall dieselbe Folge von elf logischen Frames, first_ordinal=1:
+1..4: A[0,4800), A[4800,9600), A[9600,14400), A[14400,19200).
+5..8: dieselben vier PCM-Ausschnitte erneut, bitgleich, neue Frameordinalzahlen.
+9..11: genau das in Abschnitt3 angegebene Querytriplett des Falls.
+Keine Memory-Vorbelegung, keine kopierte Arm-/Referenzinstanz, keine Lernpause.
+Die Wiederholung A→A ist ein festes Episoden-Replay; der Übergang am Ende von
+A zurück zu A0 ist Bestandteil des Plans, keine behauptete Phasenstetigkeit.
+
+Bei Abschluss Frame4: TRACE_CANDIDATE_CREATED, Kandidatgeneration1,
+Originalordinale1..4, noch keine retained-Spur.
+Bei Abschluss Frame8: disjunkte Wiederbeobachtung5..8 bestätigt den Kandidaten;
+TRACE_PROMOTED, retained-Generation1 enthält weiterhin Originalframes1..4.
+Kandidat leer, forming leer, Hinweisbuffer leer, retained-Bestand genau eine
+Vierframespur. Kein drittes A, kein TRACE_CONFIRMED_RECENT notwendig.
+Dies ist die zu prüfende strukturelle Erwartung aus dem vorhandenen Code,
+kein in diesem Auftrag gemessener Zustand.
+Vorhersage für9 aus Lernpaar7/8 entsteht regulär; sie wird vor Aufnahme von9
+bewertet und freigegeben. Sie wird NICHT künstlich unterdrückt.
+Frame9/10 bilden das Abfragepaar. Entscheidung für11 vor Aufnahme dieser
+beiden Frames in forming und zwingend vor Zugriff auf Ziel11 einfrieren.
+Zu diesem Freeze lebt unverändert retained1 mit Originalen1..4; kein Kandidat,
+kein neuer abgeschlossener Abschnitt. Nach Aufnahme9/10: forming enthält9/10.
+Nach Ziel11 wird die verbleibende unvollständige Bildung beim finish_story
+verworfen, alle Slots und Besitzer freigegeben. Kein erzeugtes Ziel12/13.
+Keine Bestandsabweichung zwischen E/N; keine Trennung nach günstigen Fällen.
+
+Logische Adapterintervalle für Frame i: [4800*(i-1),4800*i), i=1..11.
+Damit Query9/10/11 auf [38400,43200),[43200,48000),[48000,52800).
+Diese Replay-Zeitachse ist von den genealogischen Quellintervallen getrennt.
+Pro Projektion werden die echten Ausschnittbytes unter diesem logischen
+origin.start_sample/end_sample projiziert; NJ-Snapshotindex=10*(i-1).
+Keine nachträgliche Veränderung eines gebundenen NJ-Digests beim Retiming.
+Externes Manifest verbindet Quelldigest, Quellintervall, logisches Intervall,
+PCM-Fensterdigest, rohen Rezeptorwertedigest und NJ-Projektionsdigest eindeutig.
+Alle Fälle verwenden denselben technischen Profil-Digest, owner und stream;
+Fall-ID, Herkunft, Frequenzen, Versatzklasse und erwartete Ergebnisse werden
+nicht an den Arm oder seine Profilkennung übergeben.
+
+5. MATERIALBINDUNG UND AUSFÜHRUNGSZAHLEN
+Vier Fälle in fester Reihenfolge A0,A480,B0,B480, jeweils E dann N.
+Bewusst KEIN Projektionscache zwischen Fällen oder Lernwiederholungen:
+4 Fälle x (8 Lernfenster + 3 Queryfenster) = 44 Projektionsobjekte.
+Genau44 analyze-Aufrufe und44 NJ-Aufrufe. Frischer LogSpectralReceptor je
+project_window wie im vorhandenen Pfad. Keine Kalibration/zusätzliche Messung.
+32 Lernfenster + 8 Hinweisfenster + 4 Zielfenster; insgesamt211200 logische
+Samples, 844800 PCM-Fensterbytes. Zusammen mit den Quellen998400 PCM-Bytes.
+E/N und ihre Referenzen dürfen je Fall dieselben versiegelten Projektionen
+lesen; keine Projektion erneut ausführen. Identische Werte dürfen unveränderlich
+geteilt werden, aber Frameobjekte, Speicherzustand und Referenzen bleiben isoliert.
+
+8 frische Vergleichsarme à11 Aufnahmen =88 Policy-Aufnahmen.
+8 frische PairContextAdapter-Bestandsreferenzen à11 =88 Referenzaufnahmen.
+Dies sind Bestands-/Lebenszyklusreferenzen, keine unabhängige Bestätigung der
+Näherungswahl. Zusätzlich unabhängige skalare Entscheidungsprüfung am Archiv:
+8 Arme x5 Entscheidungen =40 Prüfungen, ohne Policy-/Rezeptorreplay.
+Dieser spätere Prüfer muss Distanz, Signalgates, sämtliche Matchalternativen,
+Fortsetzung und MAE aus gebundenen Rohbelegen selbst bestimmen; er darf weder
+relative_l1/_select/consume_prediction noch den Produktionsjudge als Orakel nutzen.
+Kein zusätzlicher permanenter Memoryarm, keine verdeckte dritte Policy.
+
+Beobachtete Ziele je Arm/Fall:3,5,7,9,11.
+Ziele3/5/7: Lernprognosen; Ziel9: Übergang; Ziel11: Hauptprüfziel.
+Je E oder N über vier Fälle:12 Lern-,4 Übergangs-,4 Hauptziele=20.
+Beide Policies:24 Lern-,8 Übergangs-,8 Hauptfehler=40.
+Persistenz:20 observerseitige Basisfehler, kein eigener Replay.
+Primärmittel ausschließlich vier Hauptziele; alle übrigen Fehler separat
+vollständig berichten, nicht als zusätzliche unabhängige Prüffälle zählen.
+Ein Ende bei11 lässt kein beobachtetes Ziel aus.
+
+Alle44 Projektionen einschließlich Ziele werden vor erstem Policy-Aufruf
+materialisiert und versiegelt. Armsupplier ist lazy/gated: physische Existenz
+des Zielartefakts berechtigt den Arm nicht zum Lesen vor eingefrorener Prognose.
+Kein Zugriff auf Quellenmanifest, spätere Frames, Labels oder Observerreferenzen.
+Rezeptor-/Projektionskollisionen werden nach Versiegelung beschrieben, niemals
+als Selektionskriterium für neue Frequenzen oder einen Ersatzfall verwendet.
+
+6. AUSWERTUNG UND GETRENNTE URTEILE
+MAE(v,y)=math.fsum(abs(v[k]-y[k]) für k=0..47)/48 auf NJ-Werten.
+Einheitliche Kanalskala, keine zusätzliche Normalisierung bei der Fehlerwertung.
+Pro Hauptziel ausgeben: Herkunft, gewähltes Original/Offset/Faktor, Matchart,
+Signal-/Enthaltungsgrund, E/N/P-Vektor, E/N/P-MAE, N-E und N-P, Verlust korrekter
+Exaktzuordnung. Kontext-MAE bei Enthaltung null (fehlend), Schema-MAE benutzt P.
+Herkunft und konkrete Fortsetzungsfähigkeit getrennt ausweisen: richtige
+A-Identität mit falschem Offset gilt nicht als richtige zeitliche Fortsetzung.
+Korrekte positive Zuordnung verlangt retained1/Originale1..4, Offset0 und
+eindeutigen Faktor1 mit zulässigem Nachfolger3. Ein Abruf einer anderen
+Position wird nicht durch das gleiche Herkunftslabel zum Erfolg umetikettiert.
+B wurde nie gelernt; jede eindeutige A-Zuordnung für B ist falscher Herkunft,
+auch wenn ihr unmittelbarer Fehler zufällig klein ist. Enthaltung ist kein Treffer.
+
+Erfolg nur bei gemeinsamem Erfüllen aller Bedingungen:
+S1: N liefert für A480 korrekte Zuordnung/Fortsetzung, E liefert sie dort nicht.
+S2: In keinem B-Fall zusätzliche falsche A-Einzelzuordnung N gegenüber E.
+S3: Keine bei E korrekte A-Zuordnung geht unter N verloren (A0 und A480).
+S4: (Summe vier N-Hauptfehler)/4 strikt kleiner als entsprechendes E-Mittel
+UND strikt kleiner als P-Mittel. Kein Epsilon, kein nachträgliches Gewicht.
+Beide B-Fehler, beide A-Fehler und sämtliche Schäden N-E/N-P einzeln berichten,
+auch bei positivem Netto. Bereits vorhandene gemeinsame Fehlabrufe nicht verstecken.
+Zusätzliche verlorene Exakttreffer durch Signalgate separat zählen.
+
+TECHNICAL_ERROR: ungültiges Material, Digest-/Scope-/Zeit-/Budgetfehler,
+Referenzabweichung, Zukunftsleck, fehlende Fälle oder nicht freigegebener Start.
+Dann kein wissenschaftliches Erfolgsurteil und keine Ersatz-/Wiederholungsquelle.
+IDENTIFIABILITY_LIMIT: bitgleiche vollständige 2x48-Hinweise aus A und B bei
+gleichem relevanten Speicherzustand, aber unterschiedlichen Zielvektoren.
+Für A0/B0 sowie A480/B480 prüfen; weitere identische Paare ebenfalls ausweisen.
+Das ist ein Daten-/Repräsentationsbefund, kein technischer Fehler und kein
+Versprechen einer lösbaren Herkunftsklassifikation. Alle vier Fehler bleiben
+ausgewertet. Bei Kollision primär dieses Urteil, S1–S4 zusätzlich als Wahrheitswerte.
+CRITERIA_MET: technisch gültig, keine solche Kollision, alle S1–S4 erfüllt.
+NO_ADDITIONAL_BENEFIT: technisch gültig, keine Kollision, mindestens S1–S4 fehlt.
+Dabei separat FLAG_ADDITIONAL_FALSE_RETRIEVAL und FLAG_HIGHER_TOTAL_ERROR
+für zusätzliche B-Fehlzuordnung bzw. höheren N-Gesamtfehler gegen E oder P.
+Gleichstand ist fehlender Zusatznutzen, kein Gleichwertigkeitsnachweis.
+Nähe unter tau bei unterschiedlichen Vektoren ist keine prinzipielle
+Identifizierbarkeitsgrenze: sie ist gegebenenfalls Versagen der festen Regel.
+Keine Konfidenzintervalle/Bootstrapziehungen; vier Fälle begründen keinen
+Nachweis natürlicher Robustheit, allgemeiner Lernfähigkeit oder Feld-Memory.
+
+7. RESSOURCEN – UNVERÄNDERTE ARMGRÖSSEN, NEUE HARTE GESAMTGRENZE
+Je Arm höchstens18 Originalframes,2 Ausgabeslots,20 gemeinsam; keine zusätzlichen
+48er-Distanzkopien. Receipt<=16384 Bytes, transientes UTF8<=32768 Bytes;
+höchstens9 Matchmetadateneinträge. Referenz/Observer/PCM/NumPy gesondert zählen.
+Keine 416-Byte-U-Bank voraussetzen: hier ist die bestehende Abrufpolicy aktiv.
+Materialpartition<=4 MiB einschließlich44 Projektionen, Quellen, Manifeste
+und reserviertem Materialabschluss. Vollständiger Export<=16 MiB:
+Vorbereitung/Qualifikation<=8 MiB, Material<=4 MiB, Vergleich/Observer<=3 MiB,
+abschließende Bindungen/Fehlerabschlussreserve<=1 MiB. Keine versteckten Exporte.
+Größenprospekt vor jedem Schreiben, exklusive Ausgabepfade, kein Abschneiden.
+
+Harter Windows-Job: insgesamt536870912 Bytes (512 MiB) Job-Commit für Supervisor
+UND Worker zusammen, maximal2 Prozesse, Kill-on-job-close, kein Breakaway.
+Job vor Start der produktiven Materialerzeugung; Worker darf nach Start erst
+nach bestätigter Jobmitgliedschaft beginnen. Python/NumPy/FFT, sämtliche
+Projektionen, Archive und Referenzen sind im Job enthalten. Kein ungebundener
+Materialhelfer. Zusätzlich Prozesspeak und Jobpeak getrennt protokollieren.
+Dies ist eine harte Commit-Grenze, keine Behauptung einer Grenze für OS-Dateicache.
+Gesamtdauer<=300 s monotonic ab Supervisorstart, Worker<=240 s einschließlich
+Material, Vergleich und unabhängiger Prüfung;60 s ausschließlich Abschlussreserve.
+Supervisor überwacht Worker, beendet bei Fristverletzung; keine Zeitverlängerung.
+Job-/Startfehler führt vor Material zu TECHNICAL_ERROR; keine Softwareersatzgrenze.
+AN-Qualifikation belegt diese Gesamtgrenzen NICHT. Neue neutrale Qualifikation
+der konkreten Hülle und maximalen Exportstruktur ist zwingende Voraussetzung.
+
+8. KONKRETE TECHNISCHE VORAUSSETZUNGEN, SPÄTER SEPARAT ZU BEAUFTRAGEN
+Q1: neutrale handgeschriebene PCM-Ausschnitte prüfen Intervallgrenzen, +480,
+Randdaten, Float32-/Quellenbindung, Wiederholung und Replay-Retiming ohne Leak.
+Q2: künstliche Adapterfixtures prüfen Kandidat1→retained1, Originale1..4,
+Freeze vor Ziel, Ziele3/5/7/9/11, frische acht Arme und acht Bestandsreferenzen.
+Q3: unabhängige skalare Orakelprüfung mit künstlichen Tabellen: kalt/Signal,
+genau tau/epsilon, Exaktpriorität, Mehrdeutigkeit, Offset2 ohne Nachfolger,
+Fehlzuordnung trotz kleinem Fehler, alle S1–S4 und getrennte Urteile.
+Q4: Hülle unter echtem Job mit neutralem Material gleichen Maximalumfangs:
+44/44 Projektionen,88+88 Aufnahmen,40 Entscheidungsprüfungen, Peak-/Zeit-/Dateibilanz;
+Abbruchpfade für Zeit, Job, Digest, Outputbudget, Workercrash, exklusiven Neustart.
+Reservierte AS480-Frequenzlisten/Quellen NICHT für neutrale Qualifikation benutzen.
+Ein neutraler vollständiger Größenablauf, fokussierte künstliche Fehlerfixtures;
+keine breite Forschungswiederholung, kein Parametervergleich.
+Q5: prospektive Code-/Runtime-/Rezept-/Profil-/Urteilsbindung und Quellenzugangsgate.
+AS480-Quellen erst nach späterer ausdrücklicher Einmallauffreigabe; dann einmal
+beide PCM-Quellen und44 Projektionen erzeugen, alle vier Fälle vollständig.
+Keine verbrauchte AN-Berechtigung übernehmen. Keine Evaluation als Entwicklung.
+
+Bestehender AN-Materialplan enthält11 andere Fälle und darf nicht still verändert
+oder als AS480 ausgeführt werden. Benötigt wird später ein getrennter gebundener
+AS480-Material-/Vergleichseinstieg, mit Wiederverwendung der unten genannten
+unveränderten Rezeptor-, NJ-, Abruf- und Kausalitätskomponenten. Kein Code jetzt.
+Die heutige Lieferung belegt Vertragsvollständigkeit, nicht Startbereitschaft.
+
+9. CODEFUNDSTELLEN UND HISTORISCHE BELEGE (STATISCH GELESEN)
+tools/_s2uc_bounded_audio.py:199 project_window, echte PCM-Bytes, analyze, NJ;
+  die vorhandene100-Aufrufe-Grenze wird mit44 eingehalten, nicht erhöht.
+mcm_field_organism/log_spectral_receptor.py:128 analyze; getrennt davon
+  RollingLogSpectralReceptor ab136, hier nicht zu verwenden.
+tools/s2uc_an_material.py:89 pcm,144 export_sequence,207 read_verified:
+  Muster für Byte-/Zeit-/Projektionsbindung, kein unveränderter AS480-Generator.
+tools/_s2uc_pair_context_adapter.py:24 Adapterzeitvertrag,38 _admit,
+  Paarentscheidung vor form und close_segment nach jedem vierten Frame.
+tools/_s2uc_four_arm.py:26 CandidateTwoArm.close_segment, Promotion mit
+  Originalen des Kandidaten; tools/_s2uc_perception_recency.py:10 Folgebestätigung.
+tools/_s2uc_origin_judge.py:13 GatedReplay,85 judge (Herkunft nur Observer).
+tools/_s2uc_signal_approx_adapter.py: relative_l1,SignalApproxAdapter._select.
+tools/_s2uc_continuation_adapter.py: ContinuationAdapter._receipt, legacy_v1.
+tools/_s2uc_signal_approx_compare.py: replay/compare, getrennte Bestandsreferenzen;
+  vorhandene Referenz prüft nicht unabhängig die Näherungsentscheidung.
+tools/_s2uc_hx1_windows.py:29 install,42 snapshot,59 verify_worker;
+tools/s2uc_ura1_runtime_qualify.py:48 child_job – Hüllenbausteine, keine AS480-Abnahme.
+reports/s2uc/an-material-qualification-20261001-02/REPORT.txt: AN1–AN9 historisch.
+reports/s2uc/an-eval-analysis-20261001-01/REPORT.txt: Rauschnutzen, R3-Schaden,
+  N3-Grenze; keine Verschiebungsmessung und kein harter Gesamt-RAM-Nachweis.
+
+ENTSCHEIDUNGSVORSCHLAG
+Diesen einzelnen Vertrag fachlich abnehmen; anschließend ausschließlich den
+getrennten Anschluss und Q1–Q5 technisch beauftragen. Forschungsausführung bleibt
+bis qualifizierter Bindung und separater Einmallauffreigabe geschlossen.

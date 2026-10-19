@@ -1,0 +1,13 @@
+test_broken_origin (test_checker.Qualification.test_broken_origin) ... ok
+test_duplicate (test_checker.Qualification.test_duplicate) ... ok
+test_false_feedback_time (test_checker.Qualification.test_false_feedback_time) ... ok
+test_false_offset (test_checker.Qualification.test_false_offset) ... ok
+test_missing_countervictim (test_checker.Qualification.test_missing_countervictim) ... ok
+test_omission (test_checker.Qualification.test_omission) ... ok
+test_positive (test_checker.Qualification.test_positive) ... ok
+test_target_deduplication (test_checker.Qualification.test_target_deduplication) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.005s
+
+OK

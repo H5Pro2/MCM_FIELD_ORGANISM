@@ -1,0 +1,99 @@
+{
+  "E10": "real approximate retrieval creates separate APPROXIMATE cell; output alias, no third vector",
+  "E11": {
+    "frames": 16,
+    "states_identical": true,
+    "active_context_selected": true,
+    "resources": {
+      "frame_peak": 8,
+      "output_slots_peak": 2,
+      "combined_peak": 9,
+      "output_python_bytes_peak": 3642,
+      "samples": 24669,
+      "receipt_bytes_peak": 0,
+      "scalar_pair_comparisons": 0,
+      "temporary_numeric_vectors_peak": 0,
+      "match_metadata_peak": 1,
+      "receipt_transient_utf8_bytes_peak": 353,
+      "receipt_python_bytes_peak": 394
+    }
+  },
+  "E12": "active variant bounds metadata integers; no successor creates no ticket; no generation wrap",
+  "E1": "cold retained key selects persistence; unselected context is scored; next query can select context; no early update",
+  "E2": "alpha1/2; ties persist; ordered binary64 differs deliberately from fsum; one shared function for E/K/P",
+  "E3": {
+    "invalid_variants": 11,
+    "time_checked_before_update": true,
+    "duplicate_rejected": true,
+    "scope_state_cleared": true
+  },
+  "E4": "difference/sum overflow and invalid errors rejected; no partial pair commit",
+  "E5": "12 independent cells; roles/generations/offsets/qualities separated; actual candidate promotion resets",
+  "E6": "stale ticket does not revive deleted generation; exact confirmation retains errors; real FIFO eviction removes them",
+  "E7": "missing comparison creates no error; absent final target censored; disabled path matches previous adapter",
+  "E8": {
+    "neutral_frames": 200,
+    "rows": 99,
+    "censored": 201,
+    "no_reset": true,
+    "old_cap_unchanged": true,
+    "planned_stories_executed": false
+  },
+  "E9": {
+    "packed_bytes": 416,
+    "measurements": [
+      {
+        "retained_python_bytes": 1272,
+        "temporary_allocation_peak": 128,
+        "total_additional_upper": 1400,
+        "error": null
+      },
+      {
+        "retained_python_bytes": 1272,
+        "temporary_allocation_peak": 1224,
+        "total_additional_upper": 2496,
+        "error": null
+      },
+      {
+        "retained_python_bytes": 1272,
+        "temporary_allocation_peak": 552,
+        "total_additional_upper": 1824,
+        "error": null
+      },
+      {
+        "retained_python_bytes": 1272,
+        "temporary_allocation_peak": 2900,
+        "total_additional_upper": 4172,
+        "error": null
+      },
+      {
+        "retained_python_bytes": 1272,
+        "temporary_allocation_peak": 1224,
+        "total_additional_upper": 2496,
+        "error": null
+      },
+      {
+        "retained_python_bytes": 1272,
+        "temporary_allocation_peak": 858,
+        "total_additional_upper": 2130,
+        "error": null
+      },
+      {
+        "retained_python_bytes": 1469,
+        "temporary_allocation_peak": 4049,
+        "total_additional_upper": 5518,
+        "error": null
+      },
+      {
+        "retained_python_bytes": 1469,
+        "temporary_allocation_peak": 2914,
+        "total_additional_upper": 4383,
+        "error": "TIME_DISCONTINUITY"
+      }
+    ],
+    "maximum": 5518,
+    "cap": 16384,
+    "method": "deep conservative retained Python size plus tracemalloc peak above pre-call baseline, isolated added operations; includes temporary JSON/key/pack/EMA objects",
+    "limitation": "Python allocation upper measurement for neutral exercised paths; not whole-process RSS/native-stack bound"
+  }
+}

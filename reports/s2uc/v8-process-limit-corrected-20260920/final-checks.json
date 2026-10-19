@@ -1,0 +1,36 @@
+{
+  "cases": [
+    {
+      "case": "success",
+      "path": "v8-process-limit-corrected-20260920/success",
+      "checks": "PASS",
+      "max_sample_gap_ms": 17.4115,
+      "pid": 3248
+    },
+    {
+      "case": "allocation",
+      "path": "v8-process-limit-20260920/allocation",
+      "checks": "PASS",
+      "max_sample_gap_ms": 11.0383,
+      "pid": 18748
+    },
+    {
+      "case": "memoryerror",
+      "path": "v8-process-limit-corrected-20260920/memoryerror",
+      "checks": "PASS",
+      "max_sample_gap_ms": 17.9346,
+      "pid": 17728
+    }
+  ],
+  "historical_preservation": {
+    "v8-neutral-integration-development-20260920": {
+      "files": 386,
+      "mismatches": []
+    },
+    "v8-process-memory-20260920": {
+      "files": 95,
+      "mismatches": []
+    }
+  },
+  "product_tests_unchanged": true
+}

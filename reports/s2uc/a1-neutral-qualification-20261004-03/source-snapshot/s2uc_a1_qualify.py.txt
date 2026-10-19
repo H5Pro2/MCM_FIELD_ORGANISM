@@ -1,0 +1,52 @@
+"""Neutral-only A1 qualification, preserving each attempt and its exact code."""
+import argparse
+import hashlib
+import io
+import json
+from pathlib import Path
+import sys
+import time
+import unittest
+
+ROOT=Path(__file__).resolve().parents[1]
+FILES=('tools/_s2uc_a1.py','tools/_s2uc_a1_reference.py','tools/_s2uc_a1_probe.py',
+       'tests/test_s2uc_a1.py','tools/s2uc_a1_qualify.py')
+
+
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def save(p,v):p.write_text(json.dumps(v,indent=2)+'\n',encoding='utf-8')
+
+
+def main():
+    parser=argparse.ArgumentParser();parser.add_argument('--focus',action='store_true');parser.add_argument('--test');args=parser.parse_args()
+    prior=json.loads((ROOT/'docs/S2UC_K1_IMPLEMENTIERUNGSBINDUNG_20261003.json').read_text())
+    for n,h in prior['files'].items():
+        if n.endswith('.py') and sha(ROOT/n)!=h:raise ValueError('LEGACY_CODE_CHANGED:'+n)
+    number=1
+    while (ROOT/f'reports/s2uc/a1-neutral-qualification-20261004-{number:02}').exists():number+=1
+    out=ROOT/f'reports/s2uc/a1-neutral-qualification-20261004-{number:02}';out.mkdir()
+    (out/'source-snapshot').mkdir()
+    for n in FILES:(out/'source-snapshot'/(Path(n).name+'.txt')).write_bytes((ROOT/n).read_bytes())
+    save(out/'binding.json',dict(files={n:sha(ROOT/n) for n in FILES},
+        inherited_code={n:h for n,h in prior['files'].items() if n.endswith('.py')},
+        concept_sha256=sha(ROOT/'docs/S2UC_ABRUFBESTAETIGUNG_A1_KONZEPT_20261004.md'),
+        python=sys.version,executable_sha256=sha(Path(sys.executable)),focus=args.focus,selected_test=args.test))
+    from tests import test_s2uc_a1 as test
+    test.OUTPUT=out
+    names=unittest.defaultTestLoader.getTestCaseNames(test.A1Tests)
+    if args.focus:names=[n for n in names if not n.startswith('test_A10')]
+    if args.test:
+        if args.test not in names:raise ValueError('TEST_NAME')
+        names=[args.test]
+    stream=io.StringIO();begin=time.monotonic()
+    result=unittest.TextTestRunner(stream=stream,verbosity=2).run(unittest.TestSuite(test.A1Tests(n) for n in names))
+    save(out/'tests.json',dict(count=result.testsRun,success=result.wasSuccessful(),failures=len(result.failures),errors=len(result.errors),output=stream.getvalue()))
+    save(out/'facts.json',test.FACTS)
+    save(out/'closure.json',dict(status='PASS' if result.wasSuccessful() else 'FAILED',focus=args.focus,seconds=time.monotonic()-begin,
+        files={p.relative_to(out).as_posix():dict(bytes=p.stat().st_size,sha256=sha(p)) for p in out.rglob('*') if p.is_file()},
+        research_replays=0,new_research_sources=0))
+    print(out);print(stream.getvalue())
+    if not result.wasSuccessful():sys.exit(1)
+
+
+if __name__=='__main__':main()

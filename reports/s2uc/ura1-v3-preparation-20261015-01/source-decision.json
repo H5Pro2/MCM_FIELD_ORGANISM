@@ -1,0 +1,26 @@
+{
+  "old_run_status": "TECHNICAL_ABORT",
+  "old_authorization_consumed": true,
+  "old_sources_reuse": false,
+  "old_restart_or_resume": false,
+  "new_namespace": "MCM-URA1/source/v3",
+  "new_target": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\ura1-comparison-v3-terminal16h",
+  "new_sources_generated": false,
+  "recipe_unchanged_except_namespace": true,
+  "stories": 32,
+  "frames_per_story": 1024,
+  "orientation_counts": [
+    16,
+    16
+  ],
+  "policies": "unchanged U error selection / R original recency",
+  "primary": "D:U-R; all 256 Q targets per story",
+  "statistics": "unchanged exact binary64-rational pairs; 10000 stratified paired bootstrap draws; nominal 95% interval",
+  "matrix_reused_sha256": "0b9fbf483e870adac01ded7d2d0d0a651a11474a4ac2e4fbae1c14e793d7d965",
+  "old_run_evidence": {
+    "START.json": "bf948ab70fe31650f52978df03f93648ad0dfc6495be18c5ec66b46d0e0a95c0",
+    "result.json": "86489ace4cda069fada331aa2b45fa9344f7f44884474b9f486ae28b0aa2eab5",
+    "closure.json": "1df9266d8df39cdb8f494a202e2f75d49e3d6778caafe0e7cfec2e55543231c4"
+  },
+  "new_source_sealing": "All 32 independently verified and hashed before first policy; no replacement"
+}

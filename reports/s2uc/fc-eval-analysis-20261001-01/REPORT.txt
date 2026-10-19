@@ -1,0 +1,379 @@
+MCM S2UC -- FC-EVAL einmalige Produktion und Dreiarm-Auswertung
+2026-10-01
+
+ERGEBNIS: MATERIAL_COMPLETE, genau ein Produktionsaufruf (Exit0), anschliessend lokale Auswertung.11 Pruefziele und48 Lernziele pro Policy getrennt; Kandidatenprobe separat. FC-EVAL produziert und ausgewertet; Development separat erhalten.
+
+1. Bindungen und Material
+Originalplan SHA256 908f93c76f871d36c4f971b236891d3da7721ba1fcd07d772464db90c439121d
+Zusaetzliche Produktionsbindung SHA256 a17eda51fbc8ad62fdfc0bd9cc3c145d275718dabbb50e108d65a5d3e78fa427
+Konkrete Autorisierung: docs/S2UC_FC_EVAL_AUTORISIERUNG_20261001.json, vor Produktion mit Status AUTHORIZED_ONCE an die unveraenderten Plan-/Produktionshashes und Laufzeit gebunden. Kein Parameter-, Seed-, Fall- oder Codewechsel.
+Aufruf: C:/Python314/python.exe -m tools.s2uc_factor_material produce docs/S2UC_FC_EVAL_AUTORISIERUNG_20261001.json
+Material: reports/s2uc/factor-continuation-material-fc-eval-01.18 Dateien,4 Basisepisoden mit16 Vektoren/768 Komponenten,11 Fallsequenzen mit129 Frames. Elf Pruefziele,48 weitere erreichbare Lernziele. Kein Rezeptor-/NJ-Aufruf.
+Materialumfang 112443/4194304 Byte einschliesslich Abschluss,262144 Byte Abschlussreserve. claim/manifest/closure und Einzeldateihashes erhalten.
+Vollstaendigkeit, finite binary64-Werte, Profile/Digests, Herkunft, bitgleicher A/D-Anfang, positiver Nullpraefix sowie saemtliche Gain-/Fallableitungen mit unveraendertem Leser bestaetigt. Keine erneute Basissynthese. Nach Auswertung saemtliche Materialhashes unveraendert.
+Code-/Laufzeit-/Planbindungen vor Produktion und nach Auswertung bestaetigt. Qualifikation G1-G7 wiederverwendet; keine unveraenderten Volltests wiederholt.
+
+2. Elf Pruefziele: konkrete Prognosen
+Fall | Herkunft scaled/legacy | Status scaled | Status legacy | MAE scaled konkret | MAE legacy konkret | MAE Persistenz
+F1 | CORRECT/CORRECT | PREDICTED_RETAINED | PREDICTED_RETAINED | 0 | 0 | 0.102010091146
+FH | CORRECT/CORRECT | PREDICTED_SCALED_RETAINED | FACTOR_CONTINUATION_NOT_SPECIFIED | 0 | undefiniert (Enthaltung) | 0.0510050455729
+FD | CORRECT/CORRECT | PREDICTED_SCALED_RETAINED | FACTOR_CONTINUATION_NOT_SPECIFIED | 0 | undefiniert (Enthaltung) | 0.204020182292
+GH | CORRECT/CORRECT | PREDICTED_SCALED_RETAINED | FACTOR_CONTINUATION_NOT_SPECIFIED | 0.197006225586 | undefiniert (Enthaltung) | 0.211664835612
+GD | CORRECT/CORRECT | PREDICTED_SCALED_RETAINED | FACTOR_CONTINUATION_NOT_SPECIFIED | 0.197006225586 | undefiniert (Enthaltung) | 0.212310791016
+GR | CORRECT/CORRECT | PREDICTED_SCALED_RETAINED | FACTOR_CONTINUATION_NOT_SPECIFIED | 0.065668741862 | undefiniert (Enthaltung) | 0.094228108724
+GP | CORRECT/CORRECT | PREDICTED_SCALED_RETAINED | FACTOR_CONTINUATION_NOT_SPECIFIED | 0.0510050455729 | undefiniert (Enthaltung) | 0
+AM | AMBIGUOUS/AMBIGUOUS | AMBIGUOUS_CONTEXT | AMBIGUOUS_CONTEXT | undefiniert (Enthaltung) | undefiniert (Enthaltung) | 0.0440851847331
+ZF | CORRECT/CORRECT | ABSTAIN_AMBIGUOUS_FACTOR | FACTOR_CONTINUATION_NOT_SPECIFIED | undefiniert (Enthaltung) | undefiniert (Enthaltung) | 0.115086873372
+EN | CORRECT/CORRECT | ABSTAIN_NO_SUCCESSOR | FACTOR_CONTINUATION_NOT_SPECIFIED | undefiniert (Enthaltung) | undefiniert (Enthaltung) | 0.0454737345378
+NM | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT | ABSTAIN_NO_CONTEXT | undefiniert (Enthaltung) | undefiniert (Enthaltung) | 0.0858154296875
+
+scaled Herkunft/Abdeckung/Enthaltungen:
+{
+  "total": 11,
+  "origin_counts": {
+    "CORRECT": 9,
+    "AMBIGUOUS": 1,
+    "ABSTAIN": 1
+  },
+  "positive_origin_counts": {
+    "CORRECT": 9,
+    "AMBIGUOUS": 1
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 1
+  },
+  "assignment_coverage": 0.8181818181818182,
+  "context_coverage": 0.6363636363636364,
+  "positive_correct_fraction": 0.9,
+  "negative_wrong_fraction": 0.0,
+  "correct_rejections": 1,
+  "roles": {
+    "retained": 9
+  },
+  "prediction_abstentions": {
+    "AMBIGUOUS_CONTEXT": 1,
+    "ABSTAIN_AMBIGUOUS_FACTOR": 1,
+    "ABSTAIN_NO_SUCCESSOR": 1,
+    "ABSTAIN_NO_CONTEXT": 1
+  },
+  "paired": {
+    "count": 7,
+    "persistence_mae": 0.12503415062313988,
+    "context_mae": 0.0729551769438244,
+    "delta": 0.05207897367931547,
+    "better": 6,
+    "equal": 0,
+    "worse": 1
+  },
+  "full_coverage": {
+    "count": 11,
+    "persistence_mae": 0.10597275242660985,
+    "observer_hybrid_mae": 0.07283158735795454,
+    "delta": 0.033141165068655304
+  },
+  "harm_rows": [
+    {
+      "case_id": "GP",
+      "target": 11,
+      "positive": true,
+      "origin_category": "CORRECT",
+      "assigned_root": "FC-EVAL/A",
+      "true_root": "FC-EVAL/A",
+      "role": "retained",
+      "assignment_covered": true,
+      "correct_rejection": false,
+      "prediction_status": "PREDICTED_SCALED_RETAINED",
+      "context_covered": true,
+      "persistence_mae": 0.0,
+      "context_mae": 0.051005045572916664,
+      "paired_delta": -0.051005045572916664,
+      "observer_hybrid_mae": 0.051005045572916664,
+      "full_delta": -0.051005045572916664
+    }
+  ]
+}
+
+legacy Herkunft/Abdeckung/Enthaltungen:
+{
+  "total": 11,
+  "origin_counts": {
+    "CORRECT": 9,
+    "AMBIGUOUS": 1,
+    "ABSTAIN": 1
+  },
+  "positive_origin_counts": {
+    "CORRECT": 9,
+    "AMBIGUOUS": 1
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 1
+  },
+  "assignment_coverage": 0.8181818181818182,
+  "context_coverage": 0.09090909090909091,
+  "positive_correct_fraction": 0.9,
+  "negative_wrong_fraction": 0.0,
+  "correct_rejections": 1,
+  "roles": {
+    "retained": 9
+  },
+  "prediction_abstentions": {
+    "FACTOR_CONTINUATION_NOT_SPECIFIED": 8,
+    "AMBIGUOUS_CONTEXT": 1,
+    "ABSTAIN_NO_CONTEXT": 1
+  },
+  "paired": {
+    "count": 1,
+    "persistence_mae": 0.10201009114583333,
+    "context_mae": 0.0,
+    "delta": 0.10201009114583333,
+    "better": 1,
+    "equal": 0,
+    "worse": 0
+  },
+  "full_coverage": {
+    "count": 11,
+    "persistence_mae": 0.10597275242660985,
+    "observer_hybrid_mae": 0.09669910777698863,
+    "delta": 0.009273644649621212
+  },
+  "harm_rows": []
+}
+
+3. Gemeinsame Zielmengen und Vergleich
+Positive Delta bedeutet: Vergleichsarm-MAE minus getestete Policy-MAE. Konkrete Prognosen ausschliesslich auf identischen gemeinsam abgedeckten Zielmengen verglichen. Keine Enthaltung als MAE0 interpretiert.
+scaled_vs_legacy: Ziele F1; n=1, links MAE 0, rechts MAE 0, Delta 0; besser/gleich/schlechter=(0, 1, 0)
+scaled_vs_persistence: Ziele F1,FH,FD,GH,GD,GR,GP; n=7, links MAE 0.0729551769438, rechts MAE 0.125034150623, Delta 0.0520789736793; besser/gleich/schlechter=(6, 0, 1)
+legacy_vs_persistence: Ziele F1; n=1, links MAE 0, rechts MAE 0.102010091146, Delta 0.102010091146; besser/gleich/schlechter=(1, 0, 0)
+
+Festes Vollabdeckungsschema auf allen elf Zielen: H_scaled=scaled wenn konkrete Prognose vorhanden, sonst Persistenz; H_legacy entsprechend. Ausschliesslich Observer, kein Produkt-Fallback.
+{
+  "persistence": 0.10597275242660985,
+  "legacy": 0.09669910777698863,
+  "scaled": 0.07283158735795454,
+  "scaled_vs_persistence": 0.033141165068655304,
+  "scaled_vs_legacy": 0.023867520419034092
+}
+Die Schluessel legacy/scaled unter full_means/full_rows bezeichnen diese Beobachterschemata; die konkreten Werte stehen oben und unter policies.*.rows.context_mae.
+
+4. Alle Schadensfaelle auf den elf Pruefzielen
+Gegen Persistenz:
+[
+  {
+    "case_id": "GP",
+    "target": 11,
+    "persistence": 0.0,
+    "legacy": 0.0,
+    "scaled": 0.051005045572916664,
+    "scaled_vs_persistence": -0.051005045572916664,
+    "scaled_vs_legacy": -0.051005045572916664
+  }
+]
+Gegen Legacy-sonst-Persistenz:
+[
+  {
+    "case_id": "GP",
+    "target": 11,
+    "persistence": 0.0,
+    "legacy": 0.0,
+    "scaled": 0.051005045572916664,
+    "scaled_vs_persistence": -0.051005045572916664,
+    "scaled_vs_legacy": -0.051005045572916664
+  }
+]
+Enthaltung, eindeutige Herkunft und konkrete Prognose bleiben getrennt. Ein Gain aus dem Hinweis ist eine Hypothese fuer die Fortsetzung; Gainwechsel und GP werden nicht nachtraeglich ausgeschlossen.
+
+5. 48 Lernziele getrennt
+Die weiteren erreichbaren Ziele einschliesslich Uebergaenge zur Query gehoeren nicht zum Primaerergebnis. Herkunft extern aus der Zielposition; positive Lernherkunft nur bei vorher abgeschlossener Vierergruppe vor dem Hinweispaar. Keine Aenderung der vorab festgelegten elf Prueflabels.
+scaled:
+{
+  "total": 48,
+  "origin_counts": {
+    "ABSTAIN": 23,
+    "CORRECT": 20,
+    "WRONG": 4,
+    "AMBIGUOUS": 1
+  },
+  "positive_origin_counts": {
+    "CORRECT": 20,
+    "AMBIGUOUS": 1,
+    "WRONG": 1
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 23,
+    "WRONG": 3
+  },
+  "assignment_coverage": 0.5,
+  "context_coverage": 0.22916666666666666,
+  "positive_correct_fraction": 0.9090909090909091,
+  "negative_wrong_fraction": 0.11538461538461539,
+  "correct_rejections": 23,
+  "roles": {
+    "candidate": 23,
+    "retained": 1
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 23,
+    "ABSTAIN_NO_SUCCESSOR": 12,
+    "AMBIGUOUS_CONTEXT": 1,
+    "ABSTAIN_AMBIGUOUS_FACTOR": 1
+  },
+  "paired": {
+    "count": 11,
+    "persistence_mae": 0.1007519346294981,
+    "context_mae": 0.007289539683948864,
+    "delta": 0.09346239494554923,
+    "better": 11,
+    "equal": 0,
+    "worse": 0
+  },
+  "full_coverage": {
+    "count": 48,
+    "persistence_mae": 0.10253625445895724,
+    "observer_hybrid_mae": 0.08111778895060222,
+    "delta": 0.021418465508355033
+  },
+  "harm_rows": []
+}
+legacy:
+{
+  "total": 48,
+  "origin_counts": {
+    "ABSTAIN": 23,
+    "CORRECT": 20,
+    "WRONG": 4,
+    "AMBIGUOUS": 1
+  },
+  "positive_origin_counts": {
+    "CORRECT": 20,
+    "AMBIGUOUS": 1,
+    "WRONG": 1
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 23,
+    "WRONG": 3
+  },
+  "assignment_coverage": 0.5,
+  "context_coverage": 0.22916666666666666,
+  "positive_correct_fraction": 0.9090909090909091,
+  "negative_wrong_fraction": 0.11538461538461539,
+  "correct_rejections": 23,
+  "roles": {
+    "candidate": 23,
+    "retained": 1
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 23,
+    "ABSTAIN_NO_SUCCESSOR": 12,
+    "AMBIGUOUS_CONTEXT": 1,
+    "FACTOR_CONTINUATION_NOT_SPECIFIED": 1
+  },
+  "paired": {
+    "count": 11,
+    "persistence_mae": 0.1007519346294981,
+    "context_mae": 0.007289539683948864,
+    "delta": 0.09346239494554923,
+    "better": 11,
+    "equal": 0,
+    "worse": 0
+  },
+  "full_coverage": {
+    "count": 48,
+    "persistence_mae": 0.10253625445895724,
+    "observer_hybrid_mae": 0.08111778895060222,
+    "delta": 0.021418465508355033
+  },
+  "harm_rows": []
+}
+Lernziel-Vollabdeckung:
+{
+  "persistence": 0.10253625445895724,
+  "legacy": 0.08111778895060222,
+  "scaled": 0.08111778895060222,
+  "scaled_vs_persistence": 0.021418465508355033,
+  "scaled_vs_legacy": 0.0
+}
+Alle Lernziel-Schaeden gegen Persistenz:
+[]
+Alle Lernziel-Schaeden gegen Legacy-Beobachterschema:
+[]
+Jede Lernposition einschliesslich Einzel-MAE und gemeinsamer Masken steht unter result.json/learning_targets; nicht mit den elf Pruefzielen poolen.
+
+6. Separate Kandidaten-Rollenprobe
+Bestehendes A einmal regulaer aufnehmen, dann FH-Hinweis/Folgeframe.7 Frames pro Policy, Ziel7. Kein neues Material, keine Primaerziel-Erweiterung.
+{
+  "legacy": {
+    "case_id": "candidate_probe",
+    "target": 7,
+    "positive": true,
+    "origin_category": "CORRECT",
+    "assigned_root": "FC-EVAL/A",
+    "true_root": "FC-EVAL/A",
+    "role": "candidate",
+    "assignment_covered": true,
+    "correct_rejection": false,
+    "prediction_status": "FACTOR_CONTINUATION_NOT_SPECIFIED",
+    "context_covered": false,
+    "persistence_mae": 0.051005045572916664,
+    "context_mae": null,
+    "paired_delta": null,
+    "observer_hybrid_mae": 0.051005045572916664,
+    "full_delta": 0.0
+  },
+  "scaled": {
+    "case_id": "candidate_probe",
+    "target": 7,
+    "positive": true,
+    "origin_category": "CORRECT",
+    "assigned_root": "FC-EVAL/A",
+    "true_root": "FC-EVAL/A",
+    "role": "candidate",
+    "assignment_covered": true,
+    "correct_rejection": false,
+    "prediction_status": "PREDICTED_SCALED_CANDIDATE",
+    "context_covered": true,
+    "persistence_mae": 0.051005045572916664,
+    "context_mae": 0.0,
+    "paired_delta": 0.051005045572916664,
+    "observer_hybrid_mae": 0.0,
+    "full_delta": 0.051005045572916664
+  }
+}
+
+7. Kausalitaet, Zustand und Ressourcen
+Beide Policies pro Fall leer gestartet. Matchingreceipts, Speicherzustand nach jedem Frame, Endzustand und Aufnahmeordinale identisch; Vergleich gegen PairContextAdapter ohne Prognose ebenfalls Bestandteil jedes Replays. Keine Rueckspeisung von Prognose oder Prueferlabels.
+Jedes der129 Primaerframes pro Policy genau einmal aufgenommen;59 erreichbare Ziele=11 Pruefziele+48 Lernziele. Kandidatenprobe separat7 Frames. Zwei Policies bedeuten zwei getrennte Replays desselben exportierten Bestands, keine zweite Materialproduktion.
+Prognose vor Zielframeabruf und vor Hinweispaaraufnahme. FH/GH/GR/GP sowie FD/GD besitzen nachweislich gleiche Prognosen und Vorzustaende vor unterschiedlicher Fortsetzung. Prognoseslots nach Verbrauch/Abschluss frei.
+Ressourcen je Fall/Policy in verification.json; Kandidatenprobe in candidate-probe.json. Tupelbuilder ueber Generator-Yields als transienter Slot bilanziert; kein harter Prozess-RAM-Beleg.
+{
+  "frame_peak": 12,
+  "output_slots_peak": 2,
+  "combined_peak": 13,
+  "output_python_bytes_peak": 3642,
+  "builder_peak_components": 48,
+  "transient_output_slots_peak": 2,
+  "temporary_vector_lists": 0
+}
+Konservative Obergrenze Framepeak+2 Ausgaben: 14/20. Alle Builderzaehler am Ende0: True
+
+8. Aufbauabweichungen und Aussagegrenze
+[]
+Keine Ersatzdaten, Schwellen- oder Matchinganpassung. Es gelten nur die gebundenen synthetischen Adapteraufgaben; keine Audio-/NJ-Robustheit oder allgemeine Herkunftserkennung. Beide Partitionen sind jetzt bekannt und fuer geaenderte Regeln nicht mehr unberuehrt.
+
+9. Naechster Vorschlag
+Abgeschlossene Pruefung an den Projektleiter zur Statusentscheidung uebergeben. Empfehlung: factor_scaled_v1 als explizite optionale Fortsetzungshypothese erhalten, legacy_v1 weiterhin Standard; keine automatische Policywahl aus diesen Ergebnissen. Nutzen im festen Fallmix und einzelne Schaeden getrennt beurteilen. Keine erneute Produktion; geaenderte Regeln brauchen neue unberuehrte Pruefepisoden.
+
+10. FC-DEV und FC-EVAL separat (keine gemeinsame Erfolgsquote)
+Kennzahl | FC-DEV | FC-EVAL
+Persistenz-MAE | 0.09156406286991005 | 0.10597275242660985
+Legacy-sonst-Persistenz-MAE | 0.08484557180693655 | 0.09669910777698863
+Scaled-sonst-Persistenz-MAE | 0.07034417354699338 | 0.07283158735795454
+Delta scaled-Schema gegen Persistenz | 0.021219889322916664 | 0.033141165068655304
+Delta scaled-Schema gegen Legacy-Schema | 0.014501398259943182 | 0.023867520419034092
+Konkrete Prognoseabdeckung scaled | 7/11 | 7/11
+Konkrete Prognoseabdeckung legacy | 1/11 | 1/11
+Herkunft beider Policies je Partition:9 korrekt,1 mehrdeutig,1 Enthaltung. Numerische Prognoseenthaeltung bei ZF trotz eindeutiger Herkunft gesondert erhalten.
+Schadensfaelle gegen Persistenz/Legacy-Schema | GD,GP | GP
+GD bleibt in FC-EVAL vollstaendig enthalten; ein Schaden wird nicht aus dem Development-Befund auf andere Materialwerte uebertragen. Alle Einzelwerte bleiben in result.json.
+Kleine festgelegte Fallmischungen mit gemeinsamem Rezept; positive mittlere Deltas rechtfertigen keine allgemeine Garantie oder automatische Standardumschaltung.
+38 FC-DEV-Material-/Berichtsdateien unveraendert bestaetigt. Seeds und Basisepisoden-Hashes zwischen Partitionen disjunkt; gleiche Rezeptstruktur und gemeinsames Nullpraefix bleiben Abhaengigkeiten. Siehe partition-verification.json.
+Vorabbindung von Plan, Seeds, Generator, Policies, Observer und Laufzeit in freeze.json vor Produktion. Auswertung nur nach Partitions-/Ausgabewahl von FC-DEV uebertragen. Standard weiterhin legacy_v1; Statusentscheidung liegt beim Projektleiter.

@@ -1,0 +1,892 @@
+{
+  "status": "PASS",
+  "tests": 7,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "test_ids": [
+    "tests.test_s2uc_ar_material.ARMaterialTests.test_M1_values_derivations_profiles_roundtrip_reproducibility",
+    "tests.test_s2uc_ar_material.ARMaterialTests.test_M2_evaluation_calibration_seed_unused",
+    "tests.test_s2uc_ar_material.ARMaterialTests.test_M3_one_shot_and_no_overwrite",
+    "tests.test_s2uc_ar_material.ARMaterialTests.test_M4_limits_and_failure_closure",
+    "tests.test_s2uc_ar_material.ARMaterialTests.test_M5_authorization_shape_and_tampering",
+    "tests.test_s2uc_ar_material.ARMaterialTests.test_M6_export_observer_clear_labels",
+    "tests.test_s2uc_ar_material.ARMaterialTests.test_M7_seven_grid_selection_neutral_outcomes"
+  ],
+  "facts": {
+    "full_path": {
+      "folder": "reports\\s2uc\\ar-material-qualification-20261001-01\\test_M1_values_derivations_profiles_roundtrip_reproducibility-_6fxxezk\\first-material",
+      "files": 21,
+      "bytes": 131264,
+      "calibration_mean_absolute": 0.0009765625,
+      "interpretation": "recipe identity; not estimated noise floor"
+    },
+    "neutral_eval_seed_not_used": true,
+    "output_cap": {
+      "case_files": 0,
+      "case_frames": 0,
+      "charged_before_closure": 344,
+      "error": "AudioError:OUTPUT_LIMIT",
+      "partition": "NEUTRAL-DEV",
+      "status": "NOT_EVALUABLE"
+    },
+    "partial_failure": {
+      "case_files": 3,
+      "case_frames": 33,
+      "charged_before_closure": 49127,
+      "error": "OSError:NEUTRAL_EXPORT_FAILURE",
+      "partition": "NEUTRAL-DEV",
+      "status": "NOT_EVALUABLE"
+    },
+    "comparison": {
+      "path": "reports\\s2uc\\ar-material-qualification-20261001-01\\test_M6_export_observer_clear_labels-1ihjjeub\\comparison.json",
+      "labels": {
+        "exact_retrieval": "Exakter Abruf",
+        "signal_approx_retrieval": "Signal-/Naeherungsabruf"
+      },
+      "summary": {
+        "comparison": {
+          "policies": {
+            "exact_retrieval": {
+              "origin_and_prediction": {
+                "total": 11,
+                "origin_counts": {
+                  "CORRECT": 1,
+                  "ABSTAIN": 9,
+                  "WRONG": 1
+                },
+                "positive_origin_counts": {
+                  "CORRECT": 1,
+                  "ABSTAIN": 4
+                },
+                "negative_origin_counts": {
+                  "ABSTAIN": 5,
+                  "WRONG": 1
+                },
+                "assignment_coverage": 0.18181818181818182,
+                "context_coverage": 0.18181818181818182,
+                "positive_correct_fraction": 0.2,
+                "negative_wrong_fraction": 0.16666666666666666,
+                "correct_rejections": 5,
+                "roles": {
+                  "retained": 2
+                },
+                "prediction_abstentions": {
+                  "ABSTAIN_NO_CONTEXT": 9
+                },
+                "paired": {
+                  "count": 2,
+                  "persistence_mae": 0.06696065266927083,
+                  "context_mae": 0.027247111002604168,
+                  "delta": 0.039713541666666664,
+                  "better": 2,
+                  "equal": 0,
+                  "worse": 0
+                },
+                "full_coverage": {
+                  "count": 11,
+                  "persistence_mae": 0.03780582423011462,
+                  "observer_hybrid_mae": 0.03058518029072068,
+                  "delta": 0.007220643939393939
+                },
+                "harm_rows": []
+              },
+              "total": 11,
+              "context_covered": 2,
+              "assignment_covered": 2,
+              "rows": [
+                {
+                  "case_id": "R0",
+                  "target": 11,
+                  "positive": true,
+                  "origin_category": "CORRECT",
+                  "assigned_root": "NEUTRAL-DEV/A",
+                  "true_root": "NEUTRAL-DEV/A",
+                  "role": "retained",
+                  "assignment_covered": true,
+                  "correct_rejection": false,
+                  "prediction_status": "PREDICTED_RETAINED",
+                  "context_covered": true,
+                  "persistence_mae": 0.056299845377604164,
+                  "context_mae": 0.0,
+                  "paired_delta": 0.056299845377604164,
+                  "observer_hybrid_mae": 0.0,
+                  "full_delta": 0.056299845377604164
+                },
+                {
+                  "case_id": "R1",
+                  "target": 11,
+                  "positive": true,
+                  "origin_category": "ABSTAIN",
+                  "assigned_root": null,
+                  "true_root": "NEUTRAL-DEV/A",
+                  "role": null,
+                  "assignment_covered": false,
+                  "correct_rejection": false,
+                  "prediction_status": "ABSTAIN_NO_CONTEXT",
+                  "context_covered": false,
+                  "persistence_mae": 0.0561370849609375,
+                  "context_mae": null,
+                  "paired_delta": null,
+                  "observer_hybrid_mae": 0.0561370849609375,
+                  "full_delta": 0.0
+                },
+                {
+                  "case_id": "R2",
+                  "target": 11,
+                  "positive": true,
+                  "origin_category": "ABSTAIN",
+                  "assigned_root": null,
+                  "true_root": "NEUTRAL-DEV/A",
+                  "role": null,
+                  "assignment_covered": false,
+                  "correct_rejection": false,
+                  "prediction_status": "ABSTAIN_NO_CONTEXT",
+                  "context_covered": false,
+                  "persistence_mae": 0.056004842122395836,
+                  "context_mae": null,
+                  "paired_delta": null,
+                  "observer_hybrid_mae": 0.056004842122395836,
+                  "full_delta": 0.0
+                },
+                {
+                  "case_id": "R3",
+                  "target": 11,
+                  "positive": true,
+                  "origin_category": "ABSTAIN",
+                  "assigned_root": null,
+                  "true_root": "NEUTRAL-DEV/A",
+                  "role": null,
+                  "assignment_covered": false,
+                  "correct_rejection": false,
+                  "prediction_status": "ABSTAIN_NO_CONTEXT",
+                  "context_covered": false,
+                  "persistence_mae": 0.0,
+                  "context_mae": null,
+                  "paired_delta": null,
+                  "observer_hybrid_mae": 0.0,
+                  "full_delta": 0.0
+                },
+                {
+                  "case_id": "N1",
+                  "target": 11,
+                  "positive": false,
+                  "origin_category": "ABSTAIN",
+                  "assigned_root": null,
+                  "true_root": "NEUTRAL-DEV/B",
+                  "role": null,
+                  "assignment_covered": false,
+                  "correct_rejection": true,
+                  "prediction_status": "ABSTAIN_NO_CONTEXT",
+                  "context_covered": false,
+                  "persistence_mae": 0.06390380859375,
+                  "context_mae": null,
+                  "paired_delta": null,
+                  "observer_hybrid_mae": 0.06390380859375,
+                  "full_delta": 0.0
+                },
+                {
+                  "case_id": "N2",
+                  "target": 11,
+                  "positive": false,
+                  "origin_category": "ABSTAIN",
+                  "assigned_root": null,
+                  "true_root": "NEUTRAL-DEV/C",
+                  "role": null,
+                  "assignment_covered": false,
+                  "correct_rejection": true,
+                  "prediction_status": "ABSTAIN_NO_CONTEXT",
+                  "context_covered": false,
+                  "persistence_mae": 0.060694376627604164,
+                  "context_mae": null,
+                  "paired_delta": null,
+                  "observer_hybrid_mae": 0.060694376627604164,
+                  "full_delta": 0.0
+                },
+                {
+                  "case_id": "N3",
+                  "target": 11,
+                  "positive": false,
+                  "origin_category": "WRONG",
+                  "assigned_root": "NEUTRAL-DEV/A",
+                  "true_root": "NEUTRAL-DEV/D",
+                  "role": "retained",
+                  "assignment_covered": true,
+                  "correct_rejection": false,
+                  "prediction_status": "PREDICTED_RETAINED",
+                  "context_covered": true,
+                  "persistence_mae": 0.0776214599609375,
+                  "context_mae": 0.054494222005208336,
+                  "paired_delta": 0.023127237955729164,
+                  "observer_hybrid_mae": 0.054494222005208336,
+                  "full_delta": 0.023127237955729164
+                },
+                {
+                  "case_id": "N4",
+                  "target": 19,
+                  "positive": false,
+                  "origin_category": "ABSTAIN",
+                  "assigned_root": null,
+                  "true_root": "NEUTRAL-DEV/M",
+                  "role": null,
+                  "assignment_covered": false,
+                  "correct_rejection": true,
+                  "prediction_status": "ABSTAIN_NO_CONTEXT",
+                  "context_covered": false,
+                  "persistence_mae": 0.044293721516927086,
+                  "context_mae": null,
+                  "paired_delta": null,
+                  "observer_hybrid_mae": 0.044293721516927086,
+                  "full_delta": 0.0
+                },
+                {
+                  "case_id": "Z0",
+                  "target": 11,
+                  "positive": false,
+                  "origin_category": "ABSTAIN",
+                  "assigned_root": null,
+                  "true_root": "NEUTRAL-DEV/ZERO",
+                  "role": null,
+                  "assignment_covered": false,
+                  "correct_rejection": true,
+                  "prediction_status": "ABSTAIN_NO_CONTEXT",
+                  "context_covered": false,
+                  "persistence_mae": 0.0,
+                  "context_mae": null,
+                  "paired_delta": null,
+                  "observer_hybrid_mae": 0.0,
+                  "full_delta": 0.0
+                },
+                {
+                  "case_id": "Z1",
+                  "target": 11,
+                  "positive": false,
+                  "origin_category": "ABSTAIN",
+                  "assigned_root": null,
+                  "true_root": "NEUTRAL-DEV/NOISE",
+                  "role": null,
+                  "assignment_covered": false,
+                  "correct_rejection": true,
+                  "prediction_status": "ABSTAIN_NO_CONTEXT",
+                  "context_covered": false,
+                  "persistence_mae": 0.0008951822916666666,
+                  "context_mae": null,
+                  "paired_delta": null,
+                  "observer_hybrid_mae": 0.0008951822916666666,
+                  "full_delta": 0.0
+                },
+                {
+                  "case_id": "P0",
+                  "target": 11,
+                  "positive": true,
+                  "origin_category": "ABSTAIN",
+                  "assigned_root": null,
+                  "true_root": "NEUTRAL-DEV/A",
+                  "role": null,
+                  "assignment_covered": false,
+                  "correct_rejection": false,
+                  "prediction_status": "ABSTAIN_NO_CONTEXT",
+                  "context_covered": false,
+                  "persistence_mae": 1.3745079437891642e-05,
+                  "context_mae": null,
+                  "paired_delta": null,
+                  "observer_hybrid_mae": 1.3745079437891642e-05,
+                  "full_delta": 0.0
+                }
+              ]
+            },
+            "signal_approx_retrieval": {
+              "origin_and_prediction": {
+                "total": 11,
+                "origin_counts": {
+                  "CORRECT": 4,
+                  "ABSTAIN": 6,
+                  "WRONG": 1
+                },
+                "positive_origin_counts": {
+                  "CORRECT": 4,
+                  "ABSTAIN": 1
+                },
+                "negative_origin_counts": {
+                  "ABSTAIN": 5,
+                  "WRONG": 1
+                },
+                "assignment_coverage": 0.45454545454545453,
+                "context_coverage": 0.45454545454545453,
+                "positive_correct_fraction": 0.8,
+                "negative_wrong_fraction": 0.16666666666666666,
+                "correct_rejections": 5,
+                "roles": {
+                  "retained": 5
+                },
+                "prediction_abstentions": {
+                  "ABSTAIN_NO_CONTEXT": 6
+                },
+                "paired": {
+                  "count": 5,
+                  "persistence_mae": 0.049212646484375,
+                  "context_mae": 0.02212626139322917,
+                  "delta": 0.02708638509114583,
+                  "better": 4,
+                  "equal": 0,
+                  "worse": 1
+                },
+                "full_coverage": {
+                  "count": 11,
+                  "persistence_mae": 0.03780582423011462,
+                  "observer_hybrid_mae": 0.025493831006866516,
+                  "delta": 0.012311993223248106
+                },
+                "harm_rows": [
+                  {
+                    "case_id": "R3",
+                    "target": 11,
+                    "positive": true,
+                    "origin_category": "CORRECT",
+                    "assigned_root": "NEUTRAL-DEV/A",
+                    "true_root": "NEUTRAL-DEV/A",
+                    "role": "retained",
+                    "assignment_covered": true,
+                    "correct_rejection": false,
+                    "prediction_status": "PREDICTED_RETAINED",
+                    "context_covered": true,
+                    "persistence_mae": 0.0,
+                    "context_mae": 0.0561370849609375,
+                    "paired_delta": -0.0561370849609375,
+                    "observer_hybrid_mae": 0.0561370849609375,
+                    "full_delta": -0.0561370849609375
+                  }
+                ]
+              },
+              "total": 11,
+              "context_covered": 5,
+              "assignment_covered": 5,
+              "rows": [
+                {
+                  "case_id": "R0",
+                  "target": 11,
+                  "positive": true,
+                  "origin_category": "CORRECT",
+                  "assigned_root": "NEUTRAL-DEV/A",
+                  "true_root": "NEUTRAL-DEV/A",
+                  "role": "retained",
+                  "assignment_covered": true,
+                  "correct_rejection": false,
+                  "prediction_status": "PREDICTED_RETAINED",
+                  "context_covered": true,
+                  "persistence_mae": 0.056299845377604164,
+                  "context_mae": 0.0,
+                  "paired_delta": 0.056299845377604164,
+                  "observer_hybrid_mae": 0.0,
+                  "full_delta": 0.056299845377604164
+                },
+                {
+                  "case_id": "R1",
+                  "target": 11,
+                  "positive": true,
+                  "origin_category": "CORRECT",
+                  "assigned_root": "NEUTRAL-DEV/A",
+                  "true_root": "NEUTRAL-DEV/A",
+                  "role": "retained",
+                  "assignment_covered": true,
+                  "correct_rejection": false,
+                  "prediction_status": "PREDICTED_RETAINED",
+                  "context_covered": true,
+                  "persistence_mae": 0.0561370849609375,
+                  "context_mae": 0.0,
+                  "paired_delta": 0.0561370849609375,
+                  "observer_hybrid_mae": 0.0,
+                  "full_delta": 0.0561370849609375
+                },
+                {
+                  "case_id": "R2",
+                  "target": 11,
+                  "positive": true,
+                  "origin_category": "CORRECT",
+                  "assigned_root": "NEUTRAL-DEV/A",
+                  "true_root": "NEUTRAL-DEV/A",
+                  "role": "retained",
+                  "assignment_covered": true,
+                  "correct_rejection": false,
+                  "prediction_status": "PREDICTED_RETAINED",
+                  "context_covered": true,
+                  "persistence_mae": 0.056004842122395836,
+                  "context_mae": 0.0,
+                  "paired_delta": 0.056004842122395836,
+                  "observer_hybrid_mae": 0.0,
+                  "full_delta": 0.056004842122395836
+                },
+                {
+                  "case_id": "R3",
+                  "target": 11,
+                  "positive": true,
+                  "origin_category": "CORRECT",
+                  "assigned_root": "NEUTRAL-DEV/A",
+                  "true_root": "NEUTRAL-DEV/A",
+                  "role": "retained",
+                  "assignment_covered": true,
+                  "correct_rejection": false,
+                  "prediction_status": "PREDICTED_RETAINED",
+                  "context_covered": true,
+                  "persistence_mae": 0.0,
+                  "context_mae": 0.0561370849609375,
+                  "paired_delta": -0.0561370849609375,
+                  "observer_hybrid_mae": 0.0561370849609375,
+                  "full_delta": -0.0561370849609375
+                },
+                {
+                  "case_id": "N1",
+                  "target": 11,
+                  "positive": false,
+                  "origin_category": "ABSTAIN",
+                  "assigned_root": null,
+                  "true_root": "NEUTRAL-DEV/B",
+                  "role": null,
+                  "assignment_covered": false,
+                  "correct_rejection": true,
+                  "prediction_status": "ABSTAIN_NO_CONTEXT",
+                  "context_covered": false,
+                  "persistence_mae": 0.06390380859375,
+                  "context_mae": null,
+                  "paired_delta": null,
+                  "observer_hybrid_mae": 0.06390380859375,
+                  "full_delta": 0.0
+                },
+                {
+                  "case_id": "N2",
+                  "target": 11,
+                  "positive": false,
+                  "origin_category": "ABSTAIN",
+                  "assigned_root": null,
+                  "true_root": "NEUTRAL-DEV/C",
+                  "role": null,
+                  "assignment_covered": false,
+                  "correct_rejection": true,
+                  "prediction_status": "ABSTAIN_NO_CONTEXT",
+                  "context_covered": false,
+                  "persistence_mae": 0.060694376627604164,
+                  "context_mae": null,
+                  "paired_delta": null,
+                  "observer_hybrid_mae": 0.060694376627604164,
+                  "full_delta": 0.0
+                },
+                {
+                  "case_id": "N3",
+                  "target": 11,
+                  "positive": false,
+                  "origin_category": "WRONG",
+                  "assigned_root": "NEUTRAL-DEV/A",
+                  "true_root": "NEUTRAL-DEV/D",
+                  "role": "retained",
+                  "assignment_covered": true,
+                  "correct_rejection": false,
+                  "prediction_status": "PREDICTED_RETAINED",
+                  "context_covered": true,
+                  "persistence_mae": 0.0776214599609375,
+                  "context_mae": 0.054494222005208336,
+                  "paired_delta": 0.023127237955729164,
+                  "observer_hybrid_mae": 0.054494222005208336,
+                  "full_delta": 0.023127237955729164
+                },
+                {
+                  "case_id": "N4",
+                  "target": 19,
+                  "positive": false,
+                  "origin_category": "ABSTAIN",
+                  "assigned_root": null,
+                  "true_root": "NEUTRAL-DEV/M",
+                  "role": null,
+                  "assignment_covered": false,
+                  "correct_rejection": true,
+                  "prediction_status": "ABSTAIN_NO_CONTEXT",
+                  "context_covered": false,
+                  "persistence_mae": 0.044293721516927086,
+                  "context_mae": null,
+                  "paired_delta": null,
+                  "observer_hybrid_mae": 0.044293721516927086,
+                  "full_delta": 0.0
+                },
+                {
+                  "case_id": "Z0",
+                  "target": 11,
+                  "positive": false,
+                  "origin_category": "ABSTAIN",
+                  "assigned_root": null,
+                  "true_root": "NEUTRAL-DEV/ZERO",
+                  "role": null,
+                  "assignment_covered": false,
+                  "correct_rejection": true,
+                  "prediction_status": "ABSTAIN_NO_CONTEXT",
+                  "context_covered": false,
+                  "persistence_mae": 0.0,
+                  "context_mae": null,
+                  "paired_delta": null,
+                  "observer_hybrid_mae": 0.0,
+                  "full_delta": 0.0
+                },
+                {
+                  "case_id": "Z1",
+                  "target": 11,
+                  "positive": false,
+                  "origin_category": "ABSTAIN",
+                  "assigned_root": null,
+                  "true_root": "NEUTRAL-DEV/NOISE",
+                  "role": null,
+                  "assignment_covered": false,
+                  "correct_rejection": true,
+                  "prediction_status": "ABSTAIN_NO_CONTEXT",
+                  "context_covered": false,
+                  "persistence_mae": 0.0008951822916666666,
+                  "context_mae": null,
+                  "paired_delta": null,
+                  "observer_hybrid_mae": 0.0008951822916666666,
+                  "full_delta": 0.0
+                },
+                {
+                  "case_id": "P0",
+                  "target": 11,
+                  "positive": true,
+                  "origin_category": "ABSTAIN",
+                  "assigned_root": null,
+                  "true_root": "NEUTRAL-DEV/A",
+                  "role": null,
+                  "assignment_covered": false,
+                  "correct_rejection": false,
+                  "prediction_status": "ABSTAIN_NO_CONTEXT",
+                  "context_covered": false,
+                  "persistence_mae": 1.3745079437891642e-05,
+                  "context_mae": null,
+                  "paired_delta": null,
+                  "observer_hybrid_mae": 1.3745079437891642e-05,
+                  "full_delta": 0.0
+                }
+              ]
+            }
+          },
+          "paired": {
+            "signal_approx_retrieval_vs_exact_retrieval": {
+              "rows": [
+                {
+                  "case_id": "R0",
+                  "target": 11,
+                  "left": 0.0,
+                  "right": 0.0,
+                  "delta": 0.0
+                },
+                {
+                  "case_id": "N3",
+                  "target": 11,
+                  "left": 0.054494222005208336,
+                  "right": 0.054494222005208336,
+                  "delta": 0.0
+                }
+              ],
+              "count": 2,
+              "left_mae": 0.027247111002604168,
+              "right_mae": 0.027247111002604168,
+              "delta": 0.0,
+              "better": 0,
+              "equal": 2,
+              "worse": 0,
+              "harms": []
+            },
+            "signal_approx_retrieval_vs_persistence": {
+              "rows": [
+                {
+                  "case_id": "R0",
+                  "target": 11,
+                  "left": 0.0,
+                  "right": 0.056299845377604164,
+                  "delta": 0.056299845377604164
+                },
+                {
+                  "case_id": "R1",
+                  "target": 11,
+                  "left": 0.0,
+                  "right": 0.0561370849609375,
+                  "delta": 0.0561370849609375
+                },
+                {
+                  "case_id": "R2",
+                  "target": 11,
+                  "left": 0.0,
+                  "right": 0.056004842122395836,
+                  "delta": 0.056004842122395836
+                },
+                {
+                  "case_id": "R3",
+                  "target": 11,
+                  "left": 0.0561370849609375,
+                  "right": 0.0,
+                  "delta": -0.0561370849609375
+                },
+                {
+                  "case_id": "N3",
+                  "target": 11,
+                  "left": 0.054494222005208336,
+                  "right": 0.0776214599609375,
+                  "delta": 0.023127237955729164
+                }
+              ],
+              "count": 5,
+              "left_mae": 0.02212626139322917,
+              "right_mae": 0.049212646484375,
+              "delta": 0.02708638509114583,
+              "better": 4,
+              "equal": 0,
+              "worse": 1,
+              "harms": [
+                {
+                  "case_id": "R3",
+                  "target": 11,
+                  "left": 0.0561370849609375,
+                  "right": 0.0,
+                  "delta": -0.0561370849609375
+                }
+              ]
+            },
+            "exact_retrieval_vs_persistence": {
+              "rows": [
+                {
+                  "case_id": "R0",
+                  "target": 11,
+                  "left": 0.0,
+                  "right": 0.056299845377604164,
+                  "delta": 0.056299845377604164
+                },
+                {
+                  "case_id": "N3",
+                  "target": 11,
+                  "left": 0.054494222005208336,
+                  "right": 0.0776214599609375,
+                  "delta": 0.023127237955729164
+                }
+              ],
+              "count": 2,
+              "left_mae": 0.027247111002604168,
+              "right_mae": 0.06696065266927083,
+              "delta": 0.039713541666666664,
+              "better": 2,
+              "equal": 0,
+              "worse": 0,
+              "harms": []
+            }
+          },
+          "full_rows": [
+            {
+              "case_id": "R0",
+              "target": 11,
+              "persistence": 0.056299845377604164,
+              "exact_retrieval": 0.0,
+              "signal_approx_retrieval": 0.0,
+              "signal_approx_retrieval_vs_persistence": 0.056299845377604164,
+              "signal_approx_retrieval_vs_exact_retrieval": 0.0
+            },
+            {
+              "case_id": "R1",
+              "target": 11,
+              "persistence": 0.0561370849609375,
+              "exact_retrieval": 0.0561370849609375,
+              "signal_approx_retrieval": 0.0,
+              "signal_approx_retrieval_vs_persistence": 0.0561370849609375,
+              "signal_approx_retrieval_vs_exact_retrieval": 0.0561370849609375
+            },
+            {
+              "case_id": "R2",
+              "target": 11,
+              "persistence": 0.056004842122395836,
+              "exact_retrieval": 0.056004842122395836,
+              "signal_approx_retrieval": 0.0,
+              "signal_approx_retrieval_vs_persistence": 0.056004842122395836,
+              "signal_approx_retrieval_vs_exact_retrieval": 0.056004842122395836
+            },
+            {
+              "case_id": "R3",
+              "target": 11,
+              "persistence": 0.0,
+              "exact_retrieval": 0.0,
+              "signal_approx_retrieval": 0.0561370849609375,
+              "signal_approx_retrieval_vs_persistence": -0.0561370849609375,
+              "signal_approx_retrieval_vs_exact_retrieval": -0.0561370849609375
+            },
+            {
+              "case_id": "N1",
+              "target": 11,
+              "persistence": 0.06390380859375,
+              "exact_retrieval": 0.06390380859375,
+              "signal_approx_retrieval": 0.06390380859375,
+              "signal_approx_retrieval_vs_persistence": 0.0,
+              "signal_approx_retrieval_vs_exact_retrieval": 0.0
+            },
+            {
+              "case_id": "N2",
+              "target": 11,
+              "persistence": 0.060694376627604164,
+              "exact_retrieval": 0.060694376627604164,
+              "signal_approx_retrieval": 0.060694376627604164,
+              "signal_approx_retrieval_vs_persistence": 0.0,
+              "signal_approx_retrieval_vs_exact_retrieval": 0.0
+            },
+            {
+              "case_id": "N3",
+              "target": 11,
+              "persistence": 0.0776214599609375,
+              "exact_retrieval": 0.054494222005208336,
+              "signal_approx_retrieval": 0.054494222005208336,
+              "signal_approx_retrieval_vs_persistence": 0.023127237955729164,
+              "signal_approx_retrieval_vs_exact_retrieval": 0.0
+            },
+            {
+              "case_id": "N4",
+              "target": 19,
+              "persistence": 0.044293721516927086,
+              "exact_retrieval": 0.044293721516927086,
+              "signal_approx_retrieval": 0.044293721516927086,
+              "signal_approx_retrieval_vs_persistence": 0.0,
+              "signal_approx_retrieval_vs_exact_retrieval": 0.0
+            },
+            {
+              "case_id": "Z0",
+              "target": 11,
+              "persistence": 0.0,
+              "exact_retrieval": 0.0,
+              "signal_approx_retrieval": 0.0,
+              "signal_approx_retrieval_vs_persistence": 0.0,
+              "signal_approx_retrieval_vs_exact_retrieval": 0.0
+            },
+            {
+              "case_id": "Z1",
+              "target": 11,
+              "persistence": 0.0008951822916666666,
+              "exact_retrieval": 0.0008951822916666666,
+              "signal_approx_retrieval": 0.0008951822916666666,
+              "signal_approx_retrieval_vs_persistence": 0.0,
+              "signal_approx_retrieval_vs_exact_retrieval": 0.0
+            },
+            {
+              "case_id": "P0",
+              "target": 11,
+              "persistence": 1.3745079437891642e-05,
+              "exact_retrieval": 1.3745079437891642e-05,
+              "signal_approx_retrieval": 1.3745079437891642e-05,
+              "signal_approx_retrieval_vs_persistence": 0.0,
+              "signal_approx_retrieval_vs_exact_retrieval": 0.0
+            }
+          ],
+          "full_means": {
+            "persistence": 0.03780582423011462,
+            "exact_retrieval": 0.03058518029072068,
+            "signal_approx_retrieval": 0.025493831006866516,
+            "signal_approx_retrieval_vs_persistence": 0.012311993223248106,
+            "signal_approx_retrieval_vs_exact_retrieval": 0.005091349283854167
+          },
+          "harms_against_persistence": [
+            {
+              "case_id": "R3",
+              "target": 11,
+              "persistence": 0.0,
+              "exact_retrieval": 0.0,
+              "signal_approx_retrieval": 0.0561370849609375,
+              "signal_approx_retrieval_vs_persistence": -0.0561370849609375,
+              "signal_approx_retrieval_vs_exact_retrieval": -0.0561370849609375
+            }
+          ],
+          "harms_against_exact_retrieval": [
+            {
+              "case_id": "R3",
+              "target": 11,
+              "persistence": 0.0,
+              "exact_retrieval": 0.0,
+              "signal_approx_retrieval": 0.0561370849609375,
+              "signal_approx_retrieval_vs_persistence": -0.0561370849609375,
+              "signal_approx_retrieval_vs_exact_retrieval": -0.0561370849609375
+            }
+          ],
+          "learning_targets": {
+            "R0": [
+              3,
+              5,
+              7,
+              9
+            ],
+            "R1": [
+              3,
+              5,
+              7,
+              9
+            ],
+            "R2": [
+              3,
+              5,
+              7,
+              9
+            ],
+            "R3": [
+              3,
+              5,
+              7,
+              9
+            ],
+            "N1": [
+              3,
+              5,
+              7,
+              9
+            ],
+            "N2": [
+              3,
+              5,
+              7,
+              9
+            ],
+            "N3": [
+              3,
+              5,
+              7,
+              9
+            ],
+            "N4": [
+              3,
+              5,
+              7,
+              9,
+              11,
+              13,
+              15,
+              17
+            ],
+            "Z0": [
+              3,
+              5,
+              7,
+              9
+            ],
+            "Z1": [
+              3,
+              5,
+              7,
+              9
+            ],
+            "P0": [
+              3,
+              5,
+              7,
+              9
+            ]
+          }
+        },
+        "additional_wrong": [],
+        "lost_exact_assignments": [],
+        "signal_lost_exact_assignments": [],
+        "lost_correct_exact": [],
+        "admissible_no_new_wrong": true
+      }
+    },
+    "selection_test": "seven-grid/no-new-wrong/R1-R2-only/tie-minimum/no-gain/ref-consistency PASS; hand-authored outcomes only"
+  },
+  "plan_sha256": "40410b187f813cb546e44cca01ac353f85bdc70d4b29e5b0fc057ac3f6feb5fd",
+  "binding_sha256": "87306a9ef5e67c47fd99d0643a38513dae40ad7f684ccbae898fff7801f9257e",
+  "AR_DEV_unproduced": true,
+  "AR_EVAL_unproduced": true,
+  "AR_parameter_search_not_run": true
+}

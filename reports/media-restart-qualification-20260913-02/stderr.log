@@ -1,0 +1,83 @@
+test_01_independent_reference_resolution (tests.test_media_restart_closure.Closure.test_01_independent_reference_resolution) ... ok
+test_02_changed_reference_rejections (tests.test_media_restart_closure.Closure.test_02_changed_reference_rejections) ... ok
+test_03_budget_boundary_all_progress_positions (tests.test_media_restart_closure.Closure.test_03_budget_boundary_all_progress_positions) ... ok
+test_04_reserved_primary_failure_after_native_formation (tests.test_media_restart_closure.Closure.test_04_reserved_primary_failure_after_native_formation) ... ok
+test_05_native_stages (tests.test_media_restart_closure.Closure.test_05_native_stages) ... FAIL
+test_06_early_comparisons (tests.test_media_restart_closure.Closure.test_06_early_comparisons) ... ERROR
+test_07_late_comparisons (tests.test_media_restart_closure.Closure.test_07_late_comparisons) ... ERROR
+test_08_position_rejection (tests.test_media_restart_closure.Closure.test_08_position_rejection) ... ok
+test_09_source_rejection (tests.test_media_restart_closure.Closure.test_09_source_rejection) ... ok
+test_10_consumed_checkpoint (tests.test_media_restart_closure.Closure.test_10_consumed_checkpoint) ... ok
+test_11_player_preserves_primary_closure (tests.test_media_restart_closure.Closure.test_11_player_preserves_primary_closure) ... ok
+
+======================================================================
+ERROR: test_06_early_comparisons (tests.test_media_restart_closure.Closure.test_06_early_comparisons)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_media_restart_closure.py", line 181, in test_06_early_comparisons
+    self.compare("early")
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_media_restart_closure.py", line 160, in compare
+    proof = p.verify_comparison(store, manifest, "reference", arm+"-save", arm+"-restore")
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_media_restart_player.py", line 100, in verify_comparison
+    store.publish(claim, dict(uses=1, manifest=manifest.manifest_digest))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_media_restart_evidence.py", line 164, in publish
+    self._write(path, canonical(packed), "metadata")
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_media_restart_evidence.py", line 74, in _write
+    require(not ledger["violations"], "MEDIA_STORE_BUDGET", dict(
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        version=VERSION, primary_code="MEDIA_STORE_BUDGET", **self.context,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        reserved_administrative_closure_bytes=ADMIN_CLOSURE_RESERVE,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        limits=dict(LIMITS), violations=ledger["violations"]))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_media_restart_work.py", line 24, in require
+    raise RestartError(code, details)
+tools._media_restart_work.RestartError: MEDIA_STORE_BUDGET
+
+======================================================================
+ERROR: test_07_late_comparisons (tests.test_media_restart_closure.Closure.test_07_late_comparisons)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_media_restart_closure.py", line 184, in test_07_late_comparisons
+    self.compare("late")
+    ~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_media_restart_closure.py", line 160, in compare
+    proof = p.verify_comparison(store, manifest, "reference", arm+"-save", arm+"-restore")
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_media_restart_player.py", line 100, in verify_comparison
+    store.publish(claim, dict(uses=1, manifest=manifest.manifest_digest))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_media_restart_evidence.py", line 164, in publish
+    self._write(path, canonical(packed), "metadata")
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_media_restart_evidence.py", line 74, in _write
+    require(not ledger["violations"], "MEDIA_STORE_BUDGET", dict(
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        version=VERSION, primary_code="MEDIA_STORE_BUDGET", **self.context,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        reserved_administrative_closure_bytes=ADMIN_CLOSURE_RESERVE,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        limits=dict(LIMITS), violations=ledger["violations"]))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_media_restart_work.py", line 24, in require
+    raise RestartError(code, details)
+tools._media_restart_work.RestartError: MEDIA_STORE_BUDGET
+
+======================================================================
+FAIL: test_05_native_stages (tests.test_media_restart_closure.Closure.test_05_native_stages)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_media_restart_closure.py", line 152, in test_05_native_stages
+    self.assertEqual(result.returncode, 0, folder+": native technical status failed")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : late-restore: native technical status failed
+
+----------------------------------------------------------------------
+Ran 11 tests in 92.751s
+
+FAILED (failures=1, errors=2)

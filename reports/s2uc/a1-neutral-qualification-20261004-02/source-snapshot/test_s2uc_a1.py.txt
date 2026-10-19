@@ -1,0 +1,168 @@
+"""A1 neutral acceptance. Never reads T1/F sources."""
+import json
+import unittest
+from tools import _s2uc_a1 as a1
+from tools._s2uc_a1_probe import probe
+from tools._s2uc_multi_error import POLICY as MULTI,CELL,MultiErrorAdapter
+from tools._s2tu_retained_trace import Frame
+from tools._s2uc_k1_probe import snapshot,cellmap
+
+OUTPUT=None
+FACTS={}
+
+
+def vector(n):return tuple(.125+(n+1)/512+j/262144 for j in range(48))
+
+
+def save_probe(name,indices,**kwargs):
+    result=probe(indices,**kwargs)
+    FACTS[name]={k:result[k] for k in ('frames','enabled','trace','resources','reference_equal','cleanup')}
+    if OUTPUT is not None:(OUTPUT/(name+'.json')).write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
+    return result
+
+
+def ready(retained=(),candidate=(0,1,2,3)):
+    a=a1.create('a'*64,'neutral-a1','stream',admission_policy=a1.POLICY,multi_policy=MULTI)
+    n=0
+    for block in [b for r in retained for b in (r,r)]+[candidate]:
+        for value in block:
+            n+=1;a.arm.form(Frame(vector(value),'a'*64,'neutral-a1',f'p{(n-1)//4+1}',n))
+        a.arm.close_segment(f'p{(n-1)//4+1}')
+    return a,n
+
+
+def receipt(a,n,pair=(0,1),*,ordinals=None):
+    ordinals=ordinals or (n+1,n+2)
+    a.pair=[Frame(vector(v),'a'*64,'neutral-a1','hint',o) for v,o in zip(pair,ordinals)]
+    assert a.arm.hint(a.pair[0]) is None
+    result=a.arm.hint(a.pair[1])
+    return a._receipt(result['decision'],[n+1,n+2],[(n*4800,(n+1)*4800),((n+1)*4800,(n+2)*4800)],result['matches'])
+
+
+class A1Tests(unittest.TestCase):
+    def test_A01_cycle_warm_retrieval_and_new_candidate(self):
+        story=[0,1,2,3,4,5,0,1,2,6,0,1,2,7,8,9]
+        r=save_probe('A01_cycle',story);u=save_probe('A01_U',story,enabled=False)
+        f=r['forecasts'][3]
+        self.assertEqual(f['a1_admission']['reason'],'PARTIAL_RETRIEVAL_ADMISSION')
+        self.assertEqual(f['a1_admission']['hints'],[7,8])
+        self.assertTrue(r['rows'][3]['updates'][0]['live'])
+        self.assertEqual(next(x for x in r['rows'] if x['target']==13)['error'],0)
+        self.assertGreater(next(x for x in u['rows'] if x['target']==13)['error'],0)
+        self.assertEqual(r['states'][7]['stock']['candidate']['ordinals'],[5,6,7,8])
+
+    def test_A02_ambiguity_even_equal_successors(self):
+        for retained,candidate,pair in [([(0,1,2,3)],(0,1,2,4),(0,1)),([],(0,0,0,0),(0,0)),([],(0,0,0,1),(0,0))]:
+            a,n=ready(retained,candidate);before=snapshot(a.arm)
+            try:
+                f=json.loads(receipt(a,n,pair).json_text)
+                self.assertIsNone(f['a1_admission']);self.assertEqual(snapshot(a.arm),before)
+            finally:a._terminate()
+
+    def test_A03_full_confirmation_priority(self):
+        a,n=ready([(4,5,0,1)])
+        try:
+            for i,v in enumerate((4,5),n+1):a.arm.form(Frame(vector(v),'a'*64,'neutral-a1','hint',i))
+            f=json.loads(receipt(a,n+2).json_text)
+            self.assertIsNone(f['a1_admission']);self.assertIsNotNone(a.arm._candidate)
+            for frame in a.pair:a.arm.form(frame)
+            event=a.arm.close_segment('hint')
+            self.assertEqual(event['action'],'TRACE_CONFIRMED_RECENT')
+        finally:a._terminate()
+
+    def test_A04_self_overlap_and_unqualified_matches(self):
+        for ords in ((1,2),(3,4)):
+            a,n=ready()
+            try:self.assertIsNone(json.loads(receipt(a,n,ordinals=ords).json_text)['a1_admission'])
+            finally:a._terminate()
+        a,n=ready()
+        try:self.assertIsNone(json.loads(receipt(a,n,(2,3)).json_text)['a1_admission'])
+        finally:a._terminate()
+
+    def test_A05_cells_original_identity_and_victim(self):
+        a,n=ready([(4,5,6,7),(8,9,10,11)])
+        try:
+            old=a.arm._candidate;frames=old.frames;victim=a.arm._retained_many[0]
+            CELL.pack_into(a.bank,0,victim.generation,.02,.03,0,0,0,1)
+            for off in (0,1):CELL.pack_into(a.bank,(off+1)*32,old.candidate_generation,.001+off,.002+off,1,off,0,1)
+            r=json.loads(receipt(a,n).json_text);new=a.arm._retained_many[-1]
+            self.assertIs(new.frames,frames)
+            self.assertEqual(r['a1_admission']['victim']['generation'],victim.generation)
+            self.assertEqual(cellmap(a),{(0,new.generation,off):(.001+off,.002+off) for off in (0,1)})
+            self.assertEqual(a.arm._observation_end[new.generation],n)
+            self.assertEqual(r['read_revision'],1)
+            self.assertFalse(r['a1_admission']['full_repeat'])
+        finally:a._terminate()
+
+    def test_A06_harm_and_warm_victim_loss(self):
+        story=[0,1,2,3,4,5,0,1,2,6,0,1,0,7,0,1]
+        r=save_probe('A06_harm_A1',story);u=save_probe('A06_harm_U',story,enabled=False)
+        self.assertGreater(next(x['error'] for x in r['rows'] if x['target']==13),next(x['error'] for x in u['rows'] if x['target']==13))
+        story=[0,1,2,3]*2+[4,5,6,7]*2+[8,9,10,11]+[12,13,8,9]+[10,14,0,1]+[2,15]
+        r=save_probe('A06_victim_A1',story);u=save_probe('A06_victim_U',story,enabled=False)
+        f=r['forecasts'][11]
+        self.assertEqual(f['a1_admission']['victim']['ordinals'],[1,2,3,4])
+        self.assertTrue(any(x['key'][:2]==[0,1] for x in r['states'][21]['cells']))
+        self.assertGreater(next(x['error'] for x in r['rows'] if x['target']==29),next(x['error'] for x in u['rows'] if x['target']==29))
+
+    def test_A07_no_rejuvenation_on_retained_retrieval(self):
+        a,n=ready([(0,1,2,3),(4,5,6,7)],(8,9,10,11));before=snapshot(a.arm)
+        try:
+            f=json.loads(receipt(a,n).json_text)
+            self.assertIsNone(f['a1_admission']);self.assertEqual(snapshot(a.arm),before)
+        finally:a._terminate()
+
+    def test_A08_failure_atomicity_closed_empty(self):
+        stages=['a1_prepared','a1_evicted','a1_moved','promotion_generation','promotion_role',
+                'a1_cells','a1_revision','frozen','a1_receipt']
+        for stage in stages:
+            a,n=ready([(4,5,6,7),(8,9,10,11)])
+            CELL.pack_into(a.bank,0,a.arm._candidate.candidate_generation,.01,.02,1,0,0,1)
+            def fail(s,index):
+                if s==stage:raise RuntimeError('INJECTED:'+stage)
+            a._checkpoint=fail
+            with self.assertRaisesRegex(RuntimeError,'INJECTED'):receipt(a,n)
+            self.assertTrue(a.closed);self.assertIsNone(a.arm._candidate)
+            self.assertEqual(a.arm._retained_many,[]);self.assertEqual(a.arm._forming,[])
+            self.assertFalse(any(a.bank));self.assertFalse(any(a._frozen));self.assertIsNone(a.pending_prediction)
+
+    def test_A09_limits_scope_and_defaults(self):
+        a=a1.create('a'*64,'neutral-a1','stream')
+        self.assertIs(type(a),MultiErrorAdapter);self.assertIsNone(a.bank);a._terminate()
+        with self.assertRaises(ValueError):a1.create('a'*64,'neutral-a1','stream',admission_policy=a1.POLICY)
+        for fault in ('generation','scope','pending'):
+            a,n=ready()
+            if fault=='generation':a.arm._retained_generation=2**64-1
+            elif fault=='scope':a._feedback_scope=('invalid',)
+            else:a.pending_prediction=object()
+            with self.assertRaises(ValueError):receipt(a,n)
+            self.assertTrue(a.closed);self.assertFalse(any(a.bank))
+        save_probe('A09_partial',[0,1,2])
+
+    def test_A10_full_resource_heap_and_trace(self):
+        story=[0,1,2,3]*2+[4,5,6,7]*2+[8,9,10,11]+[12,13,8,9]+[10,14,0,1]+[2,15]
+        h=save_probe('A10_heap',story);t=save_probe('A10_trace',story,trace=True)
+        self.assertEqual(h['rows'],t['rows']);self.assertEqual(h['forecasts'],t['forecasts'])
+        self.assertLessEqual(h['resources']['additional_python_peak'],16384)
+        self.assertLessEqual(t['resources']['original_frames_peak'],18)
+        self.assertEqual(t['resources']['output_slots_peak'],2)
+        self.assertLessEqual(t['resources']['combined_peak'],20)
+
+    def test_A11_U_factory_equivalence_and_inherited_methods(self):
+        from tools._s2uc_factor_recency import FactorRecencyArm
+        from tools._s2uc_pair_context_adapter import PerceptionSample
+        a=a1.create('a'*64,'neutral-a1','stream',multi_policy=MULTI)
+        b=MultiErrorAdapter(FactorRecencyArm('a'*64,'neutral-a1'),'stream',multi_policy=MULTI)
+        try:
+            for i,n in enumerate([0,1,2,3]*3,1):
+                s=PerceptionSample(vector(n),'a'*64,'neutral-a1','stream',i,(i-1)*4800,i*4800)
+                for x in (a,b):
+                    if x.pending_prediction:x.consume_feedback(s)
+                ra=a.accept_perception(s);rb=b.accept_perception(s)
+                self.assertEqual(ra,rb);self.assertEqual(a.bank,b.bank);self.assertEqual(snapshot(a.arm),snapshot(b.arm))
+        finally:a._terminate();b._terminate()
+        for name in ('consume_feedback','_admit','_prune','_promote'):
+            self.assertIs(getattr(a1.A1Adapter,name),getattr(MultiErrorAdapter,name))
+
+
+if __name__=='__main__':unittest.main()

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "seeds_disjoint": true,
+  "base_episode_hashes_disjoint": true,
+  "development_preserved_files": 38,
+  "default_policy": "legacy_v1",
+  "common_recipe_and_zero_prefix_not_independent": true
+}

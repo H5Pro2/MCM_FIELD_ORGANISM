@@ -1,0 +1,57 @@
+{
+  "scope": "local counterprobe artifacts, includes initial invalid measurement; excludes unchanged historical source archive and interpreter",
+  "files": {
+    "tools/_s2uc_four_arm.py": {
+      "bytes": 5248,
+      "sha256": "214805475c8794663026798b95f88f4b6e5cd6455d474a4eb75b1ee2c5e5a16b"
+    },
+    "tools/s2uc_four_arm_check.py": {
+      "bytes": 12083,
+      "sha256": "ba0566f18f54790b5d9e57deb1e067eb38a6b21f2fcb4dc5d4521a7e6c2afc67"
+    },
+    "tests/test_s2uc_four_arm.py": {
+      "bytes": 4967,
+      "sha256": "db71d3dd7843f8c6e1ff793556d795223f01e394170b8c91360ad18d4d5ed7b2"
+    },
+    "AKTUELLER_FORSCHUNGSWEG.md": {
+      "bytes": 1273543,
+      "sha256": "e817fa3a6d3700e1d6f716c175021f33f243f789234f13df408fcc0841b6ab4a"
+    },
+    "reports/s2uc/four-arm-20260930-01/preregistration.json": {
+      "bytes": 2254,
+      "sha256": "ba9e1f76c19b80ce79f598d594e91db2bb6ab3ee37fc715de646dfd652a11e26"
+    },
+    "reports/s2uc/four-arm-20260930-01/reference-regression.txt": {
+      "bytes": 875,
+      "sha256": "ae04ec863c21ba458967e27320a6c592b9ba6f1cf57855aa214bcff3060c8922"
+    },
+    "reports/s2uc/four-arm-20260930-01/replay-console-initial.txt": {
+      "bytes": 3489,
+      "sha256": "3047bc9810545c789259ddc977f0b969bb8be0513e3bb63b2b4463c231fc33ea"
+    },
+    "reports/s2uc/four-arm-20260930-01/replay-console.txt": {
+      "bytes": 3497,
+      "sha256": "6afcb96a7221bb7e5e345fa904e882b7330530279d15d487235e884f0aa31809"
+    },
+    "reports/s2uc/four-arm-20260930-01/REPORT.txt": {
+      "bytes": 5854,
+      "sha256": "df6c8e86a5d250ffecf3c8a17771be5f945019598a3b047473993bf2760f3b59"
+    },
+    "reports/s2uc/four-arm-20260930-01/result-initial-invalid-measurement.json": {
+      "bytes": 115569,
+      "sha256": "e6ce547a3e45f205a00075e5040c785f9429cf8dcdfbe17d1e097ece18efeaa3"
+    },
+    "reports/s2uc/four-arm-20260930-01/result.json": {
+      "bytes": 115580,
+      "sha256": "c30d8fac1a5114287c5818d1a78fdd01408c0ad659aece4fdc3c754a4cd36b8c"
+    },
+    "reports/s2uc/four-arm-20260930-01/tests.txt": {
+      "bytes": 3556,
+      "sha256": "f8f2a2e6ce42f42feb2f35deed36f52cde01b888964ea1374e941e8944d009e6"
+    }
+  },
+  "source_archive_bytes": 192989,
+  "provenance_input_bytes": 74874,
+  "listed_bytes": 1546515,
+  "note": "This inventory excludes its own serialized bytes. Research-path file includes pre-existing content, not exclusively new work."
+}

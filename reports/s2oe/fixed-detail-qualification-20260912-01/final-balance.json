@@ -1,0 +1,14 @@
+{
+  "version": "s2oe.fixed-detail-balance.v1",
+  "source_files_bytes": 339376,
+  "report_bytes": 6322,
+  "final_balance_bytes": 352,
+  "total_bytes": 588895,
+  "metadata_bytes": 13896,
+  "total_limit": 4194304,
+  "metadata_limit": 65536,
+  "spatial_supplement_bound": 57344,
+  "spatial_supplement_limit": 262144,
+  "violations": [],
+  "gates": false
+}

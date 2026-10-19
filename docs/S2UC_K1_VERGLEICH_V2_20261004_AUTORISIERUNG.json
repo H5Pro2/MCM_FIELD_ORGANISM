@@ -1,0 +1,1 @@
+{"action":"K1_24_CASE_MATERIALIZE_AND_COMPARE_ONCE","admissions":3584,"arms":["U","K1"],"cases":24,"export_bytes":67108864,"known_development_only":true,"output":"reports/s2uc/k1-comparison-20261004-01","prestart_sha256":"c35c1146ebb6c6884d761a52fb50aa15df39f9d39f821e6b329103a76446f9b9","reference_advances":3584,"status":"AUTHORIZED_ONCE","total_seconds":3600}

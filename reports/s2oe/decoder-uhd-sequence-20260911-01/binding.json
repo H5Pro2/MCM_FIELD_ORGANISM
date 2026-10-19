@@ -1,0 +1,345 @@
+{
+  "code": {
+    "reports/check_uhd_sequence_once.py": {
+      "bytes": 6409,
+      "sha256": "f890d1be80efcd71c50f7b293a269a68c9ebd49138c21e0f248905b5352fb844"
+    },
+    "reports/decoder_isolation_once.py": {
+      "bytes": 6684,
+      "sha256": "a43aaebcc846b2a253c045e3af2a1d08880fc2ccad7154311e4a77317f57d15f"
+    },
+    "reports/verify_uhd_sequence.py": {
+      "bytes": 3583,
+      "sha256": "dfa514ef913b664b446028403ed89dc95ba2ed35f72f818519adca6efea8fc8c"
+    },
+    "tests/test_s2oe_uhd_profile.py": {
+      "bytes": 3230,
+      "sha256": "19659f4f647da34ff7261d897d94345f9da26ba49c8de9a5248d6705eaf47f82"
+    },
+    "tools/_s2oe_decoder_worker.py": {
+      "bytes": 22928,
+      "sha256": "834347e9e6aa1399a7d35907e5cb7fab5b5314da1ef2b408194e5dfe67eacd5a"
+    },
+    "tools/_s2oe_isolation_log.py": {
+      "bytes": 520,
+      "sha256": "cf43d6e5422fa9776f03322c2a8e6446f0c4dc4d2f9445a54ce5b594db029278"
+    },
+    "tools/_s2oe_media_decoder.py": {
+      "bytes": 9560,
+      "sha256": "76a5fc5a2964e55997598cac5523d5d5195a2f228abd2c4f776336e786db52be"
+    },
+    "tools/_s2oe_uhd_profile.py": {
+      "bytes": 2908,
+      "sha256": "18418d0bc051682ac83a54e01628e25a83a33c981df72d189b3d945fcb450282"
+    }
+  },
+  "common_sha256": "7d306c851a74eeccb00c6aca3b5397372c6d8e450f217cb12a457f08bae5e6d3",
+  "events": [
+    {
+      "event_id": "media-event-01",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 1,
+      "pass_number": 1,
+      "window_number": 0
+    },
+    {
+      "event_id": "media-event-02",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 2,
+      "pass_number": 1,
+      "window_number": 1
+    },
+    {
+      "event_id": "media-event-03",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 3,
+      "pass_number": 1,
+      "window_number": 2
+    },
+    {
+      "event_id": "media-event-04",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 4,
+      "pass_number": 1,
+      "window_number": 3
+    },
+    {
+      "event_id": "media-event-05",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 5,
+      "pass_number": 1,
+      "window_number": 4
+    },
+    {
+      "event_id": "media-event-06",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 6,
+      "pass_number": 1,
+      "window_number": 5
+    },
+    {
+      "event_id": "media-event-07",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 7,
+      "pass_number": 1,
+      "window_number": 6
+    },
+    {
+      "event_id": "media-event-08",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 8,
+      "pass_number": 1,
+      "window_number": 7
+    },
+    {
+      "event_id": "media-event-09",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 9,
+      "pass_number": 1,
+      "window_number": 8
+    },
+    {
+      "event_id": "media-event-10",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 10,
+      "pass_number": 1,
+      "window_number": 9
+    },
+    {
+      "event_id": "media-event-11",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 11,
+      "pass_number": 2,
+      "window_number": 0
+    },
+    {
+      "event_id": "media-event-12",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 12,
+      "pass_number": 2,
+      "window_number": 1
+    },
+    {
+      "event_id": "media-event-13",
+      "kind": "PARTIAL_AUDITORY_CUE",
+      "ordinal": 13,
+      "pass_number": 2,
+      "window_number": 2
+    },
+    {
+      "event_id": "media-event-14",
+      "kind": "PARTIAL_VISUAL_CUE",
+      "ordinal": 14,
+      "pass_number": 2,
+      "window_number": 2
+    },
+    {
+      "event_id": "media-event-15",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 15,
+      "pass_number": 2,
+      "window_number": 2
+    },
+    {
+      "event_id": "media-event-16",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 16,
+      "pass_number": 2,
+      "window_number": 3
+    },
+    {
+      "event_id": "media-event-17",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 17,
+      "pass_number": 2,
+      "window_number": 4
+    },
+    {
+      "event_id": "media-event-18",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 18,
+      "pass_number": 2,
+      "window_number": 5
+    },
+    {
+      "event_id": "media-event-19",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 19,
+      "pass_number": 2,
+      "window_number": 6
+    },
+    {
+      "event_id": "media-event-20",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 20,
+      "pass_number": 2,
+      "window_number": 7
+    },
+    {
+      "event_id": "media-event-21",
+      "kind": "PARTIAL_AUDITORY_CUE",
+      "ordinal": 21,
+      "pass_number": 2,
+      "window_number": 8
+    },
+    {
+      "event_id": "media-event-22",
+      "kind": "PARTIAL_VISUAL_CUE",
+      "ordinal": 22,
+      "pass_number": 2,
+      "window_number": 8
+    },
+    {
+      "event_id": "media-event-23",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 23,
+      "pass_number": 2,
+      "window_number": 8
+    },
+    {
+      "event_id": "media-event-24",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 24,
+      "pass_number": 2,
+      "window_number": 9
+    }
+  ],
+  "expected": {
+    "events": 24,
+    "passes": 2,
+    "release_calls": 20,
+    "select_calls": 24,
+    "selected_windows": 20
+  },
+  "host_before": {
+    "available_commit_bytes": 13928095744,
+    "commit_limit_bytes": 29784133632,
+    "physical_available_bytes": 7051456512
+  },
+  "ledger": {
+    "binding_reserve": 16384,
+    "code_bytes": 55822,
+    "common_bytes": 10159,
+    "qualification_reserve": 16384,
+    "record_reserve": 131072,
+    "report_reserve": 8192,
+    "verification_reserve": 16384
+  },
+  "no_system_processing": true,
+  "profile": {
+    "code": {
+      "tools/_s2oe_decoder_worker.py": "834347e9e6aa1399a7d35907e5cb7fab5b5314da1ef2b408194e5dfe67eacd5a",
+      "tools/_s2oe_isolation_log.py": "cf43d6e5422fa9776f03322c2a8e6446f0c4dc4d2f9445a54ce5b594db029278",
+      "tools/_s2oe_media_decoder.py": "76a5fc5a2964e55997598cac5523d5d5195a2f228abd2c4f776336e786db52be",
+      "tools/_s2oe_uhd_profile.py": "18418d0bc051682ac83a54e01628e25a83a33c981df72d189b3d945fcb450282"
+    },
+    "config": {
+      "active_processes": 1,
+      "audio_format": "fltp",
+      "audio_layout": "stereo",
+      "audio_rate": 48000,
+      "audio_window_samples": 4800,
+      "dst_colorspace": 1,
+      "dst_range": "JPEG",
+      "interpolation": "AREA",
+      "job_commit_bytes": 1073741824,
+      "libraries": {
+        "libavcodec": [
+          62,
+          11,
+          100
+        ],
+        "libavdevice": [
+          62,
+          1,
+          100
+        ],
+        "libavfilter": [
+          11,
+          4,
+          100
+        ],
+        "libavformat": [
+          62,
+          3,
+          100
+        ],
+        "libavutil": [
+          60,
+          8,
+          100
+        ],
+        "libswresample": [
+          6,
+          1,
+          100
+        ],
+        "libswscale": [
+          9,
+          1,
+          100
+        ]
+      },
+      "native_log_bytes": 32768,
+      "native_log_level": "ERROR",
+      "native_log_messages": 32,
+      "process_commit_bytes": 1073741824,
+      "pyav": "16.1.0",
+      "queue_capacity": 1,
+      "request_seconds": 30.0,
+      "rgb_format": "rgb24",
+      "rgb_size": [
+        1920,
+        1080
+      ],
+      "slot_bytes": 6240000,
+      "src_colorspace": 1,
+      "src_range": "MPEG",
+      "stop_seconds": 5.0,
+      "video_size": [
+        3840,
+        2160
+      ],
+      "video_threads": 1
+    },
+    "profile_digest": "3b05198bce27158d3feb49aed78fd8e2697573193b6d655a15108c0543496522",
+    "run_id": "decoder-uhd-sequence-20260911-01",
+    "source": {
+      "audio_stream": 1,
+      "audio_time_base": [
+        1,
+        48000
+      ],
+      "frame_rate": [
+        30000,
+        1001
+      ],
+      "path": "C:\\Users\\TV\\Downloads\\17138816-uhd_3840_2160_30fps.mp4",
+      "sha256": "df0986f384e156c4dfec234e94b6f6baa3d0f8a9cfd7ba81f14aadf0313450aa",
+      "size": 83498438,
+      "video_size": [
+        3840,
+        2160
+      ],
+      "video_stream": 0,
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    "version": "s2oe.file-bound-uhd1024.v1"
+  },
+  "qualification_id": "uhd-profile-neutral-20260911-01",
+  "run_id": "decoder-uhd-sequence-20260911-01",
+  "test_groups": 6,
+  "tests": [
+    "immutable_profile_and_default",
+    "false_process_and_job_limits_independently",
+    "other_configuration_rejected",
+    "source_and_run_separation",
+    "code_and_integrity",
+    "factory_and_active_limit_failure"
+  ],
+  "total_reserved": 254397,
+  "version": "s2oe.file-bound-uhd1024.v1"
+}

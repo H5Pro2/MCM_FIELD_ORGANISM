@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="de"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MCM · Lokaler Medienversuch</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f3f5f6;color:#20282d;font:15px/1.5 system-ui,sans-serif;letter-spacing:0}
+header{padding:20px 28px;background:#20282d;color:white;border-bottom:4px solid #31877b}h1{margin:0;font-size:23px}header p{margin:3px 0;color:#c4d2d7}
+main{max-width:1120px;margin:auto;padding:24px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:28px}h2{font-size:17px;margin:0 0 12px}video{display:block;width:100%;aspect-ratio:16/9;background:#14191c}
+.note{color:#55636b;font-size:13px}.controls{display:flex;gap:8px;margin:18px 0;flex-wrap:wrap}button{font:inherit;padding:9px 18px;border:1px solid #89959b;border-radius:4px;background:#fff;cursor:pointer}button:focus-visible{outline:3px solid #e2b443;outline-offset:2px}#start{background:#216c60;color:#fff;border-color:#216c60}#stop{color:#a93232}button:disabled{opacity:.45;cursor:not-allowed}dl{margin:0}dt{font-size:12px;color:#52616a;margin-top:14px}dd{margin:3px 0;font-family:ui-monospace,monospace;overflow-wrap:anywhere}.phase{border-left:4px solid #31877b;padding:10px 14px;background:#e3ecea;margin-bottom:18px}progress{width:100%;accent-color:#31877b;height:14px}#error{color:#982626;min-height:24px;overflow-wrap:anywhere}footer{padding:16px 28px;border-top:1px solid #ccd4d8;color:#55636b;font-size:13px}.file{overflow-wrap:anywhere}
+@media(max-width:720px){main{grid-template-columns:1fr;padding:18px;gap:20px}header{padding:16px 18px}h1{font-size:21px}footer{padding:16px 18px}}
+</style>
+<header><h1>MCM · Lokaler Medienversuch</h1><p>Privater, gebundener Audio-/Videoeingang</p></header>
+<main><section><h2>Ausgewähltes Video</h2><video id="video" aria-label="Gebundene Videovorschau" controls controlslist="nodownload noremoteplayback" disablepictureinpicture preload="none" playsinline></video><p class="file" id="file"></p>
+<p class="note">Vorschau: 00:00–00:05. Browserwiedergabe und MCM-Decoder sind nicht synchronisiert. Die Vorschau wird beim Start angehalten.</p>
+<div class="controls"><button id="start" disabled>Start</button><button id="status">Status</button><button id="stop" disabled>Stopp</button></div><p id="error" role="alert"></p></section>
+<section aria-live="polite"><h2>MCM-Verarbeitung</h2><div class="phase" id="phase">Verbindung wird hergestellt</div><progress id="progress" aria-label="Abgeschlossene Ereignisse" max="24" value="0"></progress>
+<dl><dt>Abgeschlossene Ereignisse</dt><dd id="count">0 / 24</dd><dt>Aktuell gewählter Medienabschnitt</dt><dd id="window">Noch kein Abschnitt</dd><dt>Gebundene Runtimezeit</dt><dd id="runtime">—</dd><dt>Wahrnehmung</dt><dd id="perception">—</dd><dt>Memory</dt><dd id="memory">—</dd><dt>Hypothese oder Enthaltung</dt><dd id="context">—</dd><dt>Technischer Abschluss</dt><dd id="verification">Noch nicht geprüft</dd></dl>
+<p class="note">Zwei Durchläufe, 20 Formationen und vier read-only Hinweise. Verarbeitet werden ausgewählte 100-ms-Fenster, nicht der vollständige Medienfluss.</p></section></main>
+<footer>Keine Aufnahme anderer Tabs, Anwendungen, Kamera oder Mikrofon. Hypothesen bleiben unangewandt.</footer>
+<script>
+const token='__TOKEN__', video=document.getElementById('video');let timer;
+const set=(id,value)=>document.getElementById(id).textContent=value;
+video.src='/media?token='+token;
+video.addEventListener('timeupdate',()=>{if(video.currentTime>=5){video.pause();video.currentTime=0}});
+video.addEventListener('seeking',()=>{if(video.currentTime>5)video.currentTime=0});
+async function request(command){try{const r=await fetch('/api/'+command,{method:command==='status'?'GET':'POST',headers:{'X-MCM-Token':token}});const s=await r.json();if(!r.ok)throw Error(s.error);set('error','');render(s)}catch(e){set('error',e.message)}}
+function render(s){set('file',s.source);set('phase',s.phase);set('count',s.completed+' / '+s.total);document.getElementById('progress').value=s.completed;
+document.getElementById('start').disabled=s.phase!=='READY';document.getElementById('stop').disabled=s.phase!=='RUNNING';
+if(s.current){const x=s.current;set('window','Durchlauf '+x.pass_number+' · '+x.media_start_seconds.toFixed(1)+'–'+(x.media_start_seconds+.1).toFixed(1)+' s · '+x.kind);set('runtime',x.runtime_window.join('–')+' ns')}
+if(s.last){set('perception',s.last.perception);set('memory',s.last.memory);set('context',s.last.context+(s.last.hypothesis?' · Hypothese vorhanden':' · keine Hypothese'))}
+if(s.verification)set('verification',s.verification.status);if(s.error||s.closure_error)set('error',s.error||s.closure_error);
+clearTimeout(timer);if(s.phase==='RUNNING')timer=setTimeout(()=>request('status'),500)}
+document.getElementById('start').onclick=()=>{video.pause();request('start')};document.getElementById('status').onclick=()=>request('status');document.getElementById('stop').onclick=()=>request('stop');request('status');
+</script></html>

@@ -1,0 +1,24 @@
+test_a_does_not_fill_b_public_denominator (tests.test_visual_b_connection.Connection.test_a_does_not_fill_b_public_denominator) ... ok
+test_actual_global_budget_and_temp (tests.test_visual_b_connection.Connection.test_actual_global_budget_and_temp) ... ok
+test_admission_pin_gate_and_profile (tests.test_visual_b_connection.Connection.test_admission_pin_gate_and_profile) ... ok
+test_budget_alternatives (tests.test_visual_b_connection.Connection.test_budget_alternatives) ... ok
+test_complete_negative_and_readonly (tests.test_visual_b_connection.Connection.test_complete_negative_and_readonly) ... ok
+test_failure_blocks_evaluation (tests.test_visual_b_connection.Connection.test_failure_blocks_evaluation) ... ok
+test_generation_chain_and_free_slots (tests.test_visual_b_connection.Connection.test_generation_chain_and_free_slots) ... ok
+test_generation_manipulation (tests.test_visual_b_connection.Connection.test_generation_manipulation) ... ok
+test_independent_verification (tests.test_visual_b_connection.Connection.test_independent_verification) ... ok
+test_native_codec_and_authenticated_origin (tests.test_visual_b_connection.Connection.test_native_codec_and_authenticated_origin) ... ok
+test_native_failure_after_progress (tests.test_visual_b_connection.Connection.test_native_failure_after_progress) ... ok
+test_native_successful_entry_and_once (tests.test_visual_b_connection.Connection.test_native_successful_entry_and_once) ... ok
+test_native_tampering_independent (tests.test_visual_b_connection.Connection.test_native_tampering_independent) ... ok
+test_outer_entry_native_codec_boundary (tests.test_visual_b_connection.Connection.test_outer_entry_native_codec_boundary) ... ok
+test_primary_error_survives_temporary_failure (tests.test_visual_b_connection.Connection.test_primary_error_survives_temporary_failure) ... ok
+test_public_denominator_and_loss (tests.test_visual_b_connection.Connection.test_public_denominator_and_loss) ... ok
+test_replaced_generation_same_id (tests.test_visual_b_connection.Connection.test_replaced_generation_same_id) ... ok
+test_roles_and_nonindependence (tests.test_visual_b_connection.Connection.test_roles_and_nonindependence) ... ok
+test_source_manipulation (tests.test_visual_b_connection.Connection.test_source_manipulation) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.395s
+
+OK

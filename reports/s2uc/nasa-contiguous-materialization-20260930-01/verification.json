@@ -1,0 +1,11 @@
+{
+  "status": "STORED_ARTIFACTS_VERIFIED",
+  "windows": 100,
+  "accepted": 480000,
+  "all_source_intervals": true,
+  "all_profile_bindings": true,
+  "all_projection_digests": true,
+  "all_fragment_coverages": true,
+  "comparison_executed": false,
+  "materialization_invocations": 1
+}

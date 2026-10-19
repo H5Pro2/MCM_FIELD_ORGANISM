@@ -1,0 +1,42 @@
+{
+  "reports/s2uc/pcm-competition-20260930-01/band-comparisons.csv": {
+    "bytes": 11522,
+    "sha256": "337ce5ce7383f606dc224cfbdc8b824e8dd297222f56f1e7cd8f8882798bd836"
+  },
+  "reports/s2uc/pcm-competition-20260930-01/half-W1.pcm": {
+    "bytes": 19200,
+    "sha256": "f743ebcf777c0c4aba725e943ad4ae7506997c863b72a7a46e3c1827f5fd4ee0"
+  },
+  "reports/s2uc/pcm-competition-20260930-01/input-binding.json": {
+    "bytes": 1900,
+    "sha256": "14918647afa04d256da4a2c6e87a6933718626e288e8b50cbf28c45c011b7fda"
+  },
+  "reports/s2uc/pcm-competition-20260930-01/preregistration.json": {
+    "bytes": 8542,
+    "sha256": "c49131293417e749364d16fdfee9ba437b3c3495a71fde79b055e880e201074c"
+  },
+  "reports/s2uc/pcm-competition-20260930-01/REPORT.txt": {
+    "bytes": 5566,
+    "sha256": "a6065e0d227defd8404ace8c8168471353dfc3f36734f2f3b5d36d2b5070e194"
+  },
+  "reports/s2uc/pcm-competition-20260930-01/result.json": {
+    "bytes": 207033,
+    "sha256": "51c2e918c79df92944f6d9e613c0b1fb1fa2a04488c43622fb3b20850e84400d"
+  },
+  "reports/s2uc/pcm-competition-20260930-01/run-console.txt": {
+    "bytes": 4045,
+    "sha256": "f3cfc69efc6dda0d89e8bbc0a80c77887948bda475f2dcbeb6c95ffa4b4d7da1"
+  },
+  "reports/s2uc/pcm-competition-20260930-01/tests.txt": {
+    "bytes": 2772,
+    "sha256": "76f6c4e687770c5ef2c61997289868108172659fb4730254140114d09685cb28"
+  },
+  "tools/s2uc_pcm_competition_check.py": {
+    "bytes": 7609,
+    "sha256": "ae6f2a7bc74b72629ca3b9fbec025f3c554329dc9764c9c2a45d5beed5fd50bd"
+  },
+  "tests/test_s2uc_pcm_competition.py": {
+    "bytes": 1153,
+    "sha256": "d4701116eb4e331378eabd54ed3be31bbe8382f2163f61037ef012a15fc9fd03"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "status": "SYNTHETIC_CRITERIA_MET",
+  "additional_wrong": [],
+  "gain_R1_R2": 2,
+  "epsilon": 0.0009765625,
+  "tau": 0.015625,
+  "parameter_search_performed": false,
+  "scope": "Fixed synthetic tasks only; no default-policy change"
+}

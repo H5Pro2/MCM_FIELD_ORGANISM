@@ -1,0 +1,12 @@
+--- qualified-entry
++++ final-entry
+@@ -11,7 +11,8 @@
+     import platform,numpy
+     return dict(python=sys.version,executable=str(Path(sys.executable).resolve()),executable_sha256=sha(sys.executable),numeric_threads=1,
+         platform=platform.platform(),numpy=numpy.__version__,numpy_files={p.relative_to(Path(numpy.__file__).parent).as_posix():sha(p)
+-        for p in Path(numpy.__file__).parent.rglob('*') if p.is_file() and p.suffix in ('.pyd','.dll')},
++        for p in Path(numpy.__file__).parent.rglob('*') if p.is_file() and p.suffix in ('.py','.pyd','.dll')},
++        numpy_external_libraries={str(p.resolve()):sha(p) for p in (Path(numpy.__file__).parent.parent/'numpy.libs').rglob('*') if p.is_file()},
+         dlls={p.name:sha(p) for p in Path(sys.executable).parent.glob('python*.dll')})
+ def install():
+     win.install();k=win.api();v=win.Extended()

@@ -1,0 +1,35 @@
+{
+  "gained_occurrences": 31,
+  "lost_occurrences": 5,
+  "gained_unique_original_traces": 30,
+  "gained_unique_trace_offset_lineages": 31,
+  "gained_unique_observed_keys": 31,
+  "cold_causes": {
+    "NO_PRIOR_ELIGIBLE_FEEDBACK_OPPORTUNITY": 31
+  },
+  "feedback": {
+    "DEAD_KEY_REJECTED": 27,
+    "ACCEPTED": 4
+  },
+  "primary_downstream": {
+    "FEEDBACK_REJECTED_DEAD_KEY": 27,
+    "ACCEPTED_NO_FURTHER_ELIGIBLE_RETRIEVAL": 4
+  },
+  "loss_kinds": {
+    "CANDIDATE_REPLACED": 28,
+    "STORY_END": 3
+  },
+  "future_value_matches": {
+    "REJECTED_WITH_LATER_VALUE_MATCH": 10,
+    "REJECTED_NO_LATER_VALUE_MATCH": 17,
+    "ACCEPTED_NO_LATER_VALUE_MATCH": 4
+  },
+  "lost_feedback": {
+    "ACCEPTED": 5
+  },
+  "lost_later_eligible": 0,
+  "lost_original_ever_admitted_in_K1": 0,
+  "research_replays": 0,
+  "new_sources": 0,
+  "archive_sha256": "3eb073806e2f568b1528232dcbf6a4bebe838aaae7333a45f9c7bfaf6dea263c"
+}

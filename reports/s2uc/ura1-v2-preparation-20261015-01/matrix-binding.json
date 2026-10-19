@@ -1,0 +1,1 @@
+{"bytes":320000,"draws_per_stratum":16,"generator":"tools/_s2uc_ura1_v2_stats.py:matrix_bytes","independent_verification":"PASS","independent_verifier":"tools/_s2uc_ura1_v2_stats_reference.py:verify_matrix","namespace":"MCM-URA1/bootstrap/v1","repetitions":10000,"sha256":"0b9fbf483e870adac01ded7d2d0d0a651a11474a4ac2e4fbae1c14e793d7d965","source_namespace_used":false,"strata":2}

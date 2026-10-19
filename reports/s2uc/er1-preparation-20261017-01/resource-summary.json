@@ -1,0 +1,23 @@
+{
+  "additional_python_peak": 5104,
+  "original_frames_upper_bound": 16,
+  "combined_upper_bound": 18,
+  "output_slots_peak": 2,
+  "receipt_bytes_peak": 608,
+  "utf8_upper": 1216,
+  "whole_conservative_peak": 36141,
+  "capture_decode_python_peak": 10836770,
+  "codec_collections": 13,
+  "codec_dictionary": 65039,
+  "codec_edges": 8444,
+  "codec_indices": 1447,
+  "codec_nodes": 1463,
+  "codec_record_peak": 15147,
+  "codec_temp_peak": 13193,
+  "observer_deep_bytes": 185711,
+  "observer_json_bytes": 276702,
+  "encoded_bytes": 71235,
+  "gzip_bytes": 13193,
+  "job_peak_bytes": 78168064,
+  "final_qualification_seconds": 93.41212370002177
+}

@@ -1,0 +1,105 @@
+M1–M5: Implementierung und technische Qualifikation
+Stand 30.09.2026 — Zur Projektleiterprüfung; KEINE LAUFAUTORISIERUNG
+
+Ergebnis
+226/226 PASS: sämtliche bisherigen 207 Prüfpflichten plus 19 neue Q1–Q7-Prüfungen.
+0 Fehler, 0 Fehlschläge, 0 Skips, Exit 0. Vollprüfung: 1725,614 Sekunden.
+Code-/Laufzeitinventar vor und nach der Vollprüfung identisch. Alle 76 Codehashes
+wurden auch nach dem gespeicherten Negativfall statisch erneut abgeglichen.
+Keine unabhängige Gesamtabnahme und keine Behauptung eines Originalquellen-Erfolgs.
+
+Vier neue Dateien, keine Änderung der 72 abgenommenen P2-Codedateien:
+- tools/_s2uc_productive.py: Zulassung, vollständige Qualifikationsprüfung,
+  Originalmanifest, exklusiver persistenter Claim, vier Wurzeln, eigene Produkt-
+  und Herkunftsleser; Wiederverwendung der bestehenden Memory-/Prüflogik.
+- tools/s2uc_productive_once.py: öffentlicher Einstieg und derselbe begrenzte
+  Windows-Job-/Kindprozessablauf, Codeprüfung vor Import, unabhängige Autorität.
+- tests/test_s2uc_productive.py: 19 konkrete Prüfpflichten Q1–Q7.
+- tools/s2uc_productive_check.py: vollständige Einzelresultate, Inventar,
+  historische Integrität und gemeinsame Bilanz einschließlich gespeichertem Fall.
+
+Autorität
+Ein mitgeliefertes Dokument kann seine eigene Autorität nicht bestätigen.
+Der produktive Leser verlangt einen unabhängig hinterlegten exakten Freigabehash
+in HKLM64\SOFTWARE\MCM_FIELD_ORGANISM\S2UC\ApprovedOneShots. Eigentümer und
+Schreibrechte einschließlich der MCM-Elternschlüssel werden nativ geprüft;
+nur Administratoren/SYSTEM dürfen schreiben oder Rechte ändern. Es gibt keine
+Programmfunktion zum Anlegen dieses Belegs. Die Einrichtung bleibt eine spätere
+operative Handlung des berechtigten Betreibers nach ausdrücklicher Laufentscheidung.
+Die Grenze setzt ein vertrauenswürdiges Windows und berechtigte Administratoren voraus.
+Testzulassungen und ihre Ablagen sind technisch getrennt. Es wurde kein gültiger
+operativer Freigabedatensatz und kein Zulassungseintrag für die reale Identität erzeugt.
+
+Q1–Q7 und Aussagegrenze
+Die exakten Test-IDs und Einzelresultate stehen in test-result.json, die kompakte
+Zuordnung in protocol.json und das Ausführungsprotokoll in unittest.log.
+Q1 prüft Autoritätsdomäne, unabhängige Belegübereinstimmung/Zugriffsregeln, Bindungs-
+änderungen, Laufzeit und vollständige Qualifikations-/Dateibilanz.
+Q2 prüft unveränderte Originalhashes und Abbruch vor Rezeptor/NJ bei Ersatz-PCM.
+Q3 sperrt reale Identität und Ablagen auch vor dem ersten Test-Kindprozessbeleg.
+Q4 prüft Konkurrenz, Neustart, beschädigten/teilweisen Claim, Jobfehler, Timeout
+und Abbruch: höchstens ein Versuch, kein automatischer Wiederanlauf.
+Q5 prüft native Jobaufnahme, gefälschte Belege und Bindung vor Produktimport.
+Q6 prüft synthetischen Abschluss, getrennte Leser, Originalbytes, Status-/Typfehler
+und Nachtragsfehler ohne Produktänderung. Q7 prüft vier Wurzeln, Kopien, Hardlinks,
+Staging und unveränderte Grenzen/Reserven.
+Der vollständige synthetische Abschluss bleibt EVALUATED_TEST: Gewinn g1/24 und
+getrennte Verluste g1/26, g2/38, g3/67; alte Erwartung bei g1/24 weiterhin verletzt.
+Ein erfolgreicher Originalhashlauf oder tatsächliches NU-Generatorverhalten unter
+640 MiB wurde weder ausgeführt noch aus Testersatz abgeleitet.
+
+Entwicklungsdiagnostik bleibt erhalten
+p3-focus-20260930-01: 17 Prüfungen, ein Fehler beim Vergleich JSON-normalisierter
+Herkunftsdaten; keine gültige Abschlussbilanz dieser Zwischenfassung. Der Leser
+wurde auf den bestehenden kanonischen Vergleich korrigiert.
+p3-focus-20260930-02: 19/19 PASS vor abschließender Kategorie-/Typhärtung.
+Maßgeblich ist ausschließlich die vollständige 226er-Prüfung dieser endgültigen Fassung.
+
+Historische Integrität
+72 P2-Codedateien, 68 Dateien der beiden vorherigen P2-Nachweispakete und 2296
+historische Dateien unverändert; preservation.json enthält die gebundenen Bezüge.
+Reale Ausgabe-, Beobachter-, Nachtrags- und Verbrauchsablage ...real-20260920-02
+bleiben unbenutzt, einschließlich Prüfung auf Symlinks/Junctions.
+
+Gespeicherter Originalhash-Negativfall
+reports/s2uc/p3-test-retained-y7ar38jj
+Status NOT_EVALUABLE, Scope P3_TEST_ONLY, test_evidence=true.
+1 Ersatz-PCM-Aufruf; Rezeptoranalysen 0, NJ-Projektionen 0.
+Der produktive Leser akzeptiert diesen Testdatensatz nicht. result.json verweist
+auf diesen Fall. Sein Claim verbraucht ausschließlich seine isolierte Testidentität.
+
+inventory.json: 15805 Byte, SHA256 c7f5b9c99c86394969912a68e817925f7168cb2b3827da9b82c512e31275fe42
+test-result.json: 54681 Byte, SHA256 38a0cdac2c779ada26c32bf9005e3ad73380041dda91ff628b62a262d2b645c8
+protocol.json: 17587 Byte, SHA256 27c0aa07ce0cec9a5b15424e16e10369c6f2b038cae9c7e9df9805fbfe3ff446
+
+Gemeinsame gemessene Schlussbilanz einschließlich dieses Berichts
+code: 978115 Byte
+metadata: 55432 Byte
+static_shared: 936393 Byte
+record: 2453 Byte
+verification: 386 Byte
+error: 223 Byte
+terminal: 223 Byte
+minimal: 0 Byte
+staging: 0 Byte
+Shared gesamt: 936839 Byte
+Gesamt: 1973225 / 4194304 Byte
+Prospektive Abschlussreserve gesamt: 2707220 / 4194304 Byte
+Code: 978115 / 1048576 Byte; 70461 Byte frei.
+Aktivinventar: 15805 / 16384 Byte; Protokoll: 17587 / 32768 Byte.
+
+Die Bilanz umfasst aktive Qualifikationsdateien, den gespeicherten Testfall,
+alle gebundenen P1-Eingaben und die aktuelle Codefassung. Abschlussreserve ist
+getrennt von tatsächlich vorhandenen Bytes ausgewiesen. Historische Diagnose-
+pakete bleiben Archive und werden nicht als aktuelle Qualifikation konsumiert.
+Dateibytes sind keine RAM-Messung. 640 MiB gelten nur für den Produktkindprozess;
+Elternprozess und Herkunftsauswertung sind nicht dadurch begrenzt. Betriebssystem
+und externe Laufzeit sind außerhalb der Projekt-Code-/Artefaktkonten; ihre gebundene
+Laufzeitidentität steht im Inventar. Kein zukünftiger Reallaufverbrauch wird behauptet.
+
+Nächster Schritt
+Projektleiter prüft diese fertige Fassung anhand Inventar, Einzelresultaten und
+Bilanz. Nach Paketabnahme kann eine gesonderte ausdrückliche Einmallaufentscheidung
+mit exakt gebundenem Freigabedokument vorbereitet werden. Kein automatischer Start.
+Der aktualisierte, nicht autorisierende Entwurf steht unter
+ docs/S2UC_FREIGABEENTWURF_NACH_P2_20260930.txt.

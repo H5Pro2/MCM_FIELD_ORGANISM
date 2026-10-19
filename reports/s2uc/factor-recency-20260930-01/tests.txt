@@ -1,0 +1,16 @@
+test_exact_method_reuse (tests.test_s2uc_factor_recency.CombinedMethodTests.test_exact_method_reuse) ... ok
+test_recency_controls_on_combined_class (tests.test_s2uc_factor_recency.CombinedMethodTests.test_recency_controls_on_combined_class) ... ok
+test_deviation (tests.test_s2uc_perception_recency.RecencyIntegrationTests.test_deviation) ... ok
+test_hint_inherited (tests.test_s2uc_perception_recency.RecencyIntegrationTests.test_hint_inherited) ... ok
+test_hint_readonly (tests.test_s2uc_perception_recency.RecencyIntegrationTests.test_hint_readonly) ... ok
+test_incomplete (tests.test_s2uc_perception_recency.RecencyIntegrationTests.test_incomplete) ... ok
+test_interleaved_disjoint_not_later (tests.test_s2uc_perception_recency.RecencyIntegrationTests.test_interleaved_disjoint_not_later) ... ok
+test_original_object_and_candidate_preserved (tests.test_s2uc_perception_recency.RecencyIntegrationTests.test_original_object_and_candidate_preserved) ... ok
+test_overlap (tests.test_s2uc_perception_recency.RecencyIntegrationTests.test_overlap) ... ok
+test_reused_latest_interval_not_refreshed (tests.test_s2uc_perception_recency.RecencyIntegrationTests.test_reused_latest_interval_not_refreshed) ... ok
+test_reverse (tests.test_s2uc_perception_recency.RecencyIntegrationTests.test_reverse) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.005s
+
+OK

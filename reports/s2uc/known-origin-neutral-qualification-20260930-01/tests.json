@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "test_id": "success",
+      "status": "PASS",
+      "closure": {
+        "calls": {
+          "nj": 28,
+          "receptor": 28
+        },
+        "error": null,
+        "final_evaluation_run": false,
+        "status": "MATERIAL_COMPLETE",
+        "windows": 28
+      },
+      "retry_refused": true
+    },
+    {
+      "test_id": "output-cap",
+      "status": "PASS",
+      "closure": {
+        "calls": {
+          "nj": 0,
+          "receptor": 0
+        },
+        "error": "OUTPUT_LIMIT",
+        "final_evaluation_run": false,
+        "status": "NOT_EVALUABLE",
+        "windows": 0
+      },
+      "retry_refused": true
+    },
+    {
+      "test_id": "projection-error",
+      "status": "PASS",
+      "closure": {
+        "calls": {
+          "nj": 0,
+          "receptor": 0
+        },
+        "error": "NEUTRAL_INJECTED_PROJECTION_ERROR",
+        "final_evaluation_run": false,
+        "status": "NOT_EVALUABLE",
+        "windows": 0
+      },
+      "retry_refused": true
+    }
+  ],
+  "neutral_seam": "ROOT, PLAN_PATH, exact neutral validator only; production implementation unchanged",
+  "plan_sha256": "81c7edb0ece7716789f414ca9ebb02a060080f0e8bc56e4bc0c36a76a253cba7",
+  "generator_sha256": "7e74ebf59c0ba1bc8b7ee96a5a155f3e61196403787ddbfd6672dcd1ac2bd804",
+  "neutral_seeds": [
+    510001,
+    510007,
+    510013,
+    510019,
+    510031
+  ],
+  "original_plan_validation": true,
+  "families_unproduced": true
+}

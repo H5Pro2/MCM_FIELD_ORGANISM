@@ -1,0 +1,20 @@
+{
+  "files": {
+    "tools/s2uc_t1_start_v3.py": "c948a0e070062a9afd455d410538d845633a3183f71bbc6c208be9f1ea4660da",
+    "tests/test_s2uc_t1_start_v3.py": "c4cddcec725b4bc1f35a191a2e095390d836d6ec4c7b46153fdef1ef10bdcbe4",
+    "docs/S2UC_T1_START_V3_PLAN_20261003.json": "1eac693511399ca77d464e720f1ac5e14161f720503ae965105d20f275fa7013",
+    "docs/S2UC_T1_START_V3_AUFRUF_20261003.txt": "8ccc91def4aba48dfee2fc39e7b1e3667dc760f76a6b4e9bd3a6f83cc661b072",
+    "docs/S2UC_T1_V2_BINDUNG_20261003.json": "78525e2ff688151cc0dfbb9400a40a4a5732df426d52b89e4d6b5067ddc016f3",
+    "reports/s2uc/t1-neutral-qualification-20261003-02/closure.json": "6533a4810d0c612fef4c8066c731d94b95898458f004547b5a5cd06e81dbd22f",
+    "reports/s2uc/t1-preparation-assessment-20261003-01/closure.json": "4f702b650ac930eece48d37139f667085b0081156ddb97ebd92b42c976c49c73",
+    "reports/s2uc/t1-preparation-assessment-20261003-01/evidence-inventory.json": "02ae4fd43fdb464142373d8d319901e82553e4b32882a3f182d68c070690ad76",
+    "reports/s2uc/t1-preparation-assessment-20261003-01/REPORT.md": "866a9f7eeffcb20e91705c4034e26bc37cba20781119b8ed8056dd8ae73ef591",
+    "reports/s2uc/t1-transfer-assessment-20261003-01/closure.json": "81e07148d51c43c9095ab0d44e9101ca6375fa17969cf268aff52020ae0d204d",
+    "reports/s2uc/t1-transfer-assessment-20261003-01/launch_once.py": "e564352f8cdea8150caa4a15d4996d6a6e32f5b9a4e94a0ccb98d2cd73b7342b",
+    "reports/s2uc/t1-transfer-assessment-20261003-01/preflight.json": "7934f14f01b92ce75dbebdff22c9d1544d5ba7505c2794d7fee00e0fa6ed038f",
+    "reports/s2uc/t1-transfer-assessment-20261003-01/REPORT.md": "c078971b1a8448ed65937cc08e5a0bf7009dc07075138d7b862bdafdd51ff61a",
+    "reports/s2uc/t1-transfer-assessment-20261003-01/result.json": "862563048c79a2149b1e78945cdf38a085ad322611dd584a51685ea0c50aef92"
+  },
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "executable_sha256": "7ca24f26d6e3f463419ee4f537ddd3acd312c38fe45e678cce08572f26a8bd1a"
+}

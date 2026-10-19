@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "er1_prestart_sha256": "0d67e76c14afa1e74a19dd7190857e68a19062abd26fd2af484c85b761a8f2b7",
+  "er1_code_files": 2979,
+  "er1_qualification": 72,
+  "er1_delivery_files": 139,
+  "witness_delivery_files": 41,
+  "research_authorization_created": false,
+  "research_target_created": false,
+  "method": "hash checks and existing binding validator only"
+}

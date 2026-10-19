@@ -1,0 +1,313 @@
+{
+  "tests_run": 24,
+  "passed": false,
+  "errors": 1,
+  "failures": 0,
+  "skips": 0,
+  "elapsed_seconds": 16.504792999941856,
+  "tests": [
+    {
+      "id": "tests.test_s2uc_bounded_audio.AudioCoreTests.test_counter_limits",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_bounded_audio.AudioCoreTests.test_gaps_overlaps_and_early_eof",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_bounded_audio.AudioCoreTests.test_limits_cannot_be_enlarged",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_bounded_audio.AudioCoreTests.test_missing_fractional_pts_and_positive_start",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_bounded_audio.AudioCoreTests.test_negative_preroll_no_double_shift",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_bounded_audio.AudioCoreTests.test_output_reserve_and_exclusive_write",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_bounded_audio.AudioCoreTests.test_pcm_rate_and_layout_rejection",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_bounded_audio.AudioCoreTests.test_read_hash_budget_and_close",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_bounded_audio.AudioCoreTests.test_reader_requires_job_before_open",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_bounded_audio.AudioCoreTests.test_source_locked_until_close",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_bounded_audio.AudioCoreTests.test_zero_contiguous_and_end_overhang",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_bounded_audio.ProcessTests.test_aac_edit_list_and_priming",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_bounded_audio.ProcessTests.test_changed_runtime_binding_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_bounded_audio.ProcessTests.test_eof_closes_child",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_bounded_audio.ProcessTests.test_memory_limit_real_allocation",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_bounded_audio.ProcessTests.test_only_first_audio_stream",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_bounded_audio.ProcessTests.test_pending_authorization_cannot_open_nasa",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_bounded_audio.ProcessTests.test_real_container_gap_and_overlap",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_bounded_audio.ProcessTests.test_real_decoder_tight_budgets",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_bounded_audio.ProcessTests.test_real_wav_reader",
+      "status": "ERROR",
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tests\\test_s2uc_bounded_audio.py\", line 146, in test_real_wav_reader\n    row=w.request({'op':'next','index':i});self.assertEqual(row['index'],i);self.assertEqual(len(row['projection']['values']),48)\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\s2uc_audio_worker.py\", line 170, in request\n    need('error' not in result,'CHILD_ERROR:'+str(result.get('error')))\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\s2uc_audio_worker.py\", line 20, in need\n    if not ok:raise ValueError(code)\n              ^^^^^^^^^^^^^^^^^^^^^^\nValueError: CHILD_ERROR:SOURCE_TIME_INVALID\n"
+    },
+    {
+      "id": "tests.test_s2uc_bounded_audio.ProcessTests.test_request_watchdog",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_bounded_audio.ProcessTests.test_total_watchdog_while_parent_idle",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_bounded_audio.ProcessTests.test_unadmitted_child_cannot_start",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_bounded_audio.ProcessTests.test_wrong_source_hash_before_decoder",
+      "status": "PASS"
+    }
+  ],
+  "os_and_decoder_facts": [
+    {
+      "case": "aac_edit_priming",
+      "first": {
+        "index": 1,
+        "origin": {
+          "index": 1,
+          "start_sample": 0,
+          "end_sample": 4800,
+          "decoder_fragments": [
+            {
+              "pts": 0,
+              "time_base": [
+                1,
+                48000
+              ],
+              "source_start": 0,
+              "samples": 1024
+            },
+            {
+              "pts": 1024,
+              "time_base": [
+                1,
+                48000
+              ],
+              "source_start": 1024,
+              "samples": 1024
+            },
+            {
+              "pts": 2048,
+              "time_base": [
+                1,
+                48000
+              ],
+              "source_start": 2048,
+              "samples": 1024
+            },
+            {
+              "pts": 3072,
+              "time_base": [
+                1,
+                48000
+              ],
+              "source_start": 3072,
+              "samples": 1024
+            },
+            {
+              "pts": 4096,
+              "time_base": [
+                1,
+                48000
+              ],
+              "source_start": 4096,
+              "samples": 704
+            }
+          ]
+        },
+        "pcm_sha256": "17744bb6a4ed1d9d51d85d7eb645cde30352530d494233c434027f9e3193bae4",
+        "pcm_bytes": 19200
+      },
+      "result": {
+        "closed": true,
+        "facts": {
+          "packets": 470,
+          "frames": 469,
+          "decoded_samples_per_channel": 480256,
+          "accepted": 480000,
+          "windows": 100,
+          "buffer_peak_samples": 4800,
+          "batch_peak_samples": 1024,
+          "layout": [
+            "stereo",
+            2
+          ],
+          "read_bytes": 5610,
+          "hash_bytes": 5610,
+          "first_audio_stream": 0,
+          "closed": true
+        },
+        "projection_calls": {
+          "receptor": 0,
+          "nj": 0
+        }
+      },
+      "job": {
+        "flags": 8968,
+        "active_process_limit": 1,
+        "process_commit_limit": 671088640,
+        "job_commit_limit": 671088640,
+        "peak_process_commit": 458661888,
+        "peak_job_commit": 465186816,
+        "memory_limit_notification": false,
+        "memory_limit_messages": []
+      }
+    },
+    {
+      "case": "memory",
+      "result": {
+        "allocation_denied": true
+      },
+      "job": {
+        "flags": 8968,
+        "active_process_limit": 1,
+        "process_commit_limit": 671088640,
+        "job_commit_limit": 671088640,
+        "peak_process_commit": 14721024,
+        "peak_job_commit": 21282816,
+        "memory_limit_notification": true,
+        "memory_limit_messages": [
+          9
+        ]
+      }
+    },
+    {
+      "case": "first_audio_only",
+      "result": {
+        "closed": true,
+        "facts": {
+          "packets": 1,
+          "frames": 1,
+          "decoded_samples_per_channel": 4800,
+          "accepted": 4800,
+          "windows": 1,
+          "buffer_peak_samples": 4800,
+          "batch_peak_samples": 4800,
+          "layout": [
+            "2 channels",
+            2
+          ],
+          "read_bytes": 98370,
+          "hash_bytes": 115827,
+          "first_audio_stream": 1,
+          "closed": true
+        },
+        "projection_calls": {
+          "receptor": 0,
+          "nj": 0
+        }
+      }
+    },
+    {
+      "case": "request_timeout",
+      "job": {
+        "flags": 8968,
+        "active_process_limit": 1,
+        "process_commit_limit": 671088640,
+        "job_commit_limit": 671088640,
+        "peak_process_commit": 14663680,
+        "peak_job_commit": 21221376,
+        "memory_limit_notification": false,
+        "memory_limit_messages": []
+      }
+    },
+    {
+      "case": "total_timeout",
+      "job": {
+        "flags": 8968,
+        "active_process_limit": 1,
+        "process_commit_limit": 671088640,
+        "job_commit_limit": 671088640,
+        "peak_process_commit": 14856192,
+        "peak_job_commit": 21417984,
+        "memory_limit_notification": false,
+        "memory_limit_messages": []
+      }
+    }
+  ],
+  "nasa_decoded": false,
+  "neutral_only": true,
+  "fixture_bindings": [
+    {
+      "path": "reports/s2uc/audio-reader-development-20260930/fixtures/full.wav",
+      "bytes": 1939244,
+      "sha256": "0d89aee57c1fcc8a51844d1491ea1c814c3f996945d8212d9f4fe813e6a4fca7"
+    },
+    {
+      "path": "reports/s2uc/audio-reader-development-20260930/fixtures/gap.nut",
+      "bytes": 82290,
+      "sha256": "f0f1ccb3e798d1b944b7b884b5ef5a7850e90ddf542ed59095d3a0b25a75c395"
+    },
+    {
+      "path": "reports/s2uc/audio-reader-development-20260930/fixtures/multistream.nut",
+      "bytes": 115827,
+      "sha256": "770f1884d154815866a6afc676b711a8379a17f7f25f9386e5093e31c84c67e1"
+    },
+    {
+      "path": "reports/s2uc/audio-reader-development-20260930/fixtures/overlap.nut",
+      "bytes": 82291,
+      "sha256": "3103cd3390be1b8514a1dea68122bdb0fd840b7dd0051873093ba17e616bec50"
+    },
+    {
+      "path": "reports/s2uc/audio-reader-development-20260930/fixtures/priming.m4a",
+      "bytes": 5610,
+      "sha256": "685f4f4cce5a9cccd4a8c0b922601f1e12d6d35a0ddf4532b4b14bc672cd4106"
+    },
+    {
+      "path": "reports/s2uc/audio-reader-development-20260930/fixtures/short.wav",
+      "bytes": 19244,
+      "sha256": "3ac1bdf363578593c029ce12bf607ba277901c9c959ad7fed11b05d0edaadb06"
+    },
+    {
+      "path": "reports/s2uc/audio-reader-development-20260930/fixtures/time-cases.json",
+      "bytes": 188,
+      "sha256": "f3c19771dd0eb3db6ab8d343ccd47fa7a519853b607704b982f4fa4974d510b3"
+    }
+  ]
+}

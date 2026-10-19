@@ -1,0 +1,53 @@
+test_01_full_parent_and_exact_extract (tests.test_s2oe_immediate_visual_input.InputTests.test_01_full_parent_and_exact_extract) ... ok
+test_02_missing_parent (tests.test_s2oe_immediate_visual_input.InputTests.test_02_missing_parent) ... ok
+test_03_tampered_parent (tests.test_s2oe_immediate_visual_input.InputTests.test_03_tampered_parent) ... ok
+test_04_wrong_event (tests.test_s2oe_immediate_visual_input.InputTests.test_04_wrong_event) ... ok
+test_05_missing_values (tests.test_s2oe_immediate_visual_input.InputTests.test_05_missing_values) ... ok
+test_06_tampered_excerpt (tests.test_s2oe_immediate_visual_input.InputTests.test_06_tampered_excerpt) ... ok
+test_07_wrong_profile (tests.test_s2oe_immediate_visual_input.InputTests.test_07_wrong_profile) ... ok
+test_08_source_binding (tests.test_s2oe_immediate_visual_input.InputTests.test_08_source_binding) ... ok
+test_09_read_bytes_not_storage_multiplicity (tests.test_s2oe_immediate_visual_input.InputTests.test_09_read_bytes_not_storage_multiplicity) ... ok
+test_10_scope_closed (tests.test_s2oe_immediate_visual_input.InputTests.test_10_scope_closed) ... ok
+test_11_historical_limit (tests.test_s2oe_immediate_visual_input.InputTests.test_11_historical_limit) ... ok
+test_12_global_limit (tests.test_s2oe_immediate_visual_input.InputTests.test_12_global_limit) ... ok
+test_13_existing_class_limits (tests.test_s2oe_immediate_visual_input.InputTests.test_13_existing_class_limits) ... ok
+test_14_native_empty_formation_immediate (tests.test_s2oe_immediate_visual_input.InputTests.test_14_native_empty_formation_immediate) ... ERROR
+test_15_extraction_immutable (tests.test_s2oe_immediate_visual_input.InputTests.test_15_extraction_immutable) ... ok
+test_16_real_gate_closed (tests.test_s2oe_immediate_visual_input.InputTests.test_16_real_gate_closed) ... ok
+test_17_shared_limit (tests.test_s2oe_immediate_visual_input.InputTests.test_17_shared_limit) ... ok
+test_18_invalid_parent_structure (tests.test_s2oe_immediate_visual_input.InputTests.test_18_invalid_parent_structure) ... ok
+
+======================================================================
+ERROR: test_14_native_empty_formation_immediate (tests.test_s2oe_immediate_visual_input.InputTests.test_14_native_empty_formation_immediate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 57, in _callTestMethod
+    return super()._callTestMethod(method)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Python314\Lib\unittest\case.py", line 615, in _callTestMethod
+    result = method()
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oe_immediate_visual_input.py", line 140, in test_14_native_empty_formation_immediate
+    result=control.run(e,self.binding,run_id="neutral-immediate-visual",neutral=True)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2oe_immediate_visual_control.py", line 45, in run
+    a = scan.form_partial_cue_retrieval_336(config=config,state=state,cue=cue)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2kq_private_partial_cue_retrieval_336.py", line 908, in form_partial_cue_retrieval_336
+    config, state, cue = _state_and_cue(config, state, cue)
+                         ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2kq_private_partial_cue_retrieval_336.py", line 464, in _state_and_cue
+    _require(
+    ~~~~~~~~^
+        fast.visual_source_clock_id == bound_cue.visual_source_clock_id
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        "visual cue is stale or belongs to another native visual clock",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2kq_private_partial_cue_retrieval_336.py", line 84, in _require
+    raise S2KQError(code, message)
+tools._s2kq_private_partial_cue_retrieval_336.S2KQError: S2KQ_SOURCE_INVALID: visual cue is stale or belongs to another native visual clock
+
+----------------------------------------------------------------------
+Ran 18 tests in 1.169s
+
+FAILED (errors=1)

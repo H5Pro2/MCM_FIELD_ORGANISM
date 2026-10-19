@@ -1,0 +1,30 @@
+{
+  "binding_verified": true,
+  "code_unchanged_during_tests": true,
+  "unchanged_core": {
+    "mcm_field_organism/log_spectral_receptor.py": true,
+    "tools/_s2nj_private_auditory_output_projection.py": true,
+    "tools/_s2uc_signal_approx_adapter.py": true,
+    "tools/_s2uc_continuation_adapter.py": true
+  },
+  "an_partitions_unproduced": {
+    "AN-DEV": true,
+    "AN-EVAL": true
+  },
+  "plan_sha256": "71a356d34c49d84377faa3d3618ad644174154483f22a99689bf52c2694a1dbb",
+  "binding_sha256": "232795808dd51294907d19b041fd1a12a5c4fc273b34a2910b34f7a19661973d",
+  "peaks": {
+    "frame_peak": 12,
+    "output_slots_peak": 2,
+    "combined_peak": 13,
+    "output_python_bytes_peak": 3844,
+    "samples": 13297,
+    "receipt_bytes_peak": 555,
+    "scalar_pair_comparisons": 12,
+    "temporary_numeric_vectors_peak": 0,
+    "match_metadata_peak": 1,
+    "receipt_transient_utf8_bytes_peak": 968,
+    "receipt_python_bytes_peak": 1050
+  },
+  "prepared_call_sha256": "71dc63bddc271e102934e483534e1217a008382c9e9d69cfc2ed247b62b8ce36"
+}

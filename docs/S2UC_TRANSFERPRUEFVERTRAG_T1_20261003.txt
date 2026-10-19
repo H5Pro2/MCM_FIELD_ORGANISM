@@ -1,0 +1,305 @@
+MCM-KI: T1 — begrenzter Transfer auf neue synthetische Wahrnehmungsverläufe
+Stand 2026-10-03 | EIN VERTRAGSENTWURF ZUR ABNAHME
+NUR KONZEPTION. KEINE IMPLEMENTIERUNGS-, MATERIALISIERUNGS- ODER LAUFFREIGABE.
+T1 ist eine Dokumentkennung, keine Laufnummer.
+
+1. Forschungsfrage und verbindliche Aussagegrenze
+
+Überträgt sich die eingefrorene erfahrungsabhängige Auswahl auf neue,
+mehrdimensionale diskrete Vektorverläufe mit stochastischen Übergängen,
+neuen Symbolbereichen und nicht an Viererblöcke angepassten Phasen?
+Oder verhindern fehlende exakte Wiedererkennung, kurzlebige Originalspuren,
+kalte Fehlerzellen und kurze Phasen einen Nutzen gegenüber U/M/E/K/P?
+
+Dies ist ausschließlich ein SYNTHETISCHER TRANSFER AB DER 48-VEKTOR-GRENZE.
+Die Vektoren werden direkt als PerceptionSample-Werte zugeführt. Sie sind
+keine Ausgabe eines Audio-/Video-Rezeptors. Decoder, Audiofenster,
+Spektralmerkmale, visuelle Repräsentation und reale Sensorvariation werden
+nicht geprüft. Ein Erfolg belegt weder Transfer durch die tatsächliche
+Audio-/Video-Wahrnehmungskette noch allgemeines Lernen, Semantik,
+feldinterne Memory, mehrschrittiges Planen oder Neuheit gegenüber etablierten
+Lernverfahren. Letzteres würde eigene Vergleiche erfordern.
+
+Grundlage ist die abgenommene technische Wiederholungsprüfung:
+reports/s2uc/technical-repeat-assessment-20261003-01/REPORT.md.
+48/48 Anpassungen und H/G-Nutzen im bekannten Raster bleiben bekanntes
+Entwicklungswissen. Alle damaligen Quellen und Ergebnisse sind bekannt.
+Der ursprüngliche Raster32-Lauf bleibt geschlossen/global NOT_EVALUABLE.
+Der Laufzeit-/Integrationszweig ist abgeschlossen.
+
+2. Statisch belegte Grenze des eingefrorenen Mechanismus
+
+PairContextAdapter verlangt exakt48 endliche float-Komponenten in einem
+tuple, konstante technische Scopeangaben und lückenlose Indizes/Zeitgrenzen.
+Er bildet Zweierhinweise; die ursprüngliche Viererbildung bleibt bestehen.
+FactorHintArm vergleicht alle Komponenten beider Hinweisframes exakt;
+sein bestehender Faktorvergleich prüft 0,5/1/2. Es gibt hier keine gelernte
+Ähnlichkeitsmetrik und keine Toleranz für kleine Merkmalsabweichungen.
+
+U=multi_error_exact_v1 berücksichtigt ausschließlich Treffer mit factors=[1.0]
+und Offset0 oder1, also mit lebendem Originalnachfolger im Viererbestand.
+Ein Faktor-Treffer oder Offset2 ist nicht automatisch eine berechtigte
+U-Hypothese. Ein beliebiger Treffer in einem historischen Gesamtkorpus
+genügt nicht: Originalrolle, Generation und Ordinalen müssen im tatsächlich
+lebenden Vorzustand verfügbar sein. M/E/K behalten ihre bisherigen Gates;
+unterschiedliche Trefferverfügbarkeit wird pro Arm dokumentiert.
+
+U wählt nur einen eindeutigen warmen Gewinner mit ec-ep<0. Kälte,
+Gleichstand oder fehlende Verbesserung führen zu Persistenz. Fehlerzellen
+sind an lebende Generationen gebunden; es gibt keinen dauerhaft gelernten
+Symbol- oder Regimeklassifikator. Neue numerische Werte sind zulässig,
+sofern frühere exakt gleiche Zweierhinweise im eigenen Fall wiederkehren.
+
+Folgerung: Für fortlaufend verschiedenwertige Zweierhinweise kann der
+Exact-Pfad keine erfahrungsbasierte Kontextauswahl leisten. Wiederkehrende
+reale Ereignisse garantieren keine exakt gleichen Rezeptorwerte.
+Ein günstiger Übergang von diesem Mechanismus zu verrauschten Audio-/Video-
+Quellen ist deshalb nicht begründet. Eine lückenlos variierte Quelle nur
+zur erneuten Demonstration dieses bereits strukturell erklärten Ausfalls
+wird mit diesem Vertrag NICHT als weiterer Lauf vorbereitet.
+
+T1 ist dennoch falsifizierbar: Ein endliches synthetisches Alphabet erlaubt
+Wiederkehr, garantiert aber weder passende Zweierhinweise im lebenden
+Speicher noch Warmwahl oder Nutzen. Die Quelle darf keine fehlenden Treffer
+durch Nachziehen, Abrunden, Requantisieren oder Auswechseln von Fällen heilen.
+
+Codebezug: tools/_s2uc_pair_context_adapter.py, _s2uc_factor_hint.py,
+_s2uc_multi_error.py, _s2uc_continuation_adapter.py und
+_s2uc_perception_recency.py. Diese Feststellungen stammen aus Quelltextsichtung,
+nicht aus neuen Messungen.
+
+3. Eingefrorener Prüfling und Infrastruktur
+
+Unverändert: U/M/E/K/P, exact_v1/legacy_v1, alpha=1/2, mae48, Aufnahme,
+Vergessen, Promotion, Speichergrößen, Auswahl- und Gleichstandsregeln.
+Keine neue Schwelle, Normalisierung, Ähnlichkeit, Schutzspur oder Vorbelegung.
+Frischer leerer Zustand pro Fall und Arm; identische Quellwerte für alle Arme.
+Kein Reset an Phasengrenzen, keine Bank-/Symbol-/Regime-ID als Systemeingang.
+Profile sind ausschließlich technische, innerhalb eines Falls konstante
+Scopekennungen. Keine Übernahme von Erfahrung aus vorherigen Fällen.
+
+Referenzbindung:
+docs/S2UC_TECHNISCHE_WIEDERHOLUNG_V4_BINDUNG_20261003.json
+SHA256 121cb259d4747949722a332c8f4f9f04e8fdfee05a8c7eb235da7de48513cae2.
+Wiederverwendbar sind die eingefrorenen Replayfunktionen bis80 Positionen,
+Sample-Beobachter, Ressourcenprüfungen, exklusive Ausgabe und V2/V4-Watchdog.
+NICHT unverändert wiederverwendbar sind Raster32-Generator, Fallvalidator,
+X/Y-Blocketikettierung, 32-Fall-Aggregator und bestehende Autorisierungen.
+Ein späterer Auftrag müsste allein Quellen-/Beobachter-/Vertragshülle separat
+implementieren, neutral qualifizieren und neu binden. Kein Policyumbau.
+Die vorhandene Qualifikation beweist keine bereits vorhandene T1-Ausführung.
+
+4. Herkunft und vollständig vorab festgelegtes Quellenverfahren
+
+Es gibt genau vier Herkunftsgruppen r=1,2,3,4 und vier Verlaufstypen S0..S3.
+Alle16 Kombinationen werden verwendet, Reihenfolge S0/r1..r4, danach S1,
+S2,S3 jeweils r1..r4. Keine weiteren Seeds, Ersatzfälle oder Pilotquellen.
+Die vier r-Werte sind feste synthetische Replikatkennungen, keine Stichprobe
+aus einer realen Population. Fälle desselben r teilen ihre Vektorbibliothek;
+die16 Fälle werden nicht als16 unabhängige Stichproben ausgegeben.
+
+Vektorbibliothek je r: zwei Bänke b=0,1 mit je acht Zuständen s=0..7.
+Komponente j=0..47 ist exakt der binär darstellbare Wert
+    v(r,b,s,j) = 1/2 + (u+1)/262144,
+wobei u die ersten zwei Bytes, big-endian, von SHA-256 über die UTF-8-Bytes
+    MCM-T1-v1|vector|r|b|s|j
+bezeichnet. r,b,s,j werden durch ihre Dezimalziffern ohne führende Nullen
+ersetzt; kein abschließender Zeilenumbruch. Kein Digest wurde für diesen
+Entwurf berechnet. Der vollständige Vertrag legt Verfahren und Kennungen fest.
+Alle Komponenten liegen in (0,5;0,75]; sie sind nicht48 Kopien eines Skalars.
+Die Wertebereichswahl hält alle Arme im bekannten numerischen Bereich und
+trennt die Faktor0,5/2-Skalierungen vom Quellenbereich. Dies ist eine bewusste
+synthetische Vereinfachung, kein Amplitudeninvarianztest.
+
+Zufallsersatz je Fall und Position: d_t sind die ersten vier Bytes,
+big-endian, von SHA-256 der UTF-8-Zeichenfolge
+    MCM-T1-v1|draw|r|S|t
+mit S exakt S0,S1,S2 oder S3 und t als Dezimalzahl. Keine Zeilenumbrüche.
+d_0 bestimmt z_1=d_0 mod8. Für t=2..80 gilt abhängig vom Regime bei t:
+    C: z_t=(z_(t-1)+1) mod8, falls d_t mod4<3, sonst z_t=z_(t-1).
+    R: z_t=(z_(t-1)-1) mod8, falls d_t mod4<3, sonst z_t=z_(t-1).
+    I: z_t=d_t mod8.
+    H: z_t=z_(t-1).
+Ausgabe an Position t ist v(r,b_t,z_t,*). Beim Phasenwechsel wird der
+Zustand nicht zurückgesetzt. Eine neue Bank ändert nur die ausgegebenen
+Vektoridentitäten, nicht den Zustandsindex. d_1 bleibt unbenutzt.
+SHA-256 ist hier nur eine exakt definierte, quelleninterne Ziehungsregel,
+kein Sicherheits- oder Unabhängigkeitsnachweis. Die Moduli sind Zweierpotenzen.
+Die fertigen Folgen sind deterministisch. Angaben wie3/4 und gleichwahrscheinlich
+beschreiben das nominelle synthetische Übergangsmodell, keine gemessenen
+Häufigkeiten und keine garantierte Zufälligkeit dieser16 festen Folgen.
+
+Feste Phasen, jeweils Länge:Regime:Bank; Längen beziehen sich auf einzelne
+Quellpositionen, NICHT auf Viererblöcke oder Prognoseziele:
+    S0/r1,r2: 80:H:0.
+    S0/r3,r4: 80:C:0.
+    S1: 3:C:0, 17:R:0, 2:I:1, 23:C:1, 5:H:0, 30:R:0.
+    S2: 10:R:0, 1:I:1, 29:C:1, 4:R:0, 36:C:0.
+    S3: 7:C:0, 13:H:0, 6:R:1, 19:I:1, 35:C:0.
+
+Damit:16 Fälle à80 Positionen =1280 Quellenpositionen;80 Arme,
+6400 Arm-Aufnahmen plus6400 getrennte Referenzfortschreibungen.
+S0 liefert vier Verläufe ohne Regimewechsel, davon zwei konstante Kontrollen.
+S1 hat5, S2 und S3 je4 Übergänge; über vier r insgesamt52 Übergänge.
+Alle sind vorgegeben, einschließlich kurzer, nicht erfolgversprechender Phasen.
+
+Diese Quellen sind keine X/Y-Umsortierung: andere mehrdimensionale Vektoren,
+acht Zustände pro Bank, stochastische Schritte statt fester Viererrezepte,
+16 verschiedene Ausgangskonstellationen und nicht ausgerichtete Phasen.
+Entwicklungsabhängigkeiten bleiben:48 Dimensionen,80 Positionen, endliches
+Alphabet mit exakt wiederkehrenden Codevektoren, zwei Bänke, kontrollierte
+Regime und technische Zeitraster. H ist künstliche Konstanz. Das Alphabet
+stellt perfekte numerische Wiedererkennungsmöglichkeiten künstlich bereit;
+es beweist nicht, dass die reale Wahrnehmungskette diese erzeugt.
+Es werden aber keine Vierersegmente kopiert, Treffer gesucht oder Verläufe
+aus erwarteten Policy-Entscheidungen berechnet. Zufällige Wiederholungen,
+Kollisionen und längere Konstantstrecken bleiben unverändert erhalten.
+
+5. Vorregistrierung und Verbot ergebnisabhängiger Auswahl
+
+Nach Vertragsabnahme, aber vor jeglicher Quellenmaterialisierung: Vertrag,
+Prüflingshashes, Quellenverfahren, Fallordnung, Auswerter, Grenzen und Runtime
+gemeinsam neu binden. Eine spätere Implementierungsqualifikation verwendet
+nicht diese Hash-Kennungen und nicht diese Evaluationsquellen.
+Erst separate Einmallauffreigabe gestattet deren einmalige Erzeugung.
+Alle Quellen, Komponentenherkunft, Zustands-/Regimeverläufe und Masken werden
+vor dem ersten Policyaufruf vollständig manifestiert. Technische Zeitangaben
+wie zuvor: first_ordinal1, start_sample0, hop=window4800.
+
+Ein vorab definierter Herkunftsabgleich berichtet ganze Quellen, Vektoren,
+Zweierhinweise und Viererfolgen gegen die gebundenen bekannten S2UC-Exporte;
+Suchumfang und nicht erfasste Vorversuche sind offen anzugeben. Er verwendet
+weder Policyergebnisse noch neue Selektionsregeln. Treffer, Duplikate oder
+unerwartet geringe Wiedererkennung führen NICHT zur Fallersetzung.
+Bekannte ganze Folgen sind als kontaminiert auszuweisen; ein Anspruch auf
+unberührte vollständige Quellen ist dann verfehlt. Diagnose bleibt vollständig.
+Nicht registrierte Outputs/Regeln vor der Abnahme machen einen neuen
+Unberührtheitsanspruch unzulässig; ein neuer Dateiname repariert das nicht.
+
+6. Getrennte Messgrößen und falsifizierbare Kriterien
+
+G={3,5,...,79}:39 tatsächlich bewertbare Ziele je Fall, insgesamt624.
+Ziel81 wird nur als zensierte letzte Prognose protokolliert. Alle übrigen
+Ziele bleiben in G, einschließlich kalter Anfänge und fehlender Treffer.
+Das alte H={7,11,...} war an die alte Quellenkonstruktion gekoppelt;
+es wird hier nicht als neues Transfer-Erfolgskriterium ausgegeben.
+
+WIEDERERKENNUNG: für jedes G-Ziel rohe Faktor-Treffer, Faktor1-Treffer,
+Nachfolgerberechtigung und lebende Originalidentität getrennt zählen.
+Begrenzte Wiedererkennung gilt nur als beobachtet, wenn mindestens4/16 Fälle
+in mindestens zwei Herkunftsgruppen wenigstens einen berechtigten exakten
+Nachfolger haben. Kein solcher Treffer bedeutet fehlende Wiedererkennung,
+nicht einen technischen Fehler und nicht fehlende Messdaten.
+
+VERFÜGBARKEIT: für jedes Ziel vorziellich berechtigte Kandidaten, kalte/warme
+Zellen, Konkurrenz und Ausfallgründe sichern. Nach Zielaufdeckung zusätzlich
+prüfen, ob die tatsächlichen Zielwerte unter den zuvor eingefrorenen
+Originalnachfolgern lagen. Dies ist eine Ex-post-Verfügbarkeitsdiagnose,
+kein nachträglich veränderter Kandidatensatz. Genereller Treffer, passender
+Nachfolger und erfolgreiche Auswahl sind drei verschiedene Aussagen.
+
+ERFAHRUNGSABHÄNGIGE AUSWAHL UND PHASENANPASSUNG:
+Für jede der52 neuen Phasen mit Intervall[a,b] sind die Prüfziele
+T={t in G: a+2<=t<=b}; beide Hinweisframes liegen damit in der neuen Phase.
+Auch Übergangsziele mit gemischtem Hinweis bleiben unverändert in G.
+Die Quelle definiert einen Beobachtervergleich, der dem Prüfling verborgen
+bleibt: bedingt auf z_(t-1) ist das eindeutige modale Folgesymbol bei C der
+nächste Ringzustand, bei R der vorige und bei H derselbe, jeweils in Bank b_t.
+I hat acht gleich wahrscheinliche Folgesymbole, also kein eindeutiges modales
+Ziel. Die realisierte Ziehung wird NICHT als vorhersagbare Sollantwort benutzt.
+
+Ein Übergang besteht nur, wenn U spätestens beim dritten Ziel in T einen
+eindeutig gewählten warmen Originalnachfolger des jeweils modalen Vektors
+ausgibt und dies bis Phasenende beibehält. Zur gewählten lebenden Zelle muss
+vor jedem als richtig gewerteten Ziel bereits Feedback aus [a,t) beigetragen
+haben. Provenienz, ec/ep vor Ziel, strikter Fehlergewinner und Originalordinalen
+sind zu belegen. Persistenz allein ist kein Beleg erfahrungsabhängiger Auswahl.
+Wenn T weniger als drei Ziele enthält, muss dies spätestens am letzten Ziel
+gelingen. T leer, fehlende lebende Nachfolger, Kälte, P-Auswahl oder fehlendes
+eindeutiges Regimeziel zählen als NICHT BESTANDEN, nicht als Ausschluss.
+I-Phasen sind damit bewusst negative Anpassungskontrollen; ihr G-Nutzen wird
+dennoch normal bewertet. Kurze Phasen werden nicht verlängert.
+
+Vorab normative Schwelle für begrenzte Phasenanpassung: mindestens26/52,
+zusätzlich mindestens4/13 je Herkunftsgruppe. Diese neue Schwelle ist keine
+Fortschreibung des48-Wechsel-Kriteriums und keine geschätzte Erfolgschance.
+Sie behauptet keine robuste Anpassung an sämtliche Phasen. Alle52 Einzelurteile,
+Latenzen, Erstfehler, Rückfälle, fehlenden Gelegenheiten und Negativkontrollen
+sind unabhängig vom Gesamturteil vollständig zu berichten. Bedingte Erfolgsraten
+bei warm verfügbaren Nachfolgern dürfen den52er-Nenner nicht ersetzen.
+Die strukturelle Härte ist vorab offen:12 Übergänge führen in I,8 in H.
+I hat kein eindeutiges modales Ziel. Bei H ist nach zwei neuen Hinweisframes
+die richtige Fortsetzung identisch mit Persistenz; für genau diesen
+Originalnachfolger sind ec und ep immer gleich. Die strikte U-Regel kann
+daher keine richtige nichtpersistente Warmwahl nachweisen. Diese20 Übergänge
+sind negative Kontrollen dieses MECHANISMUSKRITERIUMS, nicht notwendig
+schlechte numerische Vorhersagen. Höchstens32/52 können dieses Kriterium
+bestehen; weitere kurze Phasen können die Möglichkeit zusätzlich einschränken.
+Ein Nichterreichen von26/52 darf deshalb nicht als generelle Unfähigkeit
+zu vernünftiger Enthaltung oder zu fehlerfreier H-Vorhersage umgedeutet werden.
+
+GESAMTNUTZEN: primär gleichgewichtetes Mittel der16 Fall-MAEs auf G.
+BELEGT nur, wenn U strikt unter JEDER Baseline M/E/K/P liegt; Gleichstand
+genügt nicht. Zusätzlich alle Positionsmittel und Herkunftsgruppen berichten.
+Ein stochastisch realisierter Fehler ist ein echter Fehler, auch wenn die
+modale Auswahl richtig war. Modal-Anpassung kompensiert keinen G-Nichtnachweis.
+
+STABILITÄT/SCHADEN: auf S0 warme Ziele G_w={11,13,...,79}; U darf im
+gleichgewichteten Mittel der vier S0-Fälle gegen keine Baseline schlechter sein.
+Kalte Anfangsziele3/5/7/9 bleiben im vollständigen G-Mittel und werden separat
+ausgewiesen. Zusätzlich in KEINEM der16 Fälle G-MAE(U)-G-MAE(B)>1/32 für
+irgendeine Baseline B. Gleichheit an der Grenze erlaubt. Kein Grenzwert für
+Einzelziele wird daraus abgeleitet; alle positiven Zieldifferenzen, Summen,
+Maxima und Fallverluste ausdrücklich berichten, besonders gegen K.
+
+Wiedererkennung, Verfügbarkeit, erfahrungsabhängige Anpassung, Gesamtnutzen
+und Schaden werden getrennt beurteilt. Ein vollständiger begrenzter
+synthetischer Transferbefund erfordert Wiedererkennung, Anpassung, G-Nutzen
+und Stabilität/Schadensgrenze zugleich. Sonst jeweils NICHT_NACHGEWIESEN
+bzw. SCHADENSGRENZE_VERLETZT. Vollständige fehlende Treffer sind negative
+Fachbefunde. Fehlende/ungültige Belege oder ein technischer Teilabbruch
+ergeben dagegen globale NOT_EVALUABLE; Nenner werden nicht verkleinert.
+Alle Schwellen sind vorab gesetzte Forschungsanforderungen, keine aus
+simulierten Ergebnissen angepassten Grenzen. Statistische Populations- oder
+Neuheitsbehauptungen sind ausgeschlossen.
+
+7. Ressourcen, Grenzen und Verfahrensabschluss
+
+Unverändert pro aktivem Arm:2 retained+1 candidate, maximal6 berechtigte
+Hypothesen,416 gepackte Bytes,18 Originalframes,2 Ausgabeslots,20 kombiniert,
+16384 Zusatz-Pythonbytes,16384 Receiptbytes,32768 UTF8-Obergrenze.
+Serielle80 Replays, keine Warmups, keine Piloten mit T1-Quellen, kein Nachlegen.
+64MiB gemeinsamer Deckel inklusive gebundener Vorbereitung/Referenzen und
+Auswertung;1MiB Abschlussreserve, maximal8MiB Vorbereitung/Referenzen.
+Vorhandene Dateikappen beibehalten:Quelle65536,Arm196608,
+Fallauswertung524288,Ressourcen32768,Start1024,sonstige JSON524288 Byte.
+Zustände, Quellenbeobachter und Betriebssystem-RAM getrennt bilanzieren;
+Bounds nicht als gemessene Peaks ausgeben.
+
+Gesamtgrenze3600s, Worker-Hardstopp3540s,60s Abschlussreserve. Genau eine
+exklusiv beanspruchte Ausgabe nach neuer separater Autorisierung. Abbruch:
+Teilbelege/Chronologie sichern, keine Fortsetzung, Reparatur oder Wiederholung
+innerhalb dieser Einmalfreigabe. Keine Laufzeit-Optimierungsserie.
+Der kleinere Umfang begründet allein keine garantierte Laufzeit: die neue
+Trefferkonkurrenz ist ungemessen. Eignung der übernommenen Grenzen ist in
+einer späteren neutralen Hüllenqualifikation zu prüfen, nicht auf T1-Quellen.
+
+Vor Materialisierung fachlich stoppen, falls der freizugebende Eingangsweg
+nicht exakt diese48-Werte/Synchronität zulässt oder die notwendige neutrale
+Hüllenqualifikation nicht gelingt. Keinen zusätzlichen Ähnlichkeitspfad,
+Decoder oder quantisierenden Medienadapter als scheinbare Quellenreparatur
+einführen. Ein Audio-/Video-Transferauftrag wäre ein anderer Vertrag und
+müsste zuerst Herkunft und Wiedererkennungsmöglichkeiten der tatsächlichen
+Rezeptorausgaben klären. T1 liefert dafür keinen Ersatznachweis.
+
+8. Abnahmegegenstand und nächster zulässiger Schritt
+
+Dieser eine Entwurf ist das vollständige Konzeptprodukt. Es wurden keine
+Vektoren, Zustandsfolgen, Quellenhashes, Scores oder neuen Laufbelege erzeugt;
+keine Implementierung und keine operative Autorisierung angelegt.
+Empfehlung: Projektleiter prüft und entscheidet über T1 mit ausdrücklich
+synthetischer Aussagegrenze. Erst nach Abnahme wäre ein separater, eng
+begrenzter Auftrag für Quellen-/Auswertungshülle und neutrale Qualifikation
+zulässig. Ein Vollversuch durch die reale Audio-/Video-Kette wird auf dieser
+Basis nicht empfohlen. Der eingefrorene Exact-Mechanismus hat dafür eine
+konkrete offene Grenze: fehlende invariante Wiedererkennung.

@@ -1,0 +1,71 @@
+{
+  "status": "TECHNICAL_EVIDENCE_COMPLETE_PENDING_LEADER_DECISION",
+  "research_authorized": false,
+  "replaces_original_prestart": false,
+  "original_prestart_sha256": "e8cb8f935d28a5624239aafdbab75d0cb8246b665045442afcc9ec4a8931d36e",
+  "production_code_changed": false,
+  "files": {
+    "tools/s2uc_hx1_memory_probe.py": {
+      "bytes": 7502,
+      "sha256": "32d460892a4a0e4d70cb419aeda782f347f7491b2a7e548dc42f3e8ca2ea23af"
+    },
+    "docs/S2UC_HX1_V1_20261004_CODEBINDUNG.json": {
+      "bytes": 14389,
+      "sha256": "66dfca57e696747b9125333f58666afab7dd23745c69ba0a78deea7250e1bf1c"
+    },
+    "docs/S2UC_HX1_V1_20261004_VORSTARTBINDUNG.json": {
+      "bytes": 601,
+      "sha256": "e8cb8f935d28a5624239aafdbab75d0cb8246b665045442afcc9ec4a8931d36e"
+    },
+    "reports/s2uc/hx1-neutral-20261004-01/fault-memory/closure.json": {
+      "bytes": 1155,
+      "sha256": "20af4a60ceab5fb93a60e80299856751ff15fb5f42574400343208dd39ec1cef"
+    },
+    "reports/s2uc/hx1-neutral-20261004-01/fault-memory/memory-enforcement.json": {
+      "bytes": 55,
+      "sha256": "a3f1e2ed01dc10f6bcc596ce3fdff5211d167171336b3c7000d4d982a422b02e"
+    },
+    "reports/s2uc/hx1-memory-clarification-20261004-01/aggregate.json": {
+      "bytes": 6589,
+      "sha256": "2943f82d6d1d3dd0c183ff056539a36ee6fff48139486de0c1c0f379a09734d8"
+    },
+    "reports/s2uc/hx1-memory-clarification-20261004-01/native.json": {
+      "bytes": 6540,
+      "sha256": "2d118b83005a43d53796d4bf875f333f91584f475ea3a4e445c41f6f34838443"
+    },
+    "reports/s2uc/hx1-memory-clarification-20261004-01/probe-source.py": {
+      "bytes": 6563,
+      "sha256": "78ad5d7563d0ce4872dd36c766ccae567a2d06023c2ba572a87535842cdd56c1"
+    },
+    "reports/s2uc/hx1-memory-clarification-20261004-01/python.json": {
+      "bytes": 4212,
+      "sha256": "efe0816f925b70443dc11d5d0b7fd25872669de19e20c1c20188506ec2928fde"
+    },
+    "reports/s2uc/hx1-memory-clarification-20261004-02/aggregate.json": {
+      "bytes": 6726,
+      "sha256": "880fc3a34a88f2f66d2d3079375affaa35c41bcffc871e306d116614855986c0"
+    },
+    "reports/s2uc/hx1-memory-clarification-20261004-02/native.json": {
+      "bytes": 6701,
+      "sha256": "8e65833bfcee0b0f49c74dc6e3bbba4d006c47b4922577de7b246514c7664409"
+    },
+    "reports/s2uc/hx1-memory-clarification-20261004-02/probe-source.py": {
+      "bytes": 7502,
+      "sha256": "32d460892a4a0e4d70cb419aeda782f347f7491b2a7e548dc42f3e8ca2ea23af"
+    },
+    "reports/s2uc/hx1-memory-clarification-20261004-02/python.json": {
+      "bytes": 4353,
+      "sha256": "cffefffecf45252c1eebc42cca65bebc4d646b6f310b2b1fa5c0afc25b7c873a"
+    },
+    "reports/s2uc/hx1-memory-clarification-20261004-02/REPORT.md": {
+      "bytes": 9725,
+      "sha256": "09b7bdccab106a71ed2dc1913ef7bce14727e8bbd5678fb3082217c1e1d20c4a"
+    },
+    "reports/s2uc/hx1-memory-clarification-20261004-02/verification.json": {
+      "bytes": 2257,
+      "sha256": "7224f174a06fc8ac65ef5358c5cd66cc72681c83508e818bc6ecde2628252722"
+    }
+  },
+  "original_preparation_bytes": 5108345,
+  "supplement_budget_note": "Original preparation unchanged; additional diagnostic evidence listed separately, no research export."
+}

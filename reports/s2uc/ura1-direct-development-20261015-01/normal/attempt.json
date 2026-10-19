@@ -1,0 +1,6 @@
+{
+  "status": "REJECTED_DEVELOPMENT_ATTEMPT",
+  "reason": "MEMBER: integer metadata keys were not normalized to JSON strings",
+  "valid_evidence": false,
+  "correction": "Normalize integer metadata keys and add D08 regression; corrected decoder-failure path removes unpublished candidate."
+}

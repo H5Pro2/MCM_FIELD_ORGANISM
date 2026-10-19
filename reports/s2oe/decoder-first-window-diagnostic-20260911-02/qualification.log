@@ -1,0 +1,10 @@
+test_abrupt_end_retains_phase_not_exception (test_s2oe_diagnostic.DiagnosticTests.test_abrupt_end_retains_phase_not_exception) ... ok
+test_allocation_exception (test_s2oe_diagnostic.DiagnosticTests.test_allocation_exception) ... ok
+test_bounded_diagnostics_and_unchanged_limits (test_s2oe_diagnostic.DiagnosticTests.test_bounded_diagnostics_and_unchanged_limits) ... ok
+test_limit_does_not_erase_original (test_s2oe_diagnostic.DiagnosticTests.test_limit_does_not_erase_original) ... ok
+test_original_exception (test_s2oe_diagnostic.DiagnosticTests.test_original_exception) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.888s
+
+OK

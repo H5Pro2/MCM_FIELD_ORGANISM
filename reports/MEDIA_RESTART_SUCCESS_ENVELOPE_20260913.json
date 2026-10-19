@@ -1,0 +1,2012 @@
+{
+  "status": "NICHT_PASSEND",
+  "scope": "Complete conservative reservation envelope, NOT a measured future peak or proof of unavoidable physical size. No tests or media.",
+  "test_calls": 0,
+  "media_calls": 0,
+  "repository_head": "537109994cf777f8d36cda617aafe12226806c25",
+  "limits": {
+    "total": 4194304,
+    "metadata": 131072,
+    "sources": 327680,
+    "shared": 393216,
+    "verification": 262144
+  },
+  "arithmetic_sources": [
+    {
+      "path": "tools\\_media_publication_plan.py",
+      "bytes": 8802,
+      "sha256": "c3ec36b8b9b48920b8dbd09c66e7c6b73afe951a91b9a775c9f1220b7f712b8c"
+    },
+    {
+      "path": "tools\\_media_restart_reservations.py",
+      "bytes": 3098,
+      "sha256": "53a05ba1894406dd85d606229e9274a304ab6db904881578871beed2c97fbf9f"
+    },
+    {
+      "path": "tools\\_media_restart_evidence.py",
+      "bytes": 12202,
+      "sha256": "93c08864e0808d8dc8ca547f9fa59c101e99b7d7a3a49b4c5db2f69e355b6824"
+    }
+  ],
+  "active": [
+    {
+      "path": "reports\\qualify_full_file_once.py",
+      "bytes": 16165,
+      "sha256": "b935f45d706e2fa6c541d049e5e81b0695b07c666308303502fa1189cf54a551",
+      "category": "sources"
+    },
+    {
+      "path": "reports\\qualify_media_failure_form_once.py",
+      "bytes": 10943,
+      "sha256": "d510b595e36d514388d530fa3cae46b4cf73c2ad12c824f28e792dbcac08b472",
+      "category": "sources"
+    },
+    {
+      "path": "reports\\qualify_media_publication_plan_once.py",
+      "bytes": 11673,
+      "sha256": "39d069f59c6ce710d9b09f27b3dd28e1e59131c9fa91ed6a3ef57c3d8aec3e59",
+      "category": "sources"
+    },
+    {
+      "path": "reports\\qualify_media_restart_admission_once.py",
+      "bytes": 10570,
+      "sha256": "a58005564a7d56280dae64623f6226c948c7b794d184350c35f32e1795cc3adb",
+      "category": "sources"
+    },
+    {
+      "path": "reports\\qualify_media_restart_measured_once.py",
+      "bytes": 7895,
+      "sha256": "8ed9a69850057dbd9991a299bf26d190ff2cf2de89724a1635dfb95921c7592f",
+      "category": "sources"
+    },
+    {
+      "path": "reports\\qualify_media_restart_once.py",
+      "bytes": 6911,
+      "sha256": "8e47b4b78d648e1d6e848b1f7b003072ec0480f6d1d1aacf684347628fc69a31",
+      "category": "sources"
+    },
+    {
+      "path": "reports\\run_selected_media_restart_once.py",
+      "bytes": 10208,
+      "sha256": "8f1768f2ed364ecf1c0e27f65412d45fbf0f12296846c9cc70f09a9a9b2f831d",
+      "category": "sources"
+    },
+    {
+      "path": "reports\\start_bound_media_player.py",
+      "bytes": 1096,
+      "sha256": "63d51cbc0fe57eb8da329f2f7ca93187f7687a278f27c07005521a6c865f8517",
+      "category": "sources"
+    },
+    {
+      "path": "tests\\media_restart_neutral.py",
+      "bytes": 4355,
+      "sha256": "d57af7ea5ce9730422390051473b68b62e3e2cf7e2cfe46a11043e7d287914c0",
+      "category": "sources"
+    },
+    {
+      "path": "tests\\test_media_failure_form.py",
+      "bytes": 6044,
+      "sha256": "ee6fc3fbc44cbaf94333f90584bf17e69f2091579e0e66ccaffe0303a9e49cb4",
+      "category": "sources"
+    },
+    {
+      "path": "tests\\test_media_publication_plan.py",
+      "bytes": 10546,
+      "sha256": "fa58d64fae93e94e70a643d07a3d8e7979930159a8815bda27e7d7b3aea90e26",
+      "category": "sources"
+    },
+    {
+      "path": "tests\\test_media_restart_connection.py",
+      "bytes": 9399,
+      "sha256": "7fea9c28e3ba9ce4bf0bf7c746a6d0f1fadc58b2a220581e98c708f0f0e9990e",
+      "category": "sources"
+    },
+    {
+      "path": "tests\\test_media_restart_measured.py",
+      "bytes": 4458,
+      "sha256": "15fb2a2ee0c7f70e7813bdf4872cb10ccf907bb957bc8b458655da6cc9bb89d7",
+      "category": "sources"
+    },
+    {
+      "path": "tests\\test_media_restart_real_admission.py",
+      "bytes": 11885,
+      "sha256": "c17a499dbb51944371eb46f39af26a51ec4b20b780d002dd35f61970d6798dd2",
+      "category": "sources"
+    },
+    {
+      "path": "tests\\test_media_restart_reserved.py",
+      "bytes": 8350,
+      "sha256": "5625fc688948e5a04eee70053b4f68a966b304bb1497c5357290ecac72c24a25",
+      "category": "sources"
+    },
+    {
+      "path": "tests\\test_s2oe_full_file.py",
+      "bytes": 13924,
+      "sha256": "a61496f69d5ff57d5fd65493cc5580a3a7cb23c37eb10bcf109c59fc5b160466",
+      "category": "sources"
+    },
+    {
+      "path": "tools\\_media_publication_plan.py",
+      "bytes": 8802,
+      "sha256": "c3ec36b8b9b48920b8dbd09c66e7c6b73afe951a91b9a775c9f1220b7f712b8c",
+      "category": "sources"
+    },
+    {
+      "path": "tools\\_media_restart_admission.py",
+      "bytes": 2126,
+      "sha256": "61054d2712b0b8434e9d4ac4b5da4c929411d22589708c420184f232241182b8",
+      "category": "sources"
+    },
+    {
+      "path": "tools\\_media_restart_checkpoint.py",
+      "bytes": 16955,
+      "sha256": "3f69591d3689c80c02e48f1dfd612bd70350ad5f5db0951b25fedc6c2947b4ff",
+      "category": "sources"
+    },
+    {
+      "path": "tools\\_media_restart_evidence.py",
+      "bytes": 12202,
+      "sha256": "93c08864e0808d8dc8ca547f9fa59c101e99b7d7a3a49b4c5db2f69e355b6824",
+      "category": "sources"
+    },
+    {
+      "path": "tools\\_media_restart_player.py",
+      "bytes": 7220,
+      "sha256": "5d26363297ccb2ac186ed69211ce2d776d2984098a01f3237a4e5f53a0eb91ee",
+      "category": "sources"
+    },
+    {
+      "path": "tools\\_media_restart_reservations.py",
+      "bytes": 3098,
+      "sha256": "53a05ba1894406dd85d606229e9274a304ab6db904881578871beed2c97fbf9f",
+      "category": "sources"
+    },
+    {
+      "path": "tools\\_media_restart_serialization.py",
+      "bytes": 3277,
+      "sha256": "a25b9bc0bb057fc775e4db85f1db9e8029505e7580b1c645615da5505a2a8924",
+      "category": "sources"
+    },
+    {
+      "path": "tools\\_media_restart_work.py",
+      "bytes": 9471,
+      "sha256": "768f83d11a00b6cc11eec0aaacaf7b8ae4b99335d179b1adb7a81ae615fe4407",
+      "category": "sources"
+    },
+    {
+      "path": "tools\\_memory_checkpoint.py",
+      "bytes": 22288,
+      "sha256": "1bb7834a3097661894d1c9650f7702aecf332660486888e796d4eb211e710b13",
+      "category": "sources"
+    },
+    {
+      "path": "tools\\_memory_checkpoint_ledger.py",
+      "bytes": 3021,
+      "sha256": "9b7a846befd834c28e5ce710052056e1986c74a29ecf38ca9b168b120e506f24",
+      "category": "sources"
+    },
+    {
+      "path": "tools\\_s2oe_decoder_worker.py",
+      "bytes": 25210,
+      "sha256": "4a61b9ea41236eb28ac49e959563a2a8248eedb315e4084cffc4db7bdcf10021",
+      "category": "sources"
+    },
+    {
+      "path": "tools\\_s2oe_full_file.py",
+      "bytes": 3815,
+      "sha256": "c053d6bc93508d945e910936b3003cb2bbf9033fb9634133740d081dc3100bfc",
+      "category": "sources"
+    },
+    {
+      "path": "tools\\_s2oe_isolation_log.py",
+      "bytes": 520,
+      "sha256": "cf43d6e5422fa9776f03322c2a8e6446f0c4dc4d2f9445a54ce5b594db029278",
+      "category": "sources"
+    },
+    {
+      "path": "tools\\_s2oe_local_player.py",
+      "bytes": 16817,
+      "sha256": "95075fd9185a5b0ecb3bdbf37a0bf9a7a504f0bb9136a53bfb16169b84646ccf",
+      "category": "sources"
+    },
+    {
+      "path": "tools\\_s2oe_media_binding.py",
+      "bytes": 6050,
+      "sha256": "58184e85fb33d3a9b860f2facb0e058bc5e4c1b9fa2a1984f5343803c2511bd6",
+      "category": "sources"
+    },
+    {
+      "path": "tools\\_s2oe_media_decoder.py",
+      "bytes": 12753,
+      "sha256": "9462319ac6880f5d0d1e21a03c505ef0ebe24b8d75ced4ae7989963b65a2aeca",
+      "category": "sources"
+    },
+    {
+      "path": "tools\\_s2oe_media_session.py",
+      "bytes": 19575,
+      "sha256": "420c40ad22daa84365f3f94b2365238fb813ed6c1d7aada973f27affea02e566",
+      "category": "sources"
+    },
+    {
+      "path": "tools\\_s2oe_media_verification.py",
+      "bytes": 7344,
+      "sha256": "8efaeca3fdfacbc6886038cb5a52d4efccdab2cb6559418596de479d67cbd829",
+      "category": "sources"
+    },
+    {
+      "path": "tools\\_s2oe_uhd_admission.py",
+      "bytes": 2110,
+      "sha256": "eef0c395e71b92760e705a83fa11e77e52994fe9be2662ac725543d3b1484d95",
+      "category": "sources"
+    },
+    {
+      "path": "tools\\_s2oe_uhd_profile.py",
+      "bytes": 2908,
+      "sha256": "18418d0bc051682ac83a54e01628e25a83a33c981df72d189b3d945fcb450282",
+      "category": "sources"
+    },
+    {
+      "path": "tools\\s2oe_player.html",
+      "bytes": 10445,
+      "sha256": "116cf20e7c0f2034222f598ced181033ed34bc13154ffd8371a73c6520c5d962",
+      "category": "sources"
+    },
+    {
+      "path": "reports\\media-failure-form-qualification-20260913-01\\balance.json",
+      "bytes": 580,
+      "sha256": "57c0f4417bd6ff72244d761448aee191026a4ba048c21fa77a7b769216465142",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-failure-form-qualification-20260913-01\\observations.json",
+      "bytes": 102,
+      "sha256": "4a7f4be704388a372dd2566b294b70d0e6807a058f5a1dc989d062dc40eddcd4",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-failure-form-qualification-20260913-01\\preregistration.json",
+      "bytes": 5692,
+      "sha256": "da8a8e6d9eb7a837734bca6c5ef3b2a3a5c4642e114416f504212b2301f55676",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-failure-form-qualification-20260913-01\\REPORT.md",
+      "bytes": 1850,
+      "sha256": "f2b52b5e586b444537d52a4085619389a31e3a2b85a0cbbf50cac5c070c06528",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-failure-form-qualification-20260913-01\\result.json",
+      "bytes": 468,
+      "sha256": "daadf2d27b5e536d2f0ecbcd0f13dd07f15725211057db3aff38640459add1ec",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-failure-form-qualification-20260913-01\\stderr.log",
+      "bytes": 649,
+      "sha256": "bcd975e63dde814301d76547d5a5a3d288dfb2a95102c3e5b7cb2e843609302e",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-failure-form-qualification-20260913-01\\stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-failure-form-qualification-20260913-01\\test.claim",
+      "bytes": 44,
+      "sha256": "628234a725a24db3d8198dea2455a90b267cbbcb08be3256cda4a6b64f8be1e5",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-failure-form-qualification-20260913-01\\test_01_full_form_size_publication_primary\\failure.json",
+      "bytes": 3473,
+      "sha256": "7276a345b989cc7b753efd904e274ab4fa9b865718cf3a87d7ddb27801edf80f",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-failure-form-qualification-20260913-01\\test_02_same_path_only_one_write\\failure.json",
+      "bytes": 3473,
+      "sha256": "7276a345b989cc7b753efd904e274ab4fa9b865718cf3a87d7ddb27801edf80f",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-failure-form-qualification-20260913-01\\test_03_second_path_rejected\\failure.json",
+      "bytes": 3473,
+      "sha256": "7276a345b989cc7b753efd904e274ab4fa9b865718cf3a87d7ddb27801edf80f",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-publication-plan-qualification-20260913-01\\balance.json",
+      "bytes": 802,
+      "sha256": "462cdf6ea285ad31bc5cadd1dce9355481bfa80d6abbc4a7399e223b6d298b5c",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-publication-plan-qualification-20260913-01\\observations.json",
+      "bytes": 277,
+      "sha256": "8980c70557d1bed5db0abcadcf242e28dab75ab11a1d0654dfa1af17e463b280",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-publication-plan-qualification-20260913-01\\preregistration.json",
+      "bytes": 8513,
+      "sha256": "23fced64af0cd186279a4d5225fca2d5adedeb4f7cd86f053e649f8ddf329590",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-publication-plan-qualification-20260913-01\\REPORT.md",
+      "bytes": 4661,
+      "sha256": "c3b278d302a1c35887913a03656c1bf572abeb8d9780e83e18696586bcfbfe31",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-publication-plan-qualification-20260913-01\\result.json",
+      "bytes": 455,
+      "sha256": "19bfd796918f26757d027cfd6b8516052238bea9644c1c337032000e90872ac0",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-publication-plan-qualification-20260913-01\\stderr.log",
+      "bytes": 2524,
+      "sha256": "59a82a13292bf0d0fed707064995b32513d2a7345ea7c8a27fd4cd49b9efade3",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-publication-plan-qualification-20260913-01\\stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-publication-plan-qualification-20260913-01\\test.claim",
+      "bytes": 46,
+      "sha256": "f9acd94cb883afe31bd2afaada774d90a84472d51dd37102c41b9ccd882a51ec",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-restart-admission-qualification-20260913-02\\balance.json",
+      "bytes": 809,
+      "sha256": "d3fddd0b444cf0ab29939480d7aa2a7d3acf9ff8af71b1bdcd402cb3af31f625",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-restart-admission-qualification-20260913-02\\preregistration.json",
+      "bytes": 20644,
+      "sha256": "a25b2b745106126dc142073e35a15a1addd005b4fff8221a2dec7e9b6891869b",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-restart-admission-qualification-20260913-02\\REPORT.md",
+      "bytes": 4215,
+      "sha256": "3db24c0823b32a133eded115fb8c833889148c37056f8899646044ddcba760b2",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-restart-admission-qualification-20260913-02\\result.json",
+      "bytes": 1156,
+      "sha256": "fab6b40d47dbb1c4dd91340b78709f62135739edeeeb856808a59f4efa6726ff",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-restart-admission-qualification-20260913-02\\stderr.log",
+      "bytes": 2036,
+      "sha256": "300bed47f612c90e2eade5668e177310ac89910d05dd0a3d4add7e9bc285eed2",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-restart-admission-qualification-20260913-02\\stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-restart-admission-qualification-20260913-02\\test.claim",
+      "bytes": 47,
+      "sha256": "08653ba0b3d0bd98a255b18480932f127bf3bb93980495ef2f253fab9eb966b1",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-restart-qualification-20260913-01\\preregistration.json",
+      "bytes": 25177,
+      "sha256": "19132ecede60f78fcdbae403468a7590d59e7c1f2a6d806013095dcf2ce130b5",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-restart-qualification-20260913-01\\result.json",
+      "bytes": 393,
+      "sha256": "661258be7e3ba7abcd329e1c325744e5ce3263eed7853d9bfee0aa8729b42534",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-restart-qualification-20260913-01\\stderr.log",
+      "bytes": 2344,
+      "sha256": "d501bb9029b735ceab5dfea79d3ecd46513223937f79a52a5ba65ac64cca0829",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-restart-qualification-20260913-05\\preregistration.json",
+      "bytes": 13195,
+      "sha256": "ad00488bc1b0a903e85a5e843f47416515429f71795573aadb06bd3f607c13e2",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-restart-qualification-20260913-05\\result.json",
+      "bytes": 436,
+      "sha256": "9f857859c1914847eb959a3a467a10a3539da4125c634ea12281ea32f9eef61a",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-restart-qualification-20260913-05\\stderr.log",
+      "bytes": 1135,
+      "sha256": "f69a7a2dc44a14e010f7955363e85121122b6ce153cf6de4d750466734cbd618",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\media-restart-real-20260913-01\\reference\\failure.json",
+      "bytes": 3368,
+      "sha256": "d476dbf6729d232f2f318dccf5cc913209ed388f21086d59a97d4d14fd4b8d4c",
+      "category": "metadata"
+    },
+    {
+      "path": "reports\\MEDIA_RESTART_DRAIN_METADATA_CASE_20260913.json",
+      "bytes": 12544,
+      "sha256": "b325237d02c31f7e2cf01d46bcc82aefb6130153e1bccd2eadef369fdb1b9fc3",
+      "category": "metadata"
+    },
+    {
+      "path": "reports/MEDIA_RESTART_SUCCESS_ENVELOPE_20260913.json",
+      "bytes": 87941,
+      "category": "metadata"
+    },
+    {
+      "path": "reports/MEDIA_RESTART_SUCCESS_ENVELOPE_20260913.md",
+      "bytes": 5838,
+      "category": "metadata"
+    }
+  ],
+  "active_totals": {
+    "metadata": 218360,
+    "sources": 340429,
+    "verification": 0,
+    "native": 0,
+    "field": 0,
+    "nj": 0,
+    "formations": 0,
+    "generations": 0,
+    "shared": 340429,
+    "total": 558789
+  },
+  "retained_source_policy": "Retain the complete previously charged real/plan source set and both new focused files. No automatic transfer of the smaller focused-only source classification.",
+  "measured_reference_summary": {
+    "rows": {
+      "count": 20,
+      "bytes": 59874
+    },
+    "inputs": {
+      "count": 20,
+      "bytes": 183114
+    },
+    "generations": {
+      "count": 20,
+      "bytes": 12388
+    },
+    "formation": {
+      "count": 20,
+      "bytes": 22552
+    },
+    "source_receipts": {
+      "count": 20,
+      "bytes": 11920
+    },
+    "states": {
+      "count": 21,
+      "bytes": 924708
+    },
+    "initial": {
+      "count": 1,
+      "bytes": 1051
+    },
+    "runtime_config": {
+      "count": 1,
+      "bytes": 416
+    },
+    "inputs_index": {
+      "count": 1,
+      "bytes": 2330
+    },
+    "binding": {
+      "count": 1,
+      "bytes": 3462
+    },
+    "rows_index": {
+      "count": 1,
+      "bytes": 2330
+    },
+    "source_receipts_index": {
+      "count": 1,
+      "bytes": 2230
+    }
+  },
+  "future_input_reserves": [
+    {
+      "path": "future-execution-binding.json",
+      "category": "metadata",
+      "bytes": 65536
+    },
+    {
+      "path": "future-authorization.json",
+      "category": "metadata",
+      "bytes": 65536
+    }
+  ],
+  "joint_reservations": [
+    {
+      "name": "logs",
+      "paths": [
+        "reference.stdout",
+        "reference.stderr",
+        "suspend19.stdout",
+        "suspend19.stderr",
+        "restore20.stdout",
+        "restore20.stderr"
+      ],
+      "limit": 8192,
+      "closed_by": "result.json"
+    },
+    {
+      "name": "closure",
+      "paths": [
+        "evaluation.json",
+        "result.json",
+        "REPORT.md",
+        "balance.json"
+      ],
+      "limit": 8192,
+      "closed_by": "balance.json"
+    }
+  ],
+  "roles": [
+    {
+      "role": "run.claim",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "existing accepted metadata publication bound",
+      "measured_reference": []
+    },
+    {
+      "role": "reference.stdout",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 8192,
+      "basis": "joint existing logs cap; not multiplied by member count",
+      "measured_reference": [],
+      "covered_by_joint_reservation": "logs"
+    },
+    {
+      "role": "reference.stderr",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 8192,
+      "basis": "joint existing logs cap; not multiplied by member count",
+      "measured_reference": [],
+      "covered_by_joint_reservation": "logs"
+    },
+    {
+      "role": "reference.claim",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "existing accepted metadata publication bound",
+      "measured_reference": []
+    },
+    {
+      "role": "reference/record.json#/core/runtime_config",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "metadata ceiling; narrower unchanged-shape bound not asserted for a new run binding",
+      "measured_reference": [
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\3b60c2326fa7a8210e6f4a71f574a4180592ee20dfcb951e17f1f352679cb8d1.json",
+          "bytes": 416,
+          "sha256": "3b60c2326fa7a8210e6f4a71f574a4180592ee20dfcb951e17f1f352679cb8d1"
+        }
+      ]
+    },
+    {
+      "role": "reference/record.json#/core/binding",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "metadata ceiling; narrower unchanged-shape bound not asserted for a new run binding",
+      "measured_reference": [
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\82af0a576aca2662866317771f3eb4c29986b1c9dd7b5c27431bdfdabde63ddf.json",
+          "bytes": 3462,
+          "sha256": "82af0a576aca2662866317771f3eb4c29986b1c9dd7b5c27431bdfdabde63ddf"
+        }
+      ]
+    },
+    {
+      "role": "reference/record.json#/core/initial",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "metadata ceiling; narrower unchanged-shape bound not asserted for a new run binding",
+      "measured_reference": [
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\38a47742c76e892a9adc27785cab93fa33cee308302f36863fbf2629323898b5.json",
+          "bytes": 1051,
+          "sha256": "38a47742c76e892a9adc27785cab93fa33cee308302f36863fbf2629323898b5"
+        }
+      ]
+    },
+    {
+      "role": "reference/record.json#/core/inputs/*",
+      "category": "native",
+      "count": 20,
+      "upper_each": 16411,
+      "basis": "core_sizes inputs: 16384 plus native wrapper",
+      "measured_reference": [
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\04c3d565fdcccf72b590149a082cde191ac702a756f25fda1ee2f4713942e734.json",
+          "bytes": 9147,
+          "sha256": "04c3d565fdcccf72b590149a082cde191ac702a756f25fda1ee2f4713942e734"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\05c999fb00bb78d78a416ce8556fa703167da7134805297965a79aa8d9eebf8c.json",
+          "bytes": 9149,
+          "sha256": "05c999fb00bb78d78a416ce8556fa703167da7134805297965a79aa8d9eebf8c"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\1ba7ecdd565b1f22bc6000680378553139d7ac0aa08d3db31e09b73cbce64c31.json",
+          "bytes": 9173,
+          "sha256": "1ba7ecdd565b1f22bc6000680378553139d7ac0aa08d3db31e09b73cbce64c31"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\375db5e5dc14abb53dc80636e55c9c14bacea620cd770f8091141ba136e4239c.json",
+          "bytes": 9139,
+          "sha256": "375db5e5dc14abb53dc80636e55c9c14bacea620cd770f8091141ba136e4239c"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\5b1241be6c7fe29cd8f33104de124d99f2ddad02f20a90d2051a0b5bbfbeb051.json",
+          "bytes": 9167,
+          "sha256": "5b1241be6c7fe29cd8f33104de124d99f2ddad02f20a90d2051a0b5bbfbeb051"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\5d00c9c447ca2b7e723f0180223b13e20154a8d1cffde810a26963fec8e1cd77.json",
+          "bytes": 9166,
+          "sha256": "5d00c9c447ca2b7e723f0180223b13e20154a8d1cffde810a26963fec8e1cd77"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\5ebbbdb363feb86cf391216f876f444ec05f9c1f95975ef1406255fb13055c41.json",
+          "bytes": 9168,
+          "sha256": "5ebbbdb363feb86cf391216f876f444ec05f9c1f95975ef1406255fb13055c41"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\64f9432292bfc9f38d80c53c89faf10ad9eb661ff141c4cf286461c91efb2251.json",
+          "bytes": 9140,
+          "sha256": "64f9432292bfc9f38d80c53c89faf10ad9eb661ff141c4cf286461c91efb2251"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\6d78a9f49691593fd9a2ddd2e80366c5b70e91c5aee475daa5e5991a00117888.json",
+          "bytes": 9166,
+          "sha256": "6d78a9f49691593fd9a2ddd2e80366c5b70e91c5aee475daa5e5991a00117888"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\745c5a5c6a41020fc5277a8126caae750a50c9d36178587157163c74478e06c2.json",
+          "bytes": 9169,
+          "sha256": "745c5a5c6a41020fc5277a8126caae750a50c9d36178587157163c74478e06c2"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\7c640a5b43b9105a1d910cda6412fc0494ed3d56a025824cb4ca5a520257b9d8.json",
+          "bytes": 9153,
+          "sha256": "7c640a5b43b9105a1d910cda6412fc0494ed3d56a025824cb4ca5a520257b9d8"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\81659a2a23641670b5b7f6f2b15fdeaafbab9db2ea8a83b258785c2374d27c65.json",
+          "bytes": 9178,
+          "sha256": "81659a2a23641670b5b7f6f2b15fdeaafbab9db2ea8a83b258785c2374d27c65"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\8d8d3fe05551eba1ee93d938a24843455ce9df83e9d0a53e7e0e6941d9f3b2f4.json",
+          "bytes": 9182,
+          "sha256": "8d8d3fe05551eba1ee93d938a24843455ce9df83e9d0a53e7e0e6941d9f3b2f4"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\90283fda4f68065e26a9ba649462b3d7462df758874f0744089956b600d20637.json",
+          "bytes": 9159,
+          "sha256": "90283fda4f68065e26a9ba649462b3d7462df758874f0744089956b600d20637"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\90b11d320ac237a70f16a0f63b8bc9f69baeabbb8f8fed950ad85246c6d1983c.json",
+          "bytes": 9129,
+          "sha256": "90b11d320ac237a70f16a0f63b8bc9f69baeabbb8f8fed950ad85246c6d1983c"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\9c204f00b038628cf0f13b51cd28d155b6485b0d9c7382aa206b53020180adba.json",
+          "bytes": 9155,
+          "sha256": "9c204f00b038628cf0f13b51cd28d155b6485b0d9c7382aa206b53020180adba"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\a29cb3ab7cbb04cb5134f91a440eaba773f5cac87319c28d6adcd3c153f10de5.json",
+          "bytes": 9153,
+          "sha256": "a29cb3ab7cbb04cb5134f91a440eaba773f5cac87319c28d6adcd3c153f10de5"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\aaa308049a2efacc1e6f27f57b2bd6445884a27cc041a7e309c8471c1564b30e.json",
+          "bytes": 9145,
+          "sha256": "aaa308049a2efacc1e6f27f57b2bd6445884a27cc041a7e309c8471c1564b30e"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\b741eb994735fbd9674ada7cbb9203ded479dba353feb873deba122d077c199c.json",
+          "bytes": 9148,
+          "sha256": "b741eb994735fbd9674ada7cbb9203ded479dba353feb873deba122d077c199c"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\ee6145b0ca0bf34bac682a8e82a057dcb2b5bd3e462167a93c2c1a78cc83293e.json",
+          "bytes": 9128,
+          "sha256": "ee6145b0ca0bf34bac682a8e82a057dcb2b5bd3e462167a93c2c1a78cc83293e"
+        }
+      ]
+    },
+    {
+      "role": "reference/record.json#/core/inputs",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 2390,
+      "basis": "canonical reference-index upper: 64-hex keys/digests, seven-digit byte counts",
+      "measured_reference": [
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\6e0f0a57953a2579ab66c38eae7d605d41d94a605e75dd21c1b1ddf98ad31745.json",
+          "bytes": 2330,
+          "sha256": "6e0f0a57953a2579ab66c38eae7d605d41d94a605e75dd21c1b1ddf98ad31745"
+        }
+      ]
+    },
+    {
+      "role": "reference/record.json#/core/source_receipts/*",
+      "category": "nj",
+      "count": 20,
+      "upper_each": 1047,
+      "basis": "core_sizes NJ: 1024 plus wrapper",
+      "measured_reference": [
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\155157e19dc019dfd0a30546b28e91fb02982add4a146702f6481dca85767125.json",
+          "bytes": 596,
+          "sha256": "155157e19dc019dfd0a30546b28e91fb02982add4a146702f6481dca85767125"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\2bc3bc5a1dd56edfd9b1a2b12798d018a63bb8ef7fd558e620fc494a35f6c748.json",
+          "bytes": 596,
+          "sha256": "2bc3bc5a1dd56edfd9b1a2b12798d018a63bb8ef7fd558e620fc494a35f6c748"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\348d08119fb78cc7550c74fddf0bc3c6b45444f543b7c37c0c2164ec8a2bc756.json",
+          "bytes": 596,
+          "sha256": "348d08119fb78cc7550c74fddf0bc3c6b45444f543b7c37c0c2164ec8a2bc756"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\3c28ded3417efb1f67881495ba810c2dec3d03556e064b676366acd2002800be.json",
+          "bytes": 596,
+          "sha256": "3c28ded3417efb1f67881495ba810c2dec3d03556e064b676366acd2002800be"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\3c979a238b67f7c543db2aaa146d58c3527da80a40ebb1c0e57455c82a5d60c6.json",
+          "bytes": 596,
+          "sha256": "3c979a238b67f7c543db2aaa146d58c3527da80a40ebb1c0e57455c82a5d60c6"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\44277d5236b76a37987c26fb09444dec1e28c9a65ef349b57813f5adc4dfcaaf.json",
+          "bytes": 596,
+          "sha256": "44277d5236b76a37987c26fb09444dec1e28c9a65ef349b57813f5adc4dfcaaf"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\5b2d7dd9c397862425cbdd13ba1b4d473cacb78317a2e7c1c775dc974e2afb37.json",
+          "bytes": 596,
+          "sha256": "5b2d7dd9c397862425cbdd13ba1b4d473cacb78317a2e7c1c775dc974e2afb37"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\6801df4fbf4c684b4aff152cb5f6c76444fc719a86cb7e6078108dec78c63831.json",
+          "bytes": 596,
+          "sha256": "6801df4fbf4c684b4aff152cb5f6c76444fc719a86cb7e6078108dec78c63831"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\727dbc69d3042b97ca2989283467a97fa8c54c9e786cc7831ff61dcbf677d03e.json",
+          "bytes": 596,
+          "sha256": "727dbc69d3042b97ca2989283467a97fa8c54c9e786cc7831ff61dcbf677d03e"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\7a399a4a20738574d51885675d6624be118eab03a50bf394f602425591ff53ff.json",
+          "bytes": 596,
+          "sha256": "7a399a4a20738574d51885675d6624be118eab03a50bf394f602425591ff53ff"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\8366745769f0ef43eb54887c2c14a5432a3a1d06e3411a4ed174ced003610936.json",
+          "bytes": 596,
+          "sha256": "8366745769f0ef43eb54887c2c14a5432a3a1d06e3411a4ed174ced003610936"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\aa64122a789c524c0e06b1e25e2648fe1a7e1076317475e0f04fe2cf68c5f3c5.json",
+          "bytes": 596,
+          "sha256": "aa64122a789c524c0e06b1e25e2648fe1a7e1076317475e0f04fe2cf68c5f3c5"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\b8543823eaa2a2cbc7bf771b7cc3089dd13849b3af0b678578019e0e2244f978.json",
+          "bytes": 596,
+          "sha256": "b8543823eaa2a2cbc7bf771b7cc3089dd13849b3af0b678578019e0e2244f978"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\d2a7eec82c1b6632cdd5b7fa58314f2dbd54d67404e3bf8bdf8fe4455ad31f01.json",
+          "bytes": 596,
+          "sha256": "d2a7eec82c1b6632cdd5b7fa58314f2dbd54d67404e3bf8bdf8fe4455ad31f01"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\e06fc9696ac11120cc939164055925f1b6dbb5aa58db44066e1afbc5291e7661.json",
+          "bytes": 596,
+          "sha256": "e06fc9696ac11120cc939164055925f1b6dbb5aa58db44066e1afbc5291e7661"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\e662d8f949c5e0689847e902d14ebbd3be71a3fa40087b1b23a345cc1442d5f6.json",
+          "bytes": 596,
+          "sha256": "e662d8f949c5e0689847e902d14ebbd3be71a3fa40087b1b23a345cc1442d5f6"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\e6f8757cb61611316b791c7eed526cc44fb70c2258099b045709f81cb9104134.json",
+          "bytes": 596,
+          "sha256": "e6f8757cb61611316b791c7eed526cc44fb70c2258099b045709f81cb9104134"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\eda5432b33d3c1074a2effc43d32f08d5a3e984f7ea484ea895259d3bac765c4.json",
+          "bytes": 596,
+          "sha256": "eda5432b33d3c1074a2effc43d32f08d5a3e984f7ea484ea895259d3bac765c4"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\f5b6ac62a9904566877ca7ed47f6881c0726e08fa961eb63fafd5a5cd98d495d.json",
+          "bytes": 596,
+          "sha256": "f5b6ac62a9904566877ca7ed47f6881c0726e08fa961eb63fafd5a5cd98d495d"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\f8ce9cb03c7c1ec99c5a2b5ce085c237ba868f42662299f0e45ad23839bc29ac.json",
+          "bytes": 596,
+          "sha256": "f8ce9cb03c7c1ec99c5a2b5ce085c237ba868f42662299f0e45ad23839bc29ac"
+        }
+      ]
+    },
+    {
+      "role": "reference/record.json#/core/source_receipts",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 2310,
+      "basis": "canonical reference-index upper: 64-hex keys/digests, seven-digit byte counts",
+      "measured_reference": [
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\d9a4175e835c5a582808b10d7ecb9dd349dc1a16b7e53c2141eb7080b910f6d4.json",
+          "bytes": 2230,
+          "sha256": "d9a4175e835c5a582808b10d7ecb9dd349dc1a16b7e53c2141eb7080b910f6d4"
+        }
+      ]
+    },
+    {
+      "role": "reference/record.json#/core/rows/*/formation",
+      "category": "formations",
+      "count": 20,
+      "upper_each": 1567,
+      "basis": "core_sizes per-item 1536 plus wrapper",
+      "measured_reference": [
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\08f3da6eefe21e6c1740a83eb8e212874b4db17da8c73c5069918eb9d0551cde.json",
+          "bytes": 1133,
+          "sha256": "08f3da6eefe21e6c1740a83eb8e212874b4db17da8c73c5069918eb9d0551cde"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\11e44bf547a0ab9154b31ba1e94847e31b7a6c760a94bbafc63e326b5fd652df.json",
+          "bytes": 1121,
+          "sha256": "11e44bf547a0ab9154b31ba1e94847e31b7a6c760a94bbafc63e326b5fd652df"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\1a6d806c3c4af89f5b14ffdca81543ba19d74171052571d8347a1f8e0bf07aea.json",
+          "bytes": 1133,
+          "sha256": "1a6d806c3c4af89f5b14ffdca81543ba19d74171052571d8347a1f8e0bf07aea"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\20c7ca3059608a779169996da3b131eacd87bed8ebe53c96d03ad15dd688100f.json",
+          "bytes": 1133,
+          "sha256": "20c7ca3059608a779169996da3b131eacd87bed8ebe53c96d03ad15dd688100f"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\2a61e1cededd6befecca9766c6df2b43baace3e0cea7b2d4861db8b07e0d0b2d.json",
+          "bytes": 1121,
+          "sha256": "2a61e1cededd6befecca9766c6df2b43baace3e0cea7b2d4861db8b07e0d0b2d"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\5f89e38135d1d48151b1b4c594140e2477511566536fd6a9fbaf3e707c71833e.json",
+          "bytes": 1121,
+          "sha256": "5f89e38135d1d48151b1b4c594140e2477511566536fd6a9fbaf3e707c71833e"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\6a3ba65fa5676f2953b324a04d0f1df2852adae67511d559a57831227503d9e4.json",
+          "bytes": 1133,
+          "sha256": "6a3ba65fa5676f2953b324a04d0f1df2852adae67511d559a57831227503d9e4"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\6b71f28974a166b14c60d1c76954800818c92f48de4b326c8e2c87acb5a4144c.json",
+          "bytes": 1121,
+          "sha256": "6b71f28974a166b14c60d1c76954800818c92f48de4b326c8e2c87acb5a4144c"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\7be9ef26e1b756caa5e0e547936621afecdc4870f23fca486160424f1e3d75cd.json",
+          "bytes": 1133,
+          "sha256": "7be9ef26e1b756caa5e0e547936621afecdc4870f23fca486160424f1e3d75cd"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\89e2bec5e02025f429199c1d19d898de99ac48ed6a33f557349e113e948b114e.json",
+          "bytes": 1133,
+          "sha256": "89e2bec5e02025f429199c1d19d898de99ac48ed6a33f557349e113e948b114e"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\9786ad766a665f21b6df9f3345ffad1dc9e516f6ad86ebb4de9764ef00cd527a.json",
+          "bytes": 1121,
+          "sha256": "9786ad766a665f21b6df9f3345ffad1dc9e516f6ad86ebb4de9764ef00cd527a"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\bb50d8ac51103af0d845c6afd803ea668b96bb997e8009af54908ea4522fdbae.json",
+          "bytes": 1121,
+          "sha256": "bb50d8ac51103af0d845c6afd803ea668b96bb997e8009af54908ea4522fdbae"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\becec220e84e22ea64b710fd1c3d97628410920ac671e5959c3eb8e3d4bfc50e.json",
+          "bytes": 1133,
+          "sha256": "becec220e84e22ea64b710fd1c3d97628410920ac671e5959c3eb8e3d4bfc50e"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\cb8e9e16379470e30e76bdac969d56c3d5cc4cfede74ac594d17987405ffa0ed.json",
+          "bytes": 1121,
+          "sha256": "cb8e9e16379470e30e76bdac969d56c3d5cc4cfede74ac594d17987405ffa0ed"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\d1a609db361b71a540875a678cbe395015c545fa395ecf9002f0085128f2968a.json",
+          "bytes": 1133,
+          "sha256": "d1a609db361b71a540875a678cbe395015c545fa395ecf9002f0085128f2968a"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\d1b3de088d04481ef1e1c9d5cce936c045304173151bfe1a26b15a6de6891942.json",
+          "bytes": 1133,
+          "sha256": "d1b3de088d04481ef1e1c9d5cce936c045304173151bfe1a26b15a6de6891942"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\e63e687404081adbb95b9f4228c3f8ec2959ffe749668b1ca480fd18f1dc060b.json",
+          "bytes": 1121,
+          "sha256": "e63e687404081adbb95b9f4228c3f8ec2959ffe749668b1ca480fd18f1dc060b"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\eeb296040b8084e731aa497e6bedffed48d0eb3d538e29d07b88f6f00970a5dc.json",
+          "bytes": 1133,
+          "sha256": "eeb296040b8084e731aa497e6bedffed48d0eb3d538e29d07b88f6f00970a5dc"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\f20d924e946c6e6ece8e127d225ce35f6ff68cc07bf27dc7634631d01b9d369d.json",
+          "bytes": 1121,
+          "sha256": "f20d924e946c6e6ece8e127d225ce35f6ff68cc07bf27dc7634631d01b9d369d"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\ff798b59939d018c650bc6c5c71e58448614d4309ff90415103b1e760bc1ca0e.json",
+          "bytes": 1133,
+          "sha256": "ff798b59939d018c650bc6c5c71e58448614d4309ff90415103b1e760bc1ca0e"
+        }
+      ]
+    },
+    {
+      "role": "reference/record.json#/core/rows/*/generations",
+      "category": "generations",
+      "count": 20,
+      "upper_each": 1568,
+      "basis": "core_sizes per-item 1536 plus wrapper",
+      "measured_reference": [
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\07c195e019e31befabe4b092c8ad998748862de2fd75da868e26edb5cc08dcef.json",
+          "bytes": 633,
+          "sha256": "07c195e019e31befabe4b092c8ad998748862de2fd75da868e26edb5cc08dcef"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\20298b669ba07c4d153d106dc4ea7232d5385814e5568428416088e045be40d7.json",
+          "bytes": 632,
+          "sha256": "20298b669ba07c4d153d106dc4ea7232d5385814e5568428416088e045be40d7"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\2f02600978079e4a2d92ba20f47bbab09a454fb0d8101348b4292b7f5f00cd78.json",
+          "bytes": 622,
+          "sha256": "2f02600978079e4a2d92ba20f47bbab09a454fb0d8101348b4292b7f5f00cd78"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\32e65d63941e649cc6154219ad4cff6b9c1c82a8b737c9720a03ff4e94fc547f.json",
+          "bytes": 618,
+          "sha256": "32e65d63941e649cc6154219ad4cff6b9c1c82a8b737c9720a03ff4e94fc547f"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\6e9e5ec8680e88749f9e3fd3a4ad0fbecce23370329fe285592c3b1ee34316b5.json",
+          "bytes": 629,
+          "sha256": "6e9e5ec8680e88749f9e3fd3a4ad0fbecce23370329fe285592c3b1ee34316b5"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\7982c35a3da90417a089cae5a6e4366773e77ea72fe766e5c437b7f5b5fcf15d.json",
+          "bytes": 616,
+          "sha256": "7982c35a3da90417a089cae5a6e4366773e77ea72fe766e5c437b7f5b5fcf15d"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\82d465617d3f908701a2df1ae90bcdf12b8deed12ffaf016e920b176e810a09f.json",
+          "bytes": 626,
+          "sha256": "82d465617d3f908701a2df1ae90bcdf12b8deed12ffaf016e920b176e810a09f"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\86811afaa3b8e9ecd47c190449ca00a9bf3d6b343530ff9cc27ff7d5fb485a0d.json",
+          "bytes": 601,
+          "sha256": "86811afaa3b8e9ecd47c190449ca00a9bf3d6b343530ff9cc27ff7d5fb485a0d"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\9cb1d7ee7cbdbc022f580656bd18c8e1ace06fa7cd472aa474fe03567632f812.json",
+          "bytes": 624,
+          "sha256": "9cb1d7ee7cbdbc022f580656bd18c8e1ace06fa7cd472aa474fe03567632f812"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\9ed9503f7dc224a028930dcf3c90998db4a7467bd214c8f64cf1cdddfb9c12bf.json",
+          "bytes": 628,
+          "sha256": "9ed9503f7dc224a028930dcf3c90998db4a7467bd214c8f64cf1cdddfb9c12bf"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\a55f201bd36c5f5dfe5d080bc7ee8e5160345670ad69ba78146a0faeebefe179.json",
+          "bytes": 597,
+          "sha256": "a55f201bd36c5f5dfe5d080bc7ee8e5160345670ad69ba78146a0faeebefe179"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\af5b025c63bb0aa50baba16b47d4ce3be9216066e6e461ae826d7852c0e58f64.json",
+          "bytes": 595,
+          "sha256": "af5b025c63bb0aa50baba16b47d4ce3be9216066e6e461ae826d7852c0e58f64"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\bb516e775e8702f0e64d0c00823288a77d3965896bd1b96b7f006847826917d3.json",
+          "bytes": 633,
+          "sha256": "bb516e775e8702f0e64d0c00823288a77d3965896bd1b96b7f006847826917d3"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\d04c4191370aecd2be0f35f299509b1689419a8ac0848e97cf7ebffe20a8d198.json",
+          "bytes": 612,
+          "sha256": "d04c4191370aecd2be0f35f299509b1689419a8ac0848e97cf7ebffe20a8d198"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\d7376997f792a3c4b12d1d9b8d32b5633de13269623e67f8276db1154c475f5d.json",
+          "bytes": 614,
+          "sha256": "d7376997f792a3c4b12d1d9b8d32b5633de13269623e67f8276db1154c475f5d"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\e51747bdcccdde1123aca77c748fe9befdad3c421a1658229c1003f27f722e5a.json",
+          "bytes": 633,
+          "sha256": "e51747bdcccdde1123aca77c748fe9befdad3c421a1658229c1003f27f722e5a"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\e8399bf05236e293f06e6f84b5f2cf7de53af9289e86724e88952f9ac69601b7.json",
+          "bytes": 605,
+          "sha256": "e8399bf05236e293f06e6f84b5f2cf7de53af9289e86724e88952f9ac69601b7"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\e91bb1f7ed922d327e3cd191fbf9ac68cee81180d32a346236d81c7a3f6aecff.json",
+          "bytes": 609,
+          "sha256": "e91bb1f7ed922d327e3cd191fbf9ac68cee81180d32a346236d81c7a3f6aecff"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\ec6b8449cbcb9eb12e7d0b84c89444439f518754079487e63f2e9e33160cac89.json",
+          "bytes": 630,
+          "sha256": "ec6b8449cbcb9eb12e7d0b84c89444439f518754079487e63f2e9e33160cac89"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\ef77c1ffa83ea94b9d11929629d8c5e3fdb7ebd0cc56e555af49f77967f805da.json",
+          "bytes": 631,
+          "sha256": "ef77c1ffa83ea94b9d11929629d8c5e3fdb7ebd0cc56e555af49f77967f805da"
+        }
+      ]
+    },
+    {
+      "role": "reference/record.json#/core/rows/*",
+      "category": "native",
+      "count": 20,
+      "upper_each": 16687,
+      "basis": "core_sizes step excluding formation/generation, plus both reference fields and wrapper",
+      "measured_reference": [
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\00c39289f6e5148764a62463ccb5569671c63171359abd6f655b2cf28cb89f94.json",
+          "bytes": 3000,
+          "sha256": "00c39289f6e5148764a62463ccb5569671c63171359abd6f655b2cf28cb89f94"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\07d0aa897fd1810d3f48e9195592d3bd12053ff5997b9a6626fbb083decc9da9.json",
+          "bytes": 2983,
+          "sha256": "07d0aa897fd1810d3f48e9195592d3bd12053ff5997b9a6626fbb083decc9da9"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\140b35eb4a05d0d85ad72324c3ede26db41a100ef98f8c525cd7f5034d706c2e.json",
+          "bytes": 2996,
+          "sha256": "140b35eb4a05d0d85ad72324c3ede26db41a100ef98f8c525cd7f5034d706c2e"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\159eaa3ba3d9244f4daa943fc46dd38939b81e7340ea31add757a7a6e457b8a3.json",
+          "bytes": 2992,
+          "sha256": "159eaa3ba3d9244f4daa943fc46dd38939b81e7340ea31add757a7a6e457b8a3"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\298ec3b502531e836b741fac5793764ac7dae21b12332debe6bf0ba0ebfc30f2.json",
+          "bytes": 2997,
+          "sha256": "298ec3b502531e836b741fac5793764ac7dae21b12332debe6bf0ba0ebfc30f2"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\3238eb93a03c60346ad9bef50972c94dbc05e03b572305c9ad27a0f2c868e33a.json",
+          "bytes": 2986,
+          "sha256": "3238eb93a03c60346ad9bef50972c94dbc05e03b572305c9ad27a0f2c868e33a"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\4012164d287d96f61476a345ec855f88896e5cf98da16717a5f2b6d67c12e2b5.json",
+          "bytes": 2978,
+          "sha256": "4012164d287d96f61476a345ec855f88896e5cf98da16717a5f2b6d67c12e2b5"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\4f9179d1997e42ee04bd9b0c69607ec13fa7867b0de97121dd317bbd424b6d7c.json",
+          "bytes": 2985,
+          "sha256": "4f9179d1997e42ee04bd9b0c69607ec13fa7867b0de97121dd317bbd424b6d7c"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\59a87ff7f34d01a881d4acf921883231fc6045b70242ea6309292633eda73f4c.json",
+          "bytes": 2999,
+          "sha256": "59a87ff7f34d01a881d4acf921883231fc6045b70242ea6309292633eda73f4c"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\6551d71c50f05af12f25184e58cd41e5a2d3a233cbc39a387af38999234b5fd2.json",
+          "bytes": 2994,
+          "sha256": "6551d71c50f05af12f25184e58cd41e5a2d3a233cbc39a387af38999234b5fd2"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\8745aca792ea323d06a1ba12f21bab2615f212e9ce32a038b9f603e835f24533.json",
+          "bytes": 2990,
+          "sha256": "8745aca792ea323d06a1ba12f21bab2615f212e9ce32a038b9f603e835f24533"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\963859593fc8bee13d6dace83988782127366864ff75cffe571e4e1f7876ccad.json",
+          "bytes": 2999,
+          "sha256": "963859593fc8bee13d6dace83988782127366864ff75cffe571e4e1f7876ccad"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\a5a9fce2846360ec608c75c018dc5e84c69e7c4f46615d94c470ac1b579c478c.json",
+          "bytes": 3015,
+          "sha256": "a5a9fce2846360ec608c75c018dc5e84c69e7c4f46615d94c470ac1b579c478c"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\a7b2a84ab7654b8245b09d61feace054f95f66bb3685e3baf15170060e60edca.json",
+          "bytes": 2980,
+          "sha256": "a7b2a84ab7654b8245b09d61feace054f95f66bb3685e3baf15170060e60edca"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\ab2523d026d72991b999274a532f710c9994328a5e878133ce2f33b09ca99130.json",
+          "bytes": 2994,
+          "sha256": "ab2523d026d72991b999274a532f710c9994328a5e878133ce2f33b09ca99130"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\bf5b402e87c5d029b8136227b07e1b77adf8faf12eecc8ea85da768cd2feda52.json",
+          "bytes": 3006,
+          "sha256": "bf5b402e87c5d029b8136227b07e1b77adf8faf12eecc8ea85da768cd2feda52"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\c5bc4b4f646443a4546da6b2d41446b75f1fd425c6ce69704965ba9b59875c0d.json",
+          "bytes": 2995,
+          "sha256": "c5bc4b4f646443a4546da6b2d41446b75f1fd425c6ce69704965ba9b59875c0d"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\dcecb2770efddc57250a7de72a26a30ba6bde8fad265bcb49261e2d816c203b4.json",
+          "bytes": 2998,
+          "sha256": "dcecb2770efddc57250a7de72a26a30ba6bde8fad265bcb49261e2d816c203b4"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\dfe3026f4f5be5f90825f3b7c35b8394e5c380ef2589a8273997f4b1ed09947c.json",
+          "bytes": 2999,
+          "sha256": "dfe3026f4f5be5f90825f3b7c35b8394e5c380ef2589a8273997f4b1ed09947c"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\e43c751d756f1f8b3f6b9f191a9ae3ff1b314246211dbfef53d7edddd939400f.json",
+          "bytes": 2988,
+          "sha256": "e43c751d756f1f8b3f6b9f191a9ae3ff1b314246211dbfef53d7edddd939400f"
+        }
+      ]
+    },
+    {
+      "role": "reference/record.json#/core/rows",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 2390,
+      "basis": "canonical reference-index upper: 64-hex keys/digests, seven-digit byte counts",
+      "measured_reference": [
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\cd0ea7fd529b3adc191aa12a8b61aed79cf5832c510fc089e9792108f8434ef8.json",
+          "bytes": 2330,
+          "sha256": "cd0ea7fd529b3adc191aa12a8b61aed79cf5832c510fc089e9792108f8434ef8"
+        }
+      ]
+    },
+    {
+      "role": "reference/record.json#/core/states/*",
+      "category": "native",
+      "count": 21,
+      "upper_each": 98331,
+      "basis": "core_sizes states: 98304 plus native wrapper",
+      "measured_reference": [
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\2c4d3f1191d70a5c94d3f4d6944f169c2c2b8fdf75f1321cc5be30b080dc04b6.json",
+          "bytes": 53991,
+          "sha256": "2c4d3f1191d70a5c94d3f4d6944f169c2c2b8fdf75f1321cc5be30b080dc04b6"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\2d17a018183e871f8f9836ac168bba824f2e3e1565d1bf5cfbb6a52e61cdf1e1.json",
+          "bytes": 5069,
+          "sha256": "2d17a018183e871f8f9836ac168bba824f2e3e1565d1bf5cfbb6a52e61cdf1e1"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\36025dc7d2aae4187a5a30784c4251f2530ec62e94cda0c24d42a65badcb2b27.json",
+          "bytes": 46817,
+          "sha256": "36025dc7d2aae4187a5a30784c4251f2530ec62e94cda0c24d42a65badcb2b27"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\371fa9bf8d0c28cce21e7834956d8925306e0dd97b3db26346de3fb83a3d5095.json",
+          "bytes": 33012,
+          "sha256": "371fa9bf8d0c28cce21e7834956d8925306e0dd97b3db26346de3fb83a3d5095"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\3786bc6aed8a82ddbf2cc6894bee0ddfb42cdd3e54561d0acb4848a9ef0b73f4.json",
+          "bytes": 26367,
+          "sha256": "3786bc6aed8a82ddbf2cc6894bee0ddfb42cdd3e54561d0acb4848a9ef0b73f4"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\5d1c02611538bbf3a51ac24a16e1c6a968ca89e14fe2df10936a9c0771310559.json",
+          "bytes": 53998,
+          "sha256": "5d1c02611538bbf3a51ac24a16e1c6a968ca89e14fe2df10936a9c0771310559"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\5fe33817d2339eae052629540064ffadd21b6d031b42a5583a723f9befd19d6f.json",
+          "bytes": 53977,
+          "sha256": "5fe33817d2339eae052629540064ffadd21b6d031b42a5583a723f9befd19d6f"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\65b35f816b1ec90ad25dfdd690a7b22b1ac73fe0ac2dd610e771889b35a163b2.json",
+          "bytes": 53995,
+          "sha256": "65b35f816b1ec90ad25dfdd690a7b22b1ac73fe0ac2dd610e771889b35a163b2"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\671bb75acdde1119719bc7c0088a170e1dfa7d1149d28e6f42b486043a59dbba.json",
+          "bytes": 43237,
+          "sha256": "671bb75acdde1119719bc7c0088a170e1dfa7d1149d28e6f42b486043a59dbba"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\8840a68e8d7583c4acba52dff952a2bbc688f005d2c27d07905062338dee27ce.json",
+          "bytes": 54003,
+          "sha256": "8840a68e8d7583c4acba52dff952a2bbc688f005d2c27d07905062338dee27ce"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\9037f0cbaca56b7746c6a73bb4a248b7920cdd1274e55403e4d2e40461f23023.json",
+          "bytes": 54000,
+          "sha256": "9037f0cbaca56b7746c6a73bb4a248b7920cdd1274e55403e4d2e40461f23023"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\a32ae594bfd3b5a1d0afb3ef34114fd2832c5dfb5275392460e1801352d1e593.json",
+          "bytes": 50397,
+          "sha256": "a32ae594bfd3b5a1d0afb3ef34114fd2832c5dfb5275392460e1801352d1e593"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\ae00b8a78de3043577f47c70bb744aa96c753844b8d336a2a4e833ebfc15bc1e.json",
+          "bytes": 19720,
+          "sha256": "ae00b8a78de3043577f47c70bb744aa96c753844b8d336a2a4e833ebfc15bc1e"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\b957cc8e333c20c0c7acfeee64d81c7733e96ad53f99698e0ec4c9cd87021406.json",
+          "bytes": 54003,
+          "sha256": "b957cc8e333c20c0c7acfeee64d81c7733e96ad53f99698e0ec4c9cd87021406"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\c28f56f1f5dcd1036fda204b7b52baab4cb3a2a417a733922d59d733512f8936.json",
+          "bytes": 12490,
+          "sha256": "c28f56f1f5dcd1036fda204b7b52baab4cb3a2a417a733922d59d733512f8936"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\d215e4c2a6184781bd4362b761df4c0eca8f0921d6beeede7cbe329ec1b34362.json",
+          "bytes": 39657,
+          "sha256": "d215e4c2a6184781bd4362b761df4c0eca8f0921d6beeede7cbe329ec1b34362"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\d64f34d16b4116335a3597afabcc2b0f86064e503493895b3cc9d4d5c9685e2e.json",
+          "bytes": 53993,
+          "sha256": "d64f34d16b4116335a3597afabcc2b0f86064e503493895b3cc9d4d5c9685e2e"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\e10a5692ad4446d8c5b07bc2fa1abffd0b54678ef47d7880811707b27f8bef0c.json",
+          "bytes": 53999,
+          "sha256": "e10a5692ad4446d8c5b07bc2fa1abffd0b54678ef47d7880811707b27f8bef0c"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\e1eff73e0ad8015b881226173109a780de28b69b13dc0868ea605d76790c148c.json",
+          "bytes": 54003,
+          "sha256": "e1eff73e0ad8015b881226173109a780de28b69b13dc0868ea605d76790c148c"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\e485535d0fba96a16526796ecf2f80a45fba0352467bef9733ba92373241090f.json",
+          "bytes": 53997,
+          "sha256": "e485535d0fba96a16526796ecf2f80a45fba0352467bef9733ba92373241090f"
+        },
+        {
+          "path": "reports\\media-restart-real-20260913-01\\objects\\e9448ae5d68aecf6c6b7f8738d6845f6105c2ac158c40079afc1b30f52a6eac6.json",
+          "bytes": 53983,
+          "sha256": "e9448ae5d68aecf6c6b7f8738d6845f6105c2ac158c40079afc1b30f52a6eac6"
+        }
+      ]
+    },
+    {
+      "role": "reference/record.json#/core/states",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 3915,
+      "basis": "canonical reference-index upper: 64-hex keys/digests, seven-digit byte counts",
+      "measured_reference": []
+    },
+    {
+      "role": "reference/record.json#/core/scans",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 31,
+      "basis": "canonical reference-index upper: 64-hex keys/digests, seven-digit byte counts",
+      "measured_reference": []
+    },
+    {
+      "role": "reference/record.json#/core",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "existing accepted metadata publication bound",
+      "measured_reference": []
+    },
+    {
+      "role": "reference/record.json#/selections/*",
+      "category": "metadata",
+      "count": 20,
+      "upper_each": 541,
+      "basis": "selection_receipt <=512 plus wrapper",
+      "measured_reference": []
+    },
+    {
+      "role": "reference/record.json#/selections",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 2430,
+      "basis": "canonical reference-index upper: 64-hex keys/digests, seven-digit byte counts",
+      "measured_reference": []
+    },
+    {
+      "role": "reference/record.json#/field",
+      "category": "field",
+      "count": 1,
+      "upper_each": 2093056,
+      "basis": "accepted two-copy publication total bound; no narrower close-field check in this caller",
+      "measured_reference": []
+    },
+    {
+      "role": "reference/record.json",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "existing accepted metadata publication bound",
+      "measured_reference": []
+    },
+    {
+      "role": "reference/player-close.json",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "existing accepted metadata publication bound",
+      "measured_reference": []
+    },
+    {
+      "role": "reference-process.json",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "existing accepted metadata publication bound",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19.stdout",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 8192,
+      "basis": "joint existing logs cap; not multiplied by member count",
+      "measured_reference": [],
+      "covered_by_joint_reservation": "logs"
+    },
+    {
+      "role": "suspend19.stderr",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 8192,
+      "basis": "joint existing logs cap; not multiplied by member count",
+      "measured_reference": [],
+      "covered_by_joint_reservation": "logs"
+    },
+    {
+      "role": "suspend19.claim",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "existing accepted metadata publication bound",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19/checkpoint.json#/manifest",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "existing accepted metadata publication bound",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19/checkpoint.json#/field",
+      "category": "field",
+      "count": 1,
+      "upper_each": 524314,
+      "basis": "checkpoint FIELD_CAP plus wrapper",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19/checkpoint.json#/prefix/runtime_config",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "metadata ceiling; narrower unchanged-shape bound not asserted for a new run binding",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19/checkpoint.json#/prefix/binding",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "metadata ceiling; narrower unchanged-shape bound not asserted for a new run binding",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19/checkpoint.json#/prefix/initial",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "metadata ceiling; narrower unchanged-shape bound not asserted for a new run binding",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19/checkpoint.json#/prefix/inputs/*",
+      "category": "native",
+      "count": 19,
+      "upper_each": 16411,
+      "basis": "core_sizes inputs: 16384 plus native wrapper",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19/checkpoint.json#/prefix/inputs",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 2272,
+      "basis": "canonical reference-index upper: 64-hex keys/digests, seven-digit byte counts",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19/checkpoint.json#/prefix/source_receipts/*",
+      "category": "nj",
+      "count": 19,
+      "upper_each": 1047,
+      "basis": "core_sizes NJ: 1024 plus wrapper",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19/checkpoint.json#/prefix/source_receipts",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 2196,
+      "basis": "canonical reference-index upper: 64-hex keys/digests, seven-digit byte counts",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19/checkpoint.json#/prefix/rows/*/formation",
+      "category": "formations",
+      "count": 19,
+      "upper_each": 1567,
+      "basis": "core_sizes per-item 1536 plus wrapper",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19/checkpoint.json#/prefix/rows/*/generations",
+      "category": "generations",
+      "count": 19,
+      "upper_each": 1568,
+      "basis": "core_sizes per-item 1536 plus wrapper",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19/checkpoint.json#/prefix/rows/*",
+      "category": "native",
+      "count": 19,
+      "upper_each": 16687,
+      "basis": "core_sizes step excluding formation/generation, plus both reference fields and wrapper",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19/checkpoint.json#/prefix/rows",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 2272,
+      "basis": "canonical reference-index upper: 64-hex keys/digests, seven-digit byte counts",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19/checkpoint.json#/prefix/states/*",
+      "category": "native",
+      "count": 20,
+      "upper_each": 98331,
+      "basis": "core_sizes states: 98304 plus native wrapper",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19/checkpoint.json#/prefix/states",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 3730,
+      "basis": "canonical reference-index upper: 64-hex keys/digests, seven-digit byte counts",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19/checkpoint.json#/prefix/scans",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 31,
+      "basis": "canonical reference-index upper: 64-hex keys/digests, seven-digit byte counts",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19/checkpoint.json#/prefix",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "existing accepted metadata publication bound",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19/checkpoint.json#/selections/*",
+      "category": "metadata",
+      "count": 19,
+      "upper_each": 541,
+      "basis": "selection_receipt <=512 plus wrapper",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19/checkpoint.json#/selections",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 2310,
+      "basis": "canonical reference-index upper: 64-hex keys/digests, seven-digit byte counts",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19/checkpoint.json",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "existing accepted metadata publication bound",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19/player-close.json",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "existing accepted metadata publication bound",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19-process.json",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "existing accepted metadata publication bound",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20.stdout",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 8192,
+      "basis": "joint existing logs cap; not multiplied by member count",
+      "measured_reference": [],
+      "covered_by_joint_reservation": "logs"
+    },
+    {
+      "role": "restore20.stderr",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 8192,
+      "basis": "joint existing logs cap; not multiplied by member count",
+      "measured_reference": [],
+      "covered_by_joint_reservation": "logs"
+    },
+    {
+      "role": "restore20.claim",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "existing accepted metadata publication bound",
+      "measured_reference": []
+    },
+    {
+      "role": "suspend19/checkpoint.json.consumed",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "existing accepted metadata publication bound",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20/record.json#/core/runtime_config",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "metadata ceiling; narrower unchanged-shape bound not asserted for a new run binding",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20/record.json#/core/binding",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "metadata ceiling; narrower unchanged-shape bound not asserted for a new run binding",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20/record.json#/core/initial",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "metadata ceiling; narrower unchanged-shape bound not asserted for a new run binding",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20/record.json#/core/inputs/*",
+      "category": "native",
+      "count": 20,
+      "upper_each": 16411,
+      "basis": "core_sizes inputs: 16384 plus native wrapper",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20/record.json#/core/inputs",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 2390,
+      "basis": "canonical reference-index upper: 64-hex keys/digests, seven-digit byte counts",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20/record.json#/core/source_receipts/*",
+      "category": "nj",
+      "count": 20,
+      "upper_each": 1047,
+      "basis": "core_sizes NJ: 1024 plus wrapper",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20/record.json#/core/source_receipts",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 2310,
+      "basis": "canonical reference-index upper: 64-hex keys/digests, seven-digit byte counts",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20/record.json#/core/rows/*/formation",
+      "category": "formations",
+      "count": 20,
+      "upper_each": 1567,
+      "basis": "core_sizes per-item 1536 plus wrapper",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20/record.json#/core/rows/*/generations",
+      "category": "generations",
+      "count": 20,
+      "upper_each": 1568,
+      "basis": "core_sizes per-item 1536 plus wrapper",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20/record.json#/core/rows/*",
+      "category": "native",
+      "count": 20,
+      "upper_each": 16687,
+      "basis": "core_sizes step excluding formation/generation, plus both reference fields and wrapper",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20/record.json#/core/rows",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 2390,
+      "basis": "canonical reference-index upper: 64-hex keys/digests, seven-digit byte counts",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20/record.json#/core/states/*",
+      "category": "native",
+      "count": 21,
+      "upper_each": 98331,
+      "basis": "core_sizes states: 98304 plus native wrapper",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20/record.json#/core/states",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 3915,
+      "basis": "canonical reference-index upper: 64-hex keys/digests, seven-digit byte counts",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20/record.json#/core/scans",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 31,
+      "basis": "canonical reference-index upper: 64-hex keys/digests, seven-digit byte counts",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20/record.json#/core",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "existing accepted metadata publication bound",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20/record.json#/selections/*",
+      "category": "metadata",
+      "count": 20,
+      "upper_each": 541,
+      "basis": "selection_receipt <=512 plus wrapper",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20/record.json#/selections",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 2430,
+      "basis": "canonical reference-index upper: 64-hex keys/digests, seven-digit byte counts",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20/record.json#/field",
+      "category": "field",
+      "count": 1,
+      "upper_each": 2093056,
+      "basis": "accepted two-copy publication total bound; no narrower close-field check in this caller",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20/record.json",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "existing accepted metadata publication bound",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20/player-close.json",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "existing accepted metadata publication bound",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20-process.json",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "existing accepted metadata publication bound",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20-verification.claim",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "existing accepted metadata publication bound",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20-verification.json#",
+      "category": "verification",
+      "count": 1,
+      "upper_each": 131072,
+      "basis": "existing verification class ceiling divided across two publication copies",
+      "measured_reference": []
+    },
+    {
+      "role": "restore20-verification.json",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 61440,
+      "basis": "existing accepted metadata publication bound",
+      "measured_reference": []
+    },
+    {
+      "role": "evaluation.json",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 8192,
+      "basis": "joint existing closure cap; not multiplied by member count",
+      "measured_reference": [],
+      "covered_by_joint_reservation": "closure"
+    },
+    {
+      "role": "result.json",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 8192,
+      "basis": "joint existing closure cap; not multiplied by member count",
+      "measured_reference": [],
+      "covered_by_joint_reservation": "closure"
+    },
+    {
+      "role": "REPORT.md",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 8192,
+      "basis": "joint existing closure cap; not multiplied by member count",
+      "measured_reference": [],
+      "covered_by_joint_reservation": "closure"
+    },
+    {
+      "role": "balance.json",
+      "category": "metadata",
+      "count": 1,
+      "upper_each": 8192,
+      "basis": "joint existing closure cap; not multiplied by member count",
+      "measured_reference": [],
+      "covered_by_joint_reservation": "closure"
+    }
+  ],
+  "final_upper_occupied": {
+    "metadata": 2202854,
+    "sources": 340429,
+    "verification": 131072,
+    "native": 8049304,
+    "field": 4710426,
+    "nj": 61773,
+    "formations": 92453,
+    "generations": 92512,
+    "shared": 587167,
+    "total": 15680823
+  },
+  "largest_success": {
+    "role": "reference/record.json#/field",
+    "success": {
+      "metadata": 2227430,
+      "sources": 340429,
+      "verification": 131072,
+      "native": 8049304,
+      "field": 6803482,
+      "nj": 61773,
+      "formations": 92453,
+      "generations": 92512,
+      "shared": 587167,
+      "total": 17798455
+    },
+    "failure": [
+      {
+        "metadata": 2227430,
+        "sources": 340429,
+        "verification": 131072,
+        "native": 8049304,
+        "field": 4710426,
+        "nj": 61773,
+        "formations": 92453,
+        "generations": 92512,
+        "shared": 587167,
+        "total": 15705399
+      },
+      {
+        "metadata": 2227430,
+        "sources": 340429,
+        "verification": 131072,
+        "native": 8049304,
+        "field": 6803482,
+        "nj": 61773,
+        "formations": 92453,
+        "generations": 92512,
+        "shared": 587167,
+        "total": 17798455
+      }
+    ],
+    "violations": [
+      "metadata",
+      "shared",
+      "sources",
+      "total"
+    ]
+  },
+  "largest_controlled_failure": {
+    "role": "reference/record.json#/field",
+    "charged": {
+      "metadata": 2227430,
+      "sources": 340429,
+      "verification": 131072,
+      "native": 8049304,
+      "field": 6803482,
+      "nj": 61773,
+      "formations": 92453,
+      "generations": 92512,
+      "shared": 587167,
+      "total": 17798455
+    }
+  },
+  "remaining_success": {
+    "total": -13604151,
+    "metadata": -2096358,
+    "sources": -12749,
+    "shared": -193951,
+    "verification": 131072
+  },
+  "state_reservation": {
+    "instances": 62,
+    "bytes": 6096522,
+    "total_limit": 4194304,
+    "excess": 1902218
+  },
+  "sharing": "Zero prospective state equality assumed. Existing interning compares complete canonical bytes. Measured historical objects are not replayed or inserted as new state. Joint log/closure reservations counted once.",
+  "caveat": "Generic ceilings are deliberately visible, not invented measured sizes. Several maxima are not jointly attainable because broader limits stop earlier. NICHT_PASSEND refers to this justified reservation; an actual next result size is unknown.",
+  "transition_policy": "Every final bound plus one temporary bound, and failure before/after that temporary. Keeps residual joint reserves without duplicating their final members. Prefixes are subsets of this upper occupancy. No output files are published to a real run.",
+  "component_peaks_success": {
+    "total": 17798455,
+    "metadata": 2292966,
+    "sources": 340429,
+    "shared": 588735,
+    "verification": 262144
+  },
+  "component_peak_roles": {
+    "total": "reference/record.json#/field",
+    "metadata": "future-execution-binding.json",
+    "sources": "future-execution-binding.json",
+    "shared": "reference/record.json#/core/rows/0/generations",
+    "verification": "restore20-verification.json#"
+  },
+  "component_peaks_failure": {
+    "total": 17798455,
+    "metadata": 2292966,
+    "sources": 340429,
+    "shared": 588735,
+    "verification": 262144
+  },
+  "remaining_componentwise": {
+    "total": -13604151,
+    "metadata": -2161894,
+    "sources": -12749,
+    "shared": -195519,
+    "verification": 0
+  },
+  "transition_positions": 471,
+  "workpaper_metadata": {
+    "json_bytes": 87941,
+    "report_bytes": 5838,
+    "total": 93779,
+    "rule": "Additional counted metadata. No own digest recursively embedded; bind final file digests externally."
+  },
+  "calculation_source": "\nimport json,hashlib,collections\nfrom pathlib import Path\nfrom dataclasses import replace\nfrom tools import _media_publication_plan as p\nfrom tools import _media_restart_evidence as e\nfrom tools import _media_restart_reservations as r\nROOT=Path.cwd()\nold=ROOT/'reports/media-restart-real-20260913-01'\ncase=json.loads((ROOT/'reports/MEDIA_RESTART_DRAIN_METADATA_CASE_20260913.json').read_bytes())\nq1=json.loads((ROOT/'reports/media-publication-plan-qualification-20260913-01/preregistration.json').read_bytes())\nq2=json.loads((ROOT/'reports/media-failure-form-qualification-20260913-01/preregistration.json').read_bytes())\ndef ident(path):\n raw=path.read_bytes()\n return dict(path=str(path.relative_to(ROOT)),bytes=len(raw),sha256=hashlib.sha256(raw).hexdigest())\ndef size(x):return len(json.dumps(x,allow_nan=False,ensure_ascii=True,sort_keys=True,separators=(',',':')).encode('ascii'))\ndef overhead(category):return size(dict(**{'class':category},value=None))-4\ndef refsize(category,cap):\n return size({'$media_object':'f'*64,'class':category,'bytes':cap})\nmeasured=collections.defaultdict(list)\nfor path in sorted((old/'objects').glob('*.json')):\n obj=json.loads(path.read_bytes());v=obj['value'];cat=obj['class'];role=None\n if cat=='native':\n  if set(v)=={'body','native_sha256','schema'}:role='states'\n  elif set(v)=={'event','field','operation'}:role='inputs'\n  else:role='rows'\n elif cat in ('nj','formations','generations'):role={'nj':'source_receipts','formations':'formation','generations':'generations'}[cat]\n elif isinstance(v,list):\n  first=v[0] if v else None\n  if first and first['class']=='nj':role='source_receipts_index'\n  elif first:\n   child=json.loads((old/'objects'/(first['$media_object']+'.json')).read_bytes())\n   role='inputs_index' if set(child['value'])=={'event','field','operation'} else 'rows_index'\n elif 'max_event_count' in v:role='runtime_config'\n elif 'rule' in v:role='binding'\n elif set(v)=={'field','memory','snapshot'}:role='initial'\n if role:measured[role].append(ident(path))\nproofpaths=set(Path(x['path']) for x in q1['proofs'])\nfor folder in ('media-publication-plan-qualification-20260913-01','media-failure-form-qualification-20260913-01'):\n for name in ('preregistration.json','result.json','stdout.log','stderr.log','REPORT.md','balance.json','test.claim','observations.json'):\n  path=ROOT/'reports'/folder/name\n  if path.exists():proofpaths.add(path)\nfor path in (ROOT/'reports/media-failure-form-qualification-20260913-01').glob('test_*/failure.json'):proofpaths.add(path)\nsourcepaths=[ROOT/n for n in sorted(set(q1['charged_sources'])|set(q2['new_sources']))]\nactive=[dict(**ident(path),category='sources') for path in sourcepaths]+[dict(**ident(path),category='metadata') for path in sorted(proofpaths)]\ntotals=dict.fromkeys(p.CATEGORIES,0)\nfor row in active:totals[row['category']]+=row['bytes']\ntotals['shared']=totals['sources'];totals['total']=sum(x['bytes'] for x in active)\nbase=dict(files=active,totals=totals,limits=e.LIMITS)\nfuture=[dict(name='logs',paths=[stage+s for stage in ('reference','suspend19','restore20') for s in ('.stdout','.stderr')],limit=8192,closed_by='result.json'),\n dict(name='closure',paths=['evaluation.json','result.json','REPORT.md','balance.json'],limit=8192,closed_by='balance.json')]\ngroups=r.bind(future)\nheld=tuple(replace(g,closed_by='__not_released_in_upper_envelope__') for g in groups)\njoint={name:g.name for g in groups for name in g.paths}\nroles=[]; finals=[]\nfor role,(cat,count) in p.full_layout().items():\n key=role.rsplit('/',1)[-1];basis='existing accepted metadata publication bound';cap=(e.LIMITS['metadata']-e.FAILURE_RESERVE)//2;known=[]\n if role in joint:\n  cap=8192;basis='joint existing '+joint[role]+' cap; not multiplied by member count'\n elif key=='*':\n  parent=role.split('/')[-2]\n  if parent=='states':cap=98304+overhead(cat);basis='core_sizes states: 98304 plus native wrapper'\n  elif parent=='inputs':cap=16384+overhead(cat);basis='core_sizes inputs: 16384 plus native wrapper'\n  elif parent=='rows':cap=16384+2*refsize('generations',4194304)+32+overhead(cat);basis='core_sizes step excluding formation/generation, plus both reference fields and wrapper'\n  elif parent=='source_receipts':cap=1024+overhead(cat);basis='core_sizes NJ: 1024 plus wrapper'\n  elif parent=='selections':cap=512+overhead(cat);basis='selection_receipt <=512 plus wrapper'\n  if role.startswith('reference/'):known=measured.get(parent,[])\n elif key in ('formation','generations'):\n  cap=1536+overhead(cat);basis='core_sizes per-item 1536 plus wrapper'\n  if role.startswith('reference/'):known=measured.get(key,[])\n elif key in ('inputs','rows','source_receipts','scans','selections','states'):\n  n=19 if role.startswith('suspend19/') else 20\n  n=0 if key=='scans' else n+1 if key=='states' else n\n  itemcat={'inputs':'native','rows':'native','source_receipts':'nj','scans':'native','selections':'metadata','states':'native'}[key]\n  cap=overhead('metadata')+2+max(0,n-1)+n*(refsize(itemcat,4194304)+(67 if key=='states' else 0))\n  basis='canonical reference-index upper: 64-hex keys/digests, seven-digit byte counts'\n  if role.startswith('reference/'):known=measured.get(key+'_index',[])\n elif key in ('runtime_config','binding','initial'):\n  if role.startswith('reference/'):known=measured.get(key,[])\n  basis='metadata ceiling; narrower unchanged-shape bound not asserted for a new run binding'\n elif key=='field':\n  cap=524288+overhead(cat) if role.startswith('suspend19/') else (e.LIMITS['total']-e.FAILURE_RESERVE)//2\n  basis='checkpoint FIELD_CAP plus wrapper' if role.startswith('suspend19/') else 'accepted two-copy publication total bound; no narrower close-field check in this caller'\n elif cat=='verification':\n  cap=131072;basis='existing verification class ceiling divided across two publication copies'\n item=dict(role=role,category=cat,count=count,upper_each=cap,basis=basis,measured_reference=known)\n if role in joint:item['covered_by_joint_reservation']=joint[role]\n else:\n  for i in range(count):finals.append(dict(path=role.replace('*',str(i)),category=cat,bytes=cap))\n roles.append(item)\n# Additional future administrative input binding is bounded by the existing entry reader.\n# It is not an authorization and no run ID is assigned.\nextra=[dict(path='future-execution-binding.json',category='metadata',bytes=65536),\n       dict(path='future-authorization.json',category='metadata',bytes=65536)]\nall_final=p.extend(base,extra+finals)\ncases=[]\nfor row in extra+finals:\n d=p.transaction(all_final,[dict(row,path=row['path']+'.pending')],held,held,4096)\n cases.append(dict(role=row['path'],success=d['success']['charged'],\n  failure=[x['charged'] for x in d['failure']],violations=d['violations']))\nfor g in groups:\n d=p.transaction(all_final,[dict(path=g.name+'.pending',category='metadata',bytes=g.limit)],held,held,4096)\n cases.append(dict(role='joint:'+g.name,success=d['success']['charged'],failure=[x['charged'] for x in d['failure']],violations=d['violations']))\nsuccess=max(cases,key=lambda x:x['success']['total'])\nfailure=max(((x['role'],v) for x in cases for v in x['failure']),key=lambda x:x[1]['total'])\nstate_roles=[x for x in roles if '/states/*' in x['role']]\nstate_upper=sum(x['count']*x['upper_each'] for x in state_roles)\nresult=dict(status='NICHT_PASSEND',scope='Complete conservative reservation envelope, NOT a measured future peak or proof of unavoidable physical size. No tests or media.',test_calls=0,media_calls=0,\n repository_head='537109994cf777f8d36cda617aafe12226806c25',limits=e.LIMITS,\n arithmetic_sources=[ident(ROOT/n) for n in ('tools/_media_publication_plan.py','tools/_media_restart_reservations.py','tools/_media_restart_evidence.py')],\n active=active,active_totals=totals,\n retained_source_policy='Retain the complete previously charged real/plan source set and both new focused files. No automatic transfer of the smaller focused-only source classification.',\n measured_reference_summary={k:dict(count=len(v),bytes=sum(x['bytes'] for x in v)) for k,v in measured.items()},\n future_input_reserves=extra,joint_reservations=future,roles=roles,\n final_upper_occupied=all_final['totals'],largest_success=success,largest_controlled_failure=dict(role=failure[0],charged=failure[1]),\n remaining_success={k:cap-success['success'][k] for k,cap in e.LIMITS.items()},\n state_reservation=dict(instances=sum(x['count'] for x in state_roles),bytes=state_upper,total_limit=4194304,excess=state_upper-4194304),\n sharing='Zero prospective state equality assumed. Existing interning compares complete canonical bytes. Measured historical objects are not replayed or inserted as new state. Joint log/closure reservations counted once.',\n caveat='Generic ceilings are deliberately visible, not invented measured sizes. Several maxima are not jointly attainable because broader limits stop earlier. NICHT_PASSEND refers to this justified reservation; an actual next result size is unknown.',\n transition_policy='Every final bound plus one temporary bound, and failure before/after that temporary. Keeps residual joint reserves without duplicating their final members. Prefixes are subsets of this upper occupancy. No output files are published to a real run.',\n cases=cases)\nresult['component_peaks_success']={k:max(x['success'][k] for x in cases) for k in e.LIMITS}\nresult['component_peak_roles']={k:max(cases,key=lambda x:x['success'][k])['role'] for k in e.LIMITS}\nresult['component_peaks_failure']={k:max(v[k] for x in cases for v in x['failure']) for k in e.LIMITS}\nresult['remaining_componentwise']={k:cap-result['component_peaks_success'][k] for k,cap in e.LIMITS.items()}\nresult['transition_positions'] = len(result.pop('cases'))\nprint(json.dumps(result,ensure_ascii=False))\n",
+  "calculation_note": "The saved source computes the projection before these two workpapers. Add their byte lengths to metadata/total of every path; neither file consumes a future group. Sizes are solved to a fixed point. No tests or media."
+}

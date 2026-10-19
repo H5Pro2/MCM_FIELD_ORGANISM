@@ -1,0 +1,194 @@
+{
+  "E": {
+    "BC": {
+      "result": {
+        "decision": "ABSTAIN_AMBIGUOUS",
+        "matches": [
+          {
+            "role": "retained",
+            "generation": 1,
+            "formation": "A-1",
+            "ordinals": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "offset": 1
+          },
+          {
+            "role": "retained",
+            "generation": 2,
+            "formation": "D-1",
+            "ordinals": [
+              9,
+              10,
+              11,
+              12
+            ],
+            "offset": 1
+          }
+        ]
+      },
+      "prediction": "CONFIRMED"
+    },
+    "half_BC": {
+      "result": {
+        "decision": "ABSTAIN_NO_MATCH",
+        "matches": []
+      },
+      "prediction": "CONFIRMED"
+    },
+    "XB": {
+      "result": {
+        "decision": "CONFIRMED_RETAINED_MATCH",
+        "matches": [
+          {
+            "role": "retained",
+            "generation": 1,
+            "formation": "A-1",
+            "ordinals": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "offset": 0
+          }
+        ]
+      },
+      "prediction": "CONFIRMED"
+    },
+    "half_XB": {
+      "result": {
+        "decision": "ABSTAIN_NO_MATCH",
+        "matches": []
+      },
+      "prediction": "CONFIRMED"
+    }
+  },
+  "F": {
+    "BC": {
+      "result": {
+        "decision": "ABSTAIN_AMBIGUOUS",
+        "matches": [
+          {
+            "role": "retained",
+            "generation": 1,
+            "formation": "A-1",
+            "ordinals": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "offset": 1,
+            "factors": [
+              1.0
+            ]
+          },
+          {
+            "role": "retained",
+            "generation": 2,
+            "formation": "D-1",
+            "ordinals": [
+              9,
+              10,
+              11,
+              12
+            ],
+            "offset": 1,
+            "factors": [
+              1.0
+            ]
+          }
+        ]
+      },
+      "prediction": "CONFIRMED"
+    },
+    "half_BC": {
+      "result": {
+        "decision": "ABSTAIN_AMBIGUOUS",
+        "matches": [
+          {
+            "role": "retained",
+            "generation": 1,
+            "formation": "A-1",
+            "ordinals": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "offset": 1,
+            "factors": [
+              0.5
+            ]
+          },
+          {
+            "role": "retained",
+            "generation": 2,
+            "formation": "D-1",
+            "ordinals": [
+              9,
+              10,
+              11,
+              12
+            ],
+            "offset": 1,
+            "factors": [
+              0.5
+            ]
+          }
+        ]
+      },
+      "prediction": "CONFIRMED"
+    },
+    "XB": {
+      "result": {
+        "decision": "CONFIRMED_RETAINED_MATCH",
+        "matches": [
+          {
+            "role": "retained",
+            "generation": 1,
+            "formation": "A-1",
+            "ordinals": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "offset": 0,
+            "factors": [
+              1.0
+            ]
+          }
+        ]
+      },
+      "prediction": "CONFIRMED"
+    },
+    "half_XB": {
+      "result": {
+        "decision": "CONFIRMED_RETAINED_MATCH",
+        "matches": [
+          {
+            "role": "retained",
+            "generation": 1,
+            "formation": "A-1",
+            "ordinals": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "offset": 0,
+            "factors": [
+              0.5
+            ]
+          }
+        ]
+      },
+      "prediction": "CONFIRMED"
+    }
+  }
+}

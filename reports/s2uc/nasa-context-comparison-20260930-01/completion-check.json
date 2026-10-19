@@ -1,0 +1,12 @@
+{
+  "status": "VERIFIED",
+  "code_bindings_unchanged": true,
+  "corpus_bindings_unchanged": true,
+  "frames": 100,
+  "pairs": 50,
+  "targets": 49,
+  "formation_receipts": 25,
+  "terminal": 101,
+  "slots_released": true,
+  "source_processing_calls": 0
+}

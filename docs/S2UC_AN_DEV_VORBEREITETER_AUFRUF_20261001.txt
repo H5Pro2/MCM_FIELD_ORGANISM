@@ -1,0 +1,42 @@
+AN-DEV: vorbereiteter Einmalaufruf, NICHT AUSGEFUEHRT
+2026-10-01
+
+Arbeitsverzeichnis:
+C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace
+
+Gebundener Plan:
+docs/S2UC_AUDIO_NJ_MATERIALPLAN_20261001.json
+Code-/Python-/NumPy-/Profilbindung:
+docs/S2UC_AN_PRODUKTIONSBINDUNG_20261001.json
+Vorlage, absichtlich PENDING und daher technisch abgewiesen:
+docs/S2UC_AN_DEV_AUTORISIERUNG_VORLAGE_20261001.json
+
+Nach gesondertem ausdruecklichem Produktionsauftrag wird aus der Vorlage
+eine separate S2UC_AN_DEV_AUTORISIERUNG_20261001.json mit AUTHORIZED_ONCE
+erstellt. Nur der Status darf gegenueber der gebundenen Vorlage wechseln.
+Vorher Bindung und unbenutzten festen Zielordner pruefen. Die Vorlage ist
+keine Freigabe; es wurde keine ausfuehrbare AN-Autorisierung erzeugt.
+
+Dann genau einmal, aus obigem Arbeitsverzeichnis:
+C:/Python314/python.exe -m tools.s2uc_an_material produce docs/S2UC_AN_DEV_AUTORISIERUNG_20261001.json
+
+Festes Ziel: reports/s2uc/audio-nj-material-an-dev-01
+Erfolg: MATERIAL_COMPLETE, Exit 0, 57 Rezeptor- und 57 NJ-Aufrufe,
+vollstaendiges Manifest, Ausgabe einschliesslich Abschluss <=4194304 Byte.
+Fehler: NOT_EVALUABLE, Exit 1; vorhandenes Ziel bleibt verbraucht.
+Keine automatische Wiederholung, kein Ersatzordner, keine Ersatz-Seeds.
+
+Dieser Aufruf produziert ausschliesslich Material. Er kalibriert nicht
+automatisch, sucht keine Parameter und startet keine Evaluation.
+Die Auswertung benoetigt den gesonderten Auftrag. Ihr vorhandener Anschluss:
+tools.s2uc_an_compare.calibration_epsilon(folder,spec,'AN-DEV')
+tools.s2uc_an_compare.evaluate_export(folder,spec,'AN-DEV',epsilon=epsilon,tau=tau)
+Die Development-Auswertung weist ein epsilon ab, das nicht genau dem
+Maximum der acht exportierten NJ-Rauschframe-Mittelwerte entspricht.
+Siebener-Gitter und Auswahlfunktion unveraendert wiederverwendet aus
+tools.s2uc_ar_compare; keine eigene neue Suchregel.
+
+Vor AN-EVAL muessen AN-DEV-Entscheidung, epsilon und tau getrennt eingefroren
+und die Evaluation eigens beauftragt werden. Kein Evaluation-Kalibrationsseed
+im Plan; keine Evaluation-Kalibrationsfunktion. Neutrale Messwerte dieser
+Qualifikation sind niemals Parameter fuer AN-DEV oder AN-EVAL.

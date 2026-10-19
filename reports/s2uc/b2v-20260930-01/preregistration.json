@@ -1,0 +1,91 @@
+{
+  "created_utc": "2026-09-30T13:15:26.931210+00:00",
+  "probes": {
+    "P1": {
+      "after": 17,
+      "values_ordinals": [
+        13,
+        14
+      ],
+      "B2": "ABSTAIN_NO_RETAINED_TRACE",
+      "B2V": "PROVISIONAL_CANDIDATE_MATCH",
+      "matches": [
+        [
+          "candidate",
+          "g1-p3",
+          0
+        ]
+      ]
+    },
+    "N1": {
+      "after": 22,
+      "values_ordinals": [
+        13,
+        14
+      ],
+      "B2": "ABSTAIN_NO_RETAINED_TRACE",
+      "B2V": "ABSTAIN_NO_MATCH",
+      "matches": []
+    },
+    "P2": {
+      "after": 31,
+      "values_ordinals": [
+        28,
+        29
+      ],
+      "B2": "ABSTAIN_NO_RETAINED_TRACE",
+      "B2V": "PROVISIONAL_CANDIDATE_MATCH",
+      "matches": [
+        [
+          "candidate",
+          "g2-p1",
+          1
+        ]
+      ]
+    },
+    "N2": {
+      "after": 36,
+      "values_ordinals": [
+        28,
+        29
+      ],
+      "B2": "ABSTAIN_NO_RETAINED_TRACE",
+      "B2V": "ABSTAIN_NO_MATCH",
+      "matches": []
+    },
+    "K1": {
+      "after": 22,
+      "values_ordinals": [
+        1,
+        2
+      ],
+      "B2": "TRACE_MATCH",
+      "B2V": "ABSTAIN_AMBIGUOUS",
+      "matches": [
+        [
+          "retained",
+          "g1-p1",
+          0
+        ],
+        [
+          "candidate",
+          "g1-p4",
+          0
+        ]
+      ]
+    }
+  },
+  "repeat": "Repeat P1/P2 immediately; identical results and unchanged state.",
+  "within_trace": "[1,2,1,2] queried by [1,2]: offsets 0 and 2, ambiguous in candidate and retained roles.",
+  "original_hints": "All seven preserve B2 meaning and full retained match set; no additional candidate matches.",
+  "budget": [
+    16,
+    2
+  ],
+  "bindings": {
+    "tools/_s2uc_four_arm.py": "214805475c8794663026798b95f88f4b6e5cd6455d474a4eb75b1ee2c5e5a16b",
+    "tools/_s2ub_candidate_confirmation.py": "4178198b43fbbefd3cd550307ec114540c2167a3ae066e22bde01f5223f0ca8a",
+    "reports/s2uc/four-arm-20260930-01/result.json": "c30d8fac1a5114287c5818d1a78fdd01408c0ad659aece4fdc3c754a4cd36b8c",
+    "reports/s2uc/p2-supplier-correction-20260930-01/final/retained-success/product/record.json": "f9f2ce5044c1e9ee6105e3e363d084590271bf7b76f662785dc9f06c0e03955a"
+  }
+}

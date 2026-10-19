@@ -1,0 +1,1 @@
+{"arm_errors":376,"ci":["-1/188","-1/188"],"condition_target_pairs":188,"informative":true,"mean":"-1/188","name":"FW1:mean((KEEP-RESET)A,(KEEP-RESET)B)","neutral_only":true,"pairs":["-3/376","-1/376"],"source_pairs":2,"verdict":"NUTZEN_GESTUETZT"}

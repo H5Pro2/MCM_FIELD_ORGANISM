@@ -1,0 +1,49 @@
+test_R01_default_and_disabled_path_identical (tests.test_s2uc_promotion_ema.PromotionTests.test_R01_default_and_disabled_path_identical) ... ok
+test_R02_neutral_integration_and_resources (tests.test_s2uc_promotion_ema.PromotionTests.test_R02_neutral_integration_and_resources) ... ok
+test_R03_full_table_maximum_ids_and_transient_memory (tests.test_s2uc_promotion_ema.PromotionTests.test_R03_full_table_maximum_ids_and_transient_memory) ... ok
+test_T01_positive (tests.test_s2uc_promotion_ema.PromotionTests.test_T01_positive) ... ok
+test_T02_negative (tests.test_s2uc_promotion_ema.PromotionTests.test_T02_negative) ... ok
+test_T03_tie (tests.test_s2uc_promotion_ema.PromotionTests.test_T03_tie) ... ok
+test_T04_multiple_cells_bitwise_and_sign (tests.test_s2uc_promotion_ema.PromotionTests.test_T04_multiple_cells_bitwise_and_sign) ... ok
+test_T05_empty (tests.test_s2uc_promotion_ema.PromotionTests.test_T05_empty) ... ok
+test_T06_conflicts_and_invalid_pair (tests.test_s2uc_promotion_ema.PromotionTests.test_T06_conflicts_and_invalid_pair) ... ok
+test_T07_identity_scope_and_regular_reappearance (tests.test_s2uc_promotion_ema.PromotionTests.test_T07_identity_scope_and_regular_reappearance) ... ok
+test_T08_pending_tickets_and_frozen_alias (tests.test_s2uc_promotion_ema.PromotionTests.test_T08_pending_tickets_and_frozen_alias) ... ok
+test_T09_duplicate_event (tests.test_s2uc_promotion_ema.PromotionTests.test_T09_duplicate_event) ... ok
+test_T10_interruption_every_publication_boundary_and_read_guard (tests.test_s2uc_promotion_ema.PromotionTests.test_T10_interruption_every_publication_boundary_and_read_guard) ... ok
+test_Q1_four_arms_and_legacy_equivalence (tests.test_s2uc_promotion_runner.RunnerTests.test_Q1_four_arms_and_legacy_equivalence) ... ok
+test_Q2_no_authorization_no_generator (tests.test_s2uc_promotion_runner.RunnerTests.test_Q2_no_authorization_no_generator) ... ok
+test_Q3_existing_folder_cannot_repeat (tests.test_s2uc_promotion_runner.RunnerTests.test_Q3_existing_folder_cannot_repeat) ... ok
+test_Q4_mismatched_hypothesis_is_not_repaired (tests.test_s2uc_promotion_runner.RunnerTests.test_Q4_mismatched_hypothesis_is_not_repaired) ... ok
+test_Q5_failure_closure_and_no_retry (tests.test_s2uc_promotion_runner.RunnerTests.test_Q5_failure_closure_and_no_retry) ... ok
+test_Q6_D_cannot_hide_V_harm (tests.test_s2uc_promotion_runner.RunnerTests.test_Q6_D_cannot_hide_V_harm) ... ok
+test_Q7_actual_interruption_preserves_prestate_and_promotion_result (tests.test_s2uc_promotion_runner.RunnerTests.test_Q7_actual_interruption_preserves_prestate_and_promotion_result) ... ok
+test_E10_approximate_key_and_output_identity (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E10_approximate_key_and_output_identity) ... ok
+test_E11_active_memory_identity_and_existing_frame_budget (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E11_active_memory_identity_and_existing_frame_budget) ... ok
+test_E12_scoped_integer_limits_and_offset_without_successor (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E12_scoped_integer_limits_and_offset_without_successor) ... ok
+test_E1_explicit_policy_first_choice_shadow_and_delay (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E1_explicit_policy_first_choice_shadow_and_delay) ... ok
+test_E2_tie_ema_and_numerical_order (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E2_tie_ema_and_numerical_order) ... ok
+test_E3_complete_validation_before_atomic_update (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E3_complete_validation_before_atomic_update) ... ok
+test_E4_numerical_failure_no_partial_commit (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E4_numerical_failure_no_partial_commit) ... ok
+test_E5_role_generation_offset_quality_and_promotion (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E5_role_generation_offset_quality_and_promotion) ... ok
+test_E6_evicted_pending_ticket_and_confirmation_lifetime (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E6_evicted_pending_ticket_and_confirmation_lifetime) ... ok
+test_E7_missing_context_end_censorship_and_default_path (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E7_missing_context_end_censorship_and_default_path) ... ok
+test_E8_neutral_continuous_200_and_standard_bound (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E8_neutral_continuous_200_and_standard_bound) ... ok
+test_E9_actual_additional_memory_including_temporaries (tests.test_s2uc_paired_error_ema.PairedErrorTests.test_E9_actual_additional_memory_including_temporaries) ... ok
+test_S01_observer_equivalence_and_full_export (tests.test_s2uc_ema_stock.StockTests.test_S01_observer_equivalence_and_full_export) ... ok
+test_S02_ambiguity_then_later_eviction (tests.test_s2uc_ema_stock.StockTests.test_S02_ambiguity_then_later_eviction) ... ok
+test_S03_new_candidate_and_retained_generations_cold (tests.test_s2uc_ema_stock.StockTests.test_S03_new_candidate_and_retained_generations_cold) ... ok
+test_S04_all_five_masks_and_cold_costs (tests.test_s2uc_ema_stock.StockTests.test_S04_all_five_masks_and_cold_costs) ... ok
+test_S05_missing_target_never_zero (tests.test_s2uc_ema_stock.StockTests.test_S05_missing_target_never_zero) ... ok
+test_S06_expectation_mismatch_is_not_system_error (tests.test_s2uc_ema_stock.StockTests.test_S06_expectation_mismatch_is_not_system_error) ... ok
+test_S07_budget_reserve_overflow_exclusivity (tests.test_s2uc_ema_stock.StockTests.test_S07_budget_reserve_overflow_exclusivity) ... ok
+test_S08_authorization_checked_before_material_or_export (tests.test_s2uc_ema_stock.StockTests.test_S08_authorization_checked_before_material_or_export) ... ok
+test_S09_failure_preserves_partial_and_closure_no_retry (tests.test_s2uc_ema_stock.StockTests.test_S09_failure_preserves_partial_and_closure_no_retry) ... ok
+test_S10_net_benefit_uses_V_not_D (tests.test_s2uc_ema_stock.StockTests.test_S10_net_benefit_uses_V_not_D) ... ok
+test_S11_corrupt_update_and_illegal_transfer_are_technical (tests.test_s2uc_ema_stock.StockTests.test_S11_corrupt_update_and_illegal_transfer_are_technical) ... ok
+test_S12_closure_at_full_ordinary_budget (tests.test_s2uc_ema_stock.StockTests.test_S12_closure_at_full_ordinary_budget) ... ok
+
+----------------------------------------------------------------------
+Ran 44 tests in 89.189s
+
+OK

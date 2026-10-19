@@ -1,0 +1,1 @@
+{"passed":true,"tests":["identical","fixed_tau_boundary","above_fixed_tau","two_frame_contributions","channel_sum","exact_factors","signal_equality_rejected","signal_above_accepted"],"thresholds":{"epsilon":3.3647428814553505e-05,"tau":0.03125}}

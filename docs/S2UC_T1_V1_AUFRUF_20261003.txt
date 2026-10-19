@@ -1,0 +1,23 @@
+T1: eigenständige Quellen-/Auswertungshülle, unveränderte Policy.
+
+Vorbereitung und neutrale Qualifikation (keine T1-Quellen):
+C:/Python314/python.exe -m tools.s2uc_t1_prepare prepare
+C:/Python314/python.exe -m tools.s2uc_t1_prepare qualify
+
+Qualifikation: neutrale Unit-/Grenztests, tatsächlicher Watchdog-Normal- und
+Abbruchtest, anschließend zwei80er-Neutralfälle U/M/E/K/P und Belegmutationstests.
+Genau10 neutrale Replays; namespace MCM-QUALIFICATION-ONLY-v1, keine T1-Digests.
+900s und16MiB Qualifikationsrahmen; kein Test-/Mock-Dispatch im Replaypfad.
+
+T1-Ausführung ist NICHT freigegeben. Nach separater Projektleiterfreigabe:
+aus AUTORISIERUNG_VORLAGE eine separate Datei erstellen, ausschließlich status
+auf AUTHORIZED_ONCE ändern. Danach genau einmal:
+C:/Python314/python.exe -m tools.s2uc_t1_prepare run --authorization <separate-Datei>
+
+16 Fälle,80 Arme,1280 Quellpositionen,6400 Aufnahmen+6400 Referenzfortschreibungen.
+Alle Quellen und Herkunftsdaten vor erstem Policyaufruf exportiert und gehasht.
+Exklusives Ziel reports/s2uc/t1-transfer-20261003-01; keine Wiederaufnahme.
+3600s Gesamtgrenze,3540s Worker,60s Abschluss,64MiB gemeinsames Exportbudget.
+G_w ist festes spätes Zeitfenster. Modalität und tatsächlicher Fehler getrennt.
+I/H-Kontrollen:20/52,zusätzlicher separater Bericht,kein Vorhersagefehlersynonym.
+Nur synthetischer Vektortransfer; kein Audio-/Video-Kettentransfer.

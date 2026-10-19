@@ -1,0 +1,24 @@
+{
+  "status": "DOCUMENTATION_COMPLETE_PENDING_TECHNICAL_PREPARATION_ACCEPTANCE",
+  "new_tests": 0,
+  "new_replays": 0,
+  "files": {
+    "evidence-inventory.json": {
+      "bytes": 45826,
+      "sha256": "02ae4fd43fdb464142373d8d319901e82553e4b32882a3f182d68c070690ad76"
+    },
+    "REPORT.md": {
+      "bytes": 12983,
+      "sha256": "866a9f7eeffcb20e91705c4034e26bc37cba20781119b8ed8056dd8ae73ef591"
+    }
+  },
+  "dossier_payload_bytes": 58809,
+  "synchronized_documents": {
+    "README.md": "e4f55f69332cfcc6932d1e7ec9aeeef27c89cbcd9d45d82a1268c7d48be5fe6e",
+    "AKTUELLER_FORSCHUNGSWEG.md": "9d44bcbc5061d6f385ef4d0f7e6e4dba0d686ef2886956788ed27d9b600e8fae"
+  },
+  "binding_unchanged": true,
+  "prior_qualification_archives_unchanged": true,
+  "authorization_status": "PENDING_SEPARATE_AUTHORIZATION",
+  "evaluation_output_exists": false
+}

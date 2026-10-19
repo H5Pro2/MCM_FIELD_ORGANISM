@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "frozen_code_count": 1451,
+  "frozen_code_unchanged": true,
+  "development_files_unchanged": 51,
+  "plan_runtime_unchanged": true,
+  "material_hashes_unchanged": true,
+  "partition_pcm_hashes_disjoint": true,
+  "partition_roots_seeds_disjoint": true,
+  "T0_N3_identical": true,
+  "resources": {
+    "T0": {
+      "frame_peak": 8,
+      "output_slots_peak": 2,
+      "combined_peak": 9,
+      "output_python_bytes_peak": 3642,
+      "samples": 7438
+    },
+    "P1": {
+      "frame_peak": 8,
+      "output_slots_peak": 2,
+      "combined_peak": 9,
+      "output_python_bytes_peak": 3642,
+      "samples": 7425
+    },
+    "P2": {
+      "frame_peak": 8,
+      "output_slots_peak": 2,
+      "combined_peak": 9,
+      "output_python_bytes_peak": 3642,
+      "samples": 6555
+    },
+    "P3": {
+      "frame_peak": 8,
+      "output_slots_peak": 2,
+      "combined_peak": 9,
+      "output_python_bytes_peak": 3642,
+      "samples": 7438
+    },
+    "N1": {
+      "frame_peak": 8,
+      "output_slots_peak": 2,
+      "combined_peak": 9,
+      "output_python_bytes_peak": 3642,
+      "samples": 6555
+    },
+    "N2": {
+      "frame_peak": 8,
+      "output_slots_peak": 2,
+      "combined_peak": 9,
+      "output_python_bytes_peak": 3642,
+      "samples": 6555
+    },
+    "N3": {
+      "frame_peak": 8,
+      "output_slots_peak": 2,
+      "combined_peak": 9,
+      "output_python_bytes_peak": 3642,
+      "samples": 7438
+    },
+    "N4": {
+      "frame_peak": 12,
+      "output_slots_peak": 2,
+      "combined_peak": 13,
+      "output_python_bytes_peak": 3642,
+      "samples": 16277
+    }
+  },
+  "production_calls": {
+    "nj": 28,
+    "receptor": 28
+  },
+  "production_output_bytes": 1169505
+}

@@ -1,0 +1,17 @@
+test_conflicting_duplicate_errors (test_adapter.Mapping.test_conflicting_duplicate_errors) ... ok
+test_crossed_pair (test_adapter.Mapping.test_crossed_pair) ... ok
+test_crossed_receipt (test_adapter.Mapping.test_crossed_receipt) ... ok
+test_crossed_summary (test_adapter.Mapping.test_crossed_summary) ... ok
+test_positive (test_adapter.Mapping.test_positive) ... ok
+test_swapped_condition (test_adapter.Mapping.test_swapped_condition) ... ok
+test_swapped_receipt (test_adapter.Mapping.test_swapped_receipt) ... ok
+test_unique_gain_harm_and_multiplicity (test_adapter.Mapping.test_unique_gain_harm_and_multiplicity) ... ok
+test_wrong_revision (test_adapter.Mapping.test_wrong_revision) ... ok
+test_wrong_source_content (test_adapter.Mapping.test_wrong_source_content) ... ok
+test_wrong_source_file (test_adapter.Mapping.test_wrong_source_file) ... ok
+test_wrong_source_hash (test_adapter.Mapping.test_wrong_source_hash) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.004s
+
+OK

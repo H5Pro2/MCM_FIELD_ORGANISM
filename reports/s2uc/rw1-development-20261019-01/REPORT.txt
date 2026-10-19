@@ -1,0 +1,99 @@
+RW1 – technische Restarbeiten R1-R3 und C1-C6
+2026-10-19 | Entwicklerauftrag a179a252-51ec-48fa-be65-e5f32d41f858
+Projektleiterbezug 21b52833-550a-4893-891c-5fd86ca1791b
+
+ERGEBNIS: TECHNISCHE VORBEREITUNG ABGESCHLOSSEN; FORSCHUNG NICHT AUTORISIERT
+RW1-Vertrag unveraendert, SHA256:
+f8150752bb0008bafef95dad301c25022f4aae83b523c2ed60d3d3f2f7cc2bfe
+Finale technische Code-/Runtime-/Vertragsbindung SHA256:
+061252093a580c0df3d886888f862481d86a165fb77b623f0c8f3346639ce12c
+
+GEAENDERTE DATEIEN (ausschliesslich neue Implementierung unter experiments/rw1)
+common.py: feste Faelle/Rezept/Intervalle, getrennte Exportpartitionen, dauerhafte
+  Started-/Completed-Zaehler und gemeinsame Exportbilanz inklusive Altlieferung.
+entry.py: CLI fuer kuenstliche Anschlusspruefung, technische Bindung und gesperrten
+  Forschungseinstieg. Keine Berechtigungs-Ausstellung.
+gateway.py: eigene Auftrags-/Chat-/Projekt-/Code-/Runtime-/Rezept-/Zielbindung,
+  vorgelagertes Berechtigungsgate, exklusiver Verbrauch, Workerfaehigkeit,
+  PID/Parent/Nonce/Job, zweiter Eintritt gesperrt, Abschluss innerhalb300s.
+engine.py: festes spaeteres Materialrezept hinter Capability, Intervallmanifest,
+  kausaler Reader, Vorzustand und Freeze-Token vor Zielread, unveraenderter
+  TemporalAdapter, Referenzen, N/T-Kern-/Bankabgleich und Cleanup.
+evaluate.py: Herkunft/Position/Faktor/Nachfolger getrennt, S1-S4, alle60
+  Einzelentscheidungen/30 P-Bewertungen, Komponentenfehler+Hexdarstellung,
+  Einzelverluste, neun Kollisionspaare und feste Urteilshierarchie.
+audit.py: Archivrekonstruktion aus gebundenen Projektionen, historischen
+  Vorzustaenden und Freeze-Belegen; qualifizierte unabhaengige skalare Orakel.
+  Separate Implementierung fuer Zuweisung, alle Einzelwerte/Verluste/Kollisionen
+  und Haupturteil; liest keine fertigen Urteile als Wahrheit.
+tests.py: C1-C6, kleine kuenstliche Adapterfixture und Mock-I/O; aktive Tripwires
+  gegen Quellsynthese, Rezeptoranalyse, Projektor und NJ-Projektion.
+
+ABGRENZUNG DER PRUEFUNGEN
+c1-c6-01: TECHNICAL_FAILURE, Fixturefehler in C5. Ein geaenderter Zielwert wurde
+  nur T zugewiesen; P_PAIR_EQUAL wies die ungleichen N/T-Ziele korrekt zurueck.
+  Kein Produktionskernfehler. Fehlerbeleg und Abschluss bleiben erhalten.
+c1-c6-02: C1-C6 bestanden nach Fixturekorrektur und Anschluss-Ergaenzungen.
+c1-c6-03: finaler Stand C1-C6 bestanden,148 Checks; nach Ergaenzung der
+  unabhaengigen vollstaendigen Einzelwertpruefung, Exportdimensionierung und
+  Receipt-Gates. Technische Abschlusszeit4,7089011s; Jobpeak144277504 Bytes,
+  Prozesspeak79179776 Bytes. Gemeinsame Jobgrenze536870912,2 Prozesse,
+  Kill-on-close/kein Breakaway, Bibliotheksthreads1, Worker240s/Supervisor300s.
+
+C1: alle Bindungsfelder, fehlende Berechtigung und Direktaufruf vor Material.
+C2: ausschliesslich im Speicher simulierte exklusive Verbrauchsmarkierung;
+    Wiederverbrauch ohne Abschluss, PID/Nonce/Parent und zweiter Eintritt.
+C3:66 Intervallabbildungen, voller100ms-Horizont und Future-Read-Sentinel.
+C4: S1-S4, fehlender Einzelgewinn, N bereits korrekt, Fremdzuordnung,
+    Herkunft/Position/Faktor/Nachfolger, strikte Gleichheit/nextafter,
+    fehlender Kontext bleibt null statt0; unabhaengiger Fehlerpruefer.
+C5: neun Paarungen, gleiche/verschiedene Ziele, unterschiedliche Vorzustaende,
+    Positionsmehrdeutigkeit und technische Fehlerprioritaet.
+C6: je erfolgreicher Suite22 kuenstliche Policy- und22 Referenzaufnahmen,
+    zehn unabhaengig rekonstruierte Entscheidungen; Bank-/Kernabgleich/Cleanup;
+    manipulierte Prognose/Freeze-Belege; vollstaendige Archivform als Mock-I/O
+    aus diesen zwei kleinen Armen, ohne zwoelf Arme oder390 Projektionen
+    auszufuehren; fehlender Cleanup und Exportgrenzen werden abgewiesen.
+
+Insgesamt ueber02/03:44 kuenstliche Policy- und44 Referenzaufnahmen,
+20 kuenstliche Adapterentscheidungen.01 erreichte diese Adapterfixture nicht.
+Neue RW1-PCM, Rezeptor-/NJ-Aufrufe, Neutralgesamtversuche und Forschung: jeweils0.
+Kein neues Forschungsrecht ausgestellt oder verbraucht. Die nur im Test-RAM
+gebildeten Dummy-Berechtigungen/-Marker sind keine dauerhaften Startbelege.
+Alte27 Entwicklungs-/8 Anschlusspruefungen und390er-Neutralqualifikation
+unveraendert uebernommen.445 historische Dateien und8 historische Code-Dateien
+wurden erneut per Hash abgeglichen; keine Wiederholung alter Pruefungen.
+
+EXPORTDIMENSIONIERUNG
+Vorbereitung maximal8388608 Bytes, einschliesslich bisheriger Entwicklung,
+Vertragsdokumentation, neuer Code-/Runtimebindung, Pruefungen und Uebersichten-
+Snapshots. Material4194304, Observer3145728, Abschluss1048576; zusammen16MiB.
+Material statisch:2*76800 Quellbytes +390*8192 Projektionsbytes =3348480;
+845824 Bytes verbleiben fuer Manifest/Rezept. Keine einzelnen PCM-Fensterexporte.
+Observer:1935 Zaehlerereignisse*512 =990720;12 Armarchive*98304 =1179648;
+Request327680; Auswertung393216; unabhaengige Auswertung65536;
+sonstige Start-/Ergebnis-/Fehlerbelege zusammen65536:3022336 Bytes, damit
+123392 Bytes Reserve innerhalb3MiB. Einzeldatei- und Gesamtpartitionsgrenzen
+werden vor Schreiben geprueft; keine Ueberschreitung durch kuenstliche Kuerzung.
+Konkrete Liefergroessen und Reserven: export-balance.json.
+Die Obergrenzen128 Slots/63 Matches usw. des Vertrags gelten unveraendert;
+die kuenstlichen Verbindungstests behaupten keinen neuen produktiven Peak.
+
+GRENZEN UND ANSCHLUSS
+Die technische Anbindung und kuenstliche Auswertung sind geprueft. Die neuen
+Quellen wurden nicht materialisiert; daher gibt es keinen RW1-Forschungsbefund
+und noch keine Messung des realen390er-Forschungsablaufs. Kein erneuter neutraler
+Gesamtversuch zur Vorwegnahme dieses Befunds. Der gegenwaertige Rezeptor-/NJ-/
+Schwellen-/Auswahl-/Lernkern und der historische Neutralverbrauch sind unveraendert.
+Historisches UNPROVEN bleibt bestehen. Der Reader ist ein geprueftes in-process
+Zugriffsgate, keine behauptete OS-Isolation von Observer und Policy.
+
+Empfehlung: technische Lieferung abnehmen und danach ueber genau einen RW1-
+Forschungslauf nach dem festen Vertrag entscheiden. Der Befehl in
+PREPARED_START.txt bleibt ohne eigene Berechtigungsdatei gesperrt.
+
+BELEGE
+binding.json/binding.sha256, permission-status.json; c1-c6-03/observer/tests.json,
+c1-c6-03/fixture-evidence/*, c1-c6-03/closure/*; fruehere Versuche01/02 erhalten.
+preservation.json bindet die drei aktualisierten Uebersichten und ihre
+verlustfreien Vorgaenger. delivery-binding.json bindet die gesamte neue Lieferung.

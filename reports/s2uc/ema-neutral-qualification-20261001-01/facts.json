@@ -1,0 +1,62 @@
+{
+  "E10": "real approximate retrieval creates separate APPROXIMATE cell; output alias, no third vector",
+  "E1": "cold retained key selects persistence; unselected context is scored; next query can select context; no early update",
+  "E2": "alpha1/2; ties persist; ordered binary64 differs deliberately from fsum; one shared function for E/K/P",
+  "E3": {
+    "invalid_variants": 11,
+    "time_checked_before_update": true,
+    "duplicate_rejected": true,
+    "scope_state_cleared": true
+  },
+  "E4": "difference/sum overflow and invalid errors rejected; no partial pair commit",
+  "E5": "12 independent cells; roles/generations/offsets/qualities separated; actual candidate promotion resets",
+  "E6": "stale ticket does not revive deleted generation; exact confirmation retains errors; real FIFO eviction removes them",
+  "E7": "missing comparison creates no error; absent final target censored; disabled path matches previous adapter",
+  "E8": {
+    "neutral_frames": 200,
+    "rows": 99,
+    "censored": 201,
+    "no_reset": true,
+    "old_cap_unchanged": true,
+    "planned_stories_executed": false
+  },
+  "E9": {
+    "packed_bytes": 416,
+    "measurements": [
+      {
+        "retained_python_bytes": 1272,
+        "temporary_allocation_peak": 128,
+        "total_additional_upper": 1400
+      },
+      {
+        "retained_python_bytes": 1272,
+        "temporary_allocation_peak": 1224,
+        "total_additional_upper": 2496
+      },
+      {
+        "retained_python_bytes": 1272,
+        "temporary_allocation_peak": 552,
+        "total_additional_upper": 1824
+      },
+      {
+        "retained_python_bytes": 1272,
+        "temporary_allocation_peak": 2900,
+        "total_additional_upper": 4172
+      },
+      {
+        "retained_python_bytes": 1272,
+        "temporary_allocation_peak": 1224,
+        "total_additional_upper": 2496
+      },
+      {
+        "retained_python_bytes": 1272,
+        "temporary_allocation_peak": 858,
+        "total_additional_upper": 2130
+      }
+    ],
+    "maximum": 4172,
+    "cap": 16384,
+    "method": "deep conservative retained Python size plus tracemalloc peak above pre-call baseline, isolated added operations; includes temporary JSON/key/pack/EMA objects",
+    "limitation": "Python allocation upper measurement for neutral exercised paths; not whole-process RSS/native-stack bound"
+  }
+}

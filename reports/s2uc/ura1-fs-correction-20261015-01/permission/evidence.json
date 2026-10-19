@@ -1,0 +1,38 @@
+{
+  "mode": "permission",
+  "status": "PASS",
+  "terminal": {
+    "active_case": null,
+    "cleanup": "UNCONFIRMED",
+    "completed_cases": [],
+    "first_failure": "InventoryError:stat:C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\ura1-fs-correction-20261015-01\\permission\\data\\neutral.txt:[Errno 13] NEUTRAL_PERMISSION_DENIED: 'C:\\\\Users\\\\TV\\\\Documents\\\\MCM_FIELD_ORGANISM\\\\workspace\\\\reports\\\\s2uc\\\\ura1-fs-correction-20261015-01\\\\permission\\\\data\\\\neutral.txt'",
+    "followup_failures": [],
+    "retry_allowed": false,
+    "seconds": 0.1793902000063099,
+    "status": "TECHNICAL_ABORT",
+    "worker_ended": true,
+    "worker_started": true,
+    "worker_exitcode": 1,
+    "first_diagnostic": {
+      "phase": "monitor",
+      "operation": "stat",
+      "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\ura1-fs-correction-20261015-01\\permission\\data\\neutral.txt",
+      "exception": "InventoryError:stat:C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\ura1-fs-correction-20261015-01\\permission\\data\\neutral.txt:[Errno 13] NEUTRAL_PERMISSION_DENIED: 'C:\\\\Users\\\\TV\\\\Documents\\\\MCM_FIELD_ORGANISM\\\\workspace\\\\reports\\\\s2uc\\\\ura1-fs-correction-20261015-01\\\\permission\\\\data\\\\neutral.txt'",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\_s2uc_ura1_fs_accounting_v4.py\", line 56, in walk\n    info=stat_fn(path) if stat_fn else path.stat(follow_symlinks=False)\n         ~~~~~~~^^^^^^\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\s2uc_ura1_fs_revision_probe.py\", line 53, in stat_fn\n    if mode=='permission':raise PermissionError(13,'NEUTRAL_PERMISSION_DENIED',str(path))\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nPermissionError: [Errno 13] NEUTRAL_PERMISSION_DENIED: 'C:\\\\Users\\\\TV\\\\Documents\\\\MCM_FIELD_ORGANISM\\\\workspace\\\\reports\\\\s2uc\\\\ura1-fs-correction-20261015-01\\\\permission\\\\data\\\\neutral.txt'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\_s2uc_ura1_fs_accounting_v4.py\", line 175, in supervise\n    ledger.check();time.sleep(.01)\n    ~~~~~~~~~~~~^^\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\s2uc_ura1_fs_revision_probe.py\", line 64, in check\n    result=super().check()\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\_s2uc_ura1_fs_accounting_v4.py\", line 124, in check\n    s=inventory(self.folder,hook=self.hook,stat_fn=self.stat_fn,deadline=self.started+self.limits['total_seconds']-TIME_RESERVE)\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\_s2uc_ura1_fs_accounting_v4.py\", line 69, in inventory\n    walk(folder)\n    ~~~~^^^^^^^^\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\_s2uc_ura1_fs_accounting_v4.py\", line 60, in walk\n    raise InventoryError('stat',path,exc) from exc\ntools._s2uc_ura1_fs_accounting_v4.InventoryError: stat:C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\ura1-fs-correction-20261015-01\\permission\\data\\neutral.txt:[Errno 13] NEUTRAL_PERMISSION_DENIED: 'C:\\\\Users\\\\TV\\\\Documents\\\\MCM_FIELD_ORGANISM\\\\workspace\\\\reports\\\\s2uc\\\\ura1-fs-correction-20261015-01\\\\permission\\\\data\\\\neutral.txt'\n"
+    },
+    "partial_files": [],
+    "file_cleanup_confirmed": true
+  },
+  "accepted_inventory": null,
+  "handshake_steps": 0,
+  "job": {
+    "limit_bytes": 536870912,
+    "peak_job_committed_bytes": 28065792,
+    "peak_process_committed_bytes": 14049280,
+    "hard_job_limit": true,
+    "members": "supervisor and inherited worker",
+    "measurement": "Windows JobObjectExtendedLimitInformation",
+    "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap."
+  },
+  "neutral_post_probe_removals": []
+}

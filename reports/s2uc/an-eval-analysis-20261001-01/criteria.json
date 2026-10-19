@@ -1,0 +1,9 @@
+{
+  "status": "SYNTHETIC_PCM_NJ_CRITERIA_MET",
+  "additional_wrong": [],
+  "gain_R1_R2": 2,
+  "lost_exact": [],
+  "signal_lost_exact": [],
+  "lost_correct": [],
+  "scope": "controlled synthetic PCM/receptor/NJ only; no general natural recognition or harmless continuation claim"
+}

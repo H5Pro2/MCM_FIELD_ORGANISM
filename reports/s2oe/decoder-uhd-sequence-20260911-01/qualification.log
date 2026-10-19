@@ -1,0 +1,11 @@
+test_code_and_integrity (test_s2oe_uhd_profile.ProfileTests.test_code_and_integrity) ... ok
+test_factory_and_active_limit_failure (test_s2oe_uhd_profile.ProfileTests.test_factory_and_active_limit_failure) ... ok
+test_false_process_and_job_limits_independently (test_s2oe_uhd_profile.ProfileTests.test_false_process_and_job_limits_independently) ... ok
+test_immutable_profile_and_default (test_s2oe_uhd_profile.ProfileTests.test_immutable_profile_and_default) ... ok
+test_other_configuration_rejected (test_s2oe_uhd_profile.ProfileTests.test_other_configuration_rejected) ... ok
+test_source_and_run_separation (test_s2oe_uhd_profile.ProfileTests.test_source_and_run_separation) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.011s
+
+OK

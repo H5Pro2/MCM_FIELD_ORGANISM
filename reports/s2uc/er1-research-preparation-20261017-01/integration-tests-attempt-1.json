@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "tests": 11,
+  "ids": [
+    "tests.test_s2uc_er1_research_entry.ER1Entry.test_01_research_sources_denied_without_permit",
+    "tests.test_s2uc_er1_research_entry.ER1Entry.test_02_invalid_authorization_has_no_start_effect",
+    "tests.test_s2uc_er1_research_entry.ER1Entry.test_03_exact_authorization_content",
+    "tests.test_s2uc_er1_research_entry.ER1Entry.test_04_consuming_marker_exclusive_no_retry",
+    "tests.test_s2uc_er1_research_entry.ER1Entry.test_05_neutral_recipe_matches_existing",
+    "tests.test_s2uc_er1_research_entry.ER1Entry.test_06_case_receipt_only_after_success",
+    "tests.test_s2uc_er1_research_entry.ER1Entry.test_07_full_statistics_and_mechanism_conjunction",
+    "tests.test_s2uc_er1_research_entry.ER1Entry.test_08_incomplete_or_extra_policy_execution_no_verdict",
+    "tests.test_s2uc_er1_research_entry.ER1Entry.test_09_real_integration_receipts_and_budget_closure",
+    "tests.test_s2uc_er1_research_entry.ER1Entry.test_10_archive_tamper_and_source_reference_rejected",
+    "tests.test_s2uc_er1_research_entry.ER1Entry.test_11_binding_scope_coverage_and_hashes"
+  ],
+  "failures": [],
+  "errors": [],
+  "seconds": 7.911095799994655,
+  "job": {
+    "limit_bytes": 536870912,
+    "peak_job_committed_bytes": 39292928,
+    "peak_process_committed_bytes": 39292928,
+    "hard_job_limit": true,
+    "members": "supervisor and inherited worker",
+    "measurement": "Windows JobObjectExtendedLimitInformation",
+    "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap."
+  },
+  "research_authorization_created": false,
+  "research_sources_created": false,
+  "full_policy_cases_executed": 0
+}

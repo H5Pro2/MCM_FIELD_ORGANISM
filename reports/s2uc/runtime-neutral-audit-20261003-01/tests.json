@@ -1,0 +1,15 @@
+{
+  "ids": [
+    "tests.test_s2uc_runtime_audit.AuditTests.test_D01_fixed_neutral_matrix",
+    "tests.test_s2uc_runtime_audit.AuditTests.test_D02_nested_exclusive_clocks",
+    "tests.test_s2uc_runtime_audit.AuditTests.test_D03_semantic_projection_keeps_all_functional_fields",
+    "tests.test_s2uc_runtime_audit.AuditTests.test_D04_trace_off_is_local_diagnostic",
+    "tests.test_s2uc_runtime_audit.AuditTests.test_D05_watchdog_separate_events"
+  ],
+  "count": 5,
+  "success": true,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "output": "test_D01_fixed_neutral_matrix (tests.test_s2uc_runtime_audit.AuditTests.test_D01_fixed_neutral_matrix) ... ok\ntest_D02_nested_exclusive_clocks (tests.test_s2uc_runtime_audit.AuditTests.test_D02_nested_exclusive_clocks) ... ok\ntest_D03_semantic_projection_keeps_all_functional_fields (tests.test_s2uc_runtime_audit.AuditTests.test_D03_semantic_projection_keeps_all_functional_fields) ... ok\ntest_D04_trace_off_is_local_diagnostic (tests.test_s2uc_runtime_audit.AuditTests.test_D04_trace_off_is_local_diagnostic) ... ok\ntest_D05_watchdog_separate_events (tests.test_s2uc_runtime_audit.AuditTests.test_D05_watchdog_separate_events) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 2.118s\n\nOK\n"
+}

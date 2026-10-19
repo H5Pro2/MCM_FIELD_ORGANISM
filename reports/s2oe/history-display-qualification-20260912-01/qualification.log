@@ -1,0 +1,21 @@
+BROWSER_OK desktop/mobile; independent fixture expectations; no network/media/start
+test_01_assignment (tests.test_s2oe_history_view.DisplayChecks.test_01_assignment) ... ok
+test_02_ambiguity (tests.test_s2oe_history_view.DisplayChecks.test_02_ambiguity) ... ok
+test_03_missing_positions (tests.test_s2oe_history_view.DisplayChecks.test_03_missing_positions) ... ok
+test_04_replacement (tests.test_s2oe_history_view.DisplayChecks.test_04_replacement) ... ok
+test_05_run_reference (tests.test_s2oe_history_view.DisplayChecks.test_05_run_reference) ... ok
+test_06_event_reference (tests.test_s2oe_history_view.DisplayChecks.test_06_event_reference) ... ok
+test_07_scan_reference (tests.test_s2oe_history_view.DisplayChecks.test_07_scan_reference) ... ok
+test_08_generation_reference (tests.test_s2oe_history_view.DisplayChecks.test_08_generation_reference) ... ok
+test_09_detached (tests.test_s2oe_history_view.DisplayChecks.test_09_detached) ... ok
+test_10_file_pins (tests.test_s2oe_history_view.DisplayChecks.test_10_file_pins) ... ok
+test_11_missing_scan (tests.test_s2oe_history_view.DisplayChecks.test_11_missing_scan) ... ok
+test_12_browser (tests.test_s2oe_history_view.DisplayChecks.test_12_browser) ... ok
+test_13_audio_binding (tests.test_s2oe_history_view.DisplayChecks.test_13_audio_binding) ... ok
+test_14_output_limit (tests.test_s2oe_history_view.DisplayChecks.test_14_output_limit) ... ok
+test_15_hypothesis (tests.test_s2oe_history_view.DisplayChecks.test_15_hypothesis) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 6.544s
+
+OK

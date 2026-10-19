@@ -1,0 +1,112 @@
+MCM S2UC -- Faktorfortsetzung: Implementierung und neutrale Qualifikation
+2026-10-01
+
+ERGEBNIS
+34/34 Tests PASS auf abschliessend gebundenem Code: Q1-Q10 plus24 bestehende
+Regressionen. Keine Fehler oder Skips. FC-DEV und FC-EVAL bleiben unproduziert.
+Kein positiver mittlerer Leistungsnutzen wird aus diesen neutralen Tests abgeleitet.
+
+IMPLEMENTIERUNG
+tools/_s2uc_continuation_adapter.py:
+Standard legacy_v1; factor_scaled_v1 nur explizit im Konstruktor. Policy ist
+ueber regulaere Attributzuweisung/-loeschung weder vor noch nach Aufnahme oder
+Abschluss umstellbar. Dies ist eine API-Invariante, kein Schutz gegen Eingriffe
+in Python-Interna durch beliebigen fremden Code.
+Ein Match plus ein Faktor liefert gespeicherten Nachfolger*f. Faktor1 bleibt
+der bisherige Zweig. Mehrdeutigkeit, fehlende Nachfolger und numerische Grenzen
+haben explizite Enthaltungsstatus; defekte interne Referenzen schliessen den
+Adapter. Bestehende Provenienz und PredictionReceipt bleiben unveraendert.
+Numerische Vorpruefung skalar ueber alle48 Komponenten; OVERFLOW vor UNDERFLOW
+vor INEXACT. Neu skalierte subnormale Resultate werden konservativ abgelehnt,
+auch wenn exakt darstellbar. Keine Klemmung, Rundungstoleranz oder Rueckspeisung.
+Faktor1 akzeptiert weiterhin zuvor zulaessige subnormale Werte. Nullvorzeichen,
+negative Werte und endliche Prognosen>1 werden nicht korrigiert.
+
+tools/_s2uc_origin_judge.py:
+Replay erhaelt optionale Policy und optionalen Ressourcenobserver; Standard
+bleibt Legacy. Labels bleiben ausserhalb Replay. Kein Eingriff in Matching,
+Speicheraufnahme, Bestaetigung oder Auffrischung. Deren Dateihashes gegen den
+Vorzustand unveraendert (unchanged-before.json und tests.json).
+
+tools/_s2uc_factor_continuation_compare.py:
+Getrennter Observer vergleicht neue Policy, Legacy und Persistenz auf denselben
+Zielen. Beide Policies separat leer gestartet. Nach jedem Frame gleiche
+Speicherzustaende, gleiche Matchingreceipts und gleiche Aufnahmeordinale.
+Herkunft und Abdeckung separat; gepaarte Vergleiche nur gemeinsame Zielmasken,
+leere Schnittmenge undefiniert. Festes Kontext-sonst-Persistenz-Schema auf
+allen Pruefzielen. Alle Schaeden gegen Persistenz und Legacy explizit erhalten.
+Lernzielindices und Lernziel-MAE separat; vollstaendige technische Receipts
+bleiben fuer beide Policies verfuegbar. Kein Fallback im Produkt hinzugefuegt.
+
+KONKRETE PRUEFBELEGE
+tests/test_s2uc_factor_continuation.py, zehn Testmethoden Q1-Q10:
+Q1 Faktorrichtung0.5/1/2; Standard und unveraenderliche Policy.
+Q2 Fuenf Geschichten exakt gegen eingefrorenen alten Adapter verglichen:
+   Wiederholung, Gain, fehlender Nachfolger, Konkurrenz, Nullhinweise.
+   Zusaetzlich Faktor1-Ergebnisse beider Policies vollstaendig gleich.
+Q3 Konkurrierende Herkunft und mehrere Offsets derselben Spur bleiben mehrdeutig.
+Q4 Nullhinweis mit einem Ort/mehreren Faktoren sowie mehreren Orten unterschieden.
+Q5 Kein Match, fehlender Nachfolger, ungueltige Faktoren/defekte Quelle;
+   geschlossener Fehlerpfad ohne verbleibende Ausgabe.
+Q6 Ueberlauf, exakt subnormales Ergebnis, Rundung auf0, Rueckskalierung aus
+   subnormal nach normal, Faktor1-subnormal, +/-0, negative und >1-Werte,
+   kanalunabhaengige Fehlerprioritaet. INEXACT nur mit expliziter Injektion
+   geprueft: normale binary64-Zweierpotenzskalierung ist nach den vorherigen
+   Ablehnungen exakt; kein natuerlicher INEXACT-Befund behauptet.
+Q7 Gleiche Hinweise vor verschiedenen Zielen liefern gleiche Prognosen und
+   Vorzustaende. Zugriffsgate stoppt vor drittem Iteratorabruf ohne Prognose.
+Q8 candidate/retained-Rollen, identische Zustands-/Matchingfolgen beider Policies,
+   auch bei skalierter Wiederaufnahme. Jede Aufnahme genau einmal.
+Q9 Erfolg und numerische Enthaltung, Fehlziel, Restabschluss und Ressourcen.
+Q10 Dreiarmiger Observer, gemeinsame Masken/Nullabdeckung, getrennte Lernziele,
+    Labelwechsel ohne Systemaenderung und erhaltener Persistenz-Schadensfall.
+
+Zusaetzlich:7 ContinuationAdapter-,11 Herkunftspruefer- und6 PairContextAdapter-
+Tests PASS. Vollstaendige Test-IDs/Ergebnisse in tests.txt und tests.json.
+Ein erster Entwicklungsdurchlauf hatte einen Fehler im eingefrorenen
+Legacy-Test: neuer Consumer lehnte den separat geladenen alten Receipt-Typ ab.
+Der Vergleich nutzt nun auch den originalen Consumer. Keine Produktregel wurde
+zur Behebung angepasst. Abschliessende34 Tests bestanden auf unveraendertem Code.
+
+NEUTRALER SCHADENSBELEG
+Keine geplanten Familien erzeugt. Handgesetzte neutrale48er-Konstantvektoren
+mit Basiswerten1,3,7,11 und eigenem Testprofil. GP: halbe Hinweise0.5/1.5,
+tatsaechlicher Folgeframe1.5. Persistenz und Legacy-Fallback: MAE0;
+skalierte Fortsetzung3.5: MAE2, Delta gegen beide=-2.
+Der negative Fall bleibt in harms_against_persistence und harms_against_legacy.
+FH,GP,F1 dienen ausschliesslich technischen Observerchecks; keine neue Evaluation.
+
+RESSOURCEN UND KAUSALITAET
+Instrumentierter neutraler Skalierungsfall: Peak8 Frames,2 publizierte
+Ausgabeslots, gemessener gemeinsamer Peak9, Output-Pythonbytes3642.
+Tuple-Builder zusaetzlich ab erstem Generator-Yield als ein transienter Vektorslot
+gezählt; maximal48 Komponenten plus vorhandener Persistenzslot =2 Ausgabeslots.
+Konservative kombinierte Obergrenze8+2=10, unter bestehender Grenze20.
+Keine temporaere48er-Liste, keine zweite skalierte Vektorkopie; Builderzaehler
+am Ende0. C-interner Tupelbau wird ueber Generator-Yields bilanziert, nicht als
+gemessener Gesamtprozess-RAM ausgegeben. Der Observer speichert keine Skalierungswerte.
+Die Messung belegt diesen technischen Fall; bestehende Framebudgetchecks und
+gezielte Konkurrenz-/Fehlerpruefungen bleiben aktiv. Kein harter Prozess-RAM-Beleg.
+Prognose vor Zielframeabruf und vor Aufnahme des Hinweispaares; Ausgabeslots
+nach Verbrauch, Fehler und Ende frei. Vollstaendige Facts in tests.json.
+
+MASCHINENLESENDER MATERIALPLAN
+docs/S2UC_FAKTORFORTSETZUNG_MATERIALPLAN_20261001.json
+SHA256 908f93c76f871d36c4f971b236891d3da7721ba1fcd07d772464db90c439121d
+Status PLAN_ONLY_NO_PRODUCTION_AUTHORIZATION; FC-DEV/FC-EVAL PENDING_UNPRODUCED.
+Neue Seeds, direkte dyadische48er-Vektorrezeptur, Genealogie, elf Faelle,
+Faktoren, Ziele, numerische Regeln und dreiarmige Auswertung festgelegt.
+Je Policy/Familie129 Aufnahmen,11 Pruefziele,48 Lernziele; Rollenprobe separat.
+Code-/Test-/Vertrag-/Laufzeitbindungen vor Abschlusstests gespeichert und danach
+unveraendert bestaetigt. Der Plan bindet den heutigen Adapter/Observer, keinen
+noch nicht implementierten Produktionsgenerator. Vor spaeterer Produktion muss
+auch dieser mit Exportpfad neutral qualifiziert und konkret gebunden werden.
+Keine Daten aus frueherer Evaluation als neue unberuehrte Pruefung ausgeben.
+Direkte Vektorerzeugung prueft die Adapterregel, keine Robustheit von Audio/NJ.
+
+NAECHSTER VORSCHLAG AN PROJEKTLEITER
+Implementierung im dokumentierten Umfang abnehmen. Als naechstes den begrenzten
+Generator-/Exportpfad fuer den gebundenen Plan implementieren und ausschliesslich
+mit einer separaten neutralen Konfiguration qualifizieren. Danach die einmalige
+FC-DEV-Produktion separat beauftragen; FC-EVAL bis zur eingefrorenen Abnahme
+geschlossen halten. Keine jetzige Materialproduktion oder Matchingweiterentwicklung.

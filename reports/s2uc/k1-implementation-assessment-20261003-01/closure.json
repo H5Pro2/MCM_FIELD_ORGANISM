@@ -1,0 +1,21 @@
+{
+  "status": "IMPLEMENTATION_PACKAGE_SEALED_COMPARISON_START_INCOMPLETE",
+  "sealed_on": "2026-10-04",
+  "binding_file": "docs/S2UC_K1_IMPLEMENTIERUNGSBINDUNG_20261003.json",
+  "binding_sha256": "3d5e615468f23d70c49709dc9855a6ac89eff45f9f67b72e88a4e1b413284be4",
+  "files": {
+    "REPORT.md": {
+      "sha256": "c5eae52b5469a7c188351d31c323fea80840ac7087553042ad8955b5733afbea",
+      "bytes": 7153
+    },
+    "verification.json": {
+      "sha256": "672d27d18e63d078c0e484625319673a14896b5d9c0b5ca9ab57f30a6ecc63d8",
+      "bytes": 2457
+    }
+  },
+  "overview_sha256": {
+    "README.md": "841aa0b0db59a225f7b4b290818cd8dde18b2a214d56556c6e8eb05749cba1fa",
+    "AKTUELLER_FORSCHUNGSWEG.md": "4f485f0c55e6968cc46bc8ff3cd079a6034bb45b94278477c061cf73caccb167"
+  },
+  "comparison_executed": false
+}

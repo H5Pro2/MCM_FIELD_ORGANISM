@@ -1,0 +1,50 @@
+{
+  "overviews": {
+    "AKTUELLER_FORSCHUNGSWEG.md": {
+      "current": {
+        "bytes": 1546463,
+        "sha256": "6df46ce1040439a7a8968de8943c7bd4326138f4f756495d324485eee01a1941"
+      },
+      "previous": {
+        "bytes": 1545291,
+        "sha256": "f5c34d4cf9879e39896ba2456dc3cf07456d4b7baad3f0d185ab141e9dc51832"
+      },
+      "snapshot": "historical-overviews/AKTUELLER_FORSCHUNGSWEG.md.gz",
+      "snapshot_info": {
+        "bytes": 473202,
+        "sha256": "47abd73412303e25b806d5439007aff37443adc701b2e350482ca8377c1e0c8c"
+      }
+    },
+    "README.md": {
+      "current": {
+        "bytes": 188652,
+        "sha256": "7926ca891d09c9784b4c5a88845e5ac535437ce05af4f27ebcb6c60c926ec2a8"
+      },
+      "previous": {
+        "bytes": 187480,
+        "sha256": "3d55020d4c26693727f435ecbeb6041026ff4042ea663f0b404712e96125102e"
+      },
+      "snapshot": "historical-overviews/README.md.gz",
+      "snapshot_info": {
+        "bytes": 57778,
+        "sha256": "a9216df7e786acbd8c5dbb550c524a1fa4abb38837c7b1638ec7a24f11e609e9"
+      }
+    },
+    "docs/README.md": {
+      "current": {
+        "bytes": 286501,
+        "sha256": "eefabe51210168c5ae9e21480d80d3359aece71cf12b41f337a5688bcc376c3a"
+      },
+      "previous": {
+        "bytes": 285329,
+        "sha256": "c1623c27580c5547a7d25df79b5169411f3fe8fa64a2ed995fd07f828720cb05"
+      },
+      "snapshot": "historical-overviews/docs/README.md.gz",
+      "snapshot_info": {
+        "bytes": 88914,
+        "sha256": "068de0122c4113ed5c4bb36b29e766ad4283dd238b129f1ee8aa95bd2bfd69e9"
+      }
+    }
+  },
+  "prior": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\as480-diagnosis-20261019-01\\preservation.json"
+}

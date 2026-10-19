@@ -1,0 +1,15 @@
+{
+  "version": "s2uc.factor-material.production-binding.v1",
+  "status": "BOUND_NOT_AUTHORIZED",
+  "plan_path": "reports/s2uc/factor-material-qualification-20261001-01/test_G3_output_limit_reserved_closure-utd442aa/neutral-plan.json",
+  "plan_sha256": "262002a24732d15ba452b44ebd0afb2bb591ff6d92079eccd84a3da195615c9b",
+  "contract_path": "docs/S2UC_FAKTORFORTSETZUNG_AENDERUNGS_PRUEFVERTRAG_20260930.txt",
+  "code": {
+    "tools/s2uc_factor_material.py": "186d327583a6463d7f55ba0a036b6c483e0ee61519439769528f51284c3420a8",
+    "tools/s2uc_factor_material_compare.py": "5747203a2e095e2a386b9e7521aa89e24f622ac204fcaaa8301b3cddd246f8b2",
+    "tools/_s2uc_bounded_audio.py": "d71cab9b5daef66710316084939e6d39d14d16bc32306f41dbd605f3be7c2519",
+    "tests/test_s2uc_factor_material.py": "dfdf00e64df2c1143fb28f2d157b1a502e0ee73cecf5f0e463b97cee10018eb7"
+  },
+  "preservation": "Original material plan unchanged; extension binds producer/export/reader/bridge and tests. No production authorization.",
+  "runtime": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]"
+}

@@ -1,0 +1,15 @@
+{
+  "measurement": false,
+  "basis_frames": 64,
+  "target_frames": 1024,
+  "factor": 16,
+  "estimates": {
+    "Falllaufzeit Sekunden (ungef\u00e4hr)": 887.2,
+    "Dekomprimiertes Archivformat Byte": 5439840,
+    "Dictionarybytes": 5394048,
+    "gzip Byte": 375856,
+    "Knoten": 43184,
+    "Kanten": 223680,
+    "Recordindizes": 31072
+  }
+}

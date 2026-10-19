@@ -1,0 +1,26 @@
+Administrativer Einstieg V3; fachliche T1-V2-Quelle/Policy/Auswertung unveraendert.
+Arbeitsverzeichnis C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace.
+
+Einmalige administrative Vorbereitung und neutrale Startqualifikation:
+C:/Python314/python.exe -m tools.s2uc_t1_start_v3 prepare
+C:/Python314/python.exe -m tools.s2uc_t1_start_v3 qualify
+Diese prueft keine Policies und erzeugt keine T1-Quellen.
+
+Operativer Aufruf erst nach neuer separater Einmallauffreigabe:
+C:/Python314/python.exe -m tools.s2uc_t1_start_v3 run --authorization <separate-Datei>
+Vorlage S2UC_T1_START_V3_AUTORISIERUNG_VORLAGE_20261003.json bleibt PENDING.
+Erst bei Freigabe in einer separaten Datei ausschliesslich status auf AUTHORIZED_ONCE setzen.
+Neues exklusives Ziel reports/s2uc/t1-transfer-20261003-02. Keine Wiederaufnahme.
+
+Kein zusaetzlicher launch_once-Wrapper. run validiert Bindungen, Qualifikation,
+Autorisierung und Budget, dann ruft es direkt den neutral geprueften launch-Pfad auf.
+Exakte Serialisierung von Claim und Bilanz vor Reservierung. Claim <=1024 Byte:
+Status, Bilanzdateiname, SHA256. Autorisierung und Budgetdaten in separater Bilanz.
+Vorbelastung: gebundene Vorbereitung, beide bisherigen Dossiers, neue administrative
+Qualifikation und Autorisierungsdatei; zusaetzlich524288 Byte fuer externen Abschluss.
+Gemeinsames Budget64MiB einschliesslich1MiB Abschlussreserve; Vorbereitung8MiB.
+Worker3540s, Abschluss60s, gesamt3600s. Sonstige fachliche Grenzen unveraendert.
+Fehler nach eigener erfolgreicher Reservierung erhalten closure.json auch ohne
+Worker. Fremde/bereits bestehende Ziele werden nicht beschrieben.
+Ein anhaltender Dateisystemausfall kann auch den terminalen Schreibvorgang
+verhindern; dieser Fehler wird propagiert, nicht als gesicherter Abschluss ausgegeben.

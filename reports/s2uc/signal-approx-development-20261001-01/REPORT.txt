@@ -1,0 +1,136 @@
+MCM S2UC -- Signalpruefung plus Naeherungsabruf
+2026-10-01. Technische Implementierung und neutrale Qualifikation.
+
+ERGEBNIS
+12/12 gezielte Tests PASS auf abschliessendem Code, keine Fehler oder Skips.
+Keine Parametersuche, keine Kalibration an Forschungsmaterial, keine Produktion
+von AR-DEV/AR-EVAL. Technischer Funktionsnachweis, kein Robustheitsgewinn.
+
+VERTRAGSPRAEZISIERUNG
+docs/S2UC_NAEHERUNGSABRUF_AENDERUNGS_PRUEFVERTRAG_20261001.txt wurde vor
+Implementierung praezisiert: Signalpruefung betrifft auch den exakten Pfad
+der neuen Policy. Referenz bleibt unveraendert. Verlorene exakte Zuordnungen
+werden gesondert erfasst. Numerisch unbekannte Vergleiche bzw. Signalzulassung
+fuehren zur gesamten numerischen Enthaltung; sie werden nicht uebersprungen.
+
+IMPLEMENTIERUNG
+tools/_s2uc_signal_approx_adapter.py: gesonderter SignalApproxAdapter ueber dem
+unveraenderten ContinuationAdapter. retrieval_policy exact_v1 ist Standard;
+signal_approx_v1 muss im Konstruktor gewaehlt werden. epsilon/tau sind danach
+ueber regulaere Attributzuweisung oder -loeschung unveraenderlich. Kein Schutz
+gegen willkuerliche Eingriffe in Python-Interna behauptet.
+Neue Policy verlangt endliches normales epsilon>0 und endliches tau in[0,0.125].
+Exact-Standard akzeptiert keine unbenutzten Parameter. Fortsetzung weiterhin
+legacy_v1; keine automatische Wahl der experimentellen Faktorfortsetzung.
+
+Signalregel: mittlere Absolutamplitude jedes der beiden Hinweisframes und des
+relevanten gespeicherten Paars strikt groesser epsilon. Exakte Treffer haben
+danach Prioritaet. Nur ohne exakten Treffer folgen maximal9 Paarvergleiche.
+Distanz: L1-Mittel ueber96 Komponenten geteilt durch groessere Paaramplitude.
+Grenze D<=tau inklusiv. Mehrere Treffer bleiben mehrdeutig, kein Ranking.
+Receipt unterscheidet match_quality EXACT/APPROXIMATE von role candidate/retained.
+Ein retained-Naehertreffer wird dadurch nicht exakt. Numerische Abstention und
+Signalverluste stehen in Status/Provenienz, epsilon/tau sind mitgegeben.
+Unverwertbarer Distanzvergleich verwirft auch vorher gefundene Naeherungstreffer.
+
+Bestehende Module fuer exakten Faktorabruf, Aufnahme, Bestaetigung, Auffrischung,
+Fortsetzung und PairContextAdapter unveraendert. Historische Produktionsbindung
+am Ende lesend bestaetigt, kein historischer Versuch erneut ausgefuehrt.
+
+GETRENNTER OBSERVER
+tools/_s2uc_signal_approx_compare.py startet Referenz und neue Policy leer,
+jeweils mit legacy_v1-Fortsetzung. Vor jedem Zielframe Prognose gebunden;
+nach jedem Frame Speicherzustand gegen PairContextAdapter bestaetigt.
+Labels erst nach Replay. Beide Abrufarme haben gleiche Aufnahmeordinale und
+Speicherzustaende; ihre Abrufreceipts duerfen und sollen unterschiedlich sein.
+
+Zusatzbefunde: neue falsche Einzelzuordnung pro Position, verlorene exakte
+Einzelzuordnung, signalbedingter Verlust und verlorene korrekte exakte Zuordnung.
+Keine Verrechnung eines neuen Fehlers mit einem anderswo behobenen Fehler.
+Vorhandener MAE-/Maskenobserver wiederverwendet. Seine technischen Feldnamen
+legacy/scaled werden im Report durch schema_mapping ausdruecklich auf exakten
+Abruf bzw. Signal-/Naeherungsabruf abgebildet. In BEIDEN Armen bleibt die
+Fortsetzung legacy_v1; scaled bedeutet hier keinesfalls factor_scaled_v1.
+Konkrete Prognose, Enthaltung und Kontext-sonst-Persistenz-Beobachterschema
+bleiben getrennt. Lernzielindices/Systemreceipts ausserhalb Primaerbewertung.
+
+TESTBELEGE A1-A12
+A1 Standard/Parametervalidierung und unveraenderliche Konfiguration.
+A2 Vier neutrale Geschichten: Default-Ergebnisse/Receipts/Zustaende exakt
+   identisch mit bestehendem Replay (exakt, gestoert, fehlender Nachfolger, Null).
+A3 epsilon strikt: Gleichheit ablehnen, naechster kleinerer float zulassen;
+   Hinweis- und gespeicherte Kleinsignale sowie Nullpaare geprueft.
+A4 tau inklusiv: Grenzwert trifft, naechster kleinerer float enthaelt sich;
+   Abstand, Matchqualitaet und retained-Rolle getrennt bestaetigt.
+A5 Approx-Konkurrenz, mehrere exakte Herkuenfte und exakte Trefferprioritaet.
+   Distanzfunktion waehrend exakter Zielentscheidung nachweislich nicht benutzt.
+A6 Erster Vergleich trifft, zweiter numerisch unbekannt: gesamter Abruf
+   ABSTAIN_APPROX_NUMERIC, keine scheinbare Eindeutigkeit. Zusaetzlich Signal-
+   Overflow, nichtnormaler Nenner und ungueltige Werte geprueft.
+A7 Naeherung ohne Nachfolger enthaelt sich; candidate bleibt eigene Speicherrolle.
+A8 Aufnahme/Bestaetigung/Auffrischung: volle Zustandsfolgen beider Abrufarme
+   identisch auch bei gestoerter Viereraufnahme. Keine neue Promotion durch Abruf.
+A9 Identische Hinweise vor verschiedenen Zielen liefern identische Prognosen;
+   Gate verhindert Iteratorfortschritt ohne gebundene Prognose.
+A10 Ressourcen/Receipts, normaler Abschluss und Rest, Fehlzielbereinigung.
+A11 Observer markiert neuen Herkunftsfehler, verlorenen korrekten Exakttreffer
+    und Prognoseschaden. Labelwechsel aendert ausschliesslich die Bewertung.
+A12 Maximale9 konkurrierende Paarpositionen; Metadaten-/Receiptgrenzen und
+    fehlende Vektorkopien instrumentiert. Nichtendliche Eingabe schliesst Adapter.
+
+tests.txt enthaelt jede Test-ID; tests.json die Ergebnisse, Ressourcen und
+neutralen Observer-Einzelwerte. Ein frueher Entwicklungsdurchlauf enthielt
+eine zu weit gefasste Testinjektion: Distanz wurde bereits beim Lernen gesperrt.
+Die Injektion ist jetzt auf die exakte Zielentscheidung begrenzt. Kein
+Produktverhalten zur Anpassung an diesen Test veraendert. Abschliessend12 PASS.
+
+RESSOURCEN
+Neutraler Einzelmatch: Framepeak8, Ausgabeslots2, gemeinsamer Peak9;
+Receipt535 UTF8-Byte, gleichzeitig alte/neue Provenienz948 UTF8-Byte.
+Maximale Konkurrenz: Framepeak15, Ausgabeslots1, gemessener gemeinsamer Peak15;
+9 Metadatentreffer, Receipt1856/16384 Byte; gleichzeitige Provenienz3590/32768
+UTF8-Byte bzw.3672 Python-Stringbytes. Keine neue48er-Vektorkopie in Distanz/
+Signalberechnung. Vektoren sind geliehene Frame-Werte; kein Distanzarray.
+Frame/Hinweisgrenze18 und zusammen mit Ausgaben20 eingehalten; Slots freigegeben.
+Pro Abruf maximal9 Vergleiche mit96 Komponenten, skalare Summen via Generator.
+Messung ist Instrumentierung der Python-Daten und festen Mengen, kein harter
+Gesamtprozess-RAM-Nachweis; fsum-interne Implementierung nicht als Framearchiv
+interpretiert. Auch voruebergehend zwei Provenienzstrings sind ausdruecklich
+bilanziert. Observerarchive liegen getrennt von Produktmemory.
+
+NEUTRALE FEHLERBEFUNDE
+Handgesetzte Konstantvektoren und Parameter dienen technischen Fixtures,
+nicht Forschungskalibration. Fixture false erzeugt eine neue falsche Zuordnung:
+admissible_no_new_wrong=false. Fixture loss zeigt eine korrekte exakte
+Zuordnung, die epsilon unterdrueckt. Fixture harm behaelt den Prognoseschaden
+gegen Persistenz und das exakte Beobachterschema. Diese Fehler sind nicht
+ausgeblendet und werden nicht als Nutzen der neuen Policy ausgegeben.
+
+KONKRETER MATERIALPLAN, NOCH UNPRODUZIERT
+docs/S2UC_SIGNAL_NAEHERUNGSABRUF_MATERIALPLAN_20261001.json
+SHA256 40410b187f813cb546e44cca01ac353f85bdc70d4b29e5b0fc057ac3f6feb5fd
+AR-DEV Seeds A/B/C/D:910001/910007/910013/910019;
+Stoerung910031, Kalibration910037, reine Stoerungsquery910043.
+AR-EVAL A/B/C/D:1010001/1010007/1010013/1010019;
+Stoerung1010031, reservierter UNBENUTZTER Kalibrationsseed1010037,
+reine Stoerungsquery1010043. Keine Kalibration auf Evaluation.
+Basis=(257+(xorshift32 draw%768))/4096; D-Anfang von A kopiert; C folgt A im
+synthetischen Quellablauf. R1-Stoeramplitude2^-10, R2 doppelt, R3 gleicher
+Hinweis wie R1. P0-Gain2^-12; N4 komponentenweise A/B-Mitte mit eigener Herkunft.
+Acht reine DEV-Kalibrationsframes mit bipolarer Amplitude2^-10. epsilon spaeter
+maximale Frame-Absolutamplitude, tau spaeter aus festem Gitter. Beide Werte
+stehen jetzt auf null/NOT_RUN, nicht als erforschte Parameter behauptet.
+Elf Faelle je Familie,129 Aufnahmen je Arm,11 Pruefziele/48 Lernziele getrennt.
+Plan bindet Code, Tests, Vertrag und Laufzeit. Generator/Export sind fuer diesen
+Plan noch nicht implementiert oder beauftragt; Produktion braucht weitere Bindung.
+Alle Daten sind direkte Vektoren, kein Audio-/NJ-Robustheitsnachweis.
+
+ABSCHLUSS UND NAECHSTER VORSCHLAG
+final-verification.json bestaetigt aktuelle Bindungen, unveraenderten bisherigen
+Kern, beide fehlenden Materialordner und nicht ausgefuehrte Parametersuche.
+Technische Abnahme dieses Pakets vorschlagen. Danach den kleinen Generator/
+Exportpfad des konkreten Plans separat implementieren und neutral qualifizieren;
+AR-DEV-Produktion und anschliessende feste Parametersuche eigens beauftragen.
+AR-EVAL erst nach Einfrieren der Entwicklungsparameter. Jede zusaetzliche falsche
+Einzelzuordnung auf Evaluation verhindert die Abnahme als verbesserte
+Wiedererkennung, auch bei hoeherer Abdeckung oder kleinerer mittlerer MAE.

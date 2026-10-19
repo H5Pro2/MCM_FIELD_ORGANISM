@@ -1,0 +1,15 @@
+test_01_generation_boundaries_and_json_roundtrip (tests.test_s2uc_er1_stock_structural.Structural.test_01_generation_boundaries_and_json_roundtrip) ... ok
+test_02_insertion_order_and_mixed_unique_types (tests.test_s2uc_er1_stock_structural.Structural.test_02_insertion_order_and_mixed_unique_types) ... ok
+test_03_invalid_generation_keys (tests.test_s2uc_er1_stock_structural.Structural.test_03_invalid_generation_keys) ... ok
+test_04_collision_and_invalid_map_rejected (tests.test_s2uc_er1_stock_structural.Structural.test_04_collision_and_invalid_map_rejected) ... ok
+test_05_missing_extra_and_changed_endmarks (tests.test_s2uc_er1_stock_structural.Structural.test_05_missing_extra_and_changed_endmarks) ... ok
+test_06_originals_order_and_values_still_checked (tests.test_s2uc_er1_stock_structural.Structural.test_06_originals_order_and_values_still_checked) ... ok
+test_07_numeric_values_not_coerced_or_rounded (tests.test_s2uc_er1_stock_structural.Structural.test_07_numeric_values_not_coerced_or_rounded) ... ok
+test_08_nested_observer_stock_and_no_input_mutation (tests.test_s2uc_er1_stock_structural.Structural.test_08_nested_observer_stock_and_no_input_mutation) ... ok
+test_09_upper_bound_and_nonfinite (tests.test_s2uc_er1_stock_structural.Structural.test_09_upper_bound_and_nonfinite) ... ok
+test_10_wire_duplicate_keys_rejected (tests.test_s2uc_er1_stock_structural.Structural.test_10_wire_duplicate_keys_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.007s
+
+OK

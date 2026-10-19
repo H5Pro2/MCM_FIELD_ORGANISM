@@ -1,0 +1,346 @@
+{
+  "files": {
+    "A-0.json": "5720de48b2d4fac3118224525a8b7812e39ec90baaa90629b24cacd98c74941f",
+    "A-1.json": "4c07510942041d8f98f94be0078db5a2b74881850e925fc3a24ea6e079a70ebc",
+    "A-2.json": "76b6e9dcbdc48fbb229296a4f20070b9266b80f468be1d81c638abaa1a9a0ac8",
+    "A-3.json": "f79ff14e98d8be44c416b6a0adc54821027757e875856294eb588c2f109af1f5",
+    "A-pcm.json": "06c2f1bdf36c222cdfd6b80f4ab5e87ee93572053bc08242772e802cb2f1a378",
+    "B-0.json": "63b4faca4cd11847ae62f0d8c0bcd0b0c8463b8b4624b7bd90bce2bae6ca2a68",
+    "B-1.json": "45474f34f6c1ef3cd7ebec7a4d5a28b420b6cb9b0a60329f9391c77c2bc5e335",
+    "B-2.json": "58c52bbb538bba989aaf6a07458171c6c39891773e65e1bc2de6b3988e7545c1",
+    "B-3.json": "afa7b5a735a1e9607cd04a2c31b0e870246936e0fb9b9db7e8d3f6ddb3026e4c",
+    "B-pcm.json": "044ef62f009d763344fd59eaa019a1e538bcc06aa70dba71f1e41bc17626baee",
+    "C-0.json": "a21a3f3c1b253e944c37b05a5ae2a63f717a0bd3dee06ed12c2a6433f1224a88",
+    "C-1.json": "2aaa9c14f001f992dffdbc6ade1a9e277360839f44112fad19adfde758910a25",
+    "C-2.json": "bfc2b08c7a8b2b827a7b50a52e9f7d60331e87f84f2d0cf448d23bb271f11ea2",
+    "C-3.json": "b7f949b07d2937b45799e17fe36277d798d8bf4f5f79993b6e82653c77c9ca03",
+    "C-pcm.json": "571c3ca6881cdee4cb51aa1879c5fe07d7dba6f0dc385260e8d9aeb4f284bc74",
+    "D-0.json": "5720de48b2d4fac3118224525a8b7812e39ec90baaa90629b24cacd98c74941f",
+    "D-1.json": "4c07510942041d8f98f94be0078db5a2b74881850e925fc3a24ea6e079a70ebc",
+    "D-2.json": "8bcf4a5a0ed9d46415dc1a80b73c23f5a28ffd65e807c3c0a80a288fcd1701ba",
+    "D-3.json": "4327a462130b40d02d2c22b13b612c4a1f614be8b8a6125a6c13f866cace78b7",
+    "D-pcm.json": "15ea30c61eff98ddb06b466447a1fcbeb1ee691786369486baa25ce66e0f1bdf",
+    "N1-0.json": "63b4faca4cd11847ae62f0d8c0bcd0b0c8463b8b4624b7bd90bce2bae6ca2a68",
+    "N1-1.json": "45474f34f6c1ef3cd7ebec7a4d5a28b420b6cb9b0a60329f9391c77c2bc5e335",
+    "N1-2.json": "58c52bbb538bba989aaf6a07458171c6c39891773e65e1bc2de6b3988e7545c1",
+    "N1-pcm.json": "62617be992df21a2bda2b3dabd04e2334973edf11519594d04e90809799243a7",
+    "N2-0.json": "4e162e62914fc73f9bbdd9a9d3b6ef173eb48351f52c3c1514d41a2ddf2c994c",
+    "N2-1.json": "19e6d77d42ebef396e76564a421147eaed725bdb9503d213aa6f49fcc116d650",
+    "N2-2.json": "a12bf5a1ea55f6104de4438fdf67b9ae08a4a3bfb50b40da70b5b331a25e9c89",
+    "N2-pcm.json": "d4eeab880ca75f3e1579d7e235bcc746b92d7863ff4cc23165003defb3801e06",
+    "N3-0.json": "5720de48b2d4fac3118224525a8b7812e39ec90baaa90629b24cacd98c74941f",
+    "N3-1.json": "4c07510942041d8f98f94be0078db5a2b74881850e925fc3a24ea6e079a70ebc",
+    "N3-2.json": "8bcf4a5a0ed9d46415dc1a80b73c23f5a28ffd65e807c3c0a80a288fcd1701ba",
+    "N3-pcm.json": "cb27aaaa9c43962cc3922a91b65a33d66638c0f749eb6ec61965607d5b15f78b",
+    "N4-0.json": "36cf95ac5c026c18e91fe032a15c8fb1ec2b16dec7ee027ac83fac1bf3f7f1bd",
+    "N4-1.json": "47c9cbadcae5c00a80a50864e394e836d3af3a843ab84afa819f3464e056354a",
+    "N4-2.json": "3231e7b2b773f16f31a59aa28601e24b6b833d15790bd76b7843e9742a11ef08",
+    "N4-pcm.json": "aad66a075c8c5bc6ee32a35881b4bcb406ee957ee4ccfcc279d8c3eff2d5f80c",
+    "P0-0.json": "93a50b123adc76f832746eee3602f3246eeebe374c5698fc36f75c458ab9b101",
+    "P0-1.json": "7340b3bc356f6b9ebaa3ee72524d8eba95cf51539a03419afc602073cf97ae65",
+    "P0-2.json": "cc91f469e94d167df32e6b734057f6a9fbe78d87d70f64849b506460efd69051",
+    "P0-pcm.json": "6dcb97052863ab07ad39bd5aae550ad2062ba3536e388e122b647b460441cf59",
+    "R0-0.json": "5720de48b2d4fac3118224525a8b7812e39ec90baaa90629b24cacd98c74941f",
+    "R0-1.json": "4c07510942041d8f98f94be0078db5a2b74881850e925fc3a24ea6e079a70ebc",
+    "R0-2.json": "76b6e9dcbdc48fbb229296a4f20070b9266b80f468be1d81c638abaa1a9a0ac8",
+    "R0-pcm.json": "c5d2e5bb09f7dd73d15d537151684df2f8a7bbd634077205845e93cbbc743af6",
+    "R1-0.json": "9cfd4f4b1ff2588e52c6a05403ce133a7f7e3cb0e520e4949ca5f0a6861cbe32",
+    "R1-1.json": "08fefe5d8a6a099411eda90b28c18f43d42ee7c118f875f5e8ead1634b5820bb",
+    "R1-2.json": "76b6e9dcbdc48fbb229296a4f20070b9266b80f468be1d81c638abaa1a9a0ac8",
+    "R1-pcm.json": "f879d649403ddb3a06f1ef6092edb4080dcf0d757b96bbaa9a6a1d9cff1f9e02",
+    "R2-0.json": "c6b6f3d9d21ce9cca5f231dd1e46ec5676ecca33804dfc53487f2a680458f04f",
+    "R2-1.json": "ac58823589fba0754ffe7e4d1405e84dd8e3c237844e6b9a6ab42fa17ddb40da",
+    "R2-2.json": "76b6e9dcbdc48fbb229296a4f20070b9266b80f468be1d81c638abaa1a9a0ac8",
+    "R2-pcm.json": "dc20a360765add72bbabd5d79ae2a55919fd82905bb074a58f5035caa59795bf",
+    "R3-0.json": "9cfd4f4b1ff2588e52c6a05403ce133a7f7e3cb0e520e4949ca5f0a6861cbe32",
+    "R3-1.json": "08fefe5d8a6a099411eda90b28c18f43d42ee7c118f875f5e8ead1634b5820bb",
+    "R3-2.json": "49fa695759cd06d93eb3494c3e1d84723b614925150d6bdfb81424aee75ff979",
+    "R3-pcm.json": "8b150b7912bf7a404b70eafd8e4d77ba7eb4ad79ea1245da2ce2f09ad10e6014",
+    "Z0-0.json": "2d40e98323a362b124e039ab90855ffff3be8f72553e976a5ed42b9a018eb8ce",
+    "Z0-1.json": "0fdf4f532a6c7567d02742390d3cb4863ddc1c42984ade46dd989941519ef74f",
+    "Z0-2.json": "ff599d8854c7522b2b1d0019acf63dfab00243d34343fab804c2543e86ad4062",
+    "Z0-pcm.json": "21694c460f54360ed6a49b56d3955f01a33f6199418895ce259c76d6dab2d42a",
+    "Z1-0.json": "90f3e0eff79218507135241760a179dabea92b9d8b44ed8510b66376f9ce6e07",
+    "Z1-1.json": "167052c5097b8b2a5d5e1acef63b66d13f6c0fbc0c0d53e14e8bd769d239456a",
+    "Z1-2.json": "5479e933d470526767fd9c90ae7efe5e4b39f9393626be7eab1f3ed2210d521c",
+    "Z1-pcm.json": "99cdd59abfc6c5b37db44c8d95952fa46e822a3e9dc40dad04915e022d9dc873",
+    "calibration-0.json": "4a101dc47c99a8ae8dbdab4e8f813f932bd1719f924c210d0a7f0847fc9f2a68",
+    "calibration-1.json": "e5ffc50330088143d255068f8d38e1624078671c5bacec362b57960ad6ca6770",
+    "calibration-2.json": "7a33dbed9d8f1dc62b2c9af066bb7ff8248c64a89727f58e7f444e6db227fd55",
+    "calibration-3.json": "f554bf6d6a11d59f50950ee711f62393cc6f1ee58c893594abf2100ac1f18d8e",
+    "calibration-4.json": "87909d5e33890a24e9415ac497b59731f0b977843ceffec80a14e341d0759a22",
+    "calibration-5.json": "53cde61517ffd61d1bdc91de0fe59e35c43aae18a49e4c43832c3f035735d28e",
+    "calibration-6.json": "cd0d08cd621f5db1598975b7daf4c30f55fa0ecd4b003ecb546b860ea45b7d8d",
+    "calibration-7.json": "5360f6121237014a9362ade6d431b45aa7285b9269dfcc75ba9755465d0499f1",
+    "calibration-pcm.json": "1b709b8f71f23d6983f4539953a423add364756b9782749f7e38e1c2274b81b2",
+    "claim.json": "090a87039c4e2eb6d3b12d89248c822e055896262078f75974bb5ca35bc26166"
+  },
+  "partition": "NEUTRAL-DEV",
+  "profile": {
+    "factor_hex": "0x1.0000000000000p-1",
+    "geometry_id": "auditory.log48.50-18000.w4800.h480.half.v1",
+    "max_output_bytes": 16384,
+    "operation": "binary64-multiply-once-after-raw-reduction",
+    "output_domain": "finite-0-through-1-inclusive",
+    "profile_id": "s2nj.auditory.hann48.output-half.v1",
+    "raw_profile_digest": "5c6b2b19281a44023497b435a96b1051905af4bbac493cae7e699ea1320392c7",
+    "rounding": "qualified-binary64-nearest-even",
+    "subnormal_policy": "preserve-native-rounded-result-report-underflow-no-flush-or-clamp"
+  },
+  "profile_digest": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+  "spec": {
+    "calibration": {
+      "amplitudes": [
+        0.000244140625,
+        0.000244140625,
+        0.000244140625,
+        0.000244140625,
+        0.00048828125,
+        0.00048828125,
+        0.00048828125,
+        0.00048828125
+      ],
+      "seed": 1410043,
+      "windows": 8
+    },
+    "cases": {
+      "N1": {
+        "learn": [
+          "A",
+          "A"
+        ],
+        "operation": "N1",
+        "positive": false,
+        "query_start_samples": [
+          0,
+          4800,
+          9600
+        ],
+        "test_index": 11,
+        "truth": "NEUTRAL-DEV/B"
+      },
+      "N2": {
+        "learn": [
+          "A",
+          "A"
+        ],
+        "operation": "N2",
+        "positive": false,
+        "query_start_samples": [
+          0,
+          4800,
+          9600
+        ],
+        "test_index": 11,
+        "truth": "NEUTRAL-DEV/C"
+      },
+      "N3": {
+        "learn": [
+          "A",
+          "A"
+        ],
+        "operation": "N3",
+        "positive": false,
+        "query_start_samples": [
+          0,
+          4800,
+          9600
+        ],
+        "test_index": 11,
+        "truth": "NEUTRAL-DEV/D"
+      },
+      "N4": {
+        "learn": [
+          "A",
+          "A",
+          "B",
+          "B"
+        ],
+        "operation": "N4",
+        "positive": false,
+        "query_start_samples": [
+          0,
+          4800,
+          9600
+        ],
+        "test_index": 19,
+        "truth": "NEUTRAL-DEV/M"
+      },
+      "P0": {
+        "learn": [
+          "A",
+          "A"
+        ],
+        "operation": "P0",
+        "positive": true,
+        "query_start_samples": [
+          0,
+          4800,
+          9600
+        ],
+        "test_index": 11,
+        "truth": "NEUTRAL-DEV/A"
+      },
+      "R0": {
+        "learn": [
+          "A",
+          "A"
+        ],
+        "operation": "R0",
+        "positive": true,
+        "query_start_samples": [
+          0,
+          4800,
+          9600
+        ],
+        "test_index": 11,
+        "truth": "NEUTRAL-DEV/A"
+      },
+      "R1": {
+        "learn": [
+          "A",
+          "A"
+        ],
+        "operation": "R1",
+        "positive": true,
+        "query_start_samples": [
+          0,
+          4800,
+          9600
+        ],
+        "test_index": 11,
+        "truth": "NEUTRAL-DEV/A"
+      },
+      "R2": {
+        "learn": [
+          "A",
+          "A"
+        ],
+        "operation": "R2",
+        "positive": true,
+        "query_start_samples": [
+          0,
+          4800,
+          9600
+        ],
+        "test_index": 11,
+        "truth": "NEUTRAL-DEV/A"
+      },
+      "R3": {
+        "learn": [
+          "A",
+          "A"
+        ],
+        "operation": "R3",
+        "positive": true,
+        "query_start_samples": [
+          0,
+          4800,
+          9600
+        ],
+        "test_index": 11,
+        "truth": "NEUTRAL-DEV/A"
+      },
+      "Z0": {
+        "learn": [
+          "A",
+          "A"
+        ],
+        "operation": "Z0",
+        "positive": false,
+        "query_start_samples": [
+          0,
+          4800,
+          9600
+        ],
+        "test_index": 11,
+        "truth": "NEUTRAL-DEV/ZERO"
+      },
+      "Z1": {
+        "learn": [
+          "A",
+          "A"
+        ],
+        "operation": "Z1",
+        "positive": false,
+        "query_start_samples": [
+          0,
+          4800,
+          9600
+        ],
+        "test_index": 11,
+        "truth": "NEUTRAL-DEV/NOISE"
+      }
+    },
+    "episodes": {
+      "A": {
+        "copy_prefix_from": null,
+        "frequencies_hz": [
+          370,
+          610,
+          850,
+          1210
+        ],
+        "root": "NEUTRAL-DEV/A",
+        "seed": 1410001,
+        "source_start_sample": 0,
+        "source_stream": "NEUTRAL-DEV/AC"
+      },
+      "B": {
+        "copy_prefix_from": null,
+        "frequencies_hz": [
+          510,
+          950,
+          730,
+          1590
+        ],
+        "root": "NEUTRAL-DEV/B",
+        "seed": 1410007,
+        "source_start_sample": 0,
+        "source_stream": "NEUTRAL-DEV/B"
+      },
+      "C": {
+        "copy_prefix_from": null,
+        "frequencies_hz": [
+          690,
+          1090,
+          1450,
+          910
+        ],
+        "root": "NEUTRAL-DEV/C",
+        "seed": 1410013,
+        "source_start_sample": 19200,
+        "source_stream": "NEUTRAL-DEV/AC"
+      },
+      "D": {
+        "copy_prefix_from": "A",
+        "frequencies_hz": [
+          370,
+          610,
+          1810,
+          2090
+        ],
+        "root": "NEUTRAL-DEV/D",
+        "seed": 1410019,
+        "source_start_sample": 0,
+        "source_stream": "NEUTRAL-DEV/D"
+      }
+    },
+    "kind": "DEV",
+    "noise_R": {
+      "amplitude": 0.000244140625,
+      "samples": 9600,
+      "seed": 1410031
+    },
+    "noise_Z": {
+      "amplitude": 0.00048828125,
+      "samples": 14400,
+      "seed": 1410037
+    },
+    "output_directory": "reports/s2uc/an-material-qualification-20261001-01/neutral-dev",
+    "partition": "NEUTRAL-DEV",
+    "pcm_bytes": 1094400,
+    "small_signal_gain": 0.000244140625,
+    "windows": 57
+  }
+}

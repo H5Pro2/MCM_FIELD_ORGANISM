@@ -1,0 +1,60 @@
+WAHRNEHMUNGSAUFFRISCHUNG -- SPEICHERREGELPRUEFUNG ABGESCHLOSSEN
+Finale Ausfuehrung perception-recency-20260930-02; 31/31 Tests PASS.
+Gespeicherte Vektoren, keine PCM-/Rezeptor-/NJ-Verarbeitung.
+Lokale Variante tools/_s2uc_perception_recency.py; Referenz und Abruf unveraendert.
+S2-TX dient als Vorarbeit; sein historischer Lauf bleibt nicht qualifiziert.
+
+Hauptfall A-A-D-D-A-Z-Z:
+Referenz nach A-3 [A,D], nach Z-Promotion [D,Z], evicted=1.
+Variante nach A-3 [D,A], nach Z-Promotion [A,Z], evicted=2.
+Gewinn: urspruengliches A bleibt erreichbar (Generation 1, A-1, Ordinale 1..4).
+Preis: urspruengliches D geht verloren (Generation 2, D-1, Ordinale 9..12).
+Z: Generation 3, Z-1, Ordinale 21..24.
+Kontrollen ohne A-3 bzw. nur zwei A-Hinweise: beide Arme [D,Z], evicted=1;
+Z dort Originalordinale 17..20. Keine Auffrischung durch Hinweise.
+Vollstaendige Uebergaenge, Herkunftslisten und Treffermengen in result.json.
+40 Hinweise mit je unveraendertem Zustand; HA/HD/HBC vor/nach allen drei Faellen.
+
+REGEL UND KONTROLLEN
+Nur vollstaendige exakte Wiederbeobachtung mit Intervall strikt nach letzter
+akzeptierter Beobachtung verschiebt dasselbe Trace-Objekt. Originalwerte,
+Herkunft und Generation unveraendert; vorhandener Kandidat bleibt identisch.
+Unvollstaendigkeit, Wertabweichung, Umkehrung, Ueberlappung, zeitlich verschraenkte
+Intervalle und Wiederverwendung eines bereits akzeptierten Intervalls frischen
+nicht auf. Abrufmethode identisch geerbt. Kandidaten-/FIFO-Regressionspruefungen
+und historische S2-TX-Kontrollen aktuell bestanden. Einzel-IDs in tests.txt.
+
+Praezisierung gegenueber statischem Plan: maximal zwei skalare Ordinal-Endmarken
+merken das Ende der jeweils letzten akzeptierten Beobachtung (einschliesslich
+Promotion). Ohne diese begrenzte Metadaten koennte ein schon benutztes spaeteres
+Intervall mehrfach auffrischen. Keine neuen Frames/Spuren, kein Zaehlergewicht,
+keine andere Speicherstrategie. Marken werden bei Verdraengung/Owner-Close
+entfernt und durch Hinweise nicht veraendert. Ordinale stammen vom Aufrufer;
+dies ist kein unabhaengiger physischer Zeit- oder Wahrnehmungsnachweis.
+Entwicklungsstand -01 pruefte nur Abstand zum Originalintervall. -02 ersetzt
+ihn als Abschlussnachweis nach ergaenzter Intervallkontrolle; keine Vorhersagen
+oder Daten veraendert. Alte Artefakte bleiben erhalten.
+
+RESSOURCEN
+main R {"whole_trace_comparisons": 10, "hint_positions_checked": 36, "traced_call_ns": 277192600, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16}
+main P {"whole_trace_comparisons": 18, "hint_positions_checked": 36, "traced_call_ns": 379984200, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16}
+none R {"whole_trace_comparisons": 9, "hint_positions_checked": 36, "traced_call_ns": 256994900, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16}
+none P {"whole_trace_comparisons": 15, "hint_positions_checked": 36, "traced_call_ns": 339926200, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16}
+hints R {"whole_trace_comparisons": 9, "hint_positions_checked": 48, "traced_call_ns": 264532500, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16}
+hints P {"whole_trace_comparisons": 15, "hint_positions_checked": 48, "traced_call_ns": 355493400, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16}
+Gesamtmessung mit Testtreiber/Beobachter: {"elapsed_ns": 2003537300, "python_peak_bytes": 1268959, "python_current_bytes": 1209603}
+Alle sechs Varianten/Faelle erreichen hoechstens 16 Spurframes und 2 Hinweisframes.
+Keine zusaetzlichen PCM-Dateien, keine Quellenproduktion. Python-Peak umfasst
+Treiber, Ergebnislisten und Beobachter; keine isolierte Arm-/Gesamtprozess-RAM-
+Behauptung. Zwei skalare Marken je Variantenarm sind zusaetzliche Metadaten,
+kein zusaetzlicher Frameplatz; 16+2 bleibt eine Frame- und keine Bytegleichheit.
+Code-/Datenbindungen vor/nach finaler Ausfuehrung unveraendert.
+
+GRENZE UND NAECHSTER SCHRITT
+Nutzungskriterium technisch bestaetigt: exakt erneut praesentiertes A wird
+gegenueber laenger nicht praesentiertem D bevorzugt erhalten. Kein allgemeiner
+Vorteil; D-Verlust ist Gegenkosten. Kein erneuter Wahrnehmungsnachweis aus
+Vektortestwiedergabe. Naechster Vorschlag: separat begrenzte Materialisierung
+von A-3 aus den vier bereits gebundenen PCM-Fenstern durch unveraenderten
+Rezeptor/NJ, um nur die noch offene Wahrnehmungseingangsbindung zu pruefen.
+Noch nicht ausgefuehrt. Registry und Originalquellenlaeufe unberuehrt.

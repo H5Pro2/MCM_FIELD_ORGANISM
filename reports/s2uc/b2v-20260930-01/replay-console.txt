@@ -1,0 +1,284 @@
+{
+  "scope": "NEUTRAL_STORED_SYNTHETIC_ONLY",
+  "preregistration_sha256": "e7ac027b4ab860a498637fc5a060622d223f3090583ca959afaa9733a4665ce6",
+  "counts": {
+    "transitions": 11,
+    "original_hints": 7,
+    "read_only_pairs": 14,
+    "equal_input_frames": 72
+  },
+  "owners": [
+    "g1/B2",
+    "g1/B2V",
+    "g2/B2",
+    "g2/B2V",
+    "g3/B2",
+    "g3/B2V"
+  ],
+  "results": [
+    {
+      "key": "g1/12",
+      "B2": "TRACE_MATCH",
+      "B2V": "CONFIRMED_RETAINED_MATCH",
+      "matches": [
+        {
+          "role": "retained",
+          "generation": 1,
+          "formation": "g1-p1",
+          "ordinals": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "offset": 1
+        }
+      ],
+      "prediction": "CONFIRMED"
+    },
+    {
+      "key": "P1",
+      "after": 17,
+      "B2": "ABSTAIN_NO_RETAINED_TRACE",
+      "B2V": "PROVISIONAL_CANDIDATE_MATCH",
+      "matches": [
+        {
+          "role": "candidate",
+          "generation": 2,
+          "formation": "g1-p3",
+          "ordinals": [
+            13,
+            14,
+            15,
+            16
+          ],
+          "offset": 0
+        }
+      ],
+      "prediction": "CONFIRMED"
+    },
+    {
+      "key": "P1-repeat",
+      "after": 17,
+      "B2": "ABSTAIN_NO_RETAINED_TRACE",
+      "B2V": "PROVISIONAL_CANDIDATE_MATCH",
+      "matches": [
+        {
+          "role": "candidate",
+          "generation": 2,
+          "formation": "g1-p3",
+          "ordinals": [
+            13,
+            14,
+            15,
+            16
+          ],
+          "offset": 0
+        }
+      ],
+      "prediction": "CONFIRMED"
+    },
+    {
+      "key": "N1",
+      "after": 22,
+      "B2": "ABSTAIN_NO_RETAINED_TRACE",
+      "B2V": "ABSTAIN_NO_MATCH",
+      "matches": [],
+      "prediction": "CONFIRMED"
+    },
+    {
+      "key": "K1",
+      "after": 22,
+      "B2": "TRACE_MATCH",
+      "B2V": "ABSTAIN_AMBIGUOUS",
+      "matches": [
+        {
+          "role": "retained",
+          "generation": 1,
+          "formation": "g1-p1",
+          "ordinals": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "offset": 0
+        },
+        {
+          "role": "candidate",
+          "generation": 3,
+          "formation": "g1-p4",
+          "ordinals": [
+            18,
+            19,
+            20,
+            21
+          ],
+          "offset": 0
+        }
+      ],
+      "prediction": "CONFIRMED"
+    },
+    {
+      "key": "g1/24",
+      "B2": "TRACE_MATCH",
+      "B2V": "CONFIRMED_RETAINED_MATCH",
+      "matches": [
+        {
+          "role": "retained",
+          "generation": 1,
+          "formation": "g1-p1",
+          "ordinals": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "offset": 2
+        }
+      ],
+      "prediction": "CONFIRMED"
+    },
+    {
+      "key": "g1/26",
+      "B2": "ABSTAIN_NO_RETAINED_TRACE",
+      "B2V": "ABSTAIN_NO_MATCH",
+      "matches": [],
+      "prediction": "CONFIRMED"
+    },
+    {
+      "key": "P2",
+      "after": 31,
+      "B2": "ABSTAIN_NO_RETAINED_TRACE",
+      "B2V": "PROVISIONAL_CANDIDATE_MATCH",
+      "matches": [
+        {
+          "role": "candidate",
+          "generation": 1,
+          "formation": "g2-p1",
+          "ordinals": [
+            27,
+            28,
+            29,
+            30
+          ],
+          "offset": 1
+        }
+      ],
+      "prediction": "CONFIRMED"
+    },
+    {
+      "key": "P2-repeat",
+      "after": 31,
+      "B2": "ABSTAIN_NO_RETAINED_TRACE",
+      "B2V": "PROVISIONAL_CANDIDATE_MATCH",
+      "matches": [
+        {
+          "role": "candidate",
+          "generation": 1,
+          "formation": "g2-p1",
+          "ordinals": [
+            27,
+            28,
+            29,
+            30
+          ],
+          "offset": 1
+        }
+      ],
+      "prediction": "CONFIRMED"
+    },
+    {
+      "key": "N2",
+      "after": 36,
+      "B2": "ABSTAIN_NO_RETAINED_TRACE",
+      "B2V": "ABSTAIN_NO_MATCH",
+      "matches": [],
+      "prediction": "CONFIRMED"
+    },
+    {
+      "key": "g2/38",
+      "B2": "ABSTAIN_NO_RETAINED_TRACE",
+      "B2V": "ABSTAIN_NO_MATCH",
+      "matches": [],
+      "prediction": "CONFIRMED"
+    },
+    {
+      "key": "g3/60",
+      "B2": "TRACE_MATCH",
+      "B2V": "CONFIRMED_RETAINED_MATCH",
+      "matches": [
+        {
+          "role": "retained",
+          "generation": 1,
+          "formation": "g3-p1",
+          "ordinals": [
+            44,
+            45,
+            46,
+            47
+          ],
+          "offset": 2
+        }
+      ],
+      "prediction": "CONFIRMED"
+    },
+    {
+      "key": "g3/67",
+      "B2": "TRACE_MATCH",
+      "B2V": "CONFIRMED_RETAINED_MATCH",
+      "matches": [
+        {
+          "role": "retained",
+          "generation": 1,
+          "formation": "g3-p1",
+          "ordinals": [
+            44,
+            45,
+            46,
+            47
+          ],
+          "offset": 2
+        }
+      ],
+      "prediction": "CONFIRMED"
+    },
+    {
+      "key": "g3/69",
+      "B2": "TRACE_MATCH",
+      "B2V": "CONFIRMED_RETAINED_MATCH",
+      "matches": [
+        {
+          "role": "retained",
+          "generation": 2,
+          "formation": "g3-p3",
+          "ordinals": [
+            54,
+            55,
+            56,
+            57
+          ],
+          "offset": 0
+        }
+      ],
+      "prediction": "CONFIRMED"
+    }
+  ],
+  "peak_roles": {
+    "retained_frames": 8,
+    "candidate_frames": 4,
+    "forming_frames": 4,
+    "trace_frames": 12,
+    "hint_frames": 1
+  },
+  "temporary": {
+    "trace": 12,
+    "hint": 2,
+    "total": 12
+  },
+  "notes": [
+    "Numeric payload is not RAM. Line-boundary Frame census reuses existing observer.",
+    "Probe ordinals 1000..1003 are local to uniquely named hint segments; historical ordinals unchanged.",
+    "No additional retained/candidate storage. Full matching sets contain provenance metadata, no value copies."
+  ]
+}

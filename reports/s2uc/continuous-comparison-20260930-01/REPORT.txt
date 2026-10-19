@@ -1,0 +1,91 @@
+LOKALER FORTLAUFENDER VERGLEICH -- 2026-09-30
+Status LOCAL_COMPARISON_COMPLETE. 20/20 Entwicklungstests PASS, Exit0.
+
+UMFANG UND HERKUNFT
+Genau20 vorhandene auditive Vektoren aus dem gebundenen Referenzarm, einmal
+in Quellreihenfolge; ein Owner/Stream, leerer Startspeicher. Keine Seeds,
+keine Quellenverarbeitung oder neue Materialisierung. Alle73 Dateibindungen
+und der Bestandmanifest-Hash vor Verarbeitung geprueft. Leser verwendet die
+geprueften Bytes im Cache, kein erneutes ungebundenes Lesen der Vektoren.
+100-ms-Fenster, Quellhop1,4s: jeweils1,3s unbeobachtet. Historische Runtimezeiten
+bleiben getrennt dokumentiert. Eine bereits verwendete Quelle, kein Holdout.
+Historischer Gesamtversuch bleibt NOT_EVALUABLE.
+
+ERGEBNIS
+Ziel  Kontext                    Persistenz
+3     ABSTAIN_NO_CONTEXT         MISS
+5     ABSTAIN_NO_CONTEXT         MISS
+7     ABSTAIN_NO_CONTEXT         MISS
+9     ABSTAIN_NO_CONTEXT         MISS
+11    ABSTAIN_NO_CONTEXT         MISS
+13    ABSTAIN_NO_CONTEXT         MISS
+15    ABSTAIN_NO_CONTEXT         MISS
+17    ABSTAIN_NO_CONTEXT         MISS
+19    ABSTAIN_NO_CONTEXT         MISS
+Kontext: Abdeckung0/9, Treffer0, Fehler0, Enthaltungen9 (alle kein Kontext),
+Mehrdeutigkeit0, fehlender Nachfolger0, unbestimmte Faktorfortsetzung0.
+Bedingte Trefferrate undefiniert, Trefferanteil ueber alle Ziele0/9.
+Persistenz: Abdeckung9/9, Treffer0, Fehler9, Enthaltungen0, Trefferrate0/9.
+Gemeinsam abgedeckt0: beide richtig0, nur Kontext richtig0, nur Persistenz
+richtig0, beide falsch0. Keine vorlaeufige oder bestaetigte Kontextprognose.
+Fuenf Viererformationen erzeugen nacheinander Kandidatengeneration1..5;
+keine Bestaetigung/Erhaltung. Kein belegter Kontextvorteil. Die Enthaltung
+ist kein Treffer, die exakte Fehlvorhersage kein Mass fuer die Fehlergroesse.
+
+KAUSALITAET UND INTEGRATION
+Zehn Paarreceipts fuer1/2 bis19/20 in result.json. Neun Zugriffsgates bestaetigt,
+bevor der jeweilige Zielvektor aus dem Cache dekodiert und herausgegeben wurde.
+Zusaetzlich20 Vor-Aufnahme-Kontrollen: Prognose lag vor jeder Paaraufnahme vor.
+Der Predictor erhaelt weder Dateileser noch Streamiterator oder Zukunftsliste.
+Alle20 Ordinale exakt einmal aufgenommen. Nach jedem Frame stimmen alle
+Speicherfelder (auch Endmarken/Wassermarken) mit PairContextAdapter ueberein;
+auch Abschlusszustand gleich. Keine Matching-/Speicher-/Prognoseregel geaendert.
+Ziel21 NOT_EVALUABLE_END, ausserhalb Nenner9. Abschluss leert Prognoseslots,
+Paarbuffer, Kandidat, Erhaltung, Hinweise und Endmarken; Owner geschlossen.
+Dateilesercache wird im finally freigegeben, auch bei Fehler.
+
+TESTBELEGE
+Vollstaendige Test-IDs und PASS-Status: tests.json.
+7 neue Testmethoden: manipuliertes Manifest, manipulierte gebundene Datei,
+fehlende Prognose einzeln an allen9 Zielpositionen (jeweils vor Zugriff gesperrt),
+Quellzeitfehler mit offener Prognose, Runtimezeitfehler, Adapter-Zeitabweichung,
+Abschlussfreigabe mit verweigertem Folgezugriff. Dazu7 bestehende
+Continuation-Tests und6 PairAdapter-Tests. Vorherige Grenztests pruefen auch
+Faktor-/Spurende, Mehrdeutigkeit bei Verdraengung und Fehlerfreigabe.
+Der abgeschlossene Vergleich selbst prueft Zustandsidentitaet und alle20
+Aufnahmen; keine zugesicherte Trefferzahl als Abnahmebedingung verwendet.
+
+RESSOURCEN
+Instrumentiert innerhalb der bestehenden Adapter-/Speichermethoden:
+maximal8 unterschiedliche Frames und1 Prognosevektor,
+gemeinsam maximal9; 9204 Messpunkte.
+Budget16+2 plus2 Ausgabeslots eingehalten. Dieser Korpus erreicht keine
+Vollbelegung und keine konkrete Kontextprognose; kein neuer Vollbelegungstest
+behauptet. Ausgabeobjekt konservativ maximal1958 Python-Byte.
+Leser separat: 2738814 Cache-Nutzbytes; 2768158 gelesene Byte
+inklusive Manifest; Initialisierungspeak2848411 Python-Byte.
+Leserbytes enthalten historische Belege, werden nicht zu Predictor-Memory.
+Beobachter separat:20 externe Zustandssnapshots plus Referenzadapter,
+Receipts und Zielbewertungen; JSON-Messstand138404 Byte vor Einfuegen
+seiner eigenen Groessenangabe/Pretty-Print. Kein konstantes Beobachterbudget
+behauptet. Gesamter instrumentierter Python-Allokationspeak inklusive Leser,
+Referenz, Trace-Inspektion und Beobachter: 59987130 Byte;
+Dauer10679441000ns. Kein Prozess-RSS und kein Produkt-RAM-Messwert.
+
+GEAENDERTE DATEIEN UND BELEGE
+Neu: tools/s2uc_continuous_comparison.py;
+     tests/test_s2uc_continuous_comparison.py;
+     reports/s2uc/continuous-comparison-20260930-01/ (dieser Bericht,
+     result.json, tests.json, code-inventory.json).
+Aktualisiert: AKTUELLER_FORSCHUNGSWEG.md.
+Bestehende fachliche Module und der vorab festgelegte Bestand unveraendert.
+Keine Commits/Pushes. Fremde vorhandene Aenderungen erhalten.
+
+NAECHSTER VORSCHLAG AN PROJEKTLEITER
+Den lokalen Vergleich im beschriebenen Umfang abnehmen. Keine Wiederholung
+oder Matchinganpassung auf diesen neun Positionen. Fuer die offene Frage nach
+Abdeckung im lueckenlosen Eingang als naechstes den bereits vorgeschlagenen
+10-s-/100-Fenster-Beschaffungsvertrag quellengebunden konkretisieren, mit festem
+Start, Profil und Ende vor Materialisierung. Keine Wiederholungen erzwingen;
+auch dort kann exakter Abruf ohne passende Wiederkehr leer bleiben. Erst die
+separate Beauftragung erlaubt neue Quellenverarbeitung.

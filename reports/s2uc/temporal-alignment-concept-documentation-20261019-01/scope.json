@@ -1,0 +1,13 @@
+{
+  "historical_diagnosis_files_verified_unchanged": true,
+  "implementation_changes": 0,
+  "kind": "concept_documentation_no_run",
+  "new_archive_diagnoses": 0,
+  "new_experiments": 0,
+  "new_tests": 0,
+  "nj_calls": 0,
+  "note": "Only concept text, overview updates and lossless archival documentation. Numeric budgets are static design arithmetic, not measurements.",
+  "policy_calls": 0,
+  "receptor_calls": 0,
+  "workflow": "5db2e001-9290-4074-a206-feac08383fcd"
+}

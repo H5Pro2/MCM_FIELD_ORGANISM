@@ -1,0 +1,30 @@
+RW1 Forschungspruefvertrag – Dokumentationsabschluss 2026-10-19
+Auftrag 48dfa109-2aec-51dc-91e1-271f3198a127
+
+Vertrag erstellt; drei Projektuebersichten durch neuen obersten Stand ergaenzt.
+Keine bestehende Vertragsarbeit gefunden; historische technische Lieferung
+uebernommen, nicht wiederholt. Keine Forschungsresultate erzeugt.
+
+Vertrag: docs/S2UC_RASTERWIEDERERKENNUNG_FORSCHUNGSPRUEFVERTRAG_20261019.txt
+SHA256: f8150752bb0008bafef95dad301c25022f4aae83b523c2ed60d3d3f2f7cc2bfe
+
+Festes neues Rezept A=(430,830,1470,1930), B=(450,850,2330,2710) Hz;
+Numerik, Intervalle, Zugriff, 6 Faelle, Erfolg S1-S4, Kollisionen, Einzelverluste,
+Abbruchregeln, Ressourcen und Restarbeiten R1-R3/C1-C6 vollstaendig vorgegeben.
+Keine Vorauswertung der Quellen. Noch kein ausfuehrbarer Forschungseinstieg.
+
+Grundlage SHA256: cccadae5a649066941246dbd6cbe2179c4d8c36d7db28109cbd83042c57285c8
+445 gebundene historische Dateien und 8 Code-Dateien byte/hashgleich vorgefunden.
+Alle drei Uebersichten stimmten vor Aenderung mit der bisherigen Preservation
+ueberein. Vollstaendige Vorgaenger liegen verlustfrei als gzip vor; alte Inhalte
+wurden nur durch Voranstellen des neuen Abschnitts ergaenzt.
+
+Neue Tests, PCM, Rezeptor/NJ, Policy-Aufnahmen, Neutral-/Forschungslaeufe: jeweils0.
+Datei-/Hashabgleich ist Dokumentationspruefung, kein Versuch und keine Laufnummer.
+Verbrauchte Neutralberechtigung und historisches UNPROVEN bleiben unveraendert.
+
+Empfohlener Anschluss: nach Vertragsabnahme begrenztes Entwicklerpaket R1-R3
+und kuenstliche Anschlusspruefungen C1-C6. Erst danach separate Entscheidung
+ueber genau einen Forschungslauf; keine erneute Neutralqualifikation.
+
+Belege: scope.json, archive-check.json, preservation.json, delivery-binding.json.

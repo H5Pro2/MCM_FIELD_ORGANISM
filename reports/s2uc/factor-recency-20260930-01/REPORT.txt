@@ -1,0 +1,90 @@
+LOKALE KOMBINATION F-ABRUF + EXAKTE AUFFRISCHUNG -- ABGESCHLOSSEN
+Keine Produktfreigabe; keine skalierte Bestaetigung. Nur gespeicherte Vektoren.
+Implementierung tools/_s2uc_factor_recency.py: Unterklasse der unveraenderten
+PerceptionRecencyArm, hint ist exakt FactorHintArm.hint. Keine kopierte oder
+zusaetzliche Matching-, Bestaetigungs- oder Prioritaetslogik.
+Vorhersagen und Code-/Datenbindungen vor Auswertung in preregistration.json.
+
+DATEN UND ARME
+Vorhandene Chirp-NJ-Vektoren aus pcm-temporal-20260930-01/result.json.
+A=W1/W2/W3/W4; D=W4/W2/W3/W1; Z=W4/W3/W2/W1.
+D/Z synthetische Montagen. Halbvektoren im Test aus gespeicherten Werten mit
+Faktor .5 abgeleitet, keine neue PCM-Verarbeitung und keine neue Quellenaufnahme.
+F: bisheriger Faktorabruf mit FIFO; P: Auffrischung mit exaktem Abruf;
+C: lokale Kombination. Alle 1 Kandidat / 2 Erhaltungen / 16+2 Frames.
+
+VIER ENTSCHEIDENDE BEFUNDE
+1. Zwei halbierte HA=W1/W2-Hinweise: C und F treffen A-1@0 Faktor .5,
+   P findet nichts. Reihenfolge, Kandidat und Endmarken bleiben unveraendert.
+   Anschliessend Z-Z: alle [D,Z], A verloren. Kein Hinweis-Erhaltungsvorteil.
+2. Exakte A-Vollbeobachtung: C/P ordnen [D,A], F bleibt [A,D]. Z-Z verdraengt
+   in C/P D, in F A. C behaelt exakt dasselbe A-Trace-Objekt, Generation 1,
+   Herkunft A-1, Originalordinale 1..4. Kandidat bleibt bei Auffrischung gleich.
+3. Vollstaendiges Halb-A: alle legen einen neuen Kandidaten an. Erhaltungen
+   bleiben [A,D], Endmarken unveraendert; keine Auffrischung/skalierte Promotion.
+   Erstes Z ersetzt Halb-A-Kandidat, zweites Z promoviert; alle enden [D,Z].
+   A-Verlust bleibt sichtbar, Halb-A wird nicht als Original-A ausgegeben.
+4. B/C original trifft in allen Armen A-1@1 und D-1@1: ABSTAIN_AMBIGUOUS.
+   Halb-B/C in C/F dieselben Herkuenfte/Positionen mit Faktor .5, ebenfalls
+   mehrdeutig; P ohne Treffer. Wiederholungen ohne Zustandsaenderung.
+A: Generation 1, A-1, Ordinale 1..4. D: Generation 2, D-1, Ordinale 9..12.
+Z im Halbbeobachtungsfall: Kandidatengeneration 4, Erhaltungsgeneration 3;
+dieser Unterschied ist regulaere Kandidatenersetzung, keine Zusatzstrategie.
+Alle tatsaechlichen Generationen, Ordinale, Reihenfolgen und vollstaendigen
+Treffermengen stehen je Schritt in result.json.
+
+REFERENZEN UND PRUEFUNGEN
+C hat in allen vier Faellen und im Vollbelegungsfall exakt dieselben
+Close-Receipts, Speicherzwischenzustaende und Endmarken wie P.
+Abrufmethode ist identisch zu F; alle 48 Abfragen gegen unabhaengige direkte
+Fraction-Vergleichsrechnung der vollstaendigen Treffermengen geprueft.
+Jeder Hinweis: vorher/nachher identischer Speicher, gleiche Kandidaten- und
+Erhaltungsobjekte, unveraenderte Endmarken auch nach erstem Hinweisframe.
+11 unittest-Methoden PASS; darunter ein Sammeltest mit 8 einzeln ausgefuehrten
+Verhaltenskontrollen auf der kombinierten Klasse, ebenfalls ohne Fehler.
+Die 11 umfassen 9 bestehende Basiskontrollen und 2 neue Integrationsmethoden.
+Die 8 internen Kontrollen sind nicht als weitere unabhaengige Tests verschleiert:
+Abweichung, Unvollstaendigkeit, Umkehrung, Ueberlappung, verschraenkte Intervalle,
+Intervallwiederverwendung/Reset, Hinweisneutralitaet und Original-/Kandidaterhaltung.
+Keine alten Einzelversuchslaeufe wiederholt; gezielte Integrationsregression.
+Code-/Datenbindungen nach Lauf unveraendert.
+
+VOLLBELEGUNG UND RESSOURCEN
+Zwei Erhaltungen A/D (8 Frames), Kandidat Z (4), ausstehende Bildung A (4).
+Waehrend dieser Bildung Hinweis mit zwei Frames: tatsaechlich 16+2=18 Frames.
+Bildung ist nicht durch Hinweise durchsuchbar. B/C bleibt auf A/D mehrdeutig;
+Kandidat Z und Bildung bleiben unveraendert. Erst nach Hinweisabschluss wird
+A regulaer geschlossen; C/P frischen auf, F nicht; Z-Kandidat bleibt identisch.
+half_hint F {"meter": {"whole_trace_comparisons": 9, "hint_positions_checked": 24, "traced_call_ns": 239699500, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16, "factor_checks": 72, "scalar_factor_checks": 405, "incremental_python_call_peak_bytes": 28348}, "marks_python_bytes": 0}
+half_hint P {"meter": {"whole_trace_comparisons": 15, "hint_positions_checked": 24, "traced_call_ns": 314435100, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16, "factor_checks": 0, "scalar_factor_checks": 0, "incremental_python_call_peak_bytes": 8676}, "marks_python_bytes": 336}
+half_hint C {"meter": {"whole_trace_comparisons": 15, "hint_positions_checked": 24, "traced_call_ns": 333459500, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16, "factor_checks": 72, "scalar_factor_checks": 405, "incremental_python_call_peak_bytes": 7568}, "marks_python_bytes": 336}
+exact_observation F {"meter": {"whole_trace_comparisons": 10, "hint_positions_checked": 12, "traced_call_ns": 256656700, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16, "factor_checks": 36, "scalar_factor_checks": 179, "incremental_python_call_peak_bytes": 6920}, "marks_python_bytes": 0}
+exact_observation P {"meter": {"whole_trace_comparisons": 18, "hint_positions_checked": 12, "traced_call_ns": 326550100, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16, "factor_checks": 0, "scalar_factor_checks": 0, "incremental_python_call_peak_bytes": 7568}, "marks_python_bytes": 336}
+exact_observation C {"meter": {"whole_trace_comparisons": 18, "hint_positions_checked": 12, "traced_call_ns": 329386100, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16, "factor_checks": 36, "scalar_factor_checks": 179, "incremental_python_call_peak_bytes": 7568}, "marks_python_bytes": 336}
+half_observation F {"meter": {"whole_trace_comparisons": 12, "hint_positions_checked": 12, "traced_call_ns": 245058100, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16, "factor_checks": 36, "scalar_factor_checks": 179, "incremental_python_call_peak_bytes": 6936}, "marks_python_bytes": 0}
+half_observation P {"meter": {"whole_trace_comparisons": 20, "hint_positions_checked": 12, "traced_call_ns": 344164000, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16, "factor_checks": 0, "scalar_factor_checks": 0, "incremental_python_call_peak_bytes": 7568}, "marks_python_bytes": 336}
+half_observation C {"meter": {"whole_trace_comparisons": 20, "hint_positions_checked": 12, "traced_call_ns": 348832800, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16, "factor_checks": 36, "scalar_factor_checks": 179, "incremental_python_call_peak_bytes": 7568}, "marks_python_bytes": 336}
+ambiguous_hint F {"meter": {"whole_trace_comparisons": 9, "hint_positions_checked": 36, "traced_call_ns": 284198600, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16, "factor_checks": 108, "scalar_factor_checks": 1011, "incremental_python_call_peak_bytes": 7600}, "marks_python_bytes": 0}
+ambiguous_hint P {"meter": {"whole_trace_comparisons": 15, "hint_positions_checked": 36, "traced_call_ns": 334619700, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16, "factor_checks": 0, "scalar_factor_checks": 0, "incremental_python_call_peak_bytes": 7568}, "marks_python_bytes": 336}
+ambiguous_hint C {"meter": {"whole_trace_comparisons": 15, "hint_positions_checked": 36, "traced_call_ns": 367957100, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16, "factor_checks": 108, "scalar_factor_checks": 1011, "incremental_python_call_peak_bytes": 7664}, "marks_python_bytes": 336}
+full_occupancy F {"meter": {"whole_trace_comparisons": 7, "hint_positions_checked": 18, "traced_call_ns": 216954200, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 18, "factor_checks": 54, "scalar_factor_checks": 530, "incremental_python_call_peak_bytes": 8520}, "marks_python_bytes": 0}
+full_occupancy P {"meter": {"whole_trace_comparisons": 13, "hint_positions_checked": 18, "traced_call_ns": 273874000, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 18, "factor_checks": 0, "scalar_factor_checks": 0, "incremental_python_call_peak_bytes": 7856}, "marks_python_bytes": 336}
+full_occupancy C {"meter": {"whole_trace_comparisons": 13, "hint_positions_checked": 18, "traced_call_ns": 297412100, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 18, "factor_checks": 54, "scalar_factor_checks": 530, "incremental_python_call_peak_bytes": 8584}, "marks_python_bytes": 336}
+Gesamt mit Testtreiber/Beobachter: {"elapsed_ns": 4930839300, "python_peak_bytes": 6500515, "python_current_bytes": 6499963}
+Python-Peak erfasst auch Ergebnisarchive und Beobachter, keinen vollstaendigen
+Prozess-/nativen RAM. Endmarken separat via sys.getsizeof fuer Dict+Integer;
+maximal zwei Eintraege, nach Owner-Close leer. Keine zusaetzlichen Frameplaetze.
+Keine neue PCM-Datei, 0 Rezeptor-/NJ-Aufrufe. Framegleichheit ist keine Bytegleichheit.
+
+KOMBINIERTE FAEHIGKEIT UND GRENZE
+Faktorgebundener lesender Zugang und exakte zeitlich spaetere Auffrischung
+koexistieren lokal ohne gegenseitige Ausloesung. Erhaltungsgewinn von A kostet D.
+Vollstaendige halbierte Beobachtung ist keine exakte Bestaetigung des Originals;
+ein Halbhinweistreffer erteilt keine Auffrischungsberechtigung.
+Belegt fuer gebundene Testvektoren und gepruefte Eingangsfolgen, keine allgemeine
+Identitaet, Wahrnehmungsrobustheit oder Produktzulassung. Historischer S2-TX-
+Status unveraendert. Registry und Originalquellenlauf unberuehrt.
+Naechster sinnvoller Schritt beim Projektleiter: die lokale Kombination mit
+diesem Umfang als getrennt bewerteten Integrationsbaustein einordnen und die
+naechste noch offene Nutzungsfrage priorisieren; kein automatischer weiterer
+Demonstrationslauf und keine Produktintegration aus diesem Ergebnis ableiten.

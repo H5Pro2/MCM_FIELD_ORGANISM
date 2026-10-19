@@ -1,0 +1,140 @@
+RW1 – getrennte Diagnose und Korrektur der Exportbudgetverwaltung
+2026-10-19 | eigener Auftrag9fb2430c-5296-4a5f-b725-2c86be3709ce
+Projektleiterbezug8f594cbe-f3bf-46f9-8fc6-a819da87c128
+
+ERGEBNIS
+Wiederholte Verzeichnisscans dominieren die unveraenderte Budgetverwaltung bei der
+vorab festgelegten kuenstlichen Last. Eine getrennte inkrementelle Variante ist
+implementiert, gezielt geprueft und bei gleicher Nutzlast deutlich schneller.
+Historischer RW1-Code, Archiv, Bindungen und Verbrauchsmarker sind unveraendert.
+Kein Rezeptor, NJ, Policy oder RW1-Versuch ausgefuehrt. Keine wissenschaftliche
+Teilauswertung. Die neue Variante ist noch NICHT an den RW1-Einstieg angeschlossen.
+
+FESTE ARBEITSLAST UND MESSGRENZE
+workload-plan.json wurde vor der ersten Messung geschrieben.
+SHA256 der festen Operationsfolge:
+56f09996d077eadb14e7a74d36600b3d5ae2d955241c16dcbd771fd262e5a800
+527 kuenstliche Bestandsdateien mit insgesamt7224480 Bytes bilden Dateianzahl,
+Verzeichnisstruktur und Groessen der bestehenden Vorbereitung nach. Nur Metadaten
+wurden gelesen; Dateiinhalte sind kuenstliche F-Fuellbytes, keine Forschungsdaten.
+Danach dieselben2351 Schreib-/Anhaengeoperationen in beiden Varianten:
+390 kuenstliche Projektionsrecords,2 opake Fuellbyte-Dateien a76800 Bytes,
+1935 Zaehlerereignisse samt Begonnen/Abgeschlossen-Feldern,12 kuenstliche Armdateien,
+Manifest, Request/Gates, Ergebnis-/Auswertungs- und Abschlussdateien. Es findet
+keine der durch die Zaehlernamen bezeichneten Rezeptor-/Policyoperationen statt.
+Endbestand jeweils417 Nutzdateien,2973195 Bytes; Inhalte zwischen Varianten
+vollstaendig bytegleich. Die neue Variante hat zusaetzliche separat bilanzierte
+Kontrolldateien, die nicht als kostenlose Observerdaten behandelt werden.
+
+Vorab feste Abschnitte[0,800),[800,1600),[1600,2351), jeweils ein begrenzter
+Diagnoseprozess. Dateibestand wird zwischen Abschnitten fortgesetzt; keine Last-
+verkleinerung nach Ergebnis. Zuerst alle drei Legacy-Abschnitte, dann Korrektur
+und deren drei Abschnitte. Keine statistische Wiederholungsserie oder Cache-
+Randomisierung. Diese Reihenfolge und die synthetische Last begrenzen die Aussage.
+Die Korrekturbedingung war vorab: Scanzeit>=1s und>=10 Prozent der Arbeitszeit.
+Sie wurde bereits im ersten Abschnitt und anschliessend insgesamt erfuellt.
+
+MESSUNG MIT MONOTONER perf_counter-UHR
+                                      Legacy          Inkrementell
+Schreibfolge, Sekunden                 214,272030      58,350804
+Budgetinterne Scanaufrufe              14106           8
+Budgetinterne Scanzeit, Sekunden       208,428154      0,222454
+Serialisierung, Sekunden               0,172799       0,209183
+Dateischreiben inkl.flush/fsync, s      4,034916       10,880212
+Dateischreibaufrufe                     2351           7056
+
+Legacy:97,273 Prozent der Schreibfolge entfielen auf Scans. Scan-/Serialisierungs-
+und Schreibinstrumentierung ueberlappt nicht; verschachtelte Serialisierung wird
+von der gemessenen Schreibzeit abgezogen. Restzeit umfasst u.a.Pfad-/Budgetlogik.
+Die acht neuen Scans sind initiale Bestandsaufnahme und unabhaengige Abgleiche
+bei den drei Abschnittsabschluessen. Diese Scanzeit liegt ausserhalb der neuen
+Schreibschleife. Initialisierung aller drei Abschnitte zusammen0,182118s,
+Abgleich0,166742s; konservativ einschliesslich dieser Phasen58,699664s statt
+214,272030s fuer die alte Schreibschleife (etwa3,65fach schneller).
+Die Serialisierungs-/Schreibzaehler der neuen Variante enthalten auch die
+Kontrollinitialisierung. Ihre kleinen Anfangskosten sind daher nicht nochmals
+zu den aufgefuehrten Gesamtphasen zu addieren. Pro Variante wurde zusaetzlich
+je Abschnitt ein gleicher unabhaengiger Nutzdatei-Abgleich des Harness ausgefuehrt;
+dessen Zeiten stehen separat in den result.json-Dateien.
+
+Das Journal verursacht drei dauerhafte Schreiboperationen je Nutzoperation
+(BEGIN, Nutzdaten, COMMIT) statt einer. Dadurch steigt die reine Schreibzeit.
+Andere verbleibende Budget-/Metadatenkosten wurden nicht weiter aufgeloest.
+Es wurde keine allgemeine Dateiverwaltungsoptimierung angeschlossen.
+
+MINIMALE GETRENNTE KORREKTUR
+experiments/rw1_budget/incremental.py:
+- einmalige initiale Bestandsaufnahme mit Groesse und mtime_ns; danach inkrementelle
+  Summen je Partition und Gesamtbestand;
+- gemeinsamer Windows-Dateilock fuer Supervisor und Worker, journalbasierte
+  Synchronisierung veralteter lokaler Buchfuehrung;
+- vor jeder Operation Dateilimit, Partition, Gesamtbudget und Reserven pruefen;
+  unveraendert65536 Bytes Vorbereitungsreserve und32768 Bytes Gesamtreserve;
+  zusaetzlich2048 Bytes konservative Journalreserve je Transaktion;
+- BEGIN dauerhaft vor Nutzschreiben, COMMIT erst nach vollstaendigem Schreiben
+  und flush/fsync; exklusive Neuanlage, Anhaengen nur an bekannten unveraenderten
+  Bestand; unbekannte/teilweise Transaktion sperrt weitere Nutzung;
+- Snapshot, Lock und Journal sind im Observer-/Gesamtexport voll enthalten;
+  kein automatisches Journal-Recovery, kein Retry eines unklaren Schreibvorgangs;
+- unabhaengiger scandir-Abgleich von Nutzdateien und geerbtem Bestand sowie
+  vollstaendige Journal-Kettenpruefung vor erfolgreichem Abschluss/Handoff.
+
+Alle Nutzschreiber der kuenstlichen Arbeitslast (Supervisor-Request/Gate/Abschluss,
+Worker-Material/Zaehler/Archive) gehen durch diese Schnittstelle. Zusaetzlich
+haben zwei echte Prozesse20+20 Anhaenge ueber dieselbe Buchfuehrung geschrieben;
+40 Zeilen und Schlussbilanz stimmen. Die eigentlichen Diagnose-Steuerbelege
+werden getrennt vom Benchmark durch den auf16MiB begrenzten Harness erfasst.
+Noch keine Behauptung, alle Schreiber des produktiven RW1 seien bereits umgestellt.
+
+KORREKTHEITSPRUEFUNGEN
+22 gezielte kuenstliche Tests bestanden, Details in tests/result.json:
+Neuanlage/Anhaengen, Exklusivitaet, drei Partitionsgrenzen, Gesamtreserve,
+Projektionsdatei-/Zaehlerereignisgrenze, Pfadausbruch, Schutz des Kontrollbereichs,
+fehlgeschlagenes und teilweise erfolgtes Schreiben mit dauerhafter Sperre,
+Teiljournal, unbekannte/fehlende/geaenderte Dateien, gleich grosse Aenderung,
+abweichender geerbter Bestand, zwei kooperative Schreiber, Snapshot-Aenderung,
+Journalreserve vor BEGIN und Manipulation eines schon gelesenen Journalpraefixes.
+Kein unbekannter Buchungsstand wurde als erfolgreicher Abschluss akzeptiert.
+
+Sicherheits-/Korrektheitsgrenze: Die Schreiber muessen die Ausgabewurzeln exklusiv
+und kooperativ ueber die Schnittstelle nutzen. Neue unregistrierte Dateien werden
+im unabhaengigen Abschlussabgleich erkannt, nicht durch einen Scan vor jeder
+Operation. Bekannte veraenderte Anhaengeziele werden schon vor dem Schreiben
+zurueckgewiesen. Keine OS-Isolation gegen beliebige externe Dateimanipulationen
+und keine Erkennung absichtlich gefaelschter Dateimetadaten behauptet.
+
+NEUE DATEIEN UND ERHALTUNG
+workload.py: feste synthetische Operationsfolge/Groessen.
+legacy.py: Messadapter um die unveraenderte RW1-Budgetklasse; nur kuenstliche
+  Wurzeln und Zeitinstrumentierung im Diagnoseprozess ersetzt.
+incremental.py: getrennte Korrektur, ohne RW1-Import oder Forschungseinstieg.
+tests.py: gezielte Fehler-/Integritaetspruefungen.
+entry.py:512MiB-/2Prozess-/240s-/300s-Diagnosehuelle und unabhaengiger Abgleich.
+Die Diagnosehuelle wurde nach Legacy-Messung um die neue Variante und den
+Prozessschreibtest ergaenzt; workload.py und legacy.py sind mit den urspruenglichen
+Messbindungen identisch. Die urspruenglichen result/request/closure-Belege bleiben
+unveraendert. Keine historische RW1-Datei wurde geaendert oder neu versiegelt.
+
+RESSOURCEN
+Alle neun Diagnoseprozesse (Setup,3 Legacy,Tests,Schreiber,3 inkrementell)
+beendeten sich erfolgreich mit Cleanup. Hoechste gemeinsame Jobspitze93057024
+Bytes; laengster Supervisorabschnitt81,071831s vor letzter Abschlussdatei,
+auch einschliesslich Abschluss unter300s und Worker jeweils unter240s.
+16MiB begrenzen das gesamte neue Paket inklusive beider kuenstlichen Ausgaben,
+initialem Fuellbestand, Kontrolljournal, Tests, Bericht und Uebersichtssicherung.
+Exakte finale Groessen und Reserven: resource-balance.json/delivery-binding.json.
+
+URTEIL UND BEGRUENDETER ANSCHLUSS
+Belegt ist die Scan-Dominanz in einer RW1-aehnlichen kuenstlichen Exportlast und
+deren erhebliche Reduktion durch inkrementelle Buchfuehrung. Der genaue Zeitanteil
+im vergangenen realen RW1-Lauf ist damit nicht nachtraeglich gemessen. Auch der
+korrigierte Mock-Ablauf beweist keine Einhaltung des vollstaendigen Forschungslimits.
+Keine Aussage zu S1-S4 oder Forschungsnutzen; RW1 bleibt TECHNICAL_FAILURE und
+seine Berechtigung verbraucht.
+
+Empfehlung: ein begrenztes technisches Anschluss-Paket fuer die getrennte neue
+Budgetversion entscheiden. Darin alle RW1-Schreiber und Supervisor-/Worker-
+Uebergaenge an die Schnittstelle anbinden, vorhandene Gates/Reserven erhalten
+und ausschliesslich kuenstlich pruefen. Die alte RW1-Version unveraendert lassen.
+Erst nach dieser Integration ueber einen neuen Forschungsanschluss entscheiden;
+keine Wiederholung oder Fortsetzung aus der verbrauchten Freigabe ableiten.

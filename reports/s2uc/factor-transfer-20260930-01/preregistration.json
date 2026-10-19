@@ -1,0 +1,169 @@
+{
+  "created_utc": "2026-09-30T14:16:28.097365+00:00",
+  "selection": "all complete g1,g2,g3,69 events,7 original hint points; no outcome selection",
+  "targets": {
+    "g1/12": {
+      "position": 1,
+      "origins": [
+        {
+          "formation": "g1-p1",
+          "ordinals": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "formation": "g1-p2",
+          "ordinals": [
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    "g1/24": {
+      "position": 2,
+      "origins": [
+        {
+          "formation": "g1-p1",
+          "ordinals": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "formation": "g1-p2",
+          "ordinals": [
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    "g1/26": {
+      "position": 0,
+      "origins": [
+        {
+          "formation": "g1-p3",
+          "ordinals": [
+            13,
+            14,
+            15,
+            16
+          ]
+        }
+      ]
+    },
+    "g2/38": {
+      "position": 1,
+      "origins": [
+        {
+          "formation": "g2-p1",
+          "ordinals": [
+            27,
+            28,
+            29,
+            30
+          ]
+        }
+      ]
+    },
+    "g3/60": {
+      "position": 2,
+      "origins": [
+        {
+          "formation": "g3-p1",
+          "ordinals": [
+            44,
+            45,
+            46,
+            47
+          ]
+        }
+      ]
+    },
+    "g3/67": {
+      "position": 2,
+      "origins": [
+        {
+          "formation": "g3-p1",
+          "ordinals": [
+            44,
+            45,
+            46,
+            47
+          ]
+        }
+      ]
+    },
+    "g3/69": {
+      "position": 0,
+      "origins": [
+        {
+          "formation": "g3-p3",
+          "ordinals": [
+            54,
+            55,
+            56,
+            57
+          ]
+        },
+        {
+          "formation": "g3-p4",
+          "ordinals": [
+            61,
+            62,
+            63,
+            64
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "original": "unchanged",
+    "half": "ldexp(value,-1) on both frames/all bands",
+    "double": "ldexp(value,1) on both frames/all bands",
+    "reverse": "original frame order swapped",
+    "local": "ldexp(value,-1) on first frame only"
+  },
+  "target_scope": "original/half/double use bound origin AND position. reverse/local have no assigned desired target; report observed origins without post hoc target attribution.",
+  "repeat": 2,
+  "budget": [
+    16,
+    2
+  ],
+  "preconditions": [
+    "bindings valid",
+    "69 complete ordered events,44 formation frames,14 hint frames,11 closes",
+    "48 finite nonnegative band values and unequal bands present",
+    "half/double finite and exactly reversible, nonzero remains normal",
+    "no new source production; derived variants are POSTHOC_VECTOR_TEST, parent metadata is not new production evidence"
+  ],
+  "criteria": [
+    "every E match in F at factor1",
+    "every F match satisfies one common factor on all96 values",
+    "complete F match set independently enumerated",
+    "repeats equal",
+    "same pre/post states and subsequent transitions as no-hint control",
+    "gain = E empty F unique; target gain additionally bound origin+position",
+    "other unique matches, ambiguities and lost uniqueness separate",
+    "no statistical independence claim"
+  ],
+  "bindings": {
+    "reports\\s2uc\\p2-supplier-correction-20260930-01\\final\\retained-success\\product\\record.json": "f9f2ce5044c1e9ee6105e3e363d084590271bf7b76f662785dc9f06c0e03955a",
+    "reports\\s2uc\\p2-supplier-correction-20260930-01\\final\\retained-success\\appendix\\provenance.json": "08fbc5bc0bbdbb0f681bc9379170544dfa5400c5697eefd54d5a7fe7580d740a",
+    "tools/_s2uc_provisional_hint.py": "3fcf1c358548c85ddbec462028a43a96e3ec24a6bffd2948ad87da502f802c8e",
+    "tools/_s2uc_factor_hint.py": "f1fdd62043d7939cd7b144eae797f84c94ff3196979d1028798d2af546220e19",
+    "tools/_s2uc_four_arm.py": "214805475c8794663026798b95f88f4b6e5cd6455d474a4eb75b1ee2c5e5a16b",
+    "tools/_s2ub_candidate_confirmation.py": "4178198b43fbbefd3cd550307ec114540c2167a3ae066e22bde01f5223f0ca8a"
+  }
+}

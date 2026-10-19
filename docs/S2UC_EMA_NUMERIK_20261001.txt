@@ -1,0 +1,25 @@
+Vor Implementierung festgelegte Numerik fuer paired_error_ema_v1
+2026-10-01
+
+MAE48: binary64-Akkumulator initial +0.0; k=0..47 in dieser Reihenfolge:
+d=abs(x[k]-y[k]); s=s+d; abschliessend s/48.0.
+Eingaben exakt48 endliche Python-float-Werte. Nichtendliche Differenz oder
+Zwischensumme: Fehler, keine Zustandsaktualisierung. Keine fsum-, NumPy-,
+vektorisierte oder abweichende Baseline-Arithmetik in diesem neuen Vergleich.
+Historische Berichte/Observer werden nicht geaendert oder neu berechnet.
+
+EMA: erste Beobachtung direkt (e_C,e_P), danach fuer beide Fehler
+(0.5*alt)+(0.5*neu), erst beide berechnen und validieren, dann gemeinsam
+veroeffentlichen. Keine Teilaktualisierung. alpha=1/2; Kontext nur E_C<E_P,
+Gleichstand und fehlende Erfahrung waehlen Persistenz. Native Unterlauf-
+rundung beibehalten, keine neue Toleranz oder Mindestschwelle.
+
+Interne Rueckmeldung und alle drei Baselines des neuen Gegenprobenanschlusses
+muessen dieselbe mae48-Funktion verwenden. Das ist die eindeutige Praezisierung
+der Summation im angenommenen Entscheidungsvertrag, keine Ergebnisauswahl.
+
+Fuer den ausdruecklich eingeschalteten Zusatz werden Hop, Fenster, Startzeit,
+Ordinals und Zielzeiten auf nichtnegative signed63-Bit-Werte begrenzt,
+Spurgenerationen auf positive uint64. Kein Wrap. Das begrenzt temporaere
+Metadatenobjekte fuer den16-KiB-Nachweis. Der deaktivierte bisherige Pfad
+und dessen vorhandene Grenzen bleiben unveraendert; kein neuer Signalparameter.

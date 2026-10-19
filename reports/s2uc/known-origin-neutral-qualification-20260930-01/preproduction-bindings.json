@@ -1,0 +1,13 @@
+{
+  "plan_sha256": "81c7edb0ece7716789f414ca9ebb02a060080f0e8bc56e4bc0c36a76a253cba7",
+  "generator_sha256": "7e74ebf59c0ba1bc8b7ee96a5a155f3e61196403787ddbfd6672dcd1ac2bd804",
+  "implementation_bindings": {
+    "tools/_s2uc_bounded_audio.py": "d71cab9b5daef66710316084939e6d39d14d16bc32306f41dbd605f3be7c2519",
+    "tools/_s2nj_private_auditory_output_projection.py": "e052cc76cf4c9678e11673d95390dea21634bba8082187567a760faaaf4904e5",
+    "mcm_field_organism/log_spectral_receptor.py": "26a6bd8f2d190db60c75ad29f275b3bd8b09b6d26d4ad54e4396176c4a36d2b0",
+    "mcm_field_organism/broadband_hearing_path.py": "a20456b24c04d099ba5ee2da6250e3d83dc657392603c41d816b13ca68a37fb7"
+  },
+  "judge_sha256": "15cf646a09b0110f526b07ed9fa02b5576c157dd87bf66ad2230ff899e49f70f",
+  "observer_sha256": "37b7de8f426d351fcd27a90f89f9188ec648ac0ed11a67c6b53690aeaf006cb5",
+  "evaluation_template_sha256": "db296a9e672e691c66a517617615aa63d1e1461ea7eac89192facf5bbf9d9b92"
+}

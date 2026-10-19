@@ -1,0 +1,13 @@
+{
+  "request_bytes": 16777216,
+  "successful_bytes": 654311424,
+  "winerror": 1455,
+  "available_system_commit": 16715546624,
+  "memory": {
+    "working_set": 18432000,
+    "private_commit": 666845184,
+    "os_peak_working_set": 18976768,
+    "os_peak_private_commit": 667545600
+  },
+  "simulated": false
+}

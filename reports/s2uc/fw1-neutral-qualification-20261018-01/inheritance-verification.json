@@ -1,0 +1,43 @@
+[
+  {
+    "binding": "preservation-before.json",
+    "files": 3015,
+    "status": "PASS"
+  },
+  {
+    "binding": "reports\\s2uc\\zw1-witness-audit-20261018-01\\delivery-manifest.json",
+    "sha256": "8ad62bd7d80734b84265bb08420bea1b878ec0a556bd6d5c60df949c9d100b16",
+    "files": 43,
+    "status": "PASS"
+  },
+  {
+    "binding": "reports\\s2uc\\zw1-comparison-16h-01\\delivery-closure.json",
+    "sha256": "bad2f49c9f46a5e743767c0ee37091ddde7e254d6b5063050ae1c941965c2731",
+    "files": 158,
+    "status": "PASS"
+  },
+  {
+    "binding": "reports\\s2uc\\er1-v2-comparison-16h-01\\delivery-closure.json",
+    "sha256": "fc0633293f9c5d92e45e69cca9d1959c546d2252abce2c1daa8c76da90ed4bbd",
+    "files": 139,
+    "status": "PASS"
+  },
+  {
+    "binding": "reports\\s2uc\\er1-comparison-16h-01\\delivery-closure.json",
+    "sha256": "6e46989d5920a269f3ed2e313e57101b8637950bac4b29f340fb14735a2a56bb",
+    "files": 43,
+    "status": "PASS"
+  },
+  {
+    "binding": "reports\\s2uc\\er1-v2-witness-audit-20261018-03\\delivery-manifest.json",
+    "sha256": "71eb768ffc30ee15144df276c0f105a4f875bc19a7ec86b8a54e580f36314392",
+    "files": 41,
+    "status": "PASS"
+  },
+  {
+    "binding": "reports\\s2uc\\zw1-research-preparation-20261018-01\\prestart.json",
+    "sha256": "28a1b008daaa9663a3f7ce3f403dc631526c0f7f78c2cebe82f8d89962e3dc13",
+    "files": 3093,
+    "status": "PASS"
+  }
+]

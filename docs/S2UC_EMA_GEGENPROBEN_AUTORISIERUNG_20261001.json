@@ -1,0 +1,16 @@
+{
+  "status": "AUTHORIZED_ONCE",
+  "action": "RUN_EMA_COUNTERPROBES",
+  "plan_sha256": "36e12eb361be0b88811a82e692fdd23ffceb8d2fbb9d65b27b55458358714e13",
+  "binding_sha256": "721da476a3bfce6f4e69265b76a7f4462db7559bda7348cc642cc06951ae5347",
+  "runner_sha256": "0c769b73a8136d53e0251e0fe3a7cbaad12f53cdb73a9baf2f202d0dd1559a3c",
+  "stories": [
+    "constant",
+    "switch_return"
+  ],
+  "arms": [
+    "E",
+    "K",
+    "P"
+  ]
+}

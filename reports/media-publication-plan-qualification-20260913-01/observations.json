@@ -1,0 +1,1 @@
+[{"base":89972,"copies":7744,"created":12049,"limit":131072,"rejection":"BEFORE_MEDIA","reserves":24576,"sum":134341,"test":1},{"independently_removed_positions":82,"test":5},{"failure_peaks":[126597,130469,134341],"paths_are_alternatives":true,"success_peak":134341,"test":7}]

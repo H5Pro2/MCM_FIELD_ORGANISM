@@ -1,0 +1,130 @@
+PCM-ZEITVERLAUF: STATISCHER BESTANDSBEFUND UND NICHT AUSFUEHRBARER ENTWURF
+Stand 2026-09-30. Dokumentation, keine Laufnummer und keine Ausfuehrungsfreigabe.
+
+1. BEFUND UND SUCHGRENZE
+In sources/ und reports/ liegen fuenf PCM-Dateien mit je 19200 Byte,
+also je 4800 mono Float32-Samples. Keine WAV/FLAC/RAW/F32-Datei dort gefunden.
+Dateigroessen und SHA256 wurden lesend geprueft; keine Rezeptorverarbeitung.
+
+sources/s2ob/caller-av-basic/window.pcm
+  Byte=19200; Samples(Float32)=4800; SHA256=f1080644e18dac7583d73cd300f9b0dda45ad123c96ba66f4740a5a17a1e6df4
+sources/s2oc/memory-cycle/input-00.pcm
+  Byte=19200; Samples(Float32)=4800; SHA256=80b97d6323c3890a52c31cfc1866fe26e94961fc1a033ae82f990a0eb1f74595
+sources/s2od-neutral/s2od-native-start-qualification-20260911-03/window.pcm
+  Byte=19200; Samples(Float32)=4800; SHA256=17744bb6a4ed1d9d51d85d7eb645cde30352530d494233c434027f9e3193bae4
+reports/memory-checkpoint-qualification-20260912-02/neutral-read.pcm
+  Byte=19200; Samples(Float32)=4800; SHA256=17744bb6a4ed1d9d51d85d7eb645cde30352530d494233c434027f9e3193bae4
+reports/s2uc/pcm-half-20260930-01/half-test-derivative.pcm
+  Byte=19200; Samples(Float32)=4800; SHA256=ccd56ad1aec6e20ab290db83289d004a8e28bfd307557e68cac2288c6ef0242e
+
+Herkunft und zeitliche Aussage:
+- S2OB caller-av-basic/window.pcm: synthetisches Zwei-Ton-Einzelfenster.
+  reports/s2ob/caller-input-binding/provisioning.json bindet mono-float32-le,
+  48000 Hz, n=0..4799, lokale Nullphase und dieselbe Datei je Vorkommen.
+  reports/s2ob/caller-input-binding/binding.json bindet Datei und Hash.
+  Mehrere Formationen liefern deshalb keine weiteren PCM-Zeitabschnitte.
+- S2OC memory-cycle/input-00.pcm: eigenstaendige Testdatei, anderer Hash als
+  S2OB. reports/s2oc/caller-memory-cycle-20260910-01/record.json,
+  manifest.events[*].pcm, bindet stets dieselbe Datei. Erste audio_window-
+  Angaben: [0,4800), [19200,24000), [28800,33600), [38400,43200).
+  Ereigniszeit und wiederholte Dateireferenz sind kein lueckenlos gespeicherter
+  Rohsignalverlauf. Kein Anschluss an S2OB nachgewiesen.
+- S2OD-neutral/.../window.pcm: neutrales Qualifikationsfenster, 4800 Samples.
+- memory-checkpoint-qualification-20260912-02/neutral-read.pcm: neutrales
+  Checkpoint-Testfenster; final-ledger.json weist 19200 Byte input_stock aus.
+  Beide neutralen Dateien sind byteidentisch; daraus folgt keine Zeitfolge.
+- pcm-half-20260930-01/half-test-derivative.pcm: halbierte Ableitung genau
+  des S2OB-Fensters, belegt in dessen REPORT.txt und result.json. Gleicher
+  Zeitabschnitt, kein nachfolgendes Fenster.
+
+Zusaetzlich statisch gelesene ZIP-Indizes und Mitglieder unter reports/s2oc/:
+package-current-envelope/evidence.zip (84 Mitglieder),
+package-probe/evidence.zip (55), package-probe-bound/evidence.zip (85),
+package-probe-final/evidence.zip (85), package-probe-partitioned/evidence.zip (85),
+s2oc-session-qualification-20260910-02/evidence.zip (95),
+s2oc-shared-closure-qualification-20260910-03/qualification.zip (7).
+Die logischen Dateinamen in index.json umfassen JSON, TXT, MD und CLAIM,
+keine PCM- oder andere Audiodatei; Mitglieder sind UTF-8-lesbare Beleginhalte.
+Materialisierte P2-Vektoren in reports/s2uc/p2-supplier-correction-20260930-01/
+final/retained-success/product/record.json sind keine gespeicherten PCM-Folgen.
+Generatorrezepte (etwa tools/_s2uc_source_context_v9.py) wurden nicht ausgefuehrt.
+Der Befund gilt fuer den geprueften Projektbestand, nicht fuer externe Ablagen.
+
+ERGEBNIS: Keine geeignete herkunftsgebundene Vierfensterfolge nachgewiesen.
+Getrennte Dateien, Duplikate, Ereignispositionen und Halbableitungen werden
+nicht zu einem kuenstlichen zeitlichen Verlauf zusammengesetzt.
+
+2. NICHT AUSFUEHRBARER ENTWURF
+Fehlende Eingabe: eine gebundene, zusammenhaengende mono-float32-le-Datei
+bei 48000 Hz mit mindestens 19200 Samples (76800 Byte), dokumentierter
+Herkunft, zeitlicher Ordnung, Vollstaendigkeit und SHA256. Ein konkreter
+Dateipfad/Hash kann gegenwaertig nicht gebunden werden. Keine Ersatzproduktion.
+
+Fenstervertrag dieses Entwurfs: vier angrenzende, nicht ueberlappende Fenster.
+Auswahl ausschliesslich nach Herkunft und Vollstaendigkeit: erster vollstaendiger
+Vierfensterblock der vorab gebundenen Datei, keine Auswahl nach Rezeptorwerten.
+W1 Samples [0,4800), Byte [0,19200)
+W2 Samples [4800,9600), Byte [19200,38400)
+W3 Samples [9600,14400), Byte [38400,57600)
+W4 Samples [14400,19200), Byte [57600,76800)
+Vorab festgelegter Zweiframe-Hinweis: W2,W3, Sollposition Offset 1 (nullbasiert).
+Falls stattdessen vier rollende Ausgaben mit Hop 480 beauftragt werden, waeren
+Starts 0,480,960,1440 und mindestens 6240 Samples/24960 Byte erforderlich.
+Auch dieser Bestand fehlt. Diese Alternative wird nicht stillschweigend
+mit dem hier entworfenen nicht ueberlappenden Direktpfad vermischt.
+
+Verarbeitung erst in einem spaeteren Ausfuehrungsauftrag:
+LogSpectralReceptor.analyze, unveraenderte Konfiguration 48000 Hz,
+window_size=4800, hop_size=480, 48 Baender, 50..18000 Hz; direkter Fensterpfad,
+keine rollende Historie. NJ: project_auditory_half_v1 unveraendert.
+Vier Originalfenster getrennt verarbeiten. W2 und W3 zusaetzlich sampleweise
+mit Faktor 0.5 halbieren, einmal nach little-endian Float32 packen und jeweils
+vollstaendig durch denselben Rezeptor/NJ-Pfad verarbeiten. Keine Skalierung
+fertiger Vektoren als Ersatz fuer diese Ableitung. Genau sechs geplante
+Rezeptor- und sechs NJ-Aufrufe; keine zusaetzlichen fuer Reihenfolgeumkehr.
+Datei-, Fenster-, Ableitungs-, Code- und Laufzeitbindungen vor der Auswertung.
+
+3. E/F-VERGLEICH UND ABNAHME
+Vier gemessene Originalvektoren bilden die Erfahrung W1,W2,W3,W4.
+Beide Arme erhalten dieselbe Bildungsfolge; eine exakte technische Wiederholung
+bestaetigt die Originalspur. Diese Wiederholung ist keine zweite unabhaengige
+Wahrnehmung. Original bleibt gespeichert; keine skalierte Bestaetigung.
+Unveraenderte E/F-Implementierungen und gleiche Grenze 16 Spur- plus 2 Hinweisframes.
+Identischen Speicherinhalt, Herkunft, Generation und Reihenfolge vor Hinweisen
+nachweisen. Die drei Hinweisfaelle, jeweils zweimal am selben Zustand:
+A: Original W2,W3.
+B: Aus halbiertem PCM gewonnene Ausgaben W2/2,W3/2.
+C: Umgekehrte Originalreihenfolge W3,W2 (Samples innerhalb der Fenster unveraendert).
+
+Alle Treffer an Offsets 0,1,2 mit Rolle, Herkunft, Generation und Faktoren
+vollstaendig ausweisen. F prueft gemeinsame Faktoren 0.5,1,2 ueber beide Frames
+und alle 48 Baender; E bleibt exakt. Mehrere Faktoren derselben Position
+nicht als mehrere Herkuenfte zaehlen. Keine Zielpriorisierung oder Toleranz.
+Zieltreffer Offset 1, andere Position, Mehrdeutigkeit und Nichttreffer getrennt.
+A muss Offset 1 enthalten, kann aber weitere Treffer besitzen. B muss nicht
+bitexakt skalieren; C kann bei symmetrischem/repetitivem Material treffen.
+Weder Eindeutigkeit noch Nichttreffer der Umkehrung werden vorausgesetzt.
+Faktorbeziehung je Fenster fuer Rohrezeptor und NJ numerisch und bitweise
+pruefen, Abweichungen/Unterlauf ausweisen, keine nachtraegliche Materialauswahl.
+Vollstaendige Treffermengen gegen unabhaengige direkte Vergleichsrechnung
+pruefen; Wiederholbarkeit und unveraenderte Speicherzustandsbilder dokumentieren.
+Kosten: Positions-/Faktorvergleiche und Framepeaks; PCM/Rezeptorarrays separat,
+16+2 ist keine Gesamt-RAM-Grenze. Negative Befunde bleiben gueltige Ergebnisse.
+
+Minimal spaeter umzusetzen: ein separater Vierfenster-Treiber auf Grundlage
+von tools/s2uc_pcm_half_check.py mit festem Eingabemanifest, sechs Verarbeitungen,
+drei Hinweisfaellen und vollstaendigem Ergebnisbericht; keine Aenderung der
+Speicherregeln. Gegenwaertig weder implementiert noch ausgefuehrt.
+
+4. ABSCHLUSS UND NAECHSTER FACHLICHER SCHRITT
+PCM-Einzelfenstergegenprobe abgeschlossen: gespeicherter Bericht
+reports/s2uc/pcm-half-20260930-01/REPORT.txt und tests.txt (damals 17/17 PASS).
+48/48 Rezeptor- und NJ-Werte exakt halbiert; F hat drei passende Positionen
+und enthaelt sich mehrdeutig. Kein eindeutiger zeitlicher Abruf nachgewiesen.
+Statische Planung abgeschlossen; zeitliche Gegenprobe mangels gebundener
+zusammenhaengender PCM-Eingabe NICHT AUSFUEHRBAR.
+Empfehlung an den Projektleiter: als naechstes die Bereitstellung einer einzigen
+zusammenhaengenden kontrollierten PCM-Testquelle festlegen, einschliesslich
+Herkunft/Format/Zeitbindung. Erst danach Umsetzung und Laufumfang beauftragen.
+Keine neue Signalerzeugung, Rezeptorverarbeitung oder Testausfuehrung in diesem
+Auftrag. Registry und Originalquellenlauf bleiben zurueckgestellt.

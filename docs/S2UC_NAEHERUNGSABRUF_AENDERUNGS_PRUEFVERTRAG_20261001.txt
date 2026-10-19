@@ -1,0 +1,229 @@
+NAEHERUNGSWEISER HINWEISABRUF -- BEGRENZTER VERTRAG v1
+2026-10-01. Vertrag; urspruenglich Konzept. Technische Implementierung und
+neutrale Tests nun separat beauftragt; keine Parametersuche oder Produktion.
+
+VERBINDLICHE PRAEZISIERUNG VOR IMPLEMENTIERUNG
+Der Ansatz heisst Signalpruefung PLUS Naeherungsabruf. Die Signalpruefung kann
+auch bisher exakte Zuordnungen unterdruecken. Der exakte Referenzarm bleibt
+unveraendert; verlorene exakte Einzelzuordnungen sind separat zu berichten.
+Scheitert im Naeherungspfad die numerische Auswertung eines grundsaetzlich
+signalzulaessigen Speicherpaars, enthaelt sich der gesamte Naeherungsabruf.
+Unbekannte Vergleichbarkeit darf keinen anderen Treffer scheinbar eindeutig
+machen. Auch numerisch unbekannte Signalzulassung wird konservativ als
+globale numerische Enthaltung behandelt. Kein Ueberspringen solcher Paare.
+
+1. Status und genau ein Ansatz
+
+Faktorfortsetzungspruefung abgeschlossen und abgenommen. factor_scaled_v1
+bleibt ausdruecklich waehlbare experimentelle Fortsetzungshypothese;
+legacy_v1 bleibt Standard. Keine automatische Umschaltung, keine Wiederholung
+der abgeschlossenen Versuche. GP-Schaden bleibt trotz mittlerem Nutzen bestehen.
+
+Vorgeschlagen wird genau ein Ansatz: exakter Faktorabruf als erster Pfad,
+danach ausschliesslich bei keinem exakten Treffer ein amplitudennormierter
+L1-Hinweisvergleich bei Faktor1. Kein gelernter Encoder, kein Clustering,
+keine dynamische Schwelle, keine Suche nach weiteren Faktoren oder Zeitdehnung.
+Die Begrenzung auf Faktor1 im Naeherungspfad isoliert kleine Stoerungen von
+Gain-Invarianz. Vorhandene exakte Faktoren0.5/1/2 bleiben im exakten Pfad.
+
+NASA ohne Kontext und P2 ohne Wiedererkennung motivieren die Fragestellung.
+Sie beweisen weder, dass eine Toleranzloesung funktioniert, noch liefern sie
+eine geeignete Schwelle. Keine NASA-Abstaende oder bisherigen Evaluationswerte
+zur Parametrisierung verwenden. Alte Materialien nur historische Evidenz.
+
+2. Distanz und Signalzulassung
+
+Hinweis H=(h0,h1), gespeichertes Paar S=(s0,s1), je48 endliche Komponenten.
+A(v)=fsum(abs(v[k]))/48. Paaramplitude A(H)=(A(h0)+A(h1))/2, analog S.
+L(H,S)=fsum(abs(hj[k]-sj[k]) fuer j=0,1 und k=0..47)/96.
+D(H,S)=L(H,S)/max(A(H),A(S)), nur fuer zugelassene Paare.
+Das ist eine relative L1-Abweichung, keine Wahrscheinlichkeit oder semantische
+Konfidenz. Keine Zentrierung, Pegelanpassung, Koordinatengewichtung oder Toleranz
+pro Kanal. Vorzeichen werden unveraendert verglichen.
+
+Zulassung: A(h0)>epsilon UND A(h1)>epsilon sowie A(s0)>epsilon UND
+A(s1)>epsilon. epsilon wird nur aus neuer Entwicklungs-Kalibration bestimmt
+(Abschnitt4). Gleichheit mit epsilon reicht nicht. Jeder Nullhinweis wird
+abgelehnt. Eine laute Haelfte darf eine stille zweite Haelfte nicht verdecken.
+Dadurch genuegt ein kleiner absoluter Abstand nahe Null nicht zur Zuordnung.
+Auch ein Paar oberhalb der Grenze garantiert keine informative Struktur.
+
+Numerik: binary64, fsum, keine stillen Null-/NaN-Korrekturen. Nichtendliche
+Eingabe -> bestehender geschlossener Vertragsfehler. Nichtendliche Distanz,
+Overflow oder ein nichtpositiver Nenner -> globale numerische Enthaltung des
+Naeherungsabrufs; keine Annahme D=0. Subnormale Werte duerfen nicht durch
+Division scheinbare Sicherheit erzeugen: nichtnormaler positiver Nenner wird
+abgelehnt. Vor der spaeteren Umsetzung gilt es, Summen-Overflow im festen
+synthetischen Wertebereich auszuschliessen und Extremfaelle neutral zu testen.
+Keine Behauptung allgemeiner Robustheit fuer beliebige binary64-Werte.
+
+3. Entscheidung, Konkurrenz und unveraenderte Memory
+
+Referenzarm E: vollstaendig unveraenderter exakter Faktorabruf.
+Vorschlagsarm N: neue, explizit gewaehlte Abrufpolicy mit folgender Reihenfolge:
+a) Unzureichender Hinweispegel -> ABSTAIN_LOW_SIGNAL. Das gilt fuer N auch bei
+   einem exakten Null-/Kleinsignalmatch. E bleibt unveraenderte Vergleichsreferenz.
+b) Bestehenden exakten Abruf unveraendert lesen. Mehrere exakte Matcheintraege
+   bleiben mehrdeutig. Ein exakter Match bleibt mit seinen Faktoren erhalten,
+   sofern auch sein gespeichertes Paar die Signalzulassung besteht. Sonst
+   Enthaltung; keine nachtraegliche Suche nach einem guenstigeren Ersatzmatch.
+c) Ausschliesslich bei null exakten Matcheintraegen alle bestehenden Kandidaten-
+   und Erhaltungsspuren an den bisherigen drei Offsets vergleichen, Faktor1.
+   Jeder zugelassene Vergleich mit D<=tau zaehlt als Naeherungstreffer.
+d) Null Treffer -> ABSTAIN_NO_APPROX_CONTEXT. Genau ein Treffer -> vorlaeufige
+   Naeherungszuordnung mit D,tau,epsilon und Kennzeichnung APPROXIMATE.
+   Mehrere Treffer -> ABSTAIN_APPROX_AMBIGUOUS. Kein naechster Nachbar gewinnt
+   automatisch; kein Tie-Breaker, kein Mittelwert und kein Labelabgleich.
+   Verschiedene Offsets derselben Spur bleiben verschiedene Treffer.
+
+Ein exakter Einzelmatch wird nicht nachtraeglich mit approximativen Nachbarn
+vermischt. Diese bewusst enge Erweiterung repariert daher keine bereits im
+exakten Pfad vorhandene Fehlzuordnung bei gemeinsamem Anfang. Sie muss diese
+Grenze im Vergleich sichtbar lassen. Herkunftslabels erreichen den Abruf nicht.
+
+Naeherungstreffer ist eine Abrufhypothese, niemals eine neue exakte Bestaetigung.
+Aufnahme, Viererbildung, Bestaetigung, Auffrischung, Verdrängung und Kapazitaet
+unveraendert. Eingehende Frames werden nicht geglaettet oder ersetzt.
+Alle approximativen Zuordnungen tragen Faktor1 und separate Matchqualitaet;
+keine Behauptung, die Hinweiswerte seien exakt gleich. Eine technische
+Receipt-Erweiterung muss diese Unterscheidung erhalten, nicht den alten
+exakten Matchstatus vortaeuschen.
+
+Fortsetzungsregeln bleiben unveraendert. Fuer den Hauptvergleich wird in beiden
+Armen legacy_v1 fest gewaehlt: ein zulaessiger einzelner Faktor1-Nachfolger
+oder Enthaltung. Kein Umschalten auf factor_scaled_v1 nach Abrufqualitaet.
+Die neue Abrufhypothese darf eine Fortsetzung veranlassen, aber keine neue
+Skalierungs-/Fallbackregel. Offset2 hat weiterhin keinen Nachfolger.
+
+4. Parameter ausschliesslich aus neuer Entwicklung
+
+Zwei neue genealogisch getrennte Familien AR-DEV und AR-EVAL, keinerlei
+Ableitung aus NASA, P2 oder bisherigen FC-/Herkunftsfamilien. Vor Produktion
+Rezept, Seeds, Transformationen, Zielpositionen und Profil maschinenlesend
+festlegen. Heute noch keine konkreten Daten oder aus Daten bestimmten Zahlen.
+
+Ein klar begrenzter direkter Vektorversuch mit eigenem48er-Testprofil dient
+zunaechst der Adapterfrage. Er ist kein Nachweis fuer Rezeptor/NJ oder reale
+Audiorauschrobustheit. Stoerungen liegen in derselben normierten Vektordomaene
+wie das neue Profil; der spaetere Materialplan muss deren Amplitude explizit
+binden. Keine nachtraegliche Uebertragung auf PCM-Rauschamplituden.
+
+epsilon: acht gesonderte reine Stoerungsframes in AR-DEV, ohne Basisepisode
+oder Memory, vorab mit demselben Stoerungsrezept erzeugt. epsilon=max A(v)
+ueber diese acht Frames. Kein Optimieren von epsilon anhand Trefferquoten.
+Ein positives normales epsilon ist Voraussetzung; sonst Kalibrationsabweichung
+melden und Materialkonzept neu entscheiden, nicht stillschweigend ersetzen.
+Diese endliche synthetische Kalibration ist kein geschaetzter physischer
+Sensorrauschboden. Nicht fuer andere Profile oder Quellen verallgemeinern.
+
+Einziger optimierter Parameter tau aus der VORAB festen endlichen Menge
+{0,1/256,1/128,1/64,1/32,1/16,1/8}. Kein Nachverfeinern des Gitters.
+Jede Einstellung sieht dieselben AR-DEV-Geschichten mit leerem Startzustand.
+Zulaessig nur, wenn die Menge falsch eindeutig zugeordneter Pruefpositionen
+unter N eine Teilmenge der entsprechenden Menge unter E ist. Damit kann ein
+zusaetzlicher Fehler nicht durch einen anderen behobenen Fehler kaschiert werden.
+Pruefung ueber positive UND negative Herkunftsfaelle, nicht nur Negative.
+Bereits falscher exakter gemeinsamer-Anfang-Fall bleibt sichtbar und wird
+nicht als neu hinzugekommener Fehler gerechnet.
+
+Unter zulaessigen Einstellungen: maximale Zahl korrekter Zuordnungen auf den
+vorab benannten Stoerungspositiven; bei Gleichstand kleinstes tau. Kein Auswahl-
+kriterium aus Fortsetzungs-MAE. Ohne mindestens eine zusaetzliche korrekte
+Stoerungszuordnung gegen E gilt der Ansatz als ohne Entwicklungsfortschritt;
+keine automatische Evaluation oder Suche nach guenstigeren Episoden.
+
+Vor AR-EVAL epsilon,tau,Code,Profil,Referenz,Labels und Auswertung einfrieren.
+Keine Neukalibration auf AR-EVAL, keine Auswahl nach dessen Abstaenden.
+AR-EVAL kann trotz fehlerfreiem Entwicklungsvergleich neue Fehler zeigen.
+Jede spaetere Anpassung verbraucht diese Evaluation als bekannte Entwicklung.
+
+5. Kleine Fallmatrix und Materialbedarf
+
+Je Familie vier Basisepisoden A,B,C,D mit je4 Frames. D teilt vorab die ersten
+zwei Frames mit A, hat eigene Fortsetzung. B: eigene Erzeugung mit gleicher
+nominaler Amplitude. C: getrennt erzeugte Episode direkt nach A im dokumentierten
+synthetischen Quellzeitablauf. C-Nachbarschaft ist eine Ablaufkontrolle, kein
+Beleg natuerlicher zeitlicher Statistik. Alle Ableitungen bleiben in der Familie.
+
+Elf Prueffaelle je Familie, feste Paare ab1. Normal A,A regulaer lernen,
+dann zwei Hinweisframes und ein Zielframe (Ziel11); keine direkte Vorbelegung.
+Konkurrenzfall lernt A,A,B,B und prueft am Ziel19.
+
+ID | Hinweis und Zukunft | Pruefzweck
+R0 | A unveraendert | exakte positive Kontrolle
+R1 | A-Hinweis mit kleiner fester additiver Stoerung; Ziel originales A2 | Stoerungspositiv
+R2 | A-Hinweis mit doppelter R1-Stoeramplitude; Ziel originales A2 | vorab staerkeres Stoerungspositiv
+R3 | R1-Hinweis; Ziel abweichende A-Fortsetzung wie zweiter Hinweisframe | Nutzen-Gegenfall, Persistenz exakt
+N1 | eigenes B bei gleichem nominalem Pegel | fremde Herkunft ohne Pegelhinweis
+N2 | benachbartes C | zeitliche Nachbarschaft ist keine Identitaet
+N3 | D mit bitgleichem A-Anfang | bekannte kausale Herkunftsgrenze
+N4 | A,A,B,B lernen; Hinweis komponentenweise Mitte der A/B-Anfaenge | konkurrierende Naehe, keine erzwungene Auswahl
+Z0 | Nullpaar; eigener Null-Zielframe | kein sicherer Abruf aus Null
+Z1 | reines Stoerungspaar aus eigenem Testdraw; Ziel weiterer Stoerungsframe | kleine Signalbetraege ohne Episode A
+P0 | ganze A-Query mit festem sehr kleinem Gain | positive Herkunft, beabsichtigte Signal-Enthaltung
+
+R1/R2-Stoerungsdraws und Amplituden VOR Produktion festlegen, kein Matcherzugriff
+des Generators. P0-Gain ebenfalls vorab fest; Signalpruefung kann scheitern oder
+bestehen und wird als Befund berichtet, nicht durch nachtraeglichen Gain korrigiert.
+N4-Mischhinweis besitzt eigene externe Mischherkunft M, nicht A oder B. Liegt
+beides ausserhalb tau, ist Enthaltung korrekt; liegen mehrere innerhalb tau,
+ist Mehrdeutigkeit korrekt; ein Einzelmatch waere eine falsche Zuordnung.
+Z0/Z1/Mix sind eigene Herkunftsmarken, keine aus dem Match abgeleiteten Labels.
+P0 bleibt positiv, auch wenn die gewollte sichere Enthaltung Abdeckung verliert.
+
+Materialbedarf je Familie:16 Basisframes, feste abgeleitete Querytripletts
+fuer elf Faelle (maximal33 weitere Frames), AR-DEV zusaetzlich8 Kalibrationsframes.
+Pro Abrufarm129 Aufnahmen,11 Pruefziele und48 andere erreichbare Lernziele.
+Wiederholtes Lernen in verschiedenen Geschichten schafft keine unabhaengigen
+Basisepisoden. AR-DEV/AR-EVAL getrennt ausweisen, nicht poolen.
+Eine kleinere separate technische Fixture mit zwei kontrolliert innerhalb tau
+liegenden Quellen prueft Konkurrenz unabhaengig davon, ob N4 empirisch nahe ist.
+Sie zaehlt nicht als weiteres Leistungsziel.
+
+6. Bewertung, Kosten und Abbruch
+
+Herkunft: korrekt/falsch/mehrdeutig/Enthaltung je Position und positiver/negativer
+Klasse, Rollen, exact/approximate, Signalablehnung und Abstand. Mehr Abdeckung
+allein ist kein Erfolg. Neue falsche Einzelzuordnungen explizit relativ zu E.
+
+Fortsetzung: konkrete Prognose-MAE beider Abrufarme mit festem legacy_v1 sowie
+Persistenz. Gemeinsame Zielmasken angeben; Nullabdeckung undefiniert. Zusaetzlich
+je Arm festes Kontext-sonst-Persistenz-Beobachterschema auf allen elf Zielen.
+Alle Schaeden gegen Persistenz und exaktes Beobachterschema mit Fall-ID erhalten.
+Kein Fallback im System. R1/R3 und R0/N3 vor Folgeframe kausal gleiche Outputs
+bei gleichen Hinweisen/Vorzustaenden. Keine nachtraegliche Herkunftsreparatur.
+48 Lernziele separat; technische Probe und Kalibration nicht in Erfolgsquote.
+
+Aufwand: bestehende maximal zwei erhaltene Viererspuren plus eine Kandidatenspur,
+je drei Offsets, also maximal9 Paarvergleiche mit je96 Komponenten im neuen
+Fallback. Bestehender exakter Faktorpfad bleibt zusaetzlich bestehen. Lineare
+konstante Arbeit, keine wachsende Suche, keine weiteren Erfahrungsarchive.
+Skalare Summen und maximal9 kleine Metadateneintraege; keine neuen48er-/96er-
+Vektorkopien oder Distanzmatrix. fsum ueber begrenzten Generator. Vorhandene
+16+2 Frameplaetze und2 Prognoseausgaben bleiben Grenze; temporäre Daten und
+Receiptgroesse spaeter instrumentieren. Ein paar skalarer Metadatenbytes ist
+kein zusaetzlicher Memory-Frame. Kein harter Prozess-RAM-Nachweis aus der Planung.
+
+Technisch zu pruefen: keine Rueckwirkung auf Aufnahme/Bestaetigung/Auffrischung;
+Identitaet der Speicherzustaende nach jedem Frame; Policy vor Geschichte binden;
+Null-/Kleinsignal, Grenzgleichheit epsilon/tau, Konkurrenz, nichtendliche Numerik,
+kein Nachfolger, Zukunftsgate, Restabschluss und Ressourcenfreigabe.
+
+Abbruch-/Nichtabnahmeregel fuer diese Forschungslinie:
+- Technische Invariante oder Budget verletzt: keine Leistungsabnahme.
+- Kein zulaessiges tau mit zusaetzlicher korrekter Stoerungszuordnung auf DEV:
+  keinen Nutzen behaupten, keine automatische weitere Parameterrunde/Evaluation.
+- Auf neuer EVAL mindestens eine zusaetzliche falsche Einzelzuordnung gegen E:
+  Ansatz in dieser Fassung nicht als verbesserte Wiedererkennung abnehmen,
+  auch bei hoeherer Abdeckung oder besserer mittlerer MAE.
+- Kein Zugewinn korrekter Stoerungszuordnungen auf EVAL: Robustheitsziel nicht
+  nachgewiesen. Gain-/Zukunftsschaeden getrennt beurteilen, nicht verrechnen.
+Negative Ergebnisse bleiben dokumentiert; kein stilles Entfernen von N1-N4/P0.
+
+7. Kleinster naechster Schritt
+
+Projektleiter entscheidet ueber diesen einen Ansatz und die strikte Fehlerregel.
+Empfehlung: danach zuerst separate Abrufpolicy, Observer und neutrale technische
+Pruefungen beauftragen. Neuer konkreter Materialplan inklusive Amplituden/Seeds
+muss vor Produktion gebunden werden. Keine Implementierung oder Produktion aus
+diesem Konzeptauftrag ableiten; abgeschlossene Faktorversuche nicht wiederholen.

@@ -1,0 +1,44 @@
+{
+  "status": "PASS_BOUNDED_DIRECT_CAPTURE",
+  "ids": [
+    {
+      "id": "D01",
+      "status": "PASS",
+      "cases": 2
+    },
+    {
+      "id": "tests.test_s2uc_ura1_direct_archive.DirectTests.test_D02_roundtrip_order_metadata_cells",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_direct_archive.DirectTests.test_D03_table_edge_dictionary_index_collection_limits",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_direct_archive.DirectTests.test_D04_record_and_temporary_limit",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_direct_archive.DirectTests.test_D05_write_and_encoder_failure_cleanup",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_direct_archive.DirectTests.test_D06_capture_failure_terminates_arm",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_direct_archive.DirectTests.test_D07_immutable_rules_references_and_check_scope",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_direct_archive.DirectTests.test_D08_integer_metadata_key_normalization",
+      "status": "PASS"
+    }
+  ],
+  "accepted_attempts": [
+    "normal-corrected",
+    "faults-corrected"
+  ],
+  "rejected_attempt": "normal",
+  "large_run_executed": false
+}

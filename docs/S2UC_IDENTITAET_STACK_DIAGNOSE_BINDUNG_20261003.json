@@ -1,0 +1,14 @@
+{
+  "code": {
+    "tools/s2uc_identity_stack_diagnosis.py": "8c52da6e5134eb9d3bce8fad3fbe6a5557912e33115a725b523239d32b97b2b7"
+  },
+  "plan_sha256": "856da99c0d9f108976096d4d7456abd5f4536a21e3a41ab51f8cb16c73d6484f",
+  "references": {
+    "docs\\S2UC_TECHNISCHE_WIEDERHOLUNG_V2_BINDUNG_20261003.json": "d752fc323cae2c440c5de7ce7ef540d4245a605e4583ff84dc5f04306d1ce254",
+    "reports\\s2uc\\technical-repeat-preparation-20261003-02\\closure.json": "f548adef30e2f67fc9a4eeddf32b4718fefd4800c60440134066fb6ee02f1945",
+    "reports/s2uc/runtime-reconciliation-20261003-01/analysis.json": "1bb82b306a59b87b54e3b642bd2de9817c262087093d0d55353f2064cd04f916",
+    "reports/s2uc/runtime-reconciliation-20261003-01/closure.json": "ee01c2dae245563bde1f20708673a82f9d6d34440c68fb6ded6e233b47a6d65c",
+    "reports/s2uc/runtime-reconciliation-20261003-01/REPORT.md": "0dc017a8d819ec405ddebd8d6736296835c34577557b7faa1ebed54603c757ba",
+    "reports/s2uc/runtime-reconciliation-20261003-01/verification.json": "f5b6dc2c1a80e43ee29b7441164f40956725b25d78731ca733290f83d5b24bd1"
+  }
+}

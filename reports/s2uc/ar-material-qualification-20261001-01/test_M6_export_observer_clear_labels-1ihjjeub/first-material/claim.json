@@ -1,0 +1,1 @@
+{"action":"PRODUCE_AR_PARTITION","binding_sha256":"d62f2324463367ead7e0719fdbad4beac51e98a7afca2dfe24c0aba2b1df2dfd","partition":"NEUTRAL-DEV","plan_sha256":"a45cc25a9e259bd78ad4faa3c9da31976bead7913d8bf99549d624a2dc14beb2","python":"3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]","status":"AUTHORIZED_ONCE"}

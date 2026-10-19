@@ -1,0 +1,143 @@
+STATISCHER VERGLEICHSVERTRAG: ERHALTUNG DURCH EXAKTE WIEDERWAHRNEHMUNG
+2026-09-30. Analyse/Planung; keine Implementierung oder Ausfuehrung.
+
+1. VORARBEIT UND EVIDENZGRENZE
+Passende Regel bereits vorhanden: tools/_s2tx_recency_confirmation.py,
+RecencyConfirmationStore.close_segment. Bei genau einer vollstaendig gleichen
+Vierframe-Spur wird dasselbe Trace-Objekt ans junge Ende gestellt. Werte,
+Originalframes und Generation bleiben erhalten. Hinweise sind unveraendert.
+Plan: docs/S2TX_AKTUALITAET_EXAKTER_WIEDERWAHRNEHMUNG_PLAN.md.
+Tests: tests/test_s2tx_recency_confirmation.py, sechs Methoden fuer exakte
+Aktualisierung, Umkehrung, Teilabweichung, Unvollstaendigkeit, Mehrdeutigkeit
+und zustandsneutralen Hinweis. Hier nur gelesen, nicht erneut ausgefuehrt.
+Historischer Record:
+reports/s2tx-recency-confirmation-real-20260919-01/record.json.
+Er zeigt [1,2] -> [2,1] nach Wiederwahrnehmung; nach dritter Erfahrung
+Referenz [2,3] mit Verlust 1, Aktualitaetsarm [1,3] mit Verlust 2.
+Ein Hinweis erreicht nur im Aktualitaetsarm Generation 1. Spaetere Wiederkehr
+der verlorenen Erfahrung fuehrt dort zu Generation 4 und Verlust 1.
+
+Wesentliche Einschraenkung laut
+reports/s2tx-recency-confirmation-procedure-20260919-01/REPORT.md:
+Hauptlauf startete vor vollstaendiger neutraler Qualifikation. Der technisch
+verifizierte Record bleibt nicht qualifiziert; spaetere sechs bestandene
+Kontrollen qualifizieren ihn nicht rueckwirkend. Kein alter Hauptlauf wird erneuert.
+
+Heutige Referenz: tools/_s2uc_four_arm.py, CandidateTwoArm.close_segment:
+exakte erhaltene Spur wird bestaetigt ohne FIFO-Aenderung; neue Spur erst nach
+Kandidatenwiederholung promoviert. Test
+ tests/test_s2uc_four_arm.py::FourArmTests.test_b2_two_retained_then_fifo_no_refresh
+prueft fehlende Auffrischung und Erhaltung eines vorhandenen Kandidaten.
+PCM-Belege: reports/s2uc/pcm-competition-20260930-01/result.json und REPORT.txt.
+Sie binden A/D, Hinweise, exakte Bestaetigung und Zustandsneutralitaet.
+
+2. VERBLEIBENDE LUECKE UND ARME
+Die Aktualitaetsidee ist nicht neu. S2-TX nutzt unmittelbare Erhaltung statt
+des heutigen Kandidaten-/Promotionspfads. Offen: eng begrenzte Integration
+mit einem Kandidaten, zwei Erhaltungen, aktuellen Herkunftsbindungen und
+Kontrollen ohne Wahrnehmung bzw. mit ausschliesslichen Hinweisabrufen.
+Kein erneuter Grundsatznachweis der bereits erklaerten Aktualitaetsregel.
+
+Referenz R: heutiger CandidateTwoArm mit unveraendertem exaktem Hinweisabruf
+(ProvisionalHintArm). Variante P: ausschliesslich der erhaltene Vollgleichheits-
+Zweig aktualisiert die Reihenfolge durch Verschieben desselben Trace-Objekts.
+Beide verwenden denselben exakten Abruf (E); keine zusaetzliche E/F-Kreuzung
+und keine Faktorerweiterung fuer diese Erhaltungsfrage erforderlich.
+Generation, Originalsegment, Frameordinale, Werte, Profil und Kandidat bleiben
+unveraendert. Keine neue Zeitvariable, kein Zaehler, kein Schutzgewicht.
+Nur vier neue geordnete form-Eingaben mit regulaerem close und exakter
+Vollgleichheit duerfen auffrischen. Keine hints, Teilfolgen oder Halbgleichheit.
+Die gueltige Zustandsinvariante verhindert doppelte exakt gleiche Erhaltungen;
+keine neue Mehrdeutigkeitsregel aus dem historischen Store importieren.
+
+S2-TX-Operation wiederverwenden, nicht dessen unmittelbare Erhaltungslogik,
+Runner, Qualifikationsplattform oder historische Ereignisgrenzen uebernehmen.
+Kandidatenpromotion, disjunkte Bestaetigungsordinale und FIFO-Verdrangung nach
+aktueller Reihenfolge bleiben identisch. Hinweisabruf wird unveraendert geerbt.
+
+3. FESTE DATEN UND HERKUNFT
+A=W1/W2/W3/W4; D=W4/W2/W3/W1; Z=W4/W3/W2/W1.
+D und Z sind synthetische Montagen, keine kontinuierlichen Aufnahmen.
+Quelle sources/s2uc/temporal-chirp-v1/sequence.pcm,
+SHA256 4774f24ad52ec7e431c360ec1f2d18c663584d1ed3fbffa83fa0f4fe3d5442a6.
+W1..W4 sind aufeinanderfolgende 4800-Sample-Fenster; hashes/Intervalle in
+sources/s2uc/temporal-chirp-v1/provenance.json. Bandwerte in
+reports/s2uc/pcm-temporal-20260930-01/result.json, processed[0..3].projection.values.
+Hinweise: HA=W1/W2 (nur A), HD=W4/W2 (nur D), HBC=W2/W3 (A und D).
+Z-Paare sind W4/W3,W3/W2,W2/W1: keiner dieser drei Hinweise passt auf Z.
+Ableitung aus bereits gepruefter paarweiser Nichtproportionalitaet, keine neue Messung.
+
+4. ENTSCHEIDENDER VERLAUF UND HERKUNFTSVORHERSAGEN
+Ordinale nur fuer Frames, Segmentabschluss separat:
+A-1 1..4 -> Kandidat 1; A-2 5..8 -> Erhaltung A, Generation 1.
+D-1 9..12 -> Kandidat 2; D-2 13..16 -> Erhaltung D, Generation 2.
+Beide Arme danach [A,D].
+A-3 17..20 vollstaendig exakt -> R [A,D]; P [D,A].
+A bleibt Herkunft A-1, Ordinale 1..4, Generation 1; keine neue Generation.
+Z-1 21..24 -> Kandidat 3, Erhaltungsreihenfolge jeweils unveraendert.
+Z-2 25..28 -> Promotion Z Generation 3, Ursprung Z-1/Ordinale 21..24.
+R verdraengt Generation 1 (A), Endbestand [D,Z].
+P verdraengt Generation 2 (D), Endbestand [A,Z].
+D behielte bei Erhaltung D-1/9..12/Generation 2; keine Umbenennung nach Alter.
+
+Kontrolle K0: A-A-D-D-Z-Z ohne A-3. Ordinale 17..20 fuer Z-1,21..24 fuer Z-2.
+Beide Arme [D,Z], A verdraengt. Z Generation 3 mit Originalordinalen 17..20.
+Kontrolle KH: derselbe K0-Verlauf; nach D-2 genau zwei vollstaendige HA-Hinweise
+statt A-3, jeweils eigene Hinweisordinale 10000/10001 und 10002/10003.
+Keine form-Eingaben an dieser Stelle. Beide Arme weiterhin [A,D], spaeter
+[D,Z]. Hinweise duerfen Generationen, Kandidat und Reihenfolge nicht veraendern.
+
+Vollstaendige Endtreffermengen (exakter Abruf in beiden Armen):
+Hauptfall R: HA={}, HD={D@0}, HBC={D@1}.
+Hauptfall P: HA={A@0}, HD={}, HBC={A@1}.
+K0 und KH, beide Arme: HA={}, HD={D@0}, HBC={D@1}.
+Alle Treffer retained mit oben festgelegter Originalherkunft/Generation/Ordinalen.
+Vor Intervention: HA={A@0}, HD={D@0}, HBC={A@1,D@1} in beiden Armen.
+Ein Treffer=CONFIRMED_RETAINED_MATCH; leer=ABSTAIN_NO_MATCH;
+zwei=ABSTAIN_AMBIGUOUS. Keine Zielpriorisierung; HBC-Eindeutigkeit allein ist
+kein Erfolgskriterium, da jeweils andere Konkurrenz verloren geht.
+
+5. WAS ALS NEUE WAHRNEHMUNG GELTEN DARF
+Gespeicherte Vektoren erneut in form einzuspeisen prueft nur eine vollstaendige
+Testpraesentation und die Speicherregel, keine erneute tatsaechliche Wahrnehmung.
+Der kleinste neutrale Integrationsschritt muss deshalb zwei Evidenzstufen trennen:
+a) Entwicklungskontrollen mit gebundenen Vektoren, ohne Rezeptorverarbeitung.
+b) Fuer den behaupteten Eingang ueber Wahrnehmung A-3 separat aus den vier
+gebundenen PCM-Fenstern erneut durch unveraenderten Rezeptor/NJ materialisieren,
+in Reihenfolge mit neuen Eingangsordinalen an beide Arme geben, keine direkte
+Vektorinjektion als Wahrnehmungsnachweis ausgeben. Genau vier Rezeptor- und vier
+NJ-Aufrufe zusaetzlich, keine neue Signalerzeugung. Exakte Gleichheit vor
+Auswertung nachweisen; bei Abweichung Vorbedingung verletzt, keine Anpassung.
+Dies ist kontrollierte erneute Datei-Wahrnehmung, keine unabhaengige neue Aufnahme.
+Die allgemeine Aussage zu natuerlicher Wiederwahrnehmung bleibt offen.
+Keine der beiden Stufen ist mit diesem statischen Auftrag zur Ausfuehrung freigegeben.
+
+6. ABNAHME, KOSTEN UND KLEINSTER FOLGESCHRITT
+Nutzungskriterium: A nach neuer vollstaendiger exakter Wahrnehmung behalten,
+obwohl D aelter nicht wiederbeobachtet wurde. Preis zwingend separat: D geht
+nur in P verloren. Kein pauschaler Gewinner und keine Verrechnung der Verluste.
+Keine Wirkung in K0/KH; alle Hinweise zustandsneutral. Originalobjekte und
+Generationen erhalten; unvollstaendige, abweichende oder bloss hinweisende
+Eingaben duerfen nicht auffrischen. Bestehender Kandidat bleibt unangetastet.
+
+Je Fall/Arm zwei Erhaltungsplaetze, ein Kandidat, vier Bildungsframes.
+A-3 maximal 8 retained+4 forming=12; zweite Z-Praesentation maximal
+8 retained+4 candidate+4 forming=16. Hinweise nur zwischen Bildungen:
+8 retained+2 hint=10. Maximal 16 Spurframes/2 Hinweisframes, keine neue Spur.
+Referenz und Variante getrennt ausfuehren; keine dritte Archivbank.
+Hauptfall 28 Formframes, sieben Abschluesse; Kontrollen je 24 Formframes,
+sechs Abschluesse. Prospektiv pro Fall und Arm je drei Vorher- und drei
+Nachherhinweise, KH zusaetzlich zwei intervenierende HA-Hinweise:
+40 Zweiframe-Abfragen insgesamt ueber 3 Faelle x 2 Arme. Diese Abrufe duerfen
+die Uebergangsbefunde nicht aendern. Keine Halbhinweise oder neue Signalvarianten.
+Beobachter, Quellfixtures und etwaige vier Wahrnehmungsverarbeitungen separat
+bilanzieren; 16+2 ist keine RAM-Gesamtgrenze. Keine neuen Messwerte im Vertrag.
+
+Kleinster notwendiger Vorschlag: S2-TX-Reihenfolgeoperation als schmale private
+Variante des heutigen erhaltenen Vollgleichheitszweigs uebertragen; genau die
+drei obigen Verlaeufe und Eingangs-/Herkunftsinvarianten neutral qualifizieren.
+Bestehende S2-TX-Testideen wiederverwenden, heutige Kandidaten-/Budgetkontrollen
+ergaenzen. Erst separat beauftragte PCM-Wiederverarbeitung schliesst Stufe b.
+Erkenntniswert ist aktuelle Integration und Trennung form/hint unter gleichem
+Budget, nicht Wiederentdeckung von Recency und kein neuer historischer Reallauf.
+Registry, Originalquellenlauf und neue Freigabeplattform bleiben ausgeschlossen.

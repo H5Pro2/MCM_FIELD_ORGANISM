@@ -1,0 +1,17 @@
+Vorbereiteter Vergleichsaufruf -- NICHT AUSGEFUEHRT
+
+Arbeitsverzeichnis:
+C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace
+
+C:/Python314/python.exe -m tools.s2uc_multi_qualification compare --authorization docs/S2UC_MULTI_AUTORISIERUNG_20261003.json
+
+Voraussetzungen: erfolgreiche gebundene Neutralqualifikation und separate
+Einmallauffreigabe fuer genau48 Positionen in U/M/E/K/P. Erst danach darf
+aus S2UC_MULTI_AUTORISIERUNG_VORLAGE_20261003.json eine Autorisierungsdatei
+erstellt werden, ausschliesslich status auf AUTHORIZED_ONCE aendern.
+Heute keine solche Autorisierungsdatei erzeugt und keine Quelle materialisiert.
+
+Der Einstieg prueft Code,Plan,Vertrag,Laufzeit,Qualifikationsabschluss und
+Autorisierung. Der exklusive Ausgabeordner wird vor Quellenerzeugung
+beansprucht. Kein Wiederholungslauf. Qualifikationsdaten werden in die
+gemeinsame4MiB-Grenze eingerechnet;256KiB Abschlussreserve bleibt bestehen.

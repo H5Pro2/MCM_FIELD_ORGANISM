@@ -1,0 +1,24 @@
+test_01_full_sections_and_offline (tests.test_media_replay_sections.Replay.test_01_full_sections_and_offline) ... ok
+test_02_missing_confirmation (tests.test_media_replay_sections.Replay.test_02_missing_confirmation) ... ok
+test_03_duplicate_confirmation (tests.test_media_replay_sections.Replay.test_03_duplicate_confirmation) ... ok
+test_04_regressive_or_foreign_sequence (tests.test_media_replay_sections.Replay.test_04_regressive_or_foreign_sequence) ... ok
+test_05_source_and_time_manipulation (tests.test_media_replay_sections.Replay.test_05_source_and_time_manipulation) ... ok
+test_06_target_before_replay (tests.test_media_replay_sections.Replay.test_06_target_before_replay) ... ok
+test_07_cumulative_budget_boundary (tests.test_media_replay_sections.Replay.test_07_cumulative_budget_boundary) ... ok
+test_08_regressive_counters (tests.test_media_replay_sections.Replay.test_08_regressive_counters) ... ok
+test_09_absolute_deadline_between_sections (tests.test_media_replay_sections.Replay.test_09_absolute_deadline_between_sections) ... ok
+test_10_timeout_inside_section (tests.test_media_replay_sections.Replay.test_10_timeout_inside_section) ... ok
+test_11_deadline_not_renewable (tests.test_media_replay_sections.Replay.test_11_deadline_not_renewable) ... ok
+test_12_native_rpc_deadline_hook (tests.test_media_replay_sections.Replay.test_12_native_rpc_deadline_hook) ... ok
+test_13_receipt_immutable_and_message_size (tests.test_media_replay_sections.Replay.test_13_receipt_immutable_and_message_size) ... ok
+test_14_worker_one_window_release (tests.test_media_replay_sections.Replay.test_14_worker_one_window_release) ... ok
+test_15_failure_account_not_reset (tests.test_media_replay_sections.Replay.test_15_failure_account_not_reset) ... ok
+test_16_bounded_publication_and_failure_form (tests.test_media_replay_sections.Replay.test_16_bounded_publication_and_failure_form) ... ok
+test_17_offline_missing_or_reordered (tests.test_media_replay_sections.Replay.test_17_offline_missing_or_reordered) ... ok
+test_18_available_reference_catalog (tests.test_media_replay_sections.Replay.test_18_available_reference_catalog) ... ok
+test_19_native_late_resume (tests.test_media_replay_sections.Replay.test_19_native_late_resume) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 88.901s
+
+OK

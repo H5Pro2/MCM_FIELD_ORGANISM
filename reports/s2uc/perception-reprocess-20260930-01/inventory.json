@@ -1,0 +1,34 @@
+{
+  "reports/s2uc/perception-reprocess-20260930-01/materialization.json": {
+    "bytes": 118389,
+    "sha256": "24194be843de7df5069eda8cd0cade287a6191f841e26e071d87ef1a23e8d276"
+  },
+  "reports/s2uc/perception-reprocess-20260930-01/preregistration.json": {
+    "bytes": 7932,
+    "sha256": "d9fe13b5f20c54c6bbb13822564d8724b6c6d5b54e0cd7d47d828503e8a0b0d6"
+  },
+  "reports/s2uc/perception-reprocess-20260930-01/REPORT.txt": {
+    "bytes": 7119,
+    "sha256": "244fb7dfd854981e212499422638e912adb9d227ba3108f851653dc5cb8e1439"
+  },
+  "reports/s2uc/perception-reprocess-20260930-01/result.json": {
+    "bytes": 850564,
+    "sha256": "37368e46510ab1baedfed46ab237e47cbe1da6c3570edb4446a189878dadebf8"
+  },
+  "reports/s2uc/perception-reprocess-20260930-01/tests.txt": {
+    "bytes": 4061,
+    "sha256": "a6a0b9aa36df81188c8b8b41c1fd03a31196055ceae84f02e93c8621b82384f3"
+  },
+  "reports/s2uc/perception-reprocess-20260930-01/value-comparison.csv": {
+    "bytes": 26807,
+    "sha256": "697f0aadba0acc1e6d9b8353a81e776db7f112005ad8a036e4da45a066b5252e"
+  },
+  "tools/s2uc_perception_reprocess_check.py": {
+    "bytes": 8786,
+    "sha256": "5d57cb3c680c24886708a07d44789334817901d6fa25fecc5108b66a7595b2be"
+  },
+  "tests/test_s2uc_perception_reprocess.py": {
+    "bytes": 1230,
+    "sha256": "300a905286c84814848410d9ff7d21f4f7f68acbe6c74847b429c91cbd53f20d"
+  }
+}

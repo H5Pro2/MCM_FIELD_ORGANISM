@@ -1,0 +1,13 @@
+{
+  "scope": "measurement archive before footprint/hash-manifest files; distinct from active product ledger",
+  "files": 94,
+  "bytes": 1986840,
+  "raw_samples_bytes": 841342,
+  "phase_markers_bytes": 49796,
+  "generated_cache_files": [
+    {
+      "path": "__pycache__/measure.cpython-314.pyc",
+      "bytes": 22456
+    }
+  ]
+}

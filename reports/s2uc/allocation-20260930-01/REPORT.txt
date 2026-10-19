@@ -1,0 +1,68 @@
+Speicheraufteilung 1K/2R gegen 2K/1R: abgeschlossener neutraler Vergleich
+
+23/23 Entwicklungs- und Regressionstests PASS (3 neue, 20 bestehende), keine Fehler/Skips. Replay Exit0.
+44/44 Hinweisvorhersagen einschliesslich Wiederholungen und 28/28 Zustandsvorhersagen bestaetigt. Keine Abweichungen.
+Vorregistrierung SHA256 a07b115dc0fc75e4fb4ec3e612086baecd223537514e2d9cbc87764c029a3dfc
+Alle vier Folgen je Arm auch ohne Hinweise wiedergegeben; alle Zustandsbilder und Uebergangsreceipts identisch.
+1K/2R unveraendertes B2-V. 2K/1R erbt K2; close_segment unterscheidet sich ausschliesslich in Erhaltungskapazitaet 1 statt2.
+Die lokale Budgetpruefung begrenzt auf16+2. Keine Produktgrenzen geaendert. Alle Referenz-Hashbindungen unveraendert.
+
+HINWEISE MIT VOLLSTAENDIGER HERKUNFT (Wiederholungen identisch, im JSON einzeln)
+Arm | Folge | nach Schritt | Ziel | Entscheidung | Rolle/Generation/Formation/Frameordinale/Position
+1K2R | ABA | 2 | A | ABSTAIN_NO_MATCH | -
+1K2R | ABA | 3 | A | PROVISIONAL_CANDIDATE_MATCH | candidate/3/step3/[30, 31, 32, 33]/@0
+1K2R | AABB | 2 | A | CONFIRMED_RETAINED_MATCH | retained/1/step1/[10, 11, 12, 13]/@0
+1K2R | AABB | 4 | A | CONFIRMED_RETAINED_MATCH | retained/1/step1/[10, 11, 12, 13]/@0
+1K2R | AABB | 4 | B | CONFIRMED_RETAINED_MATCH | retained/2/step3/[30, 31, 32, 33]/@0
+1K2R | DDABA | 2 | D | CONFIRMED_RETAINED_MATCH | retained/1/step1/[10, 11, 12, 13]/@0
+1K2R | DDABA | 4 | A | ABSTAIN_NO_MATCH | -
+1K2R | DDABA | 5 | A | PROVISIONAL_CANDIDATE_MATCH | candidate/4/step5/[50, 51, 52, 53]/@0
+1K2R | DDABA | 5 | D | CONFIRMED_RETAINED_MATCH | retained/1/step1/[10, 11, 12, 13]/@0
+1K2R | DDABA | 5 | B | ABSTAIN_NO_MATCH | -
+1K2R | conflict | 2 | A | PROVISIONAL_CANDIDATE_MATCH | candidate/2/step2/[20, 21, 22, 23]/@0
+2K1R | ABA | 2 | A | PROVISIONAL_CANDIDATE_MATCH | candidate/1/step1/[10, 11, 12, 13]/@0
+2K1R | ABA | 3 | A | CONFIRMED_RETAINED_MATCH | retained/1/step1/[10, 11, 12, 13]/@0
+2K1R | AABB | 2 | A | CONFIRMED_RETAINED_MATCH | retained/1/step1/[10, 11, 12, 13]/@0
+2K1R | AABB | 4 | A | ABSTAIN_NO_MATCH | -
+2K1R | AABB | 4 | B | CONFIRMED_RETAINED_MATCH | retained/2/step3/[30, 31, 32, 33]/@0
+2K1R | DDABA | 2 | D | CONFIRMED_RETAINED_MATCH | retained/1/step1/[10, 11, 12, 13]/@0
+2K1R | DDABA | 4 | A | PROVISIONAL_CANDIDATE_MATCH | candidate/2/step3/[30, 31, 32, 33]/@0
+2K1R | DDABA | 5 | A | CONFIRMED_RETAINED_MATCH | retained/2/step3/[30, 31, 32, 33]/@0
+2K1R | DDABA | 5 | D | ABSTAIN_NO_MATCH | -
+2K1R | DDABA | 5 | B | PROVISIONAL_CANDIDATE_MATCH | candidate/3/step4/[40, 41, 42, 43]/@0
+2K1R | conflict | 2 | A | ABSTAIN_AMBIGUOUS | candidate/1/step1/[10, 11, 12, 13]/@0; candidate/2/step2/[20, 21, 22, 23]/@0
+
+VERDRAENGUNG UND PROMOTION
+ABA: 1K/2R ersetzt A/step1 durch B/step2, dann B durch neues A/step3. 2K/1R promoviert A/step1 (Frames10..13), bestaetigt durch Schritt3.
+AABB: beide promovieren A/step1 durch Schritt2, B/step3 durch Schritt4. 2K/1R verdrangt dabei erhaltenes A, 1K/2R behaelt A und B.
+DDABA: D/step1 (Frames10..13) ist nach Schritt2 in beiden Armen bestaetigt abrufbar, wiederholt nachgewiesen.
+2K/1R erhaelt Kandidat A/step3 (Frames30..33) ueber B/step4 hinweg. Schritt5 bestaetigt A/step3 und verdrangt D/step1.
+Der anschliessende D-Hinweis ist erfolglos. Receipt TRACE_PROMOTED, generation2, candidate_generation2, evicted1.
+1K/2R behaelt bestaetigtes D/step1; das letzte A ist neuer Kandidat step5 (Frames50..53), kein Ersatz fuer Erhaltung des urspruenglichen A.
+Conflictkontrolle: 1K/2R findet B/step2 vorlaeufig eindeutig; 2K/1R weist Kandidaten A/step1 und B/step2 aus und enthaelt sich.
+Im JSON zeigen before/after/removed die volle Herkunft je Rolle. Aus Kandidaten entfernte promovierte Spuren sind keine verlorenen Erfahrungen; receipt unterscheidet dies.
+
+RESSOURCEN UND VERGLEICHSAUFWAND
+Kapazitaet 1K/2R: Bildung4 + Kandidaten4 + Erhaltung8 + Hinweise2 =18 Frames.
+Kapazitaet 2K/1R: Bildung4 + Kandidaten8 + Erhaltung4 + Hinweise2 =18 Frames.
+Beide Grenztests erreichen gleichzeitig16 Spurframes plus2 Hinweisframes; anschliessende FIFO-Ersetzung geprueft.
+Numerische Nutzlastobergrenze jeweils6912Byte. Gleiche Framekapazitaet ist kein Nachweis gleichen RAM-Verbrauchs.
+Fall | ganze Spurvergleiche 1K2R/2K1R | Hinweispositionen 1K2R/2K1R | temporaeres Spurmaximum 1K2R/2K1R
+ABA | 2/2 | 12/24 | 8/12
+AABB | 4/4 | 30/18 | 12/12
+DDABA | 6/6 | 54/60 | 12/16
+conflict | 1/1 | 6/12 | 8/8
+Summen fuer vier Hauptfolgen einschliesslich wiederholter Hinweise: 13/13 ganze Spurvergleiche, 102/114 Hinweispositionen.
+Ganze Spurvergleiche sind gemessene _same_values-Aufrufe. Hinweispositionen zaehlen die vollstaendige Suche, nicht skalare Zahlenvergleiche.
+In AABB hat 2K/1R weniger Suchpositionen, weil A bereits verloren ist; geringerer Aufwand ist dort kein Qualitaetsgewinn.
+Rollenmaxima stehen separat im Ergebnis und sind nicht beliebig addierbar. Hinweismaximum nach Rueckkehr1, temporaer2.
+Temporaere Belegung wird an Python-Tracepunkten fuer eindeutige Frameidentitaeten erfasst; keine native Allokationsvollerfassung.
+Gemessene Aufrufzeiten enthalten Tracing und sind kein Geschwindigkeitsbenchmark. Kein Zugriff des Speichers auf Eingabearchiv.
+
+ABSCHLUSS UND EINORDNUNG
+Erwartete Umverteilung bestaetigt: 2K/1R beguenstigt neue Bestaetigung nach Unterbrechung und opfert dafuer bestaetigte Erhaltung.
+1K/2R schuetzt zwei bestaetigte Erfahrungen, verliert aber die erste A-Herkunft nach dem Zwischeneindruck B.
+Vorlaeufige Treffer werden nicht als gleichwertiger Ersatz fuer bestaetigte Erhaltung gezaehlt. Keine pauschale Gewinnerwertung.
+Dieser Speicheraufteilungsvergleich ist abgeschlossen. Kein weiterer Variantenlauf wird aus diesem Befund abgeleitet.
+Eine Fortsetzung benoetigt eine konkret unbeantwortete Forschungsfrage und ein begruendetes Nutzungskriterium; keine adaptive Aufteilung implementiert.
+Keine Registry-Arbeit, neue Ersetzungsstrategie oder Originalquellenproduktion.

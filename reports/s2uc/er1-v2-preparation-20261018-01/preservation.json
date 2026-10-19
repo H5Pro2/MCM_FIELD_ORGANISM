@@ -1,0 +1,15 @@
+{
+  "bound_files": 2967,
+  "qualification": 43,
+  "preserved": {
+    "er1-comparison-16h-01": {
+      "files": 43,
+      "manifest_sha256": "6e46989d5920a269f3ed2e313e57101b8637950bac4b29f340fb14735a2a56bb"
+    },
+    "er1-structural-correction-20261017-01": {
+      "files": 11,
+      "manifest_sha256": "6ea199faffca2bf9ad7089ec52ad6199e2fa6c9e648cfd0f8906da89e56b0438"
+    }
+  },
+  "method": "Hash-only; no historical research evaluation"
+}

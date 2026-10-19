@@ -1,0 +1,11 @@
+{
+  "tests": 12,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "success": true,
+  "code_unchanged": true,
+  "real_counterprobe_executed": false,
+  "binding_sha256": "1c3ac3be07e69a2c41a54412176da055e6a1517392cca971ca6dc5ee34f901ac",
+  "plan_sha256": "0f01704800dcb7fa0301444b277a6a2c8c427f03221096496e98234e022195ab"
+}

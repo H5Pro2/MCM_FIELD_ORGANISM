@@ -1,0 +1,1 @@
+{"cases":["A0","A480","A2400","B0","B480","B2400"],"contract_sha256":"f8150752bb0008bafef95dad301c25022f4aae83b523c2ed60d3d3f2f7cc2bfe","formula":"RW1_SECTION_3","frequencies":{"A":[430,830,1470,1930],"B":[450,850,2330,2710]},"fs":48000,"hop":480,"kind":"RW1_RESEARCH","samples":19200,"window":4800}

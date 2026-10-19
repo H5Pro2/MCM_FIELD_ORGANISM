@@ -1,0 +1,44 @@
+{
+  "cleanup": {
+    "all_closed": true,
+    "arms": 12,
+    "codec_inactive": true,
+    "partial_files": []
+  },
+  "final_research_binding": false,
+  "inventory": {
+    "files": {
+      "tests/gate": {
+        "bytes": 8,
+        "category": "admin"
+      },
+      "tests/supervisor.json": {
+        "bytes": 671,
+        "category": "admin"
+      },
+      "tests/tests.log": {
+        "bytes": 1635,
+        "category": "admin"
+      },
+      "tests/worker.json": {
+        "bytes": 1317,
+        "category": "admin"
+      },
+      "tests/worker.log": {
+        "bytes": 0,
+        "category": "admin"
+      }
+    },
+    "groups": {
+      "admin": 3631,
+      "archive": 0,
+      "closure": 0,
+      "source": 0,
+      "temp": 0
+    },
+    "scans": 2,
+    "total": 3631
+  },
+  "status": "PASS",
+  "worker_ended": true
+}

@@ -1,0 +1,126 @@
+{
+  "status": "PASS_SMALL_STATE_DELTA",
+  "research_ready": false,
+  "files": {
+    "analysis.json": {
+      "bytes": 2458,
+      "sha256": "836ee14e7476d6a54f3dd509d5d63b2c5962e24a67de2e2bbd406031a2b97055"
+    },
+    "archive/D_hand_case-capture.json": {
+      "bytes": 1483,
+      "sha256": "9852ad522eb9eb1f637a53eef977134faa3e302abff0117ad13151d10ee19b20"
+    },
+    "archive/D_hand_case.delta.json.gz": {
+      "bytes": 13920,
+      "sha256": "8678a268f449f1600456f5b997e6811615106c0c7012b032f0890759917b537e"
+    },
+    "archive/gate": {
+      "bytes": 8,
+      "sha256": "1c34f88707b55e6104c4eb20e71ffa3d33e414b71ef689a15fad0640d0ac58cb"
+    },
+    "archive/lifecycle_trace-capture.json": {
+      "bytes": 1483,
+      "sha256": "97c6f9f7932ebaaa615bb9be084773e718b06067350277aa4877f239a7ef000f"
+    },
+    "archive/lifecycle_trace.delta.json.gz": {
+      "bytes": 11978,
+      "sha256": "4c9e30ba5b17faf93ccfeb9bf5544b4d1b943df9186dd2a33f56538751bff9a5"
+    },
+    "archive/phase.txt": {
+      "bytes": 8,
+      "sha256": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d"
+    },
+    "archive/supervisor.json": {
+      "bytes": 3261,
+      "sha256": "af43c0cca01c807f21447144b8b567ecc87cfad97b232974da211a11938849ff"
+    },
+    "archive/worker.json": {
+      "bytes": 13047,
+      "sha256": "4dbfaa8e4ef1275ae1fa0f0cc76c1da15d612785f07283bc87492205a32d3d94"
+    },
+    "archive/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "binding.json": {
+      "bytes": 1261,
+      "sha256": "2d3365c582bd82d2465e2cec01cc45e0f4f542bfd1ef0e3d8c5a01b159277d53"
+    },
+    "delta-components.json": {
+      "bytes": 349,
+      "sha256": "27f02360f6ab031a5c36f4dddbf56594ebe6b6fa6d4d2a89f35c586800054b68"
+    },
+    "faults/gate": {
+      "bytes": 8,
+      "sha256": "1c34f88707b55e6104c4eb20e71ffa3d33e414b71ef689a15fad0640d0ac58cb"
+    },
+    "faults/phase.txt": {
+      "bytes": 8,
+      "sha256": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d"
+    },
+    "faults/supervisor.json": {
+      "bytes": 1648,
+      "sha256": "79c6616d03e54edb6217ee6653103f9fcec0c266fec0d6e9dc2b65e984defb8d"
+    },
+    "faults/tests.txt": {
+      "bytes": 953,
+      "sha256": "b35581f4374be0fe54004406653cbe9004733fa5eb0f2b04f843afec3583b32a"
+    },
+    "faults/worker.json": {
+      "bytes": 2380,
+      "sha256": "cd26e835959831ec9db9ec3d37651ed52d7d4f9c59fb3ff67631784b4ca1ae74"
+    },
+    "faults/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "integration/D_hand_case-capture.json": {
+      "bytes": 1483,
+      "sha256": "9852ad522eb9eb1f637a53eef977134faa3e302abff0117ad13151d10ee19b20"
+    },
+    "integration/D_hand_case.delta.json.gz": {
+      "bytes": 13941,
+      "sha256": "4ee338453c1f8dfb9a2b6402fdd039a9615cd03539dfb03cd7efc65935fdaa7e"
+    },
+    "integration/gate": {
+      "bytes": 8,
+      "sha256": "1c34f88707b55e6104c4eb20e71ffa3d33e414b71ef689a15fad0640d0ac58cb"
+    },
+    "integration/lifecycle_trace-capture.json": {
+      "bytes": 1483,
+      "sha256": "97c6f9f7932ebaaa615bb9be084773e718b06067350277aa4877f239a7ef000f"
+    },
+    "integration/lifecycle_trace.delta.json.gz": {
+      "bytes": 12170,
+      "sha256": "3266b557068720ed22e099befc42e137fc32356c6c3bc77f3336b240b6eb7962"
+    },
+    "integration/phase.txt": {
+      "bytes": 8,
+      "sha256": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d"
+    },
+    "integration/supervisor.json": {
+      "bytes": 3077,
+      "sha256": "80fe317475cb2fc150efe10f588c287a8fb7b6eeb638fef3aa81b7a74f8cedf9"
+    },
+    "integration/worker.json": {
+      "bytes": 13042,
+      "sha256": "fa8d4d7d17118c464c89d2bcb8137d35599ea80f79457402f3b0b7e04c04bfe5"
+    },
+    "integration/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "REPORT.md": {
+      "bytes": 17657,
+      "sha256": "de5268258968c111631b427a2332f5abe7568b240a35b25c45a790737dde2b8d"
+    },
+    "scaling-estimates.json": {
+      "bytes": 408,
+      "sha256": "19fc40d95e828b7714c723dcc47fc88012c07ae1d7159a040161a1710515bc0f"
+    },
+    "tests.json": {
+      "bytes": 1168,
+      "sha256": "62ac3fb45996954d2c4b7c27c4f68d051723ba12fc946b6bb47542ca8a689384"
+    }
+  }
+}

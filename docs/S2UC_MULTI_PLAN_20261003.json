@@ -1,0 +1,125 @@
+{
+  "status": "BOUND_NOT_AUTHORIZED",
+  "frames": 48,
+  "arms": [
+    "U",
+    "M",
+    "E",
+    "K",
+    "P"
+  ],
+  "recipes": {
+    "X": [
+      "3/16",
+      "5/16",
+      "13/16",
+      "15/16"
+    ],
+    "Y": [
+      "3/16",
+      "5/16",
+      "5/16",
+      "15/16"
+    ]
+  },
+  "blocks": [
+    "X",
+    "X",
+    "X",
+    "X",
+    "Y",
+    "Y",
+    "Y",
+    "Y",
+    "X",
+    "X",
+    "X",
+    "X"
+  ],
+  "masks": {
+    "G": [
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      15,
+      17,
+      19,
+      21,
+      23,
+      25,
+      27,
+      29,
+      31,
+      33,
+      35,
+      37,
+      39,
+      41,
+      43,
+      45,
+      47
+    ],
+    "H": [
+      7,
+      11,
+      15,
+      19,
+      23,
+      27,
+      31,
+      35,
+      39,
+      43,
+      47
+    ],
+    "N": [
+      3,
+      5,
+      9,
+      13,
+      17,
+      21,
+      25,
+      29,
+      33,
+      37,
+      41,
+      45
+    ],
+    "F": [
+      19,
+      35
+    ],
+    "A_W": [
+      23,
+      27,
+      31
+    ],
+    "A_R": [
+      39,
+      43,
+      47
+    ]
+  },
+  "policy": "multi_error_exact_v1",
+  "alpha": "1/2",
+  "metric": "mae48",
+  "experimental_admissions": 240,
+  "internal_reference_advances": 240,
+  "limits": {
+    "packed": 416,
+    "frames": 18,
+    "outputs": 2,
+    "combined": 20,
+    "additional_python": 16384,
+    "receipt": 16384,
+    "utf8": 32768,
+    "export": 4194304,
+    "reserve": 262144
+  },
+  "output": "reports/s2uc/multi-counterprobe-20261003-01",
+  "independent_evaluation": "NOT_TESTED"
+}

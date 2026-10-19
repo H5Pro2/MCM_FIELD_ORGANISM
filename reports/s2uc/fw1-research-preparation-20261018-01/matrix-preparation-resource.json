@@ -1,0 +1,1 @@
+{"hard_job_limit":true,"limit_bytes":536870912,"measurement":"Windows JobObjectExtendedLimitInformation","members":"supervisor and inherited worker","note":"Peak can include an allocation attempt rejected by the job; successful runs must remain below cap.","peak_job_committed_bytes":17764352,"peak_process_committed_bytes":17764352}

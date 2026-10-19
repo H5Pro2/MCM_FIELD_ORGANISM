@@ -1,0 +1,11 @@
+{
+  "baseline_seconds": 1796.1964039999998,
+  "administration": 180,
+  "U": 30,
+  "closure": 60,
+  "total_seconds": 2066.196404,
+  "reserve": 1533.8035960000002,
+  "limit": 3600,
+  "assumption": "16 times neutral80 maximum per baseline plus25percent; no guarantee of T1 competition",
+  "raw_matrix_seconds": 111.2685988
+}

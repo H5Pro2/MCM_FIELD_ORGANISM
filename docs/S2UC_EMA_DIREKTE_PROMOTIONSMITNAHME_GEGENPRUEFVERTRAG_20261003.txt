@@ -1,0 +1,337 @@
+MCM-KI -- Geschlossener Gegenpruefvertrag: direkte Promotionsmitnahme
+2026-10-03 | NUR KONZEPT | NICHT IMPLEMENTIERT, NICHT AUSGEFUEHRT
+
+0. Entscheidung, Umfang und Evidenzstatus
+
+Genau eine neue Regelvariante M wird vorgeschlagen: gueltige Fehlerpaare
+einer unmittelbar promovierten, identitaetserhaltend weiterlebenden
+Kandidatenspur einmalig auf deren neuen retained-Schluessel verschieben.
+Keine Varianten mit Gewichtung, Teilmitnahme, Altersschwelle oder Auswahl
+nach Vorzeichen. In M gilt diese eine Regel an JEDEM zulaessigen Ereignis;
+kein Herauspicken einer guenstigen einzelnen Promotion.
+
+Arme: M=Mitnahme-EMA; E=unveraenderte Reset-EMA; K=Kontext-sonst-Persistenz;
+P=Persistenz. M/E: alpha1/2, gleicher kalter Default P, Gleichstand P,
+Kontextwahl genau bei EC<EP. Alle: exact_v1, legacy_v1, unveraendertes
+mae48. Keine Aenderung von Aufnahme, Abruf, Kandidatenbestaetigung,
+Verdraengungsreihenfolge, Prognosevektoren oder Quellfolge.
+
+Die unten genannten Erwartungen sind statische Hypothesen, keine neuen
+Messungen oder Freigaben. Der bekannte64er-Bestand ist ausschliesslich
+Entwicklungs-/Regressionsmaterial. Auch die beiden kurzen, offengelegten
+Konzeptfolgen sind kontrollierte Entwicklungskontraste, keine unabhaengige
+Evaluation oder Grundlage fuer einen allgemeinen Lernnutzenbeleg.
+Ein spaeterer Lauf bedarf technischer Qualifikation, eingefrorener Bindung
+und separatem Ausfuehrungsauftrag. Heute keine Umsetzung oder Ausfuehrung.
+
+1. Identitaetsnachweis und Ausschlussfaelle
+
+Zulaessig nur bei einem tatsaechlich vom normalen close_segment gemeldeten
+TRACE_PROMOTED innerhalb derselben Adapter-/Owner-/Profil-/Stream-Lebenszeit.
+Unmittelbar davor lebt genau der benannte Kandidat c; unmittelbar danach
+enthaelt genau der neue retained-Eintrag r dessen ORIGINALFRAMES. Die
+bestehende Implementierung verwendet dafuer self._candidate.frames.
+Erforderlich ist die unmittelbare Ereigniszuordnung c->r mit identischen
+Frame-Objekten/Frame-Tupel und Originalordinalen im selben Scope. Die
+bestaetigende neue Viererfolge ist kein Ersatz fuer diese Originalframes.
+Rolle plus Generation bilden weiterhin verschiedene Schluessel; c und r
+muessen nicht dieselbe Generationsnummer besitzen.
+
+Wertehashes/Ordinalausgaben belegen den Vorgang im Beobachter, berechtigen
+aber allein keine Mitnahme. Gleiche Werte, gleiche Generationsnummer,
+aehnlicher Verlauf, gleiche Bezeichnung, Archivsuche oder spaetere
+Wiederkehr genuegen nicht. Nach Kandidatenersetzung, echter Verdraengung,
+Scopewechsel oder Schliessen der Geschichte endet die Kontinuitaet.
+Kein dauerhaftes Identitaetsregister, kein Tombstone und kein Zusatzspeicher
+zum Wiederherstellen geloeschter Erfahrung. Keine Uebernahme r1->c7 bei
+spaeterer A-Wiederkehr; c7->r5 waere ein anderer, direkter Promotionsvorgang.
+
+2. Uebertragung und feste zeitliche Reihenfolge
+
+Ein Schluessel lautet (Rolle,Generation,Offset,Matchqualitaet) im festen Scope.
+Nur bereits gueltige, endliche Fehlerpaare des promovierten Kandidaten werden
+bitgleich erhalten. Ersetzt werden ausschliesslich Rolle und Generation.
+Offset/Qualitaet bleiben unveraendert; es entstehen keine weiteren Zellen.
+Keine Mittelung, kein EMA-Schritt, keine neue Beobachtung, keine Aufwertung
+der Sicherheit, keine Auswahl nur positiver Erfahrung. Fehlende Zelle bleibt
+fehlend. Gueltige negative und gleiche Fehlerpaare werden ebenso verschoben.
+
+Verbindliche Reihenfolge:
+1. Ein bereits eingetroffenes Ziel wird nach bisherigem Ablauf konsumiert;
+   sein berechtigtes Update endet vor seiner normalen Aufnahme.
+2. Der bisherige Receipt-Pfad friert die naechste Wahl unveraendert ein.
+   Vor einer Aufnahme werden nur begrenzte Metadaten/Referenzen des lebenden
+   Kandidaten fuer die unmittelbare Ereigniszuordnung bereitgehalten.
+3. Normale Aufnahme und close_segment laufen genau einmal. Deren Ergebnis
+   entscheidet ueber Promotion und etwaige echte Verdraengung. M darf dieses
+   Ergebnis weder erzwingen noch umsortieren. Der Zellbestand ist an dieser
+   internen Grenze noch nicht wegen der alten Kandidatenrolle gepruned.
+4. Vor jeder Zellaenderung den gesamten Zuordnungsnachweis, alle betroffenen
+   Schluessel, die neue Generation und Konfliktfreiheit pruefen. Es muss
+   moeglich sein, c eindeutig r zuzuordnen, bevor irgendeine c-Zelle endet.
+5. In einer nach aussen unteilbaren Zelltransaktion zuerst Zellen wirklich
+   verdraengter retained-Spuren entfernen, dann saemtliche gueltigen c-Zellen
+   in ihren vorhandenen Slots auf r umschluesseln, danach uebrige nicht mehr
+   lebende Schluessel regulaer entfernen. Die umgeschluesselten Zellen sind
+   zu diesem Zeitpunkt lebende r-Zellen und duerfen nicht als c geloescht
+   werden. c besitzt danach keine Zelle; fremde lebende Zellen bleiben exakt.
+6. Erst danach Beobachterabschluss und Rueckkehr aus der Aufnahme. Kein
+   Leser/Receipt/Feedback darf einen teilweise umgeschluesselten Zustand sehen.
+
+Vorhandene Tickets und eingefrorene Entscheidungen werden in keinem Schritt
+kopiert, umgeschluesselt, neu berechnet oder auf r umgelenkt. Zeigt ein schon
+offenes Ticket noch auf c, bleibt es unveraendert; bei spaeterem Ziel gilt die
+bisherige Lebendigkeitspruefung. Ein dann nicht mehr lebendes c erhaelt kein
+Update, insbesondere kein nachtraegliches Update an r. Gewaehlter Vorschlag
+und sein Fehler werden trotzdem nach bisherigem Ablauf ausgewertet/freigegeben.
+So entsteht durch Promotion weder Rueckschau noch ein zweites Ticket.
+
+Ohne Promotion: bestehendes Pruning unveraendert. Promotion ohne Fehlerzelle:
+keine neue Zelle, kein Scheintransfer, neuer Schluessel bleibt kalt.
+
+3. Atomaritaet, Konflikte und Fehlerverhalten
+
+M ist nur fuer die bestehende serielle synchrone Verarbeitung vorgesehen.
+Zuordnung und alle Pruefungen muessen vor dem ersten Schreibzugriff vorliegen.
+Kein Zielschluessel darf bereits existieren, auch nicht mit gleichem Inhalt.
+Doppelte Quellschluessel, Scopeabweichung, falsche Frameidentitaet, ungueltige
+Zahlen, widerspruechliche Promotion oder Wiederverwendung eines Ereignisses
+sind technische Fehler. Kein Ueberschreiben, Mischen oder stiller Fallback
+auf Reset: betroffener Lauf NOT_EVALUABLE, Abschluss erhalten, keine Wiederholung.
+
+Ein normaler Nicht-Promotionsvorgang ist dagegen kein Fehler und loest keine
+Mitnahme aus. Wertegleiche Wiederkehr nach Verlust wird normal kalt behandelt.
+
+Erfolg bedeutet: alle vorgesehenen Schluesselwechsel sind gemeinsam sichtbar.
+Vorbereitungsfehler veraendern keine Fehlerzellen. Ein Fehler/Abbruch innerhalb
+der Publikation darf nie einen weiter nutzbaren Teilzustand hinterlassen:
+Adapter terminieren, Zellen/Ticket freigeben, Fehlerabschluss; kein Weiterlauf.
+Das ist keine Ruecknahme der bereits erfolgten normalen Memory-Aufnahme.
+Beobachter muss deshalb Vorzustand, Promotionsresultat und Fehlerphase
+erhalten. Fachlicher Nutzen ist bei solchem Abbruch nicht auswertbar.
+
+Keine zweite vollstaendige Fehlertabelle, zusaetzliche gepackte Schattenbank
+oder zusaetzliche Frames als Atomaritaetsloesung. Die spaetere Entwicklung
+muss die serielle Publikationsgrenze innerhalb der unveraenderten Budgets
+nachweisen. Falls dies nicht gelingt: TECHNISCH_NICHT_QUALIFIZIERT,
+keine Budgeterhoehung und kein Versuch unter gelockerten Bedingungen.
+
+4. Konkrete natuerliche Folgen (noch nicht erzeugt)
+
+V(x) ist ein48er-Vektor mit identischen float(x)-Komponenten. Alle Zahlen
+sind exakt dyadisch. Schritt/Fenster4800, Indizes ab1, Paarphase ab1.
+Jede Geschichte startet in jedem Arm leer, ohne Reset innerhalb der Folge.
+Nur normale Aufnahme; keine geschuetzten Spuren, Werte-Injektion oder Guards.
+
+Kurze Kontraste:
+X =[V(3/16),V(5/16),V(13/16),V(15/16)]
+Xp=[V(3/16),V(5/16),V(5/16), V(15/16)]
+S (stabil),16 Frames: X,X,X,X.
+W (Wechsel direkt nach Promotion),16 Frames: X,X,Xp,Xp.
+
+Erwartungen S:
+nach4 Kandidat c1 mit Originalframes1..4; Ziel7 erster kalter Start aller
+EMA-Arme P, danach Fehlerpaar(0,1/2). Bei8 Promotion zu r1 mit Frames1..4:
+M behaelt dieses Paar, E entfernt es. An11 M=C aus mitgenommener Erfahrung,
+E=P kalt. An15 beide C aus eigener jeweils verfuegbarer Erfahrung.
+Nach12/16 nur normale retained-Bestaetigung, keine erneute Mitnahme.
+Endziel17 zensiert; keine Erfolgswertung daraus.
+
+Erwartungen W:
+bis8 identisch zu S. An11 geaenderte Fortsetzung unmittelbar nach Promotion:
+M=C aus alter Bewertung, E=P kalt. Genau dieser Fall kann Mitnahme schaden.
+Nach Ziel11 erwartet M bei alpha1/2 ein gleiches Fehlerpaar(1/4,1/4),
+E erwartet(1/2,0); dies sind Hypothesen, keine gemessenen Ergebnisse.
+Nach12 Kandidat Xp:c2 neben X:r1. An15 zwei gleiche Hinweise zu verschiedenen
+Fortsetzungen: mehrdeutig, kein konkreter Kontext, kein Ticket/Fehlerupdate.
+Bei16 Promotion Xp:c2->r2 ohne gueltige c2-Zelle; kein erfundener Transfer.
+Endziel17 zensiert. Kein spaeterer Zusatzblock zur Ergebnisverbesserung.
+
+L (bekannter Bestand),64 Frames, explizit Entwicklungsregression:
+A =[V(1/8), V(1/4), V(3/4), V(7/8)]
+B =[V(3/8), V(5/8), V(1/16),V(13/16)]
+Bp=[V(3/8), V(5/8), V(5/8), V(13/16)]
+C =[V(7/16),V(9/16),V(11/16),V(15/16)]
+Folge: A,A,B,B,Bp,A,C,Bp,A,Bp,C,C,A,A,A,A.
+
+Feste erwartete Stocktabelle L, retained aeltestes zuerst:
+Frame | retained           | candidate
+ 4    | []                 | A:c1
+ 8    | [A:r1]             | leer
+12    | [A:r1]             | B:c2
+16    | [A:r1,B:r2]        | leer
+20    | [A:r1,B:r2]        | Bp:c3
+24    | [B:r2,A:r1]        | Bp:c3
+28    | [B:r2,A:r1]        | C:c4
+32    | [B:r2,A:r1]        | Bp:c5
+36    | [B:r2,A:r1]        | Bp:c5
+40    | [A:r1,Bp:r3]       | leer
+44    | [A:r1,Bp:r3]       | C:c6
+48    | [Bp:r3,C:r4]       | leer
+52    | [Bp:r3,C:r4]       | A:c7
+56    | [C:r4,A:r5]        | leer
+60/64 | [C:r4,A:r5]        | leer
+
+M muss bei8 c1->r1,16 c2->r2,48 c6->r4,56 c7->r5 vorhandene Paare
+verschieben; bei40 c5->r3 ist voraussichtlich kein Paar vorhanden.
+Bei48 gleichzeitig A:r1 samt mitgefuehrter/fortgeschriebener Erfahrung
+endgueltig loeschen. An51 fehlt Kontext, c7 wird erst bei52 neu erzeugt.
+An55 sind M/E beide kalt: keine Uebernahme r1->c7. Erst56 darf ausschliesslich
+die seit55 neu erworbene c7-Erfahrung auf r5 gelangen. An59 erwartet M C,
+E P. An63 eigene aktuelle r5-Erfahrung, niemals wiederhergestellte r1-Werte.
+An39 Mehrdeutigkeit: keine Zellaenderung durch Zielkonsum; regulaere
+B-Loeschung bei40 bleibt ein getrenntes spaeteres Aufnahmeereignis.
+
+Zuvor schlechte Kontexterfahrung im natuerlichen Verlauf: B:r2 erhaelt
+an19 gegenteilige Fehler. E speichert(9/16,0), M aus mitgenommenem(0,9/16)
+voraussichtlich(9/32,9/32). An31 erwarten beide P; die Erfahrungen werden
+trotz unguenstigem Kontext weitergefuehrt, nicht nach Vorzeichen entfernt.
+M darf weder diesen B-Fall ausschliessen noch E-Zellverlaeufe als seine
+eigenen ausgeben. Zellwerte und Entscheidungen aller Arme sind neu zu beobachten.
+
+5. Schlechte Kandidatenerfahrung: gesonderte technische Prueffallebene
+
+Die obigen normalen Folgen belegen KEINE bereits negativ bewertete
+Kandidatenzelle unmittelbar vor Promotion. Sie darf nicht als vorhanden
+erfunden werden. Bei der einfachen exakten Wiederholung passt gerade der
+gespeicherte Nachfolger; eine abweichende Viererfolge ersetzt typischerweise
+den Kandidaten. Dies ist eine Reichweitengrenze dieser Folgen, kein hier
+bewiesener allgemeiner Unmoeglichkeitssatz.
+
+Deshalb gehoert zum spaeteren Qualifikationsvertrag eine getrennte technische
+Transaktionsfixture mit deklarierten gueltigen Eingabedatensaetzen. Sie ist
+keine Wahrnehmungsgeschichte, keine Injektion in die vier Vergleichsarme und
+kein Nachweis natuerlich erworbener Erfahrung. Sie prueft allein die Regel.
+Scope fest, lebendes c7, direkte Promotion in neues r5 derselben Originalframes;
+Fremdzelle r4 bleibt erhalten, tatsaechlich verdraengtes r3 wird entfernt.
+
+T1: c7/Offset0/EXACT:(0,1/2) -> r5 bitgleich; naechste freie Wahl C.
+T2: c7/Offset0/EXACT:(1/2,0) -> r5 bitgleich; naechste freie Wahl P.
+T3: c7/Offset0/EXACT:(1/4,1/4) -> r5 bitgleich; naechste freie Wahl P.
+T4: Vier unterschiedliche gueltige c7-Zellen fuer die Kombinationen
+    Offset0/1 und Qualitaet EXACT/APPROXIMATE gleichzeitig verschieben,
+    ohne Vermischen. Dies aktiviert keinen approximate-Abruf im Naturlauf.
+T5: c7 ohne Zellen -> r5 ohne Zellen; kein Update und kein neuer Defaultwert.
+T6: vorhandener Zielschluessel r5 oder doppelte Quellschluessel -> Fehler,
+    keine teilweise Mitnahme, kein stilles Zusammenfuehren.
+T7: wertgleiche neue Frames/andere Originalordinalen oder Scopeabweichung
+    bei behaupteter Promotion -> Identitaetsfehler; normale spaetere
+    Wiederkehr ohne Promotionsbehauptung bleibt dagegen korrekt kalt.
+T8: vorab eingefrorenes Ticket auf c7 bleibt bytegleich und wird NICHT r5;
+    spaeteres Ziel darf r5 damit nicht aktualisieren. Fremdes Ticket ebenfalls
+    unveraendert; vorhandene Ausgabealias bleibt gleich.
+T9: denselben Promotionsbeleg ein zweites Mal anbieten -> Fehler vor jeder
+    neuen Zellaenderung. Keine doppelte Fortschreibung.
+T10: Fehler vor Publikation und an jeder Grenze der vier Umschluesselungen
+     aus T4 separat injizieren: entweder kein Schreibbeginn oder terminaler
+     bereinigter Adapter, niemals ein weiter verwendbarer Teilzustand.
+
+Fixture-Ergebnisse separat von den natuerlichen Folgen berichten. Kein
+Fehler-/Nutzenmittelwert ueber T1-T10; keine Umdeutung zu unabhaengiger
+Evaluation. Eine Nichtqualifikation darf nicht durch Weglassen von T2,
+T4 oder T8 umgangen werden. Diese Faelle werden heute nicht ausgefuehrt.
+
+6. Feste Zielmengen und Vergleichsregeln
+
+Pro S und W:
+G={3,5,7,9,11,13,15}, H={7,11,15}, N={3,5,9,13},
+J={11} unmittelbares Ziel nach Promotion, V={7,11} verfuegbarer Kontext,
+D={11} erhaltungsbezogene Diagnose. S hat zusaetzlich Kontext an15;
+dieses Ziel bleibt in H/G, wird nicht nachtraeglich in V aufgenommen.
+Damit identische feste V-Maske fuer S/W und kein Entfernen des kalten Ziels7.
+
+Pro L:
+G={3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,
+   47,49,51,53,55,57,59,61,63};
+H={19,23,31,35,39,51,55,59,63};
+N={3,5,7,9,11,13,15,17,21,25,27,29,33,37,41,43,45,47,49,53,57,61};
+V={19,23,31,35,55,59,63}; D={31,35,63}; J={19,23,59}.
+H/N partitionieren G; V/D/J sind ueberlappende Diagnosen, nicht addieren.
+
+Fuer JEDE Geschichte und jede feste Menge: Fehlersumme/MAE aller vier Arme,
+Anzahl erwarteter/vorhandener Ziele, Kontextabdeckung/Mehrdeutigkeit sowie
+jede Differenz M-E,M-K,M-P. Alle Gewinne UND Schaeden einzeln. M/E-Zellen
+vor/nach jedem Ziel und Aufnahmeereignis; Wahl vor Zielanforderung belegen.
+Anfangswahl, mitgenommene Erfahrung und nach Promotion neu erworbene Erfahrung
+getrennt ausweisen. Kein Gewinn an einem kalten Default als Lernen etikettieren.
+Keine alternativen Erfolgsquoten oder nachtraeglichen Gewichte. Fehlende Werte
+nicht nullsetzen. Endziele17/17/65 ausschliesslich zensiert ausweisen.
+
+7. Getrennte Kriterien und Nichtnachweis
+
+ZUORDNUNG_KORREKT:
+Alle vorgeschriebenen Identitaets-/Transaktionsfaelle erfuellt; exakt gleiche
+Memoryzustaende, Matchreceipts und Prognosevektoren zwischen M/E/K/P vor
+Auswahl; nur erlaubte Fehlerzellzuordnung verschieden. Keine EMA-Nutzung
+zur Herkunftswahl. Keine Uebernahme nach Verlust, keine Ticketumlenkung,
+kein Zusatzupdate, keine Rueckschau, keine Budgetverletzung. T2 muss genauso
+uebertragen wie T1. Pruning und Freigabe muessen vollstaendig stimmen.
+Vermiedener Reset allein erfuellt kein Nutzenkriterium.
+
+AUSWAHLVORTEIL_IM_ENTWICKLUNGSKONTRAST:
+Nur bei korrekter Zuordnung und vollstaendigen Daten. S separat: M muss
+auf H und G strikt kleinere MAE als E haben; Vergleich mit K/P bleibt
+sichtbar, Gleichstand mit perfektem K ist kein Vorteil gegen K.
+W separat: jeder Mehrfehler gegen E/K/P und nachfolgende Anpassung berichten.
+Ein positiver S-Befund bei Schaden in W heisst BEGRENZTER_STABILITAETSVORTEIL
+MIT_WECHSELSCHADEN, niemals allgemeiner Auswahlvorteil.
+
+Strenger robuster Vorteil ueber die festgelegten Kontraste wird nur behauptet,
+wenn M in JEDER Geschichte auf H UND G nicht schlechter als E ist und
+mindestens eine dieser Vergleiche strikt besser ist. Sonst NICHT_NACHGEWIESEN;
+bei Verschlechterung den jeweiligen Fall als SCHADEN ausweisen. Keine
+Verrechnung von W-Verlusten mit S-Gewinnen zum Verbergen des Gegenfalls.
+Die Hypothese muss an diesem strengen Kriterium scheitern duerfen.
+
+Zusaetzlicher Baseline-Nettonutzen je Geschichte auf V nur dann BELEGT,
+wenn dort Kontext wie vorab erwartet verfuegbar ist und M strikt besser
+als E,K UND P ist. Sonst NICHT_NACHGEWIESEN bzw. SCHADEN relativ zur
+betroffenen Baseline. D/J ersetzen weder V noch H/G. Aus L folgt stets nur
+ein Entwicklungsbefund. UNABHAENGIGER_EVALUATIONSNUTZEN bleibt fuer diesen
+gesamten Vertrag NICHT_GEPRUEFT, unabhaengig von jeder Zahlenkonstellation.
+
+Abweichender Bestand/Abruf: tatsächliche Beobachtung erhalten, Erwartungs-
+fehler von Implementierungsfehler trennen. Keine Reparatur zur Erzwingung
+der Tabelle. Betroffene fachliche Kriterien NOT_EVALUABLE; technische
+Fehler sind gesondert zu melden. Nichtbetroffene beschreibende Daten bleiben
+sichtbar. Keine Ersatzgeschichte, Quellen-/Maskensuche oder Wiederholung.
+
+8. Unveraenderte Grenzen und spaeterer Ausfuehrungsrahmen
+
+Pro Arm maximal2 retained+1 candidate,18 Frames,2 Vorschlagsvektoren,
+gewaehlte Ausgabe nur Alias. Maximal12 Zellen und1 Ticket,416 gepackte
+Byte. Insgesamt maximal16384 Byte zusaetzlicher Python-Heap inkl. neuer
+Promotionsmetadaten/temporärer Objekte; bestehende Messmethodik erweitern,
+nicht neue Daten aus der Messung ausschliessen. Keine Framekopien durch
+Identitaetsnachweis. Receipt<=16384 Byte,transiente UTF8<=32768 Byte.
+Beobachter/Quelle bleiben getrennt vom System; kein Gesamtprozess-RAM-Beleg.
+
+Ein spaeter gesondert freigegebenes Entwicklungspaket umfasst genau S16,
+W16,L64 in jeweils M/E/K/P:96 Quellpositionen,384 Arm-Aufnahmen. Bei gleichem
+Referenzanschluss zusaetzlich384 interne Referenzfortschreibungen separat
+bilanzieren. Kein Armuebergreifender Zustand; keine weiteren Geschichten.
+Technische Fixtures T1-T10 sind separat begrenzte Bausteinpruefungen und
+zaehlen weder als Quellframes noch als weitere natuerliche Versuchsarme.
+Standardgrenze64 pro Replay genuegt; keine200er-Erweiterung.
+
+Alle Quell-/Beobachterdaten, technische Fixturebelege, Tabellen und Berichte
+des spaeteren Pakets zusammen<=4MiB;256KiB Abschlussreserve vorab. Exklusive
+Ausgabe, Fehlerabschluss und Teilbestand erhalten. Keine automatische
+Wiederholung. Parameter/Rezept/Masken/Code/Laufzeit vor Erzeugung binden.
+Diese Begrenzung ist geplant, kein heutiger Ressourcenmessbefund.
+
+9. Abnahme dieses Konzeptdokuments und naechster Schritt
+
+Der Vertrag entscheidet Identitaet, Reihenfolge, Konflikte, konkrete Folgen,
+Masken, Gegenhypothese und getrennte Kriterien vor Implementierung. Die
+technische Fixture fuer schlechte Kandidatenerfahrung ist ausdruecklich
+kein natuerlicher Nachweis; die bekannte L-Folge keine neue Evaluation.
+
+Genau ein naechster Vorschlag: Projektleiter entscheidet ueber ein begrenztes
+Entwicklungs-/Neutralqualifikationspaket fuer diese eine optionale Regel
+einschliesslich T1-T10 und Ressourcenbeobachter. Dessen Abnahme erfordert
+vollstaendige technische Zuordnung/Atomaritaet innerhalb der alten Grenzen.
+Die natuerlichen S/W/L-Vergleichslaeufe bleiben bis zu einer separaten
+Ausfuehrungsfreigabe geschlossen. Heute wird weder dieses Entwicklungspaket
+begonnen noch eine Autorisierung erzeugt. Bestehende EMA bleibt unveraendert,
+experimentell und standardmaessig deaktiviert.

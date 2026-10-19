@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETE",
+  "package_bytes_before_this_closure": 516830,
+  "closing_reserve": 65536,
+  "limit": 16777216,
+  "files": {
+    "analysis.json": {
+      "bytes": 2474,
+      "sha256": "850593b76c46dd6b020432beec0ae6015cedd4f66858d4a7e0a0e831d356e439"
+    },
+    "export-inventory.json": {
+      "bytes": 3998,
+      "sha256": "2c9b2bcdfbcc334357f31a74ad753741fada2c28204f6046f875107b701a155a"
+    },
+    "REPORT.md": {
+      "bytes": 8836,
+      "sha256": "757f5d65abb1aa94badd27338625943af0c86383e1a6b146b75e97597beebf4a"
+    },
+    "verification.json": {
+      "bytes": 4567,
+      "sha256": "a9d7c194254446c52d63a99b38879e951c70b1d0585e963ca3393d06fca12754"
+    }
+  }
+}

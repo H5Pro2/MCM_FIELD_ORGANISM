@@ -1,0 +1,30 @@
+{
+  "version": "s2oe.immediate-verification-balance.v1",
+  "status": "QUALIFIED_VERIFICATION_ONLY",
+  "parts": {
+    "historical_input": 1359778,
+    "sources": 12828,
+    "neutral_data": 82948,
+    "metadata_before_balance": 6356,
+    "balance_file": 667
+  },
+  "totals": {
+    "metadata": 7023,
+    "total": 1462577
+  },
+  "limits": {
+    "historical_input": 2097152,
+    "sources": 174080,
+    "qualification_metadata": 131072,
+    "real_session_metadata": 65536,
+    "shared": 262144,
+    "total": 4194304
+  },
+  "log_bytes": 948,
+  "violations": [],
+  "prebound_total": 2130366,
+  "test_calls": 1,
+  "passed": 7,
+  "real_parent_reads": 0,
+  "main_gate": false
+}

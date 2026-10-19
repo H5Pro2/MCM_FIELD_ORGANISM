@@ -1,0 +1,40 @@
+{
+  "profile": "EXPERIENCE_COMPARISON_24M_V1",
+  "basis": "Physical qualification and final binding files, report and five active new source files; inventory counted once. This balance file has a separate 2048-byte metadata allowance, no recursive self-measurement.",
+  "observed_before_balance_file": {
+    "total": 1843594,
+    "metadata": 110184,
+    "sources": 59428,
+    "verification": 22811,
+    "native_states_inputs_steps_scans": 1581772,
+    "nj": 19234,
+    "formations": 32844,
+    "generations": 17321,
+    "shared": 128827
+  },
+  "including_balance_allowance": {
+    "total": 1845642,
+    "metadata": 112232,
+    "sources": 59428,
+    "verification": 22811,
+    "shared": 128827
+  },
+  "joint_future_peak_reservation": {
+    "total": 20619300,
+    "metadata": 1048576,
+    "sources": 59428,
+    "verification": 262144,
+    "shared": 434212
+  },
+  "limits": {
+    "total": 25165824,
+    "metadata": 3145728,
+    "sources": 524288,
+    "verification": 262144,
+    "shared": 786432
+  },
+  "violations": [],
+  "test_calls": 1,
+  "real_media_calls": 0,
+  "main_gate": false
+}

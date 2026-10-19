@@ -1,0 +1,34 @@
+{
+  "files": [
+    {
+      "path": "formations.csv",
+      "bytes": 3523,
+      "sha256": "f7a4e2731c6b7c57455b6e623c50401069fe0c40a77ef6753ab4808714971f0b"
+    },
+    {
+      "path": "frames.csv",
+      "bytes": 5860,
+      "sha256": "3f747d3da9d649c341ad518202cd293bf6804319abd5001d54c108ea97c4852c"
+    },
+    {
+      "path": "preregistration.json",
+      "bytes": 25937,
+      "sha256": "3bb23ed1d345d63fcb97c2c1373f8cb7adfe21f5dd6ae2fe8601fc246ab26f7a"
+    },
+    {
+      "path": "REPORT.txt",
+      "bytes": 5128,
+      "sha256": "43b1e3aa02c7ad2ac8b02283301656c9f0af9c82d8c36c6cefda435b0680c109"
+    },
+    {
+      "path": "result.json",
+      "bytes": 36978,
+      "sha256": "9dc4d02585f9a93408bae7fbd25fbb3f909cafa810bbdd77c18c0a1eb28b307e"
+    },
+    {
+      "path": "tests.json",
+      "bytes": 1439,
+      "sha256": "544c8ad9abc7e06e5742b1f5be916360957dc6e3a7ae8e9eb05e341d4c9f6b50"
+    }
+  ]
+}

@@ -13,6 +13,8 @@ from .receptor_contract import ReceptorContactFrame
 
 PPB1_SCHEMA_VERSION = "ppb1.private.v1"
 PPB1_EVENTS = ("MATCHED", "CREATED", "REPLACED")
+PPB1_UPDATE_HISTORICAL = "historical.v1"
+PPB1_UPDATE_IDENTITY_PRESERVING = "identity-preserving.v1"
 
 PPB1_INVALID_CONFIG = "PPB1_INVALID_CONFIG"
 PPB1_INVALID_SLOT = "PPB1_INVALID_SLOT"
@@ -572,11 +574,15 @@ def _validate_state(config: PPB1BankConfig, state: object) -> PPB1BankState:
     return state
 
 
-def advance_ppb1_bank(
+def _advance_ppb1_bank(
     config: PPB1BankConfig,
     prestate: PPB1BankState,
     frame: ReceptorContactFrame,
+    *,
+    update_mode: str,
 ) -> PPB1StepResult:
+    if update_mode not in {PPB1_UPDATE_HISTORICAL, PPB1_UPDATE_IDENTITY_PRESERVING}:
+        raise PPB1ReferenceError(PPB1_INVALID_CONFIG, "unknown PPB-1 update mode")
     if not isinstance(config, PPB1BankConfig):
         raise PPB1ReferenceError(PPB1_INVALID_CONFIG, "config is required")
     state = _validate_state(config, prestate)
@@ -617,7 +623,9 @@ def advance_ppb1_bank(
         selected = slots[selected_index]
         assert selected.support_count is not None
         updated = tuple(
-            (1.0 - config.update_rate) * previous + config.update_rate * current
+            previous
+            if update_mode == PPB1_UPDATE_IDENTITY_PRESERVING and previous == current
+            else (1.0 - config.update_rate) * previous + config.update_rate * current
             for previous, current in zip(
                 selected.prototype_values, input_frame.values, strict=True
             )
@@ -675,3 +683,27 @@ def advance_ppb1_bank(
             PPB1_ATOMIC_OUTPUT_REQUIRED, "poststate and readout digest mismatch"
         )
     return PPB1StepResult(poststate, readout)
+
+
+def advance_ppb1_bank(
+    config: PPB1BankConfig,
+    prestate: PPB1BankState,
+    frame: ReceptorContactFrame,
+) -> PPB1StepResult:
+    """Historical PPB-1 update, preserved as the default path."""
+
+    return _advance_ppb1_bank(
+        config, prestate, frame, update_mode=PPB1_UPDATE_HISTORICAL
+    )
+
+
+def advance_ppb1_bank_identity_preserving(
+    config: PPB1BankConfig,
+    prestate: PPB1BankState,
+    frame: ReceptorContactFrame,
+) -> PPB1StepResult:
+    """Private v1 policy: preserve only bit-identical components."""
+
+    return _advance_ppb1_bank(
+        config, prestate, frame, update_mode=PPB1_UPDATE_IDENTITY_PRESERVING
+    )

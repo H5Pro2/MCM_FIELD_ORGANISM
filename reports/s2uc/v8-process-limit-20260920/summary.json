@@ -1,0 +1,93 @@
+[
+  {
+    "case": "success",
+    "process": {
+      "pid": 20088,
+      "observer_pid": 11924,
+      "exit_code": 1,
+      "admitted": true,
+      "final_handshake": false,
+      "samples": 23,
+      "errors": [],
+      "product_result_present": false
+    },
+    "valid": false,
+    "status": "EXTERNAL_ABORT_NO_PRODUCT_SUCCESS"
+  },
+  {
+    "case": "allocation",
+    "process": {
+      "pid": 18748,
+      "observer_pid": 11924,
+      "exit_code": 0,
+      "admitted": true,
+      "final_handshake": true,
+      "samples": 14,
+      "errors": [],
+      "product_result_present": false
+    },
+    "valid": true,
+    "native": {
+      "target": {
+        "working_set": 18440192,
+        "private_commit": 11907072,
+        "os_peak_working_set": 18976768,
+        "os_peak_private_commit": 667545600
+      },
+      "observer": {
+        "working_set": 19468288,
+        "private_commit": 13619200,
+        "os_peak_working_set": 19918848,
+        "os_peak_private_commit": 13676544
+      },
+      "job": {
+        "ns": 459565836173400,
+        "member": true,
+        "flags": 8448,
+        "limit": 671088640,
+        "peak_process_commit": 667545600,
+        "peak_job_commit": 674119680
+      }
+    },
+    "sampled_max": {
+      "target": {
+        "working_set": 18972672,
+        "private_commit": 667545600
+      },
+      "observer": {
+        "working_set": 19476480,
+        "private_commit": 13758464
+      }
+    },
+    "warnings": 0,
+    "status": "REAL_ALLOCATION_REJECTED",
+    "rejection": {
+      "request_bytes": 16777216,
+      "successful_bytes": 654311424,
+      "winerror": 1455,
+      "available_system_commit": 16715546624,
+      "memory": {
+        "working_set": 18432000,
+        "private_commit": 666845184,
+        "os_peak_working_set": 18976768,
+        "os_peak_private_commit": 667545600
+      },
+      "simulated": false
+    }
+  },
+  {
+    "case": "memoryerror",
+    "process": {
+      "pid": 14128,
+      "observer_pid": 11924,
+      "exit_code": 1,
+      "admitted": true,
+      "final_handshake": false,
+      "samples": 22,
+      "errors": [],
+      "product_result_present": false
+    },
+    "valid": false,
+    "status": "EXTERNAL_ABORT_NO_PRODUCT_SUCCESS"
+  }
+]

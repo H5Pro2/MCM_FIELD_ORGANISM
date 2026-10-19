@@ -1,0 +1,248 @@
+{
+  "command": [
+    "C:\\Python314\\python.exe",
+    "-m",
+    "unittest",
+    "-v",
+    "tests.test_s2uc_neutral_connection",
+    "tests.test_s2uc_materialization_connection"
+  ],
+  "cwd": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+  "exit_code": 0,
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "hashes_before": {
+    "tools/_s2uc_evaluation.py": "50f458bb1e9693227b119a87b0cf0e71ec1076d0f64427c93426397e33125e7a",
+    "tools/_s2uc_neutral_connection.py": "25138be284998b37a59661690c9d291881708b47c7eccc7101799b045ee611da",
+    "tools/_s2uc_record_codec.py": "43f5532064b11e130535c47afe50a48be418255a054e694253c412c6783ad70f",
+    "tools/_s2uc_resource_ledger.py": "43e3fe248be3b70d2cd05fe0db4a15d20d88272a7761a9a93204837c3ef110be",
+    "tools/_s2uc_run_binding.py": "b7fb03a947fbd959800e59a7e85cbf0c3b390f60e1bbd1541a9e18a72f1bb67a",
+    "tools/_s2uc_run_entry.py": "1005335a67c6bf089dbc2399fb0b874d062924537b7522982f4c73f030778349",
+    "tools/_s2uc_source_adapter.py": "011b75a724fab21dd12b66f02e2fb6a4626e7f1d4450ac4612d31fb53e4abead",
+    "tools/_s2uc_source_binding.py": "3758b0b3291ae9f04d91f704548ae0a77f7bc56be87d189fa89ba48c2e735e78",
+    "tools/_s2uc_verification.py": "1af8a9e2de68acf29b7ae2755f82330e959e96505867c81b4ba263d0b2f81626",
+    "tools/s2uc_run_bound_once.py": "a173834900fe7108ba676c69f46a0cf393f2ca006c8579ef8e9a7834802b45a0",
+    "tests/test_s2uc_materialization_connection.py": "ba25a563f4b020e243ebd074e2a0c84dc2df9997fbc3a5e7220881630b01908a",
+    "tests/test_s2uc_neutral_connection.py": "e5409715d351d61f232cdc10caa61b7c881d081836d0f1c67fa8d20c667f84d4",
+    "tools/_s2ub_candidate_verification.py": "1c25a3afee15c8ada624c93fa81bbfbece1a1b7407502b029798fec84a00cc30"
+  },
+  "hashes_after": {
+    "tools/_s2uc_evaluation.py": "50f458bb1e9693227b119a87b0cf0e71ec1076d0f64427c93426397e33125e7a",
+    "tools/_s2uc_neutral_connection.py": "25138be284998b37a59661690c9d291881708b47c7eccc7101799b045ee611da",
+    "tools/_s2uc_record_codec.py": "43f5532064b11e130535c47afe50a48be418255a054e694253c412c6783ad70f",
+    "tools/_s2uc_resource_ledger.py": "43e3fe248be3b70d2cd05fe0db4a15d20d88272a7761a9a93204837c3ef110be",
+    "tools/_s2uc_run_binding.py": "b7fb03a947fbd959800e59a7e85cbf0c3b390f60e1bbd1541a9e18a72f1bb67a",
+    "tools/_s2uc_run_entry.py": "1005335a67c6bf089dbc2399fb0b874d062924537b7522982f4c73f030778349",
+    "tools/_s2uc_source_adapter.py": "011b75a724fab21dd12b66f02e2fb6a4626e7f1d4450ac4612d31fb53e4abead",
+    "tools/_s2uc_source_binding.py": "3758b0b3291ae9f04d91f704548ae0a77f7bc56be87d189fa89ba48c2e735e78",
+    "tools/_s2uc_verification.py": "1af8a9e2de68acf29b7ae2755f82330e959e96505867c81b4ba263d0b2f81626",
+    "tools/s2uc_run_bound_once.py": "a173834900fe7108ba676c69f46a0cf393f2ca006c8579ef8e9a7834802b45a0",
+    "tests/test_s2uc_materialization_connection.py": "ba25a563f4b020e243ebd074e2a0c84dc2df9997fbc3a5e7220881630b01908a",
+    "tests/test_s2uc_neutral_connection.py": "e5409715d351d61f232cdc10caa61b7c881d081836d0f1c67fa8d20c667f84d4",
+    "tools/_s2ub_candidate_verification.py": "1c25a3afee15c8ada624c93fa81bbfbece1a1b7407502b029798fec84a00cc30"
+  },
+  "hashes_unchanged": true,
+  "tests": [
+    {
+      "id": "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_common_ledger_uses_alternative_closures_and_rejects_overflow",
+      "output": "test_common_ledger_uses_alternative_closures_and_rejects_overflow (tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_common_ledger_uses_alternative_closures_and_rejects_overflow) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_complete_neutral_connection_materializes_once_per_endpoint_and_verifies",
+      "output": "test_complete_neutral_connection_materializes_once_per_endpoint_and_verifies (tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_complete_neutral_connection_materializes_once_per_endpoint_and_verifies) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_entry_resets_gate_after_manifest_failure",
+      "output": "test_entry_resets_gate_after_manifest_failure (tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_entry_resets_gate_after_manifest_failure) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_failure_between_arm_calls_has_independent_progress_verification",
+      "output": "test_failure_between_arm_calls_has_independent_progress_verification (tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_failure_between_arm_calls_has_independent_progress_verification) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_failure_between_stories_preserves_completed_story_and_marks_remaining",
+      "output": "test_failure_between_stories_preserves_completed_story_and_marks_remaining (tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_failure_between_stories_preserves_completed_story_and_marks_remaining) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_failure_verifier_rejects_prior_and_prefix_receipt_manipulations",
+      "output": "test_failure_verifier_rejects_prior_and_prefix_receipt_manipulations (tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_failure_verifier_rejects_prior_and_prefix_receipt_manipulations) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_file_entry_rejects_closed_gate_without_invoking_materializer",
+      "output": "test_file_entry_rejects_closed_gate_without_invoking_materializer (tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_file_entry_rejects_closed_gate_without_invoking_materializer) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_first_owner_close_failure_does_not_prevent_second_owner_close",
+      "output": "test_first_owner_close_failure_does_not_prevent_second_owner_close (tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_first_owner_close_failure_does_not_prevent_second_owner_close) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_manifest_binds_all_three_shapes_and_has_no_evaluation_labels",
+      "output": "test_manifest_binds_all_three_shapes_and_has_no_evaluation_labels (tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_manifest_binds_all_three_shapes_and_has_no_evaluation_labels) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_owner_close_failure_after_complete_story_stops_without_next_story",
+      "output": "test_owner_close_failure_after_complete_story_stops_without_next_story (tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_owner_close_failure_after_complete_story_stops_without_next_story) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_verifier_rejects_missing_swapped_and_snapshot_manipulations",
+      "output": "test_verifier_rejects_missing_swapped_and_snapshot_manipulations (tests.test_s2uc_neutral_connection.S2UCNeutralConnectionTests.test_verifier_rejects_missing_swapped_and_snapshot_manipulations) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_codec_failure_after_connection_retains_completed_progress_and_blocks_evaluation",
+      "output": "test_codec_failure_after_connection_retains_completed_progress_and_blocks_evaluation (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_codec_failure_after_connection_retains_completed_progress_and_blocks_evaluation) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_codec_keeps_historical_v1_record_form_readable",
+      "output": "test_codec_keeps_historical_v1_record_form_readable (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_codec_keeps_historical_v1_record_form_readable) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_evaluation_rejects_missing_and_duplicate_expected_receipts",
+      "output": "test_evaluation_rejects_missing_and_duplicate_expected_receipts (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_evaluation_rejects_missing_and_duplicate_expected_receipts) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_existing_output_directory_is_never_modified",
+      "output": "test_existing_output_directory_is_never_modified (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_existing_output_directory_is_never_modified) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_failure_budget_counts_error_receipt_and_terminal_separately",
+      "output": "test_failure_budget_counts_error_receipt_and_terminal_separately (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_failure_budget_counts_error_receipt_and_terminal_separately) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_final_binding_validates_referenced_qualification_and_budget_before_supplier",
+      "output": "test_final_binding_validates_referenced_qualification_and_budget_before_supplier (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_final_binding_validates_referenced_qualification_and_budget_before_supplier) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_entry_failure_blocks_evaluation_and_resets_gate",
+      "output": "test_full_entry_failure_blocks_evaluation_and_resets_gate (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_entry_failure_blocks_evaluation_and_resets_gate) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_entry_rejects_actual_reserve_overflow_and_resets_gate",
+      "output": "test_full_entry_rejects_actual_reserve_overflow_and_resets_gate (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_entry_rejects_actual_reserve_overflow_and_resets_gate) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_entry_serializes_reloads_verifies_and_only_then_evaluates",
+      "output": "test_full_entry_serializes_reloads_verifies_and_only_then_evaluates (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_entry_serializes_reloads_verifies_and_only_then_evaluates) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_entry_verification_failure_publishes_terminal_and_blocks_evaluation",
+      "output": "test_full_entry_verification_failure_publishes_terminal_and_blocks_evaluation (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_entry_verification_failure_publishes_terminal_and_blocks_evaluation) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_neutral_materialization_roundtrip_and_reloaded_verification",
+      "output": "test_full_neutral_materialization_roundtrip_and_reloaded_verification (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_full_neutral_materialization_roundtrip_and_reloaded_verification) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_last_endpoint_failure_preserves_attempt_and_success_difference",
+      "output": "test_last_endpoint_failure_preserves_attempt_and_success_difference (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_last_endpoint_failure_preserves_attempt_and_success_difference) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_ledger_separates_record_reserve_from_absolute_record_limit",
+      "output": "test_ledger_separates_record_reserve_from_absolute_record_limit (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_ledger_separates_record_reserve_from_absolute_record_limit) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_materialization_failure_in_second_story_roundtrips_and_verifies_prefix",
+      "output": "test_materialization_failure_in_second_story_roundtrips_and_verifies_prefix (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_materialization_failure_in_second_story_roundtrips_and_verifies_prefix) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_owner_close_error_after_neutral_materialization_stops_and_roundtrips",
+      "output": "test_owner_close_error_after_neutral_materialization_stops_and_roundtrips (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_owner_close_error_after_neutral_materialization_stops_and_roundtrips) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_prepared_run_identity_is_accepted_and_unknown_identity_is_rejected",
+      "output": "test_prepared_run_identity_is_accepted_and_unknown_identity_is_rejected (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_prepared_run_identity_is_accepted_and_unknown_identity_is_rejected) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_record_preflight_rejects_oversized_metadata_before_publication",
+      "output": "test_record_preflight_rejects_oversized_metadata_before_publication (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_record_preflight_rejects_oversized_metadata_before_publication) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_record_write_failure_preserves_primary_error_and_closes_gate",
+      "output": "test_record_write_failure_preserves_primary_error_and_closes_gate (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_record_write_failure_preserves_primary_error_and_closes_gate) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_reloaded_record_rejects_manipulated_materialization_origin",
+      "output": "test_reloaded_record_rejects_manipulated_materialization_origin (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_reloaded_record_rejects_manipulated_materialization_origin) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_source_adapter_uses_all_bound_positions_without_deduplication",
+      "output": "test_source_adapter_uses_all_bound_positions_without_deduplication (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_source_adapter_uses_all_bound_positions_without_deduplication) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_starter_rejects_code_binding_before_supplier",
+      "output": "test_starter_rejects_code_binding_before_supplier (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_starter_rejects_code_binding_before_supplier) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_starter_requires_authorization_before_supplier_and_runs_neutral_path",
+      "output": "test_starter_requires_authorization_before_supplier_and_runs_neutral_path (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_starter_requires_authorization_before_supplier_and_runs_neutral_path) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_static_run_binding_covers_sources_uses_and_all_expectations",
+      "output": "test_static_run_binding_covers_sources_uses_and_all_expectations (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_static_run_binding_covers_sources_uses_and_all_expectations) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_terminal_write_failure_preserves_primary_codec_error",
+      "output": "test_terminal_write_failure_preserves_primary_codec_error (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_terminal_write_failure_preserves_primary_codec_error) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_unbudgetable_error_terminal_publishes_bounded_minimal_evidence",
+      "output": "test_unbudgetable_error_terminal_publishes_bounded_minimal_evidence (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_unbudgetable_error_terminal_publishes_bounded_minimal_evidence) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v2_codec_full_neutral_structure_with_distinct_vectors_fits_record_reserve",
+      "output": "test_v2_codec_full_neutral_structure_with_distinct_vectors_fits_record_reserve (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v2_codec_full_neutral_structure_with_distinct_vectors_fits_record_reserve)"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v2_codec_keeps_binary64_values_and_separate_frame_identities",
+      "output": "test_v2_codec_keeps_binary64_values_and_separate_frame_identities (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v2_codec_keeps_binary64_values_and_separate_frame_identities) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v2_codec_worst_case_distinct_vectors_stays_within_its_bound",
+      "output": "test_v2_codec_worst_case_distinct_vectors_stays_within_its_bound (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v2_codec_worst_case_distinct_vectors_stays_within_its_bound) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v3_codec_references_event_values_hex_without_losing_long_binary64_forms",
+      "output": "test_v3_codec_references_event_values_hex_without_losing_long_binary64_forms (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v3_codec_references_event_values_hex_without_losing_long_binary64_forms) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_final_binding_accepts_only_the_prepared_identity_and_resolved_artifacts",
+      "output": "test_v6_final_binding_accepts_only_the_prepared_identity_and_resolved_artifacts (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_final_binding_accepts_only_the_prepared_identity_and_resolved_artifacts) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_actual_final_file_above_bound_reserve",
+      "output": "test_v6_starter_rejects_actual_final_file_above_bound_reserve (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_actual_final_file_above_bound_reserve) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_changed_reserves_and_qualification_artifact_sizes",
+      "output": "test_v6_starter_rejects_changed_reserves_and_qualification_artifact_sizes (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_changed_reserves_and_qualification_artifact_sizes) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_duplicate_negative_missing_and_noninteger_items",
+      "output": "test_v6_starter_rejects_duplicate_negative_missing_and_noninteger_items (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_duplicate_negative_missing_and_noninteger_items) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_empty_qualification_artifacts",
+      "output": "test_v6_starter_rejects_empty_qualification_artifacts (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_empty_qualification_artifacts) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_inconsistent_branch_contributions_with_current_digests",
+      "output": "test_v6_starter_rejects_inconsistent_branch_contributions_with_current_digests (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_inconsistent_branch_contributions_with_current_digests) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_mismatched_qualification_ids_results_tests_and_code",
+      "output": "test_v6_starter_rejects_mismatched_qualification_ids_results_tests_and_code (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_mismatched_qualification_ids_results_tests_and_code) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_missing_or_extra_branches_and_contribution_keys",
+      "output": "test_v6_starter_rejects_missing_or_extra_branches_and_contribution_keys (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_missing_or_extra_branches_and_contribution_keys) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_undercounted_single_item_with_current_digests",
+      "output": "test_v6_starter_rejects_undercounted_single_item_with_current_digests (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_v6_starter_rejects_undercounted_single_item_with_current_digests) ... ok"
+    },
+    {
+      "id": "tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_verifier_rejects_missing_and_manipulated_source_completion",
+      "output": "test_verifier_rejects_missing_and_manipulated_source_completion (tests.test_s2uc_materialization_connection.S2UCMaterializationConnectionTests.test_verifier_rejects_missing_and_manipulated_source_completion) ... ok"
+    }
+  ],
+  "scope": "Neutral development regression only, no formal qualification or main run",
+  "initial_regression": "regression-initial.txt: 50 tests, one fixture aliasing failure; corrected by deepcopy"
+}

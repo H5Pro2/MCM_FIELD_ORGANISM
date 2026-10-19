@@ -1,0 +1,58 @@
+test_appendix_write_failure_preserves_product (tests.test_s2uc_p2.P2Tests.test_appendix_write_failure_preserves_product) ... FAIL
+test_atomic_staging_failure_and_primary_preserved (tests.test_s2uc_p2.P2Tests.test_atomic_staging_failure_and_primary_preserved) ... ok
+test_binding_and_input_mutations (tests.test_s2uc_p2.P2Tests.test_binding_and_input_mutations) ... ok
+test_budget_boundaries_and_reservations (tests.test_s2uc_p2.P2Tests.test_budget_boundaries_and_reservations) ... ok
+test_child_requires_job_before_supplier (tests.test_s2uc_p2.P2Tests.test_child_requires_job_before_supplier) ... ok
+test_exclusive_claim_and_no_restart_retry (tests.test_s2uc_p2.P2Tests.test_exclusive_claim_and_no_restart_retry) ... ok
+test_external_abort_consumes_claim (tests.test_s2uc_p2.P2Tests.test_external_abort_consumes_claim) ... ok
+test_late_supplier_failure_is_not_evaluable (tests.test_s2uc_p2.P2Tests.test_late_supplier_failure_is_not_evaluable) ... ERROR
+test_parent_job_setup_failure_consumes_claim (tests.test_s2uc_p2.P2Tests.test_parent_job_setup_failure_consumes_claim) ... ok
+test_preparation_and_closed_productive_entry (tests.test_s2uc_p2.P2Tests.test_preparation_and_closed_productive_entry) ... ok
+test_simultaneous_retained_files_count (tests.test_s2uc_p2.P2Tests.test_simultaneous_retained_files_count) ... ok
+test_success_appendix_and_original_byte_mutations (tests.test_s2uc_p2.P2Tests.test_success_appendix_and_original_byte_mutations) ... FAIL
+test_unclassified_alias_and_inventory_overflow (tests.test_s2uc_p2.P2Tests.test_unclassified_alias_and_inventory_overflow) ... ok
+test_wrong_source_hash_stops_before_analysis (tests.test_s2uc_p2.P2Tests.test_wrong_source_hash_stops_before_analysis) ... ok
+
+======================================================================
+ERROR: test_late_supplier_failure_is_not_evaluable (tests.test_s2uc_p2.P2Tests.test_late_supplier_failure_is_not_evaluable)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 134, in test_late_supplier_failure_is_not_evaluable
+    with self.assertRaises(ValueError):appendix.read(path)
+                                       ~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_p2_appendix.py", line 80, in read
+    e.need({p.name for p in folder.iterdir()}=={'provenance.json','appendix-terminal.json'},'P2_APPENDIX_FILES')
+                            ~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\pathlib\__init__.py", line 836, in iterdir
+    with os.scandir(root_dir) as scandir_it:
+         ~~~~~~~~~~^^^^^^^^^^
+FileNotFoundError: [WinError 3] Das System kann den angegebenen Pfad nicht finden: 'C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\p2-development-20260930-01\\p2-test-kld4l26s\\case\\appendix'
+
+======================================================================
+FAIL: test_appendix_write_failure_preserves_product (tests.test_s2uc_p2.P2Tests.test_appendix_write_failure_preserves_product)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 152, in test_appendix_write_failure_preserves_product
+    self.assertEqual(result['status'],'CLOSED_NEUTRAL_P2_VERIFIED',result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'NOT_EVALUABLE' != 'CLOSED_NEUTRAL_P2_VERIFIED'
+- NOT_EVALUABLE
++ CLOSED_NEUTRAL_P2_VERIFIED
+ : {'status': 'NOT_EVALUABLE', 'product': {'evaluation_allowed': False, 'primary_failure': 'P2_TECHNICAL_PROOF', 'real_execution_authorized': False, 'secondary_failures': ['P2_PUBLICATION_EXISTS'], 'status': 'NOT_EVALUABLE', 'version': 's2uc.execution.p2'}, 'exit_code': 0, 'evaluation_allowed': False, 'real_execution_authorized': False}
+
+======================================================================
+FAIL: test_success_appendix_and_original_byte_mutations (tests.test_s2uc_p2.P2Tests.test_success_appendix_and_original_byte_mutations)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_p2.py", line 115, in test_success_appendix_and_original_byte_mutations
+    self.assertEqual(result['status'],'CLOSED_NEUTRAL_P2_VERIFIED',result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'NOT_EVALUABLE' != 'CLOSED_NEUTRAL_P2_VERIFIED'
+- NOT_EVALUABLE
++ CLOSED_NEUTRAL_P2_VERIFIED
+ : {'status': 'NOT_EVALUABLE', 'product': {'evaluation_allowed': False, 'primary_failure': 'P2_TECHNICAL_PROOF', 'real_execution_authorized': False, 'secondary_failures': ['P2_PUBLICATION_EXISTS'], 'status': 'NOT_EVALUABLE', 'version': 's2uc.execution.p2'}, 'exit_code': 0, 'evaluation_allowed': False, 'real_execution_authorized': False}
+
+----------------------------------------------------------------------
+Ran 14 tests in 259.596s
+
+FAILED (failures=2, errors=1)

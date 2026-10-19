@@ -1,0 +1,19 @@
+{
+  "status": "OBSERVER_REPORT_ABORT_BEFORE_FIRST_SETTING_COMPLETION",
+  "exception": "IndexError: list index out of range at learning target9 in R0",
+  "cause": "Query hint target9 was incorrectly indexed into the eight-frame learning episode list.",
+  "correction": "Observer truth for targets after learning episodes comes from fixed query genealogy.",
+  "completed_extra_case_replays": [
+    {
+      "tau": 0.0,
+      "case": "R0",
+      "frames_per_arm": 11,
+      "arms": 2
+    }
+  ],
+  "completed_settings": 0,
+  "material_regenerated": false,
+  "algorithm_changed": false,
+  "selection_changed": false,
+  "runner_sha256": "6d167194bdf922c981431ca2185a9a4c60ca2f7671e745c7a03bf8d4b2c15cb8"
+}

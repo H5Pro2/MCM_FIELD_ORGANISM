@@ -1,0 +1,261 @@
+{
+  "archive_sha256": "f19481ac06a59c62f4127b13a55691a04a1f43c8e9ab23bf09a5e604ebb26ef5",
+  "case": 32,
+  "decoder": {
+    "dictionary_bytes": 994376,
+    "encoded_bytes": 1048776,
+    "gzip_bytes": 178189,
+    "record_indices": 10279,
+    "reference_edges": 133590,
+    "table_entries": 14588
+  },
+  "differences": {
+    "duplicate_records": [],
+    "missing": [],
+    "unsupported": [
+      {
+        "keeper": "F",
+        "keeper_victims": [],
+        "last_observation": 472,
+        "newer_keeper_victims": [],
+        "origin": [
+          457,
+          458,
+          459,
+          460
+        ],
+        "other_victim": [
+          457,
+          458,
+          459,
+          460
+        ],
+        "promotion_end": 484,
+        "stage": "retention",
+        "unequal_blocks": [
+          476,
+          480
+        ]
+      },
+      {
+        "keeper": "F",
+        "keeper_error": 0.0,
+        "keeper_victims": [],
+        "last_observation": 472,
+        "local_gain": true,
+        "newer_keeper_victims": [],
+        "offset": 0,
+        "origin": [
+          457,
+          458,
+          459,
+          460
+        ],
+        "other_error": 0.25,
+        "other_victim": [
+          457,
+          458,
+          459,
+          460
+        ],
+        "output": [
+          0.75,
+          0.750244140625,
+          0.75048828125,
+          0.750732421875,
+          0.7509765625,
+          0.751220703125,
+          0.75146484375,
+          0.751708984375,
+          0.751953125,
+          0.752197265625,
+          0.75244140625,
+          0.752685546875,
+          0.7529296875,
+          0.753173828125,
+          0.75341796875,
+          0.753662109375,
+          0.75390625,
+          0.754150390625,
+          0.75439453125,
+          0.754638671875,
+          0.7548828125,
+          0.755126953125,
+          0.75537109375,
+          0.755615234375,
+          0.755859375,
+          0.756103515625,
+          0.75634765625,
+          0.756591796875,
+          0.7568359375,
+          0.757080078125,
+          0.75732421875,
+          0.757568359375,
+          0.7578125,
+          0.758056640625,
+          0.75830078125,
+          0.758544921875,
+          0.7587890625,
+          0.759033203125,
+          0.75927734375,
+          0.759521484375,
+          0.759765625,
+          0.760009765625,
+          0.76025390625,
+          0.760498046875,
+          0.7607421875,
+          0.760986328125,
+          0.76123046875,
+          0.761474609375
+        ],
+        "prior_live_feedback": [
+          463,
+          467,
+          471
+        ],
+        "promotion_end": 484,
+        "stage": "warm_use",
+        "target": 491,
+        "unequal_blocks": [
+          476,
+          480
+        ]
+      },
+      {
+        "keeper": "F",
+        "keeper_error": 0.5,
+        "keeper_victims": [],
+        "last_observation": 472,
+        "local_gain": false,
+        "newer_keeper_victims": [],
+        "offset": 0,
+        "origin": [
+          457,
+          458,
+          459,
+          460
+        ],
+        "other_error": 0.25,
+        "other_victim": [
+          457,
+          458,
+          459,
+          460
+        ],
+        "output": [
+          0.75,
+          0.750244140625,
+          0.75048828125,
+          0.750732421875,
+          0.7509765625,
+          0.751220703125,
+          0.75146484375,
+          0.751708984375,
+          0.751953125,
+          0.752197265625,
+          0.75244140625,
+          0.752685546875,
+          0.7529296875,
+          0.753173828125,
+          0.75341796875,
+          0.753662109375,
+          0.75390625,
+          0.754150390625,
+          0.75439453125,
+          0.754638671875,
+          0.7548828125,
+          0.755126953125,
+          0.75537109375,
+          0.755615234375,
+          0.755859375,
+          0.756103515625,
+          0.75634765625,
+          0.756591796875,
+          0.7568359375,
+          0.757080078125,
+          0.75732421875,
+          0.757568359375,
+          0.7578125,
+          0.758056640625,
+          0.75830078125,
+          0.758544921875,
+          0.7587890625,
+          0.759033203125,
+          0.75927734375,
+          0.759521484375,
+          0.759765625,
+          0.760009765625,
+          0.76025390625,
+          0.760498046875,
+          0.7607421875,
+          0.760986328125,
+          0.76123046875,
+          0.761474609375
+        ],
+        "prior_live_feedback": [
+          463,
+          467,
+          471
+        ],
+        "promotion_end": 484,
+        "stage": "warm_use",
+        "target": 515,
+        "unequal_blocks": [
+          476,
+          480
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "E": {
+      "local_gains": 7,
+      "multi_assigned_targets": {},
+      "retention_events": 5,
+      "unique_gain_targets": 7,
+      "unique_warm_targets": 17,
+      "warm_uses": 17
+    },
+    "F": {
+      "local_gains": 6,
+      "multi_assigned_targets": {},
+      "retention_events": 9,
+      "unique_gain_targets": 6,
+      "unique_warm_targets": 10,
+      "warm_uses": 10
+    }
+  },
+  "rejected_candidates": [
+    {
+      "keeper": "F",
+      "origin": [
+        457,
+        458,
+        459,
+        460
+      ],
+      "promotion_end": 484,
+      "reason": "NO_COMPETITION_PROMOTION"
+    }
+  ],
+  "reported": {
+    "E": {
+      "local_gains": 7,
+      "multi_assigned_targets": {},
+      "retention_events": 5,
+      "unique_gain_targets": 7,
+      "unique_warm_targets": 17,
+      "warm_uses": 17
+    },
+    "F": {
+      "local_gains": 7,
+      "multi_assigned_targets": {},
+      "retention_events": 10,
+      "unique_gain_targets": 7,
+      "unique_warm_targets": 12,
+      "warm_uses": 12
+    }
+  },
+  "seconds": 4.650296100007836,
+  "status": "DISCREPANCY"
+}

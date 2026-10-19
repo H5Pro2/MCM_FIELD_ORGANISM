@@ -1,0 +1,44 @@
+{
+  "workflow": "c158b6e4-bff8-4cb5-ab7b-1ff71f4eaa43",
+  "kind": "DOCUMENTATION_ONLY",
+  "historical_manifest": "reports/s2uc/fw1-diagnosis-20261019-02/delivery-closure.json",
+  "historical_manifest_sha256": "436b24dbd5bae0059b5fc44ba6228fae4c77526752c82a62f02a0da389e4362c",
+  "overviews": {
+    "README.md": {
+      "previous": {
+        "bytes": 180774,
+        "sha256": "14a466cea019dceddd0adb143f3332a46b3968104fe8d55711055484f2ab280c"
+      },
+      "snapshot": "reports/s2uc/research-branch-closure-documentation-20261019-01/historical-overviews/README.md",
+      "current": {
+        "bytes": 182572,
+        "sha256": "2c21bda170c4663de488183f7252e7beb1ef413ec14871280053f0f5ac4d181a"
+      }
+    },
+    "AKTUELLER_FORSCHUNGSWEG.md": {
+      "previous": {
+        "bytes": 1538585,
+        "sha256": "31505642f6ac82a25e38bf4844f1afc44146a449188ad6ce779c351b4373b824"
+      },
+      "snapshot": "reports/s2uc/research-branch-closure-documentation-20261019-01/historical-overviews/AKTUELLER_FORSCHUNGSWEG.md",
+      "current": {
+        "bytes": 1540383,
+        "sha256": "82f07e4a1668e9db83ea4c83a7653d3baa65958790cbfcc43d26ae4599db1df7"
+      }
+    },
+    "docs/README.md": {
+      "previous": {
+        "bytes": 278623,
+        "sha256": "4b86075fdf6de231329efe5a6c9004d72f4b64e97b33b7e0f1febdcf2f12f443"
+      },
+      "snapshot": "reports/s2uc/research-branch-closure-documentation-20261019-01/historical-overviews/docs/README.md",
+      "current": {
+        "bytes": 280421,
+        "sha256": "966d9a8cbc51fc2a7c217164259c2871d41f86197adc7dfbf6c1d6731d63830d"
+      }
+    }
+  },
+  "policy_runs": 0,
+  "tests": 0,
+  "receptor_measurements": 0
+}

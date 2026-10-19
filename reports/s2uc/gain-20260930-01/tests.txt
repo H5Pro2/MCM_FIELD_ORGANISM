@@ -1,0 +1,25 @@
+test_ambiguous_sources_no_order_priority (tests.test_s2uc_gain_confirmation.GainTests.test_ambiguous_sources_no_order_priority) ... ok
+test_global_only_order_and_local_change_rejected (tests.test_s2uc_gain_confirmation.GainTests.test_global_only_order_and_local_change_rejected) ... ok
+test_hint_and_other_paths_inherited (tests.test_s2uc_gain_confirmation.GainTests.test_hint_and_other_paths_inherited) ... ok
+test_incomplete_and_closed (tests.test_s2uc_gain_confirmation.GainTests.test_incomplete_and_closed) ... ok
+test_original_survives_scaling_no_chain (tests.test_s2uc_gain_confirmation.GainTests.test_original_survives_scaling_no_chain) ... ok
+test_overlap_cannot_promote (tests.test_s2uc_gain_confirmation.GainTests.test_overlap_cannot_promote) ... ok
+test_foreign_owner_and_closed_rejected (tests.test_s2uc_provisional_hint.ProvisionalTests.test_foreign_owner_and_closed_rejected) ... ok
+test_full_budget_and_provenance_no_payload_copy (tests.test_s2uc_provisional_hint.ProvisionalTests.test_full_budget_and_provenance_no_payload_copy) ... ok
+test_multiple_positions_candidate_and_retained (tests.test_s2uc_provisional_hint.ProvisionalTests.test_multiple_positions_candidate_and_retained) ... ok
+test_only_hint_is_overridden (tests.test_s2uc_provisional_hint.ProvisionalTests.test_only_hint_is_overridden) ... ok
+test_repeat_does_not_promote_or_save_replaced_candidate (tests.test_s2uc_provisional_hint.ProvisionalTests.test_repeat_does_not_promote_or_save_replaced_candidate) ... ok
+test_b2_ambiguity_is_not_false_unique_recall (tests.test_s2uc_four_arm.FourArmTests.test_b2_ambiguity_is_not_false_unique_recall) ... ok
+test_b2_full_budget_is_16_plus_two_hints (tests.test_s2uc_four_arm.FourArmTests.test_b2_full_budget_is_16_plus_two_hints) ... ok
+test_b2_overlap_incomplete_and_interruption (tests.test_s2uc_four_arm.FourArmTests.test_b2_overlap_incomplete_and_interruption) ... ok
+test_b2_two_retained_then_fifo_no_refresh (tests.test_s2uc_four_arm.FourArmTests.test_b2_two_retained_then_fifo_no_refresh) ... ok
+test_candidate_not_retrievable_and_hints_do_not_confirm (tests.test_s2uc_four_arm.FourArmTests.test_candidate_not_retrievable_and_hints_do_not_confirm) ... ok
+test_i1_exact_repeat_then_fifo (tests.test_s2uc_four_arm.FourArmTests.test_i1_exact_repeat_then_fifo) ... ok
+test_owner_isolation_and_cleanup (tests.test_s2uc_four_arm.FourArmTests.test_owner_isolation_and_cleanup) ... ok
+test_reference_classes_are_original (tests.test_s2uc_four_arm.FourArmTests.test_reference_classes_are_original) ... ok
+test_temporary_observer_sees_python_frame_locals (tests.test_s2uc_four_arm.FourArmTests.test_temporary_observer_sees_python_frame_locals) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.100s
+
+OK

@@ -1,0 +1,7 @@
+{
+  "manifest": "reports\\s2uc\\fw1-neutral-qualification-20261018-01\\delivery-manifest.json",
+  "sha256": "f92ccfaffa2c76c99bb900e14624be0e66a102b12de2df91d1ca5f41d012f473",
+  "verified_files": 138,
+  "overview_snapshots": "historical-overviews",
+  "status": "PASS"
+}

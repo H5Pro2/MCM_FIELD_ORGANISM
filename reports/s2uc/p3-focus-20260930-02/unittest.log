@@ -1,0 +1,24 @@
+test_q1_binding_mutations_before_claim (tests.test_s2uc_productive.ProductiveTests.test_q1_binding_mutations_before_claim) ... ok
+test_q1_independent_receipt_absence_mismatch_and_acl (tests.test_s2uc_productive.ProductiveTests.test_q1_independent_receipt_absence_mismatch_and_acl) ... ok
+test_q1_inventory_runtime_and_bound_files (tests.test_s2uc_productive.ProductiveTests.test_q1_inventory_runtime_and_bound_files) ... ok
+test_q1_public_rejects_test_and_no_self_authority (tests.test_s2uc_productive.ProductiveTests.test_q1_public_rejects_test_and_no_self_authority) ... ok
+test_q1_qualification_coverage_and_complete_ledger (tests.test_s2uc_productive.ProductiveTests.test_q1_qualification_coverage_and_complete_ledger) ... ok
+test_q1_untrusted_registry_acl_rejected (tests.test_s2uc_productive.ProductiveTests.test_q1_untrusted_registry_acl_rejected) ... ok
+test_q2_original_hash_rejects_replacement_before_receptor (tests.test_s2uc_productive.ProductiveTests.test_q2_original_hash_rejects_replacement_before_receptor) ... ok
+test_q2_original_manifest_and_no_supplier_parameter (tests.test_s2uc_productive.ProductiveTests.test_q2_original_manifest_and_no_supplier_parameter) ... ok
+test_q3_child_domain_cannot_target_real_roots (tests.test_s2uc_productive.ProductiveTests.test_q3_child_domain_cannot_target_real_roots) ... ok
+test_q4_abort_consumed_without_source (tests.test_s2uc_productive.ProductiveTests.test_q4_abort_consumed_without_source) ... ok
+test_q4_concurrent_claim_process_restart_and_corruption (tests.test_s2uc_productive.ProductiveTests.test_q4_concurrent_claim_process_restart_and_corruption) ... ok
+test_q4_job_creation_failure_after_claim (tests.test_s2uc_productive.ProductiveTests.test_q4_job_creation_failure_after_claim) ... ok
+test_q4_partial_persistence_consumes_namespace (tests.test_s2uc_productive.ProductiveTests.test_q4_partial_persistence_consumes_namespace) ... ok
+test_q4_timeout_and_job_error_are_consumed (tests.test_s2uc_productive.ProductiveTests.test_q4_timeout_and_job_error_are_consumed) ... ok
+test_q5_native_job_and_preimport_code_pins (tests.test_s2uc_productive.ProductiveTests.test_q5_native_job_and_preimport_code_pins) ... ok
+test_q6_failure_keeps_primary_and_product_bytes (tests.test_s2uc_productive.ProductiveTests.test_q6_failure_keeps_primary_and_product_bytes) ... ok
+test_q6_synthetic_closure_provenance_and_mutations (tests.test_s2uc_productive.ProductiveTests.test_q6_synthetic_closure_provenance_and_mutations) ... ok
+test_q7_four_roots_staging_copies_and_boundaries (tests.test_s2uc_productive.ProductiveTests.test_q7_four_roots_staging_copies_and_boundaries) ... ok
+test_q7_limits_and_reserves_unchanged (tests.test_s2uc_productive.ProductiveTests.test_q7_limits_and_reserves_unchanged) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 167.494s
+
+OK

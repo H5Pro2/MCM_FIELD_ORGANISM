@@ -1,0 +1,49 @@
+{
+  "bindings": {
+    "tools/_s2uc_perception_recency.py": "5b5f3a40ff7e4f9ff6578d6f4d8d5af75465ff7acf12c5c9dd434b5c4610e620",
+    "tools/s2uc_perception_recency_check.py": "9a98ab32f06cd0d92559a18c9cfe33e10161e411cf2b122fb026ae342cc443f7",
+    "tests/test_s2uc_perception_recency.py": "9991f571f55d46f2a9508909a4eb32d737fec8ee0325719267d7de0d93b0e272",
+    "tools/_s2uc_provisional_hint.py": "3fcf1c358548c85ddbec462028a43a96e3ec24a6bffd2948ad87da502f802c8e",
+    "tools/_s2uc_four_arm.py": "214805475c8794663026798b95f88f4b6e5cd6455d474a4eb75b1ee2c5e5a16b",
+    "tools/_s2ub_candidate_confirmation.py": "4178198b43fbbefd3cd550307ec114540c2167a3ae066e22bde01f5223f0ca8a",
+    "tools/_s2tu_retained_trace.py": "bf530380f93c8a1bf0eeae5a4169e81bc99aee10050872e3e5ddc7bfdb88f3f6",
+    "tools/_s2tx_recency_confirmation.py": "e9499681361a365974f142c5df6fde1fcfdcdffa178d4aad463f062aee18c7c8",
+    "reports/s2uc/pcm-temporal-20260930-01/result.json": "280e4d8f613794077c62624a7996343db76790f6805a0ec8ae93caf21376fc25"
+  },
+  "predicted": {
+    "main": {
+      "R": [
+        2,
+        3
+      ],
+      "P": [
+        1,
+        3
+      ]
+    },
+    "none": {
+      "R": [
+        2,
+        3
+      ],
+      "P": [
+        2,
+        3
+      ]
+    },
+    "hints": {
+      "R": [
+        2,
+        3
+      ],
+      "P": [
+        2,
+        3
+      ]
+    }
+  },
+  "scope": "STORED_VECTOR_MEMORY_RULE_ONLY",
+  "overlap_rule": "New full interval starts after original trace interval ends; ordinal clock supplied by caller",
+  "runtime": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "created_ns": 1790790128446969700
+}

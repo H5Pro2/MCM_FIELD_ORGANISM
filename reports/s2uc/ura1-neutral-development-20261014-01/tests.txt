@@ -1,0 +1,19 @@
+test_N01_unchanged_U_bindings (tests.test_s2uc_ura1.URA1Tests.test_N01_unchanged_U_bindings) ... ok
+test_N02_regular_non_equivalence_and_resources (tests.test_s2uc_ura1.URA1Tests.test_N02_regular_non_equivalence_and_resources) ... ok
+test_N03_internal_lifecycle_events (tests.test_s2uc_ura1.URA1Tests.test_N03_internal_lifecycle_events) ... ok
+test_N04_error_and_warm_mutation_invariance (tests.test_s2uc_ura1.URA1Tests.test_N04_error_and_warm_mutation_invariance) ... ok
+test_N05_recent_original_not_confirmation (tests.test_s2uc_ura1.URA1Tests.test_N05_recent_original_not_confirmation) ... ok
+test_N06_age_and_tie_order (tests.test_s2uc_ura1.URA1Tests.test_N06_age_and_tie_order) ... ok
+test_N07_no_successor_and_factor_rejection (tests.test_s2uc_ura1.URA1Tests.test_N07_no_successor_and_factor_rejection) ... ok
+test_N08_injected_couplings_rejected (tests.test_s2uc_ura1.URA1Tests.test_N08_injected_couplings_rejected) ... ok
+test_N09_reference_divergence_rejected (tests.test_s2uc_ura1.URA1Tests.test_N09_reference_divergence_rejected) ... ok
+test_N10_error_cleanup_and_resource_paths (tests.test_s2uc_ura1.URA1Tests.test_N10_error_cleanup_and_resource_paths) ... ok
+test_N11_bad_input_ticket_and_boundaries (tests.test_s2uc_ura1.URA1Tests.test_N11_bad_input_ticket_and_boundaries) ... ok
+test_N12_lossless_archive_and_corruption (tests.test_s2uc_ura1.URA1Tests.test_N12_lossless_archive_and_corruption) ... ok
+test_N13_selected_only_feedback_coupling (tests.test_s2uc_ura1.URA1Tests.test_N13_selected_only_feedback_coupling) ... ok
+test_N14_heap_limit_and_terminal_cleanup (tests.test_s2uc_ura1.URA1Tests.test_N14_heap_limit_and_terminal_cleanup) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 4.098s
+
+OK

@@ -1,0 +1,143 @@
+Historische zeitliche Ausrichtung – neue einmalige technische Qualifikation
+2026-10-19 | Auftrag 6d248902-bf8b-4eeb-805e-8014fcf4edca
+Auftraggeber-Bezug724a7fd9-d7e1-4a3c-9b3d-ba96d3310051
+
+ERGEBNIS: TECHNISCHER GESAMTVERSUCH VOLLSTÄNDIG BESTANDEN
+Ein neuer neutraler Gesamtversuch wurde ausgeführt. Keine Forschungsausführung.
+Die27 übernommenen Entwicklungsprüfungen wurden nicht wiederholt. Acht neue
+künstliche Anschluss-/Sperrprüfungen bestanden. Danach exakt ein Gesamtversuch:
+2 neutrale Quellen;390 gestartete und abgeschlossene Rezeptoraufrufe;
+390 gestartete und abgeschlossene NJ-Aufrufe;12 Arme und12 Bestandsreferenzen;
+132 Policy-Aufnahmen und132 Referenzaufnahmen;60 unabhängige Prüfungen bestanden.
+Alle12 Arme und12 Referenzen geschlossen; Worker Exit0 und beendet.
+Kein Retry und keine zweite Materialerzeugung.
+
+NEUE BERECHTIGUNG UND STARTSCHUTZ
+Der neue Auftrag ersetzt die administrative Fortsetzungsbedingung ausdrücklich.
+Er bestätigt keinen historischen Nichtverbrauch. Die alte Lage UNPROVEN bleibt
+in der ursprünglichen Lieferung und im neuen Verbrauchsmarker erhalten.
+Ausgangslieferung SHA256:
+4c297a6a29e904289a2aee10e8adece08ccb5b95157374660f07b71f857148eb
+
+Finale Startbindung SHA256:
+cfb56f93f214885fdcb70f0bea70da263d0f0e204f2233b3f4eddf295269beea
+binding.json bindet neuen Auftrag/eigene Chat-ID, Quelldigest der Auftragsdatei,
+finalen Code, Runtime einschließlich NumPy, Neutralrezept, übernommene Nachweise
+und die neuen Anschlussprüfungen. authorization.json erlaubt ausschließlich
+diesen technischen Neutralversuch am festgelegten exklusiven Ziel.
+
+consumed.json wurde exklusiv und dauerhaft VOR Ausgabeverzeichnis, Workerstart
+und Materialerzeugung geschrieben. Ein fehlender Abschluss erneuert nichts.
+Worker-Gate prüft PID/Nonce und Jobmitgliedschaft; Request bindet Supervisor-PID.
+full.run benötigt die nur im überprüften Worker erzeugte Aufrufberechtigung.
+worker-entered.json verhindert einen zweiten Eintritt auch im selben Worker.
+Direktaufruf ohne Berechtigung, falscher Auftrag/Code/Empfänger/Ziel sowie
+Wiederverbrauch werden abgewiesen. Es gibt keinen Forschungsmodus.
+
+Ausgeführter Start im Workspace:
+C:/Python314/python.exe -B experiments/temporal_alignment/entry.py --full
+Dieser Aufruf ist jetzt verbraucht und darf nicht wiederholt werden.
+
+GEÄNDERTE DATEIEN
+experiments/temporal_alignment/entry.py:
+  --full/--worker-full an den neuen überwachten Einstieg angeschlossen;
+  Paket- und Material-/Observerpartitionen kontrolliert.
+experiments/temporal_alignment/gateway.py (neu):
+  neue Auftrags-/Runtime-/Codebindung, exklusive Verbrauchsmarkierung,
+  kontrollierter Worker, unveränderliche technische Abschlussdateien.
+experiments/temporal_alignment/full.py:
+  nur mit Workerberechtigung aufrufbar, vollständige Zähler und finale
+  Material-Hashprüfung; bestehendes Neutralrezept unverändert.
+experiments/temporal_alignment/projector.py:
+  dauerhafte Started-/Completed-Ereignisse für Rezeptor und NJ angebunden.
+experiments/temporal_alignment/connection_tests.py (neu):
+  acht gezielte künstliche Prüfungen ausschließlich der geänderten Pfade.
+core.py, oracle.py und die bisherigen Entwicklungsfixtures bleiben unverändert.
+Die sechs Dateien des Ausgangsstands sind unter prior-code bytegenau erhalten.
+Historische Artefakte und alte Verbrauchs-/Ausführungsbilanzen bleiben unverändert.
+
+NEUE ANSCHLUSSPRÜFUNGEN: connection-tests-01,8/8
+- genaue neue Auftrags-/Chat-/Code-/Zielbindung; Forschung bleibt ausgeschlossen;
+- exklusive Verbrauchsmarkierung sperrt Wiederholung auch ohne Abschluss;
+- direkter full.run-Aufruf wird vor Material und Ordnererzeugung abgewiesen;
+- Workerdispatch ruft den vollständigen Ablauf und nicht die Fixtures auf;
+- falsche Worker-PID oder Nonce wird abgewiesen;
+- zweiter Eintritt im selben Worker wird exklusiv abgewiesen;
+- geänderter Code wird abgewiesen; festes Neutralrezept unverändert;
+- Zählercallbacks melden Anfang und Ende getrennt, ohne Rezeptoraufruf im Test.
+Keine Rezeptor-/NJ-/Policyaufrufe in diesen acht Prüfungen. Die alten27 Prüfungen
+bleiben separat gebunden; insbesondere ihre eine reale Nullfensterprojektion
+wird nicht in den neuen390er-Versuch eingerechnet.
+
+NEUTRALER GESAMTABLAUF: full-neutral-01
+Festes Rezept A=[310,680,1390,1750], B=[330,700,2180,2490] Hz.
+Sechs Fälle A0/A480/A2400/B0/B480/B2400, jeweils N und T mit frischen Armen.
+66 Basisfenster plus324 historische Rasterfenster ergeben390 Projektionen.
+Kanonische Quellen und Intervall-/Digestbelege; keine zusätzlichen Quellen.
+
+Die unabhängigen Prüfer rekonstruieren die Basisentscheidung und, sofern
+berechtigt, sämtliche Rastertreffer aus dem vor der Aufnahme gesicherten Bestand.
+Verglichen werden Receipt-Matches, Fortsetzungsstatus, Kontext- und Persistenz-
+vektoren. Jede der60 Entscheidungen stimmt überein. Die Bestandsreferenzen
+stimmen nach jeder der132 Aufnahmen mit dem jeweiligen produktiven Kern überein.
+Diese Referenz ist getrennt vom unabhängigen Alignment-Entscheidungsprüfer.
+
+Vor Lesen jedes ungeraden Zielframes3/5/7/9/11 verlangt der Reader eine bereits
+eingefrorene passende Prognose. Das gilt vor Projektionswerten und vor Rohbytes.
+Aktuelle Hinweise, Targetindex und Vorhersagehorizont bleiben unverändert.
+Die historischen Banken werden aus vollständig aufgenommenen Blöcken gebildet;
+Originalbank-Promotion und Lebenszyklus bleiben mit dem bestehenden Kern gekoppelt.
+Alle Materialdigests wurden am Ende erneut geprüft; keine Rezeptorwiederholung.
+
+GEMESSENE RESSOURCEN
+Supervisor einschließlich technischem Abschluss: unter41s;
+completion.json protokolliert40,755248100s bis zur Abschlussmessung,
+der Prozess meldete40,891115200s einschließlich letzter Abschlussdatei.
+Harte Grenzen: Supervisor300s, Worker240s, gemeinsamer Windows-Job536870912 Bytes,
+maximal2 Prozesse, Kill-on-close, kein Breakaway; Bibliotheksthreads1.
+Jobpeak151248896 Bytes, Prozesspeak84942848 Bytes.
+
+Produktive Spitzen im vollständigen Ablauf:
+  Vektorslots63 /128
+  Positionsmatches1 /63
+  Samplepuffer76800 /76800 Bytes
+  zusätzliche Provenienz4251 /65536 Bytes
+  Receipt503 /16384 Bytes
+  transientes UTF8 900 /32768 Bytes
+  gemessenes Rezeptorarbeitsgebiet2991543 /16777216 Bytes
+Die maximalen128 Slots und63 Matches sind zusätzlich durch die übernommenen
+künstlichen Grenzfixtures abgedeckt; sie wurden nicht als tatsächlicher Peak
+dieses Neutralmaterials umetikettiert.
+
+Die16MiB-Arbeitsgebietkontrolle verwendet tracemalloc und Zurückweisung bei
+Überschreitung, keine separate OS-Teilquote. Die gemeinsame512MiB-Grenze ist
+die harte OS-Jobgrenze. Package-Gesamtexport umfasst die alte Entwicklungslieferung
+und sämtliche neuen Ergänzungen; finale Größe steht in delivery-resources.json.
+
+Technischer Abschluss und unveränderliche Dateibindung liegen innerhalb der
+Supervisorzeit. Diese nachgelagerte redaktionelle Bericht-/Übersichtsphase ist
+getrennt und wird nicht rückwirkend zur gemessenen Supervisorzeit gezählt.
+
+BELEGE UND GRENZEN
+Startbindung: binding.json, authorization.json, consumed.json.
+Ausführung: full-neutral-01/request.json, gate.json, worker-entered.json,
+counts.jsonl, neutral-result.json, terminal.json, completion.json.
+Technische Abschlussbindung SHA256:
+8ffbfb10de7bbc16a6ccda9e03cf9912300a4cf7fd4933da41eacdb606ffcfde
+Zwölf Fall-/Armarchive enthalten jeweils fünf unabhängige Entscheidungsbelege.
+
+Gesamtpaket bisher:27 übernommene und8 neue künstliche Testausführungen;
+ein alter künstlicher Rezeptor-/NJ-Einzeltest plus neuer390er-Versuch,
+also391 tatsächliche Aufrufe je Typ über beide Lieferungen. Nur der neue Auftrag
+hat einen formalen Gesamtversuch; die frühere historische Lage bleibt UNPROVEN.
+
+Diese Qualifikation belegt technische Übereinstimmung, Kausalitätsgates,
+Cleanup und Ressourcen unter neutralem Material. Kein Forschungsnutzen und
+keine allgemeine Wiedererkennungsfähigkeit werden daraus abgeleitet.
+
+ANSCHLUSSVORSCHLAG
+Die technische Lieferung abnehmen. Anschließend fachlich über einen separat
+vorab gebundenen Forschungsprüfvertrag mit neuen Eigen-/Fremdverläufen entscheiden;
+Wiedererkennung, Fremdzuordnung und Vorhersagefehler weiterhin getrennt prüfen.
+Kein weiterer Neutralablauf und keine Forschungsquelle ohne neuen Auftrag.
+AS480 bleibt abgeschlossen; U und der Fehlerbewertungszweig bleiben unverändert.

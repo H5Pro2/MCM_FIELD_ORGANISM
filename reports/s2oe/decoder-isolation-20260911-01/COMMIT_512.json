@@ -1,0 +1,170 @@
+{
+  "arm": {
+    "job": 536870912,
+    "name": "COMMIT_512",
+    "process": 536870912
+  },
+  "binding_sha256": "97ce7b1480c5e107964fc2a109a787e6e31d6ee8fdd498b3a94d31ae9518bcfd",
+  "counters": {
+    "audio_frames": 0,
+    "audio_samples": 0,
+    "container_read_bytes": 171256136,
+    "packets": 4,
+    "passes": 1,
+    "selected_windows": 0,
+    "video_frames": 1
+  },
+  "decoder_calls": 1,
+  "failure": {
+    "code": "DECODER_MEMORY_LIMIT",
+    "exception_type": "WorkerError"
+  },
+  "gates_opened": false,
+  "host_before": {
+    "available_commit_bytes": 14002470912,
+    "commit_limit_bytes": 29784133632,
+    "physical_available_bytes": 7247196160
+  },
+  "phase": {
+    "kind": "phase",
+    "operation": "packet_decode",
+    "phase": "VIDEO",
+    "sequence": 2
+  },
+  "resources": {
+    "active_process_limit": 1,
+    "decoder_versions": {
+      "ffmpeg": "8.0.1",
+      "libraries": {
+        "libavcodec": [
+          62,
+          11,
+          100
+        ],
+        "libavdevice": [
+          62,
+          1,
+          100
+        ],
+        "libavfilter": [
+          11,
+          4,
+          100
+        ],
+        "libavformat": [
+          62,
+          3,
+          100
+        ],
+        "libavutil": [
+          60,
+          8,
+          100
+        ],
+        "libswresample": [
+          6,
+          1,
+          100
+        ],
+        "libswscale": [
+          9,
+          1,
+          100
+        ]
+      },
+      "pyav": "16.1.0"
+    },
+    "diagnostic_arm": "COMMIT_512",
+    "exact_failure_location_known": false,
+    "flags": 8968,
+    "isolation_version": "s2oe.decoder-isolation.v1",
+    "job_commit_limit": 536870912,
+    "job_confirmed_before_media": true,
+    "last_confirmed_phase": {
+      "kind": "phase",
+      "operation": "packet_decode",
+      "phase": "VIDEO",
+      "sequence": 2
+    },
+    "memory_limit_messages": [
+      9
+    ],
+    "memory_limit_notification": true,
+    "native_log_bytes": 196,
+    "native_log_overflow": false,
+    "native_logs": [
+      {
+        "component": "libav.h264",
+        "kind": "native_log",
+        "level": 40,
+        "message": "get_buffer() failed",
+        "sequence": 2
+      },
+      {
+        "component": "libav.h264",
+        "kind": "native_log",
+        "level": 40,
+        "message": "no frame!",
+        "sequence": 2
+      }
+    ],
+    "original_worker_error": {
+      "errno": 1094995529,
+      "error": "DECODER_WORKER_FAILED",
+      "exception_module": "av.error",
+      "exception_type": "InvalidDataError",
+      "native_exception": {
+        "strerror": "Invalid data found when processing input"
+      },
+      "traceback": [
+        {
+          "file": "packet.py",
+          "function": "av.packet.Packet.decode",
+          "line": 271
+        },
+        {
+          "file": "stream.py",
+          "function": "av.video.stream.VideoStream.decode",
+          "line": 42
+        },
+        {
+          "file": "stream.py",
+          "function": "av.video.stream.VideoStream.decode",
+          "line": 51
+        },
+        {
+          "file": "context.pyx",
+          "function": "av.codec.context.CodecContext.decode",
+          "line": 447
+        },
+        {
+          "file": "context.pyx",
+          "function": "av.codec.context.CodecContext._send_packet_and_recv",
+          "line": 339
+        },
+        {
+          "file": "error.pyx",
+          "function": "av.error.err_check",
+          "line": 424
+        }
+      ]
+    },
+    "peak_job_commit": 535404544,
+    "peak_process_commit": 528822272,
+    "process_commit_limit": 536870912,
+    "process_exit_before_cancel": null,
+    "queue_capacity": 1,
+    "read_counters_complete": false,
+    "request_seconds": 30.0,
+    "slot_bytes": 6240000,
+    "version": "s2oe.decoder-job.v2-phase-diagnostic",
+    "worker_closed": true,
+    "worker_exit_code": 1
+  },
+  "selection": {
+    "repeat": 1,
+    "window": 0
+  },
+  "status": "NOT_EVALUABLE",
+  "system_calls": 0
+}

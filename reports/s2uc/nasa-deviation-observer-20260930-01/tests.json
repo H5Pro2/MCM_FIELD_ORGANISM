@@ -1,0 +1,34 @@
+{
+  "command": "C:/Python314/python.exe -m unittest tests.test_s2uc_deviation_observer -v",
+  "tests_run": 6,
+  "failures": 0,
+  "errors": 0,
+  "exit_code": 0,
+  "source": "Observed unittest output; IDs read with loader, no reexecution",
+  "tests": [
+    {
+      "id": "tests.test_s2uc_deviation_observer.DeviationTests.test_equal_48",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_deviation_observer.DeviationTests.test_known_192",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_deviation_observer.DeviationTests.test_position_and_provenance",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_deviation_observer.DeviationTests.test_wrong_dimension_and_nonfinite",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_deviation_observer.DeviationTests.test_zero_both",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_deviation_observer.DeviationTests.test_zero_one_side",
+      "status": "PASS"
+    }
+  ]
+}

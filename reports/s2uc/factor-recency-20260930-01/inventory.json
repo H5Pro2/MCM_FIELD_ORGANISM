@@ -1,0 +1,30 @@
+{
+  "reports/s2uc/factor-recency-20260930-01/preregistration.json": {
+    "bytes": 6953,
+    "sha256": "5765f6a3d310a4ae3a94b777b32c48201d847cab53eb7d99ae5f62da40adb843"
+  },
+  "reports/s2uc/factor-recency-20260930-01/REPORT.txt": {
+    "bytes": 11439,
+    "sha256": "fad65d58f14ecb49f6713b97c6b0c330c69bfa9449b242820fb21920a654aac1"
+  },
+  "reports/s2uc/factor-recency-20260930-01/result.json": {
+    "bytes": 5034410,
+    "sha256": "8a628df7fe053060fc50ace4e562a3ea859e1fce0d2805656860f33ab657f0c5"
+  },
+  "reports/s2uc/factor-recency-20260930-01/tests.txt": {
+    "bytes": 1413,
+    "sha256": "20b82be97ec3c0d0e83eefb3be0b99c508f58d80fa36a6d6b648c80e6371de63"
+  },
+  "tools/_s2uc_factor_recency.py": {
+    "bytes": 271,
+    "sha256": "0eba81b522edbb628507d372091829e657ce5ee1bb20f44a0f78e34ef80c06e1"
+  },
+  "tools/s2uc_factor_recency_check.py": {
+    "bytes": 8597,
+    "sha256": "1abab1a41cd2d1e6f5841524cb67abfaf536de1f3644e0c3251b2772fdbf3ab3"
+  },
+  "tests/test_s2uc_factor_recency.py": {
+    "bytes": 1253,
+    "sha256": "ea741414cfccc69c1ba8029f56806a9d554ebc65b9b8be3b973983c6d2e7df78"
+  }
+}

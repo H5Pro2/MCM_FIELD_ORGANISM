@@ -1,0 +1,1 @@
+{"passed":true,"reconciliation":{"files":1,"journal_bytes":13297,"matched":true,"snapshot_sha256":"28b2e44c6e518f9d5e008ed850402085723d771ae49c0d8eda52861062c5b29d","totals":{"closure":0,"material":0,"observer":14211,"preparation":0}},"shared_lock":true,"supervisor_writes":20,"worker_writes":20,"writes":40}

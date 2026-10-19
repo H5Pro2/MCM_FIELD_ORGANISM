@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "created_utc": "2026-09-20T17:03:36Z",
+  "scope": "NEUTRAL_PROCESS_MEMORY_ONLY",
+  "cases": [
+    {
+      "case": "success",
+      "folder": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\v8-process-memory-20260920\\success",
+      "binding": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\v8-process-memory-20260920\\success\\bundle\\execution-binding.json",
+      "run_id": "S2UC-V8-NEUTRAL-5bf660b6bb7a4f1ea102684af2e0ab20",
+      "output": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\v8-process-memory-20260920\\success\\S2UC-V8-NEUTRAL-5bf660b6bb7a4f1ea102684af2e0ab20"
+    },
+    {
+      "case": "abort_58",
+      "folder": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\v8-process-memory-20260920\\abort_58",
+      "binding": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\v8-process-memory-20260920\\abort_58\\bundle\\execution-binding.json",
+      "run_id": "S2UC-V8-NEUTRAL-8aa14650446843dbae73a7e9770fc409",
+      "output": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\v8-process-memory-20260920\\abort_58\\S2UC-V8-NEUTRAL-8aa14650446843dbae73a7e9770fc409"
+    },
+    {
+      "case": "post_verification",
+      "folder": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\v8-process-memory-20260920\\post_verification",
+      "binding": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\v8-process-memory-20260920\\post_verification\\bundle\\execution-binding.json",
+      "run_id": "S2UC-V8-NEUTRAL-6d4f87694bd24f4796737e1e590a14be",
+      "output": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\v8-process-memory-20260920\\post_verification\\S2UC-V8-NEUTRAL-6d4f87694bd24f4796737e1e590a14be"
+    }
+  ],
+  "runs_per_case": 1,
+  "sampling_interval_ms": 10,
+  "baseline_holds_ms": 100,
+  "case_3_fault": "existing terminal-after-rename fault, after verification publication",
+  "mechanism": "external GetProcessMemoryInfo PROCESS_MEMORY_COUNTERS_EX; target phase markers only",
+  "metric_units": "bytes",
+  "tool_sha256": "6dcbed6abb4d79d107dab55b2809119b4d9f34f4f5ccc942030723bfcd0238e6",
+  "product_code_bytes": 699053,
+  "total_code_bytes_with_tool": 709864,
+  "guaranteed_ram_ceiling": false
+}

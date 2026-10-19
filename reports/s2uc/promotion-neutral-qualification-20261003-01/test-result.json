@@ -1,0 +1,11 @@
+{
+  "tests": 44,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "success": true,
+  "code_unchanged": true,
+  "SWL_generated": false,
+  "binding_sha256": "c6491dd5d494f315338c263eb90c4f2c9d8ec4f495bfb1917a1662684b03ab91",
+  "plan_sha256": "f889c062ea1177ceef66a3d7e68425ba2bf205fbcc24320728a42380d4a3e9e6"
+}

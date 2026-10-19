@@ -1,0 +1,211 @@
+{
+  "test_ids": [
+    "tests.test_s2uc_er1_stock_structural.Structural.test_01_generation_boundaries_and_json_roundtrip",
+    "tests.test_s2uc_er1_stock_structural.Structural.test_02_insertion_order_and_mixed_unique_types",
+    "tests.test_s2uc_er1_stock_structural.Structural.test_03_invalid_generation_keys",
+    "tests.test_s2uc_er1_stock_structural.Structural.test_04_collision_and_invalid_map_rejected",
+    "tests.test_s2uc_er1_stock_structural.Structural.test_05_missing_extra_and_changed_endmarks",
+    "tests.test_s2uc_er1_stock_structural.Structural.test_06_originals_order_and_values_still_checked",
+    "tests.test_s2uc_er1_stock_structural.Structural.test_07_numeric_values_not_coerced_or_rounded",
+    "tests.test_s2uc_er1_stock_structural.Structural.test_08_nested_observer_stock_and_no_input_mutation",
+    "tests.test_s2uc_er1_stock_structural.Structural.test_09_upper_bound_and_nonfinite",
+    "tests.test_s2uc_er1_stock_structural.Structural.test_10_wire_duplicate_keys_rejected"
+  ],
+  "tests": 10,
+  "failures": [],
+  "errors": [],
+  "archive": {
+    "verification": {
+      "status": "PASS_DELTA_INTEGRITY",
+      "reconstructed_bytes": 5103573,
+      "reconstructed_sha256": "d5bce548d33790cf87131978ae046fc1ccd88d0b27ff87b082472a3dccd1e5aa",
+      "collections": {
+        "/E/events": {
+          "sha256": "cbe99017c1eb9aceadaee0ed7b27c69d974ef1181794cc0f033dc26a0dba4cfb",
+          "bytes": 2091277,
+          "count": 240
+        },
+        "/E/forecasts": {
+          "sha256": "b0a1501f48be8f8f3b2d57744545793dc9a2d2ad2c978229ea5f1e0fd5158e9f",
+          "bytes": 47903,
+          "count": 40
+        },
+        "/E/internal": {
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "bytes": 2,
+          "count": 0
+        },
+        "/E/rows": {
+          "sha256": "f11f1be5b716ed0475f3e140c63538290b40a6284ea27e734724c5a8e17ba54b",
+          "bytes": 2192,
+          "count": 39
+        },
+        "/F/events": {
+          "sha256": "cbe99017c1eb9aceadaee0ed7b27c69d974ef1181794cc0f033dc26a0dba4cfb",
+          "bytes": 2091277,
+          "count": 240
+        },
+        "/F/forecasts": {
+          "sha256": "b0a1501f48be8f8f3b2d57744545793dc9a2d2ad2c978229ea5f1e0fd5158e9f",
+          "bytes": 47903,
+          "count": 40
+        },
+        "/F/internal": {
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "bytes": 2,
+          "count": 0
+        },
+        "/F/rows": {
+          "sha256": "f11f1be5b716ed0475f3e140c63538290b40a6284ea27e734724c5a8e17ba54b",
+          "bytes": 2192,
+          "count": 39
+        },
+        "/mechanisms": {
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "bytes": 2,
+          "count": 0
+        },
+        "/observer/E/blocks": {
+          "sha256": "b36cdcfd0ddfff78285c5f63738ffb6104d170ea8e5f8f85c9b36304cb77e45d",
+          "bytes": 253930,
+          "count": 20
+        },
+        "/observer/E/targets": {
+          "sha256": "f906a245ccfe10e67b7de4053b71d5c34cc07c3fa45b7c4f2429594c8ad47b11",
+          "bytes": 29594,
+          "count": 39
+        },
+        "/observer/F/blocks": {
+          "sha256": "b36cdcfd0ddfff78285c5f63738ffb6104d170ea8e5f8f85c9b36304cb77e45d",
+          "bytes": 253930,
+          "count": 20
+        },
+        "/observer/F/targets": {
+          "sha256": "f906a245ccfe10e67b7de4053b71d5c34cc07c3fa45b7c4f2429594c8ad47b11",
+          "bytes": 29594,
+          "count": 39
+        },
+        "/observer/differences": {
+          "sha256": "ddd131a9d3cb90a5b50eb45756d3162131132f70cae373d1b95463339b95b9ca",
+          "bytes": 1947,
+          "count": 39
+        }
+      },
+      "encoded_bytes": 200697,
+      "gzip_bytes": 25974,
+      "dictionary_bytes": 195055,
+      "table_entries": 2936,
+      "reference_edges": 13226,
+      "record_indices": 795,
+      "er1_reference_equal": true
+    },
+    "sizes": {
+      "encoded_bytes": 200697,
+      "gzip_bytes": 25974,
+      "original_sha256": "d5bce548d33790cf87131978ae046fc1ccd88d0b27ff87b082472a3dccd1e5aa",
+      "original_bytes": 5103573
+    },
+    "verify_seconds": 5.017060599988326,
+    "verify_python_peak": 17598258,
+    "collections": 14,
+    "record_peak": 14134,
+    "dictionary": 195055,
+    "nodes": 2936,
+    "edges": 13226,
+    "indices": 795
+  },
+  "generation_endmarks": {
+    "E": {
+      "9": 72,
+      "10": 80
+    },
+    "F": {
+      "9": 72,
+      "10": 80
+    }
+  },
+  "policy_resources": {
+    "E": {
+      "additional_python_peak": 5020,
+      "original_frames_peak": 0,
+      "output_slots_peak": 1,
+      "combined_peak": 0,
+      "original_frames_upper_bound": 16,
+      "combined_upper_bound": 18,
+      "packed": 416,
+      "receipt_bytes_peak": 611,
+      "utf8_upper": 1222,
+      "phase_peaks": {
+        "perception": {
+          "retained": 1612,
+          "transient": 3408,
+          "total": 5020
+        },
+        "feedback": {
+          "retained": 2315,
+          "transient": 704,
+          "total": 2947
+        },
+        "finish": {
+          "retained": 2316,
+          "transient": 56,
+          "total": 2372
+        }
+      },
+      "boundary_peaks": {
+        "originals": 15,
+        "valid_cells": 3,
+        "system_reachable_bytes": 30932,
+        "base_arm_bytes": 26385,
+        "original_payload_bytes": 5760,
+        "original_objects_bytes": 26260,
+        "output_slots": 1,
+        "output_payload_equivalent": 384,
+        "output_new_payloads": 0
+      },
+      "limits_note": "Boundary census is not an intra-operation whole-process peak; additional heap includes operation transients."
+    },
+    "F": {
+      "additional_python_peak": 4949,
+      "original_frames_peak": 0,
+      "output_slots_peak": 1,
+      "combined_peak": 0,
+      "original_frames_upper_bound": 16,
+      "combined_upper_bound": 18,
+      "packed": 416,
+      "receipt_bytes_peak": 611,
+      "utf8_upper": 1222,
+      "phase_peaks": {
+        "perception": {
+          "retained": 1612,
+          "transient": 3337,
+          "total": 4949
+        },
+        "feedback": {
+          "retained": 2315,
+          "transient": 704,
+          "total": 2904
+        },
+        "finish": {
+          "retained": 2316,
+          "transient": 56,
+          "total": 2372
+        }
+      },
+      "boundary_peaks": {
+        "originals": 15,
+        "valid_cells": 3,
+        "system_reachable_bytes": 30932,
+        "base_arm_bytes": 26385,
+        "original_payload_bytes": 5760,
+        "original_objects_bytes": 26260,
+        "output_slots": 1,
+        "output_payload_equivalent": 384,
+        "output_new_payloads": 0
+      },
+      "limits_note": "Boundary census is not an intra-operation whole-process peak; additional heap includes operation transients."
+    }
+  },
+  "status": "FAIL",
+  "error": "ValueError('COLLECTION_COMPLETENESS')"
+}

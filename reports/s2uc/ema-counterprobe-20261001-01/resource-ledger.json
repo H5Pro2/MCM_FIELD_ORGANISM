@@ -1,0 +1,122 @@
+[
+  {
+    "story": "constant",
+    "arm": "E",
+    "frame_meter": {
+      "frame_peak": 12,
+      "output_slots_peak": 2,
+      "combined_peak": 13,
+      "output_python_bytes_peak": 3648,
+      "samples": 143254,
+      "receipt_bytes_peak": 0,
+      "scalar_pair_comparisons": 0,
+      "temporary_numeric_vectors_peak": 0,
+      "match_metadata_peak": 1,
+      "receipt_transient_utf8_bytes_peak": 359,
+      "receipt_python_bytes_peak": 400
+    },
+    "additional_python_peak": 4276,
+    "additional_measurements": 499,
+    "qualification_method": "retained addon Python size plus isolated tracemalloc peak; observer instrumentation excluded"
+  },
+  {
+    "story": "constant",
+    "arm": "K",
+    "frame_meter": {
+      "frame_peak": 12,
+      "output_slots_peak": 2,
+      "combined_peak": 13,
+      "output_python_bytes_peak": 3648,
+      "samples": 143254,
+      "receipt_bytes_peak": 0,
+      "scalar_pair_comparisons": 0,
+      "temporary_numeric_vectors_peak": 0,
+      "match_metadata_peak": 1,
+      "receipt_transient_utf8_bytes_peak": 359,
+      "receipt_python_bytes_peak": 400
+    },
+    "additional_python_peak": 0,
+    "additional_measurements": 0,
+    "qualification_method": "retained addon Python size plus isolated tracemalloc peak; observer instrumentation excluded"
+  },
+  {
+    "story": "constant",
+    "arm": "P",
+    "frame_meter": {
+      "frame_peak": 12,
+      "output_slots_peak": 2,
+      "combined_peak": 13,
+      "output_python_bytes_peak": 3648,
+      "samples": 143254,
+      "receipt_bytes_peak": 0,
+      "scalar_pair_comparisons": 0,
+      "temporary_numeric_vectors_peak": 0,
+      "match_metadata_peak": 1,
+      "receipt_transient_utf8_bytes_peak": 359,
+      "receipt_python_bytes_peak": 400
+    },
+    "additional_python_peak": 0,
+    "additional_measurements": 0,
+    "qualification_method": "retained addon Python size plus isolated tracemalloc peak; observer instrumentation excluded"
+  },
+  {
+    "story": "switch_return",
+    "arm": "E",
+    "frame_meter": {
+      "frame_peak": 12,
+      "output_slots_peak": 2,
+      "combined_peak": 13,
+      "output_python_bytes_peak": 3648,
+      "samples": 146726,
+      "receipt_bytes_peak": 0,
+      "scalar_pair_comparisons": 0,
+      "temporary_numeric_vectors_peak": 0,
+      "match_metadata_peak": 1,
+      "receipt_transient_utf8_bytes_peak": 359,
+      "receipt_python_bytes_peak": 400
+    },
+    "additional_python_peak": 4284,
+    "additional_measurements": 499,
+    "qualification_method": "retained addon Python size plus isolated tracemalloc peak; observer instrumentation excluded"
+  },
+  {
+    "story": "switch_return",
+    "arm": "K",
+    "frame_meter": {
+      "frame_peak": 12,
+      "output_slots_peak": 2,
+      "combined_peak": 13,
+      "output_python_bytes_peak": 3648,
+      "samples": 146726,
+      "receipt_bytes_peak": 0,
+      "scalar_pair_comparisons": 0,
+      "temporary_numeric_vectors_peak": 0,
+      "match_metadata_peak": 1,
+      "receipt_transient_utf8_bytes_peak": 359,
+      "receipt_python_bytes_peak": 400
+    },
+    "additional_python_peak": 0,
+    "additional_measurements": 0,
+    "qualification_method": "retained addon Python size plus isolated tracemalloc peak; observer instrumentation excluded"
+  },
+  {
+    "story": "switch_return",
+    "arm": "P",
+    "frame_meter": {
+      "frame_peak": 12,
+      "output_slots_peak": 2,
+      "combined_peak": 13,
+      "output_python_bytes_peak": 3648,
+      "samples": 146726,
+      "receipt_bytes_peak": 0,
+      "scalar_pair_comparisons": 0,
+      "temporary_numeric_vectors_peak": 0,
+      "match_metadata_peak": 1,
+      "receipt_transient_utf8_bytes_peak": 359,
+      "receipt_python_bytes_peak": 400
+    },
+    "additional_python_peak": 0,
+    "additional_measurements": 0,
+    "qualification_method": "retained addon Python size plus isolated tracemalloc peak; observer instrumentation excluded"
+  }
+]

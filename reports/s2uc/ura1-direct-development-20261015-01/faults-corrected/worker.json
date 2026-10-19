@@ -1,0 +1,88 @@
+{
+  "cases": [],
+  "membership": true,
+  "mode": "faults",
+  "phases": [
+    {
+      "end_process": {
+        "lifetime_peak_commit": 36429824,
+        "private_bytes": 33984512,
+        "working_set": 41443328
+      },
+      "name": "imports_and_initialization",
+      "python_current": 9365856,
+      "python_peak": 12218385,
+      "seconds": 1.691274999999223,
+      "start_process": {
+        "lifetime_peak_commit": 12910592,
+        "private_bytes": 12738560,
+        "working_set": 18714624
+      }
+    },
+    {
+      "end_process": {
+        "lifetime_peak_commit": 43479040,
+        "private_bytes": 35053568,
+        "working_set": 43446272
+      },
+      "name": "bounded_capture_and_fault_tests",
+      "python_current": 9883532,
+      "python_peak": 18442435,
+      "seconds": 0.15362520000053337,
+      "start_process": {
+        "lifetime_peak_commit": 36429824,
+        "private_bytes": 33984512,
+        "working_set": 41447424
+      }
+    },
+    {
+      "end_process": {
+        "lifetime_peak_commit": 43479040,
+        "private_bytes": 35053568,
+        "working_set": 43454464
+      },
+      "name": "final_cleanup",
+      "python_current": 9820383,
+      "python_peak": 9887715,
+      "seconds": 0.02273339999919699,
+      "start_process": {
+        "lifetime_peak_commit": 43479040,
+        "private_bytes": 35053568,
+        "working_set": 43446272
+      }
+    }
+  ],
+  "seconds": 1.888459399999192,
+  "status": "PASS",
+  "tests": [
+    {
+      "id": "tests.test_s2uc_ura1_direct_archive.DirectTests.test_D02_roundtrip_order_metadata_cells",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_direct_archive.DirectTests.test_D03_table_edge_dictionary_index_collection_limits",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_direct_archive.DirectTests.test_D04_record_and_temporary_limit",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_direct_archive.DirectTests.test_D05_write_and_encoder_failure_cleanup",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_direct_archive.DirectTests.test_D06_capture_failure_terminates_arm",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_direct_archive.DirectTests.test_D07_immutable_rules_references_and_check_scope",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_direct_archive.DirectTests.test_D08_integer_metadata_key_normalization",
+      "status": "PASS"
+    }
+  ],
+  "worker_pid": 8964
+}

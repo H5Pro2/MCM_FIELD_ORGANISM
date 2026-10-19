@@ -1,0 +1,2008 @@
+MCM S2UC -- AR-DEV einmalige Produktion und fest begrenzte Siebener-Suche
+2026-10-01
+
+ABGESCHLOSSEN: MATERIAL_COMPLETE, ein Produktionsaufruf, danach genau sieben vorgegebene tau. Alle elf Pruefziele und48 Lernziele je Arm/Einstellung separat. AR-EVAL unproduziert und unausgewertet.
+
+1. Bindungen und Produktion
+Plan SHA256 40410b187f813cb546e44cca01ac353f85bdc70d4b29e5b0fc057ac3f6feb5fd
+Produktionsbindung SHA256 87306a9ef5e67c47fd99d0643a38513dae40ad7f684ccbae898fff7801f9257e
+Autorisierung docs/S2UC_AR_DEV_AUTORISIERUNG_20261001.json exakt aus PENDING-Vorlage erstellt, Status AUTHORIZED_ONCE. Kein Code-/Seed-/Parameter-/Fallwechsel.
+Einziger Produktionsaufruf: C:/Python314/python.exe -m tools.s2uc_ar_material produce docs/S2UC_AR_DEV_AUTORISIERUNG_20261001.json
+Material reports/s2uc/signal-approx-material-ar-dev-01;21 Dateien,vier Basisepisoden,768 Basiskomponenten,2 R-Hinweisrauschframes,3 reine Stoerungsframes,8 Kalibrationsframes;11 exportierte Fallgeschichten mit129 Frames.
+Materialausgabe 128999/4194304 Byte einschliesslich Fehlerabschlussreserve262144 Byte. Keine zweite Produktion; keine Ersatzdaten.
+Integritaetsleser bestaetigt Profile/Wertehashes/Herkunft, gemeinsames A/D-Praefix, R1/R3-Hinweisgleichheit, Stoerungen, Mischung und Kleinsignal-Gain. Materialhashes vor/nach Suche gleich; Code-/Plan-/Laufzeitbindungen abschliessend bestaetigt.
+
+2. Epsilon als Rezeptpruefung
+Acht Kalibrationsframe-Absolutamplituden: [0.0009765625, 0.0009765625, 0.0009765625, 0.0009765625, 0.0009765625, 0.0009765625, 0.0009765625, 0.0009765625]
+epsilon=0.0009765625=2^-10. Konstruktionsbedingt, da jede Rauschkomponente Betrag2^-10 besitzt. Keine Schaetzung eines unbekannten Sensorrauschbodens.
+
+3. Alle sieben Einstellungen und Auswahlregel
+Beide Arme verwenden ausschliesslich legacy_v1-Fortsetzung. Jede Geschichte startet leer. Kein factor_scaled_v1 und kein automatischer Policywechsel. Zeit-/Ressourcenbeobachtung beeinflusst keine Zuordnung.
+Zulaessigkeit: keine zusaetzliche falsche Einzelzuordnung pro Position gegen exakten Abruf. Bereits falsche Referenzpositionen bleiben sichtbar; keine Fehler gegeneinander verrechnen.
+Ziel: maximale korrekte R1/R2-Zuordnungen; Gleichstand kleinstes tau. MAE erreicht den Selector nicht. Auswahlinput ausschliesslich Kategorien in selection-inputs.json.
+tau | zulaessig | korrekt R1/R2 | Zugewinn R1/R2 | neue Fehler | verlorene exakte Zuordnungen | konkrete Abdeckung neu/exakt | Schema-MAE neu/exakt/Persistenz
+0 | True | 0 | 0 | [] | [] | 2/11 / 2/11 | 0.0332745191726 / 0.0332745191726 / 0.0383441362417
+0.00390625 | True | 0 | 0 | [] | [] | 2/11 / 2/11 | 0.0332745191726 / 0.0332745191726 / 0.0383441362417
+0.0078125 | True | 1 | 1 | [] | [] | 4/11 / 2/11 | 0.0332745191726 / 0.0332745191726 / 0.0383441362417
+0.015625 | True | 2 | 2 | [] | [] | 5/11 / 2/11 | 0.027761010058 / 0.0332745191726 / 0.0383441362417
+0.03125 | True | 2 | 2 | [] | [] | 5/11 / 2/11 | 0.027761010058 / 0.0332745191726 / 0.0383441362417
+0.0625 | True | 2 | 2 | [] | [] | 5/11 / 2/11 | 0.027761010058 / 0.0332745191726 / 0.0383441362417
+0.125 | True | 2 | 2 | [] | [] | 5/11 / 2/11 | 0.027761010058 / 0.0332745191726 / 0.0383441362417
+
+Auswahlstatus: DEVELOPMENT_CANDIDATE_ONLY
+selected_tau=0.015625
+Nur Development-Ergebnis. Auch ein ausgewaehlter Parameter autorisiert keine Evaluation und belegt noch keinen Robustheitsgewinn.
+
+4. Einzelbewertungen, gemeinsame Zielmasken und alle Schaeden
+
+Einstellung0, tau=0.0
+Verlorene Exakttreffer: []; signalbedingt: []; verlorene korrekte Exakttreffer: []
+Fall | Herkunft exakt/neu | Status exakt/neu | MAE konkret exakt/neu/Persistenz | MAE Schema exakt/neu
+R0 | CORRECT/CORRECT | PREDICTED_RETAINED/PREDICTED_RETAINED | 0/0/0.0604858398438 | 0/0
+R1 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0605672200521 | 0.0605672200521/0.0605672200521
+R2 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0606486002604 | 0.0606486002604/0.0606486002604
+R3 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0 | 0/0
+N1 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0647735595703 | 0.0647735595703/0.0647735595703
+N2 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0672607421875 | 0.0672607421875/0.0672607421875
+N3 | WRONG/WRONG | PREDICTED_RETAINED/PREDICTED_RETAINED | 0.0612487792969/0.0612487792969/0.0565287272135 | 0.0612487792969/0.0612487792969
+N4 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0504480997721 | 0.0504480997721/0.0504480997721
+Z0 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0 | 0/0
+Z1 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.00105794270833 | 0.00105794270833/0.00105794270833
+P0 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/1.47670507431e-05 | 1.47670507431e-05/1.47670507431e-05
+exact_retrieval Herkunft/Abdeckung:
+{
+  "total": 11,
+  "origin_counts": {
+    "CORRECT": 1,
+    "ABSTAIN": 9,
+    "WRONG": 1
+  },
+  "positive_origin_counts": {
+    "CORRECT": 1,
+    "ABSTAIN": 4
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 5,
+    "WRONG": 1
+  },
+  "assignment_coverage": 0.18181818181818182,
+  "context_coverage": 0.18181818181818182,
+  "positive_correct_fraction": 0.2,
+  "negative_wrong_fraction": 0.16666666666666666,
+  "correct_rejections": 5,
+  "roles": {
+    "retained": 2
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 9
+  },
+  "paired": {
+    "count": 2,
+    "persistence_mae": 0.05850728352864583,
+    "context_mae": 0.0306243896484375,
+    "delta": 0.027882893880208332,
+    "better": 1,
+    "equal": 0,
+    "worse": 1
+  },
+  "full_coverage": {
+    "count": 11,
+    "persistence_mae": 0.03834413624171055,
+    "observer_hybrid_mae": 0.03327451917258176,
+    "delta": 0.005069617069128788
+  },
+  "harm_rows": [
+    {
+      "case_id": "N3",
+      "target": 11,
+      "positive": false,
+      "origin_category": "WRONG",
+      "assigned_root": "AR-DEV/A",
+      "true_root": "AR-DEV/D",
+      "role": "retained",
+      "assignment_covered": true,
+      "correct_rejection": false,
+      "prediction_status": "PREDICTED_RETAINED",
+      "context_covered": true,
+      "persistence_mae": 0.056528727213541664,
+      "context_mae": 0.061248779296875,
+      "paired_delta": -0.004720052083333336,
+      "observer_hybrid_mae": 0.061248779296875,
+      "full_delta": -0.004720052083333336
+    }
+  ]
+}
+signal_approx_retrieval Herkunft/Abdeckung:
+{
+  "total": 11,
+  "origin_counts": {
+    "CORRECT": 1,
+    "ABSTAIN": 9,
+    "WRONG": 1
+  },
+  "positive_origin_counts": {
+    "CORRECT": 1,
+    "ABSTAIN": 4
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 5,
+    "WRONG": 1
+  },
+  "assignment_coverage": 0.18181818181818182,
+  "context_coverage": 0.18181818181818182,
+  "positive_correct_fraction": 0.2,
+  "negative_wrong_fraction": 0.16666666666666666,
+  "correct_rejections": 5,
+  "roles": {
+    "retained": 2
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 9
+  },
+  "paired": {
+    "count": 2,
+    "persistence_mae": 0.05850728352864583,
+    "context_mae": 0.0306243896484375,
+    "delta": 0.027882893880208332,
+    "better": 1,
+    "equal": 0,
+    "worse": 1
+  },
+  "full_coverage": {
+    "count": 11,
+    "persistence_mae": 0.03834413624171055,
+    "observer_hybrid_mae": 0.03327451917258176,
+    "delta": 0.005069617069128788
+  },
+  "harm_rows": [
+    {
+      "case_id": "N3",
+      "target": 11,
+      "positive": false,
+      "origin_category": "WRONG",
+      "assigned_root": "AR-DEV/A",
+      "true_root": "AR-DEV/D",
+      "role": "retained",
+      "assignment_covered": true,
+      "correct_rejection": false,
+      "prediction_status": "PREDICTED_RETAINED",
+      "context_covered": true,
+      "persistence_mae": 0.056528727213541664,
+      "context_mae": 0.061248779296875,
+      "paired_delta": -0.004720052083333336,
+      "observer_hybrid_mae": 0.061248779296875,
+      "full_delta": -0.004720052083333336
+    }
+  ]
+}
+signal_approx_retrieval_vs_exact_retrieval: Zielmenge ['R0', 'N3'], n=2, MAE links/rechts=0.0306243896484/0.0306243896484, Delta=0
+signal_approx_retrieval_vs_persistence: Zielmenge ['R0', 'N3'], n=2, MAE links/rechts=0.0306243896484/0.0585072835286, Delta=0.0278828938802
+exact_retrieval_vs_persistence: Zielmenge ['R0', 'N3'], n=2, MAE links/rechts=0.0306243896484/0.0585072835286, Delta=0.0278828938802
+Alle Primaerschaeden gegen Persistenz:
+[
+  {
+    "case_id": "N3",
+    "target": 11,
+    "persistence": 0.056528727213541664,
+    "exact_retrieval": 0.061248779296875,
+    "signal_approx_retrieval": 0.061248779296875,
+    "signal_approx_retrieval_vs_persistence": -0.004720052083333336,
+    "signal_approx_retrieval_vs_exact_retrieval": 0.0
+  }
+]
+Alle Primaerschaeden gegen exaktes Kontext-sonst-Persistenz-Schema:
+[]
+48 Lernziele separat: neue Fehler []; verlorene exakte Zuordnungen []
+exact_retrieval Lernzielbilanz:
+{
+  "total": 48,
+  "origin_counts": {
+    "ABSTAIN": 24,
+    "CORRECT": 17,
+    "WRONG": 7
+  },
+  "positive_origin_counts": {
+    "CORRECT": 17
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 24,
+    "WRONG": 7
+  },
+  "assignment_coverage": 0.5,
+  "context_coverage": 0.25,
+  "positive_correct_fraction": 1.0,
+  "negative_wrong_fraction": 0.22580645161290322,
+  "correct_rejections": 24,
+  "roles": {
+    "candidate": 24
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 24,
+    "ABSTAIN_NO_SUCCESSOR": 12
+  },
+  "paired": {
+    "count": 12,
+    "persistence_mae": 0.06084314982096354,
+    "context_mae": 0.0,
+    "delta": 0.06084314982096354,
+    "better": 12,
+    "equal": 0,
+    "worse": 0
+  },
+  "full_coverage": {
+    "count": 48,
+    "persistence_mae": 0.06782884192135599,
+    "observer_hybrid_mae": 0.05261805446611511,
+    "delta": 0.015210787455240885
+  },
+  "harm_rows": []
+}
+signal_approx_retrieval Lernzielbilanz:
+{
+  "total": 48,
+  "origin_counts": {
+    "ABSTAIN": 24,
+    "CORRECT": 17,
+    "WRONG": 7
+  },
+  "positive_origin_counts": {
+    "CORRECT": 17
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 24,
+    "WRONG": 7
+  },
+  "assignment_coverage": 0.5,
+  "context_coverage": 0.25,
+  "positive_correct_fraction": 1.0,
+  "negative_wrong_fraction": 0.22580645161290322,
+  "correct_rejections": 24,
+  "roles": {
+    "candidate": 24
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 24,
+    "ABSTAIN_NO_SUCCESSOR": 12
+  },
+  "paired": {
+    "count": 12,
+    "persistence_mae": 0.06084314982096354,
+    "context_mae": 0.0,
+    "delta": 0.06084314982096354,
+    "better": 12,
+    "equal": 0,
+    "worse": 0
+  },
+  "full_coverage": {
+    "count": 48,
+    "persistence_mae": 0.06782884192135599,
+    "observer_hybrid_mae": 0.05261805446611511,
+    "delta": 0.015210787455240885
+  },
+  "harm_rows": []
+}
+Lernziel-Schaeden gegen Persistenz:
+[]
+Lernziel-Schaeden gegen exaktes Beobachterschema:
+[]
+Alle48 Lern-Einzelwerte und gemeinsamen Masken stehen in tau-0.json/learning_summary; kein Einmischen in Primaerquote.
+
+Einstellung1, tau=0.00390625
+Verlorene Exakttreffer: []; signalbedingt: []; verlorene korrekte Exakttreffer: []
+Fall | Herkunft exakt/neu | Status exakt/neu | MAE konkret exakt/neu/Persistenz | MAE Schema exakt/neu
+R0 | CORRECT/CORRECT | PREDICTED_RETAINED/PREDICTED_RETAINED | 0/0/0.0604858398438 | 0/0
+R1 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0605672200521 | 0.0605672200521/0.0605672200521
+R2 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0606486002604 | 0.0606486002604/0.0606486002604
+R3 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0 | 0/0
+N1 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0647735595703 | 0.0647735595703/0.0647735595703
+N2 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0672607421875 | 0.0672607421875/0.0672607421875
+N3 | WRONG/WRONG | PREDICTED_RETAINED/PREDICTED_RETAINED | 0.0612487792969/0.0612487792969/0.0565287272135 | 0.0612487792969/0.0612487792969
+N4 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0504480997721 | 0.0504480997721/0.0504480997721
+Z0 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0 | 0/0
+Z1 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.00105794270833 | 0.00105794270833/0.00105794270833
+P0 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/1.47670507431e-05 | 1.47670507431e-05/1.47670507431e-05
+exact_retrieval Herkunft/Abdeckung:
+{
+  "total": 11,
+  "origin_counts": {
+    "CORRECT": 1,
+    "ABSTAIN": 9,
+    "WRONG": 1
+  },
+  "positive_origin_counts": {
+    "CORRECT": 1,
+    "ABSTAIN": 4
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 5,
+    "WRONG": 1
+  },
+  "assignment_coverage": 0.18181818181818182,
+  "context_coverage": 0.18181818181818182,
+  "positive_correct_fraction": 0.2,
+  "negative_wrong_fraction": 0.16666666666666666,
+  "correct_rejections": 5,
+  "roles": {
+    "retained": 2
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 9
+  },
+  "paired": {
+    "count": 2,
+    "persistence_mae": 0.05850728352864583,
+    "context_mae": 0.0306243896484375,
+    "delta": 0.027882893880208332,
+    "better": 1,
+    "equal": 0,
+    "worse": 1
+  },
+  "full_coverage": {
+    "count": 11,
+    "persistence_mae": 0.03834413624171055,
+    "observer_hybrid_mae": 0.03327451917258176,
+    "delta": 0.005069617069128788
+  },
+  "harm_rows": [
+    {
+      "case_id": "N3",
+      "target": 11,
+      "positive": false,
+      "origin_category": "WRONG",
+      "assigned_root": "AR-DEV/A",
+      "true_root": "AR-DEV/D",
+      "role": "retained",
+      "assignment_covered": true,
+      "correct_rejection": false,
+      "prediction_status": "PREDICTED_RETAINED",
+      "context_covered": true,
+      "persistence_mae": 0.056528727213541664,
+      "context_mae": 0.061248779296875,
+      "paired_delta": -0.004720052083333336,
+      "observer_hybrid_mae": 0.061248779296875,
+      "full_delta": -0.004720052083333336
+    }
+  ]
+}
+signal_approx_retrieval Herkunft/Abdeckung:
+{
+  "total": 11,
+  "origin_counts": {
+    "CORRECT": 1,
+    "ABSTAIN": 9,
+    "WRONG": 1
+  },
+  "positive_origin_counts": {
+    "CORRECT": 1,
+    "ABSTAIN": 4
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 5,
+    "WRONG": 1
+  },
+  "assignment_coverage": 0.18181818181818182,
+  "context_coverage": 0.18181818181818182,
+  "positive_correct_fraction": 0.2,
+  "negative_wrong_fraction": 0.16666666666666666,
+  "correct_rejections": 5,
+  "roles": {
+    "retained": 2
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 9
+  },
+  "paired": {
+    "count": 2,
+    "persistence_mae": 0.05850728352864583,
+    "context_mae": 0.0306243896484375,
+    "delta": 0.027882893880208332,
+    "better": 1,
+    "equal": 0,
+    "worse": 1
+  },
+  "full_coverage": {
+    "count": 11,
+    "persistence_mae": 0.03834413624171055,
+    "observer_hybrid_mae": 0.03327451917258176,
+    "delta": 0.005069617069128788
+  },
+  "harm_rows": [
+    {
+      "case_id": "N3",
+      "target": 11,
+      "positive": false,
+      "origin_category": "WRONG",
+      "assigned_root": "AR-DEV/A",
+      "true_root": "AR-DEV/D",
+      "role": "retained",
+      "assignment_covered": true,
+      "correct_rejection": false,
+      "prediction_status": "PREDICTED_RETAINED",
+      "context_covered": true,
+      "persistence_mae": 0.056528727213541664,
+      "context_mae": 0.061248779296875,
+      "paired_delta": -0.004720052083333336,
+      "observer_hybrid_mae": 0.061248779296875,
+      "full_delta": -0.004720052083333336
+    }
+  ]
+}
+signal_approx_retrieval_vs_exact_retrieval: Zielmenge ['R0', 'N3'], n=2, MAE links/rechts=0.0306243896484/0.0306243896484, Delta=0
+signal_approx_retrieval_vs_persistence: Zielmenge ['R0', 'N3'], n=2, MAE links/rechts=0.0306243896484/0.0585072835286, Delta=0.0278828938802
+exact_retrieval_vs_persistence: Zielmenge ['R0', 'N3'], n=2, MAE links/rechts=0.0306243896484/0.0585072835286, Delta=0.0278828938802
+Alle Primaerschaeden gegen Persistenz:
+[
+  {
+    "case_id": "N3",
+    "target": 11,
+    "persistence": 0.056528727213541664,
+    "exact_retrieval": 0.061248779296875,
+    "signal_approx_retrieval": 0.061248779296875,
+    "signal_approx_retrieval_vs_persistence": -0.004720052083333336,
+    "signal_approx_retrieval_vs_exact_retrieval": 0.0
+  }
+]
+Alle Primaerschaeden gegen exaktes Kontext-sonst-Persistenz-Schema:
+[]
+48 Lernziele separat: neue Fehler []; verlorene exakte Zuordnungen []
+exact_retrieval Lernzielbilanz:
+{
+  "total": 48,
+  "origin_counts": {
+    "ABSTAIN": 24,
+    "CORRECT": 17,
+    "WRONG": 7
+  },
+  "positive_origin_counts": {
+    "CORRECT": 17
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 24,
+    "WRONG": 7
+  },
+  "assignment_coverage": 0.5,
+  "context_coverage": 0.25,
+  "positive_correct_fraction": 1.0,
+  "negative_wrong_fraction": 0.22580645161290322,
+  "correct_rejections": 24,
+  "roles": {
+    "candidate": 24
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 24,
+    "ABSTAIN_NO_SUCCESSOR": 12
+  },
+  "paired": {
+    "count": 12,
+    "persistence_mae": 0.06084314982096354,
+    "context_mae": 0.0,
+    "delta": 0.06084314982096354,
+    "better": 12,
+    "equal": 0,
+    "worse": 0
+  },
+  "full_coverage": {
+    "count": 48,
+    "persistence_mae": 0.06782884192135599,
+    "observer_hybrid_mae": 0.05261805446611511,
+    "delta": 0.015210787455240885
+  },
+  "harm_rows": []
+}
+signal_approx_retrieval Lernzielbilanz:
+{
+  "total": 48,
+  "origin_counts": {
+    "ABSTAIN": 24,
+    "CORRECT": 17,
+    "WRONG": 7
+  },
+  "positive_origin_counts": {
+    "CORRECT": 17
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 24,
+    "WRONG": 7
+  },
+  "assignment_coverage": 0.5,
+  "context_coverage": 0.25,
+  "positive_correct_fraction": 1.0,
+  "negative_wrong_fraction": 0.22580645161290322,
+  "correct_rejections": 24,
+  "roles": {
+    "candidate": 24
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 24,
+    "ABSTAIN_NO_SUCCESSOR": 12
+  },
+  "paired": {
+    "count": 12,
+    "persistence_mae": 0.06084314982096354,
+    "context_mae": 0.0,
+    "delta": 0.06084314982096354,
+    "better": 12,
+    "equal": 0,
+    "worse": 0
+  },
+  "full_coverage": {
+    "count": 48,
+    "persistence_mae": 0.06782884192135599,
+    "observer_hybrid_mae": 0.05261805446611511,
+    "delta": 0.015210787455240885
+  },
+  "harm_rows": []
+}
+Lernziel-Schaeden gegen Persistenz:
+[]
+Lernziel-Schaeden gegen exaktes Beobachterschema:
+[]
+Alle48 Lern-Einzelwerte und gemeinsamen Masken stehen in tau-1.json/learning_summary; kein Einmischen in Primaerquote.
+
+Einstellung2, tau=0.0078125
+Verlorene Exakttreffer: []; signalbedingt: []; verlorene korrekte Exakttreffer: []
+Fall | Herkunft exakt/neu | Status exakt/neu | MAE konkret exakt/neu/Persistenz | MAE Schema exakt/neu
+R0 | CORRECT/CORRECT | PREDICTED_RETAINED/PREDICTED_RETAINED | 0/0/0.0604858398438 | 0/0
+R1 | ABSTAIN/CORRECT | ABSTAIN_NO_CONTEXT/PREDICTED_RETAINED | undefiniert/0/0.0605672200521 | 0.0605672200521/0
+R2 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0606486002604 | 0.0606486002604/0.0606486002604
+R3 | ABSTAIN/CORRECT | ABSTAIN_NO_CONTEXT/PREDICTED_RETAINED | undefiniert/0.0605672200521/0 | 0/0.0605672200521
+N1 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0647735595703 | 0.0647735595703/0.0647735595703
+N2 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0672607421875 | 0.0672607421875/0.0672607421875
+N3 | WRONG/WRONG | PREDICTED_RETAINED/PREDICTED_RETAINED | 0.0612487792969/0.0612487792969/0.0565287272135 | 0.0612487792969/0.0612487792969
+N4 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0504480997721 | 0.0504480997721/0.0504480997721
+Z0 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0 | 0/0
+Z1 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.00105794270833 | 0.00105794270833/0.00105794270833
+P0 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/1.47670507431e-05 | 1.47670507431e-05/1.47670507431e-05
+exact_retrieval Herkunft/Abdeckung:
+{
+  "total": 11,
+  "origin_counts": {
+    "CORRECT": 1,
+    "ABSTAIN": 9,
+    "WRONG": 1
+  },
+  "positive_origin_counts": {
+    "CORRECT": 1,
+    "ABSTAIN": 4
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 5,
+    "WRONG": 1
+  },
+  "assignment_coverage": 0.18181818181818182,
+  "context_coverage": 0.18181818181818182,
+  "positive_correct_fraction": 0.2,
+  "negative_wrong_fraction": 0.16666666666666666,
+  "correct_rejections": 5,
+  "roles": {
+    "retained": 2
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 9
+  },
+  "paired": {
+    "count": 2,
+    "persistence_mae": 0.05850728352864583,
+    "context_mae": 0.0306243896484375,
+    "delta": 0.027882893880208332,
+    "better": 1,
+    "equal": 0,
+    "worse": 1
+  },
+  "full_coverage": {
+    "count": 11,
+    "persistence_mae": 0.03834413624171055,
+    "observer_hybrid_mae": 0.03327451917258176,
+    "delta": 0.005069617069128788
+  },
+  "harm_rows": [
+    {
+      "case_id": "N3",
+      "target": 11,
+      "positive": false,
+      "origin_category": "WRONG",
+      "assigned_root": "AR-DEV/A",
+      "true_root": "AR-DEV/D",
+      "role": "retained",
+      "assignment_covered": true,
+      "correct_rejection": false,
+      "prediction_status": "PREDICTED_RETAINED",
+      "context_covered": true,
+      "persistence_mae": 0.056528727213541664,
+      "context_mae": 0.061248779296875,
+      "paired_delta": -0.004720052083333336,
+      "observer_hybrid_mae": 0.061248779296875,
+      "full_delta": -0.004720052083333336
+    }
+  ]
+}
+signal_approx_retrieval Herkunft/Abdeckung:
+{
+  "total": 11,
+  "origin_counts": {
+    "CORRECT": 3,
+    "ABSTAIN": 7,
+    "WRONG": 1
+  },
+  "positive_origin_counts": {
+    "CORRECT": 3,
+    "ABSTAIN": 2
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 5,
+    "WRONG": 1
+  },
+  "assignment_coverage": 0.36363636363636365,
+  "context_coverage": 0.36363636363636365,
+  "positive_correct_fraction": 0.6,
+  "negative_wrong_fraction": 0.16666666666666666,
+  "correct_rejections": 5,
+  "roles": {
+    "retained": 4
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 7
+  },
+  "paired": {
+    "count": 4,
+    "persistence_mae": 0.04439544677734375,
+    "context_mae": 0.030453999837239586,
+    "delta": 0.013941446940104166,
+    "better": 2,
+    "equal": 0,
+    "worse": 2
+  },
+  "full_coverage": {
+    "count": 11,
+    "persistence_mae": 0.03834413624171055,
+    "observer_hybrid_mae": 0.03327451917258176,
+    "delta": 0.005069617069128788
+  },
+  "harm_rows": [
+    {
+      "case_id": "R3",
+      "target": 11,
+      "positive": true,
+      "origin_category": "CORRECT",
+      "assigned_root": "AR-DEV/A",
+      "true_root": "AR-DEV/A",
+      "role": "retained",
+      "assignment_covered": true,
+      "correct_rejection": false,
+      "prediction_status": "PREDICTED_RETAINED",
+      "context_covered": true,
+      "persistence_mae": 0.0,
+      "context_mae": 0.060567220052083336,
+      "paired_delta": -0.060567220052083336,
+      "observer_hybrid_mae": 0.060567220052083336,
+      "full_delta": -0.060567220052083336
+    },
+    {
+      "case_id": "N3",
+      "target": 11,
+      "positive": false,
+      "origin_category": "WRONG",
+      "assigned_root": "AR-DEV/A",
+      "true_root": "AR-DEV/D",
+      "role": "retained",
+      "assignment_covered": true,
+      "correct_rejection": false,
+      "prediction_status": "PREDICTED_RETAINED",
+      "context_covered": true,
+      "persistence_mae": 0.056528727213541664,
+      "context_mae": 0.061248779296875,
+      "paired_delta": -0.004720052083333336,
+      "observer_hybrid_mae": 0.061248779296875,
+      "full_delta": -0.004720052083333336
+    }
+  ]
+}
+signal_approx_retrieval_vs_exact_retrieval: Zielmenge ['R0', 'N3'], n=2, MAE links/rechts=0.0306243896484/0.0306243896484, Delta=0
+signal_approx_retrieval_vs_persistence: Zielmenge ['R0', 'R1', 'R3', 'N3'], n=4, MAE links/rechts=0.0304539998372/0.0443954467773, Delta=0.0139414469401
+exact_retrieval_vs_persistence: Zielmenge ['R0', 'N3'], n=2, MAE links/rechts=0.0306243896484/0.0585072835286, Delta=0.0278828938802
+Alle Primaerschaeden gegen Persistenz:
+[
+  {
+    "case_id": "R3",
+    "target": 11,
+    "persistence": 0.0,
+    "exact_retrieval": 0.0,
+    "signal_approx_retrieval": 0.060567220052083336,
+    "signal_approx_retrieval_vs_persistence": -0.060567220052083336,
+    "signal_approx_retrieval_vs_exact_retrieval": -0.060567220052083336
+  },
+  {
+    "case_id": "N3",
+    "target": 11,
+    "persistence": 0.056528727213541664,
+    "exact_retrieval": 0.061248779296875,
+    "signal_approx_retrieval": 0.061248779296875,
+    "signal_approx_retrieval_vs_persistence": -0.004720052083333336,
+    "signal_approx_retrieval_vs_exact_retrieval": 0.0
+  }
+]
+Alle Primaerschaeden gegen exaktes Kontext-sonst-Persistenz-Schema:
+[
+  {
+    "case_id": "R3",
+    "target": 11,
+    "persistence": 0.0,
+    "exact_retrieval": 0.0,
+    "signal_approx_retrieval": 0.060567220052083336,
+    "signal_approx_retrieval_vs_persistence": -0.060567220052083336,
+    "signal_approx_retrieval_vs_exact_retrieval": -0.060567220052083336
+  }
+]
+48 Lernziele separat: neue Fehler []; verlorene exakte Zuordnungen []
+exact_retrieval Lernzielbilanz:
+{
+  "total": 48,
+  "origin_counts": {
+    "ABSTAIN": 24,
+    "CORRECT": 17,
+    "WRONG": 7
+  },
+  "positive_origin_counts": {
+    "CORRECT": 17
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 24,
+    "WRONG": 7
+  },
+  "assignment_coverage": 0.5,
+  "context_coverage": 0.25,
+  "positive_correct_fraction": 1.0,
+  "negative_wrong_fraction": 0.22580645161290322,
+  "correct_rejections": 24,
+  "roles": {
+    "candidate": 24
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 24,
+    "ABSTAIN_NO_SUCCESSOR": 12
+  },
+  "paired": {
+    "count": 12,
+    "persistence_mae": 0.06084314982096354,
+    "context_mae": 0.0,
+    "delta": 0.06084314982096354,
+    "better": 12,
+    "equal": 0,
+    "worse": 0
+  },
+  "full_coverage": {
+    "count": 48,
+    "persistence_mae": 0.06782884192135599,
+    "observer_hybrid_mae": 0.05261805446611511,
+    "delta": 0.015210787455240885
+  },
+  "harm_rows": []
+}
+signal_approx_retrieval Lernzielbilanz:
+{
+  "total": 48,
+  "origin_counts": {
+    "ABSTAIN": 24,
+    "CORRECT": 17,
+    "WRONG": 7
+  },
+  "positive_origin_counts": {
+    "CORRECT": 17
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 24,
+    "WRONG": 7
+  },
+  "assignment_coverage": 0.5,
+  "context_coverage": 0.25,
+  "positive_correct_fraction": 1.0,
+  "negative_wrong_fraction": 0.22580645161290322,
+  "correct_rejections": 24,
+  "roles": {
+    "candidate": 24
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 24,
+    "ABSTAIN_NO_SUCCESSOR": 12
+  },
+  "paired": {
+    "count": 12,
+    "persistence_mae": 0.06084314982096354,
+    "context_mae": 0.0,
+    "delta": 0.06084314982096354,
+    "better": 12,
+    "equal": 0,
+    "worse": 0
+  },
+  "full_coverage": {
+    "count": 48,
+    "persistence_mae": 0.06782884192135599,
+    "observer_hybrid_mae": 0.05261805446611511,
+    "delta": 0.015210787455240885
+  },
+  "harm_rows": []
+}
+Lernziel-Schaeden gegen Persistenz:
+[]
+Lernziel-Schaeden gegen exaktes Beobachterschema:
+[]
+Alle48 Lern-Einzelwerte und gemeinsamen Masken stehen in tau-2.json/learning_summary; kein Einmischen in Primaerquote.
+
+Einstellung3, tau=0.015625
+Verlorene Exakttreffer: []; signalbedingt: []; verlorene korrekte Exakttreffer: []
+Fall | Herkunft exakt/neu | Status exakt/neu | MAE konkret exakt/neu/Persistenz | MAE Schema exakt/neu
+R0 | CORRECT/CORRECT | PREDICTED_RETAINED/PREDICTED_RETAINED | 0/0/0.0604858398438 | 0/0
+R1 | ABSTAIN/CORRECT | ABSTAIN_NO_CONTEXT/PREDICTED_RETAINED | undefiniert/0/0.0605672200521 | 0.0605672200521/0
+R2 | ABSTAIN/CORRECT | ABSTAIN_NO_CONTEXT/PREDICTED_RETAINED | undefiniert/0/0.0606486002604 | 0.0606486002604/0
+R3 | ABSTAIN/CORRECT | ABSTAIN_NO_CONTEXT/PREDICTED_RETAINED | undefiniert/0.0605672200521/0 | 0/0.0605672200521
+N1 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0647735595703 | 0.0647735595703/0.0647735595703
+N2 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0672607421875 | 0.0672607421875/0.0672607421875
+N3 | WRONG/WRONG | PREDICTED_RETAINED/PREDICTED_RETAINED | 0.0612487792969/0.0612487792969/0.0565287272135 | 0.0612487792969/0.0612487792969
+N4 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0504480997721 | 0.0504480997721/0.0504480997721
+Z0 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0 | 0/0
+Z1 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.00105794270833 | 0.00105794270833/0.00105794270833
+P0 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/1.47670507431e-05 | 1.47670507431e-05/1.47670507431e-05
+exact_retrieval Herkunft/Abdeckung:
+{
+  "total": 11,
+  "origin_counts": {
+    "CORRECT": 1,
+    "ABSTAIN": 9,
+    "WRONG": 1
+  },
+  "positive_origin_counts": {
+    "CORRECT": 1,
+    "ABSTAIN": 4
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 5,
+    "WRONG": 1
+  },
+  "assignment_coverage": 0.18181818181818182,
+  "context_coverage": 0.18181818181818182,
+  "positive_correct_fraction": 0.2,
+  "negative_wrong_fraction": 0.16666666666666666,
+  "correct_rejections": 5,
+  "roles": {
+    "retained": 2
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 9
+  },
+  "paired": {
+    "count": 2,
+    "persistence_mae": 0.05850728352864583,
+    "context_mae": 0.0306243896484375,
+    "delta": 0.027882893880208332,
+    "better": 1,
+    "equal": 0,
+    "worse": 1
+  },
+  "full_coverage": {
+    "count": 11,
+    "persistence_mae": 0.03834413624171055,
+    "observer_hybrid_mae": 0.03327451917258176,
+    "delta": 0.005069617069128788
+  },
+  "harm_rows": [
+    {
+      "case_id": "N3",
+      "target": 11,
+      "positive": false,
+      "origin_category": "WRONG",
+      "assigned_root": "AR-DEV/A",
+      "true_root": "AR-DEV/D",
+      "role": "retained",
+      "assignment_covered": true,
+      "correct_rejection": false,
+      "prediction_status": "PREDICTED_RETAINED",
+      "context_covered": true,
+      "persistence_mae": 0.056528727213541664,
+      "context_mae": 0.061248779296875,
+      "paired_delta": -0.004720052083333336,
+      "observer_hybrid_mae": 0.061248779296875,
+      "full_delta": -0.004720052083333336
+    }
+  ]
+}
+signal_approx_retrieval Herkunft/Abdeckung:
+{
+  "total": 11,
+  "origin_counts": {
+    "CORRECT": 4,
+    "ABSTAIN": 6,
+    "WRONG": 1
+  },
+  "positive_origin_counts": {
+    "CORRECT": 4,
+    "ABSTAIN": 1
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 5,
+    "WRONG": 1
+  },
+  "assignment_coverage": 0.45454545454545453,
+  "context_coverage": 0.45454545454545453,
+  "positive_correct_fraction": 0.8,
+  "negative_wrong_fraction": 0.16666666666666666,
+  "correct_rejections": 5,
+  "roles": {
+    "retained": 5
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 6
+  },
+  "paired": {
+    "count": 5,
+    "persistence_mae": 0.04764607747395833,
+    "context_mae": 0.024363199869791668,
+    "delta": 0.023282877604166665,
+    "better": 3,
+    "equal": 0,
+    "worse": 2
+  },
+  "full_coverage": {
+    "count": 11,
+    "persistence_mae": 0.03834413624171055,
+    "observer_hybrid_mae": 0.027761010057998425,
+    "delta": 0.01058312618371212
+  },
+  "harm_rows": [
+    {
+      "case_id": "R3",
+      "target": 11,
+      "positive": true,
+      "origin_category": "CORRECT",
+      "assigned_root": "AR-DEV/A",
+      "true_root": "AR-DEV/A",
+      "role": "retained",
+      "assignment_covered": true,
+      "correct_rejection": false,
+      "prediction_status": "PREDICTED_RETAINED",
+      "context_covered": true,
+      "persistence_mae": 0.0,
+      "context_mae": 0.060567220052083336,
+      "paired_delta": -0.060567220052083336,
+      "observer_hybrid_mae": 0.060567220052083336,
+      "full_delta": -0.060567220052083336
+    },
+    {
+      "case_id": "N3",
+      "target": 11,
+      "positive": false,
+      "origin_category": "WRONG",
+      "assigned_root": "AR-DEV/A",
+      "true_root": "AR-DEV/D",
+      "role": "retained",
+      "assignment_covered": true,
+      "correct_rejection": false,
+      "prediction_status": "PREDICTED_RETAINED",
+      "context_covered": true,
+      "persistence_mae": 0.056528727213541664,
+      "context_mae": 0.061248779296875,
+      "paired_delta": -0.004720052083333336,
+      "observer_hybrid_mae": 0.061248779296875,
+      "full_delta": -0.004720052083333336
+    }
+  ]
+}
+signal_approx_retrieval_vs_exact_retrieval: Zielmenge ['R0', 'N3'], n=2, MAE links/rechts=0.0306243896484/0.0306243896484, Delta=0
+signal_approx_retrieval_vs_persistence: Zielmenge ['R0', 'R1', 'R2', 'R3', 'N3'], n=5, MAE links/rechts=0.0243631998698/0.047646077474, Delta=0.0232828776042
+exact_retrieval_vs_persistence: Zielmenge ['R0', 'N3'], n=2, MAE links/rechts=0.0306243896484/0.0585072835286, Delta=0.0278828938802
+Alle Primaerschaeden gegen Persistenz:
+[
+  {
+    "case_id": "R3",
+    "target": 11,
+    "persistence": 0.0,
+    "exact_retrieval": 0.0,
+    "signal_approx_retrieval": 0.060567220052083336,
+    "signal_approx_retrieval_vs_persistence": -0.060567220052083336,
+    "signal_approx_retrieval_vs_exact_retrieval": -0.060567220052083336
+  },
+  {
+    "case_id": "N3",
+    "target": 11,
+    "persistence": 0.056528727213541664,
+    "exact_retrieval": 0.061248779296875,
+    "signal_approx_retrieval": 0.061248779296875,
+    "signal_approx_retrieval_vs_persistence": -0.004720052083333336,
+    "signal_approx_retrieval_vs_exact_retrieval": 0.0
+  }
+]
+Alle Primaerschaeden gegen exaktes Kontext-sonst-Persistenz-Schema:
+[
+  {
+    "case_id": "R3",
+    "target": 11,
+    "persistence": 0.0,
+    "exact_retrieval": 0.0,
+    "signal_approx_retrieval": 0.060567220052083336,
+    "signal_approx_retrieval_vs_persistence": -0.060567220052083336,
+    "signal_approx_retrieval_vs_exact_retrieval": -0.060567220052083336
+  }
+]
+48 Lernziele separat: neue Fehler []; verlorene exakte Zuordnungen []
+exact_retrieval Lernzielbilanz:
+{
+  "total": 48,
+  "origin_counts": {
+    "ABSTAIN": 24,
+    "CORRECT": 17,
+    "WRONG": 7
+  },
+  "positive_origin_counts": {
+    "CORRECT": 17
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 24,
+    "WRONG": 7
+  },
+  "assignment_coverage": 0.5,
+  "context_coverage": 0.25,
+  "positive_correct_fraction": 1.0,
+  "negative_wrong_fraction": 0.22580645161290322,
+  "correct_rejections": 24,
+  "roles": {
+    "candidate": 24
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 24,
+    "ABSTAIN_NO_SUCCESSOR": 12
+  },
+  "paired": {
+    "count": 12,
+    "persistence_mae": 0.06084314982096354,
+    "context_mae": 0.0,
+    "delta": 0.06084314982096354,
+    "better": 12,
+    "equal": 0,
+    "worse": 0
+  },
+  "full_coverage": {
+    "count": 48,
+    "persistence_mae": 0.06782884192135599,
+    "observer_hybrid_mae": 0.05261805446611511,
+    "delta": 0.015210787455240885
+  },
+  "harm_rows": []
+}
+signal_approx_retrieval Lernzielbilanz:
+{
+  "total": 48,
+  "origin_counts": {
+    "ABSTAIN": 24,
+    "CORRECT": 17,
+    "WRONG": 7
+  },
+  "positive_origin_counts": {
+    "CORRECT": 17
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 24,
+    "WRONG": 7
+  },
+  "assignment_coverage": 0.5,
+  "context_coverage": 0.25,
+  "positive_correct_fraction": 1.0,
+  "negative_wrong_fraction": 0.22580645161290322,
+  "correct_rejections": 24,
+  "roles": {
+    "candidate": 24
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 24,
+    "ABSTAIN_NO_SUCCESSOR": 12
+  },
+  "paired": {
+    "count": 12,
+    "persistence_mae": 0.06084314982096354,
+    "context_mae": 0.0,
+    "delta": 0.06084314982096354,
+    "better": 12,
+    "equal": 0,
+    "worse": 0
+  },
+  "full_coverage": {
+    "count": 48,
+    "persistence_mae": 0.06782884192135599,
+    "observer_hybrid_mae": 0.05261805446611511,
+    "delta": 0.015210787455240885
+  },
+  "harm_rows": []
+}
+Lernziel-Schaeden gegen Persistenz:
+[]
+Lernziel-Schaeden gegen exaktes Beobachterschema:
+[]
+Alle48 Lern-Einzelwerte und gemeinsamen Masken stehen in tau-3.json/learning_summary; kein Einmischen in Primaerquote.
+
+Einstellung4, tau=0.03125
+Verlorene Exakttreffer: []; signalbedingt: []; verlorene korrekte Exakttreffer: []
+Fall | Herkunft exakt/neu | Status exakt/neu | MAE konkret exakt/neu/Persistenz | MAE Schema exakt/neu
+R0 | CORRECT/CORRECT | PREDICTED_RETAINED/PREDICTED_RETAINED | 0/0/0.0604858398438 | 0/0
+R1 | ABSTAIN/CORRECT | ABSTAIN_NO_CONTEXT/PREDICTED_RETAINED | undefiniert/0/0.0605672200521 | 0.0605672200521/0
+R2 | ABSTAIN/CORRECT | ABSTAIN_NO_CONTEXT/PREDICTED_RETAINED | undefiniert/0/0.0606486002604 | 0.0606486002604/0
+R3 | ABSTAIN/CORRECT | ABSTAIN_NO_CONTEXT/PREDICTED_RETAINED | undefiniert/0.0605672200521/0 | 0/0.0605672200521
+N1 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0647735595703 | 0.0647735595703/0.0647735595703
+N2 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0672607421875 | 0.0672607421875/0.0672607421875
+N3 | WRONG/WRONG | PREDICTED_RETAINED/PREDICTED_RETAINED | 0.0612487792969/0.0612487792969/0.0565287272135 | 0.0612487792969/0.0612487792969
+N4 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0504480997721 | 0.0504480997721/0.0504480997721
+Z0 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0 | 0/0
+Z1 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.00105794270833 | 0.00105794270833/0.00105794270833
+P0 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/1.47670507431e-05 | 1.47670507431e-05/1.47670507431e-05
+exact_retrieval Herkunft/Abdeckung:
+{
+  "total": 11,
+  "origin_counts": {
+    "CORRECT": 1,
+    "ABSTAIN": 9,
+    "WRONG": 1
+  },
+  "positive_origin_counts": {
+    "CORRECT": 1,
+    "ABSTAIN": 4
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 5,
+    "WRONG": 1
+  },
+  "assignment_coverage": 0.18181818181818182,
+  "context_coverage": 0.18181818181818182,
+  "positive_correct_fraction": 0.2,
+  "negative_wrong_fraction": 0.16666666666666666,
+  "correct_rejections": 5,
+  "roles": {
+    "retained": 2
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 9
+  },
+  "paired": {
+    "count": 2,
+    "persistence_mae": 0.05850728352864583,
+    "context_mae": 0.0306243896484375,
+    "delta": 0.027882893880208332,
+    "better": 1,
+    "equal": 0,
+    "worse": 1
+  },
+  "full_coverage": {
+    "count": 11,
+    "persistence_mae": 0.03834413624171055,
+    "observer_hybrid_mae": 0.03327451917258176,
+    "delta": 0.005069617069128788
+  },
+  "harm_rows": [
+    {
+      "case_id": "N3",
+      "target": 11,
+      "positive": false,
+      "origin_category": "WRONG",
+      "assigned_root": "AR-DEV/A",
+      "true_root": "AR-DEV/D",
+      "role": "retained",
+      "assignment_covered": true,
+      "correct_rejection": false,
+      "prediction_status": "PREDICTED_RETAINED",
+      "context_covered": true,
+      "persistence_mae": 0.056528727213541664,
+      "context_mae": 0.061248779296875,
+      "paired_delta": -0.004720052083333336,
+      "observer_hybrid_mae": 0.061248779296875,
+      "full_delta": -0.004720052083333336
+    }
+  ]
+}
+signal_approx_retrieval Herkunft/Abdeckung:
+{
+  "total": 11,
+  "origin_counts": {
+    "CORRECT": 4,
+    "ABSTAIN": 6,
+    "WRONG": 1
+  },
+  "positive_origin_counts": {
+    "CORRECT": 4,
+    "ABSTAIN": 1
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 5,
+    "WRONG": 1
+  },
+  "assignment_coverage": 0.45454545454545453,
+  "context_coverage": 0.45454545454545453,
+  "positive_correct_fraction": 0.8,
+  "negative_wrong_fraction": 0.16666666666666666,
+  "correct_rejections": 5,
+  "roles": {
+    "retained": 5
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 6
+  },
+  "paired": {
+    "count": 5,
+    "persistence_mae": 0.04764607747395833,
+    "context_mae": 0.024363199869791668,
+    "delta": 0.023282877604166665,
+    "better": 3,
+    "equal": 0,
+    "worse": 2
+  },
+  "full_coverage": {
+    "count": 11,
+    "persistence_mae": 0.03834413624171055,
+    "observer_hybrid_mae": 0.027761010057998425,
+    "delta": 0.01058312618371212
+  },
+  "harm_rows": [
+    {
+      "case_id": "R3",
+      "target": 11,
+      "positive": true,
+      "origin_category": "CORRECT",
+      "assigned_root": "AR-DEV/A",
+      "true_root": "AR-DEV/A",
+      "role": "retained",
+      "assignment_covered": true,
+      "correct_rejection": false,
+      "prediction_status": "PREDICTED_RETAINED",
+      "context_covered": true,
+      "persistence_mae": 0.0,
+      "context_mae": 0.060567220052083336,
+      "paired_delta": -0.060567220052083336,
+      "observer_hybrid_mae": 0.060567220052083336,
+      "full_delta": -0.060567220052083336
+    },
+    {
+      "case_id": "N3",
+      "target": 11,
+      "positive": false,
+      "origin_category": "WRONG",
+      "assigned_root": "AR-DEV/A",
+      "true_root": "AR-DEV/D",
+      "role": "retained",
+      "assignment_covered": true,
+      "correct_rejection": false,
+      "prediction_status": "PREDICTED_RETAINED",
+      "context_covered": true,
+      "persistence_mae": 0.056528727213541664,
+      "context_mae": 0.061248779296875,
+      "paired_delta": -0.004720052083333336,
+      "observer_hybrid_mae": 0.061248779296875,
+      "full_delta": -0.004720052083333336
+    }
+  ]
+}
+signal_approx_retrieval_vs_exact_retrieval: Zielmenge ['R0', 'N3'], n=2, MAE links/rechts=0.0306243896484/0.0306243896484, Delta=0
+signal_approx_retrieval_vs_persistence: Zielmenge ['R0', 'R1', 'R2', 'R3', 'N3'], n=5, MAE links/rechts=0.0243631998698/0.047646077474, Delta=0.0232828776042
+exact_retrieval_vs_persistence: Zielmenge ['R0', 'N3'], n=2, MAE links/rechts=0.0306243896484/0.0585072835286, Delta=0.0278828938802
+Alle Primaerschaeden gegen Persistenz:
+[
+  {
+    "case_id": "R3",
+    "target": 11,
+    "persistence": 0.0,
+    "exact_retrieval": 0.0,
+    "signal_approx_retrieval": 0.060567220052083336,
+    "signal_approx_retrieval_vs_persistence": -0.060567220052083336,
+    "signal_approx_retrieval_vs_exact_retrieval": -0.060567220052083336
+  },
+  {
+    "case_id": "N3",
+    "target": 11,
+    "persistence": 0.056528727213541664,
+    "exact_retrieval": 0.061248779296875,
+    "signal_approx_retrieval": 0.061248779296875,
+    "signal_approx_retrieval_vs_persistence": -0.004720052083333336,
+    "signal_approx_retrieval_vs_exact_retrieval": 0.0
+  }
+]
+Alle Primaerschaeden gegen exaktes Kontext-sonst-Persistenz-Schema:
+[
+  {
+    "case_id": "R3",
+    "target": 11,
+    "persistence": 0.0,
+    "exact_retrieval": 0.0,
+    "signal_approx_retrieval": 0.060567220052083336,
+    "signal_approx_retrieval_vs_persistence": -0.060567220052083336,
+    "signal_approx_retrieval_vs_exact_retrieval": -0.060567220052083336
+  }
+]
+48 Lernziele separat: neue Fehler []; verlorene exakte Zuordnungen []
+exact_retrieval Lernzielbilanz:
+{
+  "total": 48,
+  "origin_counts": {
+    "ABSTAIN": 24,
+    "CORRECT": 17,
+    "WRONG": 7
+  },
+  "positive_origin_counts": {
+    "CORRECT": 17
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 24,
+    "WRONG": 7
+  },
+  "assignment_coverage": 0.5,
+  "context_coverage": 0.25,
+  "positive_correct_fraction": 1.0,
+  "negative_wrong_fraction": 0.22580645161290322,
+  "correct_rejections": 24,
+  "roles": {
+    "candidate": 24
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 24,
+    "ABSTAIN_NO_SUCCESSOR": 12
+  },
+  "paired": {
+    "count": 12,
+    "persistence_mae": 0.06084314982096354,
+    "context_mae": 0.0,
+    "delta": 0.06084314982096354,
+    "better": 12,
+    "equal": 0,
+    "worse": 0
+  },
+  "full_coverage": {
+    "count": 48,
+    "persistence_mae": 0.06782884192135599,
+    "observer_hybrid_mae": 0.05261805446611511,
+    "delta": 0.015210787455240885
+  },
+  "harm_rows": []
+}
+signal_approx_retrieval Lernzielbilanz:
+{
+  "total": 48,
+  "origin_counts": {
+    "ABSTAIN": 24,
+    "CORRECT": 17,
+    "WRONG": 7
+  },
+  "positive_origin_counts": {
+    "CORRECT": 17
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 24,
+    "WRONG": 7
+  },
+  "assignment_coverage": 0.5,
+  "context_coverage": 0.25,
+  "positive_correct_fraction": 1.0,
+  "negative_wrong_fraction": 0.22580645161290322,
+  "correct_rejections": 24,
+  "roles": {
+    "candidate": 24
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 24,
+    "ABSTAIN_NO_SUCCESSOR": 12
+  },
+  "paired": {
+    "count": 12,
+    "persistence_mae": 0.06084314982096354,
+    "context_mae": 0.0,
+    "delta": 0.06084314982096354,
+    "better": 12,
+    "equal": 0,
+    "worse": 0
+  },
+  "full_coverage": {
+    "count": 48,
+    "persistence_mae": 0.06782884192135599,
+    "observer_hybrid_mae": 0.05261805446611511,
+    "delta": 0.015210787455240885
+  },
+  "harm_rows": []
+}
+Lernziel-Schaeden gegen Persistenz:
+[]
+Lernziel-Schaeden gegen exaktes Beobachterschema:
+[]
+Alle48 Lern-Einzelwerte und gemeinsamen Masken stehen in tau-4.json/learning_summary; kein Einmischen in Primaerquote.
+
+Einstellung5, tau=0.0625
+Verlorene Exakttreffer: []; signalbedingt: []; verlorene korrekte Exakttreffer: []
+Fall | Herkunft exakt/neu | Status exakt/neu | MAE konkret exakt/neu/Persistenz | MAE Schema exakt/neu
+R0 | CORRECT/CORRECT | PREDICTED_RETAINED/PREDICTED_RETAINED | 0/0/0.0604858398438 | 0/0
+R1 | ABSTAIN/CORRECT | ABSTAIN_NO_CONTEXT/PREDICTED_RETAINED | undefiniert/0/0.0605672200521 | 0.0605672200521/0
+R2 | ABSTAIN/CORRECT | ABSTAIN_NO_CONTEXT/PREDICTED_RETAINED | undefiniert/0/0.0606486002604 | 0.0606486002604/0
+R3 | ABSTAIN/CORRECT | ABSTAIN_NO_CONTEXT/PREDICTED_RETAINED | undefiniert/0.0605672200521/0 | 0/0.0605672200521
+N1 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0647735595703 | 0.0647735595703/0.0647735595703
+N2 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0672607421875 | 0.0672607421875/0.0672607421875
+N3 | WRONG/WRONG | PREDICTED_RETAINED/PREDICTED_RETAINED | 0.0612487792969/0.0612487792969/0.0565287272135 | 0.0612487792969/0.0612487792969
+N4 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0504480997721 | 0.0504480997721/0.0504480997721
+Z0 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0 | 0/0
+Z1 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.00105794270833 | 0.00105794270833/0.00105794270833
+P0 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/1.47670507431e-05 | 1.47670507431e-05/1.47670507431e-05
+exact_retrieval Herkunft/Abdeckung:
+{
+  "total": 11,
+  "origin_counts": {
+    "CORRECT": 1,
+    "ABSTAIN": 9,
+    "WRONG": 1
+  },
+  "positive_origin_counts": {
+    "CORRECT": 1,
+    "ABSTAIN": 4
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 5,
+    "WRONG": 1
+  },
+  "assignment_coverage": 0.18181818181818182,
+  "context_coverage": 0.18181818181818182,
+  "positive_correct_fraction": 0.2,
+  "negative_wrong_fraction": 0.16666666666666666,
+  "correct_rejections": 5,
+  "roles": {
+    "retained": 2
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 9
+  },
+  "paired": {
+    "count": 2,
+    "persistence_mae": 0.05850728352864583,
+    "context_mae": 0.0306243896484375,
+    "delta": 0.027882893880208332,
+    "better": 1,
+    "equal": 0,
+    "worse": 1
+  },
+  "full_coverage": {
+    "count": 11,
+    "persistence_mae": 0.03834413624171055,
+    "observer_hybrid_mae": 0.03327451917258176,
+    "delta": 0.005069617069128788
+  },
+  "harm_rows": [
+    {
+      "case_id": "N3",
+      "target": 11,
+      "positive": false,
+      "origin_category": "WRONG",
+      "assigned_root": "AR-DEV/A",
+      "true_root": "AR-DEV/D",
+      "role": "retained",
+      "assignment_covered": true,
+      "correct_rejection": false,
+      "prediction_status": "PREDICTED_RETAINED",
+      "context_covered": true,
+      "persistence_mae": 0.056528727213541664,
+      "context_mae": 0.061248779296875,
+      "paired_delta": -0.004720052083333336,
+      "observer_hybrid_mae": 0.061248779296875,
+      "full_delta": -0.004720052083333336
+    }
+  ]
+}
+signal_approx_retrieval Herkunft/Abdeckung:
+{
+  "total": 11,
+  "origin_counts": {
+    "CORRECT": 4,
+    "ABSTAIN": 6,
+    "WRONG": 1
+  },
+  "positive_origin_counts": {
+    "CORRECT": 4,
+    "ABSTAIN": 1
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 5,
+    "WRONG": 1
+  },
+  "assignment_coverage": 0.45454545454545453,
+  "context_coverage": 0.45454545454545453,
+  "positive_correct_fraction": 0.8,
+  "negative_wrong_fraction": 0.16666666666666666,
+  "correct_rejections": 5,
+  "roles": {
+    "retained": 5
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 6
+  },
+  "paired": {
+    "count": 5,
+    "persistence_mae": 0.04764607747395833,
+    "context_mae": 0.024363199869791668,
+    "delta": 0.023282877604166665,
+    "better": 3,
+    "equal": 0,
+    "worse": 2
+  },
+  "full_coverage": {
+    "count": 11,
+    "persistence_mae": 0.03834413624171055,
+    "observer_hybrid_mae": 0.027761010057998425,
+    "delta": 0.01058312618371212
+  },
+  "harm_rows": [
+    {
+      "case_id": "R3",
+      "target": 11,
+      "positive": true,
+      "origin_category": "CORRECT",
+      "assigned_root": "AR-DEV/A",
+      "true_root": "AR-DEV/A",
+      "role": "retained",
+      "assignment_covered": true,
+      "correct_rejection": false,
+      "prediction_status": "PREDICTED_RETAINED",
+      "context_covered": true,
+      "persistence_mae": 0.0,
+      "context_mae": 0.060567220052083336,
+      "paired_delta": -0.060567220052083336,
+      "observer_hybrid_mae": 0.060567220052083336,
+      "full_delta": -0.060567220052083336
+    },
+    {
+      "case_id": "N3",
+      "target": 11,
+      "positive": false,
+      "origin_category": "WRONG",
+      "assigned_root": "AR-DEV/A",
+      "true_root": "AR-DEV/D",
+      "role": "retained",
+      "assignment_covered": true,
+      "correct_rejection": false,
+      "prediction_status": "PREDICTED_RETAINED",
+      "context_covered": true,
+      "persistence_mae": 0.056528727213541664,
+      "context_mae": 0.061248779296875,
+      "paired_delta": -0.004720052083333336,
+      "observer_hybrid_mae": 0.061248779296875,
+      "full_delta": -0.004720052083333336
+    }
+  ]
+}
+signal_approx_retrieval_vs_exact_retrieval: Zielmenge ['R0', 'N3'], n=2, MAE links/rechts=0.0306243896484/0.0306243896484, Delta=0
+signal_approx_retrieval_vs_persistence: Zielmenge ['R0', 'R1', 'R2', 'R3', 'N3'], n=5, MAE links/rechts=0.0243631998698/0.047646077474, Delta=0.0232828776042
+exact_retrieval_vs_persistence: Zielmenge ['R0', 'N3'], n=2, MAE links/rechts=0.0306243896484/0.0585072835286, Delta=0.0278828938802
+Alle Primaerschaeden gegen Persistenz:
+[
+  {
+    "case_id": "R3",
+    "target": 11,
+    "persistence": 0.0,
+    "exact_retrieval": 0.0,
+    "signal_approx_retrieval": 0.060567220052083336,
+    "signal_approx_retrieval_vs_persistence": -0.060567220052083336,
+    "signal_approx_retrieval_vs_exact_retrieval": -0.060567220052083336
+  },
+  {
+    "case_id": "N3",
+    "target": 11,
+    "persistence": 0.056528727213541664,
+    "exact_retrieval": 0.061248779296875,
+    "signal_approx_retrieval": 0.061248779296875,
+    "signal_approx_retrieval_vs_persistence": -0.004720052083333336,
+    "signal_approx_retrieval_vs_exact_retrieval": 0.0
+  }
+]
+Alle Primaerschaeden gegen exaktes Kontext-sonst-Persistenz-Schema:
+[
+  {
+    "case_id": "R3",
+    "target": 11,
+    "persistence": 0.0,
+    "exact_retrieval": 0.0,
+    "signal_approx_retrieval": 0.060567220052083336,
+    "signal_approx_retrieval_vs_persistence": -0.060567220052083336,
+    "signal_approx_retrieval_vs_exact_retrieval": -0.060567220052083336
+  }
+]
+48 Lernziele separat: neue Fehler []; verlorene exakte Zuordnungen []
+exact_retrieval Lernzielbilanz:
+{
+  "total": 48,
+  "origin_counts": {
+    "ABSTAIN": 24,
+    "CORRECT": 17,
+    "WRONG": 7
+  },
+  "positive_origin_counts": {
+    "CORRECT": 17
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 24,
+    "WRONG": 7
+  },
+  "assignment_coverage": 0.5,
+  "context_coverage": 0.25,
+  "positive_correct_fraction": 1.0,
+  "negative_wrong_fraction": 0.22580645161290322,
+  "correct_rejections": 24,
+  "roles": {
+    "candidate": 24
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 24,
+    "ABSTAIN_NO_SUCCESSOR": 12
+  },
+  "paired": {
+    "count": 12,
+    "persistence_mae": 0.06084314982096354,
+    "context_mae": 0.0,
+    "delta": 0.06084314982096354,
+    "better": 12,
+    "equal": 0,
+    "worse": 0
+  },
+  "full_coverage": {
+    "count": 48,
+    "persistence_mae": 0.06782884192135599,
+    "observer_hybrid_mae": 0.05261805446611511,
+    "delta": 0.015210787455240885
+  },
+  "harm_rows": []
+}
+signal_approx_retrieval Lernzielbilanz:
+{
+  "total": 48,
+  "origin_counts": {
+    "ABSTAIN": 24,
+    "CORRECT": 17,
+    "WRONG": 7
+  },
+  "positive_origin_counts": {
+    "CORRECT": 17
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 24,
+    "WRONG": 7
+  },
+  "assignment_coverage": 0.5,
+  "context_coverage": 0.25,
+  "positive_correct_fraction": 1.0,
+  "negative_wrong_fraction": 0.22580645161290322,
+  "correct_rejections": 24,
+  "roles": {
+    "candidate": 24
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 24,
+    "ABSTAIN_NO_SUCCESSOR": 12
+  },
+  "paired": {
+    "count": 12,
+    "persistence_mae": 0.06084314982096354,
+    "context_mae": 0.0,
+    "delta": 0.06084314982096354,
+    "better": 12,
+    "equal": 0,
+    "worse": 0
+  },
+  "full_coverage": {
+    "count": 48,
+    "persistence_mae": 0.06782884192135599,
+    "observer_hybrid_mae": 0.05261805446611511,
+    "delta": 0.015210787455240885
+  },
+  "harm_rows": []
+}
+Lernziel-Schaeden gegen Persistenz:
+[]
+Lernziel-Schaeden gegen exaktes Beobachterschema:
+[]
+Alle48 Lern-Einzelwerte und gemeinsamen Masken stehen in tau-5.json/learning_summary; kein Einmischen in Primaerquote.
+
+Einstellung6, tau=0.125
+Verlorene Exakttreffer: []; signalbedingt: []; verlorene korrekte Exakttreffer: []
+Fall | Herkunft exakt/neu | Status exakt/neu | MAE konkret exakt/neu/Persistenz | MAE Schema exakt/neu
+R0 | CORRECT/CORRECT | PREDICTED_RETAINED/PREDICTED_RETAINED | 0/0/0.0604858398438 | 0/0
+R1 | ABSTAIN/CORRECT | ABSTAIN_NO_CONTEXT/PREDICTED_RETAINED | undefiniert/0/0.0605672200521 | 0.0605672200521/0
+R2 | ABSTAIN/CORRECT | ABSTAIN_NO_CONTEXT/PREDICTED_RETAINED | undefiniert/0/0.0606486002604 | 0.0606486002604/0
+R3 | ABSTAIN/CORRECT | ABSTAIN_NO_CONTEXT/PREDICTED_RETAINED | undefiniert/0.0605672200521/0 | 0/0.0605672200521
+N1 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0647735595703 | 0.0647735595703/0.0647735595703
+N2 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0672607421875 | 0.0672607421875/0.0672607421875
+N3 | WRONG/WRONG | PREDICTED_RETAINED/PREDICTED_RETAINED | 0.0612487792969/0.0612487792969/0.0565287272135 | 0.0612487792969/0.0612487792969
+N4 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.0504480997721 | 0.0504480997721/0.0504480997721
+Z0 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0 | 0/0
+Z1 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/0.00105794270833 | 0.00105794270833/0.00105794270833
+P0 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert/undefiniert/1.47670507431e-05 | 1.47670507431e-05/1.47670507431e-05
+exact_retrieval Herkunft/Abdeckung:
+{
+  "total": 11,
+  "origin_counts": {
+    "CORRECT": 1,
+    "ABSTAIN": 9,
+    "WRONG": 1
+  },
+  "positive_origin_counts": {
+    "CORRECT": 1,
+    "ABSTAIN": 4
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 5,
+    "WRONG": 1
+  },
+  "assignment_coverage": 0.18181818181818182,
+  "context_coverage": 0.18181818181818182,
+  "positive_correct_fraction": 0.2,
+  "negative_wrong_fraction": 0.16666666666666666,
+  "correct_rejections": 5,
+  "roles": {
+    "retained": 2
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 9
+  },
+  "paired": {
+    "count": 2,
+    "persistence_mae": 0.05850728352864583,
+    "context_mae": 0.0306243896484375,
+    "delta": 0.027882893880208332,
+    "better": 1,
+    "equal": 0,
+    "worse": 1
+  },
+  "full_coverage": {
+    "count": 11,
+    "persistence_mae": 0.03834413624171055,
+    "observer_hybrid_mae": 0.03327451917258176,
+    "delta": 0.005069617069128788
+  },
+  "harm_rows": [
+    {
+      "case_id": "N3",
+      "target": 11,
+      "positive": false,
+      "origin_category": "WRONG",
+      "assigned_root": "AR-DEV/A",
+      "true_root": "AR-DEV/D",
+      "role": "retained",
+      "assignment_covered": true,
+      "correct_rejection": false,
+      "prediction_status": "PREDICTED_RETAINED",
+      "context_covered": true,
+      "persistence_mae": 0.056528727213541664,
+      "context_mae": 0.061248779296875,
+      "paired_delta": -0.004720052083333336,
+      "observer_hybrid_mae": 0.061248779296875,
+      "full_delta": -0.004720052083333336
+    }
+  ]
+}
+signal_approx_retrieval Herkunft/Abdeckung:
+{
+  "total": 11,
+  "origin_counts": {
+    "CORRECT": 4,
+    "ABSTAIN": 6,
+    "WRONG": 1
+  },
+  "positive_origin_counts": {
+    "CORRECT": 4,
+    "ABSTAIN": 1
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 5,
+    "WRONG": 1
+  },
+  "assignment_coverage": 0.45454545454545453,
+  "context_coverage": 0.45454545454545453,
+  "positive_correct_fraction": 0.8,
+  "negative_wrong_fraction": 0.16666666666666666,
+  "correct_rejections": 5,
+  "roles": {
+    "retained": 5
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 6
+  },
+  "paired": {
+    "count": 5,
+    "persistence_mae": 0.04764607747395833,
+    "context_mae": 0.024363199869791668,
+    "delta": 0.023282877604166665,
+    "better": 3,
+    "equal": 0,
+    "worse": 2
+  },
+  "full_coverage": {
+    "count": 11,
+    "persistence_mae": 0.03834413624171055,
+    "observer_hybrid_mae": 0.027761010057998425,
+    "delta": 0.01058312618371212
+  },
+  "harm_rows": [
+    {
+      "case_id": "R3",
+      "target": 11,
+      "positive": true,
+      "origin_category": "CORRECT",
+      "assigned_root": "AR-DEV/A",
+      "true_root": "AR-DEV/A",
+      "role": "retained",
+      "assignment_covered": true,
+      "correct_rejection": false,
+      "prediction_status": "PREDICTED_RETAINED",
+      "context_covered": true,
+      "persistence_mae": 0.0,
+      "context_mae": 0.060567220052083336,
+      "paired_delta": -0.060567220052083336,
+      "observer_hybrid_mae": 0.060567220052083336,
+      "full_delta": -0.060567220052083336
+    },
+    {
+      "case_id": "N3",
+      "target": 11,
+      "positive": false,
+      "origin_category": "WRONG",
+      "assigned_root": "AR-DEV/A",
+      "true_root": "AR-DEV/D",
+      "role": "retained",
+      "assignment_covered": true,
+      "correct_rejection": false,
+      "prediction_status": "PREDICTED_RETAINED",
+      "context_covered": true,
+      "persistence_mae": 0.056528727213541664,
+      "context_mae": 0.061248779296875,
+      "paired_delta": -0.004720052083333336,
+      "observer_hybrid_mae": 0.061248779296875,
+      "full_delta": -0.004720052083333336
+    }
+  ]
+}
+signal_approx_retrieval_vs_exact_retrieval: Zielmenge ['R0', 'N3'], n=2, MAE links/rechts=0.0306243896484/0.0306243896484, Delta=0
+signal_approx_retrieval_vs_persistence: Zielmenge ['R0', 'R1', 'R2', 'R3', 'N3'], n=5, MAE links/rechts=0.0243631998698/0.047646077474, Delta=0.0232828776042
+exact_retrieval_vs_persistence: Zielmenge ['R0', 'N3'], n=2, MAE links/rechts=0.0306243896484/0.0585072835286, Delta=0.0278828938802
+Alle Primaerschaeden gegen Persistenz:
+[
+  {
+    "case_id": "R3",
+    "target": 11,
+    "persistence": 0.0,
+    "exact_retrieval": 0.0,
+    "signal_approx_retrieval": 0.060567220052083336,
+    "signal_approx_retrieval_vs_persistence": -0.060567220052083336,
+    "signal_approx_retrieval_vs_exact_retrieval": -0.060567220052083336
+  },
+  {
+    "case_id": "N3",
+    "target": 11,
+    "persistence": 0.056528727213541664,
+    "exact_retrieval": 0.061248779296875,
+    "signal_approx_retrieval": 0.061248779296875,
+    "signal_approx_retrieval_vs_persistence": -0.004720052083333336,
+    "signal_approx_retrieval_vs_exact_retrieval": 0.0
+  }
+]
+Alle Primaerschaeden gegen exaktes Kontext-sonst-Persistenz-Schema:
+[
+  {
+    "case_id": "R3",
+    "target": 11,
+    "persistence": 0.0,
+    "exact_retrieval": 0.0,
+    "signal_approx_retrieval": 0.060567220052083336,
+    "signal_approx_retrieval_vs_persistence": -0.060567220052083336,
+    "signal_approx_retrieval_vs_exact_retrieval": -0.060567220052083336
+  }
+]
+48 Lernziele separat: neue Fehler []; verlorene exakte Zuordnungen []
+exact_retrieval Lernzielbilanz:
+{
+  "total": 48,
+  "origin_counts": {
+    "ABSTAIN": 24,
+    "CORRECT": 17,
+    "WRONG": 7
+  },
+  "positive_origin_counts": {
+    "CORRECT": 17
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 24,
+    "WRONG": 7
+  },
+  "assignment_coverage": 0.5,
+  "context_coverage": 0.25,
+  "positive_correct_fraction": 1.0,
+  "negative_wrong_fraction": 0.22580645161290322,
+  "correct_rejections": 24,
+  "roles": {
+    "candidate": 24
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 24,
+    "ABSTAIN_NO_SUCCESSOR": 12
+  },
+  "paired": {
+    "count": 12,
+    "persistence_mae": 0.06084314982096354,
+    "context_mae": 0.0,
+    "delta": 0.06084314982096354,
+    "better": 12,
+    "equal": 0,
+    "worse": 0
+  },
+  "full_coverage": {
+    "count": 48,
+    "persistence_mae": 0.06782884192135599,
+    "observer_hybrid_mae": 0.05261805446611511,
+    "delta": 0.015210787455240885
+  },
+  "harm_rows": []
+}
+signal_approx_retrieval Lernzielbilanz:
+{
+  "total": 48,
+  "origin_counts": {
+    "ABSTAIN": 24,
+    "CORRECT": 17,
+    "WRONG": 7
+  },
+  "positive_origin_counts": {
+    "CORRECT": 17
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 24,
+    "WRONG": 7
+  },
+  "assignment_coverage": 0.5,
+  "context_coverage": 0.25,
+  "positive_correct_fraction": 1.0,
+  "negative_wrong_fraction": 0.22580645161290322,
+  "correct_rejections": 24,
+  "roles": {
+    "candidate": 24
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 24,
+    "ABSTAIN_NO_SUCCESSOR": 12
+  },
+  "paired": {
+    "count": 12,
+    "persistence_mae": 0.06084314982096354,
+    "context_mae": 0.0,
+    "delta": 0.06084314982096354,
+    "better": 12,
+    "equal": 0,
+    "worse": 0
+  },
+  "full_coverage": {
+    "count": 48,
+    "persistence_mae": 0.06782884192135599,
+    "observer_hybrid_mae": 0.05261805446611511,
+    "delta": 0.015210787455240885
+  },
+  "harm_rows": []
+}
+Lernziel-Schaeden gegen Persistenz:
+[]
+Lernziel-Schaeden gegen exaktes Beobachterschema:
+[]
+Alle48 Lern-Einzelwerte und gemeinsamen Masken stehen in tau-6.json/learning_summary; kein Einmischen in Primaerquote.
+
+5. Semantik und Kausalitaet
+Undefinierte konkrete MAE bedeutet Enthaltung, niemals Nullfehler. observer_hybrid_mae/full_rows verwenden ein ausschliesslich beobachterseitiges Kontext-sonst-Persistenz-Schema. Die beiden Abrufarme sind Exakter Abruf und Signal-/Naeherungsabruf, beide mit legacy_v1-Fortsetzung.
+Matching kann sich wie beauftragt unterscheiden. Speicherzustand nach jedem Frame sowie nach Abschluss identisch zur unveraenderten Referenz und zwischen Abrufarmen. Jede Wahrnehmung genau einmal pro Geschichte aufgenommen.129 Frames je Arm/Einstellung;59 erreichbare Ziele=11 Pruefziele+48 Lernziele.7 Einstellungen sind7 Wiederverwendungen desselben DEV-Bestands, keine7 unabhaengigen Materialstichproben.
+R1/R3 und R0/N3: gleiche Prognosen und Vorzustaende vor unterschiedlichem Zielframe. Gate erzwingt Prognose vor Zukunftsabruf und vor Hinweisaufnahme. Slots nach Verbrauch/Abschluss frei. Provenienz, Rollen, Qualitaet und Einzelreceipts in tau-0..6.json.
+
+6. Ressourcen und Grenzen
+{
+  "frame_peak": 12,
+  "output_slots_peak": 2,
+  "combined_peak": 13,
+  "receipt_bytes_peak": 550,
+  "receipt_transient_utf8_bytes_peak": 964,
+  "receipt_python_bytes_peak": 1046,
+  "temporary_numeric_vectors_peak": 0,
+  "match_metadata_peak": 1
+}
+Instrumentierte Suchdauer Sekunden: 488.0922033999814
+Grenzen18 Frames einschliesslich Hinweise,2 Ausgaben,20 zusammen; Receipt16384 Byte, gleichzeitige Provenienz32768 Byte. Kein harter Prozess-RAM-Nachweis. Keine neuen48er-Distanzvektoren; Observerarchive getrennt von Produktmemory und Materialbudget.
+
+7. Weiteres Vorgehen
+Development-Ergebnis zur Abnahme und Entscheidung vorlegen; epsilon und selected_tau vor einer gesondert beauftragten einmaligen AR-EVAL-Pruefung einfrieren. Kein Nachverfeinern des Gitters, keine Episodenwahl. Neue falsche Einzelzuordnungen auf Evaluation verhindern die Abnahme als verbesserte Wiedererkennung.
+AR-EVAL bleibt unproduziert und unausgewertet. Direkte synthetische Adapterpruefung, kein Audio-/NJ-Robustheitsnachweis.

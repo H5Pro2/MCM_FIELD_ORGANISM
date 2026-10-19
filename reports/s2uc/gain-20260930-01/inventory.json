@@ -1,0 +1,38 @@
+{
+  "tools\\_s2uc_gain_confirmation.py": {
+    "bytes": 3234,
+    "sha256": "df8e22f55ef8c64c8870c767bbb24a3a9992bed121aba3294db3519f1e412152"
+  },
+  "tools\\s2uc_gain_check.py": {
+    "bytes": 8575,
+    "sha256": "04d3a4775d4865e9517bd75fdddcc54a49da3eea74814d6bcd7ba27ddc1b3485"
+  },
+  "tests\\test_s2uc_gain_confirmation.py": {
+    "bytes": 2731,
+    "sha256": "6d84f16779061c2a288ced1d35e5931b1f024744dd323a2561221852a75f53d3"
+  },
+  "reports\\s2uc\\gain-20260930-01\\collision-evaluation.json": {
+    "bytes": 1652,
+    "sha256": "6411d8ed02975af1eeba1f676c3aec2d1254da0257140c8198ae5c969cd0cf52"
+  },
+  "reports\\s2uc\\gain-20260930-01\\preregistration.json": {
+    "bytes": 15932,
+    "sha256": "90e5093d1baaa7e1350d98835835ff08d75861e69c6c23ffd5662a41db5176d2"
+  },
+  "reports\\s2uc\\gain-20260930-01\\replay-console.txt": {
+    "bytes": 6830,
+    "sha256": "b661a0f1a35a83b9e0f23e12a603c8878a12b2963d9e977172520c62c7f4cc76"
+  },
+  "reports\\s2uc\\gain-20260930-01\\REPORT.txt": {
+    "bytes": 9686,
+    "sha256": "1afa872d41682b55cd4082306754cce7a6d1e045255f1d674773d2f5749a32e3"
+  },
+  "reports\\s2uc\\gain-20260930-01\\result.json": {
+    "bytes": 99984,
+    "sha256": "16092e7a79de0746d0e986a2d73a2a61838a793f20c1d3090f2878de1ec079ff"
+  },
+  "reports\\s2uc\\gain-20260930-01\\tests.txt": {
+    "bytes": 2794,
+    "sha256": "df2315f81c91a14bb39caea2a1f583c42eef1afea45e736afe4bc544c215cc33"
+  }
+}

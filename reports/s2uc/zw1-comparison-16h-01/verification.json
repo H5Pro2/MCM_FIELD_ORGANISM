@@ -1,0 +1,141 @@
+{
+  "status": "PASS",
+  "workflow": "22e3ae79-3fc0-40bf-8c6c-45ed44af47fc",
+  "method": "Read existing artifacts, actual binding validator, hash/size/coverage checks, receipt schema and exact existing statistics comparison; no policy, source or bootstrap replay",
+  "prestart_sha256": "28a1b008daaa9663a3f7ce3f403dc631526c0f7f78c2cebe82f8d89962e3dc13",
+  "bound_files": 2995,
+  "bound_qualification": 98,
+  "closure_files": 151,
+  "source_files": 32,
+  "pair_receipts": 16,
+  "case_summaries": 32,
+  "executions": {
+    "archive_reference_completed": 64,
+    "extra_policy_measurement": 0,
+    "live_reference_completed": 64,
+    "policy_completed": 64,
+    "policy_started": 64
+  },
+  "cleanup": {
+    "worker_ended": true,
+    "arms": "CONFIRMED",
+    "files": true
+  },
+  "source_manifest_sha256": "dd7652c3a5f3fb13b1c23feb4df1a9d61a35fc2ede68ba6fb2c3604f5e8de18e",
+  "matrix_sha256": "cd452bee76ea2b1b64c920afdd9c70211e5ba7abc7207049f4e7e280e5703f6c",
+  "statistics": {
+    "arm_errors": 32704,
+    "ci": [
+      "-123/32704",
+      "-11/32704"
+    ],
+    "condition_target_pairs": 16352,
+    "mean": "-67/32704",
+    "name": "ZW1:(E-F)A-(E-F)B:all511",
+    "pairs": [
+      "2/511",
+      "2/511",
+      "-9/1022",
+      "-1/1022",
+      "1/511",
+      "-9/2044",
+      "-2/511",
+      "-1/2044",
+      "0",
+      "-15/2044",
+      "-5/1022",
+      "-1/292",
+      "-3/1022",
+      "-9/2044",
+      "-1/2044",
+      "-1/2044"
+    ],
+    "source_pairs": 16,
+    "verdict": "NEGATIVE_INTERACTION"
+  },
+  "statistics_reference_equal": true,
+  "descriptive_only": {
+    "A": {
+      "targets": 8176,
+      "mean_E": "3657/8176",
+      "mean_F": "2097/4672",
+      "mean_E_minus_F": "-51/32704",
+      "E_better": 195,
+      "F_better": 144,
+      "equal": 7837
+    },
+    "B": {
+      "targets": 8176,
+      "mean_E": "29293/65408",
+      "mean_F": "29261/65408",
+      "mean_E_minus_F": "1/2044",
+      "E_better": 262,
+      "F_better": 278,
+      "equal": 7636
+    }
+  },
+  "job": {
+    "hard_job_limit": true,
+    "limit_bytes": 536870912,
+    "measurement": "Windows JobObjectExtendedLimitInformation",
+    "members": "supervisor and inherited worker",
+    "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap.",
+    "peak_job_committed_bytes": 399138816,
+    "peak_process_committed_bytes": 306810880
+  },
+  "seconds": 4456.266878800001,
+  "resource_peaks": {
+    "gzip_bytes": 180215,
+    "encoded_bytes": 1068105,
+    "dictionary": 1013464,
+    "nodes": 14758,
+    "edges": 135464,
+    "indices": 10303,
+    "collections": 14,
+    "record_peak": 16845,
+    "temp_peak": 180215,
+    "observer_deep": 4973015,
+    "mechanisms_deep": 77187
+  },
+  "arm_resource_peaks": {
+    "additional_python_peak": 5518,
+    "receipt_bytes_peak": 795,
+    "utf8_upper": 1590,
+    "packed": 416,
+    "combined_upper_bound": 18,
+    "original_frames_upper_bound": 16,
+    "output_slots_peak": 2
+  },
+  "inventory_before_report": {
+    "source": 238048,
+    "archive": 5359890,
+    "admin": 511053,
+    "closure": 33819,
+    "temp": 0
+  },
+  "historical_preservation": {
+    "er1-v2-comparison-16h-01/delivery-closure.json": {
+      "files": 139,
+      "manifest_sha256": "fc0633293f9c5d92e45e69cca9d1959c546d2252abce2c1daa8c76da90ed4bbd",
+      "status": "UNCHANGED"
+    },
+    "er1-comparison-16h-01/delivery-closure.json": {
+      "files": 43,
+      "manifest_sha256": "6e46989d5920a269f3ed2e313e57101b8637950bac4b29f340fb14735a2a56bb",
+      "status": "UNCHANGED"
+    },
+    "er1-v2-witness-audit-20261018-03/delivery-manifest.json": {
+      "files": 41,
+      "manifest_sha256": "71eb768ffc30ee15144df276c0f105a4f875bc19a7ec86b8a54e580f36314392",
+      "status": "UNCHANGED"
+    },
+    "zw1-neutral-preparation-20261018-01/delivery-manifest.json": {
+      "files": 53,
+      "manifest_sha256": "933a4336908a2aedb87497e48ce75d84ebdc467a39679303ef9ee336cf7ec9a6",
+      "status": "UNCHANGED"
+    }
+  },
+  "additional_policy_runs": 0,
+  "additional_archive_replays": 0,
+  "additional_bootstrap_runs": 0
+}

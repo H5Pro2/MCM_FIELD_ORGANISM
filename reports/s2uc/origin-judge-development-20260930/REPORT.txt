@@ -1,0 +1,73 @@
+HERKUNFTS- UND BEWERTUNGSTREIBER -- ENTWICKLUNGSABSCHLUSS 2026-09-30
+24/24 Tests PASS,0 Fehler/Fehlschlaege/Skips. Keine neue Materialproduktion,
+keine abschliessende Leistungspruefung. Vollstaendige Test-IDs in tests.json.
+
+UMSETZUNG
+Neu tools/_s2uc_origin_judge.py: label-freier technischer replay(values,profile,
+count), kausaler Iterator, unveraenderte ContinuationAdapter/FactorRecencyArm;
+getrennte Truth/judge/aggregate/evaluate_case fuer Prueferherkunft und MAE.
+Herkunftslabels, Fallklasse und Fall-ID werden erst im Judge ausgewertet.
+Technische Sollfortsetzungen stammen unveraendert aus Memory; tatsaechlicher
+Zielvektor wird erst nach gebundener Prognose vom Iterator angefordert.
+Die Observer-Kopie eingefrorener Prognosen und alle Ergebnis-/Zustandsarchive
+liegen ausserhalb der Predictor-Slots. Kein Prueferwert beeinflusst Aufnahme.
+
+Kategorien CORRECT/WRONG/AMBIGUOUS/ABSTAIN, positive/negative Teilmengen,
+Zuordnungs- und Prognoseabdeckung getrennt, Kandidat/Erhaltung getrennt,
+korrekte Zurueckweisungen explizit. Unbekannte Herkunftsbindung ist Fehler,
+keine erfundene Zuordnung. Mehrdeutigkeit wird nicht durch wahre Labels geloest.
+Gepaarte MAE nur auf gemeinsam abgedeckten Zielen; Persistenz und festes Schema
+Kontext-sonst-Persistenz auf allen Pruefzielen. Leere gemeinsame Abdeckung
+bleibt undefiniert. Jede Schadenszeile bleibt in harm_rows samt Fall-ID erhalten.
+Lernziele separat; evaluate_case wertet nur das vorab bezeichnete Pruefziel.
+Positive mittlere Differenz bezieht sich nur auf den festgelegten Fallmix.
+
+BELEGE
+T0 und N3 auf bekannten W1-W4-Regressionswerten: identischer Vorzustand,
+identischer Praefix, identische eingefrorene Systemprognose trotz anderer
+Prueferherkunft und anderem Folgeframe. T0 korrekt, N3 falsch zugeordnet;
+das ist die vorgesehene Identifizierbarkeitsgrenze, kein behobener Systemfehler.
+Candidate-/Retained-Rolle, Mehrdeutigkeit mit zwei gespeicherten Fortsetzungen,
+Enthaltung, MAE mit bekanntem Schaden, Nullabdeckung, gebundene Herkunft,
+Iteratorzugriff vor next(), einmalige Aufnahme/Zustandsidentitaet/Endfreigabe
+geprueft. Faktor1/2 als neutrale Werteprobe: korrekte Herkunft, aber Enthaltung
+bei Fortsetzung wie bisher. Kein Rauschrobustheitsbefund.
+11 neue Testmethoden plus7 Continuation- und6 PairAdapter-Regressionen.
+Instrumentierte T0-Regressionsgeschichte: Peak8 Frames,
+maximal2 Ausgabeslots, gemeinsamer Peak9;
+7438 Messpunkte, Ausgabekosten konservativ3642 Python-Byte.
+Budget16+2 plus2 beibehalten; dies ist keine neue Vollbelegungsqualifikation.
+Observerarchive/Referenzlauf separat, kein Produkt-RAM-Benchmark.
+
+MATERIALPLAN
+Generator/Version/Seeds/Frequenzen/Episoden/Ableitungen/Partitionen und alle
+acht Fallzuordnungen in docs/S2UC_HERKUNFT_MATERIALPLAN_20260930.json/.txt.
+Implementierter Produktionszweig ist durch separate exakte Autorisierung
+und exklusiven Ordner gesperrt. Beide Vorlagen PENDING. Validierung und
+Autorisierungssperre neutral getestet, Synthese nicht aufgerufen.
+Je Partition7 Sequenzen,28 Fenster; gemeinsame Anfaenge und Derivate bleiben
+innerhalb der Partition. A/C sind zwei dokumentierte benachbarte Ereignisse,
+A/D zwei gesamte Episoden mit gemeinsamem Anfang. Unterschiedliche Seeds
+allein werden ausdruecklich nicht als allgemeine Unabhaengigkeit ausgegeben.
+Die neue Genealogie ist Erzeugungswissen, keine aus Distanzwerten gelernte ID.
+
+FEHLENDES MATERIAL / AUSSAGEGRENZEN
+Keine neuen A/B/C/D-Basisdaten oder A_noise-/A_tailhalf-Varianten vorhanden.
+T0/N3/N4 und Rollen wurden mit bekannten technischen Regressionen geprueft;
+P1 mit neutraler Vektorskalierung, nicht als neuer PCM-/Profilrobustheitslauf.
+P2/P3/N1/N2 sind in den neuen Familien nur geplant. Ihre erwarteten Labels
+sind kein Leistungsbefund. Kein Matching oder Bestaetigungsverfahren veraendert.
+
+DATEIEN
+Neu tools/_s2uc_origin_judge.py, tools/s2uc_known_origin_material_plan.py,
+tests/test_s2uc_origin_judge.py, Materialplan JSON/Text und zwei PENDING-Vorlagen,
+dieser Belegordner. Forschungsweg aktualisiert. Bestehende Fachmodule und
+historische Berichte bleiben unveraendert; keine Commits/Pushes.
+
+NAECHSTER VORSCHLAG
+Das technische Paket abnehmen und zuerst nur die Development-Partition
+produzieren lassen, um Materialintegritaet und den vollstaendigen acht-Faelle-
+Anschluss zu pruefen. Evaluation bleibt geschlossen, bis Regel und Abnahme
+feststehen. Produktionsfreigabe und abschliessende Leistungspruefung sind
+separate Entscheidungen. Rauschrobustheit bleibt offenes Ziel; keine automatische
+Matchinglockerung oder Suche nach guenstigeren Varianten aus den Kontrollen.

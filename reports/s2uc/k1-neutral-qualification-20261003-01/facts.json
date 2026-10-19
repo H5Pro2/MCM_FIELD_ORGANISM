@@ -1,0 +1,1981 @@
+{
+  "K04_expiry_K1": {
+    "frames": 20,
+    "resources": {
+      "additional_python_peak": 4753,
+      "original_frames_peak": 0,
+      "output_slots_peak": 0,
+      "combined_peak": 0,
+      "original_frames_upper_bound": 12,
+      "combined_upper_bound": 14,
+      "packed": 416,
+      "receipt_bytes_peak": 528,
+      "utf8_upper": 1056,
+      "calls": [
+        {
+          "operation": "perception",
+          "retained": 1511,
+          "transient": 547,
+          "total": 2058
+        },
+        {
+          "operation": "perception",
+          "retained": 1539,
+          "transient": 1962,
+          "total": 3501
+        },
+        {
+          "operation": "feedback",
+          "retained": 1999,
+          "transient": 464,
+          "total": 2463
+        },
+        {
+          "operation": "perception",
+          "retained": 1567,
+          "transient": 499,
+          "total": 2066
+        },
+        {
+          "operation": "perception",
+          "retained": 1595,
+          "transient": 1963,
+          "total": 3558
+        },
+        {
+          "operation": "feedback",
+          "retained": 2005,
+          "transient": 464,
+          "total": 2469
+        },
+        {
+          "operation": "perception",
+          "retained": 1567,
+          "transient": 499,
+          "total": 2066
+        },
+        {
+          "operation": "perception",
+          "retained": 1595,
+          "transient": 2942,
+          "total": 4537
+        },
+        {
+          "operation": "feedback",
+          "retained": 2188,
+          "transient": 584,
+          "total": 2772
+        },
+        {
+          "operation": "perception",
+          "retained": 1567,
+          "transient": 499,
+          "total": 2066
+        },
+        {
+          "operation": "perception",
+          "retained": 1595,
+          "transient": 3001,
+          "total": 4596
+        },
+        {
+          "operation": "feedback",
+          "retained": 2187,
+          "transient": 544,
+          "total": 2731
+        },
+        {
+          "operation": "perception",
+          "retained": 1595,
+          "transient": 499,
+          "total": 2094
+        },
+        {
+          "operation": "perception",
+          "retained": 1595,
+          "transient": 1774,
+          "total": 3369
+        },
+        {
+          "operation": "feedback",
+          "retained": 2036,
+          "transient": 544,
+          "total": 2580
+        },
+        {
+          "operation": "perception",
+          "retained": 1595,
+          "transient": 499,
+          "total": 2094
+        },
+        {
+          "operation": "perception",
+          "retained": 1595,
+          "transient": 1768,
+          "total": 3363
+        },
+        {
+          "operation": "feedback",
+          "retained": 2037,
+          "transient": 544,
+          "total": 2581
+        },
+        {
+          "operation": "perception",
+          "retained": 1595,
+          "transient": 499,
+          "total": 2094
+        },
+        {
+          "operation": "perception",
+          "retained": 1623,
+          "transient": 3130,
+          "total": 4753
+        },
+        {
+          "operation": "feedback",
+          "retained": 2244,
+          "transient": 576,
+          "total": 2820
+        },
+        {
+          "operation": "perception",
+          "retained": 1595,
+          "transient": 499,
+          "total": 2094
+        },
+        {
+          "operation": "perception",
+          "retained": 1623,
+          "transient": 3048,
+          "total": 4671
+        },
+        {
+          "operation": "feedback",
+          "retained": 2186,
+          "transient": 544,
+          "total": 2730
+        },
+        {
+          "operation": "perception",
+          "retained": 1595,
+          "transient": 499,
+          "total": 2094
+        },
+        {
+          "operation": "perception",
+          "retained": 1623,
+          "transient": 3090,
+          "total": 4713
+        },
+        {
+          "operation": "feedback",
+          "retained": 2244,
+          "transient": 576,
+          "total": 2820
+        },
+        {
+          "operation": "perception",
+          "retained": 1595,
+          "transient": 499,
+          "total": 2094
+        },
+        {
+          "operation": "perception",
+          "retained": 1623,
+          "transient": 3032,
+          "total": 4655
+        },
+        {
+          "operation": "finish",
+          "retained": 2186,
+          "transient": 56,
+          "total": 2242
+        }
+      ]
+    },
+    "reference_equal": true,
+    "cleanup": true
+  },
+  "K04_expiry_U": {
+    "frames": 20,
+    "resources": {
+      "additional_python_peak": 4713,
+      "original_frames_peak": 0,
+      "output_slots_peak": 0,
+      "combined_peak": 0,
+      "original_frames_upper_bound": 12,
+      "combined_upper_bound": 14,
+      "packed": 416,
+      "receipt_bytes_peak": 528,
+      "utf8_upper": 1056,
+      "calls": [
+        {
+          "operation": "perception",
+          "retained": 1511,
+          "transient": 499,
+          "total": 2010
+        },
+        {
+          "operation": "perception",
+          "retained": 1539,
+          "transient": 1802,
+          "total": 3341
+        },
+        {
+          "operation": "feedback",
+          "retained": 1999,
+          "transient": 464,
+          "total": 2463
+        },
+        {
+          "operation": "perception",
+          "retained": 1567,
+          "transient": 499,
+          "total": 2066
+        },
+        {
+          "operation": "perception",
+          "retained": 1595,
+          "transient": 1811,
+          "total": 3406
+        },
+        {
+          "operation": "feedback",
+          "retained": 2005,
+          "transient": 464,
+          "total": 2469
+        },
+        {
+          "operation": "perception",
+          "retained": 1567,
+          "transient": 499,
+          "total": 2066
+        },
+        {
+          "operation": "perception",
+          "retained": 1595,
+          "transient": 3062,
+          "total": 4657
+        },
+        {
+          "operation": "feedback",
+          "retained": 2188,
+          "transient": 584,
+          "total": 2772
+        },
+        {
+          "operation": "perception",
+          "retained": 1567,
+          "transient": 499,
+          "total": 2066
+        },
+        {
+          "operation": "perception",
+          "retained": 1595,
+          "transient": 3033,
+          "total": 4628
+        },
+        {
+          "operation": "feedback",
+          "retained": 2187,
+          "transient": 544,
+          "total": 2731
+        },
+        {
+          "operation": "perception",
+          "retained": 1595,
+          "transient": 499,
+          "total": 2094
+        },
+        {
+          "operation": "perception",
+          "retained": 1595,
+          "transient": 1814,
+          "total": 3409
+        },
+        {
+          "operation": "feedback",
+          "retained": 2036,
+          "transient": 544,
+          "total": 2580
+        },
+        {
+          "operation": "perception",
+          "retained": 1595,
+          "transient": 499,
+          "total": 2094
+        },
+        {
+          "operation": "perception",
+          "retained": 1595,
+          "transient": 1816,
+          "total": 3411
+        },
+        {
+          "operation": "feedback",
+          "retained": 2037,
+          "transient": 544,
+          "total": 2581
+        },
+        {
+          "operation": "perception",
+          "retained": 1595,
+          "transient": 499,
+          "total": 2094
+        },
+        {
+          "operation": "perception",
+          "retained": 1623,
+          "transient": 3090,
+          "total": 4713
+        },
+        {
+          "operation": "feedback",
+          "retained": 2244,
+          "transient": 576,
+          "total": 2820
+        },
+        {
+          "operation": "perception",
+          "retained": 1595,
+          "transient": 499,
+          "total": 2094
+        },
+        {
+          "operation": "perception",
+          "retained": 1623,
+          "transient": 3032,
+          "total": 4655
+        },
+        {
+          "operation": "feedback",
+          "retained": 2186,
+          "transient": 544,
+          "total": 2730
+        },
+        {
+          "operation": "perception",
+          "retained": 1595,
+          "transient": 499,
+          "total": 2094
+        },
+        {
+          "operation": "perception",
+          "retained": 1623,
+          "transient": 3090,
+          "total": 4713
+        },
+        {
+          "operation": "feedback",
+          "retained": 2244,
+          "transient": 576,
+          "total": 2820
+        },
+        {
+          "operation": "perception",
+          "retained": 1595,
+          "transient": 499,
+          "total": 2094
+        },
+        {
+          "operation": "perception",
+          "retained": 1623,
+          "transient": 3032,
+          "total": 4655
+        },
+        {
+          "operation": "finish",
+          "retained": 2186,
+          "transient": 0,
+          "total": 2186
+        }
+      ]
+    },
+    "reference_equal": true,
+    "cleanup": true
+  },
+  "K05_pending_expiry": {
+    "frames": 24,
+    "resources": {
+      "additional_python_peak": 6243,
+      "original_frames_peak": 0,
+      "output_slots_peak": 0,
+      "combined_peak": 0,
+      "original_frames_upper_bound": 12,
+      "combined_upper_bound": 14,
+      "packed": 416,
+      "receipt_bytes_peak": 888,
+      "utf8_upper": 1776,
+      "calls": [
+        {
+          "operation": "perception",
+          "retained": 1503,
+          "transient": 499,
+          "total": 2002
+        },
+        {
+          "operation": "perception",
+          "retained": 1531,
+          "transient": 1746,
+          "total": 3277
+        },
+        {
+          "operation": "feedback",
+          "retained": 1991,
+          "transient": 464,
+          "total": 2455
+        },
+        {
+          "operation": "perception",
+          "retained": 1559,
+          "transient": 499,
+          "total": 2058
+        },
+        {
+          "operation": "perception",
+          "retained": 1587,
+          "transient": 1691,
+          "total": 3278
+        },
+        {
+          "operation": "feedback",
+          "retained": 1997,
+          "transient": 464,
+          "total": 2461
+        },
+        {
+          "operation": "perception",
+          "retained": 1559,
+          "transient": 499,
+          "total": 2058
+        },
+        {
+          "operation": "perception",
+          "retained": 1587,
+          "transient": 3404,
+          "total": 4991
+        },
+        {
+          "operation": "feedback",
+          "retained": 2314,
+          "transient": 584,
+          "total": 2898
+        },
+        {
+          "operation": "perception",
+          "retained": 1559,
+          "transient": 499,
+          "total": 2058
+        },
+        {
+          "operation": "perception",
+          "retained": 1587,
+          "transient": 3433,
+          "total": 5020
+        },
+        {
+          "operation": "feedback",
+          "retained": 2371,
+          "transient": 616,
+          "total": 2987
+        },
+        {
+          "operation": "perception",
+          "retained": 1587,
+          "transient": 499,
+          "total": 2086
+        },
+        {
+          "operation": "perception",
+          "retained": 1587,
+          "transient": 3657,
+          "total": 5244
+        },
+        {
+          "operation": "feedback",
+          "retained": 2371,
+          "transient": 576,
+          "total": 2947
+        },
+        {
+          "operation": "perception",
+          "retained": 1587,
+          "transient": 499,
+          "total": 2086
+        },
+        {
+          "operation": "perception",
+          "retained": 1587,
+          "transient": 1696,
+          "total": 3283
+        },
+        {
+          "operation": "feedback",
+          "retained": 2029,
+          "transient": 544,
+          "total": 2573
+        },
+        {
+          "operation": "perception",
+          "retained": 1587,
+          "transient": 499,
+          "total": 2086
+        },
+        {
+          "operation": "perception",
+          "retained": 1615,
+          "transient": 4468,
+          "total": 6083
+        },
+        {
+          "operation": "feedback",
+          "retained": 2556,
+          "transient": 680,
+          "total": 3236
+        },
+        {
+          "operation": "perception",
+          "retained": 1587,
+          "transient": 499,
+          "total": 2086
+        },
+        {
+          "operation": "perception",
+          "retained": 1615,
+          "transient": 4624,
+          "total": 6239
+        },
+        {
+          "operation": "feedback",
+          "retained": 2592,
+          "transient": 600,
+          "total": 3192
+        },
+        {
+          "operation": "perception",
+          "retained": 1587,
+          "transient": 499,
+          "total": 2086
+        },
+        {
+          "operation": "perception",
+          "retained": 1615,
+          "transient": 4626,
+          "total": 6241
+        },
+        {
+          "operation": "feedback",
+          "retained": 2594,
+          "transient": 600,
+          "total": 3194
+        },
+        {
+          "operation": "perception",
+          "retained": 1587,
+          "transient": 499,
+          "total": 2086
+        },
+        {
+          "operation": "perception",
+          "retained": 1615,
+          "transient": 4628,
+          "total": 6243
+        },
+        {
+          "operation": "feedback",
+          "retained": 2596,
+          "transient": 576,
+          "total": 3172
+        },
+        {
+          "operation": "perception",
+          "retained": 1587,
+          "transient": 499,
+          "total": 2086
+        },
+        {
+          "operation": "perception",
+          "retained": 1615,
+          "transient": 1820,
+          "total": 3435
+        },
+        {
+          "operation": "feedback",
+          "retained": 2032,
+          "transient": 544,
+          "total": 2576
+        },
+        {
+          "operation": "perception",
+          "retained": 1587,
+          "transient": 499,
+          "total": 2086
+        },
+        {
+          "operation": "perception",
+          "retained": 1615,
+          "transient": 1799,
+          "total": 3414
+        },
+        {
+          "operation": "finish",
+          "retained": 2033,
+          "transient": 0,
+          "total": 2033
+        }
+      ]
+    },
+    "reference_equal": true,
+    "cleanup": true
+  },
+  "K05_pending_replacement": {
+    "frames": 16,
+    "resources": {
+      "additional_python_peak": 6065,
+      "original_frames_peak": 0,
+      "output_slots_peak": 0,
+      "combined_peak": 0,
+      "original_frames_upper_bound": 8,
+      "combined_upper_bound": 10,
+      "packed": 416,
+      "receipt_bytes_peak": 820,
+      "utf8_upper": 1640,
+      "calls": [
+        {
+          "operation": "perception",
+          "retained": 1495,
+          "transient": 499,
+          "total": 1994
+        },
+        {
+          "operation": "perception",
+          "retained": 1523,
+          "transient": 1682,
+          "total": 3205
+        },
+        {
+          "operation": "feedback",
+          "retained": 1983,
+          "transient": 464,
+          "total": 2447
+        },
+        {
+          "operation": "perception",
+          "retained": 1551,
+          "transient": 499,
+          "total": 2050
+        },
+        {
+          "operation": "perception",
+          "retained": 1579,
+          "transient": 1811,
+          "total": 3390
+        },
+        {
+          "operation": "feedback",
+          "retained": 1989,
+          "transient": 464,
+          "total": 2453
+        },
+        {
+          "operation": "perception",
+          "retained": 1551,
+          "transient": 499,
+          "total": 2050
+        },
+        {
+          "operation": "perception",
+          "retained": 1579,
+          "transient": 1813,
+          "total": 3392
+        },
+        {
+          "operation": "feedback",
+          "retained": 1990,
+          "transient": 464,
+          "total": 2454
+        },
+        {
+          "operation": "perception",
+          "retained": 1551,
+          "transient": 499,
+          "total": 2050
+        },
+        {
+          "operation": "perception",
+          "retained": 1579,
+          "transient": 1813,
+          "total": 3392
+        },
+        {
+          "operation": "feedback",
+          "retained": 2018,
+          "transient": 464,
+          "total": 2482
+        },
+        {
+          "operation": "perception",
+          "retained": 1579,
+          "transient": 499,
+          "total": 2078
+        },
+        {
+          "operation": "perception",
+          "retained": 1579,
+          "transient": 1814,
+          "total": 3393
+        },
+        {
+          "operation": "feedback",
+          "retained": 2020,
+          "transient": 464,
+          "total": 2484
+        },
+        {
+          "operation": "perception",
+          "retained": 1579,
+          "transient": 499,
+          "total": 2078
+        },
+        {
+          "operation": "perception",
+          "retained": 1579,
+          "transient": 4486,
+          "total": 6065
+        },
+        {
+          "operation": "feedback",
+          "retained": 2520,
+          "transient": 464,
+          "total": 2984
+        },
+        {
+          "operation": "perception",
+          "retained": 1579,
+          "transient": 499,
+          "total": 2078
+        },
+        {
+          "operation": "perception",
+          "retained": 1607,
+          "transient": 3046,
+          "total": 4653
+        },
+        {
+          "operation": "feedback",
+          "retained": 2206,
+          "transient": 584,
+          "total": 2790
+        },
+        {
+          "operation": "perception",
+          "retained": 1579,
+          "transient": 499,
+          "total": 2078
+        },
+        {
+          "operation": "perception",
+          "retained": 1607,
+          "transient": 1816,
+          "total": 3423
+        },
+        {
+          "operation": "finish",
+          "retained": 2021,
+          "transient": 0,
+          "total": 2021
+        }
+      ]
+    },
+    "reference_equal": true,
+    "cleanup": true
+  },
+  "K06_promotion": {
+    "frames": 12,
+    "resources": {
+      "additional_python_peak": 5737,
+      "original_frames_peak": 0,
+      "output_slots_peak": 0,
+      "combined_peak": 0,
+      "original_frames_upper_bound": 8,
+      "combined_upper_bound": 10,
+      "packed": 416,
+      "receipt_bytes_peak": 828,
+      "utf8_upper": 1656,
+      "calls": [
+        {
+          "operation": "perception",
+          "retained": 1487,
+          "transient": 499,
+          "total": 1986
+        },
+        {
+          "operation": "perception",
+          "retained": 1515,
+          "transient": 1746,
+          "total": 3261
+        },
+        {
+          "operation": "feedback",
+          "retained": 1975,
+          "transient": 464,
+          "total": 2439
+        },
+        {
+          "operation": "perception",
+          "retained": 1543,
+          "transient": 499,
+          "total": 2042
+        },
+        {
+          "operation": "perception",
+          "retained": 1571,
+          "transient": 1691,
+          "total": 3262
+        },
+        {
+          "operation": "feedback",
+          "retained": 1981,
+          "transient": 464,
+          "total": 2445
+        },
+        {
+          "operation": "perception",
+          "retained": 1543,
+          "transient": 499,
+          "total": 2042
+        },
+        {
+          "operation": "perception",
+          "retained": 1571,
+          "transient": 4027,
+          "total": 5598
+        },
+        {
+          "operation": "feedback",
+          "retained": 2481,
+          "transient": 584,
+          "total": 3065
+        },
+        {
+          "operation": "perception",
+          "retained": 1543,
+          "transient": 499,
+          "total": 2042
+        },
+        {
+          "operation": "perception",
+          "retained": 1571,
+          "transient": 4166,
+          "total": 5737
+        },
+        {
+          "operation": "feedback",
+          "retained": 2520,
+          "transient": 592,
+          "total": 3112
+        },
+        {
+          "operation": "perception",
+          "retained": 1571,
+          "transient": 499,
+          "total": 2070
+        },
+        {
+          "operation": "perception",
+          "retained": 1571,
+          "transient": 1742,
+          "total": 3313
+        },
+        {
+          "operation": "feedback",
+          "retained": 2012,
+          "transient": 592,
+          "total": 2604
+        },
+        {
+          "operation": "perception",
+          "retained": 1571,
+          "transient": 499,
+          "total": 2070
+        },
+        {
+          "operation": "perception",
+          "retained": 1571,
+          "transient": 1744,
+          "total": 3315
+        },
+        {
+          "operation": "finish",
+          "retained": 2013,
+          "transient": 0,
+          "total": 2013
+        }
+      ]
+    },
+    "reference_equal": true,
+    "cleanup": true
+  },
+  "K08_full_heap": {
+    "frames": 32,
+    "resources": {
+      "additional_python_peak": 9136,
+      "original_frames_peak": 0,
+      "output_slots_peak": 0,
+      "combined_peak": 0,
+      "original_frames_upper_bound": 16,
+      "combined_upper_bound": 18,
+      "packed": 416,
+      "receipt_bytes_peak": 1468,
+      "utf8_upper": 2936,
+      "calls": [
+        {
+          "operation": "perception",
+          "retained": 1479,
+          "transient": 499,
+          "total": 1978
+        },
+        {
+          "operation": "perception",
+          "retained": 1507,
+          "transient": 1746,
+          "total": 3253
+        },
+        {
+          "operation": "feedback",
+          "retained": 1967,
+          "transient": 464,
+          "total": 2431
+        },
+        {
+          "operation": "perception",
+          "retained": 1535,
+          "transient": 499,
+          "total": 2034
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 1691,
+          "total": 3254
+        },
+        {
+          "operation": "feedback",
+          "retained": 1973,
+          "transient": 464,
+          "total": 2437
+        },
+        {
+          "operation": "perception",
+          "retained": 1535,
+          "transient": 499,
+          "total": 2034
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 3443,
+          "total": 5006
+        },
+        {
+          "operation": "feedback",
+          "retained": 2329,
+          "transient": 584,
+          "total": 2913
+        },
+        {
+          "operation": "perception",
+          "retained": 1535,
+          "transient": 499,
+          "total": 2034
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 2849,
+          "total": 4412
+        },
+        {
+          "operation": "feedback",
+          "retained": 2155,
+          "transient": 592,
+          "total": 2747
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 3771,
+          "total": 5334
+        },
+        {
+          "operation": "feedback",
+          "retained": 2389,
+          "transient": 624,
+          "total": 3013
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 1864,
+          "total": 3427
+        },
+        {
+          "operation": "feedback",
+          "retained": 2005,
+          "transient": 592,
+          "total": 2597
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1591,
+          "transient": 5498,
+          "total": 7089
+        },
+        {
+          "operation": "feedback",
+          "retained": 2762,
+          "transient": 696,
+          "total": 3458
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1591,
+          "transient": 3089,
+          "total": 4680
+        },
+        {
+          "operation": "feedback",
+          "retained": 2161,
+          "transient": 640,
+          "total": 2801
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1591,
+          "transient": 5539,
+          "total": 7130
+        },
+        {
+          "operation": "feedback",
+          "retained": 2775,
+          "transient": 640,
+          "total": 3415
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1591,
+          "transient": 1864,
+          "total": 3455
+        },
+        {
+          "operation": "feedback",
+          "retained": 2005,
+          "transient": 640,
+          "total": 2645
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1591,
+          "transient": 7545,
+          "total": 9136
+        },
+        {
+          "operation": "feedback",
+          "retained": 3152,
+          "transient": 640,
+          "total": 3792
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1591,
+          "transient": 3178,
+          "total": 4769
+        },
+        {
+          "operation": "feedback",
+          "retained": 2166,
+          "transient": 592,
+          "total": 2758
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1591,
+          "transient": 1943,
+          "total": 3534
+        },
+        {
+          "operation": "feedback",
+          "retained": 2009,
+          "transient": 640,
+          "total": 2649
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1591,
+          "transient": 1943,
+          "total": 3534
+        },
+        {
+          "operation": "feedback",
+          "retained": 2009,
+          "transient": 640,
+          "total": 2649
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1591,
+          "transient": 3207,
+          "total": 4798
+        },
+        {
+          "operation": "feedback",
+          "retained": 2195,
+          "transient": 640,
+          "total": 2835
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1591,
+          "transient": 3178,
+          "total": 4769
+        },
+        {
+          "operation": "finish",
+          "retained": 2166,
+          "transient": 0,
+          "total": 2166
+        }
+      ]
+    },
+    "reference_equal": true,
+    "cleanup": true
+  },
+  "K08_full_trace": {
+    "frames": 32,
+    "resources": {
+      "additional_python_peak": 0,
+      "original_frames_peak": 16,
+      "output_slots_peak": 1,
+      "combined_peak": 17,
+      "original_frames_upper_bound": 0,
+      "combined_upper_bound": 0,
+      "packed": 416,
+      "receipt_bytes_peak": 1468,
+      "utf8_upper": 2936,
+      "calls": []
+    },
+    "reference_equal": true,
+    "cleanup": true
+  },
+  "K09_harm_K1": {
+    "frames": 12,
+    "resources": {
+      "additional_python_peak": 4536,
+      "original_frames_peak": 0,
+      "output_slots_peak": 0,
+      "combined_peak": 0,
+      "original_frames_upper_bound": 8,
+      "combined_upper_bound": 10,
+      "packed": 416,
+      "receipt_bytes_peak": 531,
+      "utf8_upper": 1062,
+      "calls": [
+        {
+          "operation": "perception",
+          "retained": 1479,
+          "transient": 499,
+          "total": 1978
+        },
+        {
+          "operation": "perception",
+          "retained": 1507,
+          "transient": 1746,
+          "total": 3253
+        },
+        {
+          "operation": "feedback",
+          "retained": 1967,
+          "transient": 464,
+          "total": 2431
+        },
+        {
+          "operation": "perception",
+          "retained": 1535,
+          "transient": 499,
+          "total": 2034
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 1691,
+          "total": 3254
+        },
+        {
+          "operation": "feedback",
+          "retained": 1973,
+          "transient": 464,
+          "total": 2437
+        },
+        {
+          "operation": "perception",
+          "retained": 1535,
+          "transient": 499,
+          "total": 2034
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 2830,
+          "total": 4393
+        },
+        {
+          "operation": "feedback",
+          "retained": 2156,
+          "transient": 584,
+          "total": 2740
+        },
+        {
+          "operation": "perception",
+          "retained": 1535,
+          "transient": 499,
+          "total": 2034
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 1693,
+          "total": 3256
+        },
+        {
+          "operation": "feedback",
+          "retained": 2002,
+          "transient": 464,
+          "total": 2466
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 2973,
+          "total": 4536
+        },
+        {
+          "operation": "feedback",
+          "retained": 2215,
+          "transient": 464,
+          "total": 2679
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 1696,
+          "total": 3259
+        },
+        {
+          "operation": "finish",
+          "retained": 2005,
+          "transient": 0,
+          "total": 2005
+        }
+      ]
+    },
+    "reference_equal": true,
+    "cleanup": true
+  },
+  "K09_harm_U": {
+    "frames": 12,
+    "resources": {
+      "additional_python_peak": 4643,
+      "original_frames_peak": 0,
+      "output_slots_peak": 0,
+      "combined_peak": 0,
+      "original_frames_upper_bound": 8,
+      "combined_upper_bound": 10,
+      "packed": 416,
+      "receipt_bytes_peak": 502,
+      "utf8_upper": 1004,
+      "calls": [
+        {
+          "operation": "perception",
+          "retained": 1495,
+          "transient": 499,
+          "total": 1994
+        },
+        {
+          "operation": "perception",
+          "retained": 1523,
+          "transient": 1682,
+          "total": 3205
+        },
+        {
+          "operation": "feedback",
+          "retained": 1983,
+          "transient": 464,
+          "total": 2447
+        },
+        {
+          "operation": "perception",
+          "retained": 1551,
+          "transient": 499,
+          "total": 2050
+        },
+        {
+          "operation": "perception",
+          "retained": 1579,
+          "transient": 1691,
+          "total": 3270
+        },
+        {
+          "operation": "feedback",
+          "retained": 1989,
+          "transient": 464,
+          "total": 2453
+        },
+        {
+          "operation": "perception",
+          "retained": 1551,
+          "transient": 499,
+          "total": 2050
+        },
+        {
+          "operation": "perception",
+          "retained": 1579,
+          "transient": 3062,
+          "total": 4641
+        },
+        {
+          "operation": "feedback",
+          "retained": 2172,
+          "transient": 584,
+          "total": 2756
+        },
+        {
+          "operation": "perception",
+          "retained": 1551,
+          "transient": 499,
+          "total": 2050
+        },
+        {
+          "operation": "perception",
+          "retained": 1579,
+          "transient": 1813,
+          "total": 3392
+        },
+        {
+          "operation": "feedback",
+          "retained": 2018,
+          "transient": 464,
+          "total": 2482
+        },
+        {
+          "operation": "perception",
+          "retained": 1579,
+          "transient": 499,
+          "total": 2078
+        },
+        {
+          "operation": "perception",
+          "retained": 1579,
+          "transient": 3064,
+          "total": 4643
+        },
+        {
+          "operation": "feedback",
+          "retained": 2202,
+          "transient": 584,
+          "total": 2786
+        },
+        {
+          "operation": "perception",
+          "retained": 1579,
+          "transient": 499,
+          "total": 2078
+        },
+        {
+          "operation": "perception",
+          "retained": 1579,
+          "transient": 1816,
+          "total": 3395
+        },
+        {
+          "operation": "finish",
+          "retained": 2021,
+          "transient": 0,
+          "total": 2021
+        }
+      ]
+    },
+    "reference_equal": true,
+    "cleanup": true
+  },
+  "K09_new_lost_K1": {
+    "frames": 12,
+    "resources": {
+      "additional_python_peak": 3379,
+      "original_frames_peak": 0,
+      "output_slots_peak": 0,
+      "combined_peak": 0,
+      "original_frames_upper_bound": 8,
+      "combined_upper_bound": 10,
+      "packed": 416,
+      "receipt_bytes_peak": 321,
+      "utf8_upper": 642,
+      "calls": [
+        {
+          "operation": "perception",
+          "retained": 1479,
+          "transient": 499,
+          "total": 1978
+        },
+        {
+          "operation": "perception",
+          "retained": 1507,
+          "transient": 1802,
+          "total": 3309
+        },
+        {
+          "operation": "feedback",
+          "retained": 1967,
+          "transient": 464,
+          "total": 2431
+        },
+        {
+          "operation": "perception",
+          "retained": 1535,
+          "transient": 499,
+          "total": 2034
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 1811,
+          "total": 3374
+        },
+        {
+          "operation": "feedback",
+          "retained": 1973,
+          "transient": 464,
+          "total": 2437
+        },
+        {
+          "operation": "perception",
+          "retained": 1535,
+          "transient": 499,
+          "total": 2034
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 1813,
+          "total": 3376
+        },
+        {
+          "operation": "feedback",
+          "retained": 1974,
+          "transient": 464,
+          "total": 2438
+        },
+        {
+          "operation": "perception",
+          "retained": 1535,
+          "transient": 499,
+          "total": 2034
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 1813,
+          "total": 3376
+        },
+        {
+          "operation": "feedback",
+          "retained": 2002,
+          "transient": 464,
+          "total": 2466
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 1814,
+          "total": 3377
+        },
+        {
+          "operation": "feedback",
+          "retained": 2004,
+          "transient": 464,
+          "total": 2468
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 1816,
+          "total": 3379
+        },
+        {
+          "operation": "finish",
+          "retained": 2005,
+          "transient": 0,
+          "total": 2005
+        }
+      ]
+    },
+    "reference_equal": true,
+    "cleanup": true
+  },
+  "K09_new_lost_U": {
+    "frames": 12,
+    "resources": {
+      "additional_python_peak": 4635,
+      "original_frames_peak": 0,
+      "output_slots_peak": 0,
+      "combined_peak": 0,
+      "original_frames_upper_bound": 8,
+      "combined_upper_bound": 10,
+      "packed": 416,
+      "receipt_bytes_peak": 502,
+      "utf8_upper": 1004,
+      "calls": [
+        {
+          "operation": "perception",
+          "retained": 1487,
+          "transient": 499,
+          "total": 1986
+        },
+        {
+          "operation": "perception",
+          "retained": 1515,
+          "transient": 1802,
+          "total": 3317
+        },
+        {
+          "operation": "feedback",
+          "retained": 1975,
+          "transient": 464,
+          "total": 2439
+        },
+        {
+          "operation": "perception",
+          "retained": 1543,
+          "transient": 499,
+          "total": 2042
+        },
+        {
+          "operation": "perception",
+          "retained": 1571,
+          "transient": 1811,
+          "total": 3382
+        },
+        {
+          "operation": "feedback",
+          "retained": 1981,
+          "transient": 464,
+          "total": 2445
+        },
+        {
+          "operation": "perception",
+          "retained": 1543,
+          "transient": 499,
+          "total": 2042
+        },
+        {
+          "operation": "perception",
+          "retained": 1571,
+          "transient": 1813,
+          "total": 3384
+        },
+        {
+          "operation": "feedback",
+          "retained": 1982,
+          "transient": 464,
+          "total": 2446
+        },
+        {
+          "operation": "perception",
+          "retained": 1543,
+          "transient": 499,
+          "total": 2042
+        },
+        {
+          "operation": "perception",
+          "retained": 1571,
+          "transient": 1813,
+          "total": 3384
+        },
+        {
+          "operation": "feedback",
+          "retained": 2010,
+          "transient": 464,
+          "total": 2474
+        },
+        {
+          "operation": "perception",
+          "retained": 1571,
+          "transient": 499,
+          "total": 2070
+        },
+        {
+          "operation": "perception",
+          "retained": 1571,
+          "transient": 3064,
+          "total": 4635
+        },
+        {
+          "operation": "feedback",
+          "retained": 2194,
+          "transient": 584,
+          "total": 2778
+        },
+        {
+          "operation": "perception",
+          "retained": 1571,
+          "transient": 499,
+          "total": 2070
+        },
+        {
+          "operation": "perception",
+          "retained": 1571,
+          "transient": 3036,
+          "total": 4607
+        },
+        {
+          "operation": "finish",
+          "retained": 2166,
+          "transient": 0,
+          "total": 2166
+        }
+      ]
+    },
+    "reference_equal": true,
+    "cleanup": true
+  },
+  "K10_reference_divergence": {
+    "frames": 24,
+    "resources": {
+      "additional_python_peak": 3411,
+      "original_frames_peak": 0,
+      "output_slots_peak": 0,
+      "combined_peak": 0,
+      "original_frames_upper_bound": 8,
+      "combined_upper_bound": 10,
+      "packed": 416,
+      "receipt_bytes_peak": 325,
+      "utf8_upper": 650,
+      "calls": [
+        {
+          "operation": "perception",
+          "retained": 1479,
+          "transient": 499,
+          "total": 1978
+        },
+        {
+          "operation": "perception",
+          "retained": 1507,
+          "transient": 1746,
+          "total": 3253
+        },
+        {
+          "operation": "feedback",
+          "retained": 1967,
+          "transient": 464,
+          "total": 2431
+        },
+        {
+          "operation": "perception",
+          "retained": 1535,
+          "transient": 499,
+          "total": 2034
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 1691,
+          "total": 3254
+        },
+        {
+          "operation": "feedback",
+          "retained": 1973,
+          "transient": 464,
+          "total": 2437
+        },
+        {
+          "operation": "perception",
+          "retained": 1535,
+          "transient": 499,
+          "total": 2034
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 1693,
+          "total": 3256
+        },
+        {
+          "operation": "feedback",
+          "retained": 1974,
+          "transient": 464,
+          "total": 2438
+        },
+        {
+          "operation": "perception",
+          "retained": 1535,
+          "transient": 499,
+          "total": 2034
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 1693,
+          "total": 3256
+        },
+        {
+          "operation": "feedback",
+          "retained": 2002,
+          "transient": 464,
+          "total": 2466
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 1694,
+          "total": 3257
+        },
+        {
+          "operation": "feedback",
+          "retained": 2004,
+          "transient": 464,
+          "total": 2468
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 1696,
+          "total": 3259
+        },
+        {
+          "operation": "feedback",
+          "retained": 2005,
+          "transient": 464,
+          "total": 2469
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1591,
+          "transient": 1696,
+          "total": 3287
+        },
+        {
+          "operation": "feedback",
+          "retained": 2005,
+          "transient": 464,
+          "total": 2469
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1591,
+          "transient": 1696,
+          "total": 3287
+        },
+        {
+          "operation": "feedback",
+          "retained": 2005,
+          "transient": 464,
+          "total": 2469
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1591,
+          "transient": 1816,
+          "total": 3407
+        },
+        {
+          "operation": "feedback",
+          "retained": 2005,
+          "transient": 464,
+          "total": 2469
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1591,
+          "transient": 1816,
+          "total": 3407
+        },
+        {
+          "operation": "feedback",
+          "retained": 2005,
+          "transient": 464,
+          "total": 2469
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1591,
+          "transient": 1820,
+          "total": 3411
+        },
+        {
+          "operation": "feedback",
+          "retained": 2008,
+          "transient": 464,
+          "total": 2472
+        },
+        {
+          "operation": "perception",
+          "retained": 1563,
+          "transient": 499,
+          "total": 2062
+        },
+        {
+          "operation": "perception",
+          "retained": 1591,
+          "transient": 1799,
+          "total": 3390
+        },
+        {
+          "operation": "finish",
+          "retained": 2009,
+          "transient": 0,
+          "total": 2009
+        }
+      ]
+    },
+    "reference_equal": true,
+    "cleanup": true
+  }
+}

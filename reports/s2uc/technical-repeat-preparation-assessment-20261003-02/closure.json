@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "files": {
+    "REPORT.md": {
+      "bytes": 9006,
+      "sha256": "716010b8bba1479c49ecfa9cd605efc3d1d78857e67448aec29ac28348bbde1f"
+    },
+    "summary.json": {
+      "bytes": 4178,
+      "sha256": "3687c8faec634b3e2662613fc962b3bd37dcf1c628a6e995247d738a0c35b65f"
+    },
+    "verification.json": {
+      "bytes": 1003,
+      "sha256": "e00adfcaf335bf494d2c9b5df58120c01e230e0d6f7b39cd4a438f08fceb9a4b"
+    }
+  },
+  "new_evidence_including_both_modified_document_files_before_closure": 2865983,
+  "limit": 16777216,
+  "duration_before_closure_write_seconds": 602.5012466,
+  "seconds_limit": 900,
+  "replays": 10,
+  "additional_replays_after_V3": 0,
+  "raster_status": "NOT_EVALUABLE"
+}

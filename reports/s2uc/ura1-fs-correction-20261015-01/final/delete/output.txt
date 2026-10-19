@@ -1,0 +1,1 @@
+{"mode": "delete", "status": "PASS", "seconds": 0.2085159000052954, "job_peak": 27693056, "first_failure": null, "steps": 1}

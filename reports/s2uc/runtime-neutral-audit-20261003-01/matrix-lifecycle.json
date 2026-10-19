@@ -1,0 +1,32 @@
+{
+  "status": "NORMAL",
+  "events": [
+    {
+      "event": "deadline_established",
+      "monotonic_ns": 862959683745700,
+      "utc": "2026-10-03T14:02:35.892067+00:00",
+      "deadline_monotonic_ns": 863859683745700,
+      "deadline_utc": "2026-10-03T14:17:35.892067+00:00"
+    },
+    {
+      "event": "worker_end_confirmed",
+      "monotonic_ns": 863166262813200,
+      "utc": "2026-10-03T14:06:02.473358+00:00",
+      "exitcode": 0,
+      "alive": false
+    },
+    {
+      "event": "closure_admin_started",
+      "monotonic_ns": 863166263124900,
+      "utc": "2026-10-03T14:06:02.473653+00:00"
+    },
+    {
+      "event": "closure_admin_finished",
+      "monotonic_ns": 863166263175200,
+      "utc": "2026-10-03T14:06:02.473702+00:00",
+      "serialized_bytes": 491
+    }
+  ],
+  "actual_worker_death_time": "NOT_DIRECTLY_MEASURED",
+  "historical_worker_stop": "UNKNOWN_NOT_RECONSTRUCTED"
+}

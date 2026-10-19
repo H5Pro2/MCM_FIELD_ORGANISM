@@ -1,0 +1,114 @@
+PCM-KONKURRENZGEGENPROBE -- STATISCHER ENTWURF
+2026-09-30. Keine Signalerzeugung, Rezeptorverarbeitung oder Tests ausgefuehrt.
+
+ZIEL UND FESTE MONTAGE
+Unzureichender gemeinsamer Hinweis gegen unterscheidenden Kontext am selben
+Speicherzustand; keine neue Matchingregel und keine ergebnisabhaengige Auswahl.
+A = X,B,C,Y = W1,W2,W3,W4.
+D = U,B,C,V = W4,W2,W3,W1.
+X=W1, U=W4, Y=W4, V=W1: beide Aussenpositionen unterscheiden sich zwischen
+Erfahrungen, die sechs Buchstaben behaupten keine sechs verschiedenen Signale.
+D ist explizit eine synthetische Montage, kein kontinuierlicher Aufnahmeverlauf.
+Auch der gemeinsame Vergleich ist ein Montagetest, keine zweite Aufnahme.
+Labels A/D und X/B/C/Y/U/V dienen nur Beobachtung und Herkunft, nicht Matching.
+
+KONKRETE HERKUNFT
+sources/s2uc/temporal-chirp-v1/sequence.pcm, 76800 Byte, 19200 Samples,
+mono Float32 little-endian, 48000 Hz.
+SHA256 4774f24ad52ec7e431c360ec1f2d18c663584d1ed3fbffa83fa0f4fe3d5442a6
+W1 Samples [0,4800), Byte [0,19200):
+1a7e55861a9aac4264a083703738bc2de08e311af2dd9783fe65edbfca69cb71
+W2 Samples [4800,9600), Byte [19200,38400):
+798c3008f8f813d6c8c38bc377bc2d9e4c1faaaa69efe1d4f02b5b4fa2072f3c
+W3 Samples [9600,14400), Byte [38400,57600):
+0d01e9d24f1b9a9474b9603faa10457f09fcf2efdbc9adec5c3ee8b24e6bba3b
+W4 Samples [14400,19200), Byte [57600,76800):
+8725f88dcfe3ff894d687fff4c95ea4878ae51f7a9f22ab401cd7a6b0988cd10
+Fundstelle: sources/s2uc/temporal-chirp-v1/provenance.json.
+Vektoren: reports/s2uc/pcm-temporal-20260930-01/result.json,
+processed[0..3].projection.values fuer W1..W4; processed[4..5] fuer Halb-W2/W3.
+Bestehende Halbdateien im selben Berichtordner:
+half-W2.pcm SHA256 a5a0110c47d8945d1eb946805255fc9daa826603455f7ebd3c4482cb883d46ac
+half-W3.pcm SHA256 b533eebd8a8a357ba365800b617f4cfb95686f1731b7fade5ea0531eda5b12d9
+Die gespeicherten Hashangaben wurden hier gelesen, kein neuer Verarbeitungslauf.
+Vor Umsetzung alle Dateien einschliesslich result.json/Code neu binden und
+gegen bestehendes inventory.json pruefen. JSON-Floats verlustfrei einlesen.
+
+SPEICHERFOLGE JE ARM (E/F GETRENNT UND IDENTISCH)
+1. A erstmals: Segment A-1, Ordinale 1..4 -> Kandidat Generation 1.
+2. A Testwiedergabe: A-2, Ordinale 5..8 -> bestaetigte A-1, Generation 1.
+3. D erstmals: D-1, Ordinale 9..12 -> Kandidat Generation 2.
+4. D Testwiedergabe: D-2, Ordinale 13..16 -> bestaetigte D-1, Generation 2.
+Danach beide Erhaltungsplaetze belegt, FIFO [A-1,D-1], kein Kandidat,
+keine laufende Bildung. Keine Verdrangung. Exakte Bestaetigung unveraendert.
+Wiederholungen sind Testwiedergaben, nicht neue Quellenaufnahmen.
+
+HINWEISE UND VOLLSTAENDIGE VORHERSAGEN
+Positionszaehlung nullbasiert. Jeder Fall zweimal; keine weitere Bildung.
+Schluessel a0=(retained, Generation 1, A-1, Ordinale [1,2,3,4], Offset 0).
+Schluessel a1=(retained, Generation 1, A-1, Ordinale [1,2,3,4], Offset 1).
+Schluessel d1=(retained, Generation 2, D-1, Ordinale [9,10,11,12], Offset 1).
+
+Fall                  E Treffermenge        F Treffermenge
+B,C original          {a1,d1}               {a1 Faktor 1,d1 Faktor 1}
+B,C global halb       {}                    {a1 Faktor 0.5,d1 Faktor 0.5}
+X,B original          {a0}                  {a0 Faktor 1}
+X,B global halb       {}                    {a0 Faktor 0.5} (*)
+Zwei Treffer => ABSTAIN_AMBIGUOUS; keiner => ABSTAIN_NO_MATCH;
+ein Treffer => CONFIRMED_RETAINED_MATCH. Keine Herkunftspriorisierung.
+Alle sechs moeglichen Positionen je Hinweis auswerten; keine zusaetzlichen
+Treffer unterschlagen. Global halb bedeutet derselbe Faktor fuer beide
+PCM-Fenster und alle Samples, nicht band- oder frameweise angepasste Faktoren.
+
+Begruendung: bisheriger Bericht belegt paarweise Nichtproportionalitaet von
+W1..W4 unter 0.5,1,2 sowie exakte Halbierung von W2/W3. Die moeglichen Paare
+sind A: W1/W2,W2/W3,W3/W4; D: W4/W2,W2/W3,W3/W1.
+Darum reicht B/C nicht zur Herkunftstrennung, X/B dagegen im Original schon.
+(*) Halb-W1 wurde noch nicht verarbeitet. F={a0,.5} ist hier eine explizite
+Hypothese, keine Messung. Bei fehlender exakter Halbierung von W1 ist F={}.
+W2 als zweites Hinweisfenster begrenzt moegliche Positionen auf Offset 0;
+W4 ist bereits nicht proportional zu W1. E bleibt beim Halbhinweis leer,
+weil Halb-W2 keinem moeglichen zweiten Originalfenster exakt entspricht.
+Abweichungen werden berichtet, ohne Signal, Montage oder Hinweis zu wechseln.
+
+MINIMALE SPAETERE UMSETZUNG
+Ein separater Treiber, der die sechs gebundenen Original-/Halbausgaben liest.
+Keine erneute Verarbeitung dieser sechs Fenster noetig. Neu ausschliesslich
+W1 aus der gespeicherten Quelle ausschneiden, Samples halbieren, Float32-LE
+packen und Rueckverdopplung bitweise pruefen. Halb-W1 mit Parenthash/Intervall/
+Ableitungsregel und eigenem Hash sichern, ohne zusammengeklebte PCM-Datei.
+Genau ein neuer direkter Rezeptoraufruf plus ein NJ-Aufruf fuer Halb-W1,
+unveraenderte Konfiguration 48000/4800/480, 48 Baender 50..18000 Hz.
+Bei Laufzeit-/Codeabweichung ist Wiederverwendung nicht stillschweigend zulaessig;
+Bindungsabweichung melden, keinen Ersatzlauf automatisch starten.
+Fuer W1 je 48 Rohrezeptor-/NJ-Bandvergleiche gegen gespeichertes Original;
+W2/W3-Vorbefund referenzieren, neue und wiederverwendete Evidenz trennen.
+E/F-Speicher wie oben aufbauen, vier Faelle je zweimal, volle Treffermengen
+gegen direkte unabhaengige Vergleichsrechnung pruefen. Zustandsbilder vor/nach,
+Generationen, Ordinale und Reihenfolge unveraendert; Hinweise sind read-only.
+Alle Festlegungen vor neuer Ableitung/Verarbeitung sichern. Aktuell nur Plan.
+
+RESSOURCENRECHNUNG
+Zwei Erhaltungsplaetze, ein Kandidatenplatz, eine Bildung mit vier Frames.
+Nach A-Bestaetigung 4 Spurframes; waehrend zweiter D-Praesentation maximal
+4 retained + 4 candidate + 4 forming = 12 Spurframes. Danach 8 retained.
+Hinweise maximal 8+2=10 gleichzeitig. Erwartetes Gesamtmaximum 12;
+Grenze 16 Spurframes plus 2 Hinweisframes unveraendert. Kein Fuelltest noetig.
+4 Faelle x 2 Wiederholungen = 8 Hinweise je Arm, 16 insgesamt.
+Je Hinweis 2 Herkuenfte x 3 Positionen = 6 Positionspruefungen;
+48 je Arm, 96 insgesamt. F: 48 x 3 = 144 Faktorpruefungen,
+hoechstens 144 x 96 = 13824 skalare Vergleiche; Kurzschlusskosten messen.
+E hoechstens 48 x 96 = 4608 skalare Gleichheitsvergleiche.
+Bestehende PCM-Dateien 115200 Byte, neue Halb-W1-Datei 19200 Byte;
+zusammen 134400 Byte, keine duplizierten Montagedateien.
+Externes Ergebnisarchiv/geladene Testvektoren, PCM-Puffer, Verarbeitung und
+Beobachter gehoeren nicht zum 16+2-Armspeicher; getrennt ausweisen. Kein
+Gesamt-RAM aus der Framegrenze ableiten; Zeit und Python-Peaks getrennt messen.
+
+AUSSAGEGRENZE UND ANSCHLUSS
+Geprueft wird Herkunftskonkurrenz vs. diskriminierender Zweiframe-Kontext auf
+PCM-abgeleiteten Werten bei identischem Zustand und exakter Bestaetigung.
+Kein allgemeines Kontextverstehen und keine kontinuierliche zweite Aufnahme.
+Abnahmekriterium ist korrekte vollstaendige Ergebnismenge, nicht erzwungener
+Erfolg der noch offenen Halb-W1-Hypothese. Vorschlag: genau dieses begrenzte
+Paket umsetzen lassen; keine neue Quellenproduktion, Registry oder Regelvariante.

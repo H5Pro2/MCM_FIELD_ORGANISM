@@ -1,0 +1,162 @@
+test_01_cells_offsets_zero_signs_and_role (experiments.fw1.test_contract.Contract.test_01_cells_offsets_zero_signs_and_role) ... ok
+test_02_frozen_relearning_repeated_events (experiments.fw1.test_contract.Contract.test_02_frozen_relearning_repeated_events) ... ERROR
+test_03_partial_publication_fails_closed (experiments.fw1.test_contract.Contract.test_03_partial_publication_fails_closed) ... ERROR
+test_04_duplicate_input_rejected (experiments.fw1.test_contract.Contract.test_04_duplicate_input_rejected) ... ERROR
+test_05_source_recipe_and_scope (experiments.fw1.test_contract.Contract.test_05_source_recipe_and_scope) ... ok
+test_06_mixture_not_interaction (experiments.fw1.test_contract.Contract.test_06_mixture_not_interaction) ... ok
+test_07_equal_and_last_reset_information (experiments.fw1.test_contract.Contract.test_07_equal_and_last_reset_information) ... ok
+test_08_incomplete_and_bad_matrix (experiments.fw1.test_contract.Contract.test_08_incomplete_and_bad_matrix) ... ok
+test_09_full_denominator_synthetic_only (experiments.fw1.test_contract.Contract.test_09_full_denominator_synthetic_only) ... ok
+test_10_no_extra_policy_state (experiments.fw1.test_contract.Contract.test_10_no_extra_policy_state) ... ok
+
+======================================================================
+ERROR: test_02_frozen_relearning_repeated_events (experiments.fw1.test_contract.Contract.test_02_frozen_relearning_repeated_events)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\experiments\fw1\test_contract.py", line 63, in history
+    a.accept_perception(s)
+    ~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_multi_error.py", line 262, in accept_perception
+    return super().accept_perception(sample)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_continuation_adapter.py", line 80, in accept_perception
+    return super().accept_perception(sample)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_pair_context_adapter.py", line 60, in accept_perception
+    for frame in self.pair:self._admit(frame)
+                           ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\experiments\fw1\adapter.py", line 35, in _admit
+    self._invalidate_confirmed(result['generation'])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\experiments\fw1\adapter.py", line 10, in _invalidate_confirmed
+    self._checkpoint('reset_validated',generation)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\experiments\fw1\test_contract.py", line 44, in _checkpoint
+    before.clear();before.update(bank=bytes(a.bank[192:]),frozen=tuple(a._frozen),pframe=a._pframe,pending=a.pending_prediction,output=a.selected_values,stock=json.dumps(snapshot(a.arm),sort_keys=True))
+                                                                                                                                       ^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_multi_error.py", line 175, in selected_values
+    self._guard()
+    ~~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_multi_error.py", line 63, in _guard
+    require(self.bank[408] in (IDLE, PENDING), 'MULTI_BUSY')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_paired_error_ema.py", line 16, in require
+    raise AdapterError(code)
+tools._s2uc_pair_context_adapter.AdapterError: MULTI_BUSY
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\experiments\fw1\test_contract.py", line 77, in test_02_frozen_relearning_repeated_events
+    def test_02_frozen_relearning_repeated_events(self):self.history()
+                                                        ~~~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\experiments\fw1\test_contract.py", line 74, in history
+    for ref in refs:ref.finish()
+                    ~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_er1_reference.py", line 80, in finish
+    if self.closed or self.pair or not self.pending or self.pending['target']!=self.index+1:raise ValueError('REF_FINISH')
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: REF_FINISH
+
+======================================================================
+ERROR: test_03_partial_publication_fails_closed (experiments.fw1.test_contract.Contract.test_03_partial_publication_fails_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\experiments\fw1\test_contract.py", line 63, in history
+    a.accept_perception(s)
+    ~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_multi_error.py", line 262, in accept_perception
+    return super().accept_perception(sample)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_continuation_adapter.py", line 80, in accept_perception
+    return super().accept_perception(sample)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_pair_context_adapter.py", line 60, in accept_perception
+    for frame in self.pair:self._admit(frame)
+                           ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\experiments\fw1\adapter.py", line 35, in _admit
+    self._invalidate_confirmed(result['generation'])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\experiments\fw1\adapter.py", line 10, in _invalidate_confirmed
+    self._checkpoint('reset_validated',generation)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\experiments\fw1\test_contract.py", line 44, in _checkpoint
+    before.clear();before.update(bank=bytes(a.bank[192:]),frozen=tuple(a._frozen),pframe=a._pframe,pending=a.pending_prediction,output=a.selected_values,stock=json.dumps(snapshot(a.arm),sort_keys=True))
+                                                                                                                                       ^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_multi_error.py", line 175, in selected_values
+    self._guard()
+    ~~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_multi_error.py", line 63, in _guard
+    require(self.bank[408] in (IDLE, PENDING), 'MULTI_BUSY')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_paired_error_ema.py", line 16, in require
+    raise AdapterError(code)
+tools._s2uc_pair_context_adapter.AdapterError: MULTI_BUSY
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\experiments\fw1\test_contract.py", line 79, in test_03_partial_publication_fails_closed
+    with self.assertRaisesRegex(MemoryError,'INJECTED_PARTIAL'):self.history(fault='partial')
+                                                                ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\experiments\fw1\test_contract.py", line 74, in history
+    for ref in refs:ref.finish()
+                    ~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_er1_reference.py", line 80, in finish
+    if self.closed or self.pair or not self.pending or self.pending['target']!=self.index+1:raise ValueError('REF_FINISH')
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: REF_FINISH
+
+======================================================================
+ERROR: test_04_duplicate_input_rejected (experiments.fw1.test_contract.Contract.test_04_duplicate_input_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\experiments\fw1\test_contract.py", line 63, in history
+    a.accept_perception(s)
+    ~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_multi_error.py", line 262, in accept_perception
+    return super().accept_perception(sample)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_continuation_adapter.py", line 80, in accept_perception
+    return super().accept_perception(sample)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_pair_context_adapter.py", line 60, in accept_perception
+    for frame in self.pair:self._admit(frame)
+                           ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\experiments\fw1\adapter.py", line 35, in _admit
+    self._invalidate_confirmed(result['generation'])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\experiments\fw1\adapter.py", line 10, in _invalidate_confirmed
+    self._checkpoint('reset_validated',generation)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\experiments\fw1\test_contract.py", line 44, in _checkpoint
+    before.clear();before.update(bank=bytes(a.bank[192:]),frozen=tuple(a._frozen),pframe=a._pframe,pending=a.pending_prediction,output=a.selected_values,stock=json.dumps(snapshot(a.arm),sort_keys=True))
+                                                                                                                                       ^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_multi_error.py", line 175, in selected_values
+    self._guard()
+    ~~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_multi_error.py", line 63, in _guard
+    require(self.bank[408] in (IDLE, PENDING), 'MULTI_BUSY')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_paired_error_ema.py", line 16, in require
+    raise AdapterError(code)
+tools._s2uc_pair_context_adapter.AdapterError: MULTI_BUSY
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\experiments\fw1\test_contract.py", line 80, in test_04_duplicate_input_rejected
+    def test_04_duplicate_input_rejected(self):self.history(duplicate=True)
+                                               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\experiments\fw1\test_contract.py", line 74, in history
+    for ref in refs:ref.finish()
+                    ~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_er1_reference.py", line 80, in finish
+    if self.closed or self.pair or not self.pending or self.pending['target']!=self.index+1:raise ValueError('REF_FINISH')
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: REF_FINISH
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.183s
+
+FAILED (errors=3)

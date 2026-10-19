@@ -1,0 +1,40 @@
+MCM-KI: Frame-Blattfall V1, begrenzter Patch und neutrale Qualifikation
+
+Nur neuer separat versionierter Ressourcenbeobachter. Historische Dateien,
+Bindungen und Exporte bleiben unveraendert. AST-Abgleich verlangt genau
+einen zusaetzlichen Blattfall im alten Visitor. Keine Policy-/Grenzaenderung,
+kein Cache, keine deaktivierten Traceereignisse. Aktivierung ausschliesslich
+prozesslokal waehrend der freigegebenen neutralen Qualifikation/Matrix.
+
+Kurzer Pfad: type(Frame) exakt; values exakt tuple mit48 echten floats;
+profile,owner,segment exakt str; ordinal exakt int. Keine tieferen Objekte
+erreichbar. Unterklassen,mutable oder unklare Felder erhalten alten Visitor.
+Frame-ID wird vor dem kurzen Ruecksprung weiterhin erfasst.
+
+V01-V08: AST-Minimalitaet; Identitaeten/Aliase/Zyklen und18/19-Framegrenze;
+Ausgabeplaetze/20er-Kombinationsgrenze/Byterechnung; mutable/custom/Subklassen;
+sechs reale Hypothesen einer neutralen Testvorbelegung; Promotion/Verdrängung
+und vier Unterbrechungspunkte mit Cleanup; abgeleitete Budgetfehler;
+isolierte Beobachterallokation ohne persistenten Cache. Entwicklungstests
+duerfen korrigiert werden, formale Ergebnisse werden separat gespeichert.
+
+Feste Zeitmatrix ohne Warmup oder Wiederholung: N1/N2 aus dem abgenommenen
+Audit,je80 Positionen,je M/E/K/P alter und neuer Visitor,beide voller Trace.
+N1 Reihenfolge je Arm OLD,NEW;N2 je Arm NEW,OLD.16 Replays,1280 Aufnahmen
+und1280 Referenzfortschreibungen. Frischer Zustand pro Replay. Keine U-
+oder Rasterreplays. M/E/K/P nur jeweils mit gleicher Policy vergleichen.
+Vor Start Bindung von Patch,Tests,Runner,Plan,71 Altdateien und gespeicherten
+historischen Artefakten. Maximal900 Sekunden Matrix und16MiB neue Exporte.
+
+Unveraenderte originale Replayfunktion,keine Timerhooks im Algorithmus.
+Nur aeusserer Wall-/Prozess-CPU-Timer; Ressourcenmessung nach Originalmethode.
+Alle meter-Felder muessen exakt gleich sein; Heappeak separat mit16384er
+Grenze,da Allokationsmessungen schwanken koennen. Fachbelege kanonisch
+gleich nach Ausschluss ausschliesslich resources. Freigabe/EMA-Cleanup,
+Endziel81,Receiptgrenzen,Frames18,Slots2,kombiniert20 kontrollieren.
+Exportdauer separat von Replay. Kein fsync-/Datentraegerdurchsatznachweis.
+
+Getrennte Diagnose-Zeitwaechterereignisse wiederverwenden. Historischer
+Workerstop bleibt unbekannt. Kein neuer Evaluationsaufruf und keine Aenderung
+der operativen Zeitwaechterfunktion. Ergebnis auch bei ausbleibender
+Entlastung berichten; keinerlei zweite Optimierung daraus ableiten.

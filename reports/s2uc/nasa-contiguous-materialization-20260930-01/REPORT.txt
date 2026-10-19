@@ -1,0 +1,59 @@
+NASA [0,10) -- EINMALIGE MATERIALISIERUNG 2026-09-30
+Status MATERIALIZATION_COMPLETE, Exit0. Genau ein Materialisierungsaufruf,
+keine Wiederholung, Ersatzquelle, Grenzerhoehung oder Vorhersageauswertung.
+Benutzerauftrag durch Projektleiter uebermittelt; Autorisierung aus PENDING-
+Vorlage erstellt, ausschliesslich Status auf AUTHORIZED_ONCE geaendert.
+Exklusiver Ausgabeordner/claim verbrauchen die Einmalfreigabe. Vorlage bleibt
+historisch PENDING; konkrete Autorisierung ist verbraucht, nicht erneut nutzbar.
+
+QUELLE UND BINDUNGEN
+sources/media/NASA Earthrise Realtime Apollo 8.mp4,13547755Byte,
+SHA256 9a061d639c17849e52ace712c8752b5d377123a9eec99df896728098bd783d74.
+Code-/Runtimebindung572 Dateien vorab geprueft, unveraenderte Bindungsdatei
+SHA256 3089947ad40211a66866b9d700a103afc319a7af553fe991a3ff175cd82cae3b.
+PyAV16.1.0; gebundene FFmpeg-Bibliotheken und NumPy2.4.4 unveraendert.
+NJ-Profil 4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f
+Rohprofil 5c6b2b19281a44023497b435a96b1051905af4bbac493cae7e699ea1320392c7
+Profile, Werte und Datenherkunft in100 window-NNN.json; SHA256-Dateiinventar
+in inventory.json. Projektionsdigests aller100 Dateien lesend nachgerechnet.
+Keine erneute Rezeptorberechnung bei dieser Abschlusspruefung.
+
+VOLLSTAENDIGKEIT UND ZEITEN
+100/100 Fenster,480000 akzeptierte Samples bei48000Hz. Genau100 Rezeptor-
+und100NJ-Aufrufe. Erste Audiospur Index1, Stereo. Alle Fensterintervalle
+[4800*(i-1),4800*i), i=1..100, lueckenlos [0,480000)=[0,10) Sekunden.
+NJ-Snapshotindices0,10,...,990 wegen unveraendertem internem Profilhop480.
+Externer Fensterhop4800. Original-PTS-Fragmente mit rationaler Zeitbasis
+separat erhalten; je Fenster lueckenlose Fragmentabdeckung lesend bestaetigt.
+Alle100 Wertefolgen vollstaendig48-dimensional, endlich und profilgebunden.
+Quellenhandle/Container/Assembler geschlossen; Job beendet/geschlossen.
+Keine Memory-Bildung und keine Prognosen in diesem Materialisierungsschritt.
+
+RESSOURCEN (closure.json)
+Demuxte Pakete740/2048, davon271 nicht-auditive Pakete ohne Dekodierung.
+Dekodierte Audioframes469/512, Samples je Kanal480256/524288 inklusive
+256 Samples Endueberhang. Genau480000 akzeptiert, keine Auffuellung.
+Groesster Decoderbatch1024/65536 Samples/Kanal; Fensterbuffer4800Samples,
+19200 logische PCM-Byte; kein vollstaendiger PCM-Puffer oder PCM-Dauerexport.
+Decoder-Lesebyte939952/33554432. Separater Quellenhashpass im Kind13547755Byte;
+zusaetzliche vom Auftrag verlangte lesende Quellen-Vorpruefung13547755Byte
+vor Autorisierung, getrennt vom Decoderverbrauch. Kein zweiter Decoderlauf.
+Prozess-Commitpeak466399232Byte, Job-Commitpeak472965120Byte, jeweilige
+Grenze671088640Byte (640MiB). Keine Speicherlimitmeldung. Betriebssystem-
+Commitwerte, keine RSS-Werte. Anfrage30s/Gesamt300s eingehalten; keine
+Timeoutmeldung. Shell-Aufruf beendet nach rund3,27s (kein feingranulares
+Decoder-Zeitprofil). Ein aktiver Prozess, Kill-on-close aktiv.
+Export vor closure497899Byte; endgueltige Ausgabe einschliesslich dieses
+Berichts, Inventar und Verifikationsbefund in observer-balance.json.
+4MiB Gesamtgrenze und256KiB Abschlussreserve auch mit Beobachterdateien pruefen.
+
+BEFUNDGRENZE UND ANSCHLUSS
+Die konkrete Quelle erfuellt im festen Abschnitt die implementierten Zeit-,
+Profil- und Ressourcenbedingungen. Das ist kein allgemeiner Decodiernachweis
+fuer andere Abschnitte oder Codecvarianten. Kein Kontextvorteil, keine
+Kontinuitaetswirkung oder Fehlergroesse untersucht. Historischer20er-Vergleich
+und dessen Quelldurchgang bleiben unveraendert eingeordnet.
+Naechster Vorschlag an Projektleiter: vollstaendigen gebundenen Bestand pruefen
+und die lokale49-Ziele-Integration gesondert beauftragen: leerer Speicher,
+feste Paarphase, Ziele3,5,...,99, Ziel101 NOT_EVALUABLE_END, unveraenderte
+Matching-/Bestaetigungs-/Vorhersageregeln. Keine erneute Materialisierung.

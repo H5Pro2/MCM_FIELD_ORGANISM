@@ -1,0 +1,9 @@
+test_duplicate_and_close_reuse_rejected (tests.test_s2uc_pair_context_boundaries.PairBoundaryTests.test_duplicate_and_close_reuse_rejected) ... ok
+test_every_original_admitted_once_by_identity (tests.test_s2uc_pair_context_boundaries.PairBoundaryTests.test_every_original_admitted_once_by_identity) ... ok
+test_identical_prefix_independent_of_future (tests.test_s2uc_pair_context_boundaries.PairBoundaryTests.test_identical_prefix_independent_of_future) ... ok
+test_receipt_size_bound_all_nine_matches (tests.test_s2uc_pair_context_boundaries.PairBoundaryTests.test_receipt_size_bound_all_nine_matches) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK

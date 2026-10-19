@@ -1,0 +1,17 @@
+test_asymmetric_promotion (test_qualified.Qualification.test_asymmetric_promotion) ... ok
+test_broken_origin (test_qualified.Qualification.test_broken_origin) ... ok
+test_candidate_promotion_continuity (test_qualified.Qualification.test_candidate_promotion_continuity) ... ok
+test_duplicate (test_qualified.Qualification.test_duplicate) ... ok
+test_false_feedback_time (test_qualified.Qualification.test_false_feedback_time) ... ok
+test_false_offset (test_qualified.Qualification.test_false_offset) ... ok
+test_feedback_line_break (test_qualified.Qualification.test_feedback_line_break) ... ok
+test_missing_countervictim (test_qualified.Qualification.test_missing_countervictim) ... ok
+test_omission (test_qualified.Qualification.test_omission) ... ok
+test_positive (test_qualified.Qualification.test_positive) ... ok
+test_retained_generation_jump (test_qualified.Qualification.test_retained_generation_jump) ... ok
+test_target_deduplication (test_qualified.Qualification.test_target_deduplication) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.004s
+
+OK

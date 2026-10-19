@@ -1,0 +1,31 @@
+{
+  "plan_sha256": "908f93c76f871d36c4f971b236891d3da7721ba1fcd07d772464db90c439121d",
+  "production_binding_sha256": "a17eda51fbc8ad62fdfc0bd9cc3c145d275718dabbb50e108d65a5d3e78fa427",
+  "runner_sha256": "948403f911b93e467871f8341308af36a561a98cac737110089e83087d9b7c48",
+  "material": {
+    "base-A.json": "0549373d5250d78da106dcfa711836f73c57a0ada968455f981159c869f0f05d",
+    "base-B.json": "d004ed6edaebccd692f48ffca8d3e2c3d32bf749f7eefce1b8ecc72b2790e2e3",
+    "base-D.json": "23bc49cd942e24745528cab015e32887ee1a2a02ef489b7b358219a51f346dbe",
+    "base-Z.json": "fcbe8871ffec57f50df05b39bd0a5fd7f955d49d3926cb326b2086ef90b4652d",
+    "case-AM.json": "2e2dedea27a56f59772ff7541141e274551249118e1f9bbf069f7603ef2c6a02",
+    "case-EN.json": "49404a266ad80b0a23c4bc04358b147ae3e8510e60423a6ad22f8e86e67cc2bb",
+    "case-F1.json": "2e587f40812c3e12a65e5c3070b54635323fe89f98612362a95346d972e2ab39",
+    "case-FD.json": "895877deebb14a6c1c7efce429f39749a65fe0bd9dae47de1ac389e6aaeb8fbd",
+    "case-FH.json": "e3a41cc3596fd0afa2c33feb4dd3b971c193a663f36992217181bff6774b32cf",
+    "case-GD.json": "69ccc80ccafbaed3bd0d20a09aadb9aee21c97d35884eb05b947bb0ea38f62d9",
+    "case-GH.json": "fd90f015ade643b163c0cc03af08182292c721b51f3d688b46bdbb92559390fb",
+    "case-GP.json": "b7c3195e2f8c23de78c22929785e8fc489a2058e90828bda00ae7b1f7ff6a111",
+    "case-GR.json": "1be733a4b98d4de6d7e9bb7fbfaa5d3e3eb8a816bf8b4ab1b26d906078b02767",
+    "case-NM.json": "4c99d42a63a1d4f1030e8af49ac3aafe739df76d2bb20219b42d77d7052fd1fb",
+    "case-ZF.json": "35ceb66decc5038771242ddcec2dcdb3f7413786e1e2e836d700808c09e9d952",
+    "claim.json": "13e9ddd7b59eb7298c57d1646cddde52d4345375d2660304416280f0f554eb8f",
+    "closure.json": "278c52333c65397edcaef9ed8a30015bcb654476fe02ffa8823f945f4fcf91de",
+    "manifest.json": "8169a0d7df2b65cb153724f0a37e01831c33c3ec221c5323fbb982d41c6cff0b"
+  },
+  "profile": {
+    "id": "factor-continuation.synthetic48.v1",
+    "components": 48,
+    "numeric": "IEEE754 binary64",
+    "semantics": "Direct synthetic adapter vectors, not auditory/NJ output"
+  }
+}

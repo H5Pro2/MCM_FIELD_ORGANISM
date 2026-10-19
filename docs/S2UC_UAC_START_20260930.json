@@ -1,0 +1,55 @@
+{
+  "observed_at": "2026-09-30T12:52:33.826450+00:00",
+  "status": "UAC_START_CANCELLED",
+  "start_process_error": "Der Vorgang wurde durch den Benutzer abgebrochen.",
+  "installer_exit_code": null,
+  "installer_started": false,
+  "automatic_retry": false,
+  "registry": [
+    {
+      "key": "SOFTWARE\\MCM_FIELD_ORGANISM",
+      "exists": false,
+      "winerror": 2
+    },
+    {
+      "key": "SOFTWARE\\MCM_FIELD_ORGANISM\\S2UC",
+      "exists": false,
+      "winerror": 2
+    },
+    {
+      "key": "SOFTWARE\\MCM_FIELD_ORGANISM\\S2UC\\ApprovedOneShots",
+      "exists": false,
+      "winerror": 2
+    }
+  ],
+  "outputs": [
+    {
+      "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc-source-comparison-real-20260920-02",
+      "exists": false,
+      "symlink": false,
+      "junction": false
+    },
+    {
+      "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc-source-comparison-real-20260920-02-observer",
+      "exists": false,
+      "symlink": false,
+      "junction": false
+    },
+    {
+      "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc-source-comparison-real-20260920-02-appendix",
+      "exists": false,
+      "symlink": false,
+      "junction": false
+    },
+    {
+      "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc-source-comparison-real-20260920-02-admission",
+      "exists": false,
+      "symlink": false,
+      "junction": false
+    }
+  ],
+  "operative_authorization_created": false,
+  "claim_created": false,
+  "source_attempt_consumed": false,
+  "preflight": "76 code/runtime bindings, 48 qualification files, original source bindings and unused outputs checked successfully before cancellation."
+}

@@ -1,0 +1,354 @@
+Zeitliche Ausrichtung vor dem Erfahrungsabruf – begrenzter Konzeptvorschlag
+2026-10-19 | Auftrag 5db2e001-9290-4074-a206-feac08383fcd
+
+STATUS UND ENTSCHEIDUNG
+Nur konzeptionelle Dokumentation anhand bestehender Projektdateien. Keine
+Implementierung, neuen Archivberechnungen, Test- oder Forschungsläufe. AS480
+bleibt mit NO_ADDITIONAL_BENEFIT abgeschlossen; seine Berechtigung ist verbraucht.
+Die Diagnose zeigte die feste Distanzschranke als Ausschlussgrund, nicht eine
+verbesserte Erfahrungsbildung. U und der Fehlerbewertungszweig bleiben unverändert.
+
+Vorschlag: ein festes zeitliches Raster in bereits erlebten Vierframe-Spuren,
+mit ausschließlich exaktem Zusatzabgleich der aktuellen zwei Hinweisframes.
+Ausgerichtet wird die historische Spur, nicht der aktuelle Vorhersagezeitpunkt.
+Das Raster folgt dem bestehenden Rezeptorhop480, nicht einem Versatzetikett.
+Eine eng begrenzte Realisierung ist technisch plausibel, aber NICHT innerhalb
+der bisherigen18-Frame-/20-Gesamtslotgrenze. Eine ausdrückliche neue Budget- und
+Repräsentationsentscheidung ist Voraussetzung jeder Umsetzung.
+
+Die Wiedererkennung ist für bitgleich wiederkehrende, auf diesem Raster liegende
+Teilfenster plausibel. Kein Versprechen für beliebige Subsample-/Rasterversätze,
+Rauschen, Zeitdehnung, allgemeine Episodenidentität oder natürliche Robustheit.
+Zusätzliche Fehlzuordnungen lassen sich prinzipiell nicht ausschließen, wenn
+unterschiedliche Verläufe dieselben zwei Wahrnehmungsvektoren liefern. Deshalb
+ist „kein zusätzlicher Fremdabruf“ ein zwingendes Falsifikationskriterium, keine
+behauptete Eigenschaft des noch nicht gebauten Verfahrens.
+
+1. BEFUND UND KLEINSTE INTERVENTION
+AS480-Diagnose: A480-Offset0 hat Paar-L1 0,035964472284790765 bei τ=0,03125.
+Signalzulassung besteht, Exaktmatch fehlt, Original3 wäre als Nachfolger da.
+B0/B480 liegen am Offset0 deutlich weiter entfernt. Diese vier Messpunkte
+begründen KEINE neue Schwelle. ε, τ, Rezeptorreduktion und NJ-Halbierung bleiben
+unverändert; keine Rasterweite aus den Fehlerwerten optimieren.
+
+Die vier ursprünglichen48er-Vektoren enthalten keine invertierbare Information
+über alle inneren Samplelagen. Vektoren einfach umzubenennen, zu interpolieren
+oder vor dem Vergleich um einen Index zu drehen rekonstruiert keine anders
+geschnittenen Hann-/FFT-Fenster. Erforderlich sind zusätzliche Wahrnehmungs-
+projektionen, solange die damaligen Samples noch im begrenzten Eingangspuffer
+liegen. Keine spätere Rückkehr zu einer Quelldatei durch den Erinnerungsarm.
+
+Minimaler Zusatz T zum unveränderten Abruf N:
+- N bleibt signal_approx_v1 mit den gebundenen ε/τ und legacy_v1. Seine normale
+  Entscheidung wird zuerst aus demselben Vorzustand eingefroren.
+- Nur wenn N mit ABSTAIN_NO_APPROX_CONTEXT keine Zuordnung findet, beide Hinweise
+  das unveränderte Signalgate bestehen und kein numerischer Fehler vorliegt,
+  darf der Zusatz historische Rasterpositionen auf Exaktheit prüfen.
+- Keine Rettung nach Mehrdeutigkeit, niedrigem Signal, numerischem Fehler,
+  unzulässigem Faktor oder fehlendem Nachfolger eines bereits gewählten Matches.
+- Kein Näherungsabstand auf den neuen Rasterpositionen, kein Minimum, kein
+  nächster Nachbar, kein Score und keine Wahl nach späterem Vorhersagefehler.
+- Die Exaktfaktoren0,5/1/2 werden wie bisher vollständig sichtbar gehalten.
+  Nur eine eindeutige Faktor1-Fortsetzung darf als neue Prognose ausgegeben
+  werden. Faktor0,5/2 allein bleibt FACTOR_CONTINUATION_NOT_SPECIFIED.
+- Bei Enthaltung bleibt die Prognose P, der zweite aktuelle Hinweisframe.
+
+Damit wird ausschließlich der bisher unerreichbare exakte Teilverlauf zusätzlich
+zugänglich. Vorhandene N-Entscheidungen werden nicht nachträglich umgewählt.
+Ein Zusatzfehler bei zuvor enthaltener N-Entscheidung bleibt dennoch möglich
+und muss als solcher gezählt werden.
+
+2. HISTORISCHE RASTERBANK UND KAUSALITÄT
+Bezeichnungen: W=4800 Samples, h=480 Samples, f_s=48000Hz. Ein vollständig
+beobachteter Vierframe-Block umfasst4W=19200 zusammenhängende Samples.
+Zeitanker ist ausschließlich sein bereits bestehender technischer Beginn b;
+kein Quellen-, Episoden-, Klassen- oder Versatzlabel steuert den Anker.
+
+Für k=0,...,30:
+  V_k = unveränderte Rezeptor-/NJ-Projektion der vergangenen Samples
+        [b+k*h, b+k*h+W).
+Alle31 Fenster liegen vollständig im beobachteten Block. V_0,V_10,V_20,V_30
+sind die vorhandenen vier Originalprojektionen;27 weitere werden benötigt.
+Originale werden ohne Neuberechnung verwendet, zusätzliche Werte getrennt
+gebunden. Keine Padding-Samples, Quellgrenzenübertritte oder Resampling.
+
+Zwei aufeinanderfolgende aktuelle Hinweise werden mit (V_k,V_(k+10)) für
+k=0,...,20 verglichen. Das sind21 zeitliche Positionen derselben Spur.
+Für k=0,...,10 liegt die damalige unmittelbar folgende Beobachtung V_(k+20)
+ebenfalls vor. Für k=11,...,20 fehlt ein vollständiger gespeicherter Nachfolger;
+ein Match kann dort erkannt werden, liefert aber keine Vorhersage.
+So werden fehlende Nachfolger nicht aus der Konkurrenz herausgefiltert.
+
+Aufnahmezeit: Eine zusätzliche Projektion darf erst nach ihrem Fensterende
+berechnet werden. Einfachste Umsetzung: nach vollständigem Blockende alle27
+Zusatzfenster seriell aus dem19200-Sample-Puffer ableiten. Die zuvor am gleichen
+Adapterereignis fällige Prognose wird zuerst gegen den alten Speicher eingefroren;
+die neue Bank wird erst danach an die abgeschlossene Spur gebunden. Keine Bank
+der aktuellen Hinweise in deren eigene Abrufentscheidung aufnehmen.
+
+Verfügbarkeit: Ein vorübergehender Sensorpuffer hält höchstens19200 binary32-
+Samples; anschließend werden Rohsamples verworfen. Dauerhaft bleiben nur die
+31 geordneten NJ-Vektoren samt Herkunftsintervallen und Hashes der technischen
+Aufnahme. Kein Rohmedienarchiv als Memory, kein Zugriff auf externe Quellpfade.
+Bei Lücken, Kanalwechsel, Clockwechsel oder unvollständigem Block keine Bank;
+kein synthetisches Auffüllen. Der Ansatz erfordert einen neuen kausalen Anschluss
+vor der heutigen reinen48er-PerceptionSample-Schnittstelle.
+
+Bestehende Kandidat-/retained-Lebensdauer bleibt im ersten Vergleich gleich.
+Eine Bank gehört genau zur Originalspur, aus der sie entstand; bei Ersetzung,
+Eviction oder Besitzerabschluss wird sie mit entfernt. Bei Promotion bleiben
+die Originalbank und Originalordinale erhalten, nicht die Wiederholungsbank.
+Die bestehende Bestätigung anhand der vier groben Originalframes bestätigt
+NICHT automatisch die27 neuen inneren Fenster. Diese sind beobachtete damalige
+Werte, keine zusätzlich bewährten Erfahrungen. Das ist eine Aussagegrenze und
+ein Pflichtgegenfall für die technische Prüfung, kein Anlass zu heimlichem
+Umbau der Bestätigungsregel. Neue Zeitlagen erzeugen keine neuen Spuren und
+erhöhen weder Supportzahl noch Speicherpriorität.
+
+3. IDENTISCHER VORHERSAGEHORIZONT
+Zum Entscheidungszeitpunkt T sind exakt die aktuellen Hinweise
+[T-2W,T-W) und [T-W,T) bekannt. Vorhergesagt wird für beide Vergleichsarme
+derselbe volle nächste Frame [T,T+W), also100ms. Beide frieren vor dem ersten
+Sample dieses Zielfensters und vor dessen Rezeptorprojektion ein.
+
+Bei einem Match auf historische Position k wird V_(k+20) als damaliger Nachfolger
+für [T,T+W) verwendet. Sein historisches Ende liegt vor T; die historische
+Fortsetzung ist vergangene Erfahrung, NICHT der aktuelle Evaluationszielwert.
+Der Arm erhält weder die aktuelle Herkunft noch den aktuellen Versatz oder
+Zielvektor. Die unabhängige Auswertung kann diese später getrennt kennen.
+
+Nicht zulässig: den aktuellen Hinweis um480 Samples rückwärts schneiden und
+anschließend eine Prognose für [T-480,T+4320) als gleiche Aufgabe zählen.
+Diese Prognose enthält bereits bekannte Samples und verkürzt den Zukunftshorizont.
+Auch ein Vorwärtsschnitt bis T+480 wäre Zukunftszugriff. Historische Ausrichtung
+vermeidet beide Probleme. Kein Warpen der aktuellen Zeitachse und kein Warten
+auf einen günstigeren späteren Hinweis.
+
+4. MEHRDEUTIGKEIT AUF ZWEI EBENEN
+Die Treffermenge enthält technische Spurherkunft (Besitzer, Kandidat/retained,
+Generation und Originalordinale), Rasterindex k und zulässige Faktoren.
+Diese Identitäten stammen aus bereits aufgenommenen Spuren, nicht aus Labels.
+
+A. Mehrere Rasterlagen derselben Spur:
+   Ein Match auf k und ein Match auf k' sind zunächst zwei Ausrichtungen einer
+   Erinnerung, keine zwei Erinnerungen. Beide bleiben im Receipt sichtbar.
+   Minimalregel: Schon mehr als eine passende Rasterposition führt zu
+   ABSTAIN_ALIGNMENT_AMBIGUOUS, auch bei gleichen Fortsetzungsvektoren.
+   Die Spur darf als „wiedererkannt, Position unklar“ diagnostiziert werden;
+   eine zeitlich korrekte Wiedererkennung oder Kontextprognose ist es nicht.
+   Keine Auswahl des ersten/frühesten Matches und kein Mittel der Nachfolger.
+
+B. Mehrere ursprüngliche Spuren:
+   Sobald Matches zu mehr als einer ursprünglichen Spur gehören, gilt
+   ABSTAIN_TRACE_AMBIGUOUS, auch wenn alle Nachfolger gleich sind. Gleichheit
+   der Ausgabe beweist keine eindeutige Herkunft. Kandidat und retained gelten
+   als getrennte Ursprünge, bis der bestehende Lebenszyklus tatsächlich promoviert.
+
+C. Genau eine Position einer Spur:
+   Nur bei Faktor1, vollständigem historischem Nachfolger und vollständiger
+   Provenienz Kontext ausgeben. Andernfalls getrennte Enthaltungsgründe.
+   Ein einzelner Match mit mehreren Faktoren ist Faktor-Mehrdeutigkeit.
+
+Alle Positionen einschließlich solcher ohne Nachfolger müssen vor einer Ausgabe
+geprüft werden. Keine frühe Ausgabe beim ersten Treffer. Numerik-/Scope-/Hash-
+oder Budgetfehler führen zu technischem Abbruch, niemals zu selektivem Weglassen.
+
+Bei bitgleichen vollständigen Hinweisen aus bekannter und fremder Quelle mit
+demselben Vorzustand bleibt Herkunft nicht bestimmbar. Ein unbekannter Fremd-
+verlauf ist nicht automatisch als konkurrierende Erinnerung vorhanden. Die
+Mehrdeutigkeitsregel allein verhindert daher nicht jeden Fremdabruf. Solche
+Repräsentationskollisionen müssen als Identifizierbarkeitsgrenze separat berichtet
+werden; keine Erfolgserklärung durch kleinen unmittelbaren Vorhersagefehler.
+
+5. FAIRE VERGLEICHSANORDNUNG
+Zwei echte Arme, jeweils frisch:
+N: bisheriger Signal-/Näherungsabruf und legacy_v1 unverändert.
+T: identischer Grundarm plus ausschließlich der oben beschriebene exakte Zusatz.
+P: observerseitig der zweite aktuelle Hinweis, kein dritter laufender Arm.
+
+Alle Arme erhalten dieselbe kausal verfügbare Samplehistorie, dieselben
+ursprünglichen Frames, Blockgrenzen, Lerngelegenheiten und Auswertungsziele.
+Die Rasterbanken werden unabhängig von Treffern einmal nach festen Regeln
+gebildet und in gleicher Kapazität für beide Vergleichsseiten bereitgestellt.
+N verwendet regelbedingt nur die vier ursprünglichen Positionen; T darf die
+Zusatzpositionen lesen. Die Verfügbarkeit der Eingangsevidenz und der
+Ressourcenrahmen sind gleich, die Nutzung der zusätzlichen Repräsentation ist
+gerade die Intervention. Keine Behauptung identischer effektiv genutzter Features.
+Baselines können nicht gleichzeitig unverändert sein und die neue Ausrichtung
+nutzen. Dieser Unterschied wird offengelegt statt als reiner Algorithmusvorteil
+bei unverändertem Gedächtnisinhalt ausgegeben.
+
+Unveränderte Kernzustände nach jeder Aufnahme müssen zwischen N/T sowie ihren
+jeweils frischen Bestandsreferenzen übereinstimmen. Zusatzbankzustände werden
+gesondert gebunden und bei gleicher historischer Aufnahme verglichen. Die
+Bestandsreferenz ersetzt keinen unabhängigen Prüfer der Rastertreffer.
+
+Wiedererkennung, Herkunft und Fehler bleiben drei getrennte Größen:
+- korrekte Spurherkunft, korrekter Rasteranfang und vorhandene zeitlich passende
+  Fortsetzung jeweils einzeln; „richtige Spur, falsche Zeit“ ist kein Erfolg;
+- jeder zusätzliche eindeutige Abruf einer nie gelernten Quelle ist Fehlzuordnung,
+  selbst wenn die Prognose zufällig gut ist;
+- MAE je48er-Ziel, T-N und T-P je Fall; Lern-/Übergangsziele separat, keine
+  nachträgliche Gewichtung. Enthaltung verwendet P, fehlender Kontext-MAE bleibt
+  fehlend. Kein Fall darf wegen negativer Diagnose entfernt werden.
+
+Vorläufige Erfolgskonjunktion für den kleinsten späteren Vergleich:
+(i) zusätzliche korrekte Zuordnung UND Fortsetzung in jedem vorgesehenen
+    verschobenen Eigenfall, in dem N diese nicht liefert;
+(ii) keine zusätzliche Fremdzuordnung in irgendeinem Gegenfall;
+(iii) kein Verlust einer korrekten N-Zuordnung im unverschobenen Kontrollfall;
+(iv) gleichgewichtetes Hauptzielmittel T strikt kleiner als N UND P.
+Ein fehlendes Kriterium bedeutet keinen Zusatznutzen. Repräsentationskollisionen
+und technische Fehler getrennt. Positive Summe verdeckt keine Einzelschäden.
+Kein statistischer Robustheitsnachweis aus wenigen deterministischen Fällen.
+
+6. OFFENE BUDGETÄNDERUNG – NICHT VON AS480 GEDECKT
+Die folgenden Zahlen sind statische Obergrenzen des Vorschlags, keine Messung.
+Es gibt höchstens zwei retained-Spuren, einen Kandidaten und einen forming-Block.
+Eine vollständig materialisierte Bank hat31 Vektoren statt4; Originale sind darin
+enthalten und dürfen nicht nochmals kopiert werden. Deduplication nur innerhalb
+derselben Bankposition; keine versteckte kapazitätsfreie Zweitbank.
+
+Maximal gleichzeitig:
+- 3 bestehende Banken plus1 fertigzustellende Bank:124 Wahrnehmungsvektoren;
+- 2 aktuelle Hinweisvektoren und2 Ausgabeslots: zusammen128 Vektorslots;
+- Wertepayload128*48*8 =49152 Bytes; Pythonobjekte/Metadaten kommen hinzu;
+- einmaliger roher Eingangspuffer19200*4 =76800 Bytes pro seriell aktivem Arm;
+- Zusatzprovenienz und Bankindizes maximal65536 Bytes;
+- höchstens3*21=63 Positionsmatches; bis189 Faktorprüfungen à96 skalare
+  Gleichheitsvergleiche im Zusatzpfad pro Entscheidung; keine Distanzkopien;
+- Receipt weiterhin maximal16384 Bytes, transientes UTF8 maximal32768 Bytes.
+  Alle63 Matches müssen verlustfrei mit kompakten Referenzen darstellbar sein;
+  falls nicht, technische Ablehnung statt Kürzung. Alte9-Match-Grenze reicht nicht.
+- serielles Rezeptor-/FFT-Arbeitsgebiet als neuer zu qualifizierender Teilrahmen
+  höchstens16MiB, einschließlich Fensterausschnitt, float64-Konversion, Hann,
+  Filtergewichten und FFT-Zwischenwerten. Kein gleichzeitig materialisierter
+  Stapel von31 FFT-Fenstern; harte Gesamtgrenze bleibt maßgeblich.
+
+18 Originalframes/20 Gesamtslots der AS480-Qualifikation werden damit überschritten.
+Die128/63-Grenzen sind ausdrücklich beantragte neue Obergrenzen. Die vorhandene
+Qualifikation beweist sie nicht. Es wird nichts durch Umbenennen in „Observer“
+aus dem produktiven Speicher herausgerechnet. Die Bank ist eine Erweiterung
+des privaten Erfahrungsarchivs, keine neue Feldfunktion und kein belegter Gewinn
+an Gedächtnisorganisation oder Verdichtung.
+
+Aufrufe: Pro vollständig aufgenommenem19200-Sample-Block genau27 zusätzliche
+Rezeptor- UND27 zusätzliche NJ-Aufrufe; die vier Basisfenster werden geteilt.
+Auch wiederholte Blöcke werden ohne datenabhängigen Cache budgetiert. Während
+des eigentlichen Zwei-Frame-Abrufs null Zusatzprojektionen; nur Vergleiche.
+Bei F Basisframes und B vollständigen Vierframe-Blöcken gilt insgesamt
+F+27B Rezeptor-/NJ-Aufrufe. Unvollständige Blöcke erzeugen keine Zusatzbank.
+
+Vorschlag für einen späteren eng begrenzten Audiovergleich: sechs Fälle mit
+je11 Frames, Lernpräfix A,A und einem Querytriplett. Eigen-/Fremdquelle jeweils
+an0, h und5h; diese festen Stellen sind eine Rasterprobe, keine Optimierung
+auf AS480-Abstände. Die Auswertung kennt sie, der Abruf nicht. Neue Quellen,
+vollständig vor Messung festgelegtes Rezept; keine Wiederverwendung der AS480-
+Evaluation als Entwicklungsdaten. Konkrete neue Quellen sind jetzt NICHT gewählt.
+
+Daraus statisch:66 Basisprojektionen +12*27 Zusatzprojektionen =390 Rezeptor-
+und390 NJ-Aufrufe, einmaliges gemeinsames Material für N/T und Referenzen;
+12 frische Arme und12 Referenzen mit je insgesamt132 Aufnahmen;60 unabhängige
+Entscheidungsprüfungen (fünf pro Arm),30 P-Fehler observerseitig. Jede Seite erhält
+identische unveränderliche Projektionen, aber isolierte Zustände. Das ist kein
+ausführbarer Auftrag. Die bisherige100-Aufrufgrenze von project_window verbietet
+den unveränderten Einstieg; neuer separat gebundener Zähler/Eintritt nötig,
+keine Änderung historischer Grenzen oder stilles Umgehen durch Zählerrücksetzen.
+
+390 separat exportierte4800-Sample-PCM-Fenster benötigen7488000 Bytes und passen
+nicht in die bisherige4MiB-Materialpartition. Daher für einen späteren Vertrag:
+keine einzelnen Fensterausschnittdateien; zwei kanonische19200-Sample-Quellen
+(153600 Bytes) im Observerarchiv, Intervall-/Digestmanifest und390 Projektionen.
+Je Projektion einschließlich Provenienz höchstens8192 Bytes ergibt3194880 Bytes;
+mit Quellen3348480 Bytes, verbleiben845824 Bytes bis4MiB für Manifest/Rezept.
+Diese serialisierte8192-Byte-Grenze ist neu zu qualifizieren, nicht als gemessen
+behauptet. Produktive Arme erhalten weder Quellenpfad noch Gesamtkorpus.
+
+Gesamtexport maximal16MiB: Vorbereitung8MiB, Material4MiB, Vergleich3MiB,
+Abschluss1MiB. Gemeinsamer Windows-Job512MiB, maximal2 Prozesse, Worker240s,
+Supervisor300s samt technischem Abschluss, numerische Bibliotheksthreads1.
+Die späteren Aufrufe müssen darin neutral nachgewiesen werden; keine Hochrechnung
+aus der AS480-Zeit als Freigabe. Redaktionelle Dokumentation bleibt zeitlich
+getrennt und wird nicht rückwirkend unter diese Laufgrenze gerechnet.
+
+7. ERFORDERLICHE ÄNDERUNGEN UND BEGRENZTER PRÜFPLAN
+Erforderlich, noch nicht implementiert:
+A. Kausaler Samplepuffer vor der48er-Schnittstelle und separat gebundene
+   historische Rasterprojektion; Rezeptor und NJ mathematisch unverändert.
+B. Lebenszyklusgebundene Bank mit Originalzuordnung, Eviction und vollständigem
+   Cleanup; historische Kernmodule bleiben als Vergleich unverändert.
+C. Exakter Zusatzleser mit zweistufiger Mehrdeutigkeit und passender historischer
+   Fortsetzung; kein Rückfluss aus Receipt/Erwartung in Wahrnehmung oder Lernen.
+D. Unabhängiges skalares Prüfwerkzeug für alle21 Positionen je Spur, Gates,
+   Faktor-/Nachfolgerregeln, Zeitpunkt und Fehler; kein Produktionsselektor als
+   eigenes Orakel. Ressourcenbeobachter zählt neue Bank-/Matchkapazitäten.
+E. Neue exklusive Material-/Ausführungshülle mit390-Aufrufbudget und eigener
+   Freigabe, falls später überhaupt fachlich beauftragt.
+
+Stufe1 – fachliche Entscheidung über diese konkrete Bank und ihre Mehrkosten.
+Bei unverändert bindender18/20-Grenze: STOPP dieses Ansatzes; aus vier reduzierten
+Frames sind die erforderlichen inneren Fenster nicht zurückzugewinnen. Nicht
+ersatzweise Queryende verschieben oder τ erhöhen.
+
+Stufe2 – nur nach separatem Entwicklungsauftrag kleine künstliche Fixtures:
+Q1: zulässige Fenster0..30, Hinweise0..20, Nachfolger0..10; Ende-/Lückenfälle.
+Q2: Future-Sentinel vor T, kein Zugriff auf aktuellen Zielwert/Quellenmetadaten;
+    gleiche Zielintervalle bei allen Rasterpositionen.
+Q3: eine Spur/eine Lage; eine Spur/zwei Lagen; zwei Spuren/eine oder mehrere
+    Lagen; gleiche oder widersprüchliche Nachfolger; fehlender Nachfolger;
+    Faktoren0,5/1/2, Signalgate, keine Rettung einer ursprünglichen Mehrdeutigkeit.
+Q4: Candidate-Ersetzung, Promotion der Originalbank, retained-Eviction, alte
+    gleiche Grobframes mit verschiedenen inneren Rasterwerten, Cleanup.
+Q5: maximal vier Banken/128 Slots/63 Matches; Prospektgrenzen für Dateigrößen,
+    Gegenprüfung aller Entscheidungen, harte Job-/Zeit-/Abbruchpfade.
+Danach genau ein vollständiger neutraler Größenablauf des neuen Umfangs,
+keine historischen Qualifikationen wiederholen. Neue Forschungsquellen bleiben
+dabei gesperrt. Bei Budgetüberschreitung Konzept verwerfen oder neu entscheiden;
+keine automatische Erhöhung, keine Scope-Verkleinerung nach Messergebnis.
+
+Stufe3 – nur nach erfolgreicher technischer Abnahme neuer Forschungsentscheid:
+sechs vorab gebundene Fälle, neue Quellen, feste Prüfkriterien und exklusive
+Einmalberechtigung. Keine Ergebniskenntnis für Raster-, Schwellen- oder
+Materialnachwahl. Einmalig vollständig auswerten, auch bei negativem Befund.
+Technische Fehler: kein wissenschaftliches Teilurteil und kein automatischer
+Retry. Fremdfehlabruf, Verlust korrekter Kontrollen oder fehlende Fehlerreduktion:
+kein Zusatznutzen für diesen Ansatz, keine Schwellenrettung.
+
+8. MACHBARKEIT UND ANSCHLUSSEMPFEHLUNG
+Bedingt tragfähig für eine eng definierte Rasterwiederkehr: historische Samples
+ermöglichen die tatsächlich benötigten Fenster, die aktuelle Zukunft bleibt
+gesperrt, und Originalzeit plus historischer Nachfolger erhalten den Horizont.
+Das ist ein explizites Gedächtnis-/Wahrnehmungsbudget gegen bessere Zugänglichkeit,
+keine kostenlose Reparatur des vorhandenen Abrufs.
+
+Nicht tragfähig als unveränderte AS480-Erweiterung oder als Garantie, Fremd-
+verläufe nie falsch zuzuordnen. Konkrete Hindernisse: fehlende innere Fenster im
+bisherigen Archiv,128 statt20 Slots,390 statt44 Aufrufe im vorgeschlagenen
+Vergleich, ungeprüfte Laufzeit sowie prinzipielle Hinweiskollisionen.
+
+Empfehlung an den Projektleiter: zunächst über genau diese begrenzte Erhöhung
+der historischen zeitlichen Auflösung entscheiden. Wenn die Mehrkosten zur
+Projektlinie passen, Stufe2 als getrenntes Entwicklerpaket beauftragen. Wenn
+die bisherige Speichergrenze bleiben soll, diesen Ansatz verwerfen. Keine
+zusätzliche Vertragsserie oder Forschungsschleife ohne diese Sachentscheidung.
+
+9. PROJEKTINTERNE BELEGE (NUR GELESEN)
+- reports/s2uc/as480-diagnosis-20261019-01/REPORT.md und distances.json:
+  Ausschlussgrund und Grenzen der archivierten AS480-Diagnose.
+- reports/s2uc/as480-comparison-01/REPORT.md: NO_ADDITIONAL_BENEFIT,
+  bisherige Zeit-/Informations-/Urteilsgrenzen; keine neue Berechtigung.
+- docs/S2UC_AS480_AUDIO_FENSTERVERSATZ_PRUEFVERTRAG_20261019.txt:
+  4800/480-Rezeptorprofil, Quell-/Replayzeit und Vierframe-Spuren.
+- mcm_field_organism/log_spectral_receptor.py: Hann-/FFT-/Bandreduktion.
+- tools/_s2nj_private_auditory_output_projection.py: einmalige Halbierung.
+- tools/_s2uc_pair_context_adapter.py: Prognose vor form/close_segment.
+- tools/_s2uc_four_arm.py: Kandidat, zwei retained-Spuren, Originalpromotion.
+- tools/_s2uc_factor_hint.py und _s2uc_signal_approx_adapter.py:
+  Exaktfaktoren, Signalgates und bestehende Näherungsregel.
+- tools/_s2uc_continuation_adapter.py: legacy_v1, Faktor1 und Nachfolger.
+- docs/KONZEPTNOTIZ_WAHRNEHMUNGSVERLAEUFE_PRAEGUNG_UND_INNERKONTEXT.md:
+  geordnete Erfahrung, kein Rohmedienarchiv als Gedächtnisersatz, getrennte
+  Herkunft und Zukunft, technische Bausteine nicht als Feld-Memory ausgeben.
+
+Alle erforderlichen neuen Fähigkeiten sind Vorschläge. Keine von ihnen wurde
+in diesem Auftrag implementiert oder durch einen neuen Lauf nachgewiesen.

@@ -1,0 +1,2 @@
+{"append":false,"bytes":3,"kind":"BEGIN","name":"observer/known.fixture","previous":"0000000000000000000000000000000000000000000000000000000000000000","role":"worker","seq":1}
+{"kind":"COMMIT","previous":"7f9e8ed3502e1bead446542d4ddff9e00c4a64fc51403f42c8d363e79d3566b9","seq":1,"stamp":{"bytes":3,"mtime":1792432064926813900}}

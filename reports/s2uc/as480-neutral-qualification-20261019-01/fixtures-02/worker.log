@@ -1,0 +1,22 @@
+test_Q1_intervals_and_edges (experiments.as480.tests.Fixtures.test_Q1_intervals_and_edges) ... ok
+test_Q1_learning_repeat_and_time (experiments.as480.tests.Fixtures.test_Q1_learning_repeat_and_time) ... ok
+test_Q2_future_gate_before_read (experiments.as480.tests.Fixtures.test_Q2_future_gate_before_read) ... ok
+test_Q2_regular_prefix (experiments.as480.tests.Fixtures.test_Q2_regular_prefix) ... ok
+test_Q3_all_verdicts_and_conditions (experiments.as480.tests.Fixtures.test_Q3_all_verdicts_and_conditions) ... ok
+test_Q3_approx_ambiguity (experiments.as480.tests.Fixtures.test_Q3_approx_ambiguity) ... ok
+test_Q3_epsilon_and_zero (experiments.as480.tests.Fixtures.test_Q3_epsilon_and_zero) ... ok
+test_Q3_exact_priority_and_ambiguity (experiments.as480.tests.Fixtures.test_Q3_exact_priority_and_ambiguity) ... ok
+test_Q3_numeric_global_abstention (experiments.as480.tests.Fixtures.test_Q3_numeric_global_abstention) ... ok
+test_Q3_offset_and_factor (experiments.as480.tests.Fixtures.test_Q3_offset_and_factor) ... ok
+test_Q3_oracle_rejects_wrong_production (experiments.as480.tests.Fixtures.test_Q3_oracle_rejects_wrong_production) ... ok
+test_Q3_tau_boundary (experiments.as480.tests.Fixtures.test_Q3_tau_boundary) ... ok
+test_Q4_output_bound (experiments.as480.tests.Fixtures.test_Q4_output_bound) ... ok
+test_Q4_time_bounds (experiments.as480.tests.Fixtures.test_Q4_time_bounds) ... ok
+test_Q5_authorization_separation (experiments.as480.tests.Fixtures.test_Q5_authorization_separation) ... ok
+test_Q5_digest_and_exclusive (experiments.as480.tests.Fixtures.test_Q5_digest_and_exclusive) ... ok
+test_Q5_reservation (experiments.as480.tests.Fixtures.test_Q5_reservation) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.181s
+
+OK

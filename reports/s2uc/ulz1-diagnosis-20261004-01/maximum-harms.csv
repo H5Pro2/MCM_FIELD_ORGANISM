@@ -1,0 +1,258 @@
+case,condition,target,block,U_output,L_output,actual,pair,group,U_error,L_error,gain,harm,net,age_counts,unequal_ages,cold_cells
+ULZ1-01-S,S,103,22,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[8, 24, 0]",True,1
+ULZ1-01-S,S,375,90,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[6, 2]",True,0
+ULZ1-01-S,S,611,149,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[61, 8]",True,0
+ULZ1-01-S,S,687,168,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[80, 5]",True,0
+ULZ1-02-S,S,351,84,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[10, 4, 1]",True,0
+ULZ1-02-S,S,551,134,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[23, 2]",True,0
+ULZ1-02-S,S,811,199,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[67, 8, 0]",True,1
+ULZ1-02-S,S,935,230,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[22, 11, 0]",True,1
+ULZ1-02-S,S,999,246,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[27, 2]",True,0
+ULZ1-03-S,S,363,87,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[14, 44, 0]",True,1
+ULZ1-03-S,S,543,132,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[23, 4]",True,0
+ULZ1-03-S,S,591,144,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[35, 3]",True,0
+ULZ1-04-S,S,71,14,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[7, 2]",True,0
+ULZ1-04-S,S,255,60,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[22, 3]",True,0
+ULZ1-04-S,S,547,133,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[38, 10, 0]",True,1
+ULZ1-04-S,S,635,155,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[60, 14, 0]",True,1
+ULZ1-05-S,S,475,115,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[13, 6, 0]",True,1
+ULZ1-05-S,S,799,196,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[5, 19, 0]",True,1
+ULZ1-05-S,S,875,215,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[14, 7, 0]",True,1
+ULZ1-06-S,S,35,5,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[5, 7, 0]",True,1
+ULZ1-06-S,S,107,23,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[23, 5, 0]",True,1
+ULZ1-06-S,S,147,33,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[33, 4]",True,0
+ULZ1-06-S,S,559,136,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[28, 17, 0]",True,1
+ULZ1-06-S,S,679,166,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[58, 7]",True,0
+ULZ1-06-S,S,815,200,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[17, 14, 0]",True,1
+ULZ1-07-S,S,31,4,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[6, 4, 0]",True,1
+ULZ1-07-S,S,211,49,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[5, 3]",True,0
+ULZ1-07-S,S,319,76,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[30, 2]",True,0
+ULZ1-07-S,S,555,135,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[20, 2]",True,0
+ULZ1-07-S,S,787,193,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[41, 5]",True,0
+ULZ1-08-S,S,123,27,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[5, 10, 0]",True,1
+ULZ1-08-S,S,427,103,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[28, 18, 0]",True,1
+ULZ1-09-S,S,379,91,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[5, 40, 0]",True,1
+ULZ1-09-S,S,431,104,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[18, 2]",True,0
+ULZ1-09-S,S,571,139,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[19, 3]",True,0
+ULZ1-09-S,S,919,226,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[39, 5]",True,0
+ULZ1-09-S,S,1035,255,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[16, 3]",True,0
+ULZ1-10-S,S,519,126,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[43, 18, 0]",True,1
+ULZ1-10-S,S,871,214,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[36, 18, 0]",True,1
+ULZ1-11-S,S,207,48,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[13, 6, 1]",True,0
+ULZ1-11-S,S,675,165,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[21, 3]",True,0
+ULZ1-11-S,S,975,240,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[36, 5]",True,0
+ULZ1-12-S,S,23,2,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[4, 2, 0]",True,1
+ULZ1-12-S,S,63,12,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[14, 2]",True,0
+ULZ1-12-S,S,127,28,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[30, 18, 0]",True,1
+ULZ1-12-S,S,851,209,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[25, 2]",True,0
+ULZ1-12-S,S,971,239,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[6, 12, 0]",True,1
+ULZ1-12-S,S,1031,254,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[21, 10, 0]",True,1
+ULZ1-13-S,S,159,36,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[11, 18, 0]",True,1
+ULZ1-13-S,S,919,226,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[18, 11]",True,0
+ULZ1-14-S,S,63,12,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[12, 14, 0]",True,1
+ULZ1-14-S,S,471,114,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[13, 2]",True,0
+ULZ1-14-S,S,567,138,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[21, 2]",True,0
+ULZ1-14-S,S,743,182,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[24, 39, 0]",True,1
+ULZ1-14-S,S,903,222,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[21, 2]",True,0
+ULZ1-15-S,S,135,30,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[13, 30, 0]",True,1
+ULZ1-15-S,S,251,59,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[59, 3]",True,0
+ULZ1-15-S,S,439,106,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[9, 106, 0]",True,1
+ULZ1-15-S,S,519,126,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[6, 2]",True,0
+ULZ1-15-S,S,595,145,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[9, 5, 0]",True,1
+ULZ1-15-S,S,771,189,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[25, 12]",True,0
+ULZ1-16-S,S,915,225,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[18, 3]",True,0
+ULZ1-16-S,S,1035,255,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[17, 2]",True,0
+ULZ1-17-S,S,235,55,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[12, 29, 0]",True,1
+ULZ1-17-S,S,551,134,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[61, 2]",True,0
+ULZ1-17-S,S,867,213,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[7, 2]",True,0
+ULZ1-17-S,S,975,240,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[20, 2]",True,0
+ULZ1-18-S,S,267,63,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[14, 5]",True,0
+ULZ1-18-S,S,359,86,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[5, 2]",True,0
+ULZ1-18-S,S,583,142,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[11, 3]",True,0
+ULZ1-18-S,S,699,171,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[32, 4]",True,0
+ULZ1-18-S,S,819,201,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[62, 11, 0]",True,1
+ULZ1-19-S,S,191,44,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[10, 14, 0]",True,1
+ULZ1-19-S,S,211,49,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[15, 2]",True,0
+ULZ1-19-S,S,799,196,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[6, 2]",True,0
+ULZ1-20-S,S,99,21,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[14, 3]",True,0
+ULZ1-20-S,S,227,53,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[35, 2, 0]",True,1
+ULZ1-20-S,S,351,84,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[7, 4]",True,0
+ULZ1-21-S,S,143,32,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[34, 15]",True,0
+ULZ1-21-S,S,199,46,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[6, 48, 0]",True,1
+ULZ1-21-S,S,267,63,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[65, 5]",True,0
+ULZ1-21-S,S,327,78,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[4, 2]",True,0
+ULZ1-21-S,S,395,95,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[19, 12]",True,0
+ULZ1-21-S,S,575,140,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[11, 3]",True,0
+ULZ1-21-S,S,719,176,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[12, 2]",True,0
+ULZ1-21-S,S,835,205,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[18, 31, 0]",True,1
+ULZ1-22-S,S,291,69,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[15, 3]",True,0
+ULZ1-22-S,S,427,103,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[17, 2]",True,0
+ULZ1-22-S,S,743,182,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[81, 2, 0]",True,1
+ULZ1-22-S,S,931,229,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[128, 4]",True,0
+ULZ1-23-S,S,99,21,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[16, 4]",True,0
+ULZ1-23-S,S,499,121,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[83, 5]",True,0
+ULZ1-24-S,S,319,76,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[4, 7, 1]",True,0
+ULZ1-24-S,S,371,89,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[17, 2]",True,0
+ULZ1-24-S,S,883,217,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[34, 2]",True,0
+ULZ1-24-S,S,1019,251,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[7, 2]",True,0
+ULZ1-25-S,S,279,66,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[4, 2, 0]",True,1
+ULZ1-25-S,S,351,84,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[20, 5]",True,0
+ULZ1-25-S,S,627,153,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[11, 2]",True,0
+ULZ1-25-S,S,691,169,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[18, 4]",True,0
+ULZ1-25-S,S,1015,250,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[9, 22, 0]",True,1
+ULZ1-26-S,S,199,46,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[24, 14, 0]",True,1
+ULZ1-26-S,S,891,219,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[5, 3]",True,0
+ULZ1-26-S,S,967,238,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[22, 6]",True,0
+ULZ1-27-S,S,243,57,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[4, 7, 0]",True,1
+ULZ1-27-S,S,423,102,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[21, 3]",True,0
+ULZ1-27-S,S,687,168,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[23, 10]",True,0
+ULZ1-27-S,S,823,202,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[17, 4, 0]",True,1
+ULZ1-27-S,S,919,226,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[24, 16]",True,0
+ULZ1-27-S,S,1003,247,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[19, 5]",True,0
+ULZ1-28-S,S,231,54,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[4, 2]",True,0
+ULZ1-28-S,S,979,241,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[24, 7, 0]",True,1
+ULZ1-29-S,S,75,15,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[17, 4]",True,0
+ULZ1-29-S,S,459,111,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[23, 6]",True,0
+ULZ1-29-S,S,827,203,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[5, 7, 0]",True,1
+ULZ1-29-S,S,983,242,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[14, 29, 0]",True,1
+ULZ1-30-S,S,115,25,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[8, 11, 0]",True,1
+ULZ1-30-S,S,243,57,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[14, 2]",True,0
+ULZ1-30-S,S,627,153,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[13, 2, 0]",True,1
+ULZ1-31-S,S,167,38,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[5, 3, 0]",True,1
+ULZ1-31-S,S,319,76,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[34, 6]",True,0
+ULZ1-31-S,S,507,123,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[27, 81, 0]",True,1
+ULZ1-31-S,S,623,152,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[14, 21, 0]",True,1
+ULZ1-31-S,S,703,172,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[11, 2]",True,0
+ULZ1-31-S,S,779,191,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[12, 2]",True,0
+ULZ1-32-S,S,143,32,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[34, 5]",True,0
+ULZ1-32-S,S,151,34,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[36, 7, 0]",True,1
+ULZ1-32-S,S,207,48,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[50, 8, 0]",True,1
+ULZ1-01-W,W,103,22,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[8, 24, 0]",True,1
+ULZ1-01-W,W,375,90,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[6, 2]",True,0
+ULZ1-01-W,W,639,156,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[42, 4]",True,0
+ULZ1-02-W,W,351,84,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[10, 4, 1]",True,0
+ULZ1-02-W,W,607,148,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[16, 37, 0]",True,1
+ULZ1-02-W,W,935,230,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[13, 7, 0]",True,1
+ULZ1-03-W,W,363,87,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[14, 44, 0]",True,1
+ULZ1-03-W,W,555,135,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[7, 4]",True,0
+ULZ1-03-W,W,563,137,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[9, 6, 0]",True,1
+ULZ1-03-W,W,651,159,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[31, 9, 0]",True,1
+ULZ1-03-W,W,935,230,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[6, 9, 0]",True,1
+ULZ1-04-W,W,71,14,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[7, 2]",True,0
+ULZ1-04-W,W,255,60,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[22, 3]",True,0
+ULZ1-05-W,W,475,115,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[13, 6, 0]",True,1
+ULZ1-05-W,W,683,167,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[35, 30, 0]",True,1
+ULZ1-05-W,W,895,220,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[4, 21, 0]",True,1
+ULZ1-06-W,W,35,5,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[5, 7, 0]",True,1
+ULZ1-06-W,W,107,23,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[23, 5, 0]",True,1
+ULZ1-06-W,W,147,33,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[33, 4]",True,0
+ULZ1-06-W,W,547,133,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[25, 14, 0]",True,1
+ULZ1-06-W,W,691,169,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[7, 50, 0]",True,1
+ULZ1-06-W,W,879,216,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[97, 11]",True,0
+ULZ1-07-W,W,31,4,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[6, 4, 0]",True,1
+ULZ1-07-W,W,211,49,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[5, 3]",True,0
+ULZ1-07-W,W,319,76,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[30, 2]",True,0
+ULZ1-07-W,W,563,137,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[22, 2, 0]",True,1
+ULZ1-07-W,W,663,162,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[10, 3]",True,0
+ULZ1-07-W,W,711,174,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[15, 2]",True,0
+ULZ1-08-W,W,123,27,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[5, 10, 0]",True,1
+ULZ1-08-W,W,427,103,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[28, 18, 0]",True,1
+ULZ1-09-W,W,379,91,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[5, 40, 0]",True,1
+ULZ1-09-W,W,431,104,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[18, 2]",True,0
+ULZ1-09-W,W,563,137,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[14, 3]",True,0
+ULZ1-09-W,W,631,154,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[31, 2, 0]",True,1
+ULZ1-10-W,W,519,126,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[43, 18, 0]",True,1
+ULZ1-10-W,W,871,214,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[15, 20, 0]",True,1
+ULZ1-10-W,W,1003,247,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[13, 53, 0]",True,1
+ULZ1-11-W,W,207,48,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[13, 6, 1]",True,0
+ULZ1-11-W,W,671,164,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[15, 2]",True,0
+ULZ1-11-W,W,967,238,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[29, 5, 0]",True,1
+ULZ1-12-W,W,23,2,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[4, 2, 0]",True,1
+ULZ1-12-W,W,63,12,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[14, 2]",True,0
+ULZ1-12-W,W,127,28,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[30, 18, 0]",True,1
+ULZ1-12-W,W,999,246,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[4, 2]",True,0
+ULZ1-13-W,W,159,36,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[11, 18, 0]",True,1
+ULZ1-13-W,W,883,217,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[86, 6, 0]",True,1
+ULZ1-13-W,W,1031,254,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[37, 4]",True,0
+ULZ1-14-W,W,63,12,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[12, 14, 0]",True,1
+ULZ1-14-W,W,471,114,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[13, 2]",True,0
+ULZ1-14-W,W,655,160,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[17, 2]",True,0
+ULZ1-14-W,W,903,222,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[15, 2]",True,0
+ULZ1-15-W,W,135,30,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[13, 30, 0]",True,1
+ULZ1-15-W,W,251,59,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[59, 3]",True,0
+ULZ1-15-W,W,439,106,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[9, 106, 0]",True,1
+ULZ1-15-W,W,519,126,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[6, 2]",True,0
+ULZ1-15-W,W,623,152,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[28, 3]",True,0
+ULZ1-15-W,W,647,158,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[9, 2]",True,0
+ULZ1-16-W,W,847,208,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[33, 23]",True,0
+ULZ1-16-W,W,983,242,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[16, 4, 1]",True,0
+ULZ1-17-W,W,235,55,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[12, 29, 0]",True,1
+ULZ1-17-W,W,551,134,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[61, 2]",True,0
+ULZ1-17-W,W,691,169,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[12, 4]",True,0
+ULZ1-17-W,W,775,190,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[25, 10, 0]",True,1
+ULZ1-18-W,W,267,63,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[14, 5]",True,0
+ULZ1-18-W,W,359,86,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[5, 2]",True,0
+ULZ1-18-W,W,599,146,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[10, 7]",True,0
+ULZ1-18-W,W,619,151,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[12, 15, 0]",True,1
+ULZ1-18-W,W,931,229,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[75, 11]",True,0
+ULZ1-19-W,W,191,44,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[10, 14, 0]",True,1
+ULZ1-19-W,W,211,49,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[15, 2]",True,0
+ULZ1-19-W,W,535,130,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[28, 3]",True,0
+ULZ1-19-W,W,623,152,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[25, 17, 0]",True,1
+ULZ1-19-W,W,907,223,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[96, 12, 0]",True,1
+ULZ1-20-W,W,99,21,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[14, 3]",True,0
+ULZ1-20-W,W,227,53,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[35, 2, 0]",True,1
+ULZ1-20-W,W,351,84,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[7, 4]",True,0
+ULZ1-20-W,W,771,189,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[72, 11]",True,0
+ULZ1-20-W,W,851,209,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[31, 2]",True,0
+ULZ1-21-W,W,143,32,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[34, 15]",True,0
+ULZ1-21-W,W,199,46,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[6, 48, 0]",True,1
+ULZ1-21-W,W,267,63,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[65, 5]",True,0
+ULZ1-21-W,W,327,78,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[4, 2]",True,0
+ULZ1-21-W,W,395,95,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[19, 12]",True,0
+ULZ1-21-W,W,835,205,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[52, 22, 0]",True,1
+ULZ1-22-W,W,291,69,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[15, 3]",True,0
+ULZ1-22-W,W,427,103,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[17, 2]",True,0
+ULZ1-22-W,W,647,158,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[28, 14]",True,0
+ULZ1-22-W,W,747,183,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[17, 4]",True,0
+ULZ1-22-W,W,827,203,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[17, 6]",True,0
+ULZ1-23-W,W,99,21,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[16, 4]",True,0
+ULZ1-23-W,W,499,121,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[83, 5]",True,0
+ULZ1-23-W,W,703,172,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[25, 3]",True,0
+ULZ1-23-W,W,783,192,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[45, 11, 0]",True,1
+ULZ1-23-W,W,911,224,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[43, 2]",True,0
+ULZ1-24-W,W,319,76,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[4, 7, 1]",True,0
+ULZ1-24-W,W,371,89,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[17, 2]",True,0
+ULZ1-24-W,W,711,174,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[49, 4]",True,0
+ULZ1-24-W,W,903,222,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[7, 97, 0]",True,1
+ULZ1-24-W,W,1019,251,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[7, 5]",True,0
+ULZ1-25-W,W,279,66,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[4, 2, 0]",True,1
+ULZ1-25-W,W,351,84,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[20, 5]",True,0
+ULZ1-25-W,W,815,200,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[85, 3]",True,0
+ULZ1-25-W,W,879,216,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[6, 2]",True,0
+ULZ1-26-W,W,199,46,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[24, 14, 0]",True,1
+ULZ1-26-W,W,767,188,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[10, 7]",True,0
+ULZ1-27-W,W,243,57,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[4, 7, 0]",True,1
+ULZ1-27-W,W,423,102,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[21, 3]",True,0
+ULZ1-27-W,W,535,130,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[25, 4]",True,0
+ULZ1-28-W,W,231,54,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[4, 2]",True,0
+ULZ1-28-W,W,791,194,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[6, 8, 0]",True,1
+ULZ1-28-W,W,847,208,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[8, 22, 0]",True,1
+ULZ1-29-W,W,75,15,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[17, 4]",True,0
+ULZ1-29-W,W,459,111,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[23, 6]",True,0
+ULZ1-29-W,W,739,181,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[16, 9, 0]",True,1
+ULZ1-29-W,W,839,206,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[19, 2]",True,0
+ULZ1-29-W,W,1035,255,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[51, 2]",True,0
+ULZ1-30-W,W,115,25,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[8, 11, 0]",True,1
+ULZ1-30-W,W,243,57,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[14, 2]",True,0
+ULZ1-30-W,W,603,147,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[9, 7]",True,0
+ULZ1-30-W,W,619,151,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[11, 2]",True,0
+ULZ1-30-W,W,855,210,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[21, 4]",True,0
+ULZ1-30-W,W,991,244,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[13, 2]",True,0
+ULZ1-30-W,W,1011,249,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[18, 7, 0]",True,1
+ULZ1-31-W,W,167,38,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[5, 3, 0]",True,1
+ULZ1-31-W,W,319,76,P,B,B,P/B,context_persistence,0.25,0.0,0,1/4,-1/4,"[34, 6]",True,0
+ULZ1-31-W,W,507,123,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[27, 81, 0]",True,1
+ULZ1-32-W,W,143,32,P,A,A,P/A,context_persistence,0.25,0.0,0,1/4,-1/4,"[34, 5]",True,0
+ULZ1-32-W,W,151,34,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[36, 7, 0]",True,1
+ULZ1-32-W,W,207,48,A,P,B,A/P,context_persistence,0.5,0.25,0,1/4,-1/4,"[50, 8, 0]",True,1

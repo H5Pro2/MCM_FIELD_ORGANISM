@@ -1,0 +1,145 @@
+GETRENNTE FORTSETZUNGSVORHERSAGE -- LOKALES ENTWICKLUNGSPAKET ABGESCHLOSSEN
+Finaler Nachweis context-prediction-20260930-03.
+Keine allgemeine Wahrnehmungsverbesserung und keine Produktfreigabe.
+
+AENDERUNGEN
+Neu tools/_s2uc_continuation_adapter.py: lokale Unterklasse des unveraenderten
+PairContextAdapter, Projektion in _receipt nach hint und vor _admit.
+Unveraendert: Matching, form, close_segment, Bestaetigung, Auffrischung,
+Basispaarbildung und alte Runtime. _admit exakt geerbt.
+Neu tools/s2uc_context_prediction_check.py: getrennter Pull-Pruefer/Evaluator.
+Neu tests/test_s2uc_continuation_adapter.py:7 fokussierte Kontrollen.
+Vorhandene zehn Adapter-/Anschlusskontrollen als Regression ausgefuehrt.
+
+BINDUNG UND KAUSALITAET
+Vorab cases/Erwartungen/Code-/Datenhashes in preregistration.json gesichert.
+Vorhandene gebundene48-Band-NJ-Werte W1..W4 aus
+reports/s2uc/pcm-temporal-20260930-01/result.json. Keine PCM-Produktion/-Verarbeitung.
+A=W1/W2/W3/W4; D=W4/W2/W3/W1. D/abweichende Folgen synthetische Montagen.
+Jede Geschichte frischer Owner, Paarphase1/2. Matchingoffsets0,1,2 erreicht;
+keine gleitenden Paare oder nachtraegliche Verschiebung.
+PredictionReceipt ist frozen und enthaelt nur immutable Tupel mit Zahlen sowie
+Herkunfts-JSON, keine Frame-/Traceobjekte. Persistenz wird gleichzeitig aus dem
+zweiten Paarframe gebunden. Zugriff auf Nachfolger vor beiden _admit-Aufrufen.
+GatedSource erlaubt dritten Pull erst bei gebundenem Vorhersagereceipt;
+Predictor erhaelt weder Iterator noch Fallnamen/Sollwerte. K1/K2-Vorhersagen
+inklusive Herkunftsmetadaten exakt identisch, bevor verschiedene dritte Frames
+gezogen werden. Pullbelege und Prognosen stehen in result.json.
+
+BEOBACHTETE FUENF FAELLE
+K1 A; W1,W2,W3: gespeicherte Prognose W3 HIT; Persistenz W2 MISS.
+K2 A; W1,W2,W2: gespeicherte Prognose W3 MISS; Persistenz W2 HIT.
+K3 leer; W1,W2,W2: ABSTAIN_NO_CONTEXT; Persistenz W2 HIT.
+K4 A/D; W2,W3,W4: AMBIGUOUS_CONTEXT, A@1->W4/D@1->W1;
+  keine konkrete Kontextprognose; Persistenz W3 MISS.
+K5 A; W3,W4,W1: ABSTAIN_NO_SUCCESSOR an A@2; Persistenz W4 MISS.
+Eindeutiger Faktor1 allein berechtigt zur Nachfolgerausgabe. Nichttriviale
+Faktoren: FACTOR_CONTINUATION_NOT_SPECIFIED; keine Skalierung eines Nachfolgers.
+K4 wird nicht zum Treffer umgedeutet, nur weil eine Alternative W4 waere.
+Alle fuenf vorregistrierten Ergebnispaare bestaetigt; keine Datenanpassung.
+
+BEWERTUNG (AUS TATSAECHLICHEN AUSGABEN BERECHNET)
+{
+  "context": {
+    "HIT": 1,
+    "MISS": 1,
+    "AMBIGUOUS": 1,
+    "ABSTAIN": 2,
+    "covered": 2,
+    "total": 5,
+    "coverage": 0.4,
+    "accuracy_when_covered": 0.5
+  },
+  "persistence": {
+    "HIT": 2,
+    "MISS": 3,
+    "AMBIGUOUS": 0,
+    "ABSTAIN": 0,
+    "covered": 5,
+    "total": 5,
+    "coverage": 1.0,
+    "accuracy_when_covered": 0.4
+  }
+}
+Kontext hilft in K1 und schadet in K2. K3 zeigt fehlende Abdeckung trotz
+korrekter Referenz. Mehrdeutigkeit/Enthaltung sind keine Fehlvorhersage,
+aber auch kein automatischer Nutzengewinn. Bedingte50% gegen40% Trefferquote
+ist wegen unterschiedlicher Abdeckung kein Gesamtsieg. Der bewusst kontrastive
+Fallmix ist keine repraesentative Erfolgsrate. Kein nachtraegliches Gewichten.
+
+ZUSTAND UND FREIGABE
+Nach jedem der drei Inputs identisch zum bisherigen Adapter ohne Prognose,
+einschliesslich Herkunft, Kandidat, Reihenfolge, Generationen und Endmarken.
+Alle15 Inputs genau einmal regulaer aufgenommen. Restframe3 explizit behandelt,
+unvollstaendige Bildung beim Abschluss verworfen. Vorhersage geht nie an form.
+Auswertung ist reine Funktion ohne Speicherzugriff. consume_prediction sichert
+Zielindex/Owner/Stream/Profil und gibt beide Ausgabeslots im finally frei;
+Fehler beendet Owner und loescht Slots. Neue Aufnahme mit noch offener Prognose
+wird abgewiesen. Abschluss loescht offene Ausgabe ohne erfundenes Ergebnis.
+Externe Ergebnisarchive sind nur Beobachter, nicht Predictor-/Adapterzustand.
+
+GEZIELTE VERDRAENGUNGSKONTROLLE
+Nach A/D-Bestaetigung Kandidat T=W4/W4/W1/W2. Seine Testwiederholung promoviert
+T und verdraengt A. Das letzte Paar W1/W2 trifft im Abruf-Vorzustand sowohl
+A@0 als auch Kandidat T@2. Korrekte Ausgabe ist daher MEHRDEUTIG, kein einzelner
+A-Nachfolger. Bereits gebundene Mehrdeutigkeit, A-/Kandidatenherkunft und
+Persistenz W2 bleiben trotz anschliessender Verdraengung unveraendert.
+Identitaet des vor _admit gesicherten Ausgabeobjekts nachher geprueft.
+Eine konkrete A-Fortsetzung bei gleichzeitiger Kandidatenpromotion wird aus
+diesem Fall NICHT behauptet. Im regulaeren paarweisen exakten Promotionsfall
+ist der Kandidat selbst bereits ein Match; diese Konkurrenz darf nicht
+unterdrueckt werden. Separate Unitkontrolle belegt konkrete unveraenderliche
+Prognose vor _admit ohne Verdrangung. Beleg eviction-resources.json.
+
+ENTWICKLUNGSABWEICHUNG TRANSPARENT
+Vorbereitungsstand -01: eine zusaetzliche Testannahme erwartete trotz dieses
+Kandidatentreffers eine konkrete A-Prognose und scheiterte. Testannahme korrigiert,
+Abruf-/Vorhersageregeln und fuenf Hauptfaelle nicht geaendert. -02: alle17 Tests
+und fuenf Faelle bestanden. -03 erweitert nur Messabdeckung auf Auswertung,
+Frame3-Aufnahme und Restabschluss; finale17 Tests erneut bestanden. Keine
+Vorhersagekorrektur anhand zukuenftiger Werte. Historische Logs bleiben erhalten.
+
+PRUEFUNGEN
+17/17 Tests PASS,0 Fehler/Fehlschlaege/Skips auf finalem Stand.
+7 neue Kontrollen: Projektion vor Aufnahme/Immutable, Faktoren/Spurende,
+Verdrangung, Fehler/Abschluss/Rueckspeisung, Auswertungsfehlerfreigabe,
+1-ULP-Abweichung ohne Toleranz und unveraendertes _admit.
+10 vorhandene Anschluss-/Grenzregressionen bestanden. Zusaetzlicher gebundener
+Verdrangungs-/Ressourcencheck bestanden, getrennt von fuenf Hauptfallmetriken.
+Code- und Quelldatenbindungen vor/nach finalem Lauf unveraendert.
+
+RESSOURCEN
+Speichergrenze weiterhin16+2. Zwei zusaetzliche Ausgabeslots separat genehmigt,
+maximal96 Binary64-Werte=768 logische Wertebytes, konservativer Gesamtdeckel20
+Frameaequivalente. Aliase auf immutable Tupel moeglich; trotzdem beide Slots
+logisch zaehlen. Kein ganzer Trace wird durch Ausgabe am Leben gehalten.
+Bei Enthaltung/Mehrdeutigkeit nur Persistenzvektor, keine Alternativenvektorliste.
+Neue Herkunftsmetadaten verwenden den begrenzten Kontextreceipt-JSON; maximal
+16384 Byte, geteilter immutable String statt unbegrenztem Ergebnisverlauf.
+K1: {"frame_peak": 7, "output_slots_peak": 2, "combined_peak": 8, "output_python_bytes_peak": 3634, "samples": 2131}
+K2: {"frame_peak": 7, "output_slots_peak": 2, "combined_peak": 8, "output_python_bytes_peak": 3634, "samples": 2131}
+K3: {"frame_peak": 3, "output_slots_peak": 1, "combined_peak": 3, "output_python_bytes_peak": 1940, "samples": 1091}
+K4: {"frame_peak": 11, "output_slots_peak": 1, "combined_peak": 11, "output_python_bytes_peak": 2149, "samples": 3136}
+K5: {"frame_peak": 7, "output_slots_peak": 1, "combined_peak": 7, "output_python_bytes_peak": 2050, "samples": 2119}
+Gezielte Verdrangung/Vollbelegung: {"frame_peak": 16, "output_slots_peak": 2, "combined_peak": 17, "output_python_bytes_peak": 3642, "samples": 6031}
+Gesamte instrumentierte fuenf-Fall-Gegenprobe: {"elapsed_ns": 9812951500, "python_peak_bytes": 26954309}
+Maximal16 Frameobjekte im zusaetzlichen Grenzfall, maximal2 Ausgabeslots;
+maximal17 gleichzeitig gezaehlte Frame-/Ausgabeeinheiten, unter20.
+Ausgabeobjektbilanz maximal3642 Python-Byte inklusive Tupel, Floatobjekte und
+Herkunftsstring (sys.getsizeof, konservativ mit Alias-Doppelzaehlung).
+Die Testbeobachter zaehlen Adapter-/Memory-Objekte und relevante aktive lokale
+Referenzen. Externe gespeicherte Testprognosen/Referenzarme/Traces fallen in
+Gesamttracemalloc, nicht in den laufenden Adapter. Kein Prozess-/Native-RAM-
+Nachweis; Peaks nicht addieren. Keine neuen PCM-Dateien und0 Rezeptor-/NJ-Aufrufe.
+
+FACHLICHER ABSCHLUSS UND FORTSETZUNG
+Kausal getrennte Vorhersagen bei identischer Aufnahme und kontrolliertem
+Zusatzbudget nachgewiesen. Kontext kann auf passender Wiederkehr helfen,
+bei abweichender Fortsetzung schaden und bei fehlendem/mehrdeutigem Kontext
+keine eindeutige Aussage liefern. Kein Wahrnehmungseingriff und kein allgemeiner
+Wahrnehmungsnutzen. Registry und Originalquellenlauf unberuehrt.
+Naechster Vorschlag zur fachlichen Auswertung: vor weiterer Implementierung
+einen vom Aufbau unabhaengigen, vorab gebundenen Fortsetzungsbestand festlegen,
+auf dem Abdeckung und Fehlerkosten von Kontext/Persistenz getrennt beurteilt
+werden. Die jetzigen fuenf Kontrastfaelle nicht als Auswahl-/Gewichtungsgrundlage
+fuer eine neue Entscheidungsregel verwenden. Keine automatische Folgeausfuehrung.

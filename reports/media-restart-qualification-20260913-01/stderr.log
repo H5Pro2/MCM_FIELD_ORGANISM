@@ -1,0 +1,27 @@
+test_01_full_batch_overflow (tests.test_media_restart_connection.Connection.test_01_full_batch_overflow) ... ok
+test_02_flush_batch_count (tests.test_media_restart_connection.Connection.test_02_flush_batch_count) ... ok
+test_03_native_call_failure_unknown (tests.test_media_restart_connection.Connection.test_03_native_call_failure_unknown) ... ok
+test_04_pre_call_limits_and_equality (tests.test_media_restart_connection.Connection.test_04_pre_call_limits_and_equality) ... ok
+test_05_hash_failure_keeps_reads (tests.test_media_restart_connection.Connection.test_05_hash_failure_keeps_reads) ... ok
+test_06_shared_values_independent (tests.test_media_restart_connection.Connection.test_06_shared_values_independent) ... ok
+test_07_missing_reference (tests.test_media_restart_connection.Connection.test_07_missing_reference) ... ok
+test_08_reference_integrity_and_class (tests.test_media_restart_connection.Connection.test_08_reference_integrity_and_class) ... ok
+test_09_failed_publication_not_saved (tests.test_media_restart_connection.Connection.test_09_failed_publication_not_saved) ... ok
+test_10_historical_worker_response (tests.test_media_restart_connection.Connection.test_10_historical_worker_response) ... ok
+test_11_real_worker_error_evidence (tests.test_media_restart_connection.Connection.test_11_real_worker_error_evidence) ... ok
+test_12_native_early_and_late (tests.test_media_restart_connection.Connection.test_12_native_early_and_late) ... 
+  test_12_native_early_and_late (tests.test_media_restart_connection.Connection.test_12_native_early_and_late) (role='late-restore') ... FAIL
+
+======================================================================
+FAIL: test_12_native_early_and_late (tests.test_media_restart_connection.Connection.test_12_native_early_and_late) (role='late-restore')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_media_restart_connection.py", line 155, in test_12_native_early_and_late
+    self.assertEqual(result.returncode, 0, folder)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : late-restore
+
+----------------------------------------------------------------------
+Ran 12 tests in 64.468s
+
+FAILED (failures=1)

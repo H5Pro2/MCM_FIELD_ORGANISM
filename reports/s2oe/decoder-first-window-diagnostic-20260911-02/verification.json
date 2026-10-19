@@ -1,0 +1,19 @@
+{
+  "actual_before_verification_bytes": 60711,
+  "bound_total_bytes": 118318,
+  "diagnostic_sha256": "82b1cd568a332dd617060a555c36b11ef6abc78acb017bf2b45bacf47452a87c",
+  "diagnostic_status": "NOT_EVALUABLE",
+  "files": {
+    "reports\\s2oe\\decoder-first-window-diagnostic-20260911-02\\binding.json": 2192,
+    "reports\\s2oe\\decoder-first-window-diagnostic-20260911-02\\diagnostic.claim": 17,
+    "reports\\s2oe\\decoder-first-window-diagnostic-20260911-02\\diagnostic.json": 4844,
+    "reports\\s2oe\\decoder-first-window-diagnostic-20260911-02\\qualification.claim": 5,
+    "reports\\s2oe\\decoder-first-window-diagnostic-20260911-02\\qualification.json": 158,
+    "reports\\s2oe\\decoder-first-window-diagnostic-20260911-02\\qualification.log": 688,
+    "reports\\s2oe\\decoder-first-window-diagnostic-20260911-02\\verification.claim": 25
+  },
+  "limits": "Recorded phases, counters, code and limits only; no media or decoder replay; no numerical AV validation.",
+  "read_only": true,
+  "status": "EVIDENCE_VALID",
+  "verification_and_report_reserve": 16384
+}

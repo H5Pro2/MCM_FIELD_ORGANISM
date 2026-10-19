@@ -1,0 +1,161 @@
+LUECKENLOSER EINGANG -- QUELLENGEBUNDENER BESCHAFFUNGSVERTRAG
+2026-09-30. Status PLANUNG_ABGESCHLOSSEN / AUSFUEHRUNG_NICHT_FREIGEGEBEN.
+
+FORSCHUNGSFRAGE
+Entsteht auf den ersten zehn Sekunden dieser Quelle beim regulaeren
+Speicheraufbau ueberhaupt Kontextabdeckung? Null Abdeckung ist ein gueltiges
+Ergebnis. Keine Annahme, dass zeitliche Luecken den vorherigen Nullbefund
+verursachten. Andere Quelle, Beobachtungszahl und Zeitspanne verhindern einen
+isolierten Nachweis einer Kontinuitaetswirkung. Kein unabhaengiger Holdout:
+diese NASA-Quelle wurde im Projekt bereits fuer andere Untersuchungen benutzt.
+Die neun bisherigen Ziele werden weder erneut ausgefuehrt noch optimiert.
+
+VERBINDLICHE QUELLE
+Absoluter Pfad:
+C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/sources/media/NASA Earthrise Realtime Apollo 8.mp4
+Groesse: 13547755 Byte.
+SHA256: 9a061d639c17849e52ace712c8752b5d377123a9eec99df896728098bd783d74
+SHA1: c63198a925ad227950cca597c4a8500656bacdfc
+Historische Herkunft: NASA SVS Earthrise_Realtime_ipod_sm.mp4,
+source_id public.audiovisual.nasa-earthrise-realtime.svs.2013-12-20.
+Projektbelege: docs/forschung/090_AUDITIERTE_NASA_AUDIOVIDEO_ROHQUELLEN.md,
+091_NASA_AUDIOVIDEO_ROHQUELLEN_INTERVALLAUDIT.md und
+093_NASA_AUDIOVIDEO_REZEPTORLAUF_OHNE_FELD.md.
+Herkunfts-/Nutzungshinweise stammen aus diesen Projektbelegen; kein neuer
+Download und keine erneute externe Lizenzpruefung. Keine fremde Quelle kopiert.
+
+Lesender Befund in docs/S2UC_LUECKENLOS_QUELLENPRUEFUNG_20260930.json:
+Dateigroesse und SHA1 stimmen mit historischem Quellenvertrag ueberein.
+MP4-mdhd-Audiozeitbasis48000, Dauer8403968 Ticks =175,082666... Sekunden.
+Video175,075075... Sekunden; Zeitcodespur vorhanden, bleibt ausgeschlossen.
+Metadaten direkt aus MP4-Boxen gelesen, keine Audio-/Videodekodierung.
+Historischer Rohquellenaudit belegt48000Hz fuer diese Datei. Headerdauer ist
+kein neuer Nachweis lueckenlos dekodierbarer zehn Sekunden; dies wird spaeter
+zur zwingenden Eingangspruefung, ohne Ausweichen auf einen anderen Abschnitt.
+Auswahlgrund: vorhandene auditierte audiovisuelle Projektquelle mit Audio und
+ausreichender dokumentierter Dauer. Keine Inhalts-/Wiederholungssuche.
+Street traffic ist historisch visuell verwendet; Chirp nur0,4s, Einzel-PCM-
+Fenster kuerzer. Sie werden nicht gemischt, verlaengert oder ersatzweise gewaehlt.
+
+FESTER ABSCHNITT UND DEKODERBEHANDLUNG
+Genau Container-Praesentationsintervall [0,10) Sekunden, erste Audiospur in
+Containerreihenfolge. Keine Video-/Zeitcodespur dekodieren. Kein Seek zu einer
+inhaltlich gewaehlten Position. Demux ab Anfang; Codec-Vorlauf nur zur normalen
+Dekodierung, nicht als MCM-Eingang. Container-Edit-Lists und Codec-Priming durch
+fest gebundenen Decoder beachten; Original-PTS und rationale time_base behalten.
+Nach Anwendung der Containerzeit muss Audio Sample0 bei Praesentationszeit0
+beginnen. Keine Verschiebung des ersten beliebigen Frames auf0.
+Negative Vorlauf-Samples abschneiden; nach480000 Samples sofort stoppen.
+Ein dekodierter Grenzframe darf nur den Teil vor10s liefern; Ueberhang verwerfen.
+Fehlende PTS, nicht ganzzahlige Abbildung auf48-kHz-Samplegrenzen, Luecken,
+Ueberlappungen oder fehlende Samples bis10s: Abbruch, kein Auffuellen, Strecken,
+Interpolieren oder Umordnen. Edit-/Priming-Unklarheit ist ein Eingangsfehler.
+
+Native Abtastrate muss48000Hz sein; kein Resampling. Decoderformat einmalig
+zu normalisiertem planarem Float konvertieren (keine Lautheitsnormalisierung,
+kein Gain, Clipping oder Dither). Mono unveraendert; bei mehreren Kanaelen
+arithmetischer Mittelwert aller dekodierten Audiokanaele in Binary64, danach
+einmal nach little-endian Float32 fuer den bestehenden PCM-Rezeptoreingang.
+Kanalzahl/-layout und Konversion im Beobachterbeleg festhalten. Nichtendliche
+Werte oder Werte ausserhalb[-1,1] fuehren zum Abbruch, nicht zur Korrektur.
+Keine kanal- oder inhaltsabhaengige Auswahl. PyAV/FFmpeg-Version und Bibliotheken
+muessen im spaeteren Implementierungspaket vor Ausfuehrung konkret gebunden
+werden; aktuell wird keine ungepruefte Decoderkonfiguration als qualifiziert
+behauptet. Keine Voll-Datei-AV-Funktion als Ersatz aufrufen:
+mcm_field_organism/public_av_container_source.py decode_audited_public_av_sources
+sammelt Audio/Video und setzt bei
+Frames jenseits des Endes die Dekodierung fort. Ihr historischer positiver
+Teilintervallbefund qualifiziert keine Ressourcenbegrenzung dieses neuen Lesers.
+
+FENSTER UND UNVERAENDERTES PROFIL
+100 Fenster, i=1..100, Quellintervalle [4800*(i-1),4800*i) Samples bei48000Hz;
+Hop4800, Breite4800, keine Ueberlappung oder Luecke. Bezug0 bleibt Quellzeit0.
+LogSpectralConfig: sample_rate48000, window_size4800, hop_size480,
+band_count48, min_frequency50.0, max_frequency18000.0.
+Der Rezeptorparameter hop_size480 bleibt unveraendert; der externe Abstand
+zwischen den hier beauftragten Fenstern ist4800. Keine Umdeklaration des Profils.
+Bestehender LogSpectralReceptor.analyze je Fenster genau einmal, danach
+project_auditory_half_v1 genau einmal. NJ-Profil
+s2nj.auditory.hann48.output-half.v1, Geometrie
+auditory.log48.50-18000.w4800.h480.half.v1.
+Keine weitere Halbierung, neue Normierung, Toleranz oder Faktoroptimierung.
+Rezeptorbindung laut NJ:
+26a6bd8f2d190db60c75ad29f275b3bd8b09b6d26d4ad54e4396176c4a36d2b0.
+RAW_PROFILE_DIGEST und PROFILE_DIGEST aus dem unveraenderten bestehenden
+NJ-Modul binden; Memory-Profilbezug ist der echte Projektionsprofil-Digest,
+kein Dateiname oder neu erfundener Profilwert. Original-Quellzeiten und
+Runtimeindex1..100 getrennt im Herkunftsbeleg halten. Metadaten, Dateinamen,
+Titel und semantische Labels gelangen nicht in die48 Wahrnehmungswerte.
+
+MATERIALISIERUNGSUMFANG
+Genau100 auditive48-Werte-Projektionen plus Profil-/Fenster-/PCM-Digests und
+Quelle/Decoderherkunft im externen Beobachter. Keine Bilder, kein Video-NJ,
+keine synthetischen Varianten, kein zweiter Abschnitt und kein Wiederholungspass.
+PCM ausschliesslich begrenzt im Arbeitsbuffer, nicht dauerhaft exportieren.
+Alle100 Vektoren verlustfrei speichern, auch Nullvektoren; keine Auswahl anhand
+von Energie, Wiederkehr oder Prognosen. 4800 Binary64-Vektorwerte =38400 logische
+Payloadbytes; JSON/Hex-/Metadatenbedarf getrennt bilanzieren. Erst ein vollstaendig
+abgeschlossener, gebundener Bestand darf spaeter als100er-Korpus gelten.
+
+VERGLEICHSPLAN
+Frischer Owner, ein Stream, leerer Speicher, keine historischen Zustaende oder
+Seeds. Paare1/2,...,99/100. Regulaere25 Viererformationen, bestehende Kandidaten-,
+Bestaetigungs-, Auffrischungs- und Verdraengungsregeln. Jede Wahrnehmung genau
+ einmal aufnehmen. Unveraendertes Matching; konkrete Kontextprognose nur bei
+zulaessigem eindeutigem Faktor1 und vorhandenem Nachfolger, Persistenz aus
+zweitem Paarwert. Prognose vor Paaraufnahme und vor Zugriff auf Folgevektor.
+Alle49 Ziele3,5,...,99 auswerten. Nach Paar99/100 Ziel101 NOT_EVALUABLE_END,
+ausserhalb Nenner49; Slots freigeben und regulaer abschliessen. Kein Neustart
+bei fehlendem Match oder Bestaetigung. Quellunterbrechung beendet diesen Bestand,
+kein Wechsel auf einen anderen Zeitabschnitt und keine neue Paarphase.
+Abdeckung, Treffer, Fehler, Enthaltungsgruende, vorlaeufige/bestaetigte Herkunft
+und gemeinsam abgedeckte Ziele getrennt. Exakte48-Werte-Gleichheit bleibt das
+Kriterium; kein Fehlergroessenmass oder gewichteter Nutzenwert neu einfuehren.
+Eine spaetere Ursachen-/Fehlergroessenanalyse waere ein eigener Vorschlag.
+
+VORGESCHLAGENE HARTE OBERGRENZEN (NOCH ZU IMPLEMENTIEREN/QUALIFIZIEREN)
+- Quellenhash: ein separater linearer Lesepass, genau13547755 Byte.
+- Decoder-I/O: maximal32MiB tatsaechliche Lese-Byte, maximal2048 demuxte Pakete;
+  kein Netz, keine zweite Datei, kein Video-Decode. Hashpass separat ausweisen.
+- Maximal512 dekodierte Audioframes, maximal524288 Samples pro Kanal inklusive
+  Codec-Vorlauf/Endueberhang, maximal8 Kanaele; genau480000 Samples akzeptieren.
+- Maximal65536 Samples pro Kanal in einem Decoderbatch; groesserer Batch stoppt.
+  Ein PCM-Fenster4800 Float32-Werte=19200 Byte, kein kompletter PCM-Korpusbuffer.
+- Maximal100 Rezeptoraufrufe und100 NJ-Aufrufe, keine automatische Wiederholung.
+- Ein Kindprozess mit harter Speichergrenze640MiB (Windows Job Object), externem
+  Watchdog300s Gesamtzeit und30s je Fensteranforderung; kein ungeschuetzter Fallback.
+- Dauerhafte Ausgabe einschliesslich Metadaten, Fehlerbericht und Bilanz maximal
+  4MiB: davon vorab256KiB Abschluss-/Fehlerreserve. Limit vor Schreiboperation
+  pruefen; kein Ueberschreiben historischer Belege. Beobachterexport enthalten.
+- Predictor unveraendert16 Speicherframes plus2 Paar-/Hinweisframes, zusaetzlich
+  maximal2 Prognosevektoren; Dateileser, Decoder, Beobachter und Referenz separat.
+Batchzaehler sind nachgelagerte Abbruchgrenzen, keine Garantie gegen native
+Kurzzeitallokation. Die Prozessgrenze bleibt deshalb zwingend. Diese Zahlen
+sind vorgeschlagene Ressourcenvertraege, keine gemessenen Verbrauchswerte.
+
+ABBRUCH UND BEFUNDSICHERUNG
+Vor Start: Hash-/Groessenabweichung, fehlende Freigabe, ungebundener Decoder,
+abweichendes Profil oder nicht wirksame Ressourcenbegrenzung sperren Ausfuehrung.
+Waehrenddessen: Zeit-/Samplefehler, Decoder-/NJ-Fehler, unzulaessige Werte,
+Budget-/Zeitueberschreitung oder EOF vor480000 Samples beenden einmalig mit
+NOT_EVALUABLE und konkreter Phase/Position. Teilbestand kennzeichnen, nicht
+als vollstaendigen Vergleich auswerten. Prozess/Container/Buffer/Prognoseslots
+schliessen und Fehlerreserve verwenden. Kein automatischer Retry, keine
+Grenzerhoehung, Ersatzquelle oder Suche nach einem guenstigeren Abschnitt.
+Null Abdeckung bei technisch vollstaendigen100 Frames ist KEIN Abbruchgrund.
+
+BERECHTIGUNG UND NAECHSTER SCHRITT
+Die Datei liegt bereits im aktuellen Projekt und wurde historisch als lokale
+NASA-Quelle auditiert und verarbeitet. Damit ist ihre lesende Quellenpruefung
+begruendet; historische Vorregistrierungen/Freigaben werden nicht erneuert.
+Aktueller Auftrag erlaubt ausschliesslich Planung und lesende Quellenpruefung.
+Es besteht keine aktuelle Freigabe fuer Decoder-/Rezeptor-/NJ-Ausfuehrung,
+Materialisierung dieses Abschnitts oder den49-Ziele-Vergleich. Kein Versuch
+wurde gestartet, keine Laufnummer vergeben, keine Registryfreigabe abgeleitet.
+
+Naechster Vorschlag an Projektleiter: begrenztes Implementierungspaket fuer den
+Audio-Leser und dessen Zeit-/Ressourcengates mit neutralen Entwicklungstests
+beauftragen. Abnahme muss Decoder-/Versionsbindung, Behandlung von Priming,
+PTS-Luecken und Endueberhang sowie wirksame harte Grenzen nachweisen. Danach
+kann der konkret gebundene100-Fenster-Materialisierungsauftrag separat erteilt
+werden. Die Quelle und der Abschnitt bleiben dabei fest; keine Inhaltsauswahl.

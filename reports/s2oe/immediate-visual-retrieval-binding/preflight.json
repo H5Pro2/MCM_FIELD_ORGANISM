@@ -1,0 +1,151 @@
+{
+  "manifest_sha256": "d4d83021d733634335131307492072f6b8fd25c2cfaf2608d12635105d9416af",
+  "manifest_bytes": 18563,
+  "output_absent": true,
+  "alternatives": [
+    {
+      "version": "s2oe.immediate-historical-input.v1",
+      "parts": {
+        "metadata": 57130,
+        "sources": 35678,
+        "verification": 91140,
+        "supplement": 0,
+        "data": 393216,
+        "historical_input": 1359778
+      },
+      "totals": {
+        "metadata": 57130,
+        "sources": 35678,
+        "verification": 91140,
+        "shared": 35678,
+        "total": 1936942
+      },
+      "limits": {
+        "metadata": 65536,
+        "sources": 174080,
+        "shared": 262144,
+        "verification": 262144,
+        "total": 4194304
+      },
+      "historical_limit": 2097152,
+      "violations": [],
+      "files": {
+        "run.claim": 5,
+        "record.json": 393216,
+        "verification.claim": 5,
+        "verification.json": 8192,
+        "evaluation.json": 8192,
+        "close.json": 2048,
+        "balance.json": 4096
+      }
+    },
+    {
+      "version": "s2oe.immediate-historical-input.v1",
+      "parts": {
+        "metadata": 55077,
+        "sources": 35678,
+        "verification": 82948,
+        "supplement": 0,
+        "data": 393216,
+        "historical_input": 1359778
+      },
+      "totals": {
+        "metadata": 55077,
+        "sources": 35678,
+        "verification": 82948,
+        "shared": 35678,
+        "total": 1926697
+      },
+      "limits": {
+        "metadata": 65536,
+        "sources": 174080,
+        "shared": 262144,
+        "verification": 262144,
+        "total": 4194304
+      },
+      "historical_limit": 2097152,
+      "violations": [],
+      "files": {
+        "run.claim": 5,
+        "partial.json": 393216,
+        "failure.json": 8192,
+        "balance.json": 4096
+      }
+    },
+    {
+      "version": "s2oe.immediate-historical-input.v1",
+      "parts": {
+        "metadata": 63274,
+        "sources": 35678,
+        "verification": 91140,
+        "supplement": 0,
+        "data": 393216,
+        "historical_input": 1359778
+      },
+      "totals": {
+        "metadata": 63274,
+        "sources": 35678,
+        "verification": 91140,
+        "shared": 35678,
+        "total": 1943086
+      },
+      "limits": {
+        "metadata": 65536,
+        "sources": 174080,
+        "shared": 262144,
+        "verification": 262144,
+        "total": 4194304
+      },
+      "historical_limit": 2097152,
+      "violations": [],
+      "files": {
+        "run.claim": 5,
+        "record.json": 393216,
+        "verification.claim": 5,
+        "verification.json": 8192,
+        "evaluation.json": 8192,
+        "failure.json": 8192,
+        "balance.json": 4096
+      }
+    }
+  ],
+  "closing_failure": {
+    "version": "s2oe.immediate-historical-input.v1",
+    "parts": {
+      "metadata": 65322,
+      "sources": 35678,
+      "verification": 91140,
+      "supplement": 0,
+      "data": 393216,
+      "historical_input": 1359778
+    },
+    "totals": {
+      "metadata": 65322,
+      "sources": 35678,
+      "verification": 91140,
+      "shared": 35678,
+      "total": 1945134
+    },
+    "limits": {
+      "metadata": 65536,
+      "sources": 174080,
+      "shared": 262144,
+      "verification": 262144,
+      "total": 4194304
+    },
+    "historical_limit": 2097152,
+    "violations": [],
+    "files": {
+      "run.claim": 5,
+      "record.json": 393216,
+      "verification.claim": 5,
+      "verification.json": 8192,
+      "evaluation.json": 8192,
+      "close.json": 2048,
+      "failure.json": 8192,
+      "balance.json": 4096
+    }
+  },
+  "main_gate": false,
+  "control_gate": false
+}

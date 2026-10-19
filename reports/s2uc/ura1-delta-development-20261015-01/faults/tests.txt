@@ -1,0 +1,11 @@
+test_T01_full_bytes_numbers_metadata_and_anchors (tests.test_s2uc_ura1_delta.DeltaTests.test_T01_full_bytes_numbers_metadata_and_anchors) ... ok
+test_T02_missing_and_swapped_deltas (tests.test_s2uc_ura1_delta.DeltaTests.test_T02_missing_and_swapped_deltas) ... ok
+test_T03_changed_span_and_wrong_initial_state (tests.test_s2uc_ura1_delta.DeltaTests.test_T03_changed_span_and_wrong_initial_state) ... ok
+test_T04_invalid_delta_path_and_value_references (tests.test_s2uc_ura1_delta.DeltaTests.test_T04_invalid_delta_path_and_value_references) ... ok
+test_T05_management_record_and_write_failure_cleanup (tests.test_s2uc_ura1_delta.DeltaTests.test_T05_management_record_and_write_failure_cleanup) ... ok
+test_T06_live_small_scope_and_original_bindings (tests.test_s2uc_ura1_delta.DeltaTests.test_T06_live_small_scope_and_original_bindings) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 4.731s
+
+OK

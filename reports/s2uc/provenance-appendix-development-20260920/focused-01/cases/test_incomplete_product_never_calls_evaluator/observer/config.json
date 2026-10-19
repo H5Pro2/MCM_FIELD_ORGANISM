@@ -1,0 +1,9 @@
+{
+  "binding": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\provenance-appendix-development-20260920\\focused-01\\cases\\test_incomplete_product_never_calls_evaluator\\bundle\\execution-binding.json",
+  "case": "memoryerror",
+  "folder": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\provenance-appendix-development-20260920\\focused-01\\cases\\test_incomplete_product_never_calls_evaluator\\observer",
+  "inventory_sha256": "d8cfb6213167d818d33c7c7140361730ae6370107081912b99513b41d634d654",
+  "job": "Local\\MCM-V9-4c29d466551e113c3aa132b809775b40",
+  "output": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/provenance-appendix-development-20260920/focused-01/cases/test_incomplete_product_never_calls_evaluator/S2UC-V9-NEUTRAL-8510b6cc895b4e62b4451b5efe81795d",
+  "run_id": "S2UC-V9-NEUTRAL-8510b6cc895b4e62b4451b5efe81795d"
+}

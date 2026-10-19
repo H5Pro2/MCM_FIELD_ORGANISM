@@ -1,0 +1,12 @@
+test_G1_full_path_independent_values_lossless_and_reproducible (tests.test_s2uc_factor_material.MaterialTests.test_G1_full_path_independent_values_lossless_and_reproducible) ... ok
+test_G2_exclusive_claim_no_overwrite (tests.test_s2uc_factor_material.MaterialTests.test_G2_exclusive_claim_no_overwrite) ... ok
+test_G3_output_limit_reserved_closure (tests.test_s2uc_factor_material.MaterialTests.test_G3_output_limit_reserved_closure) ... ok
+test_G4_partial_export_error_and_reader_closed (tests.test_s2uc_factor_material.MaterialTests.test_G4_partial_export_error_and_reader_closed) ... ok
+test_G5_auth_binding_and_quantity_rejections (tests.test_s2uc_factor_material.MaterialTests.test_G5_auth_binding_and_quantity_rejections) ... ok
+test_G6_export_tamper_detected (tests.test_s2uc_factor_material.MaterialTests.test_G6_export_tamper_detected) ... ok
+test_G7_three_arm_export_connection (tests.test_s2uc_factor_material.MaterialTests.test_G7_three_arm_export_connection) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 4.140s
+
+OK

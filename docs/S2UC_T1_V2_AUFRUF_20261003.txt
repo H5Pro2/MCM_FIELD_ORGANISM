@@ -1,0 +1,27 @@
+T1: eigenstÃ¤ndige Quellen-/AuswertungshÃ¼lle, unverÃ¤nderte Policy.
+
+Vorbereitung und neutrale Qualifikation (keine T1-Quellen):
+C:/Python314/python.exe -m tools.s2uc_t1_prepare_v2 prepare
+C:/Python314/python.exe -m tools.s2uc_t1_prepare_v2 qualify
+
+Qualifikation: neutrale Unit-/Grenztests, tatsÃ¤chlicher Watchdog-Normal- und
+Abbruchtest, anschlieÃŸend zwei80er-NeutralfÃ¤lle U/M/E/K/P und Belegmutationstests.
+Genau10 neutrale Replays; namespace MCM-QUALIFICATION-ONLY-v1, keine T1-Digests.
+900s und16MiB Qualifikationsrahmen; kein Test-/Mock-Dispatch im Replaypfad.
+
+T1-AusfÃ¼hrung ist NICHT freigegeben. Nach separater Projektleiterfreigabe:
+aus AUTORISIERUNG_VORLAGE eine separate Datei erstellen, ausschlieÃŸlich status
+auf AUTHORIZED_ONCE Ã¤ndern. Danach genau einmal:
+C:/Python314/python.exe -m tools.s2uc_t1_prepare_v2 run --authorization <separate-Datei>
+
+16 FÃ¤lle,80 Arme,1280 Quellpositionen,6400 Aufnahmen+6400 Referenzfortschreibungen.
+Alle Quellen und Herkunftsdaten vor erstem Policyaufruf exportiert und gehasht.
+Exklusives Ziel reports/s2uc/t1-transfer-20261003-01; keine Wiederaufnahme.
+3600s Gesamtgrenze,3540s Worker,60s Abschluss,64MiB gemeinsames Exportbudget.
+G_w ist festes spÃ¤tes Zeitfenster. ModalitÃ¤t und tatsÃ¤chlicher Fehler getrennt.
+I/H-Kontrollen:20/52,zusÃ¤tzlicher separater Bericht,kein Vorhersagefehlersynonym.
+Nur synthetischer Vektortransfer; kein Audio-/Video-Kettentransfer.
+
+V2 korrigiert ausschliesslich die neue generische Belegpruefung: vorzielliche
+Fehlerzellen/Feedbackhistorie einfrieren,Promotion vor spaeterem Feedback
+beruecksichtigen,keine Wiederbelebung abgeloester Keys. V1-Fehlerbelege bleiben erhalten.

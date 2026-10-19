@@ -1,0 +1,34 @@
+{
+  "cases": [
+    {
+      "case": "success",
+      "folder": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\v8-process-limit-20260920\\success",
+      "job": "Local\\MCM-V8-1d4b5796cf9eaa3cf6eb539c3bb559e1",
+      "binding": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\v8-process-limit-20260920\\success\\bundle\\execution-binding.json",
+      "run_id": "S2UC-V8-NEUTRAL-993caf9f1efe4dfe979b35899852e47c",
+      "output": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\v8-process-limit-20260920\\success\\S2UC-V8-NEUTRAL-993caf9f1efe4dfe979b35899852e47c"
+    },
+    {
+      "case": "allocation",
+      "folder": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\v8-process-limit-20260920\\allocation",
+      "job": "Local\\MCM-V8-82343b7c1d34b3e7150adfa7996faf5a"
+    },
+    {
+      "case": "memoryerror",
+      "folder": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\v8-process-limit-20260920\\memoryerror",
+      "job": "Local\\MCM-V8-a636d3bc3ac7df3387b21377460ad395",
+      "binding": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\v8-process-limit-20260920\\memoryerror\\bundle\\execution-binding.json",
+      "run_id": "S2UC-V8-NEUTRAL-9ed1241c56894f4a9f4421bbd6fda43b",
+      "output": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\v8-process-limit-20260920\\memoryerror\\S2UC-V8-NEUTRAL-9ed1241c56894f4a9f4421bbd6fda43b"
+    }
+  ],
+  "limit_bytes": 671088640,
+  "warning_ws_bytes": 100663296,
+  "interval_ms": 10,
+  "runs_per_case": 1,
+  "allocation_chunk": 16777216,
+  "memoryerror_at": 58,
+  "bootstrap": "-I -S; preimport handshake",
+  "tool_sha256": "d72faec9b3573d77617c1f9a11a8c2aea311823c7f552e7c0fdfb18dc1ed649e",
+  "created_utc": "2026-09-20T17:19:33Z"
+}

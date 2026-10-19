@@ -1,0 +1,99 @@
+AUTOMATISCHER WAHRNEHMUNGSPAAR-ANSCHLUSS -- LOKAL GEPRUEFT
+Ausfuehrung pair-context-20260930-01. Keine Runtime-Ersetzung/Produktfreigabe.
+Implementierung tools/_s2uc_pair_context_adapter.py; verwendet unveraenderte
+FactorRecencyArm. Historischer S2-TY-Adapter wurde geprueft: explizite hint-
+Eingabe und anderer Store, daher kein bereits vorhandener automatischer Anschluss.
+
+ABLAUF UND KAUSALITAET
+Ein gebundener synchroner Stream: feste Paare (1,2),(3,4), keine Ergebniswahl.
+Beide hint-Aufrufe vor Aufnahme beider Originalframes. Frames/Wertetupel
+anschliessend identisch an form; close nach vier Frames. Kein Match beeinflusst
+Aufnahme, Gruppengrenzen, Bestaetigung oder Auffrischungsregel.
+Ausgabe ContextReceipt enthaelt ausschliesslich serialisierte Metadaten und
+vollstaendige Matchherkuenfte, keine Wertepayloads/Traceobjekte. Receipt-Typ wird
+als Wahrnehmungseingang abgewiesen. Kein interner Receiptverlauf oder Eingangsqueue.
+Receipt beschreibt Abruf-Vorzustand (read_revision), nicht nachfolgenden Bestand.
+Bei bereits gefuelltem Speicher wird sein Inhalt ausschliesslich durch regulaere
+Aufnahmeschritte veraendert. Kein rueckwirkendes Umschreiben frueherer Receipts.
+
+AUTOMATISCHE BEISPIELE
+candidate: {"status": "PROVISIONAL_CANDIDATE_MATCH", "stream": "stream", "owner": "candidate", "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f", "input_indices": [1, 2], "source_intervals": [[0, 4800], [4800, 9600]], "read_revision": 0, "matches": [{"role": "candidate", "generation": 1, "formation": "seed0", "ordinals": [1, 2, 3, 4], "offset": 0, "factors": [1.0]}]}
+retained_half: {"status": "CONFIRMED_RETAINED_MATCH", "stream": "stream", "owner": "retained_half", "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f", "input_indices": [1, 2], "source_intervals": [[0, 4800], [4800, 9600]], "read_revision": 0, "matches": [{"role": "retained", "generation": 1, "formation": "seed0", "ordinals": [1, 2, 3, 4], "offset": 0, "factors": [0.5]}]}
+ambiguous: {"status": "ABSTAIN_AMBIGUOUS", "stream": "stream", "owner": "ambiguous", "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f", "input_indices": [1, 2], "source_intervals": [[0, 4800], [4800, 9600]], "read_revision": 0, "matches": [{"role": "retained", "generation": 1, "formation": "seed0", "ordinals": [1, 2, 3, 4], "offset": 1, "factors": [1.0]}, {"role": "retained", "generation": 2, "formation": "seed2", "ordinals": [9, 10, 11, 12], "offset": 1, "factors": [1.0]}]}
+empty: {"status": "ABSTAIN_NO_MATCH", "stream": "stream", "owner": "empty", "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f", "input_indices": [1, 2], "source_intervals": [[0, 4800], [4800, 9600]], "read_revision": 0, "matches": []}
+full: {"status": "CONFIRMED_RETAINED_MATCH", "stream": "stream", "owner": "full", "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f", "input_indices": [1, 2], "source_intervals": [[0, 4800], [4800, 9600]], "read_revision": 0, "matches": [{"role": "retained", "generation": 1, "formation": "seed0", "ordinals": [1, 2, 3, 4], "offset": 0, "factors": [1.0]}]}
+candidate: A nur einmal aufgenommen -> vorlaeufige Kandidatenherkunft.
+retained_half: A exakt bestaetigt -> Halbhinweis erreicht bestaetigte A-Herkunft
+mit Faktor .5. Bestaetigt beschreibt Speicherstatus, keine sichere Bedeutung.
+ambiguous: A/D bestaetigt -> alle konkurrierenden Herkuenfte an Position 1.
+empty: leerer Speicher -> kein Treffer, bevor die Frames selbst aufgenommen werden.
+Die vom Beobachter benannten Fixtures steuern weder Paarbildung noch Matcher.
+Nur passende Profil-/Owner-/Streambindung und Index/Quellzeit gelangen zum Adapter.
+
+GLEICHHEIT ZUR REFERENZ UND PRUEFUNGEN
+Fuenf gebundene Szenarien, 14 akzeptierte Frames/14 regulaer aufgenommene Frames,
+sieben automatisch erzeugte Zweiframe-Receipts. Nach jedem Paar identischer
+Speicher zur Aufnahme-ohne-Abruf-Referenz: Werte, Herkuenfte, Kandidat,
+Generationen, Reihenfolge und Endmarken. Vollstaendige Zustandsbelege result.json.
+6 gezielte Adaptertests PASS, 4 zusaetzliche Anschluss-/Grenztests PASS.
+Keine Fehler/Fehlschlaege/Skips. tests.txt und boundary-tests.txt enthalten IDs.
+Zusaetzliche Neunframe-Kontrolle protokolliert Originalobjektidentitaet und
+Ordinale 1..9 genau einmal, einschliesslich Restframe am Geschichtenende.
+Identischer Praefix liefert identischen Receipt vor unterschiedlichen spaeteren
+Frames. Kein Wissen ueber Folgeeingaben. Neun Matchzeilen passen unverkuerzt in
+Receiptgrenze; mutierte externe Ergebnisdaten veraendern ausgegebenen JSON nicht.
+
+LUECKEN, RESTFRAMES, RESET
+Indexluecke/Duplikat/Umordnung, Owner-/Stream-/Profilwechsel oder falscher
+Zeitabstand: Fehler und terminales Schliessen, keine Verbindung ueber Grenze.
+Noch nicht aufgenommene akzeptierte Frames werden als discarded_on_error
+gezaehlt, nicht still verloren. Keine Fortsetzung desselben Owners nach Fehler.
+Normaler Abschluss: einzelnes Restframe -> INSUFFICIENT_PAIR, einmal form;
+unvollstaendige Viererbildung schliessen/verwerfen, danach Owner schliessen.
+Neuer Adapter beginnt mit leerem Buffer, leerem Owner und leeren Endmarken.
+Quellintervallstart: start+(index-1)*hop, Ende=start+window; beide vorab gebunden.
+Dies prueft den Anschlussvertrag, nicht unabhaengig die physische Wahrnehmung.
+
+VOLLSTAENDIGE RESSOURCENBILANZ DES ANSCHLUSSES
+Genau zwei Paarplaetze plus zwei Intervall-Metadatenplaetze; kein Wertecopy.
+Die pair-Frames werden durch arm._hints nur referenziert und danach unveraendert
+aufgenommen. Zwischen Pairbuffer und Hinweisbuffer maximal zwei gleiche Frames,
+kein zusaetzlicher unabhaengiger Zweiframeinhalt. Kein drittes angenommenes Frame
+vor synchronem Abschluss, keine Rueckstauliste. Ein Receipt nach aussen, kein
+intern gehaltener letzter Receipt. Ausgabe maximal 16384 UTF-8-Byte, keine
+Trunkierung; bei Ueberschreitung Fehler/Ownerabschluss. Maximal neun Matches,
+27 Faktorwerte und 36 Originalordinale durch die bestehenden Speicherkapazitaeten.
+IDs bei Streamstart maximal96 UTF-8-Byte; Beobachtungsindices/Ordinale unter2^63.
+Zwei Recency-Endmarken sowie skalare Phase/Revision/Aufnahme-/Fehlerzaehler
+explizit in Adapter/Arm, keine zusaetzliche Erfahrungsbank.
+
+Observer betrachtet Adapter-/Speichermethoden und deren aktive lokale Referenzen.
+Unterschiedliche Frameobjekte, Wertepayloads, Frame-Referenzvorkommen und rekursiv
+sichtbare Python-Objektbytes werden getrennt gezaehlt (Aliase nicht versteckt).
+candidate: {"observer": {"frames": 6, "payloads": 6, "frame_refs": 12, "object_bytes": 13463, "samples": 1572}, "max_receipt_bytes": 353, "accepted": 2, "admitted": 2}
+retained_half: {"observer": {"frames": 6, "payloads": 6, "frame_refs": 12, "object_bytes": 16013, "samples": 1572}, "max_receipt_bytes": 353, "accepted": 2, "admitted": 2}
+ambiguous: {"observer": {"frames": 12, "payloads": 12, "frame_refs": 24, "object_bytes": 19157, "samples": 4536}, "max_receipt_bytes": 448, "accepted": 4, "admitted": 4}
+empty: {"observer": {"frames": 2, "payloads": 2, "frame_refs": 8, "object_bytes": 7748, "samples": 548}, "max_receipt_bytes": 235, "accepted": 2, "admitted": 2}
+full: {"observer": {"frames": 16, "payloads": 16, "frame_refs": 28, "object_bytes": 21470, "samples": 4818}, "max_receipt_bytes": 350, "accepted": 4, "admitted": 4}
+Gesamte instrumentierte Gegenprobe: {"elapsed_ns": 23331378600, "python_peak_bytes": 46987722}
+Vollfall: 8 retained + 4 candidate + bis4 forming =16 Spurframes; Paarbildung
+teilt die zwei Hintplaetze. Wegen Abruf-vor-Aufnahme maximal16 verschiedene
+Frames beobachtet, nicht18 benoetigt. Kein Ueberschreiten von16+2.
+Maximal28 Frame-Referenzvorkommen im Vollfall sind Aliase auf diese16 Frames,
+keine28 Erfahrungspayloads. Physische Wrapper/Metadaten sind in Objektbytebilanz.
+Die Objektbytes sind sys.getsizeof-Schaetzungen sichtbarer Python-Objekte,
+kein Prozess-RAM. Tracemalloc-Gesamtpeak enthaelt Referenzarm, Fixture, Observer,
+Testsnapshots und Ergebnisarchive; dieser externe Testbeobachter ist kein
+Adapterzustand. Metadaten-/Serialisierungsbuffer separat enthalten, Peaks nicht
+addieren. Bestehende PCM unveraendert, 0 Rezeptor-/NJ-Aufrufe.
+
+GRENZEN UND ANSCHLUSS
+Vorhandene gebundene Vektoren pruefen automatische kausale Kontextbereitstellung,
+nicht verbesserte Wahrnehmung oder kontinuierlichen Produktbetrieb. Keine
+gleitenden Paare: (2,3) wird bei dieser festen Phase nicht gesondert abgefragt.
+Gruppierung in feste Vierersegmente ist technischer Anschlussvertrag, keine
+gelernte Episodengrenze. Ergebnisse werden nicht in Wahrnehmungswerte eingebaut.
+Der naechste fachliche Schritt beim Projektleiter ist die Einordnung dieses
+Anschlussbefunds; ein Nutzen von Innerkontext fuer Wahrnehmung braucht eine
+separate Gegenprognose und darf nicht aus verfuegbaren Receipts abgeleitet werden.
+Registry/Originalquellenlauf unberuehrt; bestehende Runtime nicht ersetzt.

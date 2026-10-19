@@ -1,0 +1,13 @@
+test_01_new_scope_same_recipe_and_limits (tests.test_s2uc_er1_v2_integration.Integrated.test_01_new_scope_same_recipe_and_limits) ... ok
+test_02_actual_complete_receipts_and_generation_transition (tests.test_s2uc_er1_v2_integration.Integrated.test_02_actual_complete_receipts_and_generation_transition) ... ok
+test_03_semantic_negatives_after_valid_test_hashes (tests.test_s2uc_er1_v2_integration.Integrated.test_03_semantic_negatives_after_valid_test_hashes) ... ok
+test_04_failed_reference_and_exhausted_report_budget (tests.test_s2uc_er1_v2_integration.Integrated.test_04_failed_reference_and_exhausted_report_budget) ... ok
+test_05_all_terminal_cleanup_and_source_barriers (tests.test_s2uc_er1_v2_integration.Integrated.test_05_all_terminal_cleanup_and_source_barriers) ... ok
+test_06_new_authorization_kind_and_no_creation (tests.test_s2uc_er1_v2_integration.Integrated.test_06_new_authorization_kind_and_no_creation) ... ok
+test_07_accepted_comparator_and_fault_scope (tests.test_s2uc_er1_v2_integration.Integrated.test_07_accepted_comparator_and_fault_scope) ... ok
+test_01_generation_boundaries_and_json_roundtrip (tests.test_s2uc_er1_stock_structural.Structural.test_01_generation_boundaries_and_json_roundtrip) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.784s
+
+OK

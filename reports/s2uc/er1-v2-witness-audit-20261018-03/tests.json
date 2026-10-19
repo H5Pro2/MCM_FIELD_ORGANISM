@@ -1,0 +1,18 @@
+{
+  "count": 12,
+  "ids": [
+    "test_qualified.Qualification.test_asymmetric_promotion",
+    "test_qualified.Qualification.test_broken_origin",
+    "test_qualified.Qualification.test_candidate_promotion_continuity",
+    "test_qualified.Qualification.test_duplicate",
+    "test_qualified.Qualification.test_false_feedback_time",
+    "test_qualified.Qualification.test_false_offset",
+    "test_qualified.Qualification.test_feedback_line_break",
+    "test_qualified.Qualification.test_missing_countervictim",
+    "test_qualified.Qualification.test_omission",
+    "test_qualified.Qualification.test_positive",
+    "test_qualified.Qualification.test_retained_generation_jump",
+    "test_qualified.Qualification.test_target_deduplication"
+  ],
+  "status": "PASS"
+}

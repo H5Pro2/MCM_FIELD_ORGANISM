@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETE_NEUTRAL_PREPARATION_ASSESSMENT",
+  "files": {
+    "REPORT.md": {
+      "bytes": 9493,
+      "sha256": "c071df6d30a7cafdfdb8ae210fbafab718ef56fc613bad59ec8cbfdeb42189e5"
+    },
+    "verification.json": {
+      "bytes": 2772,
+      "sha256": "28fb7f5635bf0750fab2a75b7eced30392ed83b577af6d92538562ee2d3e67c5"
+    }
+  }
+}

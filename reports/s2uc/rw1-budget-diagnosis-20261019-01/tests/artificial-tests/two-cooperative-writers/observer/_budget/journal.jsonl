@@ -1,0 +1,16 @@
+{"append":true,"bytes":17,"kind":"BEGIN","name":"observer/shared.jsonl","previous":"0000000000000000000000000000000000000000000000000000000000000000","role":"supervisor","seq":1}
+{"kind":"COMMIT","previous":"d1aac20889491738630e8d5833b8f3bd5bcc13f759357e6747bfcd8610e093dd","seq":1,"stamp":{"bytes":17,"mtime":1792432065056843400}}
+{"append":true,"bytes":13,"kind":"BEGIN","name":"observer/shared.jsonl","previous":"580ca2c006ed5908ca80872773da19de7ef4d16594cdc25347cb69ea07c3598f","role":"worker","seq":2}
+{"kind":"COMMIT","previous":"f6dc90d0438d882e7998d29c9f11a335747aed4da359bc3bf590859292adfb91","seq":2,"stamp":{"bytes":30,"mtime":1792432065077587400}}
+{"append":true,"bytes":17,"kind":"BEGIN","name":"observer/shared.jsonl","previous":"31249f772a186657a374c3415386ed5805ecb222a7eefb805f534ab1f3e542e5","role":"supervisor","seq":3}
+{"kind":"COMMIT","previous":"1baf9a3d4844a0e67bf6fe907e6ad184b65c40cc56606d452ff932fcc069ace9","seq":3,"stamp":{"bytes":47,"mtime":1792432065101895100}}
+{"append":true,"bytes":13,"kind":"BEGIN","name":"observer/shared.jsonl","previous":"575b205dd5dd54cddc594d31796306d8beaf11f5ca08c4ffd8ded4d10e1e3616","role":"worker","seq":4}
+{"kind":"COMMIT","previous":"956601a96fdb2e35903a328d29e00b77dc87895c614a75627fce5efc91df6a17","seq":4,"stamp":{"bytes":60,"mtime":1792432065130845000}}
+{"append":true,"bytes":17,"kind":"BEGIN","name":"observer/shared.jsonl","previous":"34603cc2f381bbc4b591702a90bcb869235b8b0456b4fcd2c0da8e75f0c4abd3","role":"supervisor","seq":5}
+{"kind":"COMMIT","previous":"2a26ab701f292499c7f3cceb5a22641fcea64be7630fc87e2a02c6eff88833a0","seq":5,"stamp":{"bytes":77,"mtime":1792432065155670500}}
+{"append":true,"bytes":13,"kind":"BEGIN","name":"observer/shared.jsonl","previous":"a17f56006366117dad5983b59b6ae2effe82fd914d28a11889350d9694a2023d","role":"worker","seq":6}
+{"kind":"COMMIT","previous":"773c8bb3370ce7048d902a67338da06a936fa4792bd12cc277cb83c69f5790b9","seq":6,"stamp":{"bytes":90,"mtime":1792432065180229600}}
+{"append":true,"bytes":17,"kind":"BEGIN","name":"observer/shared.jsonl","previous":"0bc38560eb220e71a5c45ccf32dc33079b335a405dca46394ab28196057bc8f7","role":"supervisor","seq":7}
+{"kind":"COMMIT","previous":"c3936279d233f51b366c8b10f04937e4e57af1098f80e3542ed63af572c8d4b0","seq":7,"stamp":{"bytes":107,"mtime":1792432065194766700}}
+{"append":true,"bytes":13,"kind":"BEGIN","name":"observer/shared.jsonl","previous":"89c48c294b3f300c85ce599201438ffa1092be05ab6d52a2d421022c38ba39ca","role":"worker","seq":8}
+{"kind":"COMMIT","previous":"22eef6ce2bee4aeaae873adadbb35d1500f66ebce67fc7646f0e72a27675c9e9","seq":8,"stamp":{"bytes":120,"mtime":1792432065225760600}}

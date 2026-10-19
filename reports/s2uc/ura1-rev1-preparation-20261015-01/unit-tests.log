@@ -1,0 +1,23 @@
+test_E01_exclusive_target_no_authorization (tests.test_s2uc_ura1_rev1.REV1Tests.test_E01_exclusive_target_no_authorization) ... ok
+test_E02_existing_target_cannot_resume (tests.test_s2uc_ura1_rev1.REV1Tests.test_E02_existing_target_cannot_resume) ... ok
+test_E03_unchanged_protection_objects_and_research_faults_disabled (tests.test_s2uc_ura1_rev1.REV1Tests.test_E03_unchanged_protection_objects_and_research_faults_disabled) ... ok
+test_E04_no_legacy_entry_or_shortcut_in_research (tests.test_s2uc_ura1_rev1.REV1Tests.test_E04_no_legacy_entry_or_shortcut_in_research) ... ok
+test_S01_research_locked_before_hash (tests.test_s2uc_ura1_rev1.REV1Tests.test_S01_research_locked_before_hash) ... ok
+test_S02_all_neutral_recipes_match_independent_reference (tests.test_s2uc_ura1_rev1.REV1Tests.test_S02_all_neutral_recipes_match_independent_reference) ... ok
+test_S03_source_mutation_and_extra_signal_rejected (tests.test_s2uc_ura1_rev1.REV1Tests.test_S03_source_mutation_and_extra_signal_rejected) ... ok
+test_S04_rejection_sampling_and_draw_cap (tests.test_s2uc_ura1_rev1.REV1Tests.test_S04_rejection_sampling_and_draw_cap) ... ok
+test_S05_invalid_inputs_and_no_short_research_option (tests.test_s2uc_ura1_rev1.REV1Tests.test_S05_invalid_inputs_and_no_short_research_option) ... ok
+test_S06_neutral_hash_namespace_only (tests.test_s2uc_ura1_rev1.REV1Tests.test_S06_neutral_hash_namespace_only) ... ok
+test_T01_matrix_identity_and_stratification (tests.test_s2uc_ura1_rev1.REV1Tests.test_T01_matrix_identity_and_stratification) ... ok
+test_T02_window_boundaries_and_denominators (tests.test_s2uc_ura1_rev1.REV1Tests.test_T02_window_boundaries_and_denominators) ... ok
+test_T03_positive_negative_and_zero_full_reference (tests.test_s2uc_ura1_rev1.REV1Tests.test_T03_positive_negative_and_zero_full_reference) ... ok
+test_T04_orientation_balance_and_independent_nonconstant_quantiles (tests.test_s2uc_ura1_rev1.REV1Tests.test_T04_orientation_balance_and_independent_nonconstant_quantiles) ... ok
+test_T05_decision_zero_touches_and_crossings (tests.test_s2uc_ura1_rev1.REV1Tests.test_T05_decision_zero_touches_and_crossings) ... ok
+test_T06_incomplete_and_invalid_data_no_verdict (tests.test_s2uc_ura1_rev1.REV1Tests.test_T06_incomplete_and_invalid_data_no_verdict) ... ok
+test_T07_reference_detects_window_output_corruption (tests.test_s2uc_ura1_rev1.REV1Tests.test_T07_reference_detects_window_output_corruption) ... ok
+test_T08_nontrivial_intervals_touch_zero_full_reference (tests.test_s2uc_ura1_rev1.REV1Tests.test_T08_nontrivial_intervals_touch_zero_full_reference) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 30.258s
+
+OK

@@ -1,0 +1,22 @@
+test_before_admission_and_immutable (tests.test_s2uc_continuation_adapter.ContinuationTests.test_before_admission_and_immutable) ... ok
+test_error_close_release_and_no_feedback (tests.test_s2uc_continuation_adapter.ContinuationTests.test_error_close_release_and_no_feedback) ... ok
+test_evaluation_failure_releases_slots (tests.test_s2uc_continuation_adapter.ContinuationTests.test_evaluation_failure_releases_slots) ... ok
+test_eviction_does_not_change_prediction (tests.test_s2uc_continuation_adapter.ContinuationTests.test_eviction_does_not_change_prediction) ... ok
+test_factor_and_end_abstain (tests.test_s2uc_continuation_adapter.ContinuationTests.test_factor_and_end_abstain) ... ok
+test_methods_unchanged (tests.test_s2uc_continuation_adapter.ContinuationTests.test_methods_unchanged) ... ok
+test_one_ulp_not_tolerated (tests.test_s2uc_continuation_adapter.ContinuationTests.test_one_ulp_not_tolerated) ... ok
+test_gap_terminates_no_cross_pair (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_gap_terminates_no_cross_pair) ... ok
+test_no_self_match_and_admission_once (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_no_self_match_and_admission_once) ... ok
+test_receipt_has_no_payload (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_receipt_has_no_payload) ... ok
+test_receipt_not_input (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_receipt_not_input) ... ok
+test_remainder_and_reset (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_remainder_and_reset) ... ok
+test_scope_and_time_errors (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_scope_and_time_errors) ... ok
+test_duplicate_and_close_reuse_rejected (tests.test_s2uc_pair_context_boundaries.PairBoundaryTests.test_duplicate_and_close_reuse_rejected) ... ok
+test_every_original_admitted_once_by_identity (tests.test_s2uc_pair_context_boundaries.PairBoundaryTests.test_every_original_admitted_once_by_identity) ... ok
+test_identical_prefix_independent_of_future (tests.test_s2uc_pair_context_boundaries.PairBoundaryTests.test_identical_prefix_independent_of_future) ... ok
+test_receipt_size_bound_all_nine_matches (tests.test_s2uc_pair_context_boundaries.PairBoundaryTests.test_receipt_size_bound_all_nine_matches) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.006s
+
+OK

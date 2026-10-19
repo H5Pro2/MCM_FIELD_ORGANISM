@@ -1,0 +1,1 @@
+{"cases":[{"counts":{"/R/events":24,"/R/forecasts":4,"/R/internal":92,"/R/rows":3,"/U/events":24,"/U/forecasts":4,"/U/internal":92,"/U/rows":3},"integrity":"PASS_DELTA_INTEGRITY","replicate":1},{"counts":{"/R/events":24,"/R/forecasts":4,"/R/internal":92,"/R/rows":3,"/U/events":24,"/U/forecasts":4,"/U/internal":92,"/U/rows":3},"integrity":"PASS_DELTA_INTEGRITY","replicate":2}]}

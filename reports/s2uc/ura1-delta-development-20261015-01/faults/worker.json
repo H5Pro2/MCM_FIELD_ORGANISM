@@ -1,0 +1,84 @@
+{
+  "cases": [],
+  "membership": true,
+  "mode": "faults",
+  "phases": [
+    {
+      "end_process": {
+        "lifetime_peak_commit": 36917248,
+        "private_bytes": 35172352,
+        "working_set": 41144320
+      },
+      "name": "imports_and_initialization",
+      "python_current": 9436480,
+      "python_peak": 12303721,
+      "seconds": 1.653811100000894,
+      "start_process": {
+        "lifetime_peak_commit": 12840960,
+        "private_bytes": 12320768,
+        "working_set": 18657280
+      }
+    },
+    {
+      "end_process": {
+        "lifetime_peak_commit": 44691456,
+        "private_bytes": 36253696,
+        "working_set": 43786240
+      },
+      "name": "delta_fault_and_bound_tests",
+      "python_current": 10202148,
+      "python_peak": 18856236,
+      "seconds": 4.75932229999853,
+      "start_process": {
+        "lifetime_peak_commit": 36917248,
+        "private_bytes": 35172352,
+        "working_set": 41148416
+      }
+    },
+    {
+      "end_process": {
+        "lifetime_peak_commit": 44691456,
+        "private_bytes": 36253696,
+        "working_set": 43786240
+      },
+      "name": "final_cleanup",
+      "python_current": 9891326,
+      "python_peak": 10206280,
+      "seconds": 0.021476300000358606,
+      "start_process": {
+        "lifetime_peak_commit": 44691456,
+        "private_bytes": 36253696,
+        "working_set": 43786240
+      }
+    }
+  ],
+  "seconds": 6.454265399999713,
+  "status": "PASS",
+  "tests": [
+    {
+      "id": "tests.test_s2uc_ura1_delta.DeltaTests.test_T01_full_bytes_numbers_metadata_and_anchors",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_delta.DeltaTests.test_T02_missing_and_swapped_deltas",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_delta.DeltaTests.test_T03_changed_span_and_wrong_initial_state",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_delta.DeltaTests.test_T04_invalid_delta_path_and_value_references",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_delta.DeltaTests.test_T05_management_record_and_write_failure_cleanup",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_s2uc_ura1_delta.DeltaTests.test_T06_live_small_scope_and_original_bindings",
+      "status": "PASS"
+    }
+  ],
+  "worker_pid": 13336
+}

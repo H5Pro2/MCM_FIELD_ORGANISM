@@ -1,0 +1,190 @@
+{
+  "I1": {
+    "reference_checks": 0,
+    "hints": [
+      [
+        "g1/12",
+        "TRACE_MATCH",
+        "CONFIRMED"
+      ],
+      [
+        "g1/24",
+        "ABSTAIN_NO_RETAINED_TRACE",
+        "CONFIRMED"
+      ],
+      [
+        "g1/26",
+        "ABSTAIN_NO_RETAINED_TRACE",
+        "CONFIRMED"
+      ],
+      [
+        "g2/38",
+        "ABSTAIN_NO_RETAINED_TRACE",
+        "CONFIRMED"
+      ],
+      [
+        "g3/60",
+        "ABSTAIN_NO_RETAINED_TRACE",
+        "CONFIRMED"
+      ],
+      [
+        "g3/67",
+        "ABSTAIN_NO_RETAINED_TRACE",
+        "CONFIRMED"
+      ],
+      [
+        "g3/69",
+        "TRACE_MATCH",
+        "CONFIRMED"
+      ]
+    ],
+    "temporary": {
+      "peak_live_trace_frames": 8,
+      "peak_live_hint_frames": 2,
+      "peak_live_total_frames": 8,
+      "samples": 6754,
+      "observer_ns": 417317700
+    }
+  },
+  "I2": {
+    "reference_checks": 100,
+    "hints": [
+      [
+        "g1/12",
+        "TRACE_MATCH",
+        "CONFIRMED"
+      ],
+      [
+        "g1/24",
+        "ABSTAIN_NO_RETAINED_TRACE",
+        "CONFIRMED"
+      ],
+      [
+        "g1/26",
+        "TRACE_MATCH",
+        "CONFIRMED"
+      ],
+      [
+        "g2/38",
+        "TRACE_MATCH",
+        "CONFIRMED"
+      ],
+      [
+        "g3/60",
+        "TRACE_MATCH",
+        "CONFIRMED"
+      ],
+      [
+        "g3/67",
+        "TRACE_MATCH",
+        "CONFIRMED"
+      ],
+      [
+        "g3/69",
+        "TRACE_MATCH",
+        "CONFIRMED"
+      ]
+    ],
+    "temporary": {
+      "peak_live_trace_frames": 12,
+      "peak_live_hint_frames": 2,
+      "peak_live_total_frames": 12,
+      "samples": 7111,
+      "observer_ns": 494628200
+    }
+  },
+  "B1": {
+    "reference_checks": 100,
+    "hints": [
+      [
+        "g1/12",
+        "TRACE_MATCH",
+        "CONFIRMED"
+      ],
+      [
+        "g1/24",
+        "TRACE_MATCH",
+        "CONFIRMED"
+      ],
+      [
+        "g1/26",
+        "ABSTAIN_NO_RETAINED_TRACE",
+        "CONFIRMED"
+      ],
+      [
+        "g2/38",
+        "ABSTAIN_NO_RETAINED_TRACE",
+        "CONFIRMED"
+      ],
+      [
+        "g3/60",
+        "TRACE_MATCH",
+        "CONFIRMED"
+      ],
+      [
+        "g3/67",
+        "ABSTAIN_NO_RETAINED_TRACE",
+        "CONFIRMED"
+      ],
+      [
+        "g3/69",
+        "TRACE_MATCH",
+        "CONFIRMED"
+      ]
+    ],
+    "temporary": {
+      "peak_live_trace_frames": 12,
+      "peak_live_hint_frames": 2,
+      "peak_live_total_frames": 12,
+      "samples": 3220,
+      "observer_ns": 207448600
+    }
+  },
+  "B2": {
+    "reference_checks": 0,
+    "hints": [
+      [
+        "g1/12",
+        "TRACE_MATCH",
+        "CONFIRMED"
+      ],
+      [
+        "g1/24",
+        "TRACE_MATCH",
+        "CONFIRMED"
+      ],
+      [
+        "g1/26",
+        "ABSTAIN_NO_RETAINED_TRACE",
+        "CONFIRMED"
+      ],
+      [
+        "g2/38",
+        "ABSTAIN_NO_RETAINED_TRACE",
+        "CONFIRMED"
+      ],
+      [
+        "g3/60",
+        "TRACE_MATCH",
+        "CONFIRMED"
+      ],
+      [
+        "g3/67",
+        "TRACE_MATCH",
+        "CONFIRMED"
+      ],
+      [
+        "g3/69",
+        "TRACE_MATCH",
+        "CONFIRMED"
+      ]
+    ],
+    "temporary": {
+      "peak_live_trace_frames": 12,
+      "peak_live_hint_frames": 2,
+      "peak_live_total_frames": 12,
+      "samples": 3188,
+      "observer_ns": 219336700
+    }
+  }
+}

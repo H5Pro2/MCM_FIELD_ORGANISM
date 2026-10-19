@@ -1,0 +1,882 @@
+[
+  {
+    "test_id": "tests.test_s2uc_execution_v8.V8ExecutionTests.test_codec_failure_preserves_connection_error_and_closed_owners",
+    "archive": "closures/001",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "PRIMARY_SUPPLIER_FAILURE",
+    "actual": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26866,
+        "static_shared": 96872,
+        "record": 0,
+        "verification": 0,
+        "error": 850,
+        "terminal": 850,
+        "minimal": 0,
+        "staging": 0
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26866,
+        "record": 0,
+        "verification": 0,
+        "staging": 0,
+        "shared": 98572
+      },
+      "total_bytes": 824491,
+      "violations": [],
+      "within_limits": true
+    },
+    "source_completion": {
+      "attempts": 1,
+      "successes": 0,
+      "status": "PARTIAL",
+      "reached_step": "NONE",
+      "counters": {
+        "pcm_hashes": 0,
+        "audio_analyses": 0,
+        "nj_projections": 0
+      }
+    },
+    "owners_closed": true,
+    "gate": false,
+    "files": 57
+  },
+  {
+    "test_id": "tests.test_s2uc_execution_v8.V8ExecutionTests.test_constructor_failure_closes_both_registered_owners_and_resets_gate",
+    "archive": "closures/002",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "CONSTRUCTOR_FAILURE",
+    "actual": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26866,
+        "static_shared": 96872,
+        "record": 0,
+        "verification": 0,
+        "error": 877,
+        "terminal": 877,
+        "minimal": 0,
+        "staging": 0
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26866,
+        "record": 0,
+        "verification": 0,
+        "staging": 0,
+        "shared": 98626
+      },
+      "total_bytes": 824545,
+      "violations": [],
+      "within_limits": true
+    },
+    "source_completion": {
+      "attempts": 0,
+      "successes": 0,
+      "status": "PARTIAL",
+      "reached_step": "NONE",
+      "counters": {
+        "pcm_hashes": 0,
+        "audio_analyses": 0,
+        "nj_projections": 0
+      }
+    },
+    "owners_closed": true,
+    "gate": false,
+    "files": 57
+  },
+  {
+    "test_id": "tests.test_s2uc_execution_v8.V8ExecutionTests.test_counter_phases_supplier_hash_receptor_and_projection_failures",
+    "archive": "closures/003",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "ValueError",
+    "actual": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26875,
+        "static_shared": 96872,
+        "record": 2396,
+        "verification": 382,
+        "error": 1330,
+        "terminal": 1330,
+        "minimal": 0,
+        "staging": 0
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26875,
+        "record": 2396,
+        "verification": 382,
+        "staging": 0,
+        "shared": 99532
+      },
+      "total_bytes": 828238,
+      "violations": [],
+      "within_limits": true
+    },
+    "source_completion": {
+      "attempts": 1,
+      "successes": 0,
+      "status": "PARTIAL",
+      "reached_step": "NONE",
+      "counters": {
+        "pcm_hashes": 0,
+        "audio_analyses": 0,
+        "nj_projections": 0
+      }
+    },
+    "owners_closed": true,
+    "gate": false,
+    "files": 59
+  },
+  {
+    "test_id": "tests.test_s2uc_execution_v8.V8ExecutionTests.test_counter_phases_supplier_hash_receptor_and_projection_failures",
+    "archive": "closures/004",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "PCM_HASH_INVALID",
+    "actual": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26871,
+        "static_shared": 96872,
+        "record": 2402,
+        "verification": 382,
+        "error": 1336,
+        "terminal": 1336,
+        "minimal": 0,
+        "staging": 0
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26871,
+        "record": 2402,
+        "verification": 382,
+        "staging": 0,
+        "shared": 99544
+      },
+      "total_bytes": 828252,
+      "violations": [],
+      "within_limits": true
+    },
+    "source_completion": {
+      "attempts": 1,
+      "successes": 0,
+      "status": "PARTIAL",
+      "reached_step": "HASH",
+      "counters": {
+        "pcm_hashes": 1,
+        "audio_analyses": 0,
+        "nj_projections": 0
+      }
+    },
+    "owners_closed": true,
+    "gate": false,
+    "files": 59
+  },
+  {
+    "test_id": "tests.test_s2uc_execution_v8.V8ExecutionTests.test_counter_phases_supplier_hash_receptor_and_projection_failures",
+    "archive": "closures/005",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "ValueError",
+    "actual": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26875,
+        "static_shared": 96872,
+        "record": 2399,
+        "verification": 382,
+        "error": 1333,
+        "terminal": 1333,
+        "minimal": 0,
+        "staging": 0
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26875,
+        "record": 2399,
+        "verification": 382,
+        "staging": 0,
+        "shared": 99538
+      },
+      "total_bytes": 828247,
+      "violations": [],
+      "within_limits": true
+    },
+    "source_completion": {
+      "attempts": 1,
+      "successes": 0,
+      "status": "PARTIAL",
+      "reached_step": "ANALYZE",
+      "counters": {
+        "pcm_hashes": 1,
+        "audio_analyses": 1,
+        "nj_projections": 0
+      }
+    },
+    "owners_closed": true,
+    "gate": false,
+    "files": 59
+  },
+  {
+    "test_id": "tests.test_s2uc_execution_v8.V8ExecutionTests.test_counter_phases_supplier_hash_receptor_and_projection_failures",
+    "archive": "closures/006",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "ValueError",
+    "actual": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26877,
+        "static_shared": 96872,
+        "record": 2394,
+        "verification": 382,
+        "error": 1328,
+        "terminal": 1328,
+        "minimal": 0,
+        "staging": 0
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26877,
+        "record": 2394,
+        "verification": 382,
+        "staging": 0,
+        "shared": 99528
+      },
+      "total_bytes": 828234,
+      "violations": [],
+      "within_limits": true
+    },
+    "source_completion": {
+      "attempts": 1,
+      "successes": 0,
+      "status": "PARTIAL",
+      "reached_step": "NJ",
+      "counters": {
+        "pcm_hashes": 1,
+        "audio_analyses": 1,
+        "nj_projections": 1
+      }
+    },
+    "owners_closed": true,
+    "gate": false,
+    "files": 59
+  },
+  {
+    "test_id": "tests.test_s2uc_execution_v8.V8ExecutionTests.test_existing_output_and_repeated_use_never_invoke_supplier",
+    "archive": "closures/007",
+    "status": "CLOSED_NEUTRAL_VERIFIED",
+    "primary_error": null,
+    "actual": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26866,
+        "static_shared": 96872,
+        "record": 184874,
+        "verification": 2433,
+        "error": 0,
+        "terminal": 1644,
+        "minimal": 0,
+        "staging": 0
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26866,
+        "record": 184874,
+        "verification": 2433,
+        "staging": 0,
+        "shared": 98516
+      },
+      "total_bytes": 1011742,
+      "violations": [],
+      "within_limits": true
+    },
+    "source_completion": {
+      "attempts": 58,
+      "successes": 58,
+      "status": "COMPLETE",
+      "reached_step": "NJ",
+      "counters": {
+        "pcm_hashes": 58,
+        "audio_analyses": 58,
+        "nj_projections": 58
+      }
+    },
+    "owners_closed": true,
+    "gate": false,
+    "files": 58
+  },
+  {
+    "test_id": "tests.test_s2uc_execution_v8.V8ExecutionTests.test_failed_attempt_58_keeps_57_successes_and_original_error",
+    "archive": "closures/008",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "LAST_ENDPOINT_FAILURE",
+    "actual": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26866,
+        "static_shared": 96872,
+        "record": 181124,
+        "verification": 385,
+        "error": 1663,
+        "terminal": 1663,
+        "minimal": 0,
+        "staging": 0
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26866,
+        "record": 181124,
+        "verification": 385,
+        "staging": 0,
+        "shared": 100198
+      },
+      "total_bytes": 1007626,
+      "violations": [],
+      "within_limits": true
+    },
+    "source_completion": {
+      "attempts": 58,
+      "successes": 57,
+      "status": "PARTIAL",
+      "reached_step": "NONE",
+      "counters": {
+        "pcm_hashes": 57,
+        "audio_analyses": 57,
+        "nj_projections": 57
+      }
+    },
+    "owners_closed": true,
+    "gate": false,
+    "files": 59
+  },
+  {
+    "test_id": "tests.test_s2uc_execution_v8.V8ExecutionTests.test_failed_execution_consumes_identity_and_blocks_retry",
+    "archive": "closures/009",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "ONE_SHOT_ABORT",
+    "actual": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26866,
+        "static_shared": 96872,
+        "record": 2400,
+        "verification": 382,
+        "error": 1334,
+        "terminal": 1334,
+        "minimal": 0,
+        "staging": 0
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26866,
+        "record": 2400,
+        "verification": 382,
+        "staging": 0,
+        "shared": 99540
+      },
+      "total_bytes": 828241,
+      "violations": [],
+      "within_limits": true
+    },
+    "source_completion": {
+      "attempts": 1,
+      "successes": 0,
+      "status": "PARTIAL",
+      "reached_step": "NONE",
+      "counters": {
+        "pcm_hashes": 0,
+        "audio_analyses": 0,
+        "nj_projections": 0
+      }
+    },
+    "owners_closed": true,
+    "gate": false,
+    "files": 59
+  },
+  {
+    "test_id": "tests.test_s2uc_execution_v8.V8ExecutionTests.test_failure_between_arm_calls_preserves_pending_materialization",
+    "archive": "closures/010",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "SECOND_ARM_FAILURE",
+    "actual": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26866,
+        "static_shared": 96872,
+        "record": 6450,
+        "verification": 382,
+        "error": 1336,
+        "terminal": 1336,
+        "minimal": 0,
+        "staging": 0
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26866,
+        "record": 6450,
+        "verification": 382,
+        "staging": 0,
+        "shared": 99544
+      },
+      "total_bytes": 832295,
+      "violations": [],
+      "within_limits": true
+    },
+    "source_completion": {
+      "attempts": 1,
+      "successes": 1,
+      "status": "PARTIAL",
+      "reached_step": "NJ",
+      "counters": {
+        "pcm_hashes": 1,
+        "audio_analyses": 1,
+        "nj_projections": 1
+      }
+    },
+    "owners_closed": true,
+    "gate": false,
+    "files": 59
+  },
+  {
+    "test_id": "tests.test_s2uc_execution_v8.V8ExecutionTests.test_full_58_materializations_share_identical_values_between_both_arms",
+    "archive": "closures/011",
+    "status": "CLOSED_NEUTRAL_VERIFIED",
+    "primary_error": null,
+    "actual": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26866,
+        "static_shared": 96872,
+        "record": 184874,
+        "verification": 2433,
+        "error": 0,
+        "terminal": 1644,
+        "minimal": 0,
+        "staging": 0
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26866,
+        "record": 184874,
+        "verification": 2433,
+        "staging": 0,
+        "shared": 98516
+      },
+      "total_bytes": 1011742,
+      "violations": [],
+      "within_limits": true
+    },
+    "source_completion": {
+      "attempts": 58,
+      "successes": 58,
+      "status": "COMPLETE",
+      "reached_step": "NJ",
+      "counters": {
+        "pcm_hashes": 58,
+        "audio_analyses": 58,
+        "nj_projections": 58
+      }
+    },
+    "owners_closed": true,
+    "gate": false,
+    "files": 58
+  },
+  {
+    "test_id": "tests.test_s2uc_execution_v8.V8ExecutionTests.test_full_source_completion_error_does_not_overwrite_an_aborted_record",
+    "archive": "closures/012",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "PRIMARY_ABORT",
+    "actual": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26866,
+        "static_shared": 96872,
+        "record": 0,
+        "verification": 0,
+        "error": 846,
+        "terminal": 846,
+        "minimal": 0,
+        "staging": 0
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26866,
+        "record": 0,
+        "verification": 0,
+        "staging": 0,
+        "shared": 98564
+      },
+      "total_bytes": 824483,
+      "violations": [],
+      "within_limits": true
+    },
+    "source_completion": {
+      "attempts": 1,
+      "successes": 0,
+      "status": "PARTIAL",
+      "reached_step": "NONE",
+      "counters": {
+        "pcm_hashes": 0,
+        "audio_analyses": 0,
+        "nj_projections": 0
+      }
+    },
+    "owners_closed": true,
+    "gate": false,
+    "files": 57
+  },
+  {
+    "test_id": "tests.test_s2uc_execution_v8.V8ExecutionTests.test_last_owner_failure_keeps_full_source_completion",
+    "archive": "closures/013",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "OWNER_CLOSE_INVALID",
+    "actual": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26866,
+        "static_shared": 96872,
+        "record": 185339,
+        "verification": 393,
+        "error": 1659,
+        "terminal": 1659,
+        "minimal": 0,
+        "staging": 0
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26866,
+        "record": 185339,
+        "verification": 393,
+        "staging": 0,
+        "shared": 100190
+      },
+      "total_bytes": 1011841,
+      "violations": [],
+      "within_limits": true
+    },
+    "source_completion": {
+      "attempts": 58,
+      "successes": 58,
+      "status": "COMPLETE",
+      "reached_step": "NJ",
+      "counters": {
+        "pcm_hashes": 58,
+        "audio_analyses": 58,
+        "nj_projections": 58
+      }
+    },
+    "owners_closed": true,
+    "gate": false,
+    "files": 59
+  },
+  {
+    "test_id": "tests.test_s2uc_execution_v8.V8ExecutionTests.test_missing_or_manipulated_receipts_and_full_completion_are_rejected",
+    "archive": "closures/014",
+    "status": "CLOSED_NEUTRAL_VERIFIED",
+    "primary_error": null,
+    "actual": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26866,
+        "static_shared": 96872,
+        "record": 184874,
+        "verification": 2433,
+        "error": 0,
+        "terminal": 1644,
+        "minimal": 0,
+        "staging": 0
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26866,
+        "record": 184874,
+        "verification": 2433,
+        "staging": 0,
+        "shared": 98516
+      },
+      "total_bytes": 1011742,
+      "violations": [],
+      "within_limits": true
+    },
+    "source_completion": {
+      "attempts": 58,
+      "successes": 58,
+      "status": "COMPLETE",
+      "reached_step": "NJ",
+      "counters": {
+        "pcm_hashes": 58,
+        "audio_analyses": 58,
+        "nj_projections": 58
+      }
+    },
+    "owners_closed": true,
+    "gate": false,
+    "files": 58
+  },
+  {
+    "test_id": "tests.test_s2uc_execution_v8.V8ExecutionTests.test_neutral_wrapper_still_rejects_materialized_records",
+    "archive": "closures/015",
+    "status": "CLOSED_NEUTRAL_VERIFIED",
+    "primary_error": null,
+    "actual": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26866,
+        "static_shared": 96872,
+        "record": 184874,
+        "verification": 2433,
+        "error": 0,
+        "terminal": 1644,
+        "minimal": 0,
+        "staging": 0
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26866,
+        "record": 184874,
+        "verification": 2433,
+        "staging": 0,
+        "shared": 98516
+      },
+      "total_bytes": 1011742,
+      "violations": [],
+      "within_limits": true
+    },
+    "source_completion": {
+      "attempts": 58,
+      "successes": 58,
+      "status": "COMPLETE",
+      "reached_step": "NJ",
+      "counters": {
+        "pcm_hashes": 58,
+        "audio_analyses": 58,
+        "nj_projections": 58
+      }
+    },
+    "owners_closed": true,
+    "gate": false,
+    "files": 58
+  },
+  {
+    "test_id": "tests.test_s2uc_execution_v8.V8ExecutionTests.test_owner_close_failure_is_primary_and_cleanup_closes_both",
+    "archive": "closures/016",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "OWNER_CLOSE_INVALID",
+    "actual": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26866,
+        "static_shared": 96872,
+        "record": 71873,
+        "verification": 392,
+        "error": 1348,
+        "terminal": 1348,
+        "minimal": 0,
+        "staging": 0
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26866,
+        "record": 71873,
+        "verification": 392,
+        "staging": 0,
+        "shared": 99568
+      },
+      "total_bytes": 897752,
+      "violations": [],
+      "within_limits": true
+    },
+    "source_completion": {
+      "attempts": 22,
+      "successes": 22,
+      "status": "PARTIAL",
+      "reached_step": "NJ",
+      "counters": {
+        "pcm_hashes": 22,
+        "audio_analyses": 22,
+        "nj_projections": 22
+      }
+    },
+    "owners_closed": true,
+    "gate": false,
+    "files": 59
+  },
+  {
+    "test_id": "tests.test_s2uc_execution_v8.V8ExecutionTests.test_process_restart_with_existing_output_remains_closed",
+    "archive": "closures/017",
+    "status": "CLOSED_NEUTRAL_VERIFIED",
+    "primary_error": null,
+    "actual": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26866,
+        "static_shared": 96872,
+        "record": 184874,
+        "verification": 2433,
+        "error": 0,
+        "terminal": 1644,
+        "minimal": 0,
+        "staging": 0
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26866,
+        "record": 184874,
+        "verification": 2433,
+        "staging": 0,
+        "shared": 98516
+      },
+      "total_bytes": 1011742,
+      "violations": [],
+      "within_limits": true
+    },
+    "source_completion": {
+      "attempts": 58,
+      "successes": 58,
+      "status": "COMPLETE",
+      "reached_step": "NJ",
+      "counters": {
+        "pcm_hashes": 58,
+        "audio_analyses": 58,
+        "nj_projections": 58
+      }
+    },
+    "owners_closed": true,
+    "gate": false,
+    "files": 58
+  },
+  {
+    "test_id": "tests.test_s2uc_execution_v8.V8ExecutionTests.test_publication_failures_use_shared_core_and_keep_verification",
+    "archive": "closures/018",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "TERMINAL_AFTER_RENAME",
+    "actual": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26866,
+        "static_shared": 96872,
+        "record": 184874,
+        "verification": 2433,
+        "error": 1718,
+        "terminal": 1644,
+        "minimal": 1779,
+        "staging": 0
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26866,
+        "record": 184874,
+        "verification": 2433,
+        "staging": 0,
+        "shared": 102013
+      },
+      "total_bytes": 1015239,
+      "violations": [],
+      "within_limits": true
+    },
+    "source_completion": {
+      "attempts": 58,
+      "successes": 58,
+      "status": "COMPLETE",
+      "reached_step": "NJ",
+      "counters": {
+        "pcm_hashes": 58,
+        "audio_analyses": 58,
+        "nj_projections": 58
+      }
+    },
+    "owners_closed": true,
+    "gate": false,
+    "files": 60
+  },
+  {
+    "test_id": "tests.test_s2uc_execution_v8.V8ExecutionTests.test_second_story_constructor_failure_preserves_completed_source_prefix",
+    "archive": "closures/019",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "SECOND_CONSTRUCTOR",
+    "actual": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26866,
+        "static_shared": 96872,
+        "record": 0,
+        "verification": 0,
+        "error": 1035,
+        "terminal": 1035,
+        "minimal": 0,
+        "staging": 0
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26866,
+        "record": 0,
+        "verification": 0,
+        "staging": 0,
+        "shared": 98942
+      },
+      "total_bytes": 824861,
+      "violations": [],
+      "within_limits": true
+    },
+    "source_completion": {
+      "attempts": 22,
+      "successes": 22,
+      "status": "PARTIAL",
+      "reached_step": "NJ",
+      "counters": {
+        "pcm_hashes": 22,
+        "audio_analyses": 22,
+        "nj_projections": 22
+      }
+    },
+    "owners_closed": true,
+    "gate": false,
+    "files": 57
+  },
+  {
+    "test_id": "tests.test_s2uc_execution_v8.V8ExecutionTests.test_staging_cleanup_failure_is_counted_and_no_second_temporary_is_created",
+    "archive": "closures/020",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "PARTIAL_WRITE",
+    "actual": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26866,
+        "static_shared": 96872,
+        "record": 0,
+        "verification": 0,
+        "error": 0,
+        "terminal": 0,
+        "minimal": 0,
+        "staging": 73
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26866,
+        "record": 0,
+        "verification": 0,
+        "staging": 73,
+        "shared": 96872
+      },
+      "total_bytes": 822864,
+      "violations": [],
+      "within_limits": true
+    },
+    "source_completion": {
+      "attempts": 58,
+      "successes": 58,
+      "status": "COMPLETE",
+      "reached_step": "NJ",
+      "counters": {
+        "pcm_hashes": 58,
+        "audio_analyses": 58,
+        "nj_projections": 58
+      }
+    },
+    "owners_closed": true,
+    "gate": false,
+    "files": 56
+  }
+]

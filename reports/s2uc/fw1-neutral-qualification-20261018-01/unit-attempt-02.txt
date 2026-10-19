@@ -1,0 +1,20 @@
+test_02_frozen_relearning_repeated_events (experiments.fw1.test_contract.Contract.test_02_frozen_relearning_repeated_events) ... FAIL
+test_03_partial_publication_fails_closed (experiments.fw1.test_contract.Contract.test_03_partial_publication_fails_closed) ... ok
+test_04_duplicate_input_rejected (experiments.fw1.test_contract.Contract.test_04_duplicate_input_rejected) ... ok
+
+======================================================================
+FAIL: test_02_frozen_relearning_repeated_events (experiments.fw1.test_contract.Contract.test_02_frozen_relearning_repeated_events)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\experiments\fw1\test_contract.py", line 78, in test_02_frozen_relearning_repeated_events
+    def test_02_frozen_relearning_repeated_events(self):self.history()
+                                                        ~~~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\experiments\fw1\test_contract.py", line 62, in history
+    if i==13:self.assertTrue(cellmap(a))
+             ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: {} is not true
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.017s
+
+FAILED (failures=1)

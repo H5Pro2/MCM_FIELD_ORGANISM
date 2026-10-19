@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "tests_passed": 79,
+  "existing_tests_rerun": 70,
+  "new_tests_rerun": 9,
+  "previous_obligations_preserved": 175,
+  "previous_files_unchanged": 6117,
+  "code_files": 62,
+  "code_bytes": 851840,
+  "code_limit": 851968,
+  "code_free": 128,
+  "fresh_archive_files_verified": 223,
+  "previous_archive_files_verified": 222,
+  "new_implementation_files": [
+    {
+      "path": "tools/_s2uc_provenance_appendix.py",
+      "bytes": 13955,
+      "sha256": "f33e8bb35a1dcad2545d4b08562818763a3e2ddda5463732e523fb4fb2af38e7"
+    },
+    {
+      "path": "tests/test_s2uc_provenance_appendix.py",
+      "bytes": 10505,
+      "sha256": "b08f6e9f22d6134f512b7427b75ad075e040fbde6dba1fb4c4da490ef3543aeb"
+    },
+    {
+      "path": "tools/s2uc_appendix_check.py",
+      "bytes": 3783,
+      "sha256": "7d806abd63b66462fa0849ce778afc82c10acfa9b0d289fe06d385adf1998499"
+    }
+  ],
+  "product_run_id": "S2UC-V9-NEUTRAL-24d3c37e79294229b83f5e7d6de1e3bc",
+  "product_unchanged": true,
+  "appendix_status": "PUBLISHED",
+  "common_verification_bytes": 77760,
+  "common_verification_limit": 131072,
+  "total_bytes": 1340210,
+  "independent_acceptance": "OPEN",
+  "formal_qualification": false,
+  "real_execution_authorized": false
+}

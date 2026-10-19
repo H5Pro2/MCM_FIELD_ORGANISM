@@ -1,0 +1,13 @@
+test_01_complete_structure (tests.test_media_evaluation_annex.Annex.test_01_complete_structure) ... ok
+test_02_unknown_positions (tests.test_media_evaluation_annex.Annex.test_02_unknown_positions) ... ok
+test_03_size_boundary (tests.test_media_evaluation_annex.Annex.test_03_size_boundary) ... ok
+test_04_one_use (tests.test_media_evaluation_annex.Annex.test_04_one_use) ... ok
+test_05_complete_rows_required (tests.test_media_evaluation_annex.Annex.test_05_complete_rows_required) ... ok
+test_06_negative_evaluable (tests.test_media_evaluation_annex.Annex.test_06_negative_evaluable) ... ok
+test_07_evaluation_gate (tests.test_media_evaluation_annex.Annex.test_07_evaluation_gate) ... ok
+test_08_plan_completeness_and_budget (tests.test_media_evaluation_annex.Annex.test_08_plan_completeness_and_budget) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 2.875s
+
+OK

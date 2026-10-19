@@ -1,0 +1,16 @@
+test_01_neutral_recipe_equivalence (experiments.zw1.test_prepare.Preparation.test_01_neutral_recipe_equivalence) ... ok
+test_02_research_source_gate (experiments.zw1.test_prepare.Preparation.test_02_research_source_gate) ... ok
+test_03_authorization_exact (experiments.zw1.test_prepare.Preparation.test_03_authorization_exact) ... ok
+test_04_full_binding_coverage (experiments.zw1.test_prepare.Preparation.test_04_full_binding_coverage) ... ok
+test_05_actual_supervised_integrations (experiments.zw1.test_prepare.Preparation.test_05_actual_supervised_integrations) ... ok
+test_06_actual_errors_and_unquittied_pair (experiments.zw1.test_prepare.Preparation.test_06_actual_errors_and_unquittied_pair) ... ok
+test_07_statistics_unchanged_and_compact (experiments.zw1.test_prepare.Preparation.test_07_statistics_unchanged_and_compact) ... ok
+test_08_no_research_created (experiments.zw1.test_prepare.Preparation.test_08_no_research_created) ... ok
+test_09_entry_order_and_revision_only (experiments.zw1.test_prepare.Preparation.test_09_entry_order_and_revision_only) ... ok
+test_10_binding_tampering_rejected (experiments.zw1.test_prepare.Preparation.test_10_binding_tampering_rejected) ... ok
+test_11_no_target_on_missing_auth_or_consumed (experiments.zw1.test_prepare.Preparation.test_11_no_target_on_missing_auth_or_consumed) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.292s
+
+OK

@@ -1,0 +1,20 @@
+{
+  "status": "COMPLETE_PREPARATION_REPORT",
+  "files": {
+    "development-notes.json": {
+      "bytes": 838,
+      "sha256": "2e84dc1faeb332641e27ad0b79f7e56dcea4e97f4a4f86ca289cad7c0a28ef64"
+    },
+    "REPORT.md": {
+      "bytes": 8641,
+      "sha256": "a538a4fc73f4acc4c2b232794f5185772f4088e8d3c21b52ec8abb065f7ed204"
+    },
+    "verification.json": {
+      "bytes": 2829,
+      "sha256": "0fef4d8cf024d16644aebbe53ba55e2ff987f65f8036295591c2f55ff008d020"
+    }
+  },
+  "prestart_sha256": "58f6009f7b5609e3993983bafe554f9029bdca31f82addf9c79fa5eec2120537",
+  "research_materializations": 0,
+  "research_replays": 0
+}

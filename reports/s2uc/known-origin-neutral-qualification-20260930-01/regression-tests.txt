@@ -1,0 +1,29 @@
+test_T0_N3_same_system_output_different_truth (tests.test_s2uc_origin_judge.JudgeTests.test_T0_N3_same_system_output_different_truth) ... ok
+test_abstention_and_full_coverage (tests.test_s2uc_origin_judge.JudgeTests.test_abstention_and_full_coverage) ... ok
+test_ambiguity_is_not_resolved_with_labels (tests.test_s2uc_origin_judge.JudgeTests.test_ambiguity_is_not_resolved_with_labels) ... ok
+test_candidate_and_retained_roles (tests.test_s2uc_origin_judge.JudgeTests.test_candidate_and_retained_roles) ... ok
+test_evaluator_learning_separation_and_budget (tests.test_s2uc_origin_judge.JudgeTests.test_evaluator_learning_separation_and_budget) ... ok
+test_factor_recognition_without_prediction (tests.test_s2uc_origin_judge.JudgeTests.test_factor_recognition_without_prediction) ... ok
+test_gate_before_iterator_pull (tests.test_s2uc_origin_judge.JudgeTests.test_gate_before_iterator_pull) ... ok
+test_known_mae_and_harm_preserved (tests.test_s2uc_origin_judge.JudgeTests.test_known_mae_and_harm_preserved) ... ok
+test_material_plan_no_generation_and_partition_closure (tests.test_s2uc_origin_judge.JudgeTests.test_material_plan_no_generation_and_partition_closure) ... ok
+test_material_production_requires_authorization (tests.test_s2uc_origin_judge.JudgeTests.test_material_production_requires_authorization) ... ok
+test_unbound_origin_rejected (tests.test_s2uc_origin_judge.JudgeTests.test_unbound_origin_rejected) ... ok
+test_before_admission_and_immutable (tests.test_s2uc_continuation_adapter.ContinuationTests.test_before_admission_and_immutable) ... ok
+test_error_close_release_and_no_feedback (tests.test_s2uc_continuation_adapter.ContinuationTests.test_error_close_release_and_no_feedback) ... ok
+test_evaluation_failure_releases_slots (tests.test_s2uc_continuation_adapter.ContinuationTests.test_evaluation_failure_releases_slots) ... ok
+test_eviction_does_not_change_prediction (tests.test_s2uc_continuation_adapter.ContinuationTests.test_eviction_does_not_change_prediction) ... ok
+test_factor_and_end_abstain (tests.test_s2uc_continuation_adapter.ContinuationTests.test_factor_and_end_abstain) ... ok
+test_methods_unchanged (tests.test_s2uc_continuation_adapter.ContinuationTests.test_methods_unchanged) ... ok
+test_one_ulp_not_tolerated (tests.test_s2uc_continuation_adapter.ContinuationTests.test_one_ulp_not_tolerated) ... ok
+test_gap_terminates_no_cross_pair (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_gap_terminates_no_cross_pair) ... ok
+test_no_self_match_and_admission_once (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_no_self_match_and_admission_once) ... ok
+test_receipt_has_no_payload (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_receipt_has_no_payload) ... ok
+test_receipt_not_input (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_receipt_not_input) ... ok
+test_remainder_and_reset (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_remainder_and_reset) ... ok
+test_scope_and_time_errors (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_scope_and_time_errors) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 2.481s
+
+OK

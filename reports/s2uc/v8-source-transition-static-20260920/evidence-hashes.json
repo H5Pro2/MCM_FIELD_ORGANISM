@@ -1,0 +1,10 @@
+{
+  "PLAN.md": {
+    "bytes": 19950,
+    "sha256": "2e49ffe21059f1ba79a8b89e48ccd6b44714c94fa1bac1db24e241732fb3e58d"
+  },
+  "static-evidence.json": {
+    "bytes": 42405,
+    "sha256": "68673c18fdf260fffecc63ae8a679d38f11f4d93b68f3485d218ed52f938bd2d"
+  }
+}

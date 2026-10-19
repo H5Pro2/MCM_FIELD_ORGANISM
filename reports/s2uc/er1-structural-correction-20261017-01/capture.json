@@ -1,0 +1,77 @@
+{
+  "format": "URA1_CAPTURE_ANCHORS_V1",
+  "collections": {
+    "/E/events": {
+      "sha256": "cbe99017c1eb9aceadaee0ed7b27c69d974ef1181794cc0f033dc26a0dba4cfb",
+      "bytes": 2091277,
+      "count": 240
+    },
+    "/E/internal": {
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "count": 0
+    },
+    "/E/forecasts": {
+      "sha256": "b0a1501f48be8f8f3b2d57744545793dc9a2d2ad2c978229ea5f1e0fd5158e9f",
+      "bytes": 47903,
+      "count": 40
+    },
+    "/E/rows": {
+      "sha256": "f11f1be5b716ed0475f3e140c63538290b40a6284ea27e734724c5a8e17ba54b",
+      "bytes": 2192,
+      "count": 39
+    },
+    "/F/events": {
+      "sha256": "cbe99017c1eb9aceadaee0ed7b27c69d974ef1181794cc0f033dc26a0dba4cfb",
+      "bytes": 2091277,
+      "count": 240
+    },
+    "/F/internal": {
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "count": 0
+    },
+    "/F/forecasts": {
+      "sha256": "b0a1501f48be8f8f3b2d57744545793dc9a2d2ad2c978229ea5f1e0fd5158e9f",
+      "bytes": 47903,
+      "count": 40
+    },
+    "/F/rows": {
+      "sha256": "f11f1be5b716ed0475f3e140c63538290b40a6284ea27e734724c5a8e17ba54b",
+      "bytes": 2192,
+      "count": 39
+    },
+    "/observer/E/blocks": {
+      "sha256": "b36cdcfd0ddfff78285c5f63738ffb6104d170ea8e5f8f85c9b36304cb77e45d",
+      "bytes": 253930,
+      "count": 20
+    },
+    "/observer/E/targets": {
+      "sha256": "f906a245ccfe10e67b7de4053b71d5c34cc07c3fa45b7c4f2429594c8ad47b11",
+      "bytes": 29594,
+      "count": 39
+    },
+    "/observer/F/blocks": {
+      "sha256": "b36cdcfd0ddfff78285c5f63738ffb6104d170ea8e5f8f85c9b36304cb77e45d",
+      "bytes": 253930,
+      "count": 20
+    },
+    "/observer/F/targets": {
+      "sha256": "f906a245ccfe10e67b7de4053b71d5c34cc07c3fa45b7c4f2429594c8ad47b11",
+      "bytes": 29594,
+      "count": 39
+    },
+    "/observer/differences": {
+      "sha256": "ddd131a9d3cb90a5b50eb45756d3162131132f70cae373d1b95463339b95b9ca",
+      "bytes": 1947,
+      "count": 39
+    },
+    "/mechanisms": {
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "count": 0
+    }
+  },
+  "folded_sha256": "6b8b19c2e83f3303745a653df460feaf0a7bbc0ec00be22f3fc12f7a51bb92ff",
+  "origin": "canonical records before reference encoder traversal"
+}

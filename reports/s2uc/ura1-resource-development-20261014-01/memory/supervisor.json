@@ -1,0 +1,52 @@
+{
+  "active_process_limit": 2,
+  "baseline": {
+    "lifetime_peak_commit": 10862592,
+    "private_bytes": 10862592,
+    "working_set": 17563648
+  },
+  "combined_sample_peak": 49528832,
+  "job": {
+    "hard_job_limit": true,
+    "limit_bytes": 536870912,
+    "measurement": "Windows JobObjectExtendedLimitInformation",
+    "members": "supervisor and inherited worker",
+    "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap.",
+    "peak_job_committed_bytes": 678461440,
+    "peak_process_committed_bytes": 666009600
+  },
+  "mode": "memory",
+  "phases": {
+    "complete": {
+      "combined_sample_peak": 48087040,
+      "samples": 5,
+      "supervisor_peak": 12587008,
+      "worker_peak": 35635200
+    },
+    "final_cleanup": {
+      "combined_sample_peak": 48087040,
+      "samples": 1,
+      "supervisor_peak": 12451840,
+      "worker_peak": 35635200
+    },
+    "imports_and_initialization": {
+      "combined_sample_peak": 49528832,
+      "samples": 138,
+      "supervisor_peak": 12451840,
+      "worker_peak": 37347328
+    },
+    "startup": {
+      "combined_sample_peak": 24530944,
+      "samples": 12,
+      "supervisor_peak": 11911168,
+      "worker_peak": 12619776
+    }
+  },
+  "seconds": 1.8144406999999774,
+  "status": "PASS",
+  "supervisor_pid": 13900,
+  "verified_same_job": true,
+  "worker_exitcode": 0,
+  "worker_pid": 11140,
+  "worker_status": "PASS"
+}

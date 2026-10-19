@@ -1,0 +1,30 @@
+{
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Python314\\python.exe",
+  "executable_sha256": "7ca24f26d6e3f463419ee4f537ddd3acd312c38fe45e678cce08572f26a8bd1a",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "windows_version": [
+    10,
+    0,
+    19045,
+    2,
+    ""
+  ],
+  "machine": "AMD64",
+  "numpy": "2.4.4",
+  "numpy_config": "{'Compilers': {'c': {'name': 'msvc', 'linker': 'link', 'version': '19.44.35225', 'commands': 'cl'}, 'cython': {'name': 'cython', 'linker': 'cython', 'version': '3.2.4', 'commands': 'cython'}, 'c++': {'name': 'msvc', 'linker': 'link', 'version': '19.44.35225', 'commands': 'cl'}}, 'Machine Information': {'host': {'cpu': 'x86_64', 'family': 'x86_64', 'endian': 'little', 'system': 'windows'}, 'build': {'cpu': 'x86_64', 'family': 'x86_64', 'endian': 'little', 'system': 'windows'}}, 'Build Dependencies': {'blas': {'name': 'scipy-openblas', 'found': True, 'version': '0.3.31.188.0', 'detection method': 'pkgconfig', 'include directory': 'C:/Users/runneradmin/AppData/Local/Temp/cibw-run-ucojyb64/cp314-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/include', 'lib directory': 'C:/Users/runneradmin/AppData/Local/Temp/cibw-run-ucojyb64/cp314-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/lib', 'openblas configuration': 'OpenBLAS 0.3.31.188.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=24', 'pc file directory': 'D:/a/numpy-release/numpy-release/.openblas'}, 'lapack': {'name': 'scipy-openblas', 'found': True, 'version': '0.3.31.188.0', 'detection method': 'pkgconfig', 'include directory': 'C:/Users/runneradmin/AppData/Local/Temp/cibw-run-ucojyb64/cp314-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/include', 'lib directory': 'C:/Users/runneradmin/AppData/Local/Temp/cibw-run-ucojyb64/cp314-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/lib', 'openblas configuration': 'OpenBLAS 0.3.31.188.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=24', 'pc file directory': 'D:/a/numpy-release/numpy-release/.openblas'}}, 'Python Information': {'path': 'C:\\\\Users\\\\runneradmin\\\\AppData\\\\Local\\\\Temp\\\\build-env-1f6ndr68\\\\Scripts\\\\python.exe', 'version': '3.14'}, 'SIMD Extensions': {'baseline': ['X86_V2'], 'found': ['X86_V3']}}",
+  "clock": {
+    "implementation": "QueryPerformanceCounter()",
+    "monotonic": true,
+    "adjustable": false,
+    "resolution": 1e-07
+  },
+  "observer": "same interpreter, separate PID",
+  "environment": {
+    "OMP_NUM_THREADS": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "MKL_NUM_THREADS": null,
+    "PYTHONMALLOC": null,
+    "PYTHONHASHSEED": null
+  }
+}

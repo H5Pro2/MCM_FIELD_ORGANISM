@@ -1,0 +1,37 @@
+[
+  {
+    "path": "reports/s2uc/regression-105-20260930-01/coverage-184.json",
+    "bytes": 112806,
+    "sha256": "167816b4bee5846db0b5443b372511118fbdce7edbdc7d2721374e3ce711ca05"
+  },
+  {
+    "path": "reports/s2uc/regression-105-20260930-01/dependency-inventory.json",
+    "bytes": 18133,
+    "sha256": "d95bd3d0ca706c78e6ba8f257d2f3b9a9fbd567e43e3982badbf97a8dc943b60"
+  },
+  {
+    "path": "reports/s2uc/regression-105-20260930-01/preserved-evidence-before.json",
+    "bytes": 202959,
+    "sha256": "7de5ab3a78231c9e3dd9aeb3dc19008b04a100a504178041ca5800bee0e9be58"
+  },
+  {
+    "path": "reports/s2uc/regression-105-20260930-01/selection.json",
+    "bytes": 24586,
+    "sha256": "0b33cc14ef06f95438a79629fb0cdfdd7147e6e5a85f7ae0760ce5c1bdc4f588"
+  },
+  {
+    "path": "reports/s2uc/regression-105-20260930-01/test-output.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "reports/s2uc/regression-105-20260930-01/test-result.json",
+    "bytes": 45240,
+    "sha256": "b39c4563374a961c3a0edfd198229a667a0d7b7412da9c45959eda6319c4e680"
+  },
+  {
+    "path": "reports/s2uc/regression-105-20260930-01/unittest.log",
+    "bytes": 21786,
+    "sha256": "1a68a278e78be8ff053396f686debb260a9fa8799fba6a81960d4229ee8996df"
+  }
+]

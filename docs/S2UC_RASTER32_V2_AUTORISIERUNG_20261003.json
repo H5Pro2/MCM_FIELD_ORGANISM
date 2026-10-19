@@ -1,0 +1,17 @@
+{
+  "status": "AUTHORIZED_ONCE",
+  "action": "MATERIALIZE_AND_RUN_RASTER32_ONCE",
+  "binding_sha256": "39b13fe52900e74ecf60da3ad3fe16628c8246bbaae27ecbe63a25ddf19da3f7",
+  "plan_sha256": "66e8d936f965a8bae8410802d1620ddabd55d37031d4115b46c72fa7a23392d0",
+  "preparation_closure_sha256": "b75ba36b6c5f15de88a7a914ea6b5b2451bb47a40f6076feb726d76d91d330fc",
+  "output": "reports/s2uc/raster32-evaluation-20261003-01",
+  "cases": 32,
+  "positions": 2048,
+  "arms": [
+    "U",
+    "M",
+    "E",
+    "K",
+    "P"
+  ]
+}

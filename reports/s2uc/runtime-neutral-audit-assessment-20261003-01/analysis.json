@@ -1,0 +1,193 @@
+{
+  "totals": {
+    "ON": {
+      "wall_ns": {
+        "replay_other": 1985476400,
+        "json_internal": 1150441400,
+        "source_gate": 14524200,
+        "resource_trace_promotion": 4936757300,
+        "resource_trace_approx": 10036265400,
+        "resource_trace_base": 141992183200,
+        "policy": 2770070800,
+        "reference": 98405100,
+        "evidence_observation": 3688529200,
+        "resource_other": 227352900,
+        "export_serialization": 15119200,
+        "file_output": 6337900
+      },
+      "cpu_ns": {
+        "replay_other": 1734375000,
+        "json_internal": 1093750000,
+        "source_gate": 31250000,
+        "resource_trace_promotion": 4890625000,
+        "resource_trace_approx": 10500000000,
+        "resource_trace_base": 141671875000,
+        "policy": 2875000000,
+        "reference": 62500000,
+        "evidence_observation": 3703125000,
+        "resource_other": 109375000,
+        "export_serialization": 0,
+        "file_output": 0
+      },
+      "replay_wall_ns": 166806327400
+    },
+    "OFF": {
+      "wall_ns": {
+        "replay_other": 1658241800,
+        "json_internal": 280137000,
+        "source_gate": 11528400,
+        "policy": 92490700,
+        "reference": 48280200,
+        "evidence_observation": 456262700,
+        "resource_other": 31735300,
+        "export_serialization": 14358600,
+        "file_output": 5880800
+      },
+      "cpu_ns": {
+        "replay_other": 1562500000,
+        "json_internal": 296875000,
+        "source_gate": 15625000,
+        "policy": 156250000,
+        "reference": 78125000,
+        "evidence_observation": 437500000,
+        "resource_other": 62500000,
+        "export_serialization": 0,
+        "file_output": 0
+      },
+      "replay_wall_ns": 2480972200
+    }
+  },
+  "pairs": [
+    {
+      "case": "N1",
+      "arm": "M",
+      "on_seconds": 17.3291857,
+      "off_seconds": 0.1821403,
+      "ratio": 95.14196309108966
+    },
+    {
+      "case": "N1",
+      "arm": "E",
+      "on_seconds": 17.2280683,
+      "off_seconds": 0.2014561,
+      "ratio": 85.5177296691438
+    },
+    {
+      "case": "N1",
+      "arm": "K",
+      "on_seconds": 16.5608305,
+      "off_seconds": 0.2374535,
+      "ratio": 69.74346766840667
+    },
+    {
+      "case": "N1",
+      "arm": "P",
+      "on_seconds": 16.3291638,
+      "off_seconds": 0.266139,
+      "ratio": 61.355771983812964
+    },
+    {
+      "case": "N2",
+      "arm": "M",
+      "on_seconds": 25.1200112,
+      "off_seconds": 0.3467421,
+      "ratio": 72.44580684030004
+    },
+    {
+      "case": "N2",
+      "arm": "E",
+      "on_seconds": 25.5067436,
+      "off_seconds": 0.3786768,
+      "ratio": 67.35755557245652
+    },
+    {
+      "case": "N2",
+      "arm": "K",
+      "on_seconds": 24.2509854,
+      "off_seconds": 0.4237661,
+      "ratio": 57.22728977140928
+    },
+    {
+      "case": "N2",
+      "arm": "P",
+      "on_seconds": 24.4813389,
+      "off_seconds": 0.4445983,
+      "ratio": 55.06395076184502
+    }
+  ],
+  "anchors": [
+    {
+      "case": "N1",
+      "original_seconds": 14.3770082,
+      "instrumented_seconds": 17.3291857,
+      "instrumented_to_original": 1.2053401833630448
+    },
+    {
+      "case": "N2",
+      "original_seconds": 21.9086084,
+      "instrumented_seconds": 25.1200112,
+      "instrumented_to_original": 1.1465817792425375
+    }
+  ],
+  "watchdog": {
+    "matrix_until_worker_confirmation_seconds": 206.5790675,
+    "deadline_to_abort_ms": 1.8007,
+    "abort_to_confirmation_ms": 12.2604,
+    "sample_closure_admin_ms": 0.143
+  },
+  "on_trace_share": 0.9403536434376926,
+  "on_base_trace_share": 0.8506526401580844,
+  "previous_code_files": 71,
+  "historical_files": 376,
+  "canonical_verification": [
+    {
+      "case": "N1",
+      "arm": "M",
+      "canonical_equal": true,
+      "bytes": 82432
+    },
+    {
+      "case": "N1",
+      "arm": "E",
+      "canonical_equal": true,
+      "bytes": 81830
+    },
+    {
+      "case": "N1",
+      "arm": "K",
+      "canonical_equal": true,
+      "bytes": 63973
+    },
+    {
+      "case": "N1",
+      "arm": "P",
+      "canonical_equal": true,
+      "bytes": 64163
+    },
+    {
+      "case": "N2",
+      "arm": "M",
+      "canonical_equal": true,
+      "bytes": 99170
+    },
+    {
+      "case": "N2",
+      "arm": "E",
+      "canonical_equal": true,
+      "bytes": 98568
+    },
+    {
+      "case": "N2",
+      "arm": "K",
+      "canonical_equal": true,
+      "bytes": 80537
+    },
+    {
+      "case": "N2",
+      "arm": "P",
+      "canonical_equal": true,
+      "bytes": 80586
+    }
+  ],
+  "audit_bytes": 1747707
+}

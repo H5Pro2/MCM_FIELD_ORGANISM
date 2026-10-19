@@ -1,0 +1,38 @@
+{
+  "reports/s2uc/pair-context-20260930-01/boundary-tests.txt": {
+    "bytes": 717,
+    "sha256": "89ef20466b070db13930ea8f74db1968c7515a5ada6be7478a8f098e34b40589"
+  },
+  "reports/s2uc/pair-context-20260930-01/preregistration.json": {
+    "bytes": 6628,
+    "sha256": "6ed2a8e98c034794b3505e112a063bb51dd239910d1b260bb05cfe22b0eb38f8"
+  },
+  "reports/s2uc/pair-context-20260930-01/REPORT.txt": {
+    "bytes": 8992,
+    "sha256": "f0a624059163c9ed5c48c9bc4ba10808ab32bd28d1e0e87015e453340660cbee"
+  },
+  "reports/s2uc/pair-context-20260930-01/result.json": {
+    "bytes": 275016,
+    "sha256": "2f206525c828a4322ab0f6a61cec8c44c9504950123cf4119e836f7f369f3a50"
+  },
+  "reports/s2uc/pair-context-20260930-01/tests.txt": {
+    "bytes": 837,
+    "sha256": "60b1be805bbc9af0458a1a7609d7296028ebb089f105c06d2b14573cfa7a12e1"
+  },
+  "tools/_s2uc_pair_context_adapter.py": {
+    "bytes": 4573,
+    "sha256": "791b9a60b18426626d5e9761dcb122733ca5f73853a7b6201725fc332d9f3ab1"
+  },
+  "tools/s2uc_pair_context_check.py": {
+    "bytes": 7228,
+    "sha256": "751784fed0b8a30dbe4a20b3ba5701dee8c3a3cad7b9b3cd705f80cc68245c8f"
+  },
+  "tests/test_s2uc_pair_context_adapter.py": {
+    "bytes": 2242,
+    "sha256": "040f3fe1a07a4a1727ed06a4bf4c928dbc60233e1e7ce6e615c73e76a1d8336e"
+  },
+  "tests/test_s2uc_pair_context_boundaries.py": {
+    "bytes": 2357,
+    "sha256": "9f38986c6a2ad623c9b854b2dfa776340c11a56537d720b6f0d04a9a4223b99d"
+  }
+}

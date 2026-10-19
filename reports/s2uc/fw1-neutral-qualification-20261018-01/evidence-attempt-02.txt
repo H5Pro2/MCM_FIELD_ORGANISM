@@ -1,0 +1,6 @@
+test_15_active_ticket_corruption (__main__.Evidence.test_15_active_ticket_corruption) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 3.464s
+
+OK

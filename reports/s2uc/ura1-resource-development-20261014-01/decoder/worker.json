@@ -1,0 +1,206 @@
+{
+  "cases": [
+    {
+      "cleanup": true,
+      "events": {
+        "R": {
+          "internal": 96,
+          "outer": 24
+        },
+        "U": {
+          "internal": 96,
+          "outer": 24
+        }
+      },
+      "frames": 8,
+      "max_record_bytes": 9634,
+      "name": "fault_case",
+      "rejected": "BINDING",
+      "spool_bytes": 1368216,
+      "spool_removed": true
+    }
+  ],
+  "membership": true,
+  "mode": "decoder",
+  "phases": [
+    {
+      "end_process": {
+        "lifetime_peak_commit": 37462016,
+        "private_bytes": 37462016,
+        "working_set": 42573824
+      },
+      "name": "imports_and_initialization",
+      "python_current": 9781406,
+      "python_peak": 12617453,
+      "seconds": 1.6003858000003675,
+      "start_process": {
+        "lifetime_peak_commit": 13094912,
+        "private_bytes": 12206080,
+        "working_set": 18726912
+      }
+    },
+    {
+      "end_process": {
+        "lifetime_peak_commit": 37470208,
+        "private_bytes": 37470208,
+        "working_set": 43003904
+      },
+      "name": "fault_case_material",
+      "python_current": 9807185,
+      "python_peak": 9807817,
+      "seconds": 0.0029913999997006613,
+      "start_process": {
+        "lifetime_peak_commit": 37462016,
+        "private_bytes": 37462016,
+        "working_set": 42577920
+      }
+    },
+    {
+      "end_process": {
+        "lifetime_peak_commit": 37470208,
+        "private_bytes": 37470208,
+        "working_set": 43003904
+      },
+      "name": "fault_case_arms_references_observer",
+      "python_current": 9815021,
+      "python_peak": 9815637,
+      "seconds": 0.0006971000002522487,
+      "start_process": {
+        "lifetime_peak_commit": 37470208,
+        "private_bytes": 37470208,
+        "working_set": 43003904
+      }
+    },
+    {
+      "end_process": {
+        "lifetime_peak_commit": 37470208,
+        "private_bytes": 37470208,
+        "working_set": 43003904
+      },
+      "name": "constructor_U",
+      "python_current": 9824209,
+      "python_peak": 9824801,
+      "seconds": 0.0009788999996089842,
+      "start_process": {
+        "lifetime_peak_commit": 37470208,
+        "private_bytes": 37470208,
+        "working_set": 43003904
+      }
+    },
+    {
+      "end_process": {
+        "lifetime_peak_commit": 37523456,
+        "private_bytes": 37523456,
+        "working_set": 43393024
+      },
+      "name": "processing_U",
+      "python_current": 10385725,
+      "python_peak": 10411343,
+      "seconds": 0.17669389999991836,
+      "start_process": {
+        "lifetime_peak_commit": 37470208,
+        "private_bytes": 37470208,
+        "working_set": 43003904
+      }
+    },
+    {
+      "end_process": {
+        "lifetime_peak_commit": 37523456,
+        "private_bytes": 37523456,
+        "working_set": 43397120
+      },
+      "name": "constructor_R",
+      "python_current": 10398137,
+      "python_peak": 10398697,
+      "seconds": 0.0027600000003076275,
+      "start_process": {
+        "lifetime_peak_commit": 37523456,
+        "private_bytes": 37523456,
+        "working_set": 43397120
+      }
+    },
+    {
+      "end_process": {
+        "lifetime_peak_commit": 37580800,
+        "private_bytes": 37580800,
+        "working_set": 43937792
+      },
+      "name": "processing_R",
+      "python_current": 10954192,
+      "python_peak": 11346264,
+      "seconds": 0.678146299999753,
+      "start_process": {
+        "lifetime_peak_commit": 37523456,
+        "private_bytes": 37523456,
+        "working_set": 43397120
+      }
+    },
+    {
+      "end_process": {
+        "lifetime_peak_commit": 38113280,
+        "private_bytes": 38113280,
+        "working_set": 44539904
+      },
+      "name": "fault_case_encoder_and_file_output",
+      "python_current": 11285732,
+      "python_peak": 12322835,
+      "seconds": 5.144354100000783,
+      "start_process": {
+        "lifetime_peak_commit": 37580800,
+        "private_bytes": 37580800,
+        "working_set": 43937792
+      }
+    },
+    {
+      "end_process": {
+        "lifetime_peak_commit": 46571520,
+        "private_bytes": 38113280,
+        "working_set": 45068288
+      },
+      "name": "fault_case_stream_decoder",
+      "python_current": 11294667,
+      "python_peak": 19866382,
+      "seconds": 0.02169439999943279,
+      "start_process": {
+        "lifetime_peak_commit": 38113280,
+        "private_bytes": 38113280,
+        "working_set": 44539904
+      }
+    },
+    {
+      "end_process": {
+        "lifetime_peak_commit": 46571520,
+        "private_bytes": 37359616,
+        "working_set": 44224512
+      },
+      "name": "fault_case_cleanup",
+      "python_current": 9788155,
+      "python_peak": 11298626,
+      "seconds": 0.02028950000021723,
+      "start_process": {
+        "lifetime_peak_commit": 46571520,
+        "private_bytes": 38113280,
+        "working_set": 45068288
+      }
+    },
+    {
+      "end_process": {
+        "lifetime_peak_commit": 46571520,
+        "private_bytes": 37498880,
+        "working_set": 44228608
+      },
+      "name": "final_cleanup",
+      "python_current": 9788974,
+      "python_peak": 9793098,
+      "seconds": 0.005614300000161165,
+      "start_process": {
+        "lifetime_peak_commit": 46571520,
+        "private_bytes": 37498880,
+        "working_set": 44228608
+      }
+    }
+  ],
+  "seconds": 7.674986799999715,
+  "status": "PASS",
+  "worker_pid": 13728
+}

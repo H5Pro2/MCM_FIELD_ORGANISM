@@ -1,0 +1,68 @@
+{
+  "kind": "ER1_V2_PLANNING_NOT_FULL_SIZE_QUALIFICATION",
+  "execution_plan": {
+    "stories": 32,
+    "frames_per_story": 1024,
+    "policy": 64,
+    "live_reference": 64,
+    "archive_reference": 64,
+    "extra_policy_measurement": 0,
+    "source_reconstruction": 32,
+    "statistics_reference": 1
+  },
+  "linear_per_story": {
+    "gzip_bytes": 298624,
+    "encoded_bytes": 1375424,
+    "dictionary": 1307456,
+    "nodes": 31680,
+    "edges": 120856,
+    "indices": 10217,
+    "observer_deep": 4551130,
+    "mechanisms_deep": 165344
+  },
+  "linear_32_story_seconds": {
+    "archive_reference_seconds": 378.72115712165834,
+    "policy_and_live_reference_seconds": 1213.7628876805306,
+    "total_seconds": 1929.1614003181458
+  },
+  "planned_worker_seconds": 16034,
+  "completion_reserve": 3600,
+  "comparison": {
+    "neutral_source": "integration-complete/case-01.gz:E:frame80",
+    "comparisons": 100,
+    "seconds": 0.2717652000137605,
+    "seconds_per_comparison": 0.002717652000137605,
+    "python_peak": 100733,
+    "extra_policy_arms": 0,
+    "reference_replays": 0
+  },
+  "limits": {
+    "total_seconds": 57600,
+    "worker_seconds": 54000,
+    "completion_reserve": 3600,
+    "job": 536870912,
+    "preparation": 8388608,
+    "source_total": 2097152,
+    "source_case": 32768,
+    "archives": 33554432,
+    "gzip": 524288,
+    "encoded": 4194304,
+    "dictionary": 4194304,
+    "record": 262144,
+    "nodes": 65536,
+    "edges": 262144,
+    "indices": 65536,
+    "collections": 16,
+    "temp": 67108864,
+    "export": 67108864,
+    "administration": 2097152,
+    "closure": 1048576
+  },
+  "source_namespace": "MCM-ER1/source/v2",
+  "full_size_uncertainty": true,
+  "resource_inputs": [
+    "integration-complete/case-01-summary.json",
+    "integration-complete/case-02-summary.json",
+    "prior neutral integration: mechanism/cost witness footprint only"
+  ]
+}

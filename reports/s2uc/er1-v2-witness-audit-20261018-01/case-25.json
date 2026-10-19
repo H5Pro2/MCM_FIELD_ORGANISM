@@ -1,0 +1,298 @@
+{
+  "archive_sha256": "8c107b41d6ce813faf539f9965c6d916eca25ed37db91d2d2433a8d18dba3568",
+  "case": 25,
+  "decoder": {
+    "dictionary_bytes": 947913,
+    "encoded_bytes": 1001679,
+    "gzip_bytes": 171186,
+    "record_indices": 10283,
+    "reference_edges": 128260,
+    "table_entries": 14067
+  },
+  "differences": {
+    "duplicate_records": [],
+    "missing": [],
+    "unsupported": [
+      {
+        "keeper": "F",
+        "keeper_victims": [],
+        "last_observation": 152,
+        "newer_keeper_victims": [],
+        "origin": [
+          145,
+          146,
+          147,
+          148
+        ],
+        "other_victim": [
+          145,
+          146,
+          147,
+          148
+        ],
+        "promotion_end": 168,
+        "stage": "retention",
+        "unequal_blocks": [
+          156,
+          160,
+          164
+        ]
+      },
+      {
+        "keeper": "F",
+        "keeper_error": 0.0,
+        "keeper_victims": [],
+        "last_observation": 152,
+        "local_gain": true,
+        "newer_keeper_victims": [],
+        "offset": 0,
+        "origin": [
+          145,
+          146,
+          147,
+          148
+        ],
+        "other_error": 0.25,
+        "other_victim": [
+          145,
+          146,
+          147,
+          148
+        ],
+        "output": [
+          0.25,
+          0.250244140625,
+          0.25048828125,
+          0.250732421875,
+          0.2509765625,
+          0.251220703125,
+          0.25146484375,
+          0.251708984375,
+          0.251953125,
+          0.252197265625,
+          0.25244140625,
+          0.252685546875,
+          0.2529296875,
+          0.253173828125,
+          0.25341796875,
+          0.253662109375,
+          0.25390625,
+          0.254150390625,
+          0.25439453125,
+          0.254638671875,
+          0.2548828125,
+          0.255126953125,
+          0.25537109375,
+          0.255615234375,
+          0.255859375,
+          0.256103515625,
+          0.25634765625,
+          0.256591796875,
+          0.2568359375,
+          0.257080078125,
+          0.25732421875,
+          0.257568359375,
+          0.2578125,
+          0.258056640625,
+          0.25830078125,
+          0.258544921875,
+          0.2587890625,
+          0.259033203125,
+          0.25927734375,
+          0.259521484375,
+          0.259765625,
+          0.260009765625,
+          0.26025390625,
+          0.260498046875,
+          0.2607421875,
+          0.260986328125,
+          0.26123046875,
+          0.261474609375
+        ],
+        "prior_live_feedback": [
+          151
+        ],
+        "promotion_end": 168,
+        "stage": "warm_use",
+        "target": 175,
+        "unequal_blocks": [
+          156,
+          160,
+          164
+        ]
+      },
+      {
+        "keeper": "F",
+        "keeper_error": 0.0,
+        "keeper_victims": [],
+        "last_observation": 152,
+        "local_gain": true,
+        "newer_keeper_victims": [],
+        "offset": 0,
+        "origin": [
+          145,
+          146,
+          147,
+          148
+        ],
+        "other_error": 0.25,
+        "other_victim": [
+          145,
+          146,
+          147,
+          148
+        ],
+        "output": [
+          0.25,
+          0.250244140625,
+          0.25048828125,
+          0.250732421875,
+          0.2509765625,
+          0.251220703125,
+          0.25146484375,
+          0.251708984375,
+          0.251953125,
+          0.252197265625,
+          0.25244140625,
+          0.252685546875,
+          0.2529296875,
+          0.253173828125,
+          0.25341796875,
+          0.253662109375,
+          0.25390625,
+          0.254150390625,
+          0.25439453125,
+          0.254638671875,
+          0.2548828125,
+          0.255126953125,
+          0.25537109375,
+          0.255615234375,
+          0.255859375,
+          0.256103515625,
+          0.25634765625,
+          0.256591796875,
+          0.2568359375,
+          0.257080078125,
+          0.25732421875,
+          0.257568359375,
+          0.2578125,
+          0.258056640625,
+          0.25830078125,
+          0.258544921875,
+          0.2587890625,
+          0.259033203125,
+          0.25927734375,
+          0.259521484375,
+          0.259765625,
+          0.260009765625,
+          0.26025390625,
+          0.260498046875,
+          0.2607421875,
+          0.260986328125,
+          0.26123046875,
+          0.261474609375
+        ],
+        "prior_live_feedback": [
+          151
+        ],
+        "promotion_end": 168,
+        "stage": "warm_use",
+        "target": 215,
+        "unequal_blocks": [
+          156,
+          160,
+          164
+        ]
+      },
+      {
+        "keeper": "F",
+        "keeper_victims": [],
+        "last_observation": 876,
+        "newer_keeper_victims": [],
+        "origin": [
+          865,
+          866,
+          867,
+          868
+        ],
+        "other_victim": [
+          865,
+          866,
+          867,
+          868
+        ],
+        "promotion_end": 900,
+        "stage": "retention",
+        "unequal_blocks": [
+          880,
+          884,
+          888,
+          892,
+          896
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "E": {
+      "local_gains": 4,
+      "multi_assigned_targets": {},
+      "retention_events": 4,
+      "unique_gain_targets": 4,
+      "unique_warm_targets": 14,
+      "warm_uses": 14
+    },
+    "F": {
+      "local_gains": 8,
+      "multi_assigned_targets": {},
+      "retention_events": 10,
+      "unique_gain_targets": 8,
+      "unique_warm_targets": 16,
+      "warm_uses": 16
+    }
+  },
+  "rejected_candidates": [
+    {
+      "keeper": "F",
+      "origin": [
+        145,
+        146,
+        147,
+        148
+      ],
+      "promotion_end": 168,
+      "reason": "NO_COMPETITION_PROMOTION"
+    },
+    {
+      "keeper": "F",
+      "origin": [
+        865,
+        866,
+        867,
+        868
+      ],
+      "promotion_end": 900,
+      "reason": "NO_COMPETITION_PROMOTION"
+    }
+  ],
+  "reported": {
+    "E": {
+      "local_gains": 4,
+      "multi_assigned_targets": {},
+      "retention_events": 4,
+      "unique_gain_targets": 4,
+      "unique_warm_targets": 14,
+      "warm_uses": 14
+    },
+    "F": {
+      "local_gains": 10,
+      "multi_assigned_targets": {},
+      "retention_events": 12,
+      "unique_gain_targets": 10,
+      "unique_warm_targets": 18,
+      "warm_uses": 18
+    }
+  },
+  "seconds": 4.707729700021446,
+  "status": "DISCREPANCY"
+}

@@ -1,0 +1,28 @@
+BEOBACHTERVERTRAG: ABSOLUTE ABWEICHUNG AUF FESTEM NASA-BESTAND
+2026-09-30. Vor Berechnung festgelegt. Keine neue Memory-Ausfuehrung.
+Fuer zwei positionsgleiche Folgen x,y mit N Werten:
+MAE = (1/N) * Summe_j abs(x_j-y_j).
+MAX_ABS = max_j abs(x_j-y_j).
+MEAN_ABS_X = (1/N) * Summe_j abs(x_j).
+MEAN_ABS_Y = (1/N) * Summe_j abs(y_j).
+Implementierung: Binary64-Differenzen, math.fsum fuer Summen, Division durch N.
+Keine Gewichtung, Skalierung, Zeitverschiebung, Quotienten oder Toleranzschwelle.
+
+Persistenz: genau die49 protokollierten Ziele3,5,...,99. x ist Originalvektor
+am letzten Index des zugehoerigen Hinweispaars, y der Originalvektor am Ziel;
+jeweils48 Komponenten in unveraenderter Reihenfolge. Herkunft aus target_evaluations.
+Kandidaten: alle24 TRACE_CANDIDATE_REPLACED-Uebergaenge. x stammt aus dem
+protokollierten Kandidatenzustand unmittelbar vor Abschluss der Folgeformation;
+y aus den vier Originalordinals dieser Folgeformation. Generation/evicted,
+Segment und Frameordinals mit formation_receipts und states abgleichen.
+Positionsgleich flatten(frame1[48],...,frame4[48]), also192 Werte. Keine
+Suche nach aelteren Kandidaten oder besser passenden Fenstern.
+
+Fuer jedes der73 Paare alle vier Kennwerte und vollstaendige Herkunft speichern.
+Kompakte Zusammenfassung je Gruppe und Kennwert: Anzahl, Minimum, Median,
+arithmetisches Mittel und Maximum. Keine gemeinsame Nutzensumme. Alle
+Einzelwerte auch als CSV. Die Mittelwerte der absoluten Signalwerte dienen
+nur zur Einordnung; kleine absolute Differenz beweist keine Strukturaehnlichkeit.
+Keine neue Aehnlichkeitsschwelle, kein Kontextnutzen aus diesen Zahlen ableiten.
+Neutrale Tests: Gleichheit, bekannte Abweichung, Nullwerte; Zuordnungsfehler
+muessen abbrechen. Quelldateien und vorhandene Forschungsberichte unveraendert.

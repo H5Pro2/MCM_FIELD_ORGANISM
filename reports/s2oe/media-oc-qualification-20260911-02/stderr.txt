@@ -1,0 +1,19 @@
+test_01_selection_and_counts (tests.test_s2oe_media.MediaQualification.test_01_selection_and_counts) ... ok
+test_02_time_mapping_and_second_pass (tests.test_s2oe_media.MediaQualification.test_02_time_mapping_and_second_pass) ... ok
+test_03_pts_boundary (tests.test_s2oe_media.MediaQualification.test_03_pts_boundary) ... ok
+test_04_invalid_times (tests.test_s2oe_media.MediaQualification.test_04_invalid_times) ... ok
+test_05_profiles_and_immutability (tests.test_s2oe_media.MediaQualification.test_05_profiles_and_immutability) ... ok
+test_06_downmix_and_single_rounding (tests.test_s2oe_media.MediaQualification.test_06_downmix_and_single_rounding) ... ok
+test_07_hash_before_decode_and_read_count (tests.test_s2oe_media.MediaQualification.test_07_hash_before_decode_and_read_count) ... ok
+test_08_native_frame_and_audio_selection (tests.test_s2oe_media.MediaQualification.test_08_native_frame_and_audio_selection) ... ok
+test_09_native_full_session_and_readonly_cues (tests.test_s2oe_media.MediaQualification.test_09_native_full_session_and_readonly_cues) ... ok
+test_10_native_controlled_stop_and_primary_failure (tests.test_s2oe_media.MediaQualification.test_10_native_controlled_stop_and_primary_failure) ... ok
+test_11_gate_and_manifest_rejection (tests.test_s2oe_media.MediaQualification.test_11_gate_and_manifest_rejection) ... ok
+test_12_full_budget_positions (tests.test_s2oe_media.MediaQualification.test_12_full_budget_positions) ... ok
+test_13_decoder_pass_reset_and_stop (tests.test_s2oe_media.MediaQualification.test_13_decoder_pass_reset_and_stop) ... ok
+test_14_primary_error_after_formation (tests.test_s2oe_media.MediaQualification.test_14_primary_error_after_formation) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 50.014s
+
+OK

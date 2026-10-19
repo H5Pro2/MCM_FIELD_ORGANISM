@@ -1,0 +1,182 @@
+[
+  {
+    "file": "tools/_s2uc_source_execution_binding.py",
+    "symbol": "current",
+    "line": 24,
+    "end_line": 30
+  },
+  {
+    "file": "tools/_s2uc_source_execution_binding.py",
+    "symbol": "read_source_preparation",
+    "line": 33,
+    "end_line": 50
+  },
+  {
+    "file": "tools/_s2uc_source_execution_binding.py",
+    "symbol": "manifest",
+    "line": 53,
+    "end_line": 54
+  },
+  {
+    "file": "tools/_s2uc_source_execution_binding.py",
+    "symbol": "sources",
+    "line": 57,
+    "end_line": 58
+  },
+  {
+    "file": "tools/_s2uc_source_execution_binding.py",
+    "symbol": "contract",
+    "line": 61,
+    "end_line": 66
+  },
+  {
+    "file": "tools/_s2uc_source_execution_binding.py",
+    "symbol": "test_ids",
+    "line": 69,
+    "end_line": 77
+  },
+  {
+    "file": "tools/_s2uc_source_execution_binding.py",
+    "symbol": "evidence",
+    "line": 80,
+    "end_line": 91
+  },
+  {
+    "file": "tools/_s2uc_source_execution_binding.py",
+    "symbol": "accounting",
+    "line": 94,
+    "end_line": 104
+  },
+  {
+    "file": "tools/_s2uc_source_execution_binding.py",
+    "symbol": "validate",
+    "line": 107,
+    "end_line": 154
+  },
+  {
+    "file": "tools/_s2uc_source_context_v9.py",
+    "symbol": "endpoints",
+    "line": 11,
+    "end_line": 15
+  },
+  {
+    "file": "tools/_s2uc_source_context_v9.py",
+    "symbol": "source_context",
+    "line": 18,
+    "end_line": 31
+  },
+  {
+    "file": "tools/_s2uc_source_context_v9.py",
+    "symbol": "validate_source_context",
+    "line": 34,
+    "end_line": 36
+  },
+  {
+    "file": "tools/_s2uc_source_context_v9.py",
+    "symbol": "prepare_nu_supplier",
+    "line": 39,
+    "end_line": 50
+  },
+  {
+    "file": "tools/_s2uc_source_context_v9.py",
+    "symbol": "neutral_payload",
+    "line": 53,
+    "end_line": 59
+  },
+  {
+    "file": "tools/_s2uc_source_context_v9.py",
+    "symbol": "neutral_manifest",
+    "line": 62,
+    "end_line": 75
+  },
+  {
+    "file": "tools/_s2uc_source_execution.py",
+    "symbol": "_Publication",
+    "line": 9,
+    "end_line": 17
+  },
+  {
+    "file": "tools/_s2uc_source_execution.py",
+    "symbol": "run_neutral",
+    "line": 20,
+    "end_line": 24
+  },
+  {
+    "file": "tools/_s2uc_source_execution.py",
+    "symbol": "start_real",
+    "line": 27,
+    "end_line": 31
+  },
+  {
+    "file": "tools/s2uc_source_process_once.py",
+    "symbol": "save",
+    "line": 15,
+    "end_line": 16
+  },
+  {
+    "file": "tools/s2uc_source_process_once.py",
+    "symbol": "need",
+    "line": 19,
+    "end_line": 21
+  },
+  {
+    "file": "tools/s2uc_source_process_once.py",
+    "symbol": "child",
+    "line": 24,
+    "end_line": 73
+  },
+  {
+    "file": "tools/s2uc_source_process_once.py",
+    "symbol": "run_neutral",
+    "line": 76,
+    "end_line": 118
+  },
+  {
+    "file": "tools/_s2uc_qualification_v9.py",
+    "symbol": "read",
+    "line": 7,
+    "end_line": 39
+  },
+  {
+    "file": "tools/_s2uc_execution_v8.py",
+    "symbol": "_Source",
+    "line": 22,
+    "end_line": 44
+  },
+  {
+    "file": "tools/_s2uc_execution_v8.py",
+    "symbol": "_Owners",
+    "line": 47,
+    "end_line": 85
+  },
+  {
+    "file": "tools/_s2uc_execution_v8.py",
+    "symbol": "_receipt",
+    "line": 88,
+    "end_line": 104
+  },
+  {
+    "file": "tools/_s2uc_execution_v8.py",
+    "symbol": "verify_materialized",
+    "line": 107,
+    "end_line": 140
+  },
+  {
+    "file": "tools/_s2uc_execution_v8.py",
+    "symbol": "_Publication",
+    "line": 143,
+    "end_line": 159
+  },
+  {
+    "file": "tools/_s2uc_execution_v8.py",
+    "symbol": "_run",
+    "line": 162,
+    "end_line": 213
+  },
+  {
+    "file": "tools/_s2uc_execution_v8.py",
+    "symbol": "run_neutral",
+    "line": 216,
+    "end_line": 218
+  }
+]

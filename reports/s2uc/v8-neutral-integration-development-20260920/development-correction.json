@@ -1,0 +1,23 @@
+{
+  "initial_v8_suite": {
+    "tests": 18,
+    "passed": 17,
+    "failures": 1,
+    "exit_code": 1,
+    "cause": "Restart test searched stderr for SUPPLIER_CALLED, which Python included in the traceback source line although supplier calls were zero."
+  },
+  "correction": "Subprocess now emits structured measured supplier_calls=0, gate=false and V8_OUTPUT_ALREADY_EXISTS; asserts exit 23 and empty stderr. No runtime fix was required.",
+  "focused_after_correction": {
+    "tests": 5,
+    "passed": 5,
+    "exit_code": 0,
+    "seconds": 48.249
+  },
+  "added_coverage": [
+    "retry after aborted execution",
+    "second-story constructor failure before initialization",
+    "last-owner failure after all 58 materializations",
+    "consistent forged projection digest",
+    "consistent shifted projection time"
+  ]
+}

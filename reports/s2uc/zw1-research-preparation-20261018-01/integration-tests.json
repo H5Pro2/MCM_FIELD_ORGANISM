@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "tests": 11,
+  "ids": [
+    "experiments.zw1.test_prepare.Preparation.test_01_neutral_recipe_equivalence",
+    "experiments.zw1.test_prepare.Preparation.test_02_research_source_gate",
+    "experiments.zw1.test_prepare.Preparation.test_03_authorization_exact",
+    "experiments.zw1.test_prepare.Preparation.test_04_full_binding_coverage",
+    "experiments.zw1.test_prepare.Preparation.test_05_actual_supervised_integrations",
+    "experiments.zw1.test_prepare.Preparation.test_06_actual_errors_and_unquittied_pair",
+    "experiments.zw1.test_prepare.Preparation.test_07_statistics_unchanged_and_compact",
+    "experiments.zw1.test_prepare.Preparation.test_08_no_research_created",
+    "experiments.zw1.test_prepare.Preparation.test_09_entry_order_and_revision_only",
+    "experiments.zw1.test_prepare.Preparation.test_10_binding_tampering_rejected",
+    "experiments.zw1.test_prepare.Preparation.test_11_no_target_on_missing_auth_or_consumed"
+  ],
+  "errors": [],
+  "failures": [],
+  "seconds": 1.520902099990053,
+  "job": {
+    "limit_bytes": 536870912,
+    "peak_job_committed_bytes": 33746944,
+    "peak_process_committed_bytes": 33746944,
+    "hard_job_limit": true,
+    "members": "supervisor and inherited worker",
+    "measurement": "Windows JobObjectExtendedLimitInformation",
+    "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap."
+  },
+  "research_authorization_created": false,
+  "research_sources_created": false,
+  "full_policy_cases_executed": 0
+}

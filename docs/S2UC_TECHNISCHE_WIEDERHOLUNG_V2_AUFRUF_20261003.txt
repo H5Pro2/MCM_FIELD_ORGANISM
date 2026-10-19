@@ -1,0 +1,67 @@
+MCM-KI: separate technische Ausfuehrungsvorbereitung V2 (2026-10-03)
+
+Aktueller Auftrag: Integration und neutrale Pruefung,KEINE Rasterausfuehrung.
+Historischer Raster32-Lauf bleibt geschlossen/global NOT_EVALUABLE.
+Spaeterer Lauf nur als KNOWN_DATA_TECHNICAL_REPEAT_NOT_UNTOUCHED_EVALUATION.
+Alle32 Quellen sind bekannt; alte/neue Arme duerfen nicht zusammengesetzt
+werden. Neue Ausfuehrung immer vollstaendig getrennt mit eigenem Verzeichnis,
+Manifest,Autorisierung und Abschluss. Keine weitere Optimierungsvariante.
+
+Neue Huelle verwendet eingefrorenen execute-Bytecode,Quellenverfahren,
+Belegpruefer,Kriterien und Ressourcenlimits. Nur Baseline-Abhaengigkeit
+aktiviert den qualifizierten Frame-Blattfall; Klassenaenderung pro Aufruf
+zurueckgesetzt. Zeitmessung um Huelle,keine Policy-/Visitor-Timerhooks.
+
+Neutrale Qualifikation einmal N1/N2 je80 Positionen,je U/M/E/K/P=10 Replays,
+800 Aufnahmen+800 Referenzfortschreibungen.8 Baseline-Fach-/Metervergleiche
+gegen gespeicherte NEW-Qualifikation. U unveraendert,Speicherstaende durch
+originale Belegpruefung gemeinsam verglichen. Keine Rastermaterialisierung.
+V01-V08/R01-R25 als qualifizierte Einzelbausteine wiederverwenden.
+I01-I07 pruefen Bindung/Defaults,Autorisierungssperre,exklusiven Start,
+Normalende/erzwungenen Abbruch/Workerfehler,tatsaechliche Abschlussverwaltung,
+vollstaendige neutrale Integration,Ressourcenfehler und Evidenzstatus.
+Integration maximal900 Sekunden/16MiB; keine Auswahl guenstiger Wiederholungen.
+
+Zeitplan: konservative Hochrechnung aus langsamstem historischen
+Baseline-Startabstand,schwaechster gemessener Visitor-Entlastung und25 Prozent
+Hostreserve;alle128 Baseline-Arme wie langsamsten Arm behandeln. Hinzu kommen
+mindestens180 s Materialisierung/Validierung/Export/Belegpruefung/Startverwaltung,
+30 s U und60 s Abschluss. Neutrale Teilzeiten koennen diese Reserven erhoehen.
+Das ist keine mathematische Worst-Case-Garantie. Bereits diese Planung
+zeigt unzureichende Reserve unter3600 s;vor Ausfuehrungsentscheidung melden.
+
+3600 s bleiben absolute Laufdeadline ab exklusivem Start;Worker wird spaetestens
+nach3540 s beendet,60 s fuer Abschluss reserviert. Deadline/Abbruchanforderung/
+Workerbestaetigung/Beginn und Ende der wirklichen Abschlussverwaltung werden
+separat UTC/monoton protokolliert. Abschluss umfasst Prozesshandle-Schliessung,
+Inventarisierung,Hashes und Abschlussdatei. Letzte Journalzeile ist ein
+Selbstmessungs-Endmarker:ihre eigene Schreibzeit liegt unvermeidbar nach dem
+Endzeitstempel. Gesamtlaufzeitueberschreitung wird als Fehler gemeldet.
+Historischer Workerstop bleibt unbekannt. Keine stillschweigende Deadlineerhoehung.
+
+Ausstehende Vorlage nach bestandener Qualifikation:
+docs/S2UC_TECHNISCHE_WIEDERHOLUNG_V2_AUTORISIERUNG_VORLAGE_20261003.json
+Sie ist NICHT freigegeben. Nur separate Entscheidung darf eine operative
+Datei mit sonst identischem Inhalt und status AUTHORIZED_ONCE erzeugen.
+Diese Entscheidung muss den bekannten Evidenzstatus und unzureichenden
+Zeitreserve-Nachweis einschliessen. Entwickler erzeugt jetzt keine solche Datei.
+
+Vorbereiteter,nicht ausgefuehrter Aufruf im Projekt-workspace:
+C:/Python314/python.exe -m tools.s2uc_repeat_prepare_v2 run --authorization docs/S2UC_TECHNISCHE_WIEDERHOLUNG_V2_AUTORISIERUNG_20261003.json
+
+Exklusives kuenftiges Ziel:reports/s2uc/technical-repeat-20261003-01
+Existierendes Verzeichnis sperrt jeden Neustart,auch nach Fehler.
+Limit64MiB,1MiB Abschlussreserve,8MiB Vorbereitung/Referenzen,Dateicaps
+und Policygrenzen unveraendert. Neue Laufbilanz umfasst gebundenen Code,
+operative Referenzdateien,neue Vorbereitung und kuenftige Ausgaben;
+alte Raster-/Diagnosearchive werden erhalten und separat auf Integritaet
+geprueft,sind aber kein zweites Mal erzeugter Bestandteil des neuen Laufpakets.
+Sie werden niemals als neue Ergebnisarme eingebunden.
+
+V2 korrigiert ausschliesslich die vorzeitige join-Rueckkehr:erst bei
+tatsaechlich erreichter monotoner Deadline abbrechen,sonst weiter warten.
+V1 mit fehlgeschlagener Deadlineprobe bleibt erhalten. Die bestandene
+V1-N1/N2-Integration wird hashgeprueft wiederverwendet;AST-Gleichheit von
+execute und integrated_baseline wird geprueft. Keine zusaetzlichen Replays
+zur Auswahl guenstiger Zeiten. V2 prueft Normalende,Abbruch,Workerfehler
+und simulierte vorzeitige join-Rueckkehr erneut.

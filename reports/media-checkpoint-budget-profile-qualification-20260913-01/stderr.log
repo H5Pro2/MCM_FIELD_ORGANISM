@@ -1,0 +1,21 @@
+test_01_fixed_immutable_profile (tests.test_media_checkpoint_budget_profile.ProfileTests.test_01_fixed_immutable_profile) ... ok
+test_02_foreign_or_changed_profile (tests.test_media_checkpoint_budget_profile.ProfileTests.test_02_foreign_or_changed_profile) ... ok
+test_03_legacy_defaults_and_bytes (tests.test_media_checkpoint_budget_profile.ProfileTests.test_03_legacy_defaults_and_bytes) ... ok
+test_04_profile_publication_and_independent_reader (tests.test_media_checkpoint_budget_profile.ProfileTests.test_04_profile_publication_and_independent_reader) ... ok
+test_05_missing_profile_stops_verifier (tests.test_media_checkpoint_budget_profile.ProfileTests.test_05_missing_profile_stops_verifier) ... ok
+test_06_manipulated_available_profile (tests.test_media_checkpoint_budget_profile.ProfileTests.test_06_manipulated_available_profile) ... ok
+test_07_mixed_record_profiles_rejected (tests.test_media_checkpoint_budget_profile.ProfileTests.test_07_mixed_record_profiles_rejected) ... ok
+test_08_metadata_exact_boundary_publication (tests.test_media_checkpoint_budget_profile.ProfileTests.test_08_metadata_exact_boundary_publication) ... ok
+test_09_metadata_one_byte_over (tests.test_media_checkpoint_budget_profile.ProfileTests.test_09_metadata_one_byte_over) ... ok
+test_10_global_limit_despite_valid_local_classes (tests.test_media_checkpoint_budget_profile.ProfileTests.test_10_global_limit_despite_valid_local_classes) ... ok
+test_11_joint_class_and_verification_boundaries (tests.test_media_checkpoint_budget_profile.ProfileTests.test_11_joint_class_and_verification_boundaries) ... ok
+test_12_unchanged_single_publication_limits (tests.test_media_checkpoint_budget_profile.ProfileTests.test_12_unchanged_single_publication_limits) ... ok
+test_13_full_catalog_profile_preflight (tests.test_media_checkpoint_budget_profile.ProfileTests.test_13_full_catalog_profile_preflight) ... ok
+test_14_joint_reserves_not_multiplied (tests.test_media_checkpoint_budget_profile.ProfileTests.test_14_joint_reserves_not_multiplied) ... ok
+test_15_entry_requires_explicit_new_profile (tests.test_media_checkpoint_budget_profile.ProfileTests.test_15_entry_requires_explicit_new_profile) ... ok
+test_16_profile_bound_error_closure (tests.test_media_checkpoint_budget_profile.ProfileTests.test_16_profile_bound_error_closure) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.180s
+
+OK

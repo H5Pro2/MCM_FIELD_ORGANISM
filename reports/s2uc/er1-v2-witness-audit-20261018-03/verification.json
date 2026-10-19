@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "workflow": "37ca6eac-5bd2-4e67-9cd2-49c6c9c916d0",
+  "cases": 32,
+  "counts": {
+    "E": {
+      "retention_events": 171,
+      "warm_uses": 327,
+      "local_gains": 141,
+      "unique_warm_targets": 327,
+      "unique_gain_targets": 141
+    },
+    "F": {
+      "retention_events": 343,
+      "warm_uses": 320,
+      "local_gains": 166,
+      "unique_warm_targets": 320,
+      "unique_gain_targets": 166
+    }
+  },
+  "missing": 0,
+  "unsupported": 0,
+  "duplicate_records": 0,
+  "multi_assigned_targets_per_arm": 0,
+  "primary_unchanged": "INCONCLUSIVE",
+  "source_bound_files": 153,
+  "prestart_sha256": "0d67e76c14afa1e74a19dd7190857e68a19062abd26fd2af484c85b761a8f2b7",
+  "historical_file_bindings": 2967,
+  "historical_qualification": 43,
+  "historical_abort_files": 43,
+  "policy_executions": 0,
+  "bootstrap_draws": 0,
+  "new_sources": 0
+}

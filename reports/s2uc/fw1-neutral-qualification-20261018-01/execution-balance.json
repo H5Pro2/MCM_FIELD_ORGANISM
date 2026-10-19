@@ -1,0 +1,50 @@
+{
+  "integration": {
+    "passes": 1,
+    "policy_started": 28,
+    "policy_completed": 28,
+    "live_reference_completed": 28,
+    "archive_reference_completed": 28,
+    "max_frames": 96,
+    "per_pass_limit": 32
+  },
+  "unit": {
+    "policy_histories_started": 13,
+    "construction_only_instances": 2,
+    "live_reference_instances": 10,
+    "archive_state_reference_instances": 10,
+    "max_frames": 40,
+    "initial_failed_helpers": 3,
+    "notes": "First three cleanup events were not persisted because reference teardown threw; tracebacks and preserved attempt logs disclose this gap."
+  },
+  "archive_mutations": {
+    "calls": 5,
+    "reference_started": 10,
+    "reference_completed": 6,
+    "expected_rejections": 4,
+    "non_active_slot_accepted": 1,
+    "policy": 0
+  },
+  "sources": {
+    "neutral_pair_generations": 12,
+    "neutral_pair_reconstructions": 12,
+    "condition_material_checks": 24,
+    "persisted_condition_sources": 20,
+    "research": 0
+  },
+  "statistics": {
+    "primary_calls": 19,
+    "reference_calls": 13,
+    "reference_successes": 8,
+    "small_fixed_matrices_only": true,
+    "research_matrix_generated": 0
+  },
+  "tests": {
+    "invocations": 28,
+    "unique_ids": 18,
+    "initial_failures": 5,
+    "final_criteria_passed": 18
+  },
+  "research_policy": 0,
+  "old_audit_replays": 0
+}

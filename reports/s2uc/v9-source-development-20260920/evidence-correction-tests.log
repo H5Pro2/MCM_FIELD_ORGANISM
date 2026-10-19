@@ -1,0 +1,7 @@
+test_qualification_fixture_and_mutations_never_authorize (tests.test_s2uc_source_execution.SourceExecutionTests.test_qualification_fixture_and_mutations_never_authorize) ... ok
+test_source_preparation_reader_has_no_authority (tests.test_s2uc_source_execution.SourceExecutionTests.test_source_preparation_reader_has_no_authority) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 44.716s
+
+OK

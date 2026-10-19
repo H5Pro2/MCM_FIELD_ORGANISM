@@ -1,0 +1,71 @@
+{
+  "status": "PASS_COMBINED_CRITERIA",
+  "criteria": {
+    "A01": {
+      "status": "PASS",
+      "source": "reports/s2uc/a1-neutral-qualification-20261004-02/tests.json"
+    },
+    "A02": {
+      "status": "PASS",
+      "source": "reports/s2uc/a1-neutral-qualification-20261004-02/tests.json"
+    },
+    "A03": {
+      "status": "PASS",
+      "source": "reports/s2uc/a1-neutral-qualification-20261004-02/tests.json"
+    },
+    "A04": {
+      "status": "PASS",
+      "source": "reports/s2uc/a1-neutral-qualification-20261004-02/tests.json"
+    },
+    "A05": {
+      "status": "PASS",
+      "source": "reports/s2uc/a1-neutral-qualification-20261004-02/tests.json"
+    },
+    "A06": {
+      "status": "PASS",
+      "source": "reports/s2uc/a1-neutral-qualification-20261004-02/tests.json"
+    },
+    "A07": {
+      "status": "PASS",
+      "source": "reports/s2uc/a1-neutral-qualification-20261004-02/tests.json"
+    },
+    "A08": {
+      "status": "PASS",
+      "source": "reports/s2uc/a1-neutral-qualification-20261004-02/tests.json"
+    },
+    "A09": {
+      "status": "PASS",
+      "source": "reports/s2uc/a1-neutral-qualification-20261004-02/tests.json"
+    },
+    "A10": {
+      "status": "PASS",
+      "source": "reports/s2uc/a1-neutral-qualification-20261004-03/tests.json"
+    },
+    "A11": {
+      "status": "PASS",
+      "source": "reports/s2uc/a1-neutral-qualification-20261004-02/tests.json"
+    }
+  },
+  "qualification02_status": "FAILED_TEST_EXPECTATION",
+  "qualification03_status": "PASS_A10_REPAIR",
+  "unchanged_production_reference_probe": true,
+  "other_ten_tests_AST_unchanged": true,
+  "inherited_U_code_unchanged": true,
+  "resources": {
+    "additional_python_peak": 6679,
+    "original_frames_peak": 16,
+    "output_slots_peak": 2,
+    "combined_peak": 17,
+    "original_frames_upper_bound": 16,
+    "combined_upper_bound": 18,
+    "packed": 416,
+    "receipt_bytes_peak": 1473,
+    "utf8_upper": 2946
+  },
+  "probe_executions": 19,
+  "probe_input_positions": 390,
+  "additional_U_factory_comparison_input_positions": 48,
+  "additional_direct_fixtures_separately_qualified": true,
+  "research_replays": 0,
+  "new_research_sources": 0
+}

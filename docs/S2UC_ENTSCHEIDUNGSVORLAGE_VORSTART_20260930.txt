@@ -1,0 +1,107 @@
+S2-UC: Entscheidungsvorlage nach lesender Vorstartprüfung
+30.09.2026 — NICHT AUSFÜHRBAR, KEINE OPERATIVE AUTORISIERUNG
+
+Befund: VORAUSSETZUNGEN FEHLEN. Die abgenommene Implementierung ist vorhanden;
+die Registry-Vertrauensquelle ist auf diesem Rechner noch nicht eingerichtet.
+Beobachtung: 2026-09-30T11:37:54.748333+00:00. Kein Quellen- oder Testlauf.
+Lesebeleg: docs/S2UC_VORSTARTPRUEFUNG_20260930.json.
+
+1. Konkrete fehlende Einrichtung
+In HKLM, ausdrücklich 64-Bit-Ansicht, fehlen alle drei vorgesehenen Schlüssel:
+  SOFTWARE\MCM_FIELD_ORGANISM
+  SOFTWARE\MCM_FIELD_ORGANISM\S2UC
+  SOFTWARE\MCM_FIELD_ORGANISM\S2UC\ApprovedOneShots
+Jeder OpenKey-Aufruf mit KEY_READ | KEY_WOW64_64KEY ergab Windows-Fehler 2.
+Dies ist ein Nichtvorhandensein-Befund, keine erfolgreiche ACL-Prüfung und kein
+Nachweis falscher vorhandener Berechtigungen. Eigentümer/DACL sind mangels Schlüssel
+nicht feststellbar. Es wurde nichts angelegt, geändert oder mit Schreibrechten geöffnet.
+
+Vor operativer Verwendung muss ein berechtigter Administrator die drei Schlüssel
+separat einrichten. Auf jedem müssen die implementierten Regeln erfüllt sein:
+Eigentümer SYSTEM (S-1-5-18) oder Administratoren (S-1-5-32-544); keine Schreib-,
+Lösch- oder Rechteänderungs-Erlaubnis für andere SIDs; keine Null-DACL und keine
+vom Leser nicht unterstützten ACE-Typen. Lesbarkeit im tatsächlichen Ausführungskonto
+und native ACL-Annahme müssen anschließend erneut lesend bestätigt werden.
+Fundstellen: tools/s2uc_productive_once.py:23, :29 und :53.
+Dieser Befund beauftragt weder Einrichtung noch Rechteänderung.
+
+Die gesonderte ausdrückliche Einmallaufentscheidung des Benutzers und danach ein
+exakt gebundener operativer Datensatz mit unabhängigem Registerbeleg fehlen weiterhin
+bewusst. Keine Testzulassung und kein Dokument dieser Übergabe ersetzt sie.
+Der spätere Registerbeleg muss den exakten Datensatzhash, Autorisierungs-ID,
+Entscheidungsreferenz und max_uses=1 bestätigen; der Datensatz bestätigt sich nicht selbst.
+
+2. Exakte abgenommene Fassung und geprüfte Nachweise
+s2uc.productive.v1; 76 Dateien, 978115 Byte. Aktuelles vollständiges Code-/Laufzeit-
+inventar stimmt mit der gespeicherten Qualifikation überein. CPython 3.14.4,
+C:/Python314/python.exe; sämtliche weiteren Laufzeitbindungen im Inventar.
+226/226 gespeicherte PASS, 0 Fehler/Fehlschläge/Skips; keine Tests wiederholt.
+Alle 48 konsumierten Qualifikationsdateien einschließlich Kategorien, Hashes und
+vollständiger Ist-/Reservierungsrechnung durch den vorhandenen Leser bestätigt.
+M1–M5 sind gemäß dieser direkten Übergabe durch den Projektleiter im geprüften
+Implementierungs-/Testumfang abgenommen; keine unabhängige Gesamtabnahme/Realfreigabe.
+inventory: reports/s2uc/p3-implementation-20260930-01/inventory.json
+  15805 Byte; SHA256 c7f5b9c99c86394969912a68e817925f7168cb2b3827da9b82c512e31275fe42
+result: reports/s2uc/p3-implementation-20260930-01/test-result.json
+  54681 Byte; SHA256 38a0cdac2c779ada26c32bf9005e3ad73380041dda91ff628b62a262d2b645c8
+protocol: reports/s2uc/p3-implementation-20260930-01/protocol.json
+  17587 Byte; SHA256 27c0aa07ce0cec9a5b15424e16e10369c6f2b038cae9c7e9df9805fbfe3ff446
+ledger: reports/s2uc/p3-implementation-20260930-01/ledger.json
+  12047 Byte; SHA256 a22f04424b506c215116144e992d1d73b4f1bc89c105bba1cb9d00808263f173
+
+3. Quellen und genau ein Versuch
+Vorgemerkte Identität: s2uc-source-comparison-real-20260920-02.
+Ausschließlich NU-Stream 2, Fenster 0–4 (nu-s02-w00 bis nu-s02-w04), mono PCM_F32LE,
+48000 Hz, je 4800 Samples/19200 Byte, Bereich [24000,48000) in fünf Fenstern.
+69 gebundene Ereignisse, 58 Materialisierungen, sieben Hints; Originalmanifest,
+Original-PCM-Hashes, Profile, Ziele und Erwartungen bleiben unverändert.
+Originalquellenkontext:
+reports/s2uc/preparation-p1-20260930-01/attempt-01/preparation/source-context.json
+SHA256 6acb200eb1b70382969cbeb2d1c74f3e8953937d28e708eda83c6ce7a9c4a6f1.
+Die Einzelhashes und unveränderten Auswertungskriterien stehen in Abschnitten 2/7
+von docs/S2UC_FREIGABEENTWURF_NACH_P2_20260930.txt.
+
+Genau ein Versuch nach gesonderter Entscheidung und erfolgreichem Vorstart.
+Die exklusive Anlage der admission-Wurzel verbraucht ihn vor Job/Prozessstart;
+auch ein partieller Claim, Jobfehler, Timeout oder Abbruch ermöglicht keinen Retry.
+Keine automatische Wiederholung und kein zweiter Quellenlauf für den Herkunftsnachtrag.
+
+4. Vier weiterhin unbenutzte Ablagen (relativ zur Projektwurzel)
+  product: reports/s2uc-source-comparison-real-20260920-02
+  observer: reports/s2uc-source-comparison-real-20260920-02-observer
+  appendix: reports/s2uc-source-comparison-real-20260920-02-appendix
+  admission: reports/s2uc-source-comparison-real-20260920-02-admission
+Alle vier nicht vorhanden; keine Symlinks/Junctions; kanonische Auflösung stimmt.
+Kein Claim wurde erzeugt. Der spätere tatsächliche Vorstart muss dies erneut prüfen.
+
+5. Unveränderte Ressourcenlimits (Dateibytes)
+Code 1048576; Metadaten 131072; static_shared 1572864; shared gesamt 1703936.
+Record 245760 Reserve / 262144 absolut; Verifikation einschließlich Herkunft
+131072 gemeinsame Reserve / 262144 absolut; Fehler 65536; Terminal 32768;
+Minimal 16384; Staging 245760; Gesamt 4194304.
+Aktivinventar pro Datei 16384; kompaktes Protokoll pro Datei 32768.
+Gespeicherte gemeinsame Schlussbilanz: 1973225 Byte; mit Abschlussreserven
+2707220 Byte. Alle Grenzen eingehalten. Dies ist die geschlossene Testpaketbilanz.
+Der spätere operative Vorstart muss das Freigabedokument, Claim und alle tatsächlich
+konsumierten Eingaben zusätzlich berücksichtigen. Diese Entscheidungsvorlage ist
+kein operativer Eingang; die gespeicherte Bilanz wurde nicht umgeschrieben.
+
+6. Mögliche nicht auswertbare Abbrüche und Aussagegrenze
+Originalquellenverarbeitung und tatsächliches NU-Generatorverhalten unter 640 MiB
+sind weiterhin UNGEPRÜFT. Die Jobgrenze gilt nur für das Produktkind, nicht für
+Elternprozess oder Herkunftsauswertung. Die Tests mit Ersatzproduktion belegen
+keinen erfolgreichen Originalquellenlauf und keine ausreichenden echten Ressourcen.
+Job-/Speicherfehler, Timeout, Prozessabbruch, Originalhashabweichung, unvollständige
+Materialisierung/Owner-Schließung, Budgetüberlauf oder ungültige Abschlussdateien
+können NOT_EVALUABLE ergeben; nach Verbrauch bleibt der Versuch dennoch verbraucht.
+Ein isolierter Herkunftsfehler lässt einen gültigen Produktabschluss unverändert,
+sperrt aber den Herkunftsbefund. Fachliche Erwartungsverletzungen werden getrennt
+berichtet und sind allein kein technischer NOT_EVALUABLE-Grund.
+
+Konkreter nächster Entscheid
+Projektleiter kann die Einmallaufentscheidung mit genau dieser Fassung vorlegen,
+jedoch mit der noch fehlenden administrativen Registry-Einrichtung und ihrer
+anschließenden lesenden Bestätigung als ausdrücklicher Vorstartvoraussetzung.
+Dieser Auftrag ist abgeschlossen; keine neue Implementierungs- oder Planungsrunde.
+Keine Registry-Schreibzugriffe, keine gültige operative Autorisierung, kein Claim,
+keine Quellenproduktion. Prüfartefakte und Code blieben unverändert.

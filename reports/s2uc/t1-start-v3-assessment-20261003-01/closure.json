@@ -1,0 +1,18 @@
+{
+  "status": "COMPLETE_ADMIN_PREPARATION_ONLY",
+  "files": {
+    "facts.json": {
+      "bytes": 31775,
+      "sha256": "ddaab8714fa559d559d455e8d916eb2ac3fb98debc8f943f130f1105416161d8"
+    },
+    "REPORT.md": {
+      "bytes": 7508,
+      "sha256": "36729cbee2d1dcf29c590c8f8b0209dd9b2aec5550f1d4ef01dbf4f453f1e537"
+    }
+  },
+  "tests_passed": 12,
+  "new_policy_replays": 0,
+  "t1_sources": 0,
+  "new_operational_authorization": false,
+  "failed_run_unchanged": true
+}

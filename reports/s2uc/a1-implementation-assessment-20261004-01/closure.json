@@ -1,0 +1,20 @@
+{
+  "status": "COMPLETE_IMPLEMENTATION_PACKAGE",
+  "binding_sha256": "64a0e30bc5eb57f700e5bcc89c62a0baf1fddf07edbb9fb45b10a22106ef3028",
+  "files": {
+    "REPORT.md": {
+      "bytes": 11034,
+      "sha256": "8e1bc4a0f223ac44161f662f32f5285880687624a33de010739b698757e9e75d"
+    },
+    "verification.json": {
+      "bytes": 2159,
+      "sha256": "160520f650505695e070f7c6792412f27e36e9caca0401be6379a2695a903f81"
+    }
+  },
+  "overview_sha256": {
+    "README.md": "623476c007e251cabfe2623372bd10b562a267724b600059f4b73212686416ce",
+    "AKTUELLER_FORSCHUNGSWEG.md": "7ed3017b0755584d1c62a31d71ac4f7850c3dca414a9b40a9551958a63db4da5"
+  },
+  "research_replays": 0,
+  "new_research_sources": 0
+}

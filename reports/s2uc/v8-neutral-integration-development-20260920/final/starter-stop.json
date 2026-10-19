@@ -1,0 +1,11 @@
+{
+  "binding_version": "s2uc.execution-binding.v8",
+  "error": "V8_REAL_EXECUTION_DISABLED",
+  "supplier_calls": 0,
+  "adapter_calls": 0,
+  "run_entry_calls": 0,
+  "public_gate": false,
+  "neutral_gate": false,
+  "output_exists": false,
+  "scope": "neutral fixture only; public starter rejection"
+}

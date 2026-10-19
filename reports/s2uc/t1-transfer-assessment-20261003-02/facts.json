@@ -1,0 +1,2793 @@
+{
+  "status": "COMPLETE",
+  "verdicts": {
+    "G": "NICHT_NACHGEWIESEN",
+    "adaptation": "NICHT_NACHGEWIESEN",
+    "recognition": "BELEGT",
+    "stability_damage": "BELEGT"
+  },
+  "recognition": {
+    "cases": 11,
+    "denominator": 16,
+    "groups": 4
+  },
+  "adaptation": {
+    "denominator": 52,
+    "groups": {
+      "1": {
+        "denominator": 13,
+        "successes": 0
+      },
+      "2": {
+        "denominator": 13,
+        "successes": 0
+      },
+      "3": {
+        "denominator": 13,
+        "successes": 0
+      },
+      "4": {
+        "denominator": 13,
+        "successes": 0
+      }
+    },
+    "successes": 0
+  },
+  "negative_controls": {
+    "I": {
+      "transitions": 12,
+      "passed": 0,
+      "actual_targets": 48,
+      "error_sums": {
+        "U": 3.5978591442108154,
+        "M": 3.5978591442108154,
+        "E": 3.5978591442108154,
+        "K": 3.5978591442108154,
+        "P": 3.5978591442108154
+      }
+    },
+    "H": {
+      "transitions": 8,
+      "passed": 0,
+      "actual_targets": 32,
+      "error_sums": {
+        "U": 0.0,
+        "M": 0.0,
+        "E": 0.0,
+        "K": 0.0,
+        "P": 0.0
+      }
+    }
+  },
+  "availability": {
+    "NO_ELIGIBLE_CONTEXT": 528,
+    "ACTUAL_COLD": 9,
+    "ACTUAL_WARM": 80,
+    "ACTUAL_ABSENT": 7
+  },
+  "decision_reasons": {
+    "NO_ELIGIBLE_CONTEXT": 528,
+    "COLD_ONLY": 12,
+    "NO_ESTIMATED_IMPROVEMENT": 84
+  },
+  "selected_context_targets": 0,
+  "case_summaries": [
+    {
+      "id": "T1-0-1",
+      "recognition": true,
+      "availability": {
+        "NO_ELIGIBLE_CONTEXT": 2,
+        "ACTUAL_COLD": 1,
+        "ACTUAL_WARM": 36
+      },
+      "warm_context_targets": 36,
+      "selected_context_targets": 0,
+      "adaptation_passed": 0,
+      "transitions": 0,
+      "G": {
+        "U": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 0.0,
+          "mae": 0.0
+        },
+        "M": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 0.0,
+          "mae": 0.0
+        },
+        "E": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 0.0,
+          "mae": 0.0
+        },
+        "K": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 0.0,
+          "mae": 0.0
+        },
+        "P": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 0.0,
+          "mae": 0.0
+        }
+      }
+    },
+    {
+      "id": "T1-0-2",
+      "recognition": true,
+      "availability": {
+        "NO_ELIGIBLE_CONTEXT": 2,
+        "ACTUAL_COLD": 1,
+        "ACTUAL_WARM": 36
+      },
+      "warm_context_targets": 36,
+      "selected_context_targets": 0,
+      "adaptation_passed": 0,
+      "transitions": 0,
+      "G": {
+        "U": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 0.0,
+          "mae": 0.0
+        },
+        "M": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 0.0,
+          "mae": 0.0
+        },
+        "E": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 0.0,
+          "mae": 0.0
+        },
+        "K": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 0.0,
+          "mae": 0.0
+        },
+        "P": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 0.0,
+          "mae": 0.0
+        }
+      }
+    },
+    {
+      "id": "T1-0-3",
+      "recognition": false,
+      "availability": {
+        "NO_ELIGIBLE_CONTEXT": 39
+      },
+      "warm_context_targets": 0,
+      "selected_context_targets": 0,
+      "adaptation_passed": 0,
+      "transitions": 0,
+      "G": {
+        "U": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.463826894760132,
+          "mae": 0.06317504858359313
+        },
+        "M": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.463826894760132,
+          "mae": 0.06317504858359313
+        },
+        "E": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.463826894760132,
+          "mae": 0.06317504858359313
+        },
+        "K": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.463826894760132,
+          "mae": 0.06317504858359313
+        },
+        "P": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.463826894760132,
+          "mae": 0.06317504858359313
+        }
+      }
+    },
+    {
+      "id": "T1-0-4",
+      "recognition": false,
+      "availability": {
+        "NO_ELIGIBLE_CONTEXT": 39
+      },
+      "warm_context_targets": 0,
+      "selected_context_targets": 0,
+      "adaptation_passed": 0,
+      "transitions": 0,
+      "G": {
+        "U": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.105255206425985,
+          "mae": 0.053980902728871405
+        },
+        "M": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.105255206425985,
+          "mae": 0.053980902728871405
+        },
+        "E": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.105255206425985,
+          "mae": 0.053980902728871405
+        },
+        "K": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.105255206425985,
+          "mae": 0.053980902728871405
+        },
+        "P": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.105255206425985,
+          "mae": 0.053980902728871405
+        }
+      }
+    },
+    {
+      "id": "T1-1-1",
+      "recognition": true,
+      "availability": {
+        "NO_ELIGIBLE_CONTEXT": 38,
+        "ACTUAL_ABSENT": 1
+      },
+      "warm_context_targets": 0,
+      "selected_context_targets": 0,
+      "adaptation_passed": 0,
+      "transitions": 5,
+      "G": {
+        "U": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.300208806991577,
+          "mae": 0.05897971299978403
+        },
+        "M": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.300208806991577,
+          "mae": 0.05897971299978403
+        },
+        "E": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.300208806991577,
+          "mae": 0.05897971299978403
+        },
+        "K": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.300208806991577,
+          "mae": 0.05897971299978403
+        },
+        "P": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.300208806991577,
+          "mae": 0.05897971299978403
+        }
+      }
+    },
+    {
+      "id": "T1-1-2",
+      "recognition": true,
+      "availability": {
+        "NO_ELIGIBLE_CONTEXT": 38,
+        "ACTUAL_COLD": 1
+      },
+      "warm_context_targets": 0,
+      "selected_context_targets": 0,
+      "adaptation_passed": 0,
+      "transitions": 5,
+      "G": {
+        "U": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.1596272786458335,
+          "mae": 0.05537505842681624
+        },
+        "M": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.1596272786458335,
+          "mae": 0.05537505842681624
+        },
+        "E": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.1596272786458335,
+          "mae": 0.05537505842681624
+        },
+        "K": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.1596272786458335,
+          "mae": 0.05537505842681624
+        },
+        "P": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.1596272786458335,
+          "mae": 0.05537505842681624
+        }
+      }
+    },
+    {
+      "id": "T1-1-3",
+      "recognition": true,
+      "availability": {
+        "NO_ELIGIBLE_CONTEXT": 37,
+        "ACTUAL_ABSENT": 1,
+        "ACTUAL_COLD": 1
+      },
+      "warm_context_targets": 0,
+      "selected_context_targets": 0,
+      "adaptation_passed": 0,
+      "transitions": 5,
+      "G": {
+        "U": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.382742166519165,
+          "mae": 0.0610959529876709
+        },
+        "M": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.382742166519165,
+          "mae": 0.0610959529876709
+        },
+        "E": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.382742166519165,
+          "mae": 0.0610959529876709
+        },
+        "K": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.3803416093190513,
+          "mae": 0.06103440023895003
+        },
+        "P": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.382742166519165,
+          "mae": 0.0610959529876709
+        }
+      }
+    },
+    {
+      "id": "T1-1-4",
+      "recognition": true,
+      "availability": {
+        "NO_ELIGIBLE_CONTEXT": 38,
+        "ACTUAL_ABSENT": 1
+      },
+      "warm_context_targets": 0,
+      "selected_context_targets": 0,
+      "adaptation_passed": 0,
+      "transitions": 5,
+      "G": {
+        "U": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.3914119402567544,
+          "mae": 0.06131825487837832
+        },
+        "M": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.3914119402567544,
+          "mae": 0.06131825487837832
+        },
+        "E": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.3914119402567544,
+          "mae": 0.06131825487837832
+        },
+        "K": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.3914119402567544,
+          "mae": 0.06131825487837832
+        },
+        "P": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.3914119402567544,
+          "mae": 0.06131825487837832
+        }
+      }
+    },
+    {
+      "id": "T1-2-1",
+      "recognition": false,
+      "availability": {
+        "NO_ELIGIBLE_CONTEXT": 39
+      },
+      "warm_context_targets": 0,
+      "selected_context_targets": 0,
+      "adaptation_passed": 0,
+      "transitions": 4,
+      "G": {
+        "U": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.6456464926401773,
+          "mae": 0.06783708955487634
+        },
+        "M": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.6456464926401773,
+          "mae": 0.06783708955487634
+        },
+        "E": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.6456464926401773,
+          "mae": 0.06783708955487634
+        },
+        "K": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.6456464926401773,
+          "mae": 0.06783708955487634
+        },
+        "P": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.6456464926401773,
+          "mae": 0.06783708955487634
+        }
+      }
+    },
+    {
+      "id": "T1-2-2",
+      "recognition": false,
+      "availability": {
+        "NO_ELIGIBLE_CONTEXT": 39
+      },
+      "warm_context_targets": 0,
+      "selected_context_targets": 0,
+      "adaptation_passed": 0,
+      "transitions": 4,
+      "G": {
+        "U": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.8845858573913574,
+          "mae": 0.07396373993311173
+        },
+        "M": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.8845858573913574,
+          "mae": 0.07396373993311173
+        },
+        "E": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.8845858573913574,
+          "mae": 0.07396373993311173
+        },
+        "K": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.8845858573913574,
+          "mae": 0.07396373993311173
+        },
+        "P": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.8845858573913574,
+          "mae": 0.07396373993311173
+        }
+      }
+    },
+    {
+      "id": "T1-2-3",
+      "recognition": true,
+      "availability": {
+        "NO_ELIGIBLE_CONTEXT": 38,
+        "ACTUAL_COLD": 1
+      },
+      "warm_context_targets": 0,
+      "selected_context_targets": 0,
+      "adaptation_passed": 0,
+      "transitions": 4,
+      "G": {
+        "U": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.3725619316101074,
+          "mae": 0.06083492132333609
+        },
+        "M": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.3725619316101074,
+          "mae": 0.06083492132333609
+        },
+        "E": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.3725619316101074,
+          "mae": 0.06083492132333609
+        },
+        "K": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.3725619316101074,
+          "mae": 0.06083492132333609
+        },
+        "P": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.3725619316101074,
+          "mae": 0.06083492132333609
+        }
+      }
+    },
+    {
+      "id": "T1-2-4",
+      "recognition": false,
+      "availability": {
+        "NO_ELIGIBLE_CONTEXT": 39
+      },
+      "warm_context_targets": 0,
+      "selected_context_targets": 0,
+      "adaptation_passed": 0,
+      "transitions": 4,
+      "G": {
+        "U": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.5882559617360434,
+          "mae": 0.06636553748041137
+        },
+        "M": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.5882559617360434,
+          "mae": 0.06636553748041137
+        },
+        "E": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.5882559617360434,
+          "mae": 0.06636553748041137
+        },
+        "K": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.5882559617360434,
+          "mae": 0.06636553748041137
+        },
+        "P": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.5882559617360434,
+          "mae": 0.06636553748041137
+        }
+      }
+    },
+    {
+      "id": "T1-3-1",
+      "recognition": true,
+      "availability": {
+        "NO_ELIGIBLE_CONTEXT": 35,
+        "ACTUAL_COLD": 1,
+        "ACTUAL_WARM": 2,
+        "ACTUAL_ABSENT": 1
+      },
+      "warm_context_targets": 3,
+      "selected_context_targets": 0,
+      "adaptation_passed": 0,
+      "transitions": 4,
+      "G": {
+        "U": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.2636096477508545,
+          "mae": 0.05804127301925268
+        },
+        "M": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.2636096477508545,
+          "mae": 0.05804127301925268
+        },
+        "E": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.2636096477508545,
+          "mae": 0.05804127301925268
+        },
+        "K": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.2636096477508545,
+          "mae": 0.05804127301925268
+        },
+        "P": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.2636096477508545,
+          "mae": 0.05804127301925268
+        }
+      }
+    },
+    {
+      "id": "T1-3-2",
+      "recognition": true,
+      "availability": {
+        "NO_ELIGIBLE_CONTEXT": 35,
+        "ACTUAL_COLD": 1,
+        "ACTUAL_WARM": 2,
+        "ACTUAL_ABSENT": 1
+      },
+      "warm_context_targets": 3,
+      "selected_context_targets": 0,
+      "adaptation_passed": 0,
+      "transitions": 4,
+      "G": {
+        "U": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.3139825661977134,
+          "mae": 0.05933288631276188
+        },
+        "M": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.3139825661977134,
+          "mae": 0.05933288631276188
+        },
+        "E": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.3139825661977134,
+          "mae": 0.05933288631276188
+        },
+        "K": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.3139825661977134,
+          "mae": 0.05933288631276188
+        },
+        "P": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.3139825661977134,
+          "mae": 0.05933288631276188
+        }
+      }
+    },
+    {
+      "id": "T1-3-3",
+      "recognition": true,
+      "availability": {
+        "NO_ELIGIBLE_CONTEXT": 35,
+        "ACTUAL_COLD": 1,
+        "ACTUAL_WARM": 2,
+        "ACTUAL_ABSENT": 1
+      },
+      "warm_context_targets": 3,
+      "selected_context_targets": 0,
+      "adaptation_passed": 0,
+      "transitions": 4,
+      "G": {
+        "U": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.1048882802327475,
+          "mae": 0.053971494364942245
+        },
+        "M": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.1048882802327475,
+          "mae": 0.053971494364942245
+        },
+        "E": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.1048882802327475,
+          "mae": 0.053971494364942245
+        },
+        "K": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.1048882802327475,
+          "mae": 0.053971494364942245
+        },
+        "P": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.1048882802327475,
+          "mae": 0.053971494364942245
+        }
+      }
+    },
+    {
+      "id": "T1-3-4",
+      "recognition": true,
+      "availability": {
+        "NO_ELIGIBLE_CONTEXT": 35,
+        "ACTUAL_COLD": 1,
+        "ACTUAL_WARM": 2,
+        "ACTUAL_ABSENT": 1
+      },
+      "warm_context_targets": 3,
+      "selected_context_targets": 0,
+      "adaptation_passed": 0,
+      "transitions": 4,
+      "G": {
+        "U": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.3923280239105225,
+          "mae": 0.061341744202833906
+        },
+        "M": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.3923280239105225,
+          "mae": 0.061341744202833906
+        },
+        "E": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.3923280239105225,
+          "mae": 0.061341744202833906
+        },
+        "K": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.3923280239105225,
+          "mae": 0.061341744202833906
+        },
+        "P": {
+          "count": 39,
+          "missing": [],
+          "error_sum": 2.3923280239105225,
+          "mae": 0.061341744202833906
+        }
+      }
+    }
+  ],
+  "summaries": {
+    "G": {
+      "E": {
+        "case_mean": 0.05347585104979002,
+        "case_mean_exact": "75140152732680193/1405123083739594752",
+        "position_mean": 0.05347585104979002
+      },
+      "K": {
+        "case_mean": 0.05347200400299496,
+        "case_mean_exact": "18783686789606059/351280770934898688",
+        "position_mean": 0.05347200400299496
+      },
+      "M": {
+        "case_mean": 0.05347585104979002,
+        "case_mean_exact": "75140152732680193/1405123083739594752",
+        "position_mean": 0.05347585104979002
+      },
+      "P": {
+        "case_mean": 0.05347585104979002,
+        "case_mean_exact": "75140152732680193/1405123083739594752",
+        "position_mean": 0.05347585104979002
+      },
+      "U": {
+        "case_mean": 0.05347585104979002,
+        "case_mean_exact": "75140152732680193/1405123083739594752",
+        "position_mean": 0.05347585104979002
+      }
+    },
+    "G_w": {
+      "E": {
+        "case_mean": 0.030894060929616295,
+        "case_mean_exact": "4869706845170347/157625986957967360",
+        "position_mean": 0.030894060929616295
+      },
+      "K": {
+        "case_mean": 0.030894060929616295,
+        "case_mean_exact": "4869706845170347/157625986957967360",
+        "position_mean": 0.030894060929616295
+      },
+      "M": {
+        "case_mean": 0.030894060929616295,
+        "case_mean_exact": "4869706845170347/157625986957967360",
+        "position_mean": 0.030894060929616295
+      },
+      "P": {
+        "case_mean": 0.030894060929616295,
+        "case_mean_exact": "4869706845170347/157625986957967360",
+        "position_mean": 0.030894060929616295
+      },
+      "U": {
+        "case_mean": 0.030894060929616295,
+        "case_mean_exact": "4869706845170347/157625986957967360",
+        "position_mean": 0.030894060929616295
+      }
+    }
+  },
+  "damages": {
+    "M": [],
+    "E": [],
+    "K": [
+      {
+        "case": "T1-1-3",
+        "target": 7,
+        "delta": 0.002400557200113923,
+        "U_error": 0.08912928899129231,
+        "baseline_error": 0.08672873179117839
+      }
+    ],
+    "P": []
+  },
+  "worse_case_means": [
+    {
+      "baseline": "K",
+      "case": "T1-1-3",
+      "delta": 6.155274872086627e-05,
+      "exact_delta": "1801858085319/29273397577908224"
+    }
+  ],
+  "resource_max_heap": {
+    "U": 6033,
+    "M": 4364,
+    "E": 2457,
+    "K": 1498,
+    "P": 1498
+  },
+  "resources": {
+    "T1-0-1-U": {
+      "additional_python_peak": 6033,
+      "combined_peak": 0,
+      "combined_upper_bound": 10,
+      "original_frames_peak": 0,
+      "original_frames_upper_bound": 8,
+      "output_slots_peak": 0,
+      "packed": 416,
+      "receipt_bytes_peak": 816,
+      "utf8_upper": 1632
+    },
+    "T1-0-1-M": {
+      "additional_python_peak": 4364,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2254,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 549,
+        "receipt_python_bytes_peak": 590,
+        "receipt_transient_utf8_bytes_peak": 1098,
+        "samples": 125814,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-0-1-E": {
+      "additional_python_peak": 2457,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2254,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 549,
+        "receipt_python_bytes_peak": 590,
+        "receipt_transient_utf8_bytes_peak": 1098,
+        "samples": 125814,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-0-1-K": {
+      "additional_python_peak": 1386,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2254,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 549,
+        "receipt_python_bytes_peak": 590,
+        "receipt_transient_utf8_bytes_peak": 1098,
+        "samples": 125814,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-0-1-P": {
+      "additional_python_peak": 1386,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2254,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 549,
+        "receipt_python_bytes_peak": 590,
+        "receipt_transient_utf8_bytes_peak": 1098,
+        "samples": 125814,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-0-2-U": {
+      "additional_python_peak": 5921,
+      "combined_peak": 0,
+      "combined_upper_bound": 10,
+      "original_frames_peak": 0,
+      "original_frames_upper_bound": 8,
+      "output_slots_peak": 0,
+      "packed": 416,
+      "receipt_bytes_peak": 816,
+      "utf8_upper": 1632
+    },
+    "T1-0-2-M": {
+      "additional_python_peak": 2780,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2254,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 549,
+        "receipt_python_bytes_peak": 590,
+        "receipt_transient_utf8_bytes_peak": 1098,
+        "samples": 125814,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-0-2-E": {
+      "additional_python_peak": 2345,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2254,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 549,
+        "receipt_python_bytes_peak": 590,
+        "receipt_transient_utf8_bytes_peak": 1098,
+        "samples": 125814,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-0-2-K": {
+      "additional_python_peak": 1386,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2254,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 549,
+        "receipt_python_bytes_peak": 590,
+        "receipt_transient_utf8_bytes_peak": 1098,
+        "samples": 125814,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-0-2-P": {
+      "additional_python_peak": 1498,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2254,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 549,
+        "receipt_python_bytes_peak": 590,
+        "receipt_transient_utf8_bytes_peak": 1098,
+        "samples": 125814,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-0-3-U": {
+      "additional_python_peak": 3293,
+      "combined_peak": 0,
+      "combined_upper_bound": 10,
+      "original_frames_peak": 0,
+      "original_frames_upper_bound": 8,
+      "output_slots_peak": 0,
+      "packed": 416,
+      "receipt_bytes_peak": 309,
+      "utf8_upper": 618
+    },
+    "T1-0-3-M": {
+      "additional_python_peak": 2244,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 0,
+        "output_python_bytes_peak": 1954,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 249,
+        "receipt_python_bytes_peak": 290,
+        "receipt_transient_utf8_bytes_peak": 498,
+        "samples": 27562,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-0-3-E": {
+      "additional_python_peak": 2065,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 0,
+        "output_python_bytes_peak": 1954,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 249,
+        "receipt_python_bytes_peak": 290,
+        "receipt_transient_utf8_bytes_peak": 498,
+        "samples": 27562,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-0-3-K": {
+      "additional_python_peak": 1106,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 0,
+        "output_python_bytes_peak": 1954,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 249,
+        "receipt_python_bytes_peak": 290,
+        "receipt_transient_utf8_bytes_peak": 498,
+        "samples": 27562,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-0-3-P": {
+      "additional_python_peak": 1106,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 0,
+        "output_python_bytes_peak": 1954,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 249,
+        "receipt_python_bytes_peak": 290,
+        "receipt_transient_utf8_bytes_peak": 498,
+        "samples": 27562,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-0-4-U": {
+      "additional_python_peak": 3285,
+      "combined_peak": 0,
+      "combined_upper_bound": 10,
+      "original_frames_peak": 0,
+      "original_frames_upper_bound": 8,
+      "output_slots_peak": 0,
+      "packed": 416,
+      "receipt_bytes_peak": 309,
+      "utf8_upper": 618
+    },
+    "T1-0-4-M": {
+      "additional_python_peak": 2244,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 0,
+        "output_python_bytes_peak": 1954,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 249,
+        "receipt_python_bytes_peak": 290,
+        "receipt_transient_utf8_bytes_peak": 498,
+        "samples": 27128,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-0-4-E": {
+      "additional_python_peak": 2065,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 0,
+        "output_python_bytes_peak": 1954,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 249,
+        "receipt_python_bytes_peak": 290,
+        "receipt_transient_utf8_bytes_peak": 498,
+        "samples": 27128,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-0-4-K": {
+      "additional_python_peak": 1106,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 0,
+        "output_python_bytes_peak": 1954,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 249,
+        "receipt_python_bytes_peak": 290,
+        "receipt_transient_utf8_bytes_peak": 498,
+        "samples": 27128,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-0-4-P": {
+      "additional_python_peak": 1106,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 0,
+        "output_python_bytes_peak": 1954,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 249,
+        "receipt_python_bytes_peak": 290,
+        "receipt_transient_utf8_bytes_peak": 498,
+        "samples": 27128,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-1-1-U": {
+      "additional_python_peak": 4986,
+      "combined_peak": 0,
+      "combined_upper_bound": 10,
+      "original_frames_peak": 0,
+      "original_frames_upper_bound": 8,
+      "output_slots_peak": 0,
+      "packed": 416,
+      "receipt_bytes_peak": 637,
+      "utf8_upper": 1274
+    },
+    "T1-1-1-M": {
+      "additional_python_peak": 2244,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 2,
+        "output_python_bytes_peak": 2168,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 463,
+        "receipt_python_bytes_peak": 504,
+        "receipt_transient_utf8_bytes_peak": 926,
+        "samples": 29727,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-1-1-E": {
+      "additional_python_peak": 2065,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 2,
+        "output_python_bytes_peak": 2168,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 463,
+        "receipt_python_bytes_peak": 504,
+        "receipt_transient_utf8_bytes_peak": 926,
+        "samples": 29727,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-1-1-K": {
+      "additional_python_peak": 1106,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 2,
+        "output_python_bytes_peak": 2168,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 463,
+        "receipt_python_bytes_peak": 504,
+        "receipt_transient_utf8_bytes_peak": 926,
+        "samples": 29727,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-1-1-P": {
+      "additional_python_peak": 1106,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 2,
+        "output_python_bytes_peak": 2168,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 463,
+        "receipt_python_bytes_peak": 504,
+        "receipt_transient_utf8_bytes_peak": 926,
+        "samples": 29727,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-1-2-U": {
+      "additional_python_peak": 4986,
+      "combined_peak": 0,
+      "combined_upper_bound": 10,
+      "original_frames_peak": 0,
+      "original_frames_upper_bound": 8,
+      "output_slots_peak": 0,
+      "packed": 416,
+      "receipt_bytes_peak": 637,
+      "utf8_upper": 1274
+    },
+    "T1-1-2-M": {
+      "additional_python_peak": 2244,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 2,
+        "output_python_bytes_peak": 2168,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 463,
+        "receipt_python_bytes_peak": 504,
+        "receipt_transient_utf8_bytes_peak": 926,
+        "samples": 30640,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-1-2-E": {
+      "additional_python_peak": 2065,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 2,
+        "output_python_bytes_peak": 2168,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 463,
+        "receipt_python_bytes_peak": 504,
+        "receipt_transient_utf8_bytes_peak": 926,
+        "samples": 30640,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-1-2-K": {
+      "additional_python_peak": 1106,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 2,
+        "output_python_bytes_peak": 2168,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 463,
+        "receipt_python_bytes_peak": 504,
+        "receipt_transient_utf8_bytes_peak": 926,
+        "samples": 30640,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-1-2-P": {
+      "additional_python_peak": 1106,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 2,
+        "output_python_bytes_peak": 2168,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 463,
+        "receipt_python_bytes_peak": 504,
+        "receipt_transient_utf8_bytes_peak": 926,
+        "samples": 30640,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-1-3-U": {
+      "additional_python_peak": 4986,
+      "combined_peak": 0,
+      "combined_upper_bound": 10,
+      "original_frames_peak": 0,
+      "original_frames_upper_bound": 8,
+      "output_slots_peak": 0,
+      "packed": 416,
+      "receipt_bytes_peak": 637,
+      "utf8_upper": 1274
+    },
+    "T1-1-3-M": {
+      "additional_python_peak": 2244,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 2,
+        "output_python_bytes_peak": 3642,
+        "output_slots_peak": 2,
+        "receipt_bytes_peak": 463,
+        "receipt_python_bytes_peak": 504,
+        "receipt_transient_utf8_bytes_peak": 926,
+        "samples": 31925,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-1-3-E": {
+      "additional_python_peak": 2065,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 2,
+        "output_python_bytes_peak": 3642,
+        "output_slots_peak": 2,
+        "receipt_bytes_peak": 463,
+        "receipt_python_bytes_peak": 504,
+        "receipt_transient_utf8_bytes_peak": 926,
+        "samples": 31925,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-1-3-K": {
+      "additional_python_peak": 1106,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 2,
+        "output_python_bytes_peak": 3642,
+        "output_slots_peak": 2,
+        "receipt_bytes_peak": 463,
+        "receipt_python_bytes_peak": 504,
+        "receipt_transient_utf8_bytes_peak": 926,
+        "samples": 31925,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-1-3-P": {
+      "additional_python_peak": 1106,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 2,
+        "output_python_bytes_peak": 3642,
+        "output_slots_peak": 2,
+        "receipt_bytes_peak": 463,
+        "receipt_python_bytes_peak": 504,
+        "receipt_transient_utf8_bytes_peak": 926,
+        "samples": 31925,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-1-4-U": {
+      "additional_python_peak": 4986,
+      "combined_peak": 0,
+      "combined_upper_bound": 10,
+      "original_frames_peak": 0,
+      "original_frames_upper_bound": 8,
+      "output_slots_peak": 0,
+      "packed": 416,
+      "receipt_bytes_peak": 637,
+      "utf8_upper": 1274
+    },
+    "T1-1-4-M": {
+      "additional_python_peak": 2244,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 2,
+        "output_python_bytes_peak": 2168,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 463,
+        "receipt_python_bytes_peak": 504,
+        "receipt_transient_utf8_bytes_peak": 926,
+        "samples": 30161,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-1-4-E": {
+      "additional_python_peak": 2065,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 2,
+        "output_python_bytes_peak": 2168,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 463,
+        "receipt_python_bytes_peak": 504,
+        "receipt_transient_utf8_bytes_peak": 926,
+        "samples": 30161,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-1-4-K": {
+      "additional_python_peak": 1106,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 2,
+        "output_python_bytes_peak": 2168,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 463,
+        "receipt_python_bytes_peak": 504,
+        "receipt_transient_utf8_bytes_peak": 926,
+        "samples": 30161,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-1-4-P": {
+      "additional_python_peak": 1106,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 2,
+        "output_python_bytes_peak": 2168,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 463,
+        "receipt_python_bytes_peak": 504,
+        "receipt_transient_utf8_bytes_peak": 926,
+        "samples": 30161,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-2-1-U": {
+      "additional_python_peak": 3277,
+      "combined_peak": 0,
+      "combined_upper_bound": 10,
+      "original_frames_peak": 0,
+      "original_frames_upper_bound": 8,
+      "output_slots_peak": 0,
+      "packed": 416,
+      "receipt_bytes_peak": 309,
+      "utf8_upper": 618
+    },
+    "T1-2-1-M": {
+      "additional_python_peak": 2244,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 0,
+        "output_python_bytes_peak": 1954,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 249,
+        "receipt_python_bytes_peak": 290,
+        "receipt_transient_utf8_bytes_peak": 498,
+        "samples": 28430,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-2-1-E": {
+      "additional_python_peak": 2065,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 0,
+        "output_python_bytes_peak": 1954,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 249,
+        "receipt_python_bytes_peak": 290,
+        "receipt_transient_utf8_bytes_peak": 498,
+        "samples": 28430,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-2-1-K": {
+      "additional_python_peak": 1106,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 0,
+        "output_python_bytes_peak": 1954,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 249,
+        "receipt_python_bytes_peak": 290,
+        "receipt_transient_utf8_bytes_peak": 498,
+        "samples": 28430,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-2-1-P": {
+      "additional_python_peak": 1106,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 0,
+        "output_python_bytes_peak": 1954,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 249,
+        "receipt_python_bytes_peak": 290,
+        "receipt_transient_utf8_bytes_peak": 498,
+        "samples": 28430,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-2-2-U": {
+      "additional_python_peak": 3277,
+      "combined_peak": 0,
+      "combined_upper_bound": 10,
+      "original_frames_peak": 0,
+      "original_frames_upper_bound": 8,
+      "output_slots_peak": 0,
+      "packed": 416,
+      "receipt_bytes_peak": 309,
+      "utf8_upper": 618
+    },
+    "T1-2-2-M": {
+      "additional_python_peak": 2244,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 0,
+        "output_python_bytes_peak": 1954,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 249,
+        "receipt_python_bytes_peak": 290,
+        "receipt_transient_utf8_bytes_peak": 498,
+        "samples": 27589,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-2-2-E": {
+      "additional_python_peak": 2065,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 0,
+        "output_python_bytes_peak": 1954,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 249,
+        "receipt_python_bytes_peak": 290,
+        "receipt_transient_utf8_bytes_peak": 498,
+        "samples": 27589,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-2-2-K": {
+      "additional_python_peak": 1106,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 0,
+        "output_python_bytes_peak": 1954,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 249,
+        "receipt_python_bytes_peak": 290,
+        "receipt_transient_utf8_bytes_peak": 498,
+        "samples": 27589,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-2-2-P": {
+      "additional_python_peak": 1106,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 0,
+        "output_python_bytes_peak": 1954,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 249,
+        "receipt_python_bytes_peak": 290,
+        "receipt_transient_utf8_bytes_peak": 498,
+        "samples": 27589,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-2-3-U": {
+      "additional_python_peak": 4968,
+      "combined_peak": 0,
+      "combined_upper_bound": 10,
+      "original_frames_peak": 0,
+      "original_frames_upper_bound": 8,
+      "output_slots_peak": 0,
+      "packed": 416,
+      "receipt_bytes_peak": 633,
+      "utf8_upper": 1266
+    },
+    "T1-2-3-M": {
+      "additional_python_peak": 2244,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 2,
+        "output_python_bytes_peak": 2164,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 459,
+        "receipt_python_bytes_peak": 500,
+        "receipt_transient_utf8_bytes_peak": 918,
+        "samples": 31909,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-2-3-E": {
+      "additional_python_peak": 2065,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 2,
+        "output_python_bytes_peak": 2164,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 459,
+        "receipt_python_bytes_peak": 500,
+        "receipt_transient_utf8_bytes_peak": 918,
+        "samples": 31909,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-2-3-K": {
+      "additional_python_peak": 1106,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 2,
+        "output_python_bytes_peak": 2164,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 459,
+        "receipt_python_bytes_peak": 500,
+        "receipt_transient_utf8_bytes_peak": 918,
+        "samples": 31909,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-2-3-P": {
+      "additional_python_peak": 1106,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 2,
+        "output_python_bytes_peak": 2164,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 459,
+        "receipt_python_bytes_peak": 500,
+        "receipt_transient_utf8_bytes_peak": 918,
+        "samples": 31909,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-2-4-U": {
+      "additional_python_peak": 3277,
+      "combined_peak": 0,
+      "combined_upper_bound": 10,
+      "original_frames_peak": 0,
+      "original_frames_upper_bound": 8,
+      "output_slots_peak": 0,
+      "packed": 416,
+      "receipt_bytes_peak": 309,
+      "utf8_upper": 618
+    },
+    "T1-2-4-M": {
+      "additional_python_peak": 2244,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 0,
+        "output_python_bytes_peak": 1954,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 249,
+        "receipt_python_bytes_peak": 290,
+        "receipt_transient_utf8_bytes_peak": 498,
+        "samples": 28430,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-2-4-E": {
+      "additional_python_peak": 2065,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 0,
+        "output_python_bytes_peak": 1954,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 249,
+        "receipt_python_bytes_peak": 290,
+        "receipt_transient_utf8_bytes_peak": 498,
+        "samples": 28430,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-2-4-K": {
+      "additional_python_peak": 1106,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 0,
+        "output_python_bytes_peak": 1954,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 249,
+        "receipt_python_bytes_peak": 290,
+        "receipt_transient_utf8_bytes_peak": 498,
+        "samples": 28430,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-2-4-P": {
+      "additional_python_peak": 1106,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 9,
+        "frame_peak": 8,
+        "match_metadata_peak": 0,
+        "output_python_bytes_peak": 1954,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 249,
+        "receipt_python_bytes_peak": 290,
+        "receipt_transient_utf8_bytes_peak": 498,
+        "samples": 28430,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 8
+      },
+      "packed_bytes": 416
+    },
+    "T1-3-1-U": {
+      "additional_python_peak": 5939,
+      "combined_peak": 0,
+      "combined_upper_bound": 14,
+      "original_frames_peak": 0,
+      "original_frames_upper_bound": 12,
+      "output_slots_peak": 0,
+      "packed": 416,
+      "receipt_bytes_peak": 824,
+      "utf8_upper": 1648
+    },
+    "T1-3-1-M": {
+      "additional_python_peak": 2780,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 13,
+        "frame_peak": 12,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2262,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 557,
+        "receipt_python_bytes_peak": 598,
+        "receipt_transient_utf8_bytes_peak": 1114,
+        "samples": 47116,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 12
+      },
+      "packed_bytes": 416
+    },
+    "T1-3-1-E": {
+      "additional_python_peak": 2457,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 13,
+        "frame_peak": 12,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2262,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 557,
+        "receipt_python_bytes_peak": 598,
+        "receipt_transient_utf8_bytes_peak": 1114,
+        "samples": 47116,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 12
+      },
+      "packed_bytes": 416
+    },
+    "T1-3-1-K": {
+      "additional_python_peak": 1258,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 13,
+        "frame_peak": 12,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2262,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 557,
+        "receipt_python_bytes_peak": 598,
+        "receipt_transient_utf8_bytes_peak": 1114,
+        "samples": 47116,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 12
+      },
+      "packed_bytes": 416
+    },
+    "T1-3-1-P": {
+      "additional_python_peak": 1258,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 13,
+        "frame_peak": 12,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2262,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 557,
+        "receipt_python_bytes_peak": 598,
+        "receipt_transient_utf8_bytes_peak": 1114,
+        "samples": 47116,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 12
+      },
+      "packed_bytes": 416
+    },
+    "T1-3-2-U": {
+      "additional_python_peak": 5939,
+      "combined_peak": 0,
+      "combined_upper_bound": 14,
+      "original_frames_peak": 0,
+      "original_frames_upper_bound": 12,
+      "output_slots_peak": 0,
+      "packed": 416,
+      "receipt_bytes_peak": 824,
+      "utf8_upper": 1648
+    },
+    "T1-3-2-M": {
+      "additional_python_peak": 2780,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 13,
+        "frame_peak": 12,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2262,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 557,
+        "receipt_python_bytes_peak": 598,
+        "receipt_transient_utf8_bytes_peak": 1114,
+        "samples": 48011,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 12
+      },
+      "packed_bytes": 416
+    },
+    "T1-3-2-E": {
+      "additional_python_peak": 2217,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 13,
+        "frame_peak": 12,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2262,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 557,
+        "receipt_python_bytes_peak": 598,
+        "receipt_transient_utf8_bytes_peak": 1114,
+        "samples": 48011,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 12
+      },
+      "packed_bytes": 416
+    },
+    "T1-3-2-K": {
+      "additional_python_peak": 1498,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 13,
+        "frame_peak": 12,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2262,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 557,
+        "receipt_python_bytes_peak": 598,
+        "receipt_transient_utf8_bytes_peak": 1114,
+        "samples": 48011,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 12
+      },
+      "packed_bytes": 416
+    },
+    "T1-3-2-P": {
+      "additional_python_peak": 1258,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 13,
+        "frame_peak": 12,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2262,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 557,
+        "receipt_python_bytes_peak": 598,
+        "receipt_transient_utf8_bytes_peak": 1114,
+        "samples": 48011,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 12
+      },
+      "packed_bytes": 416
+    },
+    "T1-3-3-U": {
+      "additional_python_peak": 5939,
+      "combined_peak": 0,
+      "combined_upper_bound": 14,
+      "original_frames_peak": 0,
+      "original_frames_upper_bound": 12,
+      "output_slots_peak": 0,
+      "packed": 416,
+      "receipt_bytes_peak": 824,
+      "utf8_upper": 1648
+    },
+    "T1-3-3-M": {
+      "additional_python_peak": 2780,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 13,
+        "frame_peak": 12,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2262,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 557,
+        "receipt_python_bytes_peak": 598,
+        "receipt_transient_utf8_bytes_peak": 1114,
+        "samples": 47984,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 12
+      },
+      "packed_bytes": 416
+    },
+    "T1-3-3-E": {
+      "additional_python_peak": 2217,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 13,
+        "frame_peak": 12,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2262,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 557,
+        "receipt_python_bytes_peak": 598,
+        "receipt_transient_utf8_bytes_peak": 1114,
+        "samples": 47984,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 12
+      },
+      "packed_bytes": 416
+    },
+    "T1-3-3-K": {
+      "additional_python_peak": 1258,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 13,
+        "frame_peak": 12,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2262,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 557,
+        "receipt_python_bytes_peak": 598,
+        "receipt_transient_utf8_bytes_peak": 1114,
+        "samples": 47984,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 12
+      },
+      "packed_bytes": 416
+    },
+    "T1-3-3-P": {
+      "additional_python_peak": 1386,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 13,
+        "frame_peak": 12,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2262,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 557,
+        "receipt_python_bytes_peak": 598,
+        "receipt_transient_utf8_bytes_peak": 1114,
+        "samples": 47984,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 12
+      },
+      "packed_bytes": 416
+    },
+    "T1-3-4-U": {
+      "additional_python_peak": 5939,
+      "combined_peak": 0,
+      "combined_upper_bound": 14,
+      "original_frames_peak": 0,
+      "original_frames_upper_bound": 12,
+      "output_slots_peak": 0,
+      "packed": 416,
+      "receipt_bytes_peak": 824,
+      "utf8_upper": 1648
+    },
+    "T1-3-4-M": {
+      "additional_python_peak": 2780,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 13,
+        "frame_peak": 12,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2262,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 557,
+        "receipt_python_bytes_peak": 598,
+        "receipt_transient_utf8_bytes_peak": 1114,
+        "samples": 49720,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 12
+      },
+      "packed_bytes": 416
+    },
+    "T1-3-4-E": {
+      "additional_python_peak": 2457,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 13,
+        "frame_peak": 12,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2262,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 557,
+        "receipt_python_bytes_peak": 598,
+        "receipt_transient_utf8_bytes_peak": 1114,
+        "samples": 49720,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 12
+      },
+      "packed_bytes": 416
+    },
+    "T1-3-4-K": {
+      "additional_python_peak": 1258,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 13,
+        "frame_peak": 12,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2262,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 557,
+        "receipt_python_bytes_peak": 598,
+        "receipt_transient_utf8_bytes_peak": 1114,
+        "samples": 49720,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 12
+      },
+      "packed_bytes": 416
+    },
+    "T1-3-4-P": {
+      "additional_python_peak": 1258,
+      "heap_method": "isolated whole admission incl promotion metadata/capture closure; observer trace excluded; complete pre-admission original-frame union bounds transient references",
+      "meter": {
+        "combined_peak": 13,
+        "frame_peak": 12,
+        "match_metadata_peak": 3,
+        "output_python_bytes_peak": 2262,
+        "output_slots_peak": 1,
+        "receipt_bytes_peak": 557,
+        "receipt_python_bytes_peak": 598,
+        "receipt_transient_utf8_bytes_peak": 1114,
+        "samples": 49720,
+        "scalar_pair_comparisons": 0,
+        "temporary_numeric_vectors_peak": 0,
+        "transient_reference_frames_peak": 12
+      },
+      "packed_bytes": 416
+    }
+  },
+  "provenance": {
+    "cases": 16,
+    "full_overlaps": 0,
+    "shared": {
+      "1": 0,
+      "2": 0,
+      "4": 0
+    },
+    "scope": "Saved top-level reports/s2uc/*/*source*.json numeric48 arrays and FLOAT64_LE_BASE64; plus separately sealed neutral qualification index; not all human or external trials",
+    "all80starts_bound_to_manifest": true
+  },
+  "completion": {
+    "admissions": 6400,
+    "cases": 16,
+    "namespace": "MCM-T1-v1",
+    "reference_advances": 6400
+  },
+  "phase_times": {
+    "arm_export_seconds": 0.2642997,
+    "case_assessment_seconds": 8.7682847,
+    "engine_seconds": 533.8120842,
+    "replays": [
+      {
+        "arm": "U",
+        "case": "T1-0-1",
+        "cpu_ns": 125000000,
+        "wall_ns": 119893700
+      },
+      {
+        "arm": "M",
+        "case": "T1-0-1",
+        "cpu_ns": 22203125000,
+        "wall_ns": 22234466500
+      },
+      {
+        "arm": "E",
+        "case": "T1-0-1",
+        "cpu_ns": 22250000000,
+        "wall_ns": 22247406600
+      },
+      {
+        "arm": "K",
+        "case": "T1-0-1",
+        "cpu_ns": 21109375000,
+        "wall_ns": 21138109300
+      },
+      {
+        "arm": "P",
+        "case": "T1-0-1",
+        "cpu_ns": 21281250000,
+        "wall_ns": 21291539200
+      },
+      {
+        "arm": "U",
+        "case": "T1-0-2",
+        "cpu_ns": 125000000,
+        "wall_ns": 115418400
+      },
+      {
+        "arm": "M",
+        "case": "T1-0-2",
+        "cpu_ns": 22187500000,
+        "wall_ns": 22221667200
+      },
+      {
+        "arm": "E",
+        "case": "T1-0-2",
+        "cpu_ns": 22187500000,
+        "wall_ns": 22235186600
+      },
+      {
+        "arm": "K",
+        "case": "T1-0-2",
+        "cpu_ns": 21437500000,
+        "wall_ns": 21457035900
+      },
+      {
+        "arm": "P",
+        "case": "T1-0-2",
+        "cpu_ns": 21312500000,
+        "wall_ns": 21313848300
+      },
+      {
+        "arm": "U",
+        "case": "T1-0-3",
+        "cpu_ns": 78125000,
+        "wall_ns": 77164500
+      },
+      {
+        "arm": "M",
+        "case": "T1-0-3",
+        "cpu_ns": 4921875000,
+        "wall_ns": 4916699100
+      },
+      {
+        "arm": "E",
+        "case": "T1-0-3",
+        "cpu_ns": 4875000000,
+        "wall_ns": 4883087100
+      },
+      {
+        "arm": "K",
+        "case": "T1-0-3",
+        "cpu_ns": 4437500000,
+        "wall_ns": 4430700700
+      },
+      {
+        "arm": "P",
+        "case": "T1-0-3",
+        "cpu_ns": 4484375000,
+        "wall_ns": 4486350100
+      },
+      {
+        "arm": "U",
+        "case": "T1-0-4",
+        "cpu_ns": 93750000,
+        "wall_ns": 78556600
+      },
+      {
+        "arm": "M",
+        "case": "T1-0-4",
+        "cpu_ns": 4828125000,
+        "wall_ns": 4833952100
+      },
+      {
+        "arm": "E",
+        "case": "T1-0-4",
+        "cpu_ns": 4781250000,
+        "wall_ns": 4770679800
+      },
+      {
+        "arm": "K",
+        "case": "T1-0-4",
+        "cpu_ns": 4359375000,
+        "wall_ns": 4365549700
+      },
+      {
+        "arm": "P",
+        "case": "T1-0-4",
+        "cpu_ns": 4359375000,
+        "wall_ns": 4358739800
+      },
+      {
+        "arm": "U",
+        "case": "T1-1-1",
+        "cpu_ns": 78125000,
+        "wall_ns": 77292100
+      },
+      {
+        "arm": "M",
+        "case": "T1-1-1",
+        "cpu_ns": 5281250000,
+        "wall_ns": 5285338600
+      },
+      {
+        "arm": "E",
+        "case": "T1-1-1",
+        "cpu_ns": 5187500000,
+        "wall_ns": 5196592000
+      },
+      {
+        "arm": "K",
+        "case": "T1-1-1",
+        "cpu_ns": 4750000000,
+        "wall_ns": 4748111000
+      },
+      {
+        "arm": "P",
+        "case": "T1-1-1",
+        "cpu_ns": 4734375000,
+        "wall_ns": 4734123000
+      },
+      {
+        "arm": "U",
+        "case": "T1-1-2",
+        "cpu_ns": 62500000,
+        "wall_ns": 75757000
+      },
+      {
+        "arm": "M",
+        "case": "T1-1-2",
+        "cpu_ns": 5406250000,
+        "wall_ns": 5415164600
+      },
+      {
+        "arm": "E",
+        "case": "T1-1-2",
+        "cpu_ns": 5546875000,
+        "wall_ns": 5535958400
+      },
+      {
+        "arm": "K",
+        "case": "T1-1-2",
+        "cpu_ns": 4875000000,
+        "wall_ns": 4895470200
+      },
+      {
+        "arm": "P",
+        "case": "T1-1-2",
+        "cpu_ns": 5062500000,
+        "wall_ns": 5050074900
+      },
+      {
+        "arm": "U",
+        "case": "T1-1-3",
+        "cpu_ns": 93750000,
+        "wall_ns": 76557400
+      },
+      {
+        "arm": "M",
+        "case": "T1-1-3",
+        "cpu_ns": 5578125000,
+        "wall_ns": 5570892400
+      },
+      {
+        "arm": "E",
+        "case": "T1-1-3",
+        "cpu_ns": 5562500000,
+        "wall_ns": 5580859900
+      },
+      {
+        "arm": "K",
+        "case": "T1-1-3",
+        "cpu_ns": 5093750000,
+        "wall_ns": 5099330400
+      },
+      {
+        "arm": "P",
+        "case": "T1-1-3",
+        "cpu_ns": 5125000000,
+        "wall_ns": 5140341300
+      },
+      {
+        "arm": "U",
+        "case": "T1-1-4",
+        "cpu_ns": 78125000,
+        "wall_ns": 76473200
+      },
+      {
+        "arm": "M",
+        "case": "T1-1-4",
+        "cpu_ns": 5250000000,
+        "wall_ns": 5253069500
+      },
+      {
+        "arm": "E",
+        "case": "T1-1-4",
+        "cpu_ns": 5250000000,
+        "wall_ns": 5254289700
+      },
+      {
+        "arm": "K",
+        "case": "T1-1-4",
+        "cpu_ns": 4781250000,
+        "wall_ns": 4784809500
+      },
+      {
+        "arm": "P",
+        "case": "T1-1-4",
+        "cpu_ns": 4859375000,
+        "wall_ns": 4846224400
+      },
+      {
+        "arm": "U",
+        "case": "T1-2-1",
+        "cpu_ns": 62500000,
+        "wall_ns": 75635100
+      },
+      {
+        "arm": "M",
+        "case": "T1-2-1",
+        "cpu_ns": 5015625000,
+        "wall_ns": 5003864500
+      },
+      {
+        "arm": "E",
+        "case": "T1-2-1",
+        "cpu_ns": 5015625000,
+        "wall_ns": 4999243200
+      },
+      {
+        "arm": "K",
+        "case": "T1-2-1",
+        "cpu_ns": 4593750000,
+        "wall_ns": 4597612800
+      },
+      {
+        "arm": "P",
+        "case": "T1-2-1",
+        "cpu_ns": 4687500000,
+        "wall_ns": 4694132000
+      },
+      {
+        "arm": "U",
+        "case": "T1-2-2",
+        "cpu_ns": 93750000,
+        "wall_ns": 82244100
+      },
+      {
+        "arm": "M",
+        "case": "T1-2-2",
+        "cpu_ns": 4859375000,
+        "wall_ns": 4859502600
+      },
+      {
+        "arm": "E",
+        "case": "T1-2-2",
+        "cpu_ns": 4859375000,
+        "wall_ns": 4866989300
+      },
+      {
+        "arm": "K",
+        "case": "T1-2-2",
+        "cpu_ns": 4406250000,
+        "wall_ns": 4417129500
+      },
+      {
+        "arm": "P",
+        "case": "T1-2-2",
+        "cpu_ns": 4437500000,
+        "wall_ns": 4444236100
+      },
+      {
+        "arm": "U",
+        "case": "T1-2-3",
+        "cpu_ns": 93750000,
+        "wall_ns": 78501800
+      },
+      {
+        "arm": "M",
+        "case": "T1-2-3",
+        "cpu_ns": 5578125000,
+        "wall_ns": 5583876000
+      },
+      {
+        "arm": "E",
+        "case": "T1-2-3",
+        "cpu_ns": 5562500000,
+        "wall_ns": 5571390200
+      },
+      {
+        "arm": "K",
+        "case": "T1-2-3",
+        "cpu_ns": 5109375000,
+        "wall_ns": 5105635400
+      },
+      {
+        "arm": "P",
+        "case": "T1-2-3",
+        "cpu_ns": 5125000000,
+        "wall_ns": 5119105300
+      },
+      {
+        "arm": "U",
+        "case": "T1-2-4",
+        "cpu_ns": 93750000,
+        "wall_ns": 75548800
+      },
+      {
+        "arm": "M",
+        "case": "T1-2-4",
+        "cpu_ns": 5031250000,
+        "wall_ns": 5028539000
+      },
+      {
+        "arm": "E",
+        "case": "T1-2-4",
+        "cpu_ns": 5000000000,
+        "wall_ns": 5004273800
+      },
+      {
+        "arm": "K",
+        "case": "T1-2-4",
+        "cpu_ns": 4703125000,
+        "wall_ns": 4692172700
+      },
+      {
+        "arm": "P",
+        "case": "T1-2-4",
+        "cpu_ns": 4593750000,
+        "wall_ns": 4584774700
+      },
+      {
+        "arm": "U",
+        "case": "T1-3-1",
+        "cpu_ns": 93750000,
+        "wall_ns": 108267400
+      },
+      {
+        "arm": "M",
+        "case": "T1-3-1",
+        "cpu_ns": 9015625000,
+        "wall_ns": 9018648800
+      },
+      {
+        "arm": "E",
+        "case": "T1-3-1",
+        "cpu_ns": 9250000000,
+        "wall_ns": 9271923000
+      },
+      {
+        "arm": "K",
+        "case": "T1-3-1",
+        "cpu_ns": 8640625000,
+        "wall_ns": 8638893100
+      },
+      {
+        "arm": "P",
+        "case": "T1-3-1",
+        "cpu_ns": 8625000000,
+        "wall_ns": 8612395500
+      },
+      {
+        "arm": "U",
+        "case": "T1-3-2",
+        "cpu_ns": 125000000,
+        "wall_ns": 111149500
+      },
+      {
+        "arm": "M",
+        "case": "T1-3-2",
+        "cpu_ns": 9359375000,
+        "wall_ns": 9360212800
+      },
+      {
+        "arm": "E",
+        "case": "T1-3-2",
+        "cpu_ns": 9500000000,
+        "wall_ns": 9498444300
+      },
+      {
+        "arm": "K",
+        "case": "T1-3-2",
+        "cpu_ns": 8828125000,
+        "wall_ns": 8840436200
+      },
+      {
+        "arm": "P",
+        "case": "T1-3-2",
+        "cpu_ns": 8796875000,
+        "wall_ns": 8814019600
+      },
+      {
+        "arm": "U",
+        "case": "T1-3-3",
+        "cpu_ns": 109375000,
+        "wall_ns": 114226300
+      },
+      {
+        "arm": "M",
+        "case": "T1-3-3",
+        "cpu_ns": 9187500000,
+        "wall_ns": 9244328700
+      },
+      {
+        "arm": "E",
+        "case": "T1-3-3",
+        "cpu_ns": 9296875000,
+        "wall_ns": 9346626800
+      },
+      {
+        "arm": "K",
+        "case": "T1-3-3",
+        "cpu_ns": 8750000000,
+        "wall_ns": 8762602200
+      },
+      {
+        "arm": "P",
+        "case": "T1-3-3",
+        "cpu_ns": 8765625000,
+        "wall_ns": 8772880700
+      },
+      {
+        "arm": "U",
+        "case": "T1-3-4",
+        "cpu_ns": 109375000,
+        "wall_ns": 115526700
+      },
+      {
+        "arm": "M",
+        "case": "T1-3-4",
+        "cpu_ns": 9906250000,
+        "wall_ns": 9911503700
+      },
+      {
+        "arm": "E",
+        "case": "T1-3-4",
+        "cpu_ns": 10062500000,
+        "wall_ns": 10054716500
+      },
+      {
+        "arm": "K",
+        "case": "T1-3-4",
+        "cpu_ns": 9125000000,
+        "wall_ns": 9164858600
+      },
+      {
+        "arm": "P",
+        "case": "T1-3-4",
+        "cpu_ns": 9109375000,
+        "wall_ns": 9130241300
+      }
+    ],
+    "source_seconds": 4.5681957
+  },
+  "closure": {
+    "charged_previous_bytes": 7190465,
+    "elapsed_before_terminal_write": 535.9044721,
+    "error": null,
+    "resume_permitted": false,
+    "status": "COMPLETE",
+    "terminal_write_excluded_from_own_timestamp": true,
+    "total_deadline_met": true,
+    "total_deadline_ns": 890442007437600,
+    "worker_alive": false,
+    "worker_deadline_ns": 890382007437600,
+    "worker_exitcode": 0,
+    "worker_started": true
+  },
+  "run_bytes": 7263101,
+  "charged_with_external_reserve": 14453566,
+  "external_report_reserve": 524288,
+  "prior_admin_report_bytes": 39770,
+  "post_assessment_elapsed_from_start": 775.2795343,
+  "read_only_reassessment_cases": 16,
+  "new_replays_during_assessment": 0,
+  "first_failed_run_unchanged": true,
+  "authorization_consumed": true
+}

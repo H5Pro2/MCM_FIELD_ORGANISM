@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "disjoint_seeds": true,
+  "disjoint_base_episode_hashes": true,
+  "development_files_unchanged": 38,
+  "evaluation_calibration_frames": 0,
+  "default_retrieval": "exact_v1",
+  "default_continuation": "legacy_v1",
+  "common_recipe_limits_independence": true
+}

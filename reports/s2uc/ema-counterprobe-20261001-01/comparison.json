@@ -1,0 +1,48 @@
+{
+  "constant": {
+    "E": {
+      "primary_count": 24,
+      "secondary_count": 75,
+      "primary_mae": 0.020833333333333332,
+      "secondary_mae": 0.3256640625,
+      "all99_mae": 0.25176570391414144
+    },
+    "K": {
+      "primary_count": 24,
+      "secondary_count": 75,
+      "primary_mae": 0.0,
+      "secondary_mae": 0.3189973958333333,
+      "all99_mae": 0.24166469381313133
+    },
+    "P": {
+      "primary_count": 24,
+      "secondary_count": 75,
+      "primary_mae": 0.5,
+      "secondary_mae": 0.3256640625,
+      "all99_mae": 0.36792732007575757
+    }
+  },
+  "switch_return": {
+    "E": {
+      "primary_count": 24,
+      "secondary_count": 75,
+      "primary_mae": 0.0625,
+      "secondary_mae": 0.3256640625,
+      "all99_mae": 0.2618667140151515
+    },
+    "K": {
+      "primary_count": 24,
+      "secondary_count": 75,
+      "primary_mae": 0.16666666666666666,
+      "secondary_mae": 0.3189973958333333,
+      "all99_mae": 0.2820687342171717
+    },
+    "P": {
+      "primary_count": 24,
+      "secondary_count": 75,
+      "primary_mae": 0.3333333333333333,
+      "secondary_mae": 0.3256640625,
+      "all99_mae": 0.3275232796717172
+    }
+  }
+}

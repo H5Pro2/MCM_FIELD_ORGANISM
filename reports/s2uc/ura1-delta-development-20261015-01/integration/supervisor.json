@@ -1,0 +1,106 @@
+{
+  "active_process_limit": 2,
+  "baseline": {
+    "lifetime_peak_commit": 10559488,
+    "private_bytes": 10559488,
+    "working_set": 17653760
+  },
+  "combined_sample_peak": 59506688,
+  "job": {
+    "hard_job_limit": true,
+    "limit_bytes": 536870912,
+    "measurement": "Windows JobObjectExtendedLimitInformation",
+    "members": "supervisor and inherited worker",
+    "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap.",
+    "peak_job_committed_bytes": 64729088,
+    "peak_process_committed_bytes": 50257920
+  },
+  "mode": "integration",
+  "phases": {
+    "D_hand_case_capture_and_deltas": {
+      "combined_sample_peak": 54591488,
+      "samples": 3107,
+      "supervisor_peak": 15077376,
+      "worker_peak": 40017920
+    },
+    "D_hand_case_cleanup": {
+      "combined_sample_peak": 57184256,
+      "samples": 2,
+      "supervisor_peak": 14573568,
+      "worker_peak": 42610688
+    },
+    "D_hand_case_encoding_and_file_output": {
+      "combined_sample_peak": 55078912,
+      "samples": 8,
+      "supervisor_peak": 14573568,
+      "worker_peak": 40505344
+    },
+    "D_hand_case_independent_decoder": {
+      "combined_sample_peak": 57049088,
+      "samples": 1552,
+      "supervisor_peak": 14573568,
+      "worker_peak": 42475520
+    },
+    "complete": {
+      "combined_sample_peak": 59506688,
+      "samples": 8,
+      "supervisor_peak": 16605184,
+      "worker_peak": 42901504
+    },
+    "final_cleanup": {
+      "combined_sample_peak": 59506688,
+      "samples": 1,
+      "supervisor_peak": 16605184,
+      "worker_peak": 42901504
+    },
+    "imports_and_initialization": {
+      "combined_sample_peak": 49582080,
+      "samples": 164,
+      "supervisor_peak": 12562432,
+      "worker_peak": 37019648
+    },
+    "lifecycle_trace_capture_and_deltas": {
+      "combined_sample_peak": 57184256,
+      "samples": 2093,
+      "supervisor_peak": 14573568,
+      "worker_peak": 42610688
+    },
+    "lifecycle_trace_cleanup": {
+      "combined_sample_peak": 59506688,
+      "samples": 4,
+      "supervisor_peak": 16605184,
+      "worker_peak": 42901504
+    },
+    "lifecycle_trace_encoding_and_file_output": {
+      "combined_sample_peak": 56299520,
+      "samples": 7,
+      "supervisor_peak": 14471168,
+      "worker_peak": 41828352
+    },
+    "lifecycle_trace_independent_decoder": {
+      "combined_sample_peak": 59248640,
+      "samples": 1013,
+      "supervisor_peak": 16605184,
+      "worker_peak": 42643456
+    },
+    "startup": {
+      "combined_sample_peak": 24236032,
+      "samples": 13,
+      "supervisor_peak": 11886592,
+      "worker_peak": 12349440
+    },
+    "transition": {
+      "combined_sample_peak": 57184256,
+      "samples": 1,
+      "supervisor_peak": 14573568,
+      "worker_peak": 42610688
+    }
+  },
+  "seconds": 90.64507830000002,
+  "status": "PASS",
+  "supervisor_pid": 6976,
+  "verified_same_job": true,
+  "worker_exitcode": 0,
+  "worker_pid": 8396,
+  "worker_status": "PASS"
+}

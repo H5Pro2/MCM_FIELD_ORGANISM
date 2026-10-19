@@ -1,0 +1,1028 @@
+[
+  {
+    "case": "001",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_changed_reloaded_record_is_rejected",
+    "kind": "publication",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "V7_RECORD_RELOAD_CHANGED",
+    "total_bytes": 817416,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40635,
+      "verification": 0,
+      "error": 749,
+      "terminal": 749,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "record.json",
+      "terminal.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "002",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_changed_reloaded_record_is_rejected",
+    "kind": "audit",
+    "status": "AUDIT_ONLY",
+    "primary_error": null,
+    "total_bytes": 817416,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40635,
+      "verification": 0,
+      "error": 749,
+      "terminal": 749,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "record.json",
+      "terminal.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "003",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_changed_verified_bytes_cannot_be_rebound_to_success",
+    "kind": "publication",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "V7_VERIFIED_RECORD_CHANGED",
+    "total_bytes": 817461,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40636,
+      "verification": 0,
+      "error": 771,
+      "terminal": 771,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "record.json",
+      "terminal.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "004",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_changed_verified_bytes_cannot_be_rebound_to_success",
+    "kind": "audit",
+    "status": "AUDIT_ONLY",
+    "primary_error": null,
+    "total_bytes": 817461,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40636,
+      "verification": 0,
+      "error": 771,
+      "terminal": 771,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "record.json",
+      "terminal.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "005",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_changed_verified_bytes_cannot_be_rebound_to_success",
+    "kind": "publication",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "V7_FINAL_INTEGRITY_FAILED",
+    "total_bytes": 820997,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40636,
+      "verification": 2465,
+      "error": 878,
+      "terminal": 796,
+      "minimal": 939,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "record.json",
+      "terminal-minimal.json",
+      "terminal.json",
+      "verification.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "006",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_changed_verified_bytes_cannot_be_rebound_to_success",
+    "kind": "audit",
+    "status": "AUDIT_ONLY",
+    "primary_error": null,
+    "total_bytes": 820997,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40636,
+      "verification": 2465,
+      "error": 878,
+      "terminal": 796,
+      "minimal": 939,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "record.json",
+      "terminal-minimal.json",
+      "terminal.json",
+      "verification.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "007",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_changed_verified_bytes_cannot_be_rebound_to_success",
+    "kind": "publication",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "V7_FINAL_INTEGRITY_FAILED",
+    "total_bytes": 820997,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40635,
+      "verification": 2466,
+      "error": 878,
+      "terminal": 796,
+      "minimal": 939,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "record.json",
+      "terminal-minimal.json",
+      "terminal.json",
+      "verification.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "008",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_changed_verified_bytes_cannot_be_rebound_to_success",
+    "kind": "audit",
+    "status": "AUDIT_ONLY",
+    "primary_error": null,
+    "total_bytes": 820997,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40635,
+      "verification": 2466,
+      "error": 878,
+      "terminal": 796,
+      "minimal": 939,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "record.json",
+      "terminal-minimal.json",
+      "terminal.json",
+      "verification.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "009",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_error_receipt_failure_does_not_replace_primary",
+    "kind": "publication",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "FIRST_FAILURE",
+    "total_bytes": 816726,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40635,
+      "verification": 0,
+      "error": 0,
+      "terminal": 808,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "record.json",
+      "terminal.json"
+    ],
+    "missing_durable_evidence": [
+      "error.json"
+    ],
+    "accounting_complete": true
+  },
+  {
+    "case": "010",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_error_receipt_failure_does_not_replace_primary",
+    "kind": "audit",
+    "status": "AUDIT_ONLY",
+    "primary_error": null,
+    "total_bytes": 816726,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40635,
+      "verification": 0,
+      "error": 0,
+      "terminal": 808,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "record.json",
+      "terminal.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "011",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_failed_input_is_verified_without_evaluation_and_keeps_input_primary",
+    "kind": "publication",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "ValueError",
+    "total_bytes": 797569,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 20306,
+      "verification": 384,
+      "error": 798,
+      "terminal": 798,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "record.json",
+      "terminal.json",
+      "verification.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "012",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_failed_input_is_verified_without_evaluation_and_keeps_input_primary",
+    "kind": "audit",
+    "status": "AUDIT_ONLY",
+    "primary_error": null,
+    "total_bytes": 797569,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 20306,
+      "verification": 384,
+      "error": 798,
+      "terminal": 798,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "record.json",
+      "terminal.json",
+      "verification.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "013",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_oversized_record_stops_before_record_publication_or_evaluation",
+    "kind": "publication",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "V7_RECORD_BUDGET_EXCEEDED",
+    "total_bytes": 776583,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 0,
+      "verification": 0,
+      "error": 650,
+      "terminal": 650,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "terminal.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "014",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_oversized_record_stops_before_record_publication_or_evaluation",
+    "kind": "audit",
+    "status": "AUDIT_ONLY",
+    "primary_error": null,
+    "total_bytes": 776583,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 0,
+      "verification": 0,
+      "error": 650,
+      "terminal": 650,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "terminal.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "015",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_partial_write_cleanup_failure_retains_one_counted_staging_file",
+    "kind": "publication",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "NEUTRAL_PARTIAL_WRITE",
+    "total_bytes": 775396,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 0,
+      "verification": 0,
+      "error": 0,
+      "terminal": 0,
+      "minimal": 0,
+      "staging": 113
+    },
+    "files": [
+      "publication.tmp"
+    ],
+    "missing_durable_evidence": [
+      "error.json",
+      "terminal.json or terminal-minimal.json"
+    ],
+    "accounting_complete": true
+  },
+  {
+    "case": "016",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_partial_write_cleanup_failure_retains_one_counted_staging_file",
+    "kind": "audit",
+    "status": "AUDIT_ONLY",
+    "primary_error": null,
+    "total_bytes": 775396,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 0,
+      "verification": 0,
+      "error": 0,
+      "terminal": 0,
+      "minimal": 0,
+      "staging": 113
+    },
+    "files": [
+      "publication.tmp"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "017",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_partial_write_with_successful_cleanup_leaves_only_error_closure",
+    "kind": "publication",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "NEUTRAL_PARTIAL_WRITE",
+    "total_bytes": 776573,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 0,
+      "verification": 0,
+      "error": 645,
+      "terminal": 645,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "terminal.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "018",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_partial_write_with_successful_cleanup_leaves_only_error_closure",
+    "kind": "audit",
+    "status": "AUDIT_ONLY",
+    "primary_error": null,
+    "total_bytes": 776573,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 0,
+      "verification": 0,
+      "error": 645,
+      "terminal": 645,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "terminal.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "019",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_post_terminal_failure_counts_error_terminal_and_minimal_together",
+    "kind": "publication",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "NEUTRAL_AFTER_TERMINAL_RENAME",
+    "total_bytes": 821012,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40635,
+      "verification": 2465,
+      "error": 886,
+      "terminal": 796,
+      "minimal": 947,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "record.json",
+      "terminal-minimal.json",
+      "terminal.json",
+      "verification.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "020",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_post_terminal_failure_counts_error_terminal_and_minimal_together",
+    "kind": "audit",
+    "status": "AUDIT_ONLY",
+    "primary_error": null,
+    "total_bytes": 821012,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40635,
+      "verification": 2465,
+      "error": 886,
+      "terminal": 796,
+      "minimal": 947,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "record.json",
+      "terminal-minimal.json",
+      "terminal.json",
+      "verification.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "021",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_prestart_change_during_publication_stops_and_reports_missing_evidence",
+    "kind": "publication",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "V7_PRESTART_OR_RESULT_CHANGED",
+    "total_bytes": 815919,
+    "categories": {
+      "code": 654068,
+      "metadata": 26652,
+      "static_shared": 94564,
+      "record": 40635,
+      "verification": 0,
+      "error": 0,
+      "terminal": 0,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "record.json"
+    ],
+    "missing_durable_evidence": [
+      "error.json",
+      "terminal.json or terminal-minimal.json"
+    ],
+    "accounting_complete": false
+  },
+  {
+    "case": "022",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_read_failure_after_record_publication_blocks_verification_and_evaluation",
+    "kind": "publication",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "NEUTRAL_RECORD_READ_FAILURE",
+    "total_bytes": 817428,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40635,
+      "verification": 0,
+      "error": 755,
+      "terminal": 755,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "record.json",
+      "terminal.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "023",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_read_failure_after_record_publication_blocks_verification_and_evaluation",
+    "kind": "audit",
+    "status": "AUDIT_ONLY",
+    "primary_error": null,
+    "total_bytes": 817428,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40635,
+      "verification": 0,
+      "error": 755,
+      "terminal": 755,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "record.json",
+      "terminal.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "024",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_rename_failure_after_verification_keeps_published_verification_counted",
+    "kind": "publication",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "NEUTRAL_AFTER_VERIFICATION_RENAME",
+    "total_bytes": 820187,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40635,
+      "verification": 2465,
+      "error": 902,
+      "terminal": 902,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "record.json",
+      "terminal.json",
+      "verification.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "025",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_rename_failure_after_verification_keeps_published_verification_counted",
+    "kind": "audit",
+    "status": "AUDIT_ONLY",
+    "primary_error": null,
+    "total_bytes": 820187,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40635,
+      "verification": 2465,
+      "error": 902,
+      "terminal": 902,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "record.json",
+      "terminal.json",
+      "verification.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "026",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_rename_failure_cleanup_then_error_receipts_use_same_staging_name",
+    "kind": "publication",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "NEUTRAL_RENAME_FAILURE",
+    "total_bytes": 776577,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 0,
+      "verification": 0,
+      "error": 647,
+      "terminal": 647,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "terminal.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "027",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_rename_failure_cleanup_then_error_receipts_use_same_staging_name",
+    "kind": "audit",
+    "status": "AUDIT_ONLY",
+    "primary_error": null,
+    "total_bytes": 776577,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 0,
+      "verification": 0,
+      "error": 647,
+      "terminal": 647,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "terminal.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "028",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_success_reloads_record_and_publishes_separate_verification",
+    "kind": "publication",
+    "status": "CLOSED_NEUTRAL_VERIFIED",
+    "primary_error": null,
+    "total_bytes": 819179,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40635,
+      "verification": 2465,
+      "error": 0,
+      "terminal": 796,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "record.json",
+      "terminal.json",
+      "verification.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "029",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_success_reloads_record_and_publishes_separate_verification",
+    "kind": "audit",
+    "status": "AUDIT_ONLY",
+    "primary_error": null,
+    "total_bytes": 819179,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40635,
+      "verification": 2465,
+      "error": 0,
+      "terminal": 796,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "record.json",
+      "terminal.json",
+      "verification.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "030",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_technical_verification_failure_preserves_primary_and_blocks_evaluation",
+    "kind": "publication",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "NEUTRAL_VERIFY_FAILURE",
+    "total_bytes": 817444,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40635,
+      "verification": 0,
+      "error": 763,
+      "terminal": 763,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "record.json",
+      "terminal.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "031",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_technical_verification_failure_preserves_primary_and_blocks_evaluation",
+    "kind": "audit",
+    "status": "AUDIT_ONLY",
+    "primary_error": null,
+    "total_bytes": 817444,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40635,
+      "verification": 0,
+      "error": 763,
+      "terminal": 763,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "record.json",
+      "terminal.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "032",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_terminal_partial_write_and_cleanup_failure_keep_verification_and_staging",
+    "kind": "publication",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "NEUTRAL_TERMINAL_WRITE",
+    "total_bytes": 818454,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40635,
+      "verification": 2465,
+      "error": 0,
+      "terminal": 0,
+      "minimal": 0,
+      "staging": 71
+    },
+    "files": [
+      "publication.tmp",
+      "record.json",
+      "verification.json"
+    ],
+    "missing_durable_evidence": [
+      "error.json",
+      "terminal.json or terminal-minimal.json"
+    ],
+    "accounting_complete": true
+  },
+  {
+    "case": "033",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_terminal_partial_write_and_cleanup_failure_keep_verification_and_staging",
+    "kind": "audit",
+    "status": "AUDIT_ONLY",
+    "primary_error": null,
+    "total_bytes": 818454,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40635,
+      "verification": 2465,
+      "error": 0,
+      "terminal": 0,
+      "minimal": 0,
+      "staging": 71
+    },
+    "files": [
+      "publication.tmp",
+      "record.json",
+      "verification.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "034",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_unknown_result_files_are_measured_and_invalidate_accounting",
+    "kind": "publication",
+    "status": "CLOSED_NEUTRAL_VERIFIED",
+    "primary_error": null,
+    "total_bytes": 819179,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40635,
+      "verification": 2465,
+      "error": 0,
+      "terminal": 796,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "record.json",
+      "terminal.json",
+      "verification.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "035",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_unknown_result_files_are_measured_and_invalidate_accounting",
+    "kind": "audit",
+    "status": "AUDIT_ONLY",
+    "primary_error": null,
+    "total_bytes": 819186,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40635,
+      "verification": 2465,
+      "error": 0,
+      "terminal": 796,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "extra.tmp",
+      "record.json",
+      "terminal.json",
+      "verification.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": false
+  },
+  {
+    "case": "036",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_verification_reserve_and_corrupt_stage_fail_before_publication",
+    "kind": "publication",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "V7_PUBLICATION_BUDGET_EXCEEDED",
+    "total_bytes": 817484,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40635,
+      "verification": 0,
+      "error": 783,
+      "terminal": 783,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "record.json",
+      "terminal.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "037",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_verification_reserve_and_corrupt_stage_fail_before_publication",
+    "kind": "audit",
+    "status": "AUDIT_ONLY",
+    "primary_error": null,
+    "total_bytes": 817484,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 40635,
+      "verification": 0,
+      "error": 783,
+      "terminal": 783,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "record.json",
+      "terminal.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "038",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_verification_reserve_and_corrupt_stage_fail_before_publication",
+    "kind": "publication",
+    "status": "NOT_EVALUABLE",
+    "primary_error": "V7_STAGING_BYTES_CHANGED",
+    "total_bytes": 776585,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 0,
+      "verification": 0,
+      "error": 651,
+      "terminal": 651,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "terminal.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  },
+  {
+    "case": "039",
+    "test_id": "tests.test_s2uc_publication_v7.V7PublicationTests.test_verification_reserve_and_corrupt_stage_fail_before_publication",
+    "kind": "audit",
+    "status": "AUDIT_ONLY",
+    "primary_error": null,
+    "total_bytes": 776585,
+    "categories": {
+      "code": 654068,
+      "metadata": 26651,
+      "static_shared": 94564,
+      "record": 0,
+      "verification": 0,
+      "error": 651,
+      "terminal": 651,
+      "minimal": 0,
+      "staging": 0
+    },
+    "files": [
+      "error.json",
+      "terminal.json"
+    ],
+    "missing_durable_evidence": [],
+    "accounting_complete": true
+  }
+]

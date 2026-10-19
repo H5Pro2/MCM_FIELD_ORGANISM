@@ -1,0 +1,10 @@
+test_fifo_retention_order_and_readonly_hints (tests.test_s2tu_retained_trace.RetainedTraceTests.test_fifo_retention_order_and_readonly_hints) ... ok
+test_owner_scope_and_close_reject_stale_access (tests.test_s2tu_retained_trace.RetainedTraceTests.test_owner_scope_and_close_reject_stale_access) ... ok
+test_confirm_keeps_generation_and_fifo_age (tests.test_s2tw_exact_confirmation.ExactConfirmationTests.test_confirm_keeps_generation_and_fifo_age) ... ok
+test_hints_do_not_confirm_or_mutate (tests.test_s2tw_exact_confirmation.ExactConfirmationTests.test_hints_do_not_confirm_or_mutate) ... ok
+test_reverse_and_single_changed_value_do_not_confirm (tests.test_s2tw_exact_confirmation.ExactConfirmationTests.test_reverse_and_single_changed_value_do_not_confirm) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK

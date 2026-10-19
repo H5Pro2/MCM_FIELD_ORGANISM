@@ -1,0 +1,43 @@
+{
+  "version": "s2oe.immediate-final-balance.v2",
+  "status": "NOT_QUALIFIED",
+  "qualification_id": "immediate-visual-qualification-20260912-03",
+  "parts": {
+    "historical_input": 1359778,
+    "sources": 10026,
+    "metadata_before_balance": 10683,
+    "balance_file": 1088,
+    "verification": 0,
+    "supplement": 0,
+    "data": 0
+  },
+  "totals": {
+    "metadata": 11771,
+    "shared": 10026,
+    "total": 1381575
+  },
+  "limits": {
+    "historical_input": 2097152,
+    "qualification_metadata": 131072,
+    "real_session_metadata": 65536,
+    "sources": 174080,
+    "verification": 262144,
+    "shared": 262144,
+    "total": 4194304,
+    "qualification_log": 65536
+  },
+  "log_bytes": 4346,
+  "violations": [],
+  "prebound_total": 2127564,
+  "read_bytes": {
+    "prepare_parent": 1359778,
+    "test_parent": 0
+  },
+  "unittest_calls": 1,
+  "test_bodies_reached": 18,
+  "passed": 17,
+  "errors": 1,
+  "main_gate": false,
+  "inventory_unchanged": true,
+  "native_coverage": "empty scans and formation reached; repeated cue rejected before scan; subsequent assertions not reached"
+}

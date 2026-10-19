@@ -1,0 +1,92 @@
+[
+  {
+    "mode": "legacy",
+    "status": "PASS",
+    "seconds": 0.17524689999845577,
+    "job_peak": 27721728,
+    "first_failure": "FileNotFoundError:[WinError 2] Das System kann die angegebene Datei nicht finden: 'C:\\\\Users\\\\TV\\\\Documents\\\\MCM_FIELD_ORGANISM\\\\workspace\\\\reports\\\\s2uc\\\\ura1-fs-correction-20261015-01\\\\final\\\\legacy\\\\data\\\\neutral.json.partial'",
+    "steps": 1,
+    "test_id": "F01"
+  },
+  {
+    "mode": "rename",
+    "status": "PASS",
+    "seconds": 0.2269215999986045,
+    "job_peak": 28057600,
+    "first_failure": null,
+    "steps": 1,
+    "test_id": "F02"
+  },
+  {
+    "mode": "delete",
+    "status": "PASS",
+    "seconds": 0.2085159000052954,
+    "job_peak": 27693056,
+    "first_failure": null,
+    "steps": 1,
+    "test_id": "F03"
+  },
+  {
+    "mode": "create",
+    "status": "PASS",
+    "seconds": 0.22167910000280244,
+    "job_peak": 27889664,
+    "first_failure": null,
+    "steps": 1,
+    "test_id": "F04"
+  },
+  {
+    "mode": "export",
+    "status": "PASS",
+    "seconds": 0.3029021000038483,
+    "job_peak": 27852800,
+    "first_failure": "InventoryError:budget:export:C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\ura1-fs-correction-20261015-01\\final\\export\\data:LIMIT:67125249>67108864",
+    "steps": 0,
+    "test_id": "F05"
+  },
+  {
+    "mode": "admin",
+    "status": "PASS",
+    "seconds": 0.16948799999954645,
+    "job_peak": 27742208,
+    "first_failure": "InventoryError:budget:admin:C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\ura1-fs-correction-20261015-01\\final\\admin\\data:LIMIT:2097153>2097152",
+    "steps": 0,
+    "test_id": "F06"
+  },
+  {
+    "mode": "temp",
+    "status": "PASS",
+    "seconds": 0.3118066000024555,
+    "job_peak": 27811840,
+    "first_failure": "InventoryError:budget:temp:C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\ura1-fs-correction-20261015-01\\final\\temp\\data:LIMIT:67108865>67108864",
+    "steps": 0,
+    "test_id": "F07"
+  },
+  {
+    "mode": "permission",
+    "status": "PASS",
+    "seconds": 0.17858200000046054,
+    "job_peak": 27824128,
+    "first_failure": "InventoryError:stat:C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\ura1-fs-correction-20261015-01\\final\\permission\\data\\neutral.txt:[Errno 13] NEUTRAL_PERMISSION_DENIED: 'C:\\\\Users\\\\TV\\\\Documents\\\\MCM_FIELD_ORGANISM\\\\workspace\\\\reports\\\\s2uc\\\\ura1-fs-correction-20261015-01\\\\final\\\\permission\\\\data\\\\neutral.txt'",
+    "steps": 0,
+    "test_id": "F08"
+  },
+  {
+    "mode": "io",
+    "status": "PASS",
+    "seconds": 0.17790180000156397,
+    "job_peak": 27963392,
+    "first_failure": "InventoryError:stat:C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\ura1-fs-correction-20261015-01\\final\\io\\data\\neutral.txt:[Errno 5] NEUTRAL_IO_ERROR: 'C:\\\\Users\\\\TV\\\\Documents\\\\MCM_FIELD_ORGANISM\\\\workspace\\\\reports\\\\s2uc\\\\ura1-fs-correction-20261015-01\\\\final\\\\io\\\\data\\\\neutral.txt'",
+    "steps": 0,
+    "test_id": "F09"
+  },
+  {
+    "mode": "unstable",
+    "status": "PASS",
+    "seconds": 0.21745060000102967,
+    "job_peak": 27852800,
+    "first_failure": "InventoryError:stable_snapshot:C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\ura1-fs-correction-20261015-01\\final\\unstable\\data:INVENTORY_UNSTABLE:CHANGED_INVENTORY",
+    "steps": 8,
+    "test_id": "F10"
+  }
+]

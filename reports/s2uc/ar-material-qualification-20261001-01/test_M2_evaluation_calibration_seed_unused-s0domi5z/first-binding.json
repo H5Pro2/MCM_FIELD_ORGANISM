@@ -1,0 +1,18 @@
+{
+  "version": "s2uc.ar.production-binding.v1",
+  "status": "BOUND_NOT_AUTHORIZED",
+  "plan_path": "reports/s2uc/ar-material-qualification-20261001-01/test_M2_evaluation_calibration_seed_unused-s0domi5z/first-plan.json",
+  "plan_sha256": "38eb948340c22c1b3d82232a9ee53ab6916f76d5cf215d5aeeec63cc55ec05ab",
+  "contract_path": "docs/S2UC_NAEHERUNGSABRUF_AENDERUNGS_PRUEFVERTRAG_20261001.txt",
+  "code": {
+    "tools/s2uc_ar_material.py": "9f4d31386f789e7ee5aeea284410be7fe3857e576194aefa46140050adf67590",
+    "tools/s2uc_ar_compare.py": "a6e39e1684d01554ae2233ff6f539a9399219d5fb5963c3db12da97a66deffae",
+    "tests/test_s2uc_ar_material.py": "7bc097d6b4061978165b85f79eb7cee2465e853d4ae126c104547c7969756388",
+    "tools/s2uc_factor_material.py": "fcf6e4a20ddd1dfc7575f2568d1248905ae46ac4c86976e83e7cee13d01496a4",
+    "tools/_s2uc_bounded_audio.py": "d71cab9b5daef66710316084939e6d39d14d16bc32306f41dbd605f3be7c2519",
+    "tools/s2uc_known_origin_material_plan.py": "7e74ebf59c0ba1bc8b7ee96a5a155f3e61196403787ddbfd6672dcd1ac2bd804"
+  },
+  "max_material_bytes": 4194304,
+  "closure_reserve_bytes": 262144,
+  "calibration_clarification": "Every bipolar +/-2^-10 component has magnitude2^-10, hence every frame mean has that same value by construction; recipe check only, not an unknown noise-floor estimate. Original recipe unchanged."
+}

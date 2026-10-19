@@ -1,0 +1,124 @@
+FW1 – deskriptive Anschlussdiagnose, 2026-10-19
+Auftrag b01b8240-5575-4662-810f-b75dae53266e
+
+Ergebnis
+Alle beobachteten Fehlerunterschiede liegen in Kategorie 1 (Warm-/Kaltverfügbarkeit).
+Nach bereits erfolgtem Feedback bestehen bei 552 Zielen trotz gleicher Verfügbarkeit
+noch unterschiedliche Fehlerbewertungen; dort sind die Vorhersagefehler gleich.
+47 Kategorie-1-Ziele enthalten gleichzeitig kalte und bereits aktualisierte
+abweichende Hypothesen. Deshalb keine Behauptung einer einzigen lokalen Ursache.
+Die Diagnose beschreibt Zusammenhänge der vorhandenen Serie, keinen separaten
+kausalen Eingriff und keine allgemeine Aussage über Lernfähigkeit.
+
+Definitionen und Vollständigkeit
+Ziele 3,5,...,1023: 511 je Geschichte, 8176 je A/B, 16352 insgesamt.
+Verglichen werden alle berechtigten Hypothesen per (Rolle, Generation, Offset).
+Warm bedeutet gültiges ec/ep-Paar einschließlich (0,0); kalt bedeutet beide None.
+Kategorie 1: mindestens ein Verfügbarkeitsunterschied, unabhängig von weiteren Bewertungen.
+Kategorie 2: gleiche Verfügbarkeit überall, mindestens ein unterschiedliches (ec,ep)-Paar.
+Kategorie 3: identische Verfügbarkeit und Werte; leere Mengen eingeschlossen.
+Bewertung meint das rohe numerische Paar, nicht nur delta oder Bewertungsetikett.
+Matching-Bestand und Ziel-/Fehleralignment wurden geprüft. Keine Filterung.
+10917 leere berechtigte Hypothesenmengen (A 5270, B 5647) bleiben in Kategorie 3.
+757 Ziele haben mehrere berechtigte Hypothesen (A 490, B 267); alle bleiben sichtbar.
+Differenz = Fehler KEEP minus RESET; negativ Gewinn, positiv Schaden, null Gleichstand.
+
+Kategorie | Gruppe | Ziele | Gewinne | Schäden | Gleichstände | Differenzsumme
+1 | A | 1209 | 867 | 342 | 0 | -525/4
+2 | A | 259 | 0 | 0 | 259 | 0
+3 | A | 6708 | 0 | 0 | 6708 | 0
+1 | B | 1065 | 761 | 304 | 0 | -457/4
+2 | B | 293 | 0 | 0 | 293 | 0
+3 | B | 6818 | 0 | 0 | 6818 | 0
+1 | ALL | 2274 | 1628 | 646 | 0 | -491/2
+2 | ALL | 552 | 0 | 0 | 552 | 0
+3 | ALL | 13526 | 0 | 0 | 13526 | 0
+
+Gesamtbilanz exakt: A -525/4, B -457/4, insgesamt -491/2.
+1628 Gewinne, 646 Schäden, 14078 Gleichstände; Mittel -491/32704.
+Das vorhandene Primärergebnis bleibt unverändert; keine neue Bootstrapziehung.
+
+Reset-/Feedback-Verknüpfung
+Pro Hypothese wird die letzte tatsächliche Löschung derselben retained Generation
+und desselben Offsets VOR der Auswahl verknüpft. Der Reset am Auswahlindex liegt
+nach der Auswahl und zählt daher nicht. Nur live Feedback nach dieser Löschung
+und vor der aktuellen Auswahl zählt als Aktualisierung. Alle passenden Updates
+werden mit Ziel, Originalordinal und ec/ep in den Einzelbelegen aufgeführt.
+UPDATED bedeutet mindestens ein solches Update, nicht vollständige Konvergenz.
+Neue Löschung beginnt eine neue Kette. Kandidaten erhalten keinen fremden Reset.
+NO_PRIOR_DELETION ist erlaubt und bleibt sichtbar; bei keiner abweichenden
+Hypothese dieser Serie bleibt die Reset-Verknüpfung ungeklärt.
+
+Kategorie:Zustände abweichender Hypothesen | Gruppe | Ziele | Gewinne | Schäden | Gleichstände | Summe
+1:NOT_YET_UPDATED | A | 1180 | 850 | 330 | 0 | -130
+1:NOT_YET_UPDATED+UPDATED | A | 29 | 17 | 12 | 0 | -5/4
+2:UPDATED | A | 259 | 0 | 0 | 259 | 0
+3:NO_DIFFERENCE | A | 6708 | 0 | 0 | 6708 | 0
+1:NOT_YET_UPDATED | B | 1047 | 753 | 294 | 0 | -459/4
+1:NOT_YET_UPDATED+UPDATED | B | 18 | 8 | 10 | 0 | 1/2
+2:UPDATED | B | 293 | 0 | 0 | 293 | 0
+3:NO_DIFFERENCE | B | 6818 | 0 | 0 | 6818 | 0
+1:NOT_YET_UPDATED | ALL | 2227 | 1603 | 624 | 0 | -979/4
+1:NOT_YET_UPDATED+UPDATED | ALL | 47 | 25 | 22 | 0 | -3/4
+2:UPDATED | ALL | 552 | 0 | 0 | 552 | 0
+3:NO_DIFFERENCE | ALL | 13526 | 0 | 0 | 13526 | 0
+
+2227 Ziele: abweichende Hypothesen ausschließlich noch nicht wieder aktualisiert.
+47 Ziele: gemischte Zustände (25 Gewinne, 22 Schäden, Summe -3/4).
+552 Ziele: abweichende Bewertungen ausschließlich bereits aktualisierter Hypothesen;
+alle 552 haben gleiche Vorhersagefehler. Zusammen 599 Ziele mit mindestens einer
+bereits aktualisierten abweichenden Hypothese; die 47 Mischfälle sind keine
+Belege für einen Fehlerunterschied allein nach Wiederanlernen.
+
+Beispiele – feste Auswahlregel
+Aufsteigend nach Fall, dann Ziel: erstes Beispiel je A/B × Kategorie ×
+Gewinn/Schaden/Gleichstand × Zustandsmenge der abweichenden Hypothesen.
+Alle 12 tatsächlich vorkommenden Kombinationen stehen in examples.json.
+Nicht vorkommende Kombinationen werden nicht mit Ersatzfällen aufgefüllt.
+Fall 01, Ziel 23: Gen1/Offset0, Reset12, noch kein Update; KEEP(0,0.25),
+RESET kalt, Gewinn -1/4. Fall01/Ziel55: Gen2/Offset0, Reset52, kein Update,
+Schaden +1/4; zusätzliche identische Kandidatenhypothese bleibt erhalten.
+Fall01/Ziel71: Gen2/Offset0, Reset52, Feedback55; KEEP(0.3125,0.25),
+RESET(0.5,0.25), gleiche Fehler. Weitere identische Gen3-Hypothese enthalten.
+Fall03/Ziel227: Gen11/Offset0 nach Reset220 und Feedback223 bereits warm,
+Gen12/Offset0 nach Reset224 noch kalt; Mischfall mit Gewinn -1/4.
+
+Prüfungen, Ausführungen und Ressourcen
+15 kleine künstliche Fixture-Tests bestanden (fixture-results.json im Analyseordner).
+Abgedeckt: leere Mengen, gültige Nullwerte, Kategorienvorrang, rohe Paare,
+Schlüsselabweichung, gleiche Generation/Offset, Auswahl-/Feedbackzeitpunkt,
+erneuter Reset, mehrere Hypothesen und exakte Bruchbilanz.
+Eine Namenskollision im neuen Belegformat brach den ersten Analyseversuch vor
+dem ersten abgeschlossenen Fall ab. Fehlerbeleg in fw1-diagnosis-20261019-01.
+Korrektur nur im neuen Skript; danach einmalige vollständige 32-Archivdiagnose.
+Zusätzlich eine vorherige begrenzte Archivinspektion von Fall01. Somit insgesamt
+34 Decoderöffnungen: 1 Inspektion, 1 abgebrochener Fall, 32 vollständige Diagnosefälle.
+Keine Policy-Ausführung, semantische Referenzwiederholung, Forschungsquelle oder Bootstrapziehung.
+Vollständige Diagnose: 14.568650 s; Jobpeak 41762816 Bytes.
+Harter Job 512 MiB, jeweils ein Prozess. Alte Codecgrenzen unverändert.
+Ressourcen der Fixture- und Lieferphase separat in ihren JSON-Nachweisen.
+Peak des abgebrochenen Versuchs und der Vorabinspektion nicht separat gespeichert;
+beide liefen ebenfalls mit hartem Joblimit. Keine nachträgliche Peakbehauptung.
+32 neue komprimierte Zielbelege; keine zusätzlichen Kopien der Forschungsarchive.
+Datei-/Vorbereitungs-/Archiv-/Verwaltungsbilanz: delivery-resources.json.
+
+Historische Bindungen
+161 Forschungsdateien und 12 externe Lieferbelege vor/nach Diagnose geprüft.
+2996 Vorstart-Codebindungen und 197 Qualifikationsbindungen unverändert geprüft.
+Die drei bisherigen Übersichten sind vor Aktualisierung bytegenau gesichert in
+C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\reports\s2uc\fw1-diagnosis-preservation-20261019-01. Alte Liefermanifeste bleiben unverändert; preservation.json
+ordnet ihre früheren Übersichtspfade den Snapshots zu. Neue Übersichten werden
+durch die neue delivery-closure.json gebunden.
+
+Anschlussvorschlag zur fachlichen Entscheidung
+Die Zielklassifikation spricht für eine Konzentration der nächsten fachlichen
+Prüfung auf die Kaltstart-Verfügbarkeit. Vor einer neuen Variante sollte der
+Projektleiter entscheiden, ob der gesamte Reset-Effekt damit für FW1 ausreichend
+beschrieben ist oder ein separat begründeter Gegenversuch benötigt wird.
+Keine neue Variante und kein weiterer Versuch ist hier gestartet.
+
+Belege
+diagnosis.json, case-01..32.jsonl.gz, examples.json, delivery-verification.json,
+historical-verification-before/after.json, resources.json, terminal.json,
+preservation.json, delivery-resources.json, delivery-closure.json und .sha256.
+Skripte und Fixture-Ergebnis: analyses/fw1-diagnosis-20261019/.

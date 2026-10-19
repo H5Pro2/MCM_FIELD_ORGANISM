@@ -1,0 +1,655 @@
+{
+  "created_utc": "2026-09-30T14:00:48.268854+00:00",
+  "scope": "stored synthetic vectors only",
+  "A_values_hex": [
+    [
+      "0x1.c7246f11a0859p-27",
+      "0x1.e3c4c12a1c386p-28",
+      "0x1.cf1f5dff2d3aap-28",
+      "0x1.1ff4adf9fa5fdp-27",
+      "0x1.247b722d07544p-27",
+      "0x1.0245dad2962fbp-27",
+      "0x1.a30c408e9b852p-28",
+      "0x1.3362716d8980dp-28",
+      "0x1.4c23fe55da43dp-29",
+      "0x1.47bfd403bae78p-27",
+      "0x1.a9458affe6da8p-26",
+      "0x1.e82261fd6cedbp-25",
+      "0x1.0c462e7944193p-23",
+      "0x1.57ba1eb4ab58bp-22",
+      "0x1.3e9cfe10e45efp-20",
+      "0x1.5d84bb1903a6ep-15",
+      "0x1.35ba9a4b5d12cp-9",
+      "0x1.0c7f632c4b5e6p-11",
+      "0x1.979a9dc0e0605p-20",
+      "0x1.13fb8069022e6p-21",
+      "0x1.f12418d8a6511p-21",
+      "0x1.de41882cf2074p-11",
+      "0x1.e4947cb31fee2p-10",
+      "0x1.c28f2a5c1087dp-18",
+      "0x1.2156d029241e0p-7",
+      "0x1.6c4532c185b10p-4",
+      "0x1.851482db2b906p-12",
+      "0x1.23df45e4ede9fp-9",
+      "0x1.3a8c2d7dfb484p-11",
+      "0x1.5c3ce21d72ef3p-9",
+      "0x1.b9c95e707a4b6p-6",
+      "0x1.5fc70938183afp-6",
+      "0x1.0d0cdd785415bp-9",
+      "0x1.56038bb303712p-7",
+      "0x1.69b8c2bc2c1e8p-6",
+      "0x1.3fa7ef7c6ce9fp-9",
+      "0x1.89aa74b873ef0p-6",
+      "0x1.5e1f26cdb1d3dp-8",
+      "0x1.eb6cd5d2f87d3p-7",
+      "0x1.a5011668435d1p-7",
+      "0x1.284bd543862f3p-7",
+      "0x1.2df1b446c89d5p-7",
+      "0x1.31311c05dfd2dp-7",
+      "0x1.2f5df5e61b6c3p-7",
+      "0x1.418f2d1f859c9p-7",
+      "0x1.26df1a08c20e2p-7",
+      "0x1.35e7c480b78c9p-7",
+      "0x1.4b9666deb93f4p-8"
+    ],
+    [
+      "0x1.cefc8afe8d922p-27",
+      "0x1.1695eba9e2bd8p-27",
+      "0x1.194f530b51858p-27",
+      "0x1.89d2a56e42d9ep-27",
+      "0x1.e2e54052f5ff5p-27",
+      "0x1.16c67c732d4d5p-26",
+      "0x1.52d97ecd2cc03p-26",
+      "0x1.e922b92731532p-26",
+      "0x1.15310a5ab035ap-25",
+      "0x1.732019d0c1ce8p-25",
+      "0x1.09496c3ddc8d1p-24",
+      "0x1.a332cbeb16e31p-24",
+      "0x1.61df5ae74e36ep-23",
+      "0x1.7785478954894p-22",
+      "0x1.32eed513d264bp-20",
+      "0x1.3c7e62d7aff29p-15",
+      "0x1.183cb169130c9p-9",
+      "0x1.e5d9fa52b8b04p-12",
+      "0x1.405189d0b2d7fp-20",
+      "0x1.ad16bb8b97dc2p-23",
+      "0x1.43333b425111dp-20",
+      "0x1.688ee2cb8dacdp-10",
+      "0x1.6d53891f25debp-9",
+      "0x1.d5ff1f1dcafdbp-19",
+      "0x1.7ddcb6c3904ebp-12",
+      "0x1.e0c0ab43cd4ebp-9",
+      "0x1.00a715069fd50p-16",
+      "0x1.064f4c2553ac0p-9",
+      "0x1.ce7704571d9d8p-10",
+      "0x1.85c4e0f5fd5f2p-4",
+      "0x1.1c33c571c11bap-9",
+      "0x1.d12f71f937b44p-10",
+      "0x1.909a99b87e6a6p-9",
+      "0x1.8771f353f2db3p-9",
+      "0x1.7c38b633c3d4ap-6",
+      "0x1.9eaf8801d0475p-6",
+      "0x1.32b2d18199f20p-8",
+      "0x1.0d5acdee4c4a1p-7",
+      "0x1.956d1a7179b6bp-6",
+      "0x1.320e587215e2dp-8",
+      "0x1.73fff1f364e34p-6",
+      "0x1.97ea43bfe6224p-8",
+      "0x1.140d878b926c3p-6",
+      "0x1.91ac0fed51aeap-7",
+      "0x1.48df28e47738bp-7",
+      "0x1.69a522bafb76cp-7",
+      "0x1.72c7675b25135p-7",
+      "0x1.0dc5b3df911e3p-7"
+    ],
+    [
+      "0x1.1def5edaa7132p-25",
+      "0x1.50d8c947ef431p-26",
+      "0x1.515fb605a16bep-26",
+      "0x1.d0e5efa4f16b5p-26",
+      "0x1.174da4a48dddap-25",
+      "0x1.3bcdf6f43d7d1p-25",
+      "0x1.785c7eea45c16p-25",
+      "0x1.0b3222945b9aep-24",
+      "0x1.2aa006342353cp-24",
+      "0x1.8c27b9cadb119p-24",
+      "0x1.1a0058b933a11p-23",
+      "0x1.be40e71ad44f6p-23",
+      "0x1.7b471c1d1144dp-22",
+      "0x1.96d1baa1b84f9p-21",
+      "0x1.5082e75d5db88p-19",
+      "0x1.5df24bcca09f7p-14",
+      "0x1.35e68a34964c2p-8",
+      "0x1.0ca425ced9826p-10",
+      "0x1.6ffa424c7e930p-19",
+      "0x1.0344f64039103p-21",
+      "0x1.e51ee0540d7eap-21",
+      "0x1.0ce30a7b2154ep-10",
+      "0x1.10715d2139cc9p-9",
+      "0x1.562599055479fp-19",
+      "0x1.d6f823c408bdcp-13",
+      "0x1.287823e958955p-9",
+      "0x1.3ce42da190331p-17",
+      "0x1.facc88a3e3e5bp-10",
+      "0x1.11a2588100569p-11",
+      "0x1.852ac9525a4efp-9",
+      "0x1.81fdc6e95c694p-9",
+      "0x1.01f155ed41747p-5",
+      "0x1.0be9701e865e8p-4",
+      "0x1.25242aebd5957p-8",
+      "0x1.4124f208bb3b5p-9",
+      "0x1.1c0e1cd74559cp-9",
+      "0x1.d5130768a0f3ep-9",
+      "0x1.390b53ce3aa8dp-5",
+      "0x1.7c8424e0fa8cdp-7",
+      "0x1.8a08a44afcf4dp-9",
+      "0x1.30387e32b2029p-6",
+      "0x1.00e6cdfad3fc2p-6",
+      "0x1.e9cde9793607ep-8",
+      "0x1.418e5354e707dp-6",
+      "0x1.5aa4b4ba3343dp-7",
+      "0x1.9be73bbab8679p-7",
+      "0x1.28a383b73829ep-6",
+      "0x1.efbfe2406e842p-9"
+    ],
+    [
+      "0x1.7bfb49133c30cp-25",
+      "0x1.befc496006b7ep-26",
+      "0x1.bf65ef6708d38p-26",
+      "0x1.33da998b6a361p-25",
+      "0x1.712f4f3dbefcap-25",
+      "0x1.a0675f43ea1b4p-25",
+      "0x1.eecbe79a22925p-25",
+      "0x1.5e22c819c4cdfp-24",
+      "0x1.85c231c4abbb5p-24",
+      "0x1.0166ed3c3ed5dp-23",
+      "0x1.6cb20fcf81d41p-23",
+      "0x1.1f1ed1afd16ccp-22",
+      "0x1.e5aebb573c88ap-22",
+      "0x1.035ba16b8777fp-20",
+      "0x1.abb0be0a5f6c5p-19",
+      "0x1.bc0adf3626637p-14",
+      "0x1.89387d7081289p-8",
+      "0x1.54de3c170bb1ap-10",
+      "0x1.d176f210ba67cp-19",
+      "0x1.3c5170ca3d70bp-21",
+      "0x1.252dc1b0da5c4p-20",
+      "0x1.475948d8174edp-10",
+      "0x1.4bad89ba2fd34p-9",
+      "0x1.9f477d0bdc22dp-19",
+      "0x1.09b6d36618078p-12",
+      "0x1.4e871e7f557f4p-9",
+      "0x1.658560d7520e5p-17",
+      "0x1.f84a8cbdfed34p-10",
+      "0x1.0fccf8c911a58p-11",
+      "0x1.3888c3abced74p-9",
+      "0x1.900ac97c88472p-10",
+      "0x1.bbf9559d98dfbp-10",
+      "0x1.876f2bd8e7465p-9",
+      "0x1.fda4189c33ba3p-6",
+      "0x1.0eefc32d655c5p-4",
+      "0x1.3bdb77789fae3p-8",
+      "0x1.9c0a343f3d6afp-9",
+      "0x1.48f9236aca402p-9",
+      "0x1.dc9a682357205p-9",
+      "0x1.389c8303ede0dp-5",
+      "0x1.9ba60d2c2b911p-7",
+      "0x1.c05a3e64d29e5p-9",
+      "0x1.333f92d0ff567p-6",
+      "0x1.1229896dae987p-6",
+      "0x1.fe2e279158e0bp-8",
+      "0x1.5c54e7cfe1b1cp-6",
+      "0x1.6fef0909fdb76p-7",
+      "0x1.bd96da6e7c4a6p-7"
+    ]
+  ],
+  "A_source_ordinals": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "transformations": {
+    "A": "unchanged",
+    "H": "all values ldexp -1",
+    "Q": "all values ldexp -2",
+    "R": "reverse H frame order",
+    "L": "only frame index0 ldexp -1"
+  },
+  "factors": [
+    1.0,
+    0.5,
+    2.0
+  ],
+  "factor_direction": "incoming = stored * factor; compare stored origin, never last confirmation",
+  "preconditions": [
+    "4x48 finite nonnegative values",
+    "all nonzero values remain normal under half and quarter; exact reversibility",
+    "A differs from reverse A",
+    "A,H,Q distinct",
+    "origin/last offset0 hints have exactly the preregistered matches; failure means unsuitable, not input reselection"
+  ],
+  "ambiguity_rule": "Count distinct matching stored contents across retained and candidate. More than one: ABSTAIN_AMBIGUOUS_CONFIRMATION, discard forming, preserve candidate/retained/counters/order; no priority even for exact match. This is an explicit added decision rule, not previously proven.",
+  "cases": {
+    "AA": {
+      "sequence": [
+        "A",
+        "A"
+      ],
+      "actions": {
+        "E": [
+          "TRACE_CANDIDATE_CREATED",
+          "TRACE_PROMOTED"
+        ],
+        "G": [
+          "TRACE_CANDIDATE_CREATED",
+          "TRACE_PROMOTED"
+        ]
+      },
+      "retained": {
+        "E": [
+          1
+        ],
+        "G": [
+          1
+        ]
+      },
+      "candidate": {
+        "E": null,
+        "G": null
+      },
+      "hints": {
+        "E": [
+          [
+            "CONFIRMED_RETAINED_MATCH",
+            1
+          ],
+          [
+            "CONFIRMED_RETAINED_MATCH",
+            1
+          ]
+        ],
+        "G": [
+          [
+            "CONFIRMED_RETAINED_MATCH",
+            1
+          ],
+          [
+            "CONFIRMED_RETAINED_MATCH",
+            1
+          ]
+        ]
+      }
+    },
+    "AH": {
+      "sequence": [
+        "A",
+        "H"
+      ],
+      "actions": {
+        "E": [
+          "TRACE_CANDIDATE_CREATED",
+          "TRACE_CANDIDATE_REPLACED"
+        ],
+        "G": [
+          "TRACE_CANDIDATE_CREATED",
+          "TRACE_PROMOTED"
+        ]
+      },
+      "retained": {
+        "E": [],
+        "G": [
+          1
+        ]
+      },
+      "candidate": {
+        "E": 2,
+        "G": null
+      },
+      "hints": {
+        "E": [
+          [
+            "ABSTAIN_NO_MATCH",
+            null
+          ],
+          [
+            "PROVISIONAL_CANDIDATE_MATCH",
+            2
+          ]
+        ],
+        "G": [
+          [
+            "CONFIRMED_RETAINED_MATCH",
+            1
+          ],
+          [
+            "ABSTAIN_NO_MATCH",
+            null
+          ]
+        ]
+      }
+    },
+    "HA": {
+      "sequence": [
+        "H",
+        "A"
+      ],
+      "actions": {
+        "E": [
+          "TRACE_CANDIDATE_CREATED",
+          "TRACE_CANDIDATE_REPLACED"
+        ],
+        "G": [
+          "TRACE_CANDIDATE_CREATED",
+          "TRACE_PROMOTED"
+        ]
+      },
+      "retained": {
+        "E": [],
+        "G": [
+          1
+        ]
+      },
+      "candidate": {
+        "E": 2,
+        "G": null
+      },
+      "hints": {
+        "E": [
+          [
+            "ABSTAIN_NO_MATCH",
+            null
+          ],
+          [
+            "PROVISIONAL_CANDIDATE_MATCH",
+            2
+          ]
+        ],
+        "G": [
+          [
+            "CONFIRMED_RETAINED_MATCH",
+            1
+          ],
+          [
+            "ABSTAIN_NO_MATCH",
+            null
+          ]
+        ]
+      }
+    },
+    "AR": {
+      "sequence": [
+        "A",
+        "R"
+      ],
+      "actions": {
+        "E": [
+          "TRACE_CANDIDATE_CREATED",
+          "TRACE_CANDIDATE_REPLACED"
+        ],
+        "G": [
+          "TRACE_CANDIDATE_CREATED",
+          "TRACE_CANDIDATE_REPLACED"
+        ]
+      },
+      "retained": {
+        "E": [],
+        "G": []
+      },
+      "candidate": {
+        "E": 2,
+        "G": 2
+      },
+      "hints": {
+        "E": [
+          [
+            "ABSTAIN_NO_MATCH",
+            null
+          ],
+          [
+            "PROVISIONAL_CANDIDATE_MATCH",
+            2
+          ]
+        ],
+        "G": [
+          [
+            "ABSTAIN_NO_MATCH",
+            null
+          ],
+          [
+            "PROVISIONAL_CANDIDATE_MATCH",
+            2
+          ]
+        ]
+      }
+    },
+    "AL": {
+      "sequence": [
+        "A",
+        "L"
+      ],
+      "actions": {
+        "E": [
+          "TRACE_CANDIDATE_CREATED",
+          "TRACE_CANDIDATE_REPLACED"
+        ],
+        "G": [
+          "TRACE_CANDIDATE_CREATED",
+          "TRACE_CANDIDATE_REPLACED"
+        ]
+      },
+      "retained": {
+        "E": [],
+        "G": []
+      },
+      "candidate": {
+        "E": 2,
+        "G": 2
+      },
+      "hints": {
+        "E": [
+          [
+            "ABSTAIN_NO_MATCH",
+            null
+          ],
+          [
+            "PROVISIONAL_CANDIDATE_MATCH",
+            2
+          ]
+        ],
+        "G": [
+          [
+            "ABSTAIN_NO_MATCH",
+            null
+          ],
+          [
+            "PROVISIONAL_CANDIDATE_MATCH",
+            2
+          ]
+        ]
+      }
+    },
+    "drift": {
+      "sequence": [
+        "A",
+        "H",
+        "Q"
+      ],
+      "actions": {
+        "E": [
+          "TRACE_CANDIDATE_CREATED",
+          "TRACE_CANDIDATE_REPLACED",
+          "TRACE_CANDIDATE_REPLACED"
+        ],
+        "G": [
+          "TRACE_CANDIDATE_CREATED",
+          "TRACE_PROMOTED",
+          "TRACE_CANDIDATE_CREATED"
+        ]
+      },
+      "retained": {
+        "E": [],
+        "G": [
+          1
+        ]
+      },
+      "candidate": {
+        "E": 3,
+        "G": 3
+      },
+      "hints": {
+        "E": [
+          [
+            "ABSTAIN_NO_MATCH",
+            null
+          ],
+          [
+            "PROVISIONAL_CANDIDATE_MATCH",
+            3
+          ]
+        ],
+        "G": [
+          [
+            "CONFIRMED_RETAINED_MATCH",
+            1
+          ],
+          [
+            "PROVISIONAL_CANDIDATE_MATCH",
+            3
+          ]
+        ]
+      }
+    },
+    "retained_collision": {
+      "sequence": [
+        "A",
+        "A",
+        "Q",
+        "Q",
+        "H"
+      ],
+      "actions": {
+        "E": [
+          "TRACE_CANDIDATE_CREATED",
+          "TRACE_PROMOTED",
+          "TRACE_CANDIDATE_CREATED",
+          "TRACE_PROMOTED",
+          "TRACE_CANDIDATE_CREATED"
+        ],
+        "G": [
+          "TRACE_CANDIDATE_CREATED",
+          "TRACE_PROMOTED",
+          "TRACE_CANDIDATE_CREATED",
+          "TRACE_PROMOTED",
+          "ABSTAIN_AMBIGUOUS_CONFIRMATION"
+        ]
+      },
+      "retained": {
+        "E": [
+          1,
+          3
+        ],
+        "G": [
+          1,
+          3
+        ]
+      },
+      "candidate": {
+        "E": 5,
+        "G": null
+      },
+      "hints": {
+        "E": [
+          [
+            "CONFIRMED_RETAINED_MATCH",
+            1
+          ],
+          [
+            "PROVISIONAL_CANDIDATE_MATCH",
+            5
+          ]
+        ],
+        "G": [
+          [
+            "CONFIRMED_RETAINED_MATCH",
+            1
+          ],
+          [
+            "ABSTAIN_NO_MATCH",
+            null
+          ]
+        ]
+      }
+    },
+    "candidate_collision": {
+      "sequence": [
+        "A",
+        "A",
+        "Q",
+        "H"
+      ],
+      "actions": {
+        "E": [
+          "TRACE_CANDIDATE_CREATED",
+          "TRACE_PROMOTED",
+          "TRACE_CANDIDATE_CREATED",
+          "TRACE_CANDIDATE_REPLACED"
+        ],
+        "G": [
+          "TRACE_CANDIDATE_CREATED",
+          "TRACE_PROMOTED",
+          "TRACE_CANDIDATE_CREATED",
+          "ABSTAIN_AMBIGUOUS_CONFIRMATION"
+        ]
+      },
+      "retained": {
+        "E": [
+          1
+        ],
+        "G": [
+          1
+        ]
+      },
+      "candidate": {
+        "E": 4,
+        "G": 3
+      },
+      "hints": {
+        "E": [
+          [
+            "CONFIRMED_RETAINED_MATCH",
+            1
+          ],
+          [
+            "PROVISIONAL_CANDIDATE_MATCH",
+            4
+          ]
+        ],
+        "G": [
+          [
+            "CONFIRMED_RETAINED_MATCH",
+            1
+          ],
+          [
+            "ABSTAIN_NO_MATCH",
+            null
+          ]
+        ]
+      }
+    }
+  },
+  "budget": [
+    16,
+    2
+  ],
+  "hint_rule": "unchanged exact B2-V; after final close query first-occurrence prefix and last-observation prefix, repeat each twice",
+  "boundary": "A,A,reverseA,reverseA,Q then forming local variation L; hint A; 16+2, no full normalized vectors",
+  "bindings": {
+    "reports\\s2uc\\p2-supplier-correction-20260930-01\\final\\retained-success\\product\\record.json": "f9f2ce5044c1e9ee6105e3e363d084590271bf7b76f662785dc9f06c0e03955a",
+    "tools/_s2uc_provisional_hint.py": "3fcf1c358548c85ddbec462028a43a96e3ec24a6bffd2948ad87da502f802c8e",
+    "tools/_s2uc_four_arm.py": "214805475c8794663026798b95f88f4b6e5cd6455d474a4eb75b1ee2c5e5a16b",
+    "tools/_s2ub_candidate_confirmation.py": "4178198b43fbbefd3cd550307ec114540c2167a3ae066e22bde01f5223f0ca8a",
+    "mcm_field_organism/log_spectral_receptor.py": "26a6bd8f2d190db60c75ad29f275b3bd8b09b6d26d4ad54e4396176c4a36d2b0",
+    "tools/_s2nj_private_auditory_output_projection.py": "e052cc76cf4c9678e11673d95390dea21634bba8082187567a760faaaf4904e5"
+  }
+}

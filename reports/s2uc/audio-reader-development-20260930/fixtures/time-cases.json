@@ -1,0 +1,1 @@
+{"negative_preroll": [-1024, 2048], "gap": [0, 1024, 2048], "overlap": [0, 1024, 512], "missing_pts": null, "fractional_pts": [1, 96000], "early_eof": 4800, "end_overhang": [479232, 2048]}

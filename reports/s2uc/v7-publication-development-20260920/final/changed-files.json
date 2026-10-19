@@ -1,0 +1,20 @@
+[
+  {
+    "path": "tests/test_s2uc_publication_v7.py",
+    "bytes": 18798,
+    "before": null,
+    "after": "cca38c6818d0099b6a70dc2f6b3ab1db29b15e79448f2e0b5501d39d999462da"
+  },
+  {
+    "path": "tools/_s2uc_inventory_v7.py",
+    "bytes": 8882,
+    "before": "1cfcdfc64e4db353584a4a5a8c9b9aeee58499958ffc0cbb039fce405ddef1ce",
+    "after": "08b167956c6572024344bf94702142bdcd2cc00ea8a442627792dc92260e8e33"
+  },
+  {
+    "path": "tools/_s2uc_publication_v7.py",
+    "bytes": 13790,
+    "before": null,
+    "after": "08595b394a3943e2d417903b1173fd9125efb9a33642c3935eb5a765451ffee4"
+  }
+]

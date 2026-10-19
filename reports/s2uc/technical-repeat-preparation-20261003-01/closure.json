@@ -1,0 +1,184 @@
+{
+  "status": "FAILED",
+  "error": "RuntimeError:INTEGRATION_TESTS",
+  "files": {
+    "binding.json": {
+      "bytes": 10732,
+      "sha256": "017ef2be7adc174daf3772bb1ee0b743133fefd93cab870aae633ab8d176f5b0"
+    },
+    "facts.json": {
+      "bytes": 50474,
+      "sha256": "0fabafd6965df8798550310d84ae6a93a623204598b4050f3345d7f89a57082a"
+    },
+    "tests.json": {
+      "bytes": 2667,
+      "sha256": "116479da00b91183e224eff5abf5e5cc7c5fb6ae490a56713e55dc552a805b83"
+    },
+    "integration/assessment.json": {
+      "bytes": 228,
+      "sha256": "97b124bd97a34e9a3156b149c01f12140cbfea3c5ef5d6820d92a6cbc2ffdc71"
+    },
+    "integration/claim.json": {
+      "bytes": 114,
+      "sha256": "946f32dcf83845ed46aea0a98e874772944b14e3c3abbb5d9ca8ffb6c70e1038"
+    },
+    "integration/closure.json": {
+      "bytes": 3733,
+      "sha256": "61ac5f134abd52c5be91b08c737ebdbcccb834f3588c43c080559f07d4835f7d"
+    },
+    "integration/lifecycle.jsonl": {
+      "bytes": 751,
+      "sha256": "89155006d76450152c9017a9f5be40321b227c46e8b121c7b5f1abd72a20bff6"
+    },
+    "integration/manifest.json": {
+      "bytes": 1800,
+      "sha256": "bbef2e82553ba70b2108856a586c715f264a5b966fec84776af39991394f8b70"
+    },
+    "integration/N1-assessment.json": {
+      "bytes": 62954,
+      "sha256": "095437593f6a3ead9b847e1e2af4a14b4c8b95465f37915001e6176deb2f48cf"
+    },
+    "integration/N1-E-start.json": {
+      "bytes": 157,
+      "sha256": "f771fb3eb5f91226eb80847a475a16e0e0032edbd3441cd71f9ad837ff7d87e5"
+    },
+    "integration/N1-E.json": {
+      "bytes": 82406,
+      "sha256": "f406a4fca40ea91c1a8331723b832e3874c833566e3d80a1f0e99ad6257dbd22"
+    },
+    "integration/N1-K-start.json": {
+      "bytes": 157,
+      "sha256": "66075f6703349c78cd93c8f5bed9e8f92d5086b4e759461b5e4258c99c409363"
+    },
+    "integration/N1-K.json": {
+      "bytes": 64549,
+      "sha256": "ce3c36a6487f2cbb334ac6dbb3b1807dbe07fe9afa2d2ab67ea1ecc812bb9e8c"
+    },
+    "integration/N1-M-start.json": {
+      "bytes": 157,
+      "sha256": "dd1ef34a09e688fe6045b0612bec9761995b2ced12bcd778539d31d96517442b"
+    },
+    "integration/N1-M.json": {
+      "bytes": 83008,
+      "sha256": "43bdd8ac92cd357b87a87c4c31407d4dd54d40fb8fbb956330b794e180d0594c"
+    },
+    "integration/N1-P-start.json": {
+      "bytes": 157,
+      "sha256": "d372fd5dbbf34779dafa73607ded382414fb7f273b23e1bbe2567b99eddd6847"
+    },
+    "integration/N1-P.json": {
+      "bytes": 64739,
+      "sha256": "0256e4d5cc646b18ab3eea011ce1c18c1142a02df4da3c47b80eff281635ed3c"
+    },
+    "integration/N1-resources.json": {
+      "bytes": 2610,
+      "sha256": "10b4e931437a4daa4f816babc2e759fe3f275fa38b77bc37be5305e057b5122e"
+    },
+    "integration/N1-source.json": {
+      "bytes": 30882,
+      "sha256": "105d2f82f9264c097fecf51f33e14efe50be6ada12bc04a8f0a3f20c5228b920"
+    },
+    "integration/N1-U-start.json": {
+      "bytes": 157,
+      "sha256": "ed291650fa29113fa54d6bb74e06a1891c6ffa8ba37ecbd2d0ef3a119fce7c68"
+    },
+    "integration/N1-U.json": {
+      "bytes": 61231,
+      "sha256": "278061db69491459d4e99250dc6ee626461a85fa46a8d23c0e33e8c32fa49fff"
+    },
+    "integration/N2-assessment.json": {
+      "bytes": 65000,
+      "sha256": "ef573d827909118f6abce530c515b255940b524437cabb5644188bd46f17fc93"
+    },
+    "integration/N2-E-start.json": {
+      "bytes": 157,
+      "sha256": "25c1423b8067f2f13f089117d1345db5346aefe0ab282239a78f9201360cd266"
+    },
+    "integration/N2-E.json": {
+      "bytes": 99147,
+      "sha256": "a9ab59d3be3a07b77dae8ecfea0519186ce48a5a1e64d96df61f844db53037b0"
+    },
+    "integration/N2-K-start.json": {
+      "bytes": 157,
+      "sha256": "ab0e7a0737a911cce36236180ae1b3208ed04b995b96db73456fe3e13937c29c"
+    },
+    "integration/N2-K.json": {
+      "bytes": 81116,
+      "sha256": "b7516fb206016717c4e83ceaef7ba663bed00797be55e765277b8ceb14617b26"
+    },
+    "integration/N2-M-start.json": {
+      "bytes": 157,
+      "sha256": "5150e21fa64dd7bf5b995137c64a38ef705db8cd6ee186ce6139a46f95fb5cfc"
+    },
+    "integration/N2-M.json": {
+      "bytes": 99749,
+      "sha256": "4c862bab698d43c08602c6e59f2e23dee5a22e5f4e54361e9c41b17c581fbf32"
+    },
+    "integration/N2-P-start.json": {
+      "bytes": 157,
+      "sha256": "ef101e180a23adeef788bd10d850f9de5d022ac05dd9afd68bb39b8b49f2323e"
+    },
+    "integration/N2-P.json": {
+      "bytes": 81165,
+      "sha256": "ca198208bb95ae8bf3dfb91104181b494a26c6a1b82c8142a012c4dfd5a52594"
+    },
+    "integration/N2-resources.json": {
+      "bytes": 2623,
+      "sha256": "036af1ae54d3d43bfad3286e96def2095279a56142193f869dd2765b1b62b008"
+    },
+    "integration/N2-source.json": {
+      "bytes": 30882,
+      "sha256": "ed2c9f31a248622c59f185495940318bfc404b93297e7a6a344fe93b263f0073"
+    },
+    "integration/N2-U-start.json": {
+      "bytes": 157,
+      "sha256": "6e0dd65b2d545e1f6a3a2004d89b325077e995fa8c7b6f04f1de93f5f48ba6cb"
+    },
+    "integration/N2-U.json": {
+      "bytes": 80355,
+      "sha256": "c280fa414a6686f97598836f5afa875032d3ce3c3c47b7a42243b13b6a5b6150"
+    },
+    "integration/phase-times.json": {
+      "bytes": 452,
+      "sha256": "1d7668a47342fbed3dd4234559c8604d5852438a4a684440ac84fb6f65d44e06"
+    },
+    "integration/worker-complete.json": {
+      "bytes": 202,
+      "sha256": "38d0339e299fb3435805da0961761c95fe487ef067a6f0001c2acce9babdf710"
+    },
+    "probe-normal/claim.json": {
+      "bytes": 114,
+      "sha256": "946f32dcf83845ed46aea0a98e874772944b14e3c3abbb5d9ca8ffb6c70e1038"
+    },
+    "probe-normal/closure.json": {
+      "bytes": 738,
+      "sha256": "9db42c595695d5e4bfc1f56a53f9eb857ae8a46bcbbac77b14040a7dffecbe80"
+    },
+    "probe-normal/lifecycle.jsonl": {
+      "bytes": 751,
+      "sha256": "fbf0c58eaec820fe3a3c4179d4e44f1920909be42e0af2c1abe81e9b310d24d5"
+    },
+    "probe-normal/neutral-payload.json": {
+      "bytes": 200012,
+      "sha256": "0d585f58dbf3962c92bb2575eb54e470ed5ba2cd12cc8819edec09e757525af4"
+    },
+    "probe-normal/worker-complete.json": {
+      "bytes": 17,
+      "sha256": "22948fff175a705e7693bb83e0ad8e32a79b95b3f036767b501c636afe5d557a"
+    },
+    "probe-timeout/claim.json": {
+      "bytes": 114,
+      "sha256": "946f32dcf83845ed46aea0a98e874772944b14e3c3abbb5d9ca8ffb6c70e1038"
+    },
+    "probe-timeout/closure.json": {
+      "bytes": 516,
+      "sha256": "b3bfc64cba57c2e5e2c916e68c1dfe0c49a6169f9d82c097b9da5e61998847dd"
+    },
+    "probe-timeout/lifecycle.jsonl": {
+      "bytes": 853,
+      "sha256": "e8786b42987e216502d7b1b67206fa0a02813fabc37d9cb9bbf9e92ad3438c71"
+    }
+  },
+  "raster_materialized": false,
+  "raster_executed": false
+}

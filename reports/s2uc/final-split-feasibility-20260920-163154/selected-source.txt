@@ -1,0 +1,401 @@
+STATIC TEXT ONLY; NOT EXECUTED
+
+NU:
+class S2NUError(ValueError):
+    def __init__(self,code):
+        self.code = code
+        super().__init__(code)
+
+
+def require(ok,code):
+    if not ok:
+        raise S2NUError(code)
+
+
+def native_index(start):
+    require(type(start) is int and start >= 0 and start % 480 == 0,"NATIVE_TIME_INVALID")
+    return start//480
+
+
+def groups_payload():
+    return [dict(seed=seed,partials=[dict(frequency_ratio=[f,1],amplitude_ratio=list(a))
+        for f,a in zip(fs,amps,strict=True)]) for fs,amps,seed in GROUPS]
+
+
+@dataclass(frozen=True,slots=True)
+class WindowSpec:
+    stream: int
+    window: int
+
+    def __post_init__(self):
+        require(type(self.stream) is int and 1 <= self.stream <= 6
+            and type(self.window) is int and 0 <= self.window <= 4,"WINDOW_SPEC_INVALID")
+
+    def recipe(self):
+        return dict(schema="s2nu.pcm-window-recipe.v1",sample_rate=48000,sample_count=4800,
+            expression_id=2 if self.stream == 3 else self.stream,
+            synthesis_window_index=PERMUTATION[self.window] if self.stream == 3 else self.window,
+            groups=groups_payload(),rounding="binary64-expression-then-single-f32le")
+
+    def payload(self):
+        start = (self.stream-1)*24000+self.window*4800
+        recipe = self.recipe()
+        return dict(source_id=f"nu-s{self.stream:02d}-w{self.window:02d}",ordinal=(self.stream-1)*5+self.window+1,
+            stream_id=f"s{self.stream:02d}",window_ordinal=self.window,format="PCM_F32LE",channels=1,
+            clock_id="audio.sample",window_start_sample=start,window_end_sample=start+4800,
+            nj_snapshot_index=native_index(start),pcm_byte_count=19200,recipe=recipe,recipe_digest=digest(recipe))
+
+
+def prepare_groups(groups):
+    result = []
+    for group in groups:
+        partials = []
+        for index,partial in enumerate(group["partials"]):
+            u = int.from_bytes(hashlib.sha256((group["seed"]+":"+str(index)).encode("ascii")).digest()[:4],"little")
+            phase = (float(u)/4294967296.0)*math.tau
+            f,a = partial["frequency_ratio"],partial["amplitude_ratio"]
+            partials.append((float(f[0])/float(f[1]),float(a[0])/float(a[1]),phase))
+        result.append(tuple(partials))
+    return tuple(result)
+
+
+def group_value(group,t):
+    value = 0.0
+    for f,a,phase in group:
+        value += a*math.sin(((math.tau*f)*t)+phase)
+    return value
+
+
+def sample_value(expression,k,j,groups):
+    require(expression in (1,2,4,5,6) and type(k) is int and 0 <= k <= 4
+        and type(j) is int and 0 <= j < 4800,"SYNTHESIS_INDEX_INVALID")
+    t = float(j)/48000.0
+    if expression == 4:
+        time = float(4800*k+j)/48000.0
+        v = time+((4.0/100.0)*(time*time))
+        return group_value(groups[0],v)
+    x = group_value(groups[0],t)
+    if expression == 1:
+        return x
+    if expression == 2:
+        gain = 0.5+(0.5*(float(4800*k+j)/24000.0))
+        return gain*x
+    if expression == 5:
+        h = (0.0,float(j)/4800.0,1.0,1.0-(float(j)/4800.0),0.0)[k]
+        return x+(h*group_value(groups[2],t))
+    w = (0.0,0.0,float(j)/4800.0,1.0,1.0)[k]
+    return ((1.0-w)*x)+(w*group_value(groups[1],t))
+
+
+def render(expression,k,groups,indices):
+    require(type(indices) is tuple and 1 <= len(indices) <= 4800,"PAYLOAD_SIZE_INVALID")
+    payload = bytearray(4*len(indices))
+    for offset,j in enumerate(indices):
+        value = sample_value(expression,k,j,groups)
+        require(math.isfinite(value) and abs(value) <= 1.0,"PCM_DOMAIN_INVALID")
+        struct.pack_into("<f",payload,offset*4,value)
+    return payload
+
+
+def pcm_window(spec):
+    require(type(spec) is WindowSpec,"WINDOW_SPEC_INVALID")
+    spec.__post_init__()
+    recipe = spec.recipe()
+    return render(recipe["expression_id"],recipe["synthesis_window_index"],
+        prepare_groups(recipe["groups"]),tuple(range(4800)))
+
+
+V6:
+def _sha(path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _run_pair(run_id: str, output: str) -> None:
+    if RUNS.get(run_id) != output:
+        raise ValueError("RUN_IDENTITY_INVALID")
+
+
+def build(*, run_id: str = RUN_ID, output: str = OUTPUT) -> dict[str, object]:
+    _run_pair(run_id, output)
+    manifest = source_binding.manifest()
+    rows, _ = source.source_rows()
+    uses = [event["endpoint"] for event in manifest["events"] if "endpoint" in event]
+    sources = {source_id: {key: rows[source_id][key] for key in ("source_id", "pcm_sha256", "pcm_byte_count", "nj_snapshot_index", "window_start_sample", "window_end_sample")}
+               for source_id in source_binding.IDS.values()}
+    root = Path(__file__).parent
+    code = {name: _sha(root / name) for name in ("_s2uc_run_entry.py", "_s2uc_source_adapter.py", "s2uc_run_bound_once.py", "_s2uc_record_codec.py", "_s2uc_verification.py", "_s2uc_evaluation.py")}
+    value = {"version": "s2uc.run-binding.v1", "run_id": run_id, "output": output,
+             "manifest_digest": manifest["binding_digest"], "source_plan_path": str(source.SOURCE_PLAN), "source_plan_sha256": _sha(source.SOURCE_PLAN),
+             "sources": sources, "endpoint_uses": uses, "code": code, "targets": {f"{story}/{ordinal}": {"target": target["target"], "formations": list(target["formations"])} for (story, ordinal), target in TARGETS.items()},
+             "qualification": {"tests": ["tests.test_s2ub_candidate_confirmation", "tests.test_s2uc_neutral_connection", "tests.test_s2uc_materialization_connection"]}}
+    value["binding_digest"] = source_binding.digest(value)
+    return value
+
+
+def validate(value: dict[str, object]) -> None:
+    if type(value) is not dict or type(value.get("run_id")) is not str or type(value.get("output")) is not str:
+        raise ValueError("RUN_BINDING_INVALID")
+    _run_pair(value["run_id"], value["output"])
+    if value != build(run_id=value["run_id"], output=value["output"]):
+        raise ValueError("RUN_BINDING_INVALID")
+
+
+def reference(path) -> dict[str, object]:
+    """Return a lossless, independently checkable reference to a frozen binding."""
+    target = Path(path)
+    data = target.read_bytes()
+    return {"path": str(target), "bytes": len(data), "sha256": hashlib.sha256(data).hexdigest()}
+
+
+def _resolve_reference(value: object) -> dict[str, object]:
+    if type(value) is not dict or set(value) != {"path", "bytes", "sha256"}:
+        raise ValueError("FINAL_REFERENCE_INVALID")
+    path = Path(value["path"])
+    if not path.is_file() or path.stat().st_size != value["bytes"] or _sha(path) != value["sha256"]:
+        raise ValueError("FINAL_REFERENCE_INVALID")
+    loaded = json.loads(path.read_bytes())
+    if type(loaded) is not dict:
+        raise ValueError("FINAL_REFERENCE_INVALID")
+    return loaded
+
+
+def _validate_inventory(value: dict[str, object], dependencies: list[dict[str, object]]) -> None:
+    expected = {"version", "files", "external", "source"}
+    if set(value) != expected or value["version"] != "s2uc.dependency-inventory.v6" or type(value["files"]) is not list:
+        raise ValueError("FINAL_INVENTORY_INVALID")
+    actual = {(str(item.get("path", "")).replace("\\", "/"), item.get("bytes"), item.get("sha256"))
+              for item in value["files"] if type(item) is dict and type(item.get("role")) is str}
+    expected_rows = {(str(item["path"]).replace("\\", "/"), item["bytes"], item["sha256"]) for item in dependencies}
+    if len(actual) != len(value["files"]) or actual != expected_rows:
+        raise ValueError("FINAL_INVENTORY_INVALID")
+
+
+def _v6_rows(items, expected):
+    if type(items) is not list or len(items) != len(expected):
+        raise ValueError("FINAL_BUDGET_INVALID")
+    rows = {}
+    for item in items:
+        if (type(item) is not dict or set(item) != {"name", "bytes"}
+                or type(item["name"]) is not str or item["name"] in rows
+                or type(item["bytes"]) is not int or item["bytes"] < 0):
+            raise ValueError("FINAL_BUDGET_INVALID")
+        rows[item["name"]] = item["bytes"]
+    if rows != expected:
+        raise ValueError("FINAL_BUDGET_INVALID")
+    return sum(rows.values())
+
+
+def _v6_alternatives(value, metadata, shared):
+    if type(value) is not dict or set(value) != {"success", "failure", "minimal"}:
+        raise ValueError("FINAL_BUDGET_INVALID")
+    for name, branch in value.items():
+        expected = {"metadata": metadata, "shared": shared,
+                    "record": resource_ledger.RESERVES["success_record" if name == "success" else "failure_record"],
+                    "verification": 0 if name == "minimal" else resource_ledger.RESERVES["verification"]}
+        if type(branch) is not dict or set(branch) != {"contributions", "total_bytes", "violations"}:
+            raise ValueError("FINAL_BUDGET_INVALID")
+        contributions = branch["contributions"]
+        if (type(contributions) is not dict or contributions != expected
+                or any(type(size) is not int or size < 0 for size in contributions.values())
+                or type(branch["total_bytes"]) is not int or branch["total_bytes"] != sum(expected.values())
+                or branch["violations"] != []
+                or any(size > resource_ledger.LIMITS[key] for key, size in expected.items())
+                or sum(expected.values()) > resource_ledger.LIMITS["total"]):
+            raise ValueError("FINAL_BUDGET_INVALID")
+
+
+def _validate_v6_budget(value: dict[str, object], *, manifest_bytes: int, final_bytes: int,
+                        dependencies: list[dict[str, object]], source_ref: dict[str, object],
+                        inventory_ref: dict[str, object], qualification_ref: dict[str, object],
+                        budget_ref: dict[str, object]) -> None:
+    """Validate exact file sizes; final_binding_reserve is NOT an upper bound.
+
+    The historical field name is retained. Record/verification/terminal reserves
+    are separately fixed allowances, never replacements for measured file sizes.
+    """
+    required = {"version", "method", "limits", "reserves", "metadata_items", "shared_items", "alternatives", "structural_bound", "result"}
+    if (type(value) is not dict or set(value) != required
+            or value["version"] != "s2uc.closure-budget.v6" or value["limits"] != resource_ledger.LIMITS
+            or value["reserves"] != resource_ledger.RESERVES or value["result"] != "WITHIN_LIMITS"):
+        raise ValueError("FINAL_BUDGET_INVALID")
+    qualification = _resolve_reference(qualification_ref)
+    expected_metadata = {"manifest": manifest_bytes, "final_binding_reserve": final_bytes}
+    expected_shared = {
+        "active_dependency_sources": sum(item["bytes"] for item in dependencies),
+        "frozen_source_binding": source_ref["bytes"], "dependency_inventory": inventory_ref["bytes"],
+        "qualification_summary": qualification["test_summary"]["bytes"],
+        "qualification_protocol": qualification["test_protocol"]["bytes"],
+        "qualification_budget": qualification["budget"]["bytes"],
+        "qualification_result": qualification_ref["bytes"], "budget_ledger": budget_ref["bytes"],
+        "terminal_reserve": resource_ledger.RESERVES["terminal"],
+    }
+    metadata = _v6_rows(value["metadata_items"], expected_metadata)
+    shared = _v6_rows(value["shared_items"], expected_shared)
+    _v6_alternatives(value["alternatives"], metadata, shared)
+
+
+def _v6_test_ids():
+    """Read the declared suite without importing or running any tests."""
+    result = []
+    for filename in _V6_TEST_FILES:
+        module = filename[:-3].replace("/", ".")
+        tree = ast.parse(Path(filename).read_text(encoding="utf-8-sig"))
+        for cls in tree.body:
+            if isinstance(cls, ast.ClassDef):
+                result.extend(f"{module}.{cls.name}.{method.name}" for method in cls.body
+                              if isinstance(method, ast.FunctionDef) and method.name.startswith("test_"))
+    return sorted(result)
+
+
+def _validate_v6_qualification(value, dependencies):
+    error = "FINAL_QUALIFICATION_INVALID"
+    required = {"version", "qualification_id", "status", "test_summary", "test_protocol", "budget", "gates", "real_payloads_opened"}
+    if (type(value) is not dict or set(value) - {"supersedes"} != required
+            or value["version"] != "s2uc.codec-error-qualification-result.v2"
+            or type(value["qualification_id"]) is not str or not value["qualification_id"]
+            or value["status"] != "QUALIFIED" or value["real_payloads_opened"] is not False
+            or value["gates"] != {"main_gate": False, "used": False}
+            or any(type(v) is not bool for v in value["gates"].values())):
+        raise ValueError(error)
+    summary, protocol, budget = (_resolve_reference(value[key]) for key in ("test_summary", "test_protocol", "budget"))
+    expected_files = {str(Path(item["path"]).resolve()): item for item in dependencies}
+    for filename in _V6_TEST_FILES:
+        expected_files[str(Path(filename).resolve())] = reference(filename)
+    def check_files(rows):
+        if type(rows) is not list or len(rows) != len(expected_files):
+            raise ValueError(error)
+        seen = set()
+        for row in rows:
+            if type(row) is not dict or set(row) != {"path", "bytes", "sha256"} or type(row["path"]) is not str:
+                raise ValueError(error)
+            key = str(Path(row["path"]).resolve())
+            if (key in seen or key not in expected_files or type(row["bytes"]) is not int
+                    or row["bytes"] != expected_files[key]["bytes"] or row["sha256"] != expected_files[key]["sha256"]):
+                raise ValueError(error)
+            seen.add(key)
+    common = {"version", "qualification_id", "command", "result", "tests_run", "files"}
+    if (set(summary) != common | {"real_payloads_opened", "scope"}
+            or summary["version"] != "s2uc.codec-error-neutral-test.v2"
+            or summary["real_payloads_opened"] is not False
+            or type(summary["scope"]) is not list or not summary["scope"]
+            or any(type(item) is not str or not item for item in summary["scope"])):
+        raise ValueError(error)
+    if (set(protocol) != common | {"test_cases", "summary_sha256"}
+            or protocol["version"] != "s2uc.codec-error-neutral-protocol.v2"
+            or protocol["summary_sha256"] != value["test_summary"]["sha256"]
+            or type(protocol["test_cases"]) is not list
+            or any(type(item) is not str for item in protocol["test_cases"])
+            or sorted(protocol["test_cases"]) != _v6_test_ids()):
+        raise ValueError(error)
+    for artifact in (summary, protocol):
+        if (artifact["qualification_id"] != value["qualification_id"] or artifact["command"] != _V6_COMMAND
+                or artifact["result"] != "OK" or type(artifact["tests_run"]) is not int
+                or artifact["tests_run"] != len(protocol["test_cases"])):
+            raise ValueError(error)
+        check_files(artifact["files"])
+    # A qualification budget is separate from the self-referential final ledger.
+    required_budget = {"version", "qualification_id", "limits", "reserves", "metadata_items", "shared_items", "alternatives", "result"}
+    if (set(budget) != required_budget or budget["version"] != "s2uc.qualification-budget.v1"
+            or budget["qualification_id"] != value["qualification_id"]
+            or budget["limits"] != resource_ledger.LIMITS or budget["reserves"] != resource_ledger.RESERVES
+            or budget["result"] != "WITHIN_LIMITS"):
+        raise ValueError(error)
+    try:
+        metadata = _v6_rows(budget["metadata_items"], {"manifest": source_binding.manifest()["binding_bytes"]})
+        shared = _v6_rows(budget["shared_items"], {
+            "active_dependency_sources": sum(item["bytes"] for item in dependencies),
+            "qualification_summary": value["test_summary"]["bytes"],
+            "qualification_protocol": value["test_protocol"]["bytes"],
+            "terminal_reserve": resource_ledger.RESERVES["terminal"],
+        })
+        _v6_alternatives(budget["alternatives"], metadata, shared)
+    except ValueError as exc:
+        raise ValueError(error) from exc
+
+
+def load_for_start(path):
+    """Non-optional admission for the real starter, before gate or supplier.
+
+    Synthetic structure fixtures may use load(), but cannot pass this boundary.
+    Completeness and source-byte allowances are checked before a large binding's
+    qualification/closure ledger, so an oversized complete set has its own error.
+    """
+    value = json.loads(Path(path).read_bytes())
+    if type(value) is not dict:
+        raise ValueError("FINAL_BINDING_INVALID")
+    if value.get("version") != "s2uc.final-run-binding.v6":
+        load(path)  # Preserve specific structural failures in historical formats.
+        raise ValueError("FINAL_START_BINDING_VERSION_INVALID")
+    qualification = _resolve_reference(value.get("qualification_result"))
+    summary = _resolve_reference(qualification.get("test_summary"))
+    identifier = qualification.get("qualification_id")
+    scope = summary.get("scope")
+    if (type(identifier) is not str
+            or not identifier.startswith("S2UC-CODEC-ERROR-NEUTRAL-QUALIFICATION-")
+            or "SYNTHETIC" in identifier.upper()
+            or type(scope) is not list or any(type(item) is not str for item in scope)
+            or any("SYNTHETIC" in item.upper() or "TEST DATA" in item.upper() for item in scope)):
+        raise ValueError("FINAL_SYNTHETIC_QUALIFICATION_FORBIDDEN")
+    dependencies = value.get("dependencies")
+    if type(dependencies) is not list:
+        raise ValueError("FINAL_DEPENDENCY_INVALID")
+    root = Path(__file__).resolve().parents[1]
+    actual = {}
+    for item in dependencies:
+        if (type(item) is not dict or set(item) != {"path", "bytes", "sha256"}
+                or type(item["path"]) is not str or type(item["bytes"]) is not int
+                or item["bytes"] < 0 or type(item["sha256"]) is not str):
+            raise ValueError("FINAL_DEPENDENCY_INVALID")
+        source_path = Path(item["path"]).resolve()
+        if (source_path in actual or not source_path.is_relative_to(root) or not source_path.is_file()
+                or source_path.stat().st_size != item["bytes"] or _sha(source_path) != item["sha256"]):
+            raise ValueError("FINAL_DEPENDENCY_INVALID")
+        actual[source_path] = item
+    inventory = _resolve_reference(value.get("inventory_ref"))
+    _validate_inventory(inventory, dependencies)
+    current = dependency_inventory.current()
+    required = {(root / item["path"]).resolve() for item in current["files"]}
+    if not required <= actual.keys():
+        raise ValueError("FINAL_DEPENDENCY_INCOMPLETE")
+    if inventory["external"] != current["external"]:
+        raise ValueError("FINAL_EXTERNAL_DEPENDENCY_INVALID")
+    # Count complete bound source files, not serialized references or RAM.
+    source_bytes = sum(item["bytes"] for item in dependencies)
+    if (source_bytes > resource_ledger.RESERVES["active_bindings"]
+            or source_bytes > resource_ledger.LIMITS["shared"]):
+        raise ValueError("FINAL_DEPENDENCY_BUDGET_EXCEEDED")
+    return load(path)
+
+
+V6 LOAD BRANCH:
+        required = {"version", "run_id", "output", "source_binding_ref", "dependencies", "inventory_ref", "qualification_result", "budget"}
+        if (set(value) != required or type(value.get("run_id")) is not str or type(value.get("output")) is not str
+                or type(value["dependencies"]) is not list or set(value["budget"]) != {"ledger"}):
+            raise ValueError("FINAL_BINDING_INVALID")
+        _run_pair(value["run_id"], value["output"])
+        seen_dependencies = set()
+        for item in value["dependencies"]:
+            if type(item) is not dict or set(item) != {"path", "bytes", "sha256"}:
+                raise ValueError("FINAL_DEPENDENCY_INVALID")
+            if (type(item["path"]) is not str or type(item["bytes"]) is not int or item["bytes"] < 0
+                    or type(item["sha256"]) is not str):
+                raise ValueError("FINAL_DEPENDENCY_INVALID")
+            item_path = Path(item["path"])
+            identity = str(item_path.resolve())
+            if identity in seen_dependencies:
+                raise ValueError("FINAL_DEPENDENCY_INVALID")
+            seen_dependencies.add(identity)
+            if not item_path.is_file() or item_path.stat().st_size != item["bytes"] or _sha(item_path) != item["sha256"]:
+                raise ValueError("FINAL_DEPENDENCY_INVALID")
+        source_value = _resolve_reference(value["source_binding_ref"])
+        inventory = _resolve_reference(value["inventory_ref"])
+        qualification = _resolve_reference(value["qualification_result"])
+        budget = _resolve_reference(value["budget"]["ledger"])
+        _validate_inventory(inventory, value["dependencies"])
+        _validate_v6_qualification(qualification, value["dependencies"])
+        if budget.get("version") != "s2uc.closure-budget.v6" or budget.get("result") != "WITHIN_LIMITS":
+            raise ValueError("FINAL_BUDGET_INVALID")
+        _validate_v6_budget(budget, manifest_bytes=source_binding.manifest()["binding_bytes"], final_bytes=Path(path).stat().st_size,
+                            dependencies=value["dependencies"], source_ref=value["source_binding_ref"], inventory_ref=value["inventory_ref"],
+                            qualification_ref=value["qualification_result"], budget_ref=value["budget"]["ledger"])
+        value = source_value

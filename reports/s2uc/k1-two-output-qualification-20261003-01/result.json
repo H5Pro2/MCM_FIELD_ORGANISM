@@ -1,0 +1,19 @@
+{
+  "id": "K08b",
+  "status": "PASS",
+  "neutral_frames": 12,
+  "resources": {
+    "additional_python_peak": 0,
+    "original_frames_peak": 8,
+    "output_slots_peak": 2,
+    "combined_peak": 9,
+    "original_frames_upper_bound": 0,
+    "combined_upper_bound": 0,
+    "packed": 416,
+    "receipt_bytes_peak": 531,
+    "utf8_upper": 1062,
+    "calls": []
+  },
+  "cleanup": true,
+  "reserved_research_cases_generated": 0
+}

@@ -1,0 +1,76 @@
+KONTROLLIERTE WIEDERVERARBEITUNG DERSELBEN PCM-DATEI -- ABGESCHLOSSEN
+Keine unabhaengige Neuaufnahme. Ausfuehrung perception-reprocess-20260930-01.
+Vorab gebundene Quelle: sources/s2uc/temporal-chirp-v1/sequence.pcm,
+SHA256 4774f24ad52ec7e431c360ec1f2d18c663584d1ed3fbffa83fa0f4fe3d5442a6.
+Fensterreihenfolge W1,W2,W3,W4, je 4800 Samples, Byteintervalle und Hashes
+in preregistration.json. Konfiguration 48000 Hz, window 4800, hop 480,
+48 Baender, 50..18000 Hz; unveraenderter Direkt-Rezeptor/NJ-Pfad.
+Vier neue Rezeptor- und vier neue NJ-Aufrufe ausschliesslich fuer A-3.
+Keine neue Signalerzeugung; keine gespeicherte Ausgabe fuer A-3 eingesetzt.
+Identische neu materialisierte Vektorobjekte werden beiden Armen zugefuehrt.
+
+WERTVERGLEICH
+192/192 NJ-Werte numerisch und bitexakt gleich der urspruenglichen A-Spur.
+Zusaetzlich 192/192 Rohrezeptorwerte bitexakt gleich. Alle absoluten Differenzen 0.
+Vollstaendige Hexwerte und Gleichheitsindikatoren in value-comparison.csv;
+Genau vier neue Ausgaben mit Rohwerten, NJ, Profil, Konfiguration
+und PCM-Fensterhash in materialization.json. Keine Toleranz/Ausgabekorrektur.
+
+HERKUNFT UND ERHALTUNG
+Hauptfall R: nach A-3 [A,D], nach Z-Promotion [D,Z], A Generation 1 verdraengt.
+Hauptfall P: nach A-3 [D,A], nach Z-Promotion [A,Z], D Generation 2 verdraengt.
+A ist dasselbe urspruengliche Trace-Objekt: A-1, Generation 1, Ordinale 1..4.
+Werte und Herkunft unveraendert. Kandidat vor/nach A-3 bleibt identisch (None
+in diesem Verlauf); nichtleerer Kandidat separat durch Regression geprueft.
+D im Referenzarm: D-1, Generation 2, Ordinale 9..12.
+Z im Hauptfall: Z-1, Generation 3, Ordinale 21..24; Kontrollfaelle 17..20.
+Gewinn: A bleibt nur im Auffrischungsarm zugaenglich. Gegenkosten: D geht dort
+verloren. Kontrollen ohne A-3 und nur mit A-Hinweisen bleiben beide bei [D,Z].
+Alle uebrigen Vektorinputs und Speicherfolgen entsprechen dem vorherigen Paket.
+Vollstaendige Receipts, Zwischenzustaende, Endmarken und Treffer in result.json.
+Verwendet werden HA=W1/W2, HD=W4/W2, HBC=W2/W3.
+Nach Hauptfall: R HA={},HD={D@0},HBC={D@1}; P HA={A@0},HD={},HBC={A@1}.
+Beide Kontrollen: wie R. Keine zusaetzlichen Treffer. 40 Abfragen zustandsneutral.
+
+ENDMARKEN UND PRUEFUNGEN
+33/33 Tests PASS (2 neue Materialisierungs-/Resetkontrollen, 31 Regressionen).
+Ein ULP-Abstand wird als Abweichung erkannt, nicht toleriert.
+P-Endmarken: nach A-Bestaetigung {1:8}, nach D {1:8,2:16},
+nach neuem A-3 {1:20,2:16}, nach Z-Promotion {1:20,3:28}.
+Kontrollen nach Z: {2:16,3:24}. Maximal zwei skalare Eintraege.
+Endmarken vor/nach jedem Hinweis protokolliert und gleich. Nach jedem Owner-Close
+leer; jede neue Geschichte beginnt leer. Zusaetzlicher Test prueft Neuanlage
+mit wieder bei 1 beginnenden Ordinalen, ohne Uebertragung alter Marken.
+Keine Aenderung an Speicher-, Bestaetigungs-, Abruf- oder Wahrnehmungscode.
+Code-/Datenbindungen vor/nach Lauf unveraendert. Historischer S2-TX-Lauf bleibt
+nicht qualifiziert; diese aktuellen Pruefungen aendern seinen Status nicht.
+
+RESSOURCEN
+Keine neuen PCM-Dateien. Vorhandene 76800-Byte-Quelle wird gelesen, vier
+19200-Byte-Fenster temporaer verarbeitet. Keine Montage-Dateiproduktion.
+Verarbeitungsphasen (ns/Byte): [{"elapsed_ns": 472370900, "incremental_python_peak_bytes": 10468020, "net_python_bytes": 7605440}, {"elapsed_ns": 21306200, "incremental_python_peak_bytes": 2871240, "net_python_bytes": 8956}, {"elapsed_ns": 21681200, "incremental_python_peak_bytes": 2871232, "net_python_bytes": 8956}, {"elapsed_ns": 22812700, "incremental_python_peak_bytes": 2871224, "net_python_bytes": 8956}]
+Speicher mit Beobachter: {"elapsed_ns": 2583698000, "python_peak_bytes": 1278776, "python_current_bytes": 1219940}
+main R: {"meter": {"whole_trace_comparisons": 10, "hint_positions_checked": 36, "traced_call_ns": 264607400, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16}, "endmark_count": 0, "endmark_python_bytes": 0, "reset": true}
+main P: {"meter": {"whole_trace_comparisons": 18, "hint_positions_checked": 36, "traced_call_ns": 385098000, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16}, "endmark_count": 2, "endmark_python_bytes": 336, "reset": true}
+none R: {"meter": {"whole_trace_comparisons": 9, "hint_positions_checked": 36, "traced_call_ns": 252240100, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16}, "endmark_count": 0, "endmark_python_bytes": 0, "reset": true}
+none P: {"meter": {"whole_trace_comparisons": 15, "hint_positions_checked": 36, "traced_call_ns": 331419600, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16}, "endmark_count": 2, "endmark_python_bytes": 336, "reset": true}
+hints R: {"meter": {"whole_trace_comparisons": 9, "hint_positions_checked": 48, "traced_call_ns": 274478100, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16}, "endmark_count": 0, "endmark_python_bytes": 0, "reset": true}
+hints P: {"meter": {"whole_trace_comparisons": 15, "hint_positions_checked": 48, "traced_call_ns": 353403400, "roles": {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 16, "hint_frames": 1}, "temporary_trace": 16, "temporary_hint": 2, "temporary_total": 16}, "endmark_count": 2, "endmark_python_bytes": 336, "reset": true}
+Endmark-Bytebilanz: sys.getsizeof(dict)+Schluessel/Werte, konservativ inklusive
+referenzierter Python-Integer; kein exklusiver physischer RAM. Tracemalloc-Peaks
+fuer Verarbeitung und Speicher/Beobachter getrennt; keine vollstaendige native
+NumPy-/Prozess-RAM-Messung. Erstverarbeitung kann Importkosten enthalten.
+Maximal 16 Spurframes und 2 Hinweisframes; Endmarken sind zusaetzliche skalare
+Metadaten, keine kostenlosen Bytes und keine zusaetzlichen Erfahrungsspuren.
+
+GRENZE UND NAECHSTER SCHRITT
+Die Wiederverarbeitung der gebundenen Datei erreicht tatsaechlich die exakte
+Auffrischungsbedingung. Das ist kein Nachweis fuer natuerlich variierende
+Neuaufnahmen. Die Endmarken beziehen sich auf neu vergebene Eingangsordinale,
+nicht auf neue physische Aufnahmezeit der wiederverwendeten Datei.
+Naechster Vorschlag: statisch die Grenze zwischen faktorgebundenem Hinweisabruf
+und weiterhin exakter Auffrischung an vorhandenen Halb-PCM-Ausgaben abgrenzen.
+Ein wiedererkennbarer Halbhinweis darf nicht stillschweigend als vollstaendige
+exakte Wiederbeobachtung gelten. Zuerst Ableitbarkeit aus Vorbefunden pruefen,
+keinen weiteren Lauf nur zur Wiederholung einer bekannten Regel starten.
+Registry und Originalquellenlauf unberuehrt.

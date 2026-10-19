@@ -1,0 +1,26 @@
+test_ambiguity_preserved (tests.test_s2uc_pcm_temporal.TemporalTests.test_ambiguity_preserved) ... ok
+test_half_requires_common_factor (tests.test_s2uc_pcm_temporal.TemporalTests.test_half_requires_common_factor) ... ok
+test_reverse_not_forced_negative (tests.test_s2uc_pcm_temporal.TemporalTests.test_reverse_not_forced_negative) ... ok
+test_unique_position (tests.test_s2uc_pcm_temporal.TemporalTests.test_unique_position) ... ok
+test_invalid_domain_and_length (tests.test_s2uc_pcm_half.PCMHalfTests.test_invalid_domain_and_length) ... ok
+test_nonzero_deviation_not_tolerated (tests.test_s2uc_pcm_half.PCMHalfTests.test_nonzero_deviation_not_tolerated) ... ok
+test_numeric_vs_bit_equality (tests.test_s2uc_pcm_half.PCMHalfTests.test_numeric_vs_bit_equality) ... ok
+test_roundtrip_and_signed_zero (tests.test_s2uc_pcm_half.PCMHalfTests.test_roundtrip_and_signed_zero) ... ok
+test_underflow_no_processing_payload (tests.test_s2uc_pcm_half.PCMHalfTests.test_underflow_no_processing_payload) ... ok
+test_all_other_paths_inherited (tests.test_s2uc_factor_hint.FactorHintTests.test_all_other_paths_inherited) ... ok
+test_bandwise_factor_rejected (tests.test_s2uc_factor_hint.FactorHintTests.test_bandwise_factor_rejected) ... ok
+test_exact_confirmation_does_not_accept_gain (tests.test_s2uc_factor_hint.FactorHintTests.test_exact_confirmation_does_not_accept_gain) ... ok
+test_invalid_owner_and_closed (tests.test_s2uc_factor_hint.FactorHintTests.test_invalid_owner_and_closed) ... ok
+test_json_zero_decoding_preserves_values (tests.test_s2uc_factor_hint.FactorHintTests.test_json_zero_decoding_preserves_values) ... ok
+test_order_and_framewise_factor_rejected (tests.test_s2uc_factor_hint.FactorHintTests.test_order_and_framewise_factor_rejected) ... ok
+test_zero_grouping_and_distinct_positions (tests.test_s2uc_factor_hint.FactorHintTests.test_zero_grouping_and_distinct_positions) ... ok
+test_access_not_automatically_target (tests.test_s2uc_factor_transfer.TransferTests.test_access_not_automatically_target) ... ok
+test_oracle_complete_positions_and_zero_factors (tests.test_s2uc_factor_transfer.TransferTests.test_oracle_complete_positions_and_zero_factors) ... ok
+test_oracle_requires_shared_factor_across_bands (tests.test_s2uc_factor_transfer.TransferTests.test_oracle_requires_shared_factor_across_bands) ... ok
+test_target_requires_original_ordinals_and_position (tests.test_s2uc_factor_transfer.TransferTests.test_target_requires_original_ordinals_and_position) ... ok
+test_variations_keep_order_except_explicit_reverse (tests.test_s2uc_factor_transfer.TransferTests.test_variations_keep_order_except_explicit_reverse) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.023s
+
+OK

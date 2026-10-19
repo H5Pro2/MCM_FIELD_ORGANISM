@@ -1,0 +1,22 @@
+{
+  "legacy-adapter-before.txt": {
+    "sha256": "b9d04587f8fd63081515f855f89390d4a584b06ecbd5f101c1dfdbd9157c43cb",
+    "bytes": 3852
+  },
+  "REPORT.txt": {
+    "sha256": "d00007bc7f62d4fb7152cbb5b042ab6a4edef1f42ced4229f78b493740fcca08",
+    "bytes": 7190
+  },
+  "tests.json": {
+    "sha256": "0e09688e033aa03cdfd38e387b1bc1f2cbd307ad5642fb424b57f1ee3d2deadd",
+    "bytes": 15197
+  },
+  "tests.txt": {
+    "sha256": "82d5a48bf67f311539da27a1a4f2d5c4935046818f019609327d17d94245e479",
+    "bytes": 4643
+  },
+  "unchanged-before.json": {
+    "sha256": "43300c55c971a3446bdaf96457bfb4824f6150e993cbb13223e1c1387bfb4434",
+    "bytes": 630
+  }
+}

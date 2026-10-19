@@ -1,0 +1,112 @@
+EINDEUTIGKEIT DURCH VERDRAENGUNG -- STATISCHE ABLEITUNG
+Stand 2026-09-30. Keine Implementierung, Signalproduktion, Rezeptorverarbeitung
+oder Testausfuehrung. Die folgenden Ergebnisse sind Vorhersagen/Codeableitungen,
+keine neue Messung.
+
+FRAGE UND ENTSCHEIDUNG
+Ja: derselbe Hinweis kann allein durch Verlust passender Konkurrenz eindeutig
+werden. Eindeutigkeit ist relativ zum verbliebenen Speicherbestand. Die konkrete
+Fortsetzung folgt vollstaendig aus FIFO, exakter Bestaetigung und den bereits
+geprueften PCM-Bandrelationen. Kein neuer Forschungslauf empfohlen.
+
+GEBUNDENE DATEN UND DRITTE ERFAHRUNG
+A=W1,W2,W3,W4; D=W4,W2,W3,W1 bleiben wie geprueft.
+Dritte Erfahrung Z=W4,W3,W2,W1, vorab festgelegt; synthetische Montage.
+Es werden ganze Fenster umgeordnet, keine Samples innerhalb eines Fensters.
+Quelle sources/s2uc/temporal-chirp-v1/sequence.pcm,
+SHA256 4774f24ad52ec7e431c360ec1f2d18c663584d1ed3fbffa83fa0f4fe3d5442a6.
+W1=[0,4800), W2=[4800,9600), W3=[9600,14400), W4=[14400,19200) Samples;
+je 4800 Float32-LE-Samples bei 48000 Hz. Byteintervalle jeweils Sampleindex*4.
+Einzelfensterhashes: sources/s2uc/temporal-chirp-v1/provenance.json.
+Vorhandene Bandwerte: reports/s2uc/pcm-temporal-20260930-01/result.json,
+processed[0..3].projection.values. Kein neuer Vektor und keine neue PCM-Datei.
+Bestehender Nachweis: alle sechs Paare W1..W4 sind ungleich und unter den
+zugelassenen Faktoren 0.5,1,2 nicht proportional (dort comparisons.pairs).
+Z unterscheidet sich von A und D; Z-Paare W4/W3,W3/W2,W2/W1 enthalten weder
+W2/W3 (B/C) noch W1/W2 (X/B). Diese Wahl ist hier vor jeder Ausfuehrung fixiert.
+
+HERKUNFT UND UEBERGAENGE (FUER E UND F IDENTISCH)
+Schritt | Praesentation/Ordinale | erwarteter Uebergang | FIFO danach
+1 | A-1 / 1..4   | Kandidat Generation 1 | []
+2 | A-2 / 5..8   | Promotion Erhaltung Generation 1 | [A-1]
+3 | D-1 / 9..12  | Kandidat Generation 2 | [A-1]
+4 | D-2 / 13..16 | Promotion Erhaltung Generation 2 | [A-1,D-1]
+VORHER: Hinweise B/C und X/B; unveraenderter Zustand nach jedem Hinweis.
+5 | Z-1 / 17..20 | Kandidat Generation 3 | [A-1,D-1]
+6 | Z-2 / 21..24 | Promotion Erhaltung Generation 3, evicted=1 | [D-1,Z-1]
+NACHHER: exakt dieselben Hinweiswerte B/C und X/B; keine Wiederbildung von A.
+Am Ende kein Kandidat und keine laufende Bildung. Ordinale zweiter Praesentationen
+sind disjunkt, Werte exakt gleich. Saemtliche Wiederholungen sind Testwiedergaben.
+A: retained/generation=1/formation=A-1/ordinals=[1,2,3,4].
+D: retained/generation=2/formation=D-1/ordinals=[9,10,11,12].
+Z: retained/generation=3/formation=Z-1/ordinals=[17,18,19,20].
+
+MINIMALE HINWEISVORHERSAGEN: ORIGINALWERTE
+Hinweis | Zeitpunkt | E vollstaendige Menge | F vollstaendige Menge
+B/C=W2/W3 | vorher | {A@1,D@1} | {A@1 Faktor 1,D@1 Faktor 1}
+B/C=W2/W3 | nachher | {D@1} | {D@1 Faktor 1}
+X/B=W1/W2 | vorher | {A@0} | {A@0 Faktor 1}
+X/B=W1/W2 | nachher | {} | {}
+Positionen nullbasiert. Zwei Treffer: ABSTAIN_AMBIGUOUS.
+Ein Treffer: CONFIRMED_RETAINED_MATCH. Kein Treffer: ABSTAIN_NO_MATCH.
+Keine Z-Treffer, keine Kandidatentreffer. Vorher/Nachher getrennte Abfragen,
+aber bitidentische Hinweiswerte; Segment/Ordinal-Metadaten sind keine neue
+unterscheidende Information und duerfen das Matching nicht steuern.
+Minimales hypothetisches Protokoll: 2 Hinweise x 2 Zeitpunkte x 2 Arme=8 Abfragen.
+Wiederholungspruefungen und Halbhinweise sind fuer diese neue Frage nicht noetig.
+Aus bestehender Faktorevidenz folgt zusaetzlich, ohne neuen Lauf:
+F halb-BC vorher {A@1 Faktor .5,D@1 Faktor .5}, nachher {D@1 Faktor .5};
+F halb-XB vorher {A@0 Faktor .5}, nachher {}; E bei Halbhinweisen immer {}.
+Auch dies ist eine Ableitung, kein neu ausgefuehrtes Fallpaket.
+
+WARUM DIE FOLGE BEREITS FESTSTEHT
+Fundstelle tools/_s2uc_four_arm.py, CandidateTwoArm.close_segment:
+- Exakte Kandidatenwiederholung mit disjunkten Ordinalen promoviert.
+- Bei zwei Erhaltungen wird pop(0) ausgefuehrt, danach die neue Spur angehaengt.
+- Hinweise aendern die FIFO-Reihenfolge nicht.
+Fundstellen tools/_s2uc_provisional_hint.py und tools/_s2uc_factor_hint.py:
+Hinweisabruf durchsucht ausschliesslich aktuelle Erhaltungen und Kandidat,
+alle drei Positionen, bei F Faktoren .5,1,2. Keine Suche in Verdraengungshistorie.
+Vorbefund reports/s2uc/pcm-competition-20260930-01/REPORT.txt:
+B/C trifft beide Herkuenfte; X/B nur A, alle Hinweise zustandsneutral.
+Mit nicht passendem Z entfernt FIFO somit genau einen B/C-Treffer und den
+einzigen X/B-Treffer. Es kommt keine Information im Hinweis hinzu.
+
+RESSOURCEN -- PROSPEKTIV, NICHT GEMESSEN
+Z-Erstpraesentation: 8 retained + bis 4 forming = 12 Spurframes;
+danach 8 retained + 4 candidate = 12.
+Z-Zweitpraesentation: 8 retained + 4 candidate + bis 4 forming = 16.
+Nach Promotion: 8 retained, kein Kandidat. Hinweise nur vor/nach Aufbau:
+8 retained + 2 hint = 10. Maximale Spurbelegung 16, Hinweisbelegung 2,
+geplantes gemeinsames Maximum 16 (nicht gleichzeitig 16+2 erforderlich).
+Zwei Erhaltungsplaetze unveraendert; keine dritte dauerhafte Spur.
+Je Hinweis sechs Positionen; vier Abfragen je Arm => 24 Positionspruefungen
+je Arm. F 72 Faktorpruefungen, maximal 6912 skalare Vergleiche;
+E maximal 2304 skalare Gleichheitsvergleiche. Tatsaechliche Kurzschlusskosten
+waeren erst messbar. Kein zusaetzliches PCM und keine Rezeptor-/NJ-Aufrufe.
+Beobachter darf Vorher-/Nachher-Provenienz extern dokumentieren. Das Protokoll
+ist dem Abruf nicht zugaenglich; keine Rueckspeisung verlorener A-Werte und kein
+zusaetzliches Speicherarchiv. Quellfixtures im Testtreiber sind kein Abrufpfad.
+Framebudget ist keine Prozess-RAM-Aussage; keine neuen RAM-/Zeitmessungen.
+
+INTERPRETATION UND ERKENNTNISWERT
+D ist nachher einziger verbliebener Treffer. Das beweist weder, dass D die
+urspruenglich gemeinte Erfahrung war, noch dass A nie passte. Falls der externe
+Beobachter A als Ziel festgelegt haette, waere D weiterhin die andere Herkunft;
+die Mehrdeutigkeit verschwindet durch Verlust, nicht durch richtige Zielklaerung.
+Der Speicher kann aus dem verbliebenen Zustand die verlorene Konkurrenz nicht
+rekonstruieren. X/B ohne Treffer plus dokumentiertes evicted=1 und Zustand
+[D,Z] pruefen im entworfenen Fall den Verlust von A im vorgesehenen Speicher.
+Ein ausbleibender Hinweis allein waere kein universeller Abwesenheitsbeweis.
+
+Ein neuer Versuch haette hier nur Integrations-/Regressionswert: pruefen, ob
+Code und Bindungen die bereits erklaerte Regel weiterhin korrekt ausfuehren.
+Es gibt keine verbleibende Gegenprognose fuer dieses unveraenderte Fallpaket.
+Daher STOPP fuer einen zusaetzlichen FIFO-Demonstrationslauf, nicht fuer das
+Gesamtprojekt. Die abgeleitete Grenze wird dokumentiert, nicht nochmals gemessen.
+Naechster sinnvoller Schritt beim Projektleiter: festlegen, welches konkrete
+Nutzungskriterium fuer Erhaltung kuenftig untersucht werden soll (z.B. Zugang
+zu frueher festgelegter Zielherkunft nach stoerenden Erfahrungen). Jede neue
+Speicherregel braucht daran eine Gegenprognose; keine automatische Erweiterung,
+kein Archiv und keine neue Enthaltungsregel aus diesem Befund ableiten.
+Registry und Originalquellenlauf bleiben zurueckgestellt.

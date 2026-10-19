@@ -1,0 +1,100 @@
+MCM S2UC -- Begrenzter Faktor-Materialgenerator und Export
+2026-10-01
+
+ABGESCHLOSSEN: Generator, Export, Integritaetsleser und Vergleichsanschluss
+implementiert. G1-G7 auf endgueltiger Bindung PASS. FC-DEV/FC-EVAL unproduziert.
+Keine erneuten unveraenderten Adaptertests; der neue Integrationspfad wurde
+mit separaten neutralen Seeds und eigener Herkunft FC-NEUTRAL geprueft.
+
+IMPLEMENTIERUNG
+- tools/s2uc_factor_material.py: gebundene Zulassung, feste Synthese, Herkunft,
+  Export, Abschluss und Integritaetsleser. Keine Matcherimporte, kein Zugang
+  zu Vergleichsergebnissen, keine Ersatzseeds oder Auswahl nach Ergebnissen.
+- tools/s2uc_factor_material_compare.py: separater Leser-/Observeranschluss.
+  Vollstaendige elf Faelle, beide Policies auf gleichen Zielen; elf Pruefziele
+  und48 Lernziele getrennt. Bestehender Dreiarmtreiber unveraendert verwendet.
+- tests/test_s2uc_factor_material.py: sieben gezielte Qualifikationspruefungen.
+- Bestehender OutputLedger wiederverwendet: exklusive Ordner-/Dateianlage,
+ 4MiB Ausgabebegrenzung mit256KiB reserviertem Abschluss. Keine Ueberschreibung.
+
+BINDUNGEN
+Urspruenglicher Materialplan unveraendert:
+908f93c76f871d36c4f971b236891d3da7721ba1fcd07d772464db90c439121d
+Zusaetzliche Produktionsbindung:
+docs/S2UC_FAKTORFORTSETZUNG_PRODUKTIONSBINDUNG_20261001.json
+a17eda51fbc8ad62fdfc0bd9cc3c145d275718dabbb50e108d65a5d3e78fa427
+Die Erweiterung bindet Generator, Export/Leser, Vergleichsbruecke, Ledger und
+neue Tests; sie ersetzt keine alte Codebindung. Alle urspruenglichen und neuen
+Hashes werden separat geprueft. Plan, Vertragsdatei, Python-Version und
+Executable bleiben gebunden. Status BOUND_NOT_AUTHORIZED ist keine Freigabe.
+Planinhalt mit Seeds/Rezept/Genealogie/Fallmatrix fachlich unveraendert.
+
+G1-G7: KONKRETE BELEGE IN tests.txt UND tests.json
+G1 Gesamter erfolgreicher Produktionspfad mit FC-NEUTRAL. Seeds
+810001/810007/810013/810019, getrennt von610... und710... der Zielfamilien.
+Alle768 Basiskomponenten unabhaengig skalar nachgerechnet und als192 binary64-
+Werte je Episode bitweise mit dem JSON-Roundtrip verglichen. A/D-Praefix
+bitgleich; Z-Praefix positive Null; alle Hinweise/Ziele, Gains, Profile,
+Herkunfts- und Zielangaben geprueft. Zweite separate neutrale Ausgabe liefert
+identische Basiswerte. Beide Vorabplaene/Autorisierungen separat erhalten.
+G2 Zweiter Aufruf im gleichen Ordner wird vor Synthese abgewiesen; vorhandene
+Hashes unveraendert. Direkte Dateidoppelanlage ebenfalls verweigert.
+G3 Kuenstlich reduzierte neutrale Ausgabekapazitaet: OUTPUT_LIMIT,
+NOT_EVALUABLE und lesbarer reservierter Abschluss innerhalb Grenze. Retry gesperrt.
+G4 Injektion eines Schreibfehlers nach bereits exportierten Faellen: Teilbestand
+bleibt, NOT_EVALUABLE mit Fehler/Zaehlern; Leser verweigert Auswertung; Retry gesperrt.
+G5 PENDING, falsche Partition, falsche Bindung und veraenderter Plan werden
+abgewiesen. Unzulaessige Framezahl, Seed oder zusaetzlicher Fall ebenfalls.
+G6 Manipulierter Werteexport wird durch Dateihash abgewiesen.
+G7 Vollstaendiger neutraler Export durch den bestehenden Dreiarmtreiber:
+11 Pruefziele,48 Lernziele; gleiche Matching-/Speicherzustaende pro Policy,
+Nullfaktor-Enthaltung, Herkunftskonkurrenz und gleicher Output vor verschiedenen
+Folgeframes. Der GP-Schaden bleibt sichtbar.
+Alle7 Tests PASS, keine Fehler/Skips. Code und Bindung vor/nach Tests bestaetigt.
+
+EXPORT UND MENGEN
+Vier Basisdateien mit je4x48 binary64-Werten; elf Falldateien mit insgesamt129
+Frames. claim,manifest,closure ergeben18 Dateien. Kein Decoder/Rezeptor/NJ.
+Jeder Vektorhash ueber gepackte little-endian binary64; Dateihashes im Manifest.
+JSON verwendet endliche Werte und erhaelt die dyadischen Zahlen verlustfrei.
+Profil ist explizit synthetisch und wird mit seinem SHA256-Digest weitergereicht.
+Neutrale erfolgreiche Materialausgabe: 113524 Byte /4194304 Byte.
+Abschlussreserve262144 Byte. Diese Grenze gilt je Materialordner, nicht fuer
+getrennte Test-/Observerarchive. Kein harter Prozess-RAM-Nachweis beansprucht.
+Erzeugungsarbeit durch4*4*48 Basiswerte und11 feste Fallrezepte begrenzt.
+Einmaligkeit beruht auf exklusiver persistenter Ordneranlage; keine automatische
+Wiederholung oder Ersetzung bei Fehler. Ein fehlgeschlagener CLI-Lauf liefert
+Exit1, Erfolg Exit0; Vorabfehler erfolgen vor Produktion.
+
+ENTHALTUNG, PROGNOSE, BEOBACHTERSCHEMA
+Praezisierung des frueheren handgesetzten GP-Tests: skalierte MAE2,
+Persistenz-MAE0; Legacy hatte keine konkrete Prognose.0 bezeichnete das
+Beobachterschema Legacy-sonst-Persistenz. Keine Legacy-Prognose-MAE0 behaupten.
+Im neuen neutralen Generator-GP: skalierte konkrete MAE0.0480804443359375;
+Persistenz0; Legacy context_mae=null, context_covered=false,
+FACTOR_CONTINUATION_NOT_SPECIFIED. Legacy-Beobachterschema MAE0.
+Die Legacy-Enthaltung bleibt auch bei korrekter Herkunft erhalten.
+result rows/policy.context_mae ist ausschliesslich die konkrete Prognose;
+observer_hybrid_mae und summary.full_rows.legacy/scaled sind explizit
+Beobachterschemata. Die mitgelieferte semantics beschreibt diese Zuordnung.
+Negative Deltas gegen Persistenz und Legacy-Beobachterschema werden archiviert.
+Keine Leistungsbehauptung aus diesen technischen neutralen Daten.
+
+KONKRETER SPAETERER FC-DEV-AUFRUF (JETZT NICHT AUSGEFUEHRT)
+Arbeitsverzeichnis C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace
+C:/Python314/python.exe -m tools.s2uc_factor_material produce docs/S2UC_FC_DEV_AUTORISIERUNG_20261001.json
+
+Vorlage: docs/S2UC_FC_DEV_AUTORISIERUNG_VORLAGE_20261001.json, Status PENDING.
+Erst nach separater Beauftragung eine passende AUTHORIZED_ONCE-Datei am oben
+angegebenen Pfad erzeugen; gebundene Hashes und Laufzeit unveraendert erhalten.
+Ausgabe: reports/s2uc/factor-continuation-material-fc-dev-01.
+FC-EVAL wird durch diesen Aufruf weder erzeugt noch ausgewertet. Es gibt keinen
+automatischen zweiten Partitionsaufruf. Der Produktionsaufruf erzeugt Material;
+der getrennte Vergleichsanschluss evaluate_export liest nur komplettes Material.
+
+NAECHSTER VORSCHLAG AN PROJEKTLEITER
+Generator-/Exportpaket technisch abnehmen und danach genau einmal FC-DEV-
+Produktion samt lokaler Dreiarm-Auswertung beauftragen. Alle elf Pruefziele,
+48 Lernziele und Schadensfaelle getrennt berichten. FC-EVAL bis anschliessender
+Abnahme und unveraenderter Regelbindung geschlossen halten. Die direkte
+Vektorwelt prueft Adapterregeln, keine Robustheit des Audio-/NJ-Pfads.

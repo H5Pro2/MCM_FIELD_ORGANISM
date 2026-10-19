@@ -1,0 +1,25 @@
+test_all_49_gate_targets_and_pair_bindings (tests.test_s2uc_nasa_comparison.NasaComparisonTests.test_all_49_gate_targets_and_pair_bindings) ... ok
+test_all_49_missing_forecasts_block_before_delivery (tests.test_s2uc_nasa_comparison.NasaComparisonTests.test_all_49_missing_forecasts_block_before_delivery) ... ok
+test_error_releases_forecast_and_cache (tests.test_s2uc_nasa_comparison.NasaComparisonTests.test_error_releases_forecast_and_cache) ... ok
+test_inventory_and_bound_file_fail_closed (tests.test_s2uc_nasa_comparison.NasaComparisonTests.test_inventory_and_bound_file_fail_closed) ... ok
+test_neutral_admission_state_and_end_release (tests.test_s2uc_nasa_comparison.NasaComparisonTests.test_neutral_admission_state_and_end_release) ... ok
+test_source_time_profile_digest_mutations (tests.test_s2uc_nasa_comparison.NasaComparisonTests.test_source_time_profile_digest_mutations) ... ok
+test_wrong_target_or_pair_rejected (tests.test_s2uc_nasa_comparison.NasaComparisonTests.test_wrong_target_or_pair_rejected) ... ok
+test_before_admission_and_immutable (tests.test_s2uc_continuation_adapter.ContinuationTests.test_before_admission_and_immutable) ... ok
+test_error_close_release_and_no_feedback (tests.test_s2uc_continuation_adapter.ContinuationTests.test_error_close_release_and_no_feedback) ... ok
+test_evaluation_failure_releases_slots (tests.test_s2uc_continuation_adapter.ContinuationTests.test_evaluation_failure_releases_slots) ... ok
+test_eviction_does_not_change_prediction (tests.test_s2uc_continuation_adapter.ContinuationTests.test_eviction_does_not_change_prediction) ... ok
+test_factor_and_end_abstain (tests.test_s2uc_continuation_adapter.ContinuationTests.test_factor_and_end_abstain) ... ok
+test_methods_unchanged (tests.test_s2uc_continuation_adapter.ContinuationTests.test_methods_unchanged) ... ok
+test_one_ulp_not_tolerated (tests.test_s2uc_continuation_adapter.ContinuationTests.test_one_ulp_not_tolerated) ... ok
+test_gap_terminates_no_cross_pair (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_gap_terminates_no_cross_pair) ... ok
+test_no_self_match_and_admission_once (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_no_self_match_and_admission_once) ... ok
+test_receipt_has_no_payload (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_receipt_has_no_payload) ... ok
+test_receipt_not_input (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_receipt_not_input) ... ok
+test_remainder_and_reset (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_remainder_and_reset) ... ok
+test_scope_and_time_errors (tests.test_s2uc_pair_context_adapter.PairAdapterTests.test_scope_and_time_errors) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 2.089s
+
+OK

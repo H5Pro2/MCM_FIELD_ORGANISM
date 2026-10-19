@@ -1,0 +1,13 @@
+test_AN1_full_57_projection_budget_and_reserved_seed_exclusion (tests.test_s2uc_an_material.ANMaterialTests.test_AN1_full_57_projection_budget_and_reserved_seed_exclusion) ... ok
+test_AN2_independent_pcm_arithmetic_and_lineage (tests.test_s2uc_an_material.ANMaterialTests.test_AN2_independent_pcm_arithmetic_and_lineage) ... ok
+test_AN3_real_projection_digest_and_retiming (tests.test_s2uc_an_material.ANMaterialTests.test_AN3_real_projection_digest_and_retiming) ... ok
+test_AN4_calibration_and_evaluation_exclusion (tests.test_s2uc_an_material.ANMaterialTests.test_AN4_calibration_and_evaluation_exclusion) ... ok
+test_AN5_success_failure_limit_and_one_shot (tests.test_s2uc_an_material.ANMaterialTests.test_AN5_success_failure_limit_and_one_shot) ... ok
+test_AN6_integrity_tamper_rejection (tests.test_s2uc_an_material.ANMaterialTests.test_AN6_integrity_tamper_rejection) ... ok
+test_AN7_comparison_origins_causality_learning_and_harm (tests.test_s2uc_an_material.ANMaterialTests.test_AN7_comparison_origins_causality_learning_and_harm) ... ok
+test_AN8_binding_pending_authorization_and_selector_reuse (tests.test_s2uc_an_material.ANMaterialTests.test_AN8_binding_pending_authorization_and_selector_reuse) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 70.029s
+
+OK

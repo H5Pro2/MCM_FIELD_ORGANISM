@@ -1,0 +1,166 @@
+MCM-KI -- direkte Promotionsmitnahme: technische Qualifikation
+2026-10-03 | TECHNICALLY_QUALIFIED_SWL_NOT_GENERATED
+
+Ergebnis
+44/44 Tests bestanden,0 Fehler,0 Fehlschlaege,0 Skips,Exit0.
+T1-T10 vollstaendig erfuellt; dazu R1-R3,Q1-Q7 und die bisherigen
+12 EMA-Tests E1-E12 sowie12 Bestands-Tests S01-S12.
+Plan,Code und Laufzeit vor/nach der Qualifikation gleich. Keine Erzeugung
+oder Ausfuehrung der synthetischen Folgen S/W/L mit regulaerer Aufnahme.
+Technische Fixtures und davon verschiedene neutrale Aufnahmen wurden geprueft.
+Die technische Funktionsfaehigkeit belegt keinen Lern-/Auswahlvorteil.
+
+Geaenderte/neue Implementierungsdateien
+tools/_s2uc_promotion_ema.py -- neuer optionaler PromotionAdapter.
+tools/_s2uc_promotion_replay.py -- begrenzter Vierarm-Anschluss/Beobachter.
+tools/s2uc_promotion_qualification.py -- Bindung,Qualifikation,spaeterer
+  separat autorisierter Einmaleinstieg und feste Auswertung.
+tests/test_s2uc_promotion_ema.py -- T1-T10 und R1-R3.
+tests/test_s2uc_promotion_runner.py -- Q1-Q7.
+
+Keine bestehende Implementierungsdatei veraendert: Die46 Dateien der
+bisherigen Bestandsbindung und damit alle42 urspruenglichen EMA-Dateien
+bleiben hashidentisch. Die neue Bindung umfasst51 Python-Dateien.
+Dokumentation: neuer Plan,Bindung,Autorisierungsvorlage,Aufrufdatei und dieser
+Bericht; oberste Standseinordnung in Forschungsweg/README fortgeschrieben.
+Keine Aenderung abgeschlossener Befunde,kein Commit oder Push.
+
+Regel und Anschluss
+promotion_policy bleibt standardmaessig disabled. direct_promotion_v1 muss
+explizit zusammen mit paired_error_ema_v1 aktiviert werden. Die vorhandene
+Reset-EMA sowie das bisherige Standardverhalten bleiben erhalten. Genau eine
+neue Variante; alpha1/2,exact_v1,legacy_v1 und mae48 unveraendert.
+
+Der Adapter beobachtet das Ergebnis des normalen close_segment,ohne dessen
+Regeln zu aendern. Er verlangt die direkte Ueberfuehrung des gerade lebenden
+Kandidaten in einen neuen retained-Eintrag mit IDENTISCHEM Originalframe-
+Tupel im selben Scope. Wertegleichheit und Generationsnummer allein genuegen
+nicht. Der temporaere Methodenbeobachter wird bei Erfolg und Fehler entfernt.
+Auch normale Bestaetigung/Ersetzung bleibt ohne Mitnahme.
+
+Vor Publikation werden alle gueltigen Zellen,Quellschluessel,Zielkonflikte,
+Identitaet und Generationen vollstaendig geprueft. Danach Loeschung wirklich
+verdraengter retained-Zellen,bitgleiche Umschluesselung saemtlicher c-Zellen
+in ihren bisherigen Slots,restliches Pruning. Nur Generation und Rollenbyte
+aendern sich; keine Schattenbank,Framekopien,Mittelung oder Extra-Updates.
+Offset,Qualitaet und Fehlerbits einschliesslich negativem Nullwert bleiben
+erhalten. Kein Wiederherstellen nach Verlust oder anhand gleicher Werte.
+
+Tickets/Prognosen bleiben unveraendert. Ein altes c-Ticket wird nicht r;
+sein spaeteres Ziel aktualisiert die nicht mehr lebende c-Generation nicht.
+Ein fremdes weiterhin lebendes Ticket arbeitet normal weiter. Aliaswahl
+und Prognosevektoren bleiben identisch; keine neue Herkunftsentscheidung.
+
+Atomaritaetsgrenze
+Nach aussen unteilbar im vereinbarten seriellen,synchronen Modus. Reentrante
+Auswahl/Freigabe waehrend Publikation wird abgewiesen. Vorpruefung schreibt
+keine Fehlerzellen. Bei integriertem Fehler wird der Adapter anschliessend
+terminal bereinigt; dies ist kein nutzbarer Reset-Fallback und keine
+Ruecknahme bereits erfolgter Memory-Aufnahme. Unterbrechungen auch zwischen
+Generations- und Rollenschreibzugriff enden mit geschlossenen Ressourcen,
+geleerten Zellen und Ticket. Kein weiter verwendbarer Teilzustand.
+Keine Zusicherung paralleler Threads oder Prozessabsturz-Transaktionen.
+
+Konkrete Pruefungen
+T01: positives Fehlerpaar -> bitgleich neuer Schluessel,Kontextwahl.
+T02: negatives Fehlerpaar -> gleiche Behandlung,Persistenzwahl.
+T03: Gleichstand -> bitgleich,Persistenzwahl.
+T04: vier Offset-/Qualitaetsschluessel ohne Vermischung; negative Nullbits
+     erhalten. Datenbank-/Pufferschatten nicht angelegt.
+T05: keine Quellzelle -> keine Zielzelle oder Scheinaktualisierung.
+T06: Zielkollision,doppelter Quellschluessel,NaN -> Vorpruefung unveraendert,
+     danach terminale Bereinigung im integrierten Adapter.
+T07: kopiertes Tupel,wertegleiche neue Frameobjekte,Scopewechsel abgewiesen;
+     Wertewiederkehr nach echter Entfernung startet kalt.
+T08: offenes Kandidaten- und Fremdticket bytegleich; eingefrorene Prognose
+     und Ausgabealias gleich; kein Update an r aus altem c-Ticket.
+T09: wiederverwendetes Promotionsereignis vor neuem Schreibzugriff abgewiesen.
+T10:15 Unterbrechungspunkte: vor Publikation,nach Verdraengungsloeschung,
+     vor/nach jedem der vier Schluesselwechsel und zwischen Generation/Rolle,
+     sowie nach Publikation. Alle enden terminal ohne nutzbaren Teilzustand.
+R01: default disabled und Reset-Pfad gegen bisherige Klasse identisch:
+     Receipts,Memory,Zellen,Wahlen und Freigabe; Policy unveraenderlich.
+R02: unabhaengige neutrale64-Frame-Folge gegen Reset-Referenz; Memory/Receipts
+     identisch,Originalframe-Referenzen einschliesslich temporärer Halter
+     verfolgt. Keine S/W/L-Quelle.
+R03: volle12-Zellen-Tabelle,maximale uint64-Generationen und unterbrochene
+     Publikation einschliesslich Bereinigung; komplette Aufnahme gemessen.
+Q1: Vierarm-Export mit anderem neutralen16-Frame-Praefix; E/K/P gegen alten
+    Replay identisch; Quellen und Beobachter im gemeinsamen Exportledger.
+Q2: fehlende Autorisierung sperrt vor Quellfunktion und Zielordner.
+Q3: exklusiver Zielordner verhindert Wiederholung vor Materialerzeugung.
+Q4: Erwartungsabweichung als NOT_EVALUABLE,kein Eingriff in Beobachtungen.
+Q5: Fehlerabschluss und Teilbestand erhalten; kein zweiter Armversuch.
+Q6: besseres D verdeckt Schaden auf V nicht.
+Q7: echte Unterbrechung im neuen Aufnahmepfad erhaelt Vorzellen,
+    Promotionsresultat und Fehlerphase; terminale Zellen leer.
+E1-E12/S01-S12: relevante unveraenderte EMA-/Bestandsregressionen PASS.
+
+Belege: tests.txt,test-result.json,facts.json,neutral-four-arm-export/,
+legacy-neutral-export/. Die Nummern E/S/Q/T sind Test-IDs,keine Freigaben
+oder Behauptung,die gebundenen synthetischen Folgen seien ausgefuehrt.
+Technische T2/T4-Tabellen sind deklarierte Fixtures,kein Nachweis natuerlich
+erworbener negativer Kandidatenerfahrung. Keine Nutzenquoten daraus.
+
+Ressourcenmessung
+Gepackter Kern weiterhin384 Zellenbyte+32 Ticketbyte=416 Byte.
+R03 komplette Aufnahmen:2852 und2764 Byte Zusatz inkl.Temporaerobjekten;
+Unterbrechung/Bereinigung5558 Byte. Maximal5558/16384 Byte.
+Die Messung beinhaltet originale Aufnahme,Closure,gebundene Methoden,
+Promotionsmetadaten und Kontrollreferenzen. Kein Zusatzpuffer fuer Zellen.
+Die bestehenden EMA-Regressionen erreichen5526/16384 Byte in E9.
+R02:16/18 Originalframes einschliesslich temporaer gehaltener alter Spuren,
+2/2 Vorschlaege,gemeinsamer Peak17/20; keine neuen Frameobjekte fuer Transfer.
+Receipt457/16384 Byte; UTF8-Obergrenze914/32768 Byte inkl.Kodierungskopie.
+R02 verwendet den separat erfassten receipt_bytes-Wert; der geerbte
+Approximate-Zaehler allein erfasst den exact_v1-Basispfad nicht.
+
+Vierarm-Export Q:67880 Byte,64 Arm-Aufnahmen plus64 interne Referenz-
+fortschreibungen auf einer unabhaengigen neutralen16-Frame-Folge.
+Weitere technische/regressive Aufnahmen sind in ihren eigenen Testbelegen
+ausgewiesen; diese Zahlen sind nicht der Umfang einer S/W/L-Gegenprobe.
+Die Schlussbilanz des GESAMTEN Qualifikationsordners inkl.Bericht,technischer
+Belege,neutraler Quellen/Beobachter und Bindungssnapshots steht in closure.json.
+Alle zusammen unter4MiB,256KiB Abschlussreserve vor Abschluss eingehalten.
+
+Entwicklungskorrektur der Messung
+Ein erster neutraler Beobachtertest ueberschritt den Zusatzzaehler,weil die
+Python-Allokationen der Trace-Auswertung dem System zugerechnet wurden.
+Die finale Messung isoliert den vollstaendigen Aufnahmeaufruf; sie entfernt
+nur Beobachter-Tracekosten,keine Produktionsmetadaten. Transiente Frame-
+Referenzen werden separat vollstaendig verfolgt (R02) und im vorbereiteten
+Replay durch die Vereinigung aller vor Aufnahme lebenden Originalframes
+einschliesslich Eingangsframe/eviktierter Halter begrenzt. Der gebundene
+Aufnahme-/Promotionscode erzeugt selbst keine Frames. Keine Budgeterhoehung.
+
+Bindung und vorbereiteter Aufruf
+docs/S2UC_PROMOTION_PLAN_20261003.json
+docs/S2UC_PROMOTION_BINDUNG_20261003.json
+docs/S2UC_PROMOTION_AUTORISIERUNG_VORLAGE_20261003.json (PENDING)
+docs/S2UC_PROMOTION_VORBEREITETER_AUFRUF_20261003.txt
+
+Plan-SHA256:
+f889c062ea1177ceef66a3d7e68425ba2bf205fbcc24320728a42380d4a3e9e6
+Bindungs-SHA256:
+c6491dd5d494f315338c263eb90c4f2c9d8ec4f495bfb1917a1662684b03ab91
+
+Nach technischer Abnahme und gesonderter Ausfuehrungsfreigabe,aus workspace:
+& 'C:\Python314\python.exe' -m tools.s2uc_promotion_qualification run --authorization 'docs/S2UC_PROMOTION_AUTORISIERUNG_20261003.json'
+
+Diese Autorisierung wurde nicht erstellt. Der feste S/W/L-Zielordner
+reports/s2uc/promotion-counterprobe-20261003-01 existiert nicht.
+Alle Masken/Kriterien und Rezepte sind nur statisch gebunden. Der vorbereitete
+Aufruf ist keine Freigabe und wurde nicht ausgefuehrt.
+
+Verbleibende Grenzen und naechster Vorschlag
+Die Messung ist ein Python-Allokationsnachweis der geprueften Pfade,keine
+Gesamtprozess-RAM- oder allgemeine Echtzeitgarantie. Serienbetrieb bleibt
+verbindlich. Negative Kandidatenerfahrung ist technisch getestet,aber nicht
+als Erwerbsbefund einer synthetischen Folge behauptet. Auch korrekte
+Erfahrungsmitnahme kann nach Fortsetzungswechsel schaden.
+
+Genau ein naechster Vorschlag: Projektleiter nimmt dieses technische Paket
+anhand T1-T10,R1-R3,Q1-Q7 und der alten Regressionen ab und entscheidet danach
+gesondert ueber den einmaligen gebundenen S/W/L-Vergleich in M/E/K/P.
+Bis dahin kein Vergleichslauf. EMA und Promotionsmitnahme bleiben jeweils
+standardmaessig deaktiviert; keine neue Variante oder Lernparameteranpassung.

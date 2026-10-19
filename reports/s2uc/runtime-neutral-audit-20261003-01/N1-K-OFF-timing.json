@@ -1,0 +1,42 @@
+{
+  "wall_ns": {
+    "replay_other": 154341900,
+    "json_internal": 27842700,
+    "source_gate": 1413400,
+    "policy": 9268900,
+    "reference": 5623700,
+    "evidence_observation": 46713500,
+    "resource_other": 3501000,
+    "export_serialization": 1177100,
+    "file_output": 661800
+  },
+  "cpu_ns": {
+    "replay_other": 156250000,
+    "json_internal": 15625000,
+    "source_gate": 15625000,
+    "policy": 0,
+    "reference": 0,
+    "evidence_observation": 62500000,
+    "resource_other": 0,
+    "export_serialization": 0,
+    "file_output": 0
+  },
+  "calls": {
+    "json_internal": 393,
+    "source_gate": 80,
+    "policy": 320,
+    "reference": 161,
+    "evidence_observation": 1094,
+    "resource_other": 480,
+    "export_serialization": 1,
+    "file_output": 1
+  },
+  "partition_wall_ns": 250544000,
+  "partition_cpu_ns": 250000000,
+  "replay_wall_ns": 237453500,
+  "outer_wall_ns": 250556100,
+  "outside_partition_ns": 12100,
+  "bytes": 64539,
+  "tracing_enabled": false,
+  "resource_certification": false
+}

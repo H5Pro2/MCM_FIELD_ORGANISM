@@ -1,0 +1,14 @@
+{
+  "ids": [
+    "tests.test_s2uc_t1_v2.EvidenceTests.test_T10_live_five_arm_evidence_and_cleanup",
+    "tests.test_s2uc_t1_v2.EvidenceTests.test_T11_mutated_provenance_feedback_and_choice_rejected",
+    "tests.test_s2uc_t1_v2.EvidenceTests.test_T12_complete_match_set_and_resource_overflow",
+    "tests.test_s2uc_t1_v2.EvidenceTests.test_T13_promotion_between_prediction_and_feedback"
+  ],
+  "count": 4,
+  "success": true,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "output": "test_T10_live_five_arm_evidence_and_cleanup (tests.test_s2uc_t1_v2.EvidenceTests.test_T10_live_five_arm_evidence_and_cleanup) ... ok\ntest_T11_mutated_provenance_feedback_and_choice_rejected (tests.test_s2uc_t1_v2.EvidenceTests.test_T11_mutated_provenance_feedback_and_choice_rejected) ... ok\ntest_T12_complete_match_set_and_resource_overflow (tests.test_s2uc_t1_v2.EvidenceTests.test_T12_complete_match_set_and_resource_overflow) ... ok\ntest_T13_promotion_between_prediction_and_feedback (tests.test_s2uc_t1_v2.EvidenceTests.test_T13_promotion_between_prediction_and_feedback) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.803s\n\nOK\n"
+}

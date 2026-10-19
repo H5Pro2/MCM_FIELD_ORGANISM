@@ -1,0 +1,9 @@
+{
+  "binding": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\provenance-appendix-development-20260920\\focused-01\\cases\\test_input_changed_after_publication_is_rejected_by_reader\\bundle\\execution-binding.json",
+  "case": "success",
+  "folder": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\provenance-appendix-development-20260920\\focused-01\\cases\\test_input_changed_after_publication_is_rejected_by_reader\\observer",
+  "inventory_sha256": "d8cfb6213167d818d33c7c7140361730ae6370107081912b99513b41d634d654",
+  "job": "Local\\MCM-V9-c117850ade76f8e1d90e534e023b33c9",
+  "output": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/provenance-appendix-development-20260920/focused-01/cases/test_input_changed_after_publication_is_rejected_by_reader/S2UC-V9-NEUTRAL-042ee223fb334ba29bc9245bb8488a42",
+  "run_id": "S2UC-V9-NEUTRAL-042ee223fb334ba29bc9245bb8488a42"
+}

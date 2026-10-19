@@ -1,0 +1,19 @@
+{
+  "files": {
+    "tools/_s2uc_ura1_delta_encode.py": "6f05c8e728f2f3ca760bb476ea49774eb9f504c09c5f1533bfa8d89a21f000e7",
+    "tools/_s2uc_ura1_delta_decode.py": "124b61749d6e961691c3f4efba00c6973017c61021a84b5c7c24f3e1869dc6b0",
+    "tools/_s2uc_ura1_delta_neutral.py": "3379428219a98043ce575afa0fda15e4818fdb998274b4447dba64625e0a73e9",
+    "tools/s2uc_ura1_delta_qualify.py": "6a2ecdf3cb64449fb5b69db5b0a9e048ff996ba23020174ef2cc5cd5a4c7e3c8",
+    "tests/test_s2uc_ura1_delta.py": "6375491327540c120c302ed994471e36e699240565e7a39cc9e0dd8d5d85f4a7",
+    "docs/S2UC_URA1_ZUSTANDSDELTA_FORMAT_20261015.md": "46eb3b253f60f2d649f60c4b43945568a13050bc1546a4c00f3938bec7403bae"
+  },
+  "source_closure_sha256": "ad8e34f526ebdcea97f843583a99c329014ef8d1e462ebefd7b587f35c85f39e",
+  "source_archives": {
+    "D_hand_case": "4dc3c75e6aed82f29942d13e821c58bedd9dc00e33e4b44ca42031ac008c0ab3",
+    "lifecycle_trace": "8d29379b0264de1e1b740ab7b98a49740ecb057d456e7d4265209b9cb4fc6a2c"
+  },
+  "consumed_size_marker_sha256": "9f25c52eb9962595b115c312926e956597bc94da9040b718f09bc839294f28ae",
+  "consumed_size_closure_sha256": "20bde43d8bd344e29503997d811a05acbe8e4be262c5117c5ac6bf9b42e67b4e",
+  "large_run_executed": false,
+  "research_ready": false
+}

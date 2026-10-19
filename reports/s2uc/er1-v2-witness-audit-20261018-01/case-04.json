@@ -1,0 +1,95 @@
+{
+  "archive_sha256": "29f593d3984a30fceb55720727d1339ff6fbba41cbe191e79f3889e5031998eb",
+  "case": 4,
+  "decoder": {
+    "dictionary_bytes": 940856,
+    "encoded_bytes": 994445,
+    "gzip_bytes": 172800,
+    "record_indices": 10262,
+    "reference_edges": 126096,
+    "table_entries": 14053
+  },
+  "differences": {
+    "duplicate_records": [],
+    "missing": [],
+    "unsupported": [
+      {
+        "keeper": "F",
+        "keeper_victims": [],
+        "last_observation": 72,
+        "newer_keeper_victims": [],
+        "origin": [
+          61,
+          62,
+          63,
+          64
+        ],
+        "other_victim": [
+          61,
+          62,
+          63,
+          64
+        ],
+        "promotion_end": 92,
+        "stage": "retention",
+        "unequal_blocks": [
+          76,
+          80,
+          84,
+          88
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "E": {
+      "local_gains": 4,
+      "multi_assigned_targets": {},
+      "retention_events": 5,
+      "unique_gain_targets": 4,
+      "unique_warm_targets": 5,
+      "warm_uses": 5
+    },
+    "F": {
+      "local_gains": 3,
+      "multi_assigned_targets": {},
+      "retention_events": 10,
+      "unique_gain_targets": 3,
+      "unique_warm_targets": 6,
+      "warm_uses": 6
+    }
+  },
+  "rejected_candidates": [
+    {
+      "keeper": "F",
+      "origin": [
+        61,
+        62,
+        63,
+        64
+      ],
+      "promotion_end": 92,
+      "reason": "NO_COMPETITION_PROMOTION"
+    }
+  ],
+  "reported": {
+    "E": {
+      "local_gains": 4,
+      "multi_assigned_targets": {},
+      "retention_events": 5,
+      "unique_gain_targets": 4,
+      "unique_warm_targets": 5,
+      "warm_uses": 5
+    },
+    "F": {
+      "local_gains": 3,
+      "multi_assigned_targets": {},
+      "retention_events": 11,
+      "unique_gain_targets": 3,
+      "unique_warm_targets": 6,
+      "warm_uses": 6
+    }
+  },
+  "seconds": 4.670297300006496,
+  "status": "DISCREPANCY"
+}

@@ -1,0 +1,164 @@
+[
+  {
+    "test": "I01",
+    "mode": "complete",
+    "terminal": {
+      "active_case": null,
+      "arms_created": 4,
+      "cleanup": "CONFIRMED",
+      "completed_cases": [
+        1,
+        2
+      ],
+      "distinct_arms": 4,
+      "file_cleanup_confirmed": true,
+      "first_failure": null,
+      "followup_failures": [],
+      "job": {
+        "hard_job_limit": true,
+        "limit_bytes": 536870912,
+        "measurement": "Windows JobObjectExtendedLimitInformation",
+        "members": "supervisor and inherited worker",
+        "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap.",
+        "peak_job_committed_bytes": 47771648,
+        "peak_process_committed_bytes": 35360768
+      },
+      "namespace": "fixed-neutral-hand-fixtures",
+      "partial_files": [],
+      "partial_files_before_cleanup": [],
+      "prestart_sha256": null,
+      "research": false,
+      "retry_allowed": false,
+      "seconds": 2.5194305000004533,
+      "status": "TERMINAL_COMPLETE",
+      "worker_ended": true,
+      "worker_exitcode": 0,
+      "worker_report_status": "COMPLETE",
+      "worker_started": true
+    },
+    "artifact_bytes": 29204,
+    "terminal_sha256": "9f553666d0b01e9af5a13359e8a71c4438d345f7ddf72832eef8695ce92249f2"
+  },
+  {
+    "test": "I02",
+    "mode": "export",
+    "terminal": {
+      "active_case": 2,
+      "arms_created": 3,
+      "cleanup": "CONFIRMED",
+      "completed_cases": [
+        1
+      ],
+      "distinct_arms": 3,
+      "file_cleanup_confirmed": true,
+      "first_failure": "ValueError:EXPORT_LIMIT",
+      "followup_failures": [
+        "WORKER_REPORT_FAILED:ValueError:EXPORT_LIMIT",
+        "ValueError:WORKER_REPORT_MISSING"
+      ],
+      "job": {
+        "hard_job_limit": true,
+        "limit_bytes": 536870912,
+        "measurement": "Windows JobObjectExtendedLimitInformation",
+        "members": "supervisor and inherited worker",
+        "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap.",
+        "peak_job_committed_bytes": 46411776,
+        "peak_process_committed_bytes": 34140160
+      },
+      "namespace": "fixed-neutral-hand-fixtures",
+      "partial_files": [],
+      "partial_files_before_cleanup": [
+        "neutral-report-budget.partial"
+      ],
+      "prestart_sha256": null,
+      "research": false,
+      "retry_allowed": false,
+      "seconds": 1.8210982999989938,
+      "status": "TECHNICAL_ABORT",
+      "worker_ended": true,
+      "worker_exitcode": 0,
+      "worker_report_status": "TECHNICAL_ABORT",
+      "worker_started": true
+    },
+    "artifact_bytes": 21785,
+    "terminal_sha256": "95f40caa2a5c4da798907aafd195b0a0116a3e706e26cb7e9b60f5fad3be175e"
+  },
+  {
+    "test": "I03",
+    "mode": "admin",
+    "terminal": {
+      "active_case": 2,
+      "arms_created": 3,
+      "cleanup": "CONFIRMED",
+      "completed_cases": [
+        1
+      ],
+      "distinct_arms": 3,
+      "file_cleanup_confirmed": true,
+      "first_failure": "ValueError:CATEGORY_LIMIT:admin",
+      "followup_failures": [
+        "WORKER_REPORT_FAILED:ValueError:CATEGORY_LIMIT:admin",
+        "ValueError:WORKER_REPORT_MISSING"
+      ],
+      "job": {
+        "hard_job_limit": true,
+        "limit_bytes": 536870912,
+        "measurement": "Windows JobObjectExtendedLimitInformation",
+        "members": "supervisor and inherited worker",
+        "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap.",
+        "peak_job_committed_bytes": 47083520,
+        "peak_process_committed_bytes": 35307520
+      },
+      "namespace": "fixed-neutral-hand-fixtures",
+      "partial_files": [],
+      "partial_files_before_cleanup": [],
+      "prestart_sha256": null,
+      "research": false,
+      "retry_allowed": false,
+      "seconds": 1.6571495999996841,
+      "status": "TECHNICAL_ABORT",
+      "worker_ended": true,
+      "worker_exitcode": 0,
+      "worker_report_status": "TECHNICAL_ABORT",
+      "worker_started": true
+    },
+    "artifact_bytes": 2117808,
+    "terminal_sha256": "8811c84be030e7f04860e1af87e66a54ec128b655c7da4963fba1af969f349e4"
+  },
+  {
+    "test": "I04",
+    "mode": "deadline",
+    "terminal": {
+      "active_case": 2,
+      "cleanup": "UNCONFIRMED",
+      "completed_cases": [
+        1
+      ],
+      "file_cleanup_confirmed": true,
+      "first_failure": "TimeoutError:WORKER_DEADLINE",
+      "followup_failures": [],
+      "job": {
+        "hard_job_limit": true,
+        "limit_bytes": 536870912,
+        "measurement": "Windows JobObjectExtendedLimitInformation",
+        "members": "supervisor and inherited worker",
+        "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap.",
+        "peak_job_committed_bytes": 46272512,
+        "peak_process_committed_bytes": 34541568
+      },
+      "namespace": "fixed-neutral-hand-fixtures",
+      "partial_files": [],
+      "partial_files_before_cleanup": [],
+      "prestart_sha256": null,
+      "research": false,
+      "retry_allowed": false,
+      "seconds": 8.027094000000943,
+      "status": "TECHNICAL_ABORT",
+      "worker_ended": true,
+      "worker_exitcode": 1,
+      "worker_started": true
+    },
+    "artifact_bytes": 21785,
+    "terminal_sha256": "292b84e56222c003f604b396efdddbf3c4cfb62c44f45a43298d03cc8ede4a2b"
+  }
+]

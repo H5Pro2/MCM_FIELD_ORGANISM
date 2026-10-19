@@ -1,0 +1,44 @@
+{
+  "neutral_only": true,
+  "test_ids": [
+    "tests.test_s2uc_ura1_rev1.REV1Tests.test_E01_exclusive_target_no_authorization",
+    "tests.test_s2uc_ura1_rev1.REV1Tests.test_E02_existing_target_cannot_resume",
+    "tests.test_s2uc_ura1_rev1.REV1Tests.test_E03_unchanged_protection_objects_and_research_faults_disabled",
+    "tests.test_s2uc_ura1_rev1.REV1Tests.test_E04_no_legacy_entry_or_shortcut_in_research",
+    "tests.test_s2uc_ura1_rev1.REV1Tests.test_S01_research_locked_before_hash",
+    "tests.test_s2uc_ura1_rev1.REV1Tests.test_S02_all_neutral_recipes_match_independent_reference",
+    "tests.test_s2uc_ura1_rev1.REV1Tests.test_S03_source_mutation_and_extra_signal_rejected",
+    "tests.test_s2uc_ura1_rev1.REV1Tests.test_S04_rejection_sampling_and_draw_cap",
+    "tests.test_s2uc_ura1_rev1.REV1Tests.test_S05_invalid_inputs_and_no_short_research_option",
+    "tests.test_s2uc_ura1_rev1.REV1Tests.test_S06_neutral_hash_namespace_only",
+    "tests.test_s2uc_ura1_rev1.REV1Tests.test_T01_matrix_identity_and_stratification",
+    "tests.test_s2uc_ura1_rev1.REV1Tests.test_T02_window_boundaries_and_denominators",
+    "tests.test_s2uc_ura1_rev1.REV1Tests.test_T03_positive_negative_and_zero_full_reference",
+    "tests.test_s2uc_ura1_rev1.REV1Tests.test_T04_orientation_balance_and_independent_nonconstant_quantiles",
+    "tests.test_s2uc_ura1_rev1.REV1Tests.test_T05_decision_zero_touches_and_crossings",
+    "tests.test_s2uc_ura1_rev1.REV1Tests.test_T06_incomplete_and_invalid_data_no_verdict",
+    "tests.test_s2uc_ura1_rev1.REV1Tests.test_T07_reference_detects_window_output_corruption"
+  ],
+  "tests": 17,
+  "errors": [],
+  "failures": [
+    [
+      "tests.test_s2uc_ura1_rev1.REV1Tests.test_S02_all_neutral_recipes_match_independent_reference",
+      "Traceback (most recent call last):\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tests\\test_s2uc_ura1_rev1.py\", line 52, in test_S02_all_neutral_recipes_match_independent_reference\n    self.assertEqual(proof['contingencies'][0], proof['contingencies'][1][::-1])\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Lists differ: [48, 16, 16, 48] != [16, 48, 48, 16]\n\nFirst differing element 0:\n48\n16\n\n- [48, 16, 16, 48]\n+ [16, 48, 48, 16]\n"
+    ]
+  ],
+  "skipped": [],
+  "seconds": 24.013233999998192,
+  "job": {
+    "limit_bytes": 536870912,
+    "peak_job_committed_bytes": 44584960,
+    "peak_process_committed_bytes": 44584960,
+    "hard_job_limit": true,
+    "members": "supervisor and inherited worker",
+    "measurement": "Windows JobObjectExtendedLimitInformation",
+    "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap."
+  },
+  "status": "FAIL",
+  "research_sources_generated": false,
+  "policy_frames": 0
+}

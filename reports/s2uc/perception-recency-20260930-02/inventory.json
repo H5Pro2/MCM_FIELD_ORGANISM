@@ -1,0 +1,30 @@
+{
+  "reports/s2uc/perception-recency-20260930-02/preregistration.json": {
+    "bytes": 1732,
+    "sha256": "850b0e4773342a1f1635e811f823eb379ccb656cf924374285e563cabab2b7d8"
+  },
+  "reports/s2uc/perception-recency-20260930-02/REPORT.txt": {
+    "bytes": 5232,
+    "sha256": "724d410574b0d053126974c568b86cc6700ff8f4652ec67198ce357952d339fa"
+  },
+  "reports/s2uc/perception-recency-20260930-02/result.json": {
+    "bytes": 841540,
+    "sha256": "e3c66266cafe376c01be2e705d308323d5747792aeadca4e8faecd8dbc268fa3"
+  },
+  "reports/s2uc/perception-recency-20260930-02/tests.txt": {
+    "bytes": 3837,
+    "sha256": "1436eafa66c67757134b4b1f521283ecab12f4926003f3df56ec52ef47839c45"
+  },
+  "tools/_s2uc_perception_recency.py": {
+    "bytes": 1662,
+    "sha256": "816d0eebfe1815764ddcbcd4b47ccb57584005ca973bde74be7eb2d7ae2ae86c"
+  },
+  "tools/s2uc_perception_recency_check.py": {
+    "bytes": 5509,
+    "sha256": "15e4b3ee05bc3a133a1989c474727474060ab6109388edf087be251091d4a2d3"
+  },
+  "tests/test_s2uc_perception_recency.py": {
+    "bytes": 2826,
+    "sha256": "8fc6905f3d6d27a35f65563de38023c3c2e884e79153d5076e982ab072691e4b"
+  }
+}

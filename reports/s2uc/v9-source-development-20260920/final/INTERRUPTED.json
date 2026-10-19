@@ -1,0 +1,5 @@
+{
+  "status": "DEVELOPMENT_INTERRUPTED_NOT_FINAL_EVIDENCE",
+  "reason": "Added separately bounded qualification summary/protocol and explicit source-preparation byte accounting. Interrupted own test runner before changing code. No final result claimed.",
+  "replacement": "../final-02"
+}

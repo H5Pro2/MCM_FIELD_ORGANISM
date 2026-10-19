@@ -1,0 +1,70 @@
+{
+  "groups": {
+    "A/E": {
+      "block_ends": 4096,
+      "event_gains": 91,
+      "event_harms": 28,
+      "gain_error_sum": 22.75,
+      "harm_error_sum": 7.0,
+      "multi_assigned_targets": [],
+      "retention_events": 102,
+      "stories": 16,
+      "target_denominator": 8176,
+      "unique_equal_targets": 87,
+      "unique_gain_targets": 91,
+      "unique_harm_targets": 28,
+      "unique_warm_targets": 206,
+      "warm_records": 206
+    },
+    "A/F": {
+      "block_ends": 4096,
+      "event_gains": 78,
+      "event_harms": 31,
+      "gain_error_sum": 19.5,
+      "harm_error_sum": 7.75,
+      "multi_assigned_targets": [],
+      "retention_events": 179,
+      "stories": 16,
+      "target_denominator": 8176,
+      "unique_equal_targets": 65,
+      "unique_gain_targets": 78,
+      "unique_harm_targets": 31,
+      "unique_warm_targets": 174,
+      "warm_records": 174
+    },
+    "B/E": {
+      "block_ends": 4096,
+      "event_gains": 69,
+      "event_harms": 20,
+      "gain_error_sum": 17.25,
+      "harm_error_sum": 5.0,
+      "multi_assigned_targets": [],
+      "retention_events": 56,
+      "stories": 16,
+      "target_denominator": 8176,
+      "unique_equal_targets": 34,
+      "unique_gain_targets": 69,
+      "unique_harm_targets": 20,
+      "unique_warm_targets": 123,
+      "warm_records": 123
+    },
+    "B/F": {
+      "block_ends": 4096,
+      "event_gains": 138,
+      "event_harms": 44,
+      "gain_error_sum": 34.5,
+      "harm_error_sum": 11.0,
+      "multi_assigned_targets": [],
+      "retention_events": 137,
+      "stories": 16,
+      "target_denominator": 8176,
+      "unique_equal_targets": 61,
+      "unique_gain_targets": 138,
+      "unique_harm_targets": 44,
+      "unique_warm_targets": 243,
+      "warm_records": 243
+    }
+  },
+  "inference": "descriptive only; no causal decomposition or new significance tests",
+  "unit": "unique targets are (pair,condition,arm,target); no cross-arm summation"
+}

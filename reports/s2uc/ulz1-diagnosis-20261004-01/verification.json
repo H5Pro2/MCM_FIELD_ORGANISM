@@ -1,0 +1,95 @@
+{
+  "status": "COMPLETE_ARCHIVE_DIAGNOSIS",
+  "archive_files_verified": {
+    "run": 133,
+    "assessment": 7
+  },
+  "run_closure_sha256": "df4bb51d44eb4e188e4c7a41e30c4d80d56daac1758d5ec41a75df3ae9da036e",
+  "assessment_closure_sha256": "bd0086e8bc2b38b1bc16ed8b744840da2cedcc2a47c265680dfefcdfb3d0c360",
+  "script_sha256": "82fde456768c17b35bbebc633075baadbb27e25606753d4f8b851d20d95bdb86",
+  "checks": {
+    "output_errors_recomputed": 66432,
+    "archived_choices_explained_by_cells": 66432,
+    "pretarget_cells_reconstructed": 81954,
+    "valid_feedback_updates": 81954,
+    "promotion_cells_carried_unchanged": 3978
+  },
+  "totals": {
+    "S_primary_33_128": {
+      "count": 3072,
+      "improved": 142,
+      "worse": 76,
+      "equal": 2854,
+      "gain": "243/8",
+      "harm": "123/8",
+      "net": "15"
+    },
+    "W_primary_129_160": {
+      "count": 1024,
+      "improved": 43,
+      "worse": 27,
+      "equal": 954,
+      "gain": "9",
+      "harm": "6",
+      "net": "3"
+    },
+    "S_Y_all": {
+      "count": 8192,
+      "improved": 362,
+      "worse": 202,
+      "equal": 7628,
+      "gain": "631/8",
+      "harm": "165/4",
+      "net": "301/8"
+    },
+    "W_Y_all": {
+      "count": 8192,
+      "improved": 346,
+      "worse": 196,
+      "equal": 7650,
+      "gain": "595/8",
+      "harm": "325/8",
+      "net": "135/4"
+    }
+  },
+  "age_statistics": {
+    "S_Y_all": {
+      "targets": 8192,
+      "unequal_feedback_counts": 8192,
+      "any_cold": 966,
+      "max_feedback_count": 168
+    },
+    "S_primary_33_128": {
+      "targets": 3072,
+      "unequal_feedback_counts": 3072,
+      "any_cold": 359,
+      "max_feedback_count": 125
+    },
+    "W_Y_all": {
+      "targets": 8192,
+      "unequal_feedback_counts": 8192,
+      "any_cold": 936,
+      "max_feedback_count": 143
+    },
+    "W_primary_129_160": {
+      "targets": 1024,
+      "unequal_feedback_counts": 1024,
+      "any_cold": 121,
+      "max_feedback_count": 124
+    }
+  },
+  "non_Y_equal_targets": {
+    "S": 8416,
+    "W": 8416
+  },
+  "example_count": 24,
+  "maximum_harm_targets": 257,
+  "replay_executed": false,
+  "inference": "post-hoc descriptive only",
+  "independent_export_crosscheck": {
+    "targets": 16384,
+    "categories": 64,
+    "result": "PASS"
+  },
+  "editorial_note": "REPORT table layout corrected; EINORDNUNG.md adds reviewed prose after numeric archive analysis. No replays."
+}

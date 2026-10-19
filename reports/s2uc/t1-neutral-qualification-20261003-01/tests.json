@@ -1,0 +1,19 @@
+{
+  "ids": [
+    "tests.test_s2uc_t1.StaticTests.test_T01_policy_blind_generator_and_neutral_namespace",
+    "tests.test_s2uc_t1.StaticTests.test_T02_formula_endianness_and_transition_no_reset",
+    "tests.test_s2uc_t1.StaticTests.test_T03_complete_neutral_denominators_and_negative_controls",
+    "tests.test_s2uc_t1.StaticTests.test_T04_lossless_codec_and_provenance",
+    "tests.test_s2uc_t1.StaticTests.test_T05_modal_mechanism_is_not_realized_error",
+    "tests.test_s2uc_t1.StaticTests.test_T06_aggregate52_fixed_late_window_and_controls",
+    "tests.test_s2uc_t1.StaticTests.test_T07_provenance_overlap_does_not_select_cases",
+    "tests.test_s2uc_t1.StaticTests.test_T08_gate_before_worker_and_source",
+    "tests.test_s2uc_t1.StaticTests.test_T09_reused_watchdog_and_real_abort"
+  ],
+  "count": 9,
+  "success": true,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "output": "test_T01_policy_blind_generator_and_neutral_namespace (tests.test_s2uc_t1.StaticTests.test_T01_policy_blind_generator_and_neutral_namespace) ... ok\ntest_T02_formula_endianness_and_transition_no_reset (tests.test_s2uc_t1.StaticTests.test_T02_formula_endianness_and_transition_no_reset) ... ok\ntest_T03_complete_neutral_denominators_and_negative_controls (tests.test_s2uc_t1.StaticTests.test_T03_complete_neutral_denominators_and_negative_controls) ... ok\ntest_T04_lossless_codec_and_provenance (tests.test_s2uc_t1.StaticTests.test_T04_lossless_codec_and_provenance) ... ok\ntest_T05_modal_mechanism_is_not_realized_error (tests.test_s2uc_t1.StaticTests.test_T05_modal_mechanism_is_not_realized_error) ... ok\ntest_T06_aggregate52_fixed_late_window_and_controls (tests.test_s2uc_t1.StaticTests.test_T06_aggregate52_fixed_late_window_and_controls) ... ok\ntest_T07_provenance_overlap_does_not_select_cases (tests.test_s2uc_t1.StaticTests.test_T07_provenance_overlap_does_not_select_cases) ... ok\ntest_T08_gate_before_worker_and_source (tests.test_s2uc_t1.StaticTests.test_T08_gate_before_worker_and_source) ... ok\ntest_T09_reused_watchdog_and_real_abort (tests.test_s2uc_t1.StaticTests.test_T09_reused_watchdog_and_real_abort) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 2.222s\n\nOK\n"
+}

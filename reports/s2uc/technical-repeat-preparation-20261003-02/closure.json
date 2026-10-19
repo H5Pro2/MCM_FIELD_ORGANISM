@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "error": null,
+  "files": {
+    "binding.json": {
+      "bytes": 18348,
+      "sha256": "d752fc323cae2c440c5de7ce7ef540d4245a605e4583ff84dc5f04306d1ce254"
+    },
+    "facts.json": {
+      "bytes": 54361,
+      "sha256": "510ab7a9cfd0467065e5fa4f762d3237f540dba4709d02d0cb9833d076adb993"
+    },
+    "tests.json": {
+      "bytes": 2051,
+      "sha256": "b70477194a4bf15614764ce571b07ea9b1d6ab76a49efe793875ca99132adabf"
+    },
+    "time-plan.json": {
+      "bytes": 1080,
+      "sha256": "c0f6d8f9408022b27216420968ee43aa25bd777f76dd9180507ef20d6cb69a1a"
+    },
+    "probe-broken/claim.json": {
+      "bytes": 114,
+      "sha256": "946f32dcf83845ed46aea0a98e874772944b14e3c3abbb5d9ca8ffb6c70e1038"
+    },
+    "probe-broken/closure.json": {
+      "bytes": 519,
+      "sha256": "708bbef080ac4095a59cdd8b2f412aaf83fd8fa639c027897c5f23790441550b"
+    },
+    "probe-broken/lifecycle.jsonl": {
+      "bytes": 751,
+      "sha256": "f5523f4524e88b3bf0377bc4bdb3483ba6ed7fbc6f5970c602a178ede20565ab"
+    },
+    "probe-early-join/claim.json": {
+      "bytes": 114,
+      "sha256": "946f32dcf83845ed46aea0a98e874772944b14e3c3abbb5d9ca8ffb6c70e1038"
+    },
+    "probe-early-join/closure.json": {
+      "bytes": 622,
+      "sha256": "a44c31eb4c081f8e35a7a344ba80470bcde52fe5411bfd936af23f32b6142104"
+    },
+    "probe-early-join/lifecycle.jsonl": {
+      "bytes": 751,
+      "sha256": "c5d0ddb369abb03de686a0b382c1ab228ea5ee575f5efc78a18d624d94771fd8"
+    },
+    "probe-early-join/worker-complete.json": {
+      "bytes": 17,
+      "sha256": "22948fff175a705e7693bb83e0ad8e32a79b95b3f036767b501c636afe5d557a"
+    },
+    "probe-normal/claim.json": {
+      "bytes": 114,
+      "sha256": "946f32dcf83845ed46aea0a98e874772944b14e3c3abbb5d9ca8ffb6c70e1038"
+    },
+    "probe-normal/closure.json": {
+      "bytes": 738,
+      "sha256": "b8fab91b4a98318a56a70fc4898b0ba474d8098f5d43d0dd88805b5fbc4f9ebc"
+    },
+    "probe-normal/lifecycle.jsonl": {
+      "bytes": 751,
+      "sha256": "c0742475b4d32a1dd61d8fb8b0f8a42cc8b6ea2997e8c5ce6b1d2e66c77343a1"
+    },
+    "probe-normal/neutral-payload.json": {
+      "bytes": 200012,
+      "sha256": "0d585f58dbf3962c92bb2575eb54e470ed5ba2cd12cc8819edec09e757525af4"
+    },
+    "probe-normal/worker-complete.json": {
+      "bytes": 17,
+      "sha256": "22948fff175a705e7693bb83e0ad8e32a79b95b3f036767b501c636afe5d557a"
+    },
+    "probe-timeout/claim.json": {
+      "bytes": 114,
+      "sha256": "946f32dcf83845ed46aea0a98e874772944b14e3c3abbb5d9ca8ffb6c70e1038"
+    },
+    "probe-timeout/closure.json": {
+      "bytes": 516,
+      "sha256": "a6013588a9a237c03d64779bb38350642f5b70a76bc20b235635d8e8760d51e4"
+    },
+    "probe-timeout/lifecycle.jsonl": {
+      "bytes": 853,
+      "sha256": "234e835727c3be37d386880e30a37eb3713192ee2acfd8d7d35836760d442702"
+    }
+  },
+  "raster_materialized": false,
+  "raster_executed": false
+}

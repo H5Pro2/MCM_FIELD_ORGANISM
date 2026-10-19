@@ -1,0 +1,10 @@
+{
+  "status": "V7_EXECUTION_NOT_CONNECTED: V7-Ausführung noch nicht angebunden",
+  "supplier_calls": 0,
+  "adapter_calls": 0,
+  "run_entry_calls": 0,
+  "gate_open": false,
+  "used": false,
+  "output_exists": false,
+  "scope": "synthetic neutral development only"
+}

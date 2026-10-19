@@ -1,0 +1,5744 @@
+[
+  {
+    "tau": 0.0,
+    "correct_R1_R2": 0,
+    "additional_wrong": [],
+    "lost_exact": [],
+    "signal_lost_exact": [],
+    "lost_correct": [],
+    "origins": {
+      "R0": {
+        "exact_retrieval": "CORRECT",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "R2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "R3": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N3": {
+        "exact_retrieval": "WRONG",
+        "signal_approx_retrieval": "WRONG"
+      },
+      "N4": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "P0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      }
+    },
+    "coverage": {
+      "exact_retrieval": {
+        "assignments": 2,
+        "context": 2,
+        "total": 11
+      },
+      "signal_approx_retrieval": {
+        "assignments": 2,
+        "context": 2,
+        "total": 11
+      }
+    },
+    "full_means": {
+      "persistence": 0.0016007918773188517,
+      "exact_retrieval": 0.0013852158907184332,
+      "signal_approx_retrieval": 0.0013852158907184332,
+      "signal_approx_retrieval_vs_persistence": 0.00021557598660041852,
+      "signal_approx_retrieval_vs_exact_retrieval": 0.0
+    },
+    "abstentions": {
+      "R0": {
+        "exact_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "EXACT"
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0,
+              "exact_match_count": 1,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "R1": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "R2": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "R3": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N1": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N2": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N3": {
+        "exact_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "EXACT"
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0,
+              "exact_match_count": 1,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N4": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              17,
+              18
+            ],
+            "source_intervals": [
+              [
+                76800,
+                81600
+              ],
+              [
+                81600,
+                86400
+              ]
+            ],
+            "read_revision": 20,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              17,
+              18
+            ],
+            "source_intervals": [
+              [
+                76800,
+                81600
+              ],
+              [
+                81600,
+                86400
+              ]
+            ],
+            "read_revision": 20,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "Z0": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_LOW_SIGNAL",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "Z1": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_LOW_SIGNAL",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "P0": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_LOW_SIGNAL",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      }
+    },
+    "learning_additional_wrong": [],
+    "learning_lost_exact": []
+  },
+  {
+    "tau": 0.00390625,
+    "correct_R1_R2": 0,
+    "additional_wrong": [],
+    "lost_exact": [],
+    "signal_lost_exact": [],
+    "lost_correct": [],
+    "origins": {
+      "R0": {
+        "exact_retrieval": "CORRECT",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "R2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "R3": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N3": {
+        "exact_retrieval": "WRONG",
+        "signal_approx_retrieval": "WRONG"
+      },
+      "N4": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "P0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      }
+    },
+    "coverage": {
+      "exact_retrieval": {
+        "assignments": 2,
+        "context": 2,
+        "total": 11
+      },
+      "signal_approx_retrieval": {
+        "assignments": 2,
+        "context": 2,
+        "total": 11
+      }
+    },
+    "full_means": {
+      "persistence": 0.0016007918773188517,
+      "exact_retrieval": 0.0013852158907184332,
+      "signal_approx_retrieval": 0.0013852158907184332,
+      "signal_approx_retrieval_vs_persistence": 0.00021557598660041852,
+      "signal_approx_retrieval_vs_exact_retrieval": 0.0
+    },
+    "abstentions": {
+      "R0": {
+        "exact_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "EXACT"
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.00390625,
+              "exact_match_count": 1,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "R1": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.00390625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "R2": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.00390625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "R3": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.00390625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N1": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.00390625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N2": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.00390625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N3": {
+        "exact_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "EXACT"
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.00390625,
+              "exact_match_count": 1,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N4": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              17,
+              18
+            ],
+            "source_intervals": [
+              [
+                76800,
+                81600
+              ],
+              [
+                81600,
+                86400
+              ]
+            ],
+            "read_revision": 20,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              17,
+              18
+            ],
+            "source_intervals": [
+              [
+                76800,
+                81600
+              ],
+              [
+                81600,
+                86400
+              ]
+            ],
+            "read_revision": 20,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.00390625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "Z0": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_LOW_SIGNAL",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.00390625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "Z1": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_LOW_SIGNAL",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.00390625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "P0": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_LOW_SIGNAL",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.00390625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      }
+    },
+    "learning_additional_wrong": [],
+    "learning_lost_exact": []
+  },
+  {
+    "tau": 0.0078125,
+    "correct_R1_R2": 0,
+    "additional_wrong": [],
+    "lost_exact": [],
+    "signal_lost_exact": [],
+    "lost_correct": [],
+    "origins": {
+      "R0": {
+        "exact_retrieval": "CORRECT",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "R2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "R3": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N3": {
+        "exact_retrieval": "WRONG",
+        "signal_approx_retrieval": "WRONG"
+      },
+      "N4": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "P0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      }
+    },
+    "coverage": {
+      "exact_retrieval": {
+        "assignments": 2,
+        "context": 2,
+        "total": 11
+      },
+      "signal_approx_retrieval": {
+        "assignments": 2,
+        "context": 2,
+        "total": 11
+      }
+    },
+    "full_means": {
+      "persistence": 0.0016007918773188517,
+      "exact_retrieval": 0.0013852158907184332,
+      "signal_approx_retrieval": 0.0013852158907184332,
+      "signal_approx_retrieval_vs_persistence": 0.00021557598660041852,
+      "signal_approx_retrieval_vs_exact_retrieval": 0.0
+    },
+    "abstentions": {
+      "R0": {
+        "exact_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "EXACT"
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0078125,
+              "exact_match_count": 1,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "R1": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0078125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "R2": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0078125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "R3": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0078125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N1": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0078125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N2": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0078125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N3": {
+        "exact_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "EXACT"
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0078125,
+              "exact_match_count": 1,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N4": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              17,
+              18
+            ],
+            "source_intervals": [
+              [
+                76800,
+                81600
+              ],
+              [
+                81600,
+                86400
+              ]
+            ],
+            "read_revision": 20,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              17,
+              18
+            ],
+            "source_intervals": [
+              [
+                76800,
+                81600
+              ],
+              [
+                81600,
+                86400
+              ]
+            ],
+            "read_revision": 20,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0078125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "Z0": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_LOW_SIGNAL",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0078125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "Z1": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_LOW_SIGNAL",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0078125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "P0": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_LOW_SIGNAL",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0078125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      }
+    },
+    "learning_additional_wrong": [],
+    "learning_lost_exact": []
+  },
+  {
+    "tau": 0.015625,
+    "correct_R1_R2": 1,
+    "additional_wrong": [],
+    "lost_exact": [],
+    "signal_lost_exact": [],
+    "lost_correct": [],
+    "origins": {
+      "R0": {
+        "exact_retrieval": "CORRECT",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "R3": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "N1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N3": {
+        "exact_retrieval": "WRONG",
+        "signal_approx_retrieval": "WRONG"
+      },
+      "N4": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "P0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      }
+    },
+    "coverage": {
+      "exact_retrieval": {
+        "assignments": 2,
+        "context": 2,
+        "total": 11
+      },
+      "signal_approx_retrieval": {
+        "assignments": 4,
+        "context": 4,
+        "total": 11
+      }
+    },
+    "full_means": {
+      "persistence": 0.0016007918773188517,
+      "exact_retrieval": 0.0013852158907184332,
+      "signal_approx_retrieval": 0.0013852158907184332,
+      "signal_approx_retrieval_vs_persistence": 0.00021557598660041852,
+      "signal_approx_retrieval_vs_exact_retrieval": 0.0
+    },
+    "abstentions": {
+      "R0": {
+        "exact_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "EXACT"
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.015625,
+              "exact_match_count": 1,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "R1": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "APPROXIMATE_SINGLE_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "APPROXIMATE",
+                "distance": 0.009891768882119975
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.015625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "R2": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.015625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "R3": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "APPROXIMATE_SINGLE_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "APPROXIMATE",
+                "distance": 0.009891768882119975
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.015625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N1": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.015625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N2": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.015625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N3": {
+        "exact_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "EXACT"
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.015625,
+              "exact_match_count": 1,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N4": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              17,
+              18
+            ],
+            "source_intervals": [
+              [
+                76800,
+                81600
+              ],
+              [
+                81600,
+                86400
+              ]
+            ],
+            "read_revision": 20,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              17,
+              18
+            ],
+            "source_intervals": [
+              [
+                76800,
+                81600
+              ],
+              [
+                81600,
+                86400
+              ]
+            ],
+            "read_revision": 20,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.015625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "Z0": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_LOW_SIGNAL",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.015625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "Z1": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_LOW_SIGNAL",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.015625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "P0": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_LOW_SIGNAL",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.015625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      }
+    },
+    "learning_additional_wrong": [],
+    "learning_lost_exact": []
+  },
+  {
+    "tau": 0.03125,
+    "correct_R1_R2": 2,
+    "additional_wrong": [],
+    "lost_exact": [],
+    "signal_lost_exact": [],
+    "lost_correct": [],
+    "origins": {
+      "R0": {
+        "exact_retrieval": "CORRECT",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R3": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "N1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N3": {
+        "exact_retrieval": "WRONG",
+        "signal_approx_retrieval": "WRONG"
+      },
+      "N4": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "P0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      }
+    },
+    "coverage": {
+      "exact_retrieval": {
+        "assignments": 2,
+        "context": 2,
+        "total": 11
+      },
+      "signal_approx_retrieval": {
+        "assignments": 5,
+        "context": 5,
+        "total": 11
+      }
+    },
+    "full_means": {
+      "persistence": 0.0016007918773188517,
+      "exact_retrieval": 0.0013852158907184332,
+      "signal_approx_retrieval": 0.0011678249452126979,
+      "signal_approx_retrieval_vs_persistence": 0.00043296693210615394,
+      "signal_approx_retrieval_vs_exact_retrieval": 0.0002173909455057354
+    },
+    "abstentions": {
+      "R0": {
+        "exact_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "EXACT"
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.03125,
+              "exact_match_count": 1,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "R1": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "APPROXIMATE_SINGLE_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "APPROXIMATE",
+                "distance": 0.009891768882119975
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.03125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "R2": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "APPROXIMATE_SINGLE_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "APPROXIMATE",
+                "distance": 0.019607572863729893
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.03125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "R3": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "APPROXIMATE_SINGLE_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "APPROXIMATE",
+                "distance": 0.009891768882119975
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.03125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N1": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.03125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N2": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.03125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N3": {
+        "exact_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "EXACT"
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.03125,
+              "exact_match_count": 1,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N4": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              17,
+              18
+            ],
+            "source_intervals": [
+              [
+                76800,
+                81600
+              ],
+              [
+                81600,
+                86400
+              ]
+            ],
+            "read_revision": 20,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              17,
+              18
+            ],
+            "source_intervals": [
+              [
+                76800,
+                81600
+              ],
+              [
+                81600,
+                86400
+              ]
+            ],
+            "read_revision": 20,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.03125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "Z0": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_LOW_SIGNAL",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.03125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "Z1": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_LOW_SIGNAL",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.03125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "P0": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_LOW_SIGNAL",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.03125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      }
+    },
+    "learning_additional_wrong": [],
+    "learning_lost_exact": []
+  },
+  {
+    "tau": 0.0625,
+    "correct_R1_R2": 2,
+    "additional_wrong": [],
+    "lost_exact": [],
+    "signal_lost_exact": [],
+    "lost_correct": [],
+    "origins": {
+      "R0": {
+        "exact_retrieval": "CORRECT",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R3": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "N1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N3": {
+        "exact_retrieval": "WRONG",
+        "signal_approx_retrieval": "WRONG"
+      },
+      "N4": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "P0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      }
+    },
+    "coverage": {
+      "exact_retrieval": {
+        "assignments": 2,
+        "context": 2,
+        "total": 11
+      },
+      "signal_approx_retrieval": {
+        "assignments": 5,
+        "context": 5,
+        "total": 11
+      }
+    },
+    "full_means": {
+      "persistence": 0.0016007918773188517,
+      "exact_retrieval": 0.0013852158907184332,
+      "signal_approx_retrieval": 0.0011678249452126979,
+      "signal_approx_retrieval_vs_persistence": 0.00043296693210615394,
+      "signal_approx_retrieval_vs_exact_retrieval": 0.0002173909455057354
+    },
+    "abstentions": {
+      "R0": {
+        "exact_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "EXACT"
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0625,
+              "exact_match_count": 1,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "R1": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "APPROXIMATE_SINGLE_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "APPROXIMATE",
+                "distance": 0.009891768882119975
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "R2": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "APPROXIMATE_SINGLE_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "APPROXIMATE",
+                "distance": 0.019607572863729893
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "R3": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "APPROXIMATE_SINGLE_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "APPROXIMATE",
+                "distance": 0.009891768882119975
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N1": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N2": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N3": {
+        "exact_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "EXACT"
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0625,
+              "exact_match_count": 1,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N4": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              17,
+              18
+            ],
+            "source_intervals": [
+              [
+                76800,
+                81600
+              ],
+              [
+                81600,
+                86400
+              ]
+            ],
+            "read_revision": 20,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              17,
+              18
+            ],
+            "source_intervals": [
+              [
+                76800,
+                81600
+              ],
+              [
+                81600,
+                86400
+              ]
+            ],
+            "read_revision": 20,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "Z0": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_LOW_SIGNAL",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "Z1": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_LOW_SIGNAL",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "P0": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_LOW_SIGNAL",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.0625,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      }
+    },
+    "learning_additional_wrong": [],
+    "learning_lost_exact": []
+  },
+  {
+    "tau": 0.125,
+    "correct_R1_R2": 2,
+    "additional_wrong": [],
+    "lost_exact": [],
+    "signal_lost_exact": [],
+    "lost_correct": [],
+    "origins": {
+      "R0": {
+        "exact_retrieval": "CORRECT",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "R3": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "CORRECT"
+      },
+      "N1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N2": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "N3": {
+        "exact_retrieval": "WRONG",
+        "signal_approx_retrieval": "WRONG"
+      },
+      "N4": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "Z1": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      },
+      "P0": {
+        "exact_retrieval": "ABSTAIN",
+        "signal_approx_retrieval": "ABSTAIN"
+      }
+    },
+    "coverage": {
+      "exact_retrieval": {
+        "assignments": 2,
+        "context": 2,
+        "total": 11
+      },
+      "signal_approx_retrieval": {
+        "assignments": 5,
+        "context": 5,
+        "total": 11
+      }
+    },
+    "full_means": {
+      "persistence": 0.0016007918773188517,
+      "exact_retrieval": 0.0013852158907184332,
+      "signal_approx_retrieval": 0.0011678249452126979,
+      "signal_approx_retrieval_vs_persistence": 0.00043296693210615394,
+      "signal_approx_retrieval_vs_exact_retrieval": 0.0002173909455057354
+    },
+    "abstentions": {
+      "R0": {
+        "exact_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "EXACT"
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.125,
+              "exact_match_count": 1,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "R1": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "APPROXIMATE_SINGLE_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "APPROXIMATE",
+                "distance": 0.009891768882119975
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "R2": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "APPROXIMATE_SINGLE_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "APPROXIMATE",
+                "distance": 0.019607572863729893
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "R3": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "APPROXIMATE_SINGLE_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "APPROXIMATE",
+                "distance": 0.009891768882119975
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N1": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N2": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N3": {
+        "exact_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "PREDICTED_RETAINED",
+          "receipt": {
+            "status": "CONFIRMED_RETAINED_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [
+              {
+                "role": "retained",
+                "generation": 1,
+                "formation": "p1",
+                "ordinals": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "offset": 0,
+                "factors": [
+                  1.0
+                ],
+                "match_quality": "EXACT"
+              }
+            ],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.125,
+              "exact_match_count": 1,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "N4": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              17,
+              18
+            ],
+            "source_intervals": [
+              [
+                76800,
+                81600
+              ],
+              [
+                81600,
+                86400
+              ]
+            ],
+            "read_revision": 20,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_APPROX_CONTEXT",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              17,
+              18
+            ],
+            "source_intervals": [
+              [
+                76800,
+                81600
+              ],
+              [
+                81600,
+                86400
+              ]
+            ],
+            "read_revision": 20,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "Z0": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_LOW_SIGNAL",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "Z1": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_LOW_SIGNAL",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      },
+      "P0": {
+        "exact_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_NO_MATCH",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": []
+          }
+        },
+        "signal_approx_retrieval": {
+          "status": "ABSTAIN_NO_CONTEXT",
+          "receipt": {
+            "status": "ABSTAIN_LOW_SIGNAL",
+            "stream": "stream",
+            "owner": "owner",
+            "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+            "input_indices": [
+              9,
+              10
+            ],
+            "source_intervals": [
+              [
+                38400,
+                43200
+              ],
+              [
+                43200,
+                48000
+              ]
+            ],
+            "read_revision": 10,
+            "matches": [],
+            "retrieval": {
+              "policy": "signal_approx_v1",
+              "epsilon": 3.3647428814553505e-05,
+              "tau": 0.125,
+              "exact_match_count": 0,
+              "signal_lost_exact_single": false
+            }
+          }
+        }
+      }
+    },
+    "learning_additional_wrong": [],
+    "learning_lost_exact": []
+  }
+]

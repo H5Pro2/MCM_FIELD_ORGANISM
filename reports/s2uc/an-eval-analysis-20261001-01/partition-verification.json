@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "seeds_disjoint": true,
+  "dev_seeds": [
+    1210001,
+    1210007,
+    1210013,
+    1210019,
+    1210031,
+    1210037,
+    1210043
+  ],
+  "eval_seeds": [
+    1310001,
+    1310007,
+    1310013,
+    1310019,
+    1310031,
+    1310037
+  ],
+  "basis_pcm_hashes_disjoint": true,
+  "dev_basis": {
+    "A": "78370a89bdd6ed2d03da9df913dc57e95e8f1a76c2e5055b658d9455c8db560f",
+    "B": "9a3f0a831546a55bb59b9e4d8335f04d3bf841e43f26089d7aa20c23207f29bd",
+    "C": "b45dbda7cfe6bad15720a1c76ddbd78f3b4ad1ab049fbe106a6e5b59bf630b3a",
+    "D": "92432007e80e1877c5529fa2b9edf5f7682a9f65da4d6f1ffdf7804cae98fb35"
+  },
+  "eval_basis": {
+    "A": "b71603c9f80c92aece45521073ef0c35d179b69e039801699083fa1f3527c2d8",
+    "B": "60b069fca23efe62abfd376e06754d153f07f70be4d8da8c7590e96a61b0c16b",
+    "C": "9bc3d0d4fa56ab1455ca5850cb67bc3391f1b1eded6fb3f8e32965cb35553add",
+    "D": "60762f74f32042448a17da7113e15bffe9847a1fe73438e7fcae765478a8eca4"
+  },
+  "eval_calibration_absent": true,
+  "eval_files": 67,
+  "eval_bytes": 2061032,
+  "closure": {
+    "calls": {
+      "nj": 49,
+      "receptor": 49
+    },
+    "charged_before_closure": 2060872,
+    "error": null,
+    "final_evaluation_run": false,
+    "partition": "AN-EVAL",
+    "status": "MATERIAL_COMPLETE"
+  },
+  "production_calls": 1,
+  "production_exit_code": 0,
+  "limitation": "Disjoint seeds and material under a shared synthetic recipe; not evidence of general independence or natural audio robustness."
+}

@@ -1,0 +1,441 @@
+S2-UC: Freigabeentwurf nach abgenommenem P2-Testanschluss
+Stand 30.09.2026 — ENTWURF, NICHT AUSFÜHRBAR, KEINE LAUFAUTORISIERUNG
+
+Neuester operativer Stand:
+Der Projektleiter hat die Benutzerzustimmung zur Registry-Einrichtung und genau
+einem Versuch übermittelt. Die aktuelle Sitzung besitzt keine administrativen
+Rechte; KEY_CREATE_SUB_KEY auf HKLM64\SOFTWARE wird mit Windows-Fehler 5 abgewiesen.
+Keine Einrichtung, operative Autorisierung, Claim-Anlage oder Quellenproduktion.
+Code/Laufzeit, Qualifikation, Quellenbindungen, Bilanz und unbenutzte Ablagen erneut
+lesend bestätigt. Fortsetzung benötigt eine regulär administrativ berechtigte
+Ausführungsumgebung, keine erneute Zustimmung zum bereits genehmigten Umfang.
+Beleg: docs/S2UC_ADMINISTRATIVE_RECHTE_20260930.json.
+
+Historische Ergänzung nach Projektleiterabnahme und lesender Vorstartprüfung:
+M1–M5 sind im geprüften Implementierungs-/Testumfang abgenommen. Alle drei
+HKLM64-Vertrauensschlüssel fehlen; tatsächliche ACLs sind deshalb noch unbestätigt.
+Code-/Laufzeitbindung, Qualifikationsdateien, Bilanz und unbenutzte Ausgaben bestätigt.
+Maßgeblicher aktueller Entscheidungsbefund:
+docs/S2UC_ENTSCHEIDUNGSVORLAGE_VORSTART_20260930.txt;
+Lesebeleg docs/S2UC_VORSTARTPRUEFUNG_20260930.json.
+Die unten enthaltenen Aussagen zur noch anstehenden Paketprüfung dokumentieren
+den vorherigen Übergabestand. Die jetzige begrenzte Abnahme ersetzt keine reale
+Einmallaufentscheidung und keine noch fehlende administrative Einrichtung.
+
+1. Entscheidung und Geltungsbereich
+
+Der P2-Testanschluss ist im genehmigten Testumfang durch den Projektleiter
+abgenommen (207/207 PASS); dies ist keine unabhängige Gesamtabnahme.
+Der anschließende direkte Auftrag erlaubt die Umsetzung M1–M5 und isolierte
+Tests. Die Implementierung liegt nun in vier zusätzlichen Dateien vor; die
+vollständige Qualifikation ist mit 226/226 PASS abgeschlossen. Eine Paketabnahme
+wird nicht vorweggenommen.
+
+Dieser Text bleibt ENTWURF, NICHT AUSFÜHRBAR und KEINE LAUFAUTORISIERUNG.
+Er erzeugt weder einen operativen Freigabedatensatz noch einen vertrauenswürdigen
+Zulassungseintrag. Reale Quellen, die vorgemerkten Ausgaben und deren Einmalverbrauch
+wurden nicht geöffnet oder belegt. Sämtliche neuen Ausführungen sind isolierte Tests.
+
+Nächster Entscheid: Projektleiter prüft das implementierte Paket mit endgültigem
+Inventar, Einzelresultaten und Ressourcenbilanz. Erst eine spätere ausdrückliche
+Einmallaufentscheidung des Benutzers kann über den Projektleiter eine konkrete
+operative Freigabe begründen. Eine Implementierungsabnahme ist keine Laufentscheidung.
+Die Grenze zwischen Entwickler, Projektleiter und Einmallaufentscheidung bleibt
+unverändert; keine automatische Fortsetzung oder Wiederholung.
+
+2. Vorgemerkte Identität, Quellen und Ausgaben
+
+Projektwurzel: C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace
+Vorgemerkte Laufidentität: s2uc-source-comparison-real-20260920-02
+Produktablage: reports/s2uc-source-comparison-real-20260920-02
+Fundstelle: tools/_s2uc_run_binding.py:16 (PREPARED_RUN_ID und PREPARED_OUTPUT).
+Dies übernimmt eine bestehende Vormerkung, vergibt keinen neuen ausgeführten Lauf
+und behauptet keine Ausführung am im Namen enthaltenen Datum. Der historische
+Lauf ...-01 bleibt unverändert NOT_EVALUABLE und darf weder fortgesetzt noch
+überschrieben werden. Vor einer späteren Laufentscheidung ist zu bestätigen,
+dass die Vormerkung weiterhin unbenutzt und nicht anderweitig verbraucht ist.
+
+Zusätzliche, hier nur vorgeschlagene Ablagen, jeweils relativ zur Projektwurzel:
+  Beobachter: reports/s2uc-source-comparison-real-20260920-02-observer
+  Nachtrag:   reports/s2uc-source-comparison-real-20260920-02-appendix
+  Zulassung:  reports/s2uc-source-comparison-real-20260920-02-admission
+Produkt, Beobachter, Nachtrag und Zulassung waren bei der lesenden Prüfung für
+diesen Entwurf nicht vorhanden, auch nicht als Symlink oder Junction. Sie wurden
+nicht angelegt. Dieser Befund ist keine Reservierung. Der spätere Vorstart muss
+alle vier Ziele, kanonische Pfade, übergeordnete Verzeichnisse und Aliasfreiheit
+erneut prüfen. Bestehende oder zweifelhafte Ziele sperren den Start; kein Löschen,
+Umbenennen oder stiller Wechsel auf eine andere Identität.
+
+Quellenumfang: ausschließlich NU-Stream 2, Fenster 0 bis 4; PCM_F32LE, mono,
+48.000 Hz, je 4.800 Samples / 19.200 Byte. Bedarfsgesteuerte Erzeugung über den
+vorhandenen prepare_nu_supplier und pcm_window(WindowSpec(2, Fenster)). Kein Cache,
+keine neue Quellenauswahl, keine Ersatzproduktion und keine Testhashübersetzung
+im späteren Produktivzweig. Die 69 gebundenen Ereignisse umfassen 58 tatsächliche
+Materialisierungen und sieben Hints in drei Geschichten. Beide Arme erhalten je
+Ereignis dieselben einmal materialisierten Werte.
+
+Originalbindungen aus dem vorhandenen P1-Quellenkontext, nicht neu erzeugte PCM:
+Quelle        Samples [Start, Ende)  NJ-Index  Original-PCM-SHA256
+nu-s02-w00    [24000, 28800)         50        50e67af67fee98adc0ccda22430178e938d4c676072852915fa45e0447031b61
+nu-s02-w01    [28800, 33600)         60        6eed63affabbb8c19d00e8a780e851418eb267beff96769108506373251c1c2a
+nu-s02-w02    [33600, 38400)         70        17c626793f126ef30b0568cd4a12186da1ed6ffc5da947c0f418916b1eeaafa8
+nu-s02-w03    [38400, 43200)         80        29d2e5a3b99945ebb6f9a7c01fa22f42441ea76bd1e0e5898ccbf5bdc2c1a1c8
+nu-s02-w04    [43200, 48000)         90        68c73c6cddd0b41cb021af744e172bda7a06b76ff4dc869c2ed2f69b245ac658
+
+Quellenkontext:
+  reports/s2uc/preparation-p1-20260930-01/attempt-01/preparation/source-context.json
+  50818 Byte; SHA256 6acb200eb1b70382969cbeb2d1c74f3e8953937d28e708eda83c6ce7a9c4a6f1
+Quellenplan:
+  reports/s2nu/s2nu-source-preseal-20260909-01/execution-plan.json
+  44937 Byte; SHA256 6e64fbd5b7e86f16156b6d68bd5f7dbda3fefa8f223b2a31114bf3293eaa5f10
+Original-Manifestdigest: a357979bf70dd6b90b0db9c7f3098e8b28fbb612e10792dcb588c6fe29062fca
+Quellen-Ausführungsdigest: 1d2787da42fe01e6bb960ad545bcfbf96a3e4abd036ce91033b325c450d7f2c7
+Halbprofil-Digest: 4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f
+Rohprofil-Digest: 5c6b2b19281a44023497b435a96b1051905af4bbac493cae7e699ea1320392c7
+Fensterfolge und vollständige Endpunktfelder bleiben exakt an das Originalmanifest
+dieses Quellenkontexts gebunden. Die P2-Testhashes aus payload_substitution sind
+keine zulässigen Original-PCM-Hashes für den vorgesehenen Reallauf.
+
+3. Bereits vorhandene endgültige P2-Fassung und Nachweise
+
+Die endgültige P2-Fassung ist über ihr vollständiges Inventar gebunden, nicht über
+einen behaupteten sauberen Git-Commit: 72 Dateien, 926690 Byte. Der vorhandene
+Arbeitsbaum enthält uncommittete Änderungen; maßgeblich sind ausschließlich
+die im Inventar erfassten aktuellen Dateibytes. Andere Dateien werden nicht
+stillschweigend als qualifiziert ausgegeben.
+Alle folgenden Belegpfade liegen unter
+reports/s2uc/p2-supplier-correction-20260930-01/ .
+
+Beleg                                      Byte    SHA256
+final/inventory.json                       14914   f71b2d1fac6fc85a1ce059bad663e76408bcaf210773d59e51d5275ded83f433
+final/test-result.json                     51205   8e6678588e3b1d8ac9594682459f7d8e1a68bf027edead16b82edbbcbc1faa19
+final/protocol.json                        16413   8a4e23798c5f4f547e761110c5d27e85cd8e39e792dc0564697957e080ff7566
+final/ledger.json                          14249   d57f69b447de214f647f024ffe9cb22cd45bdaedd432f3fabfec8ac364d3fa12
+final/retained-success/resources.json       445    17cecc10c75a18c209e5d7ba9b521175474cd5b99f52e2c99014752894961003
+final/retained-success/observer/facts.json  4614    071b49d1bc65f17b423741394467d68dcee255dda442a454a1c5e94c78f1f492
+final/retained-success/appendix/appendix-terminal.json
+                                           3912   6b939059a5dcbdb5f042d6c337127c2773b4d284b68d9f8febdeac95246a88b7
+
+207/207 PASS, 0 Fehler, 0 Fehlschläge, 0 Skips, Exit 0. Der Code war vor und nach
+dieser Vollprüfung identisch. Der ursprüngliche 203er-P2-Nachweis allein belegte
+den gebundenen Supplier noch nicht; maßgeblich ist die abgenommene Korrektur oben.
+Die Belege bleiben Testbefunde: formal_qualification=false und
+real_execution_authorized=false. Die jetzt erteilte fachliche Projektleiterabnahme
+ändert keine Bytes oder Autoritätsfelder dieser historischen Prüfartefakte.
+
+Inventaranker der P2-Anschlussdateien (alle übrigen Dateien: vollständiges Inventar):
+tools/_s2uc_p2_execution.py  15442 Byte  3414e80c9fde1b47699aeb61914b5c76359aec7d01f19635f7adf785cffd9d70
+tools/s2uc_p2_process.py      9645 Byte  dab8afd41c69565be71ebaa2cbff3c5a2c2ed22c910038e76b93b0551fb2c364
+tools/_s2uc_p2_appendix.py    6780 Byte  17637815b5df44a3637367da0717b0f140a222fede8784900e0ddd1706ca5d31
+tools/_s2uc_p2_resources.py   5477 Byte  5554810c40dbe2897c767f0c1e9e296abaa92b0c64ca92607c6f1b1c3dfdcfb2
+tests/test_s2uc_p2.py       15245 Byte  d22738b54cae6ba24315b1731becbe439f603563bfb0720fe0e62620f1c68678
+tools/s2uc_p2_check.py        5769 Byte  655e9ad5df732832c66001eb899c906a1af0eb90f15f0094ae8d182d1d804b83
+
+Gebundene Laufzeit: C:/Python314/python.exe, CPython 3.14.4, Windows x64;
+Interpreter-SHA256 7ca24f26d6e3f463419ee4f537ddd3acd312c38fe45e678cce08572f26a8bd1a.
+Native DLLs, externe Module und installierte Distributionsbytes stehen vollständig
+im Inventar. Die spätere Zulassung muss diese Identität ebenfalls prüfen.
+
+Wichtig: Dies ist die historische endgültige P2-Testfassung. Die fertige Umsetzung
+aus Abschnitt 5 besitzt das eigene endgültige Inventar und die vollständigen
+226er-Nachweise aus Abschnitt 9. Die früheren 207 PASS allein werden nicht als
+Prüfung der damals noch ungeschriebenen Ergänzungen umetikettiert.
+
+4. Ressourcenbindung
+
+Vertrag: tools/_s2uc_p2_resources.py:8 und :23, Kennung s2uc.resources.p2.
+Keine Grenzerhöhung ist vorgeschlagen. Alle Angaben sind Dateibytes; die letzte
+Spalte ist die gespeicherte Schlussbilanz des abgeschlossenen P2-Testpakets.
+
+Konto          Verbindliche Grenze/Reserve                    P2-Ist
+Code           1048576                                        926690
+Metadaten       131072                                         90398
+Static shared  1572864                                        997947
+Shared gesamt  1703936                                       1002751
+Record          245760 Reserve / 262144 absolut                192989
+Verifikation    131072 gemeinsame Reserve / 262144 absolut      77369
+Fehler           65536                                             0
+Terminal         32768                                          4804
+Minimal          16384                                             0
+Staging         245760                                             0
+Gesamt         4194304                                       2290197
+
+Gemeinsame Verifikationsreserve gilt für Produktprüfung plus Herkunftsnachtrag.
+Shared umfasst static_shared + Fehler + Terminal + Minimal und wird im Gesamt-
+konto nicht nochmals addiert. Aktivinventar je Datei maximal 16384 Byte;
+gebundenes Prüfprotokoll je Datei maximal 32768 Byte. Prospektive Abschlussreserve
+des P2-Testpakets: 2752315 Byte, getrennt von tatsächlich vorhandenen Bytes.
+Die Codegrenze lässt gegenüber P2 rechnerisch 121886 Byte frei; das ist kein
+Nachweis, dass eine noch nicht implementierte Änderung in diese Reserve passt.
+
+Der neue operative Ledger muss Zulassung/Claim, Original-Quellenkontext und -plan,
+alle verbrauchten Nachweise, Code, Beobachter, Produkt, getrennten Nachtrag,
+Fehler-/Minimalabschlüsse, Staging sowie gleichzeitig benötigte Kopien vollständig
+erfassen. Auch aufbewahrte Fälle innerhalb seines Qualifikationsumfangs zählen.
+Er muss Erfolg, Abbruch vor Produkt und Fehler nach Produkt einschließlich
+Staging und verbleibender Abschlussreserve vorab und tatsächlich prüfen.
+Die vier Zielwurzeln aus Abschnitt 2 sind dafür explizit zu erfassen; der bisherige
+P2-Testbaum allein ist keine vollständige Bilanz eines produktiven Ablaufs.
+Dokumentationsdateien oder zusätzliche Kopien zählen mit, sobald der künftige
+Starter sie als notwendige operative Eingaben verwendet. Die P2-Istwerte oben
+werden durch diesen Entwurf nicht rückwirkend verändert und sind keine neue
+Vorausmessung des Reallaufs. Ein Überlauf sperrt den Start bzw. gültigen Abschluss.
+
+Windows-Job: 640 MiB Commitgrenze ausschließlich für den Produktkindprozess,
+vor Produkt-/NumPy-Importen zugeordnet und nativ geprüft; erneute Mitgliedschafts-
+prüfung vor Supplierzugriff. Der Elternprozess und die Herkunftsauswertung sind
+dadurch nicht begrenzt. Tatsächliches Verhalten des echten NU-Generators unter
+dieser Grenze ist durch den Ersatzproduktionsfall nicht nachgewiesen.
+
+5. Implementiertes letztes Umsetzungspaket M1–M5 — zur Prüfung
+
+Vier zusätzliche Dateien, vorhandene P2-/P1-Codebytes bleiben unverändert:
+  tools/_s2uc_productive.py
+  tools/s2uc_productive_once.py
+  tests/test_s2uc_productive.py
+  tools/s2uc_productive_check.py
+Kein neuer Memoryalgorithmus, keine neue Quelle, kein geändertes Erwartungsziel.
+Die neue Prozessgrenze verwendet denselben frischen -S-Kindprozess und dieselbe
+Windows-Job-Implementierung. Legacy-/V9-/P2-Realeinstiege bleiben geschlossen.
+
+M1 — Produktiver Leser und unabhängig bestätigte Autorität.
+Fundstellen: tools/_s2uc_productive.py:50, :67, :103, :145;
+tools/s2uc_productive_once.py:16, :23, :29, :53.
+Der öffentliche Einstieg liest ausschließlich OPERATIVE_ONE_SHOT mit max_uses=1,
+festem Lauf und vier festen Ausgaben. Er bindet Autorisierungs-ID, Entscheidungs-
+referenz, vollständiges aktuelles Code-/Laufzeitinventar, P2-Ressourcenvertrag,
+Originalquellenkontext/-plan, Manifestdigest und vollständige Qualifikationsbelege.
+Alle 207 bisherigen und 19 neuen Prüfpflichten müssen vollständig PASS sein.
+Qualifikationsdateien werden selbst nach Hash, Kategorie, Größe und gemeinsamer
+Ist-/Abschlussbilanz geprüft und vollständig in die operative Bilanz übernommen.
+
+Vertrauensursprung ist ausschließlich die feste 64-Bit-Windows-Registry unter
+HKLM\SOFTWARE\MCM_FIELD_ORGANISM\S2UC\ApprovedOneShots.
+Der Wertname ist die gebundene Laufidentität. Der unabhängig vom Freigabedokument
+hinterlegte Beleg enthält dessen exakten SHA256, Autorisierungs-ID, Entscheidungs-
+referenz und max_uses=1. Das Programm enthält keine Schreib-/Erzeugungsfunktion
+für diese Zulassungsablage. Ein Aufrufer kann ihren Pfad nicht umstellen.
+Eigentümer und DACL des Schlüssels und seiner MCM-Eltern werden nativ gelesen:
+nur Administratoren oder SYSTEM dürfen schreiben, löschen oder Rechte ändern.
+Fehlende, nicht lesbare, fremd beschreibbare, unerwartete oder abweichende Belege
+sperren. Die OS-Vertrauensgrenze bleibt HKLM\SOFTWARE; ein kompromittierter
+Administrator oder manipuliertes Betriebssystem wird nicht technisch ausgeschlossen.
+
+Die spätere Einrichtung dieses separaten Belegs ist eine operative Handlung durch
+den ausdrücklich entscheidungsberechtigten Betreiber nach der Laufentscheidung.
+Der Entwickler und dieser Entwurf bestätigen die eigene Vertrauenswürdigkeit nicht.
+Heute wurde weder dieser Beleg noch ein gültiges operatives Freigabedokument erzeugt.
+ISOLATED_TEST ist ein separater Leser mit S2UC-P3-TEST-Identitäten und eigenen
+p3-test-Verzeichnissen. Der öffentliche Einstieg weist diese Zulassungen ab.
+Auch der Test-Kindprozess prüft seine Ausgabedomäne vor dem ersten Belegschreiben.
+
+M2 — Originalquellenzweig.
+Fundstellen: tools/_s2uc_productive.py:175, :205, :257;
+tools/s2uc_productive_once.py:117.
+Der produktive Kindpfad konstruiert intern context.prepare_nu_supplier und hat
+keinen Supplier-Parameter. Originalmanifest und Original-PCM-Hashes werden nicht
+übersetzt. Native Jobmitgliedschaft und persistenter Claim werden vor Zugriffen
+geprüft. Ersatzproduktion und Hashübersetzung existieren nur im technisch getrennten
+Testpfad mit Testkennzeichnung; ein Originalhash-Negativtest bricht vor Rezeptoranalyse
+ab. Ein erfolgreicher Originalquellenlauf wird daraus nicht behauptet.
+
+M3 — Persistenter exklusiver Einmalverbrauch.
+Fundstellen: tools/_s2uc_productive.py:160, :170;
+tools/s2uc_productive_once.py:152.
+Die exklusive Anlage der festen admission-Wurzel verbraucht den Versuch. Der Claim
+wird exklusiv geschrieben und mit flush/fsync gesichert, bevor Job oder Kindprozess
+starten. Konkurrenz, Prozessneustart, unvollständiges Speichern, Jobfehler, Timeout
+und Abbruch erlauben keinen zweiten Versuch. Bereits vorhandene Ausgabewurzeln
+sperren. Es gibt weder automatische Wiederholung noch einen Ersatzlaufpfad.
+
+M4 — Produktive Produkt- und Herkunftsleser.
+Fundstellen: tools/_s2uc_productive.py:259, :276, :281, :307, :313, :334, :336;
+tools/s2uc_productive_once.py:193.
+Die vorhandenen Materialisierungs-, technischen Verifikations-, Erwartungs- und
+Herkunftsalgorithmen werden wiederverwendet. Der öffentliche Einstieg schließt nach
+dem Produkt einen getrennten Herkunftsnachtrag. Produktstatus CLOSED_ORIGINAL_P3_VERIFIED,
+Herkunftsstatus EVALUATED_ORIGINAL und Nachtragsstatus CLOSED_ORIGINAL_P3_PROVENANCE
+sind eigene Schemata mit Originalbindungen. Teststatus bleiben CLOSED_TEST_P3_*
+und EVALUATED_TEST. Originalproduktbytes werden nicht durch den Nachtrag geändert.
+Nachtragsfehler werden getrennt NOT_EVALUABLE; sie wiederholen keine Quellen.
+
+M5 — Qualifikation und konkrete Abnahmekriterien.
+Fundstellen: tests/test_s2uc_productive.py:27; tools/s2uc_productive_check.py:49.
+Q1: falsche Autorität, unabhängige Freigabereferenz, Zugriffsrechte, Bindungsänderung,
+    falsche Laufzeit, vollständige Prüfpflichten und gebundene Ressourcenbilanz.
+Q2: Originalmanifest, kein Supplier-Argument und Originalhashfehler vor Rezeptor/NJ.
+Q3: Testdomäne und Ausgaben technisch von der realen Identität getrennt.
+Q4: konkurrierende Prozesse, Neustart, beschädigter/teilweiser Claim, Abbruch,
+    Timeout und Jobfehler; höchstens ein Versuch, kein Retry.
+Q5: echte native Jobprüfung, gefälschte/fehlende Jobaufnahme und Codebindungen
+    vor Produktimport; 640 MiB ausschließlich im Kindprozess.
+Q6: vollständiger synthetischer Produkt-/Herkunftsabschluss, unveränderte Erwartungen,
+    nicht austauschbare Leser, Originalbyteänderungen, Typfehler und Nachtragsfehler.
+Q7: alle vier Wurzeln, Kopien, Hardlinks, Staging, Grenzgleichheit/Überlauf und
+    unveränderte P2-Limits samt getrennter Ist-/Abschlussreservierung.
+
+Gesamtnachweise werden unter reports/s2uc/p3-implementation-20260930-01 abgelegt.
+Die vollständige Prüfung umfasst 226/226 PASS. Endgültiges Ergebnis, unveränderte
+Codefassung und gemessene Bilanz sind in Abschnitt 9 gebunden.
+
+6. Einmalversuch und Verbrauch — implementierte Regel, operative Nutzung gesperrt
+
+Reihenfolge: ausdrückliche Laufentscheidung erhalten -> read-only Vorstart mit
+Hash-/Pfad-/Ressourcenprüfung -> exklusiver persistenter Claim -> frischer -S-
+Kindprozess -> native Jobaufnahme und Code-/Autorisierungsprüfung -> Produktimporte
+-> Originalsupplier -> Produktabschluss -> separater Herkunftsnachtrag.
+
+Der eine Versuch wird spätestens mit exklusiver Claim-Anlage verbraucht, vor Job
+und Supplier. Ab dann konsumieren auch Jobfehler, Timeout, Prozessabbruch, keinerlei
+erzeugtes PCM oder fehlgeschlagene Veröffentlichung dieselbe Autorisierung endgültig.
+Ein vorhandener, beschädigter oder unvollständiger Claim ist kein Beleg für freien
+Verbrauch. Unklarer Verbrauchszustand bleibt gesperrt. Kann die Persistenz vor dem
+Prozessstart nicht zuverlässig abgeschlossen werden, startet kein Kindprozess und
+es gibt keinen automatischen Wiederholungsversuch. Die Vorprüfung ohne gültige
+Autorisierung startet und verbraucht keinen realen Quellenversuch.
+
+Ein fehlendes Terminal bedeutet nicht, dass wiederholt werden darf. Ein Nachtrag
+darf keinen zweiten Quellenlauf auslösen. Kein Resume, Retry, Warmup oder neuer
+Quellenlauf unter einer Ersatz-ID aus diesem Entwurf. Ein weiterer realer Versuch
+würde eine eigene ausdrückliche Entscheidung und eine neu geprüfte Identität
+benötigen. Manipulationssicherer Schutz gegen manuelles Löschen/Wiederherstellen
+des gesamten Dateisystems wird durch das vorhandene Einmalprotokoll nicht behauptet.
+
+7. Auswertungskriterien — keine nachträgliche Anpassung
+
+Technische Zulässigkeit und fachliche Ergebnisse sind getrennt. Eine technische
+Auswertung setzt vollständigen, bytegebundenen Produktabschluss voraus: exakt 69
+Ereignisse, 58 erfolgreiche Originalquellenmaterialisierungen mit den gebundenen
+Hashes/Profilen/Zeitpunkten, geschlossene Owner, gültige Verifikation und Terminal,
+vollständiger Ledger innerhalb aller Grenzen und konsistente Prozessbelege.
+Ein erwartungswidriger fachlicher Befund allein ist kein technischer Abbruch.
+
+Fehlende Autorisierung/Zulassung, Identitäts- oder Hashabweichung, unvollständige
+Quellen-/Ereignisfolge, offener Owner, fehlendes/defektes Terminal, Budget-/Staging-
+Überlauf oder nicht überprüfbare Belege verhindern gültige abhängige Ergebnisse:
+NOT_EVALUABLE, Primärfehler erhalten; keine geschätzten Gewinne oder Verluste.
+Bei einem reinen Nachtragsfehler bleibt ein gültiger Produktabschluss unverändert,
+aber der Herkunftsbefund NOT_EVALUABLE bzw. nicht vollständig bestimmbar. Kein
+Nachtrag repariert rückwirkend einen ungültigen Produktabschluss. Keine Verrechnung
+von Produktstatus, Erwartungserfüllung und Herkunftsstatus zu einem Erfolgssignal.
+
+Unveränderte historische Erwartungen, Reihenfolge TW / Kandidatenarm:
+g1/12  TRACE_MATCH / TRACE_MATCH
+g1/24  ABSTAIN_AMBIGUOUS_RETAINED_TRACE / TRACE_MATCH
+g1/26  TRACE_MATCH / ABSTAIN_NO_RETAINED_TRACE
+g2/38  TRACE_MATCH / ABSTAIN_NO_RETAINED_TRACE
+g3/60  TRACE_MATCH / TRACE_MATCH
+g3/67  TRACE_MATCH / ABSTAIN_NO_RETAINED_TRACE
+g3/69  TRACE_MATCH / TRACE_MATCH
+Fundstelle: tools/_s2uc_evaluation.py:4. Der synthetische TW-Widerspruch bei g1/24
+bleibt als historischer Befund erhalten; die reale Entscheidung wird nicht vorweg-
+genommen. Erfüllte/verletzte Erwartungen werden separat und vollständig berichtet.
+
+Unveränderte Herkunftsziele und Hintoffsets:
+g1/12  A aus g1-p1 oder g1-p2, Offset 1
+g1/24  A aus g1-p1 oder g1-p2, Offset 2
+g1/26  B aus g1-p3, Offset 0
+g2/38  A aus g2-p1, Offset 1
+g3/60  A aus g3-p1, Offset 2
+g3/67  A aus g3-p1, Offset 2
+g3/69  B aus g3-p3 oder g3-p4, Offset 0
+Fundstellen: tools/_s2uc_run_binding.py:19 und tools/_s2uc_provenance_evaluation.py:21.
+Korrekt ist nur der eindeutige Abruf des gebundenen Zielursprungs; gleiche Werte
+allein genügen nicht. Für alle sieben Hints werden Abruf, anderer Abruf,
+Mehrdeutigkeit oder Enthaltung und die konkrete Herkunft belegt. Gewinne,
+Verluste, Erhaltung und Verdrängung sind getrennt nachzuweisen, ohne Nettoverrechnung.
+Die unterschiedlichen Slotaufteilungen begrenzen weiterhin die Ursacheninterpretation.
+Keine neuen Schwellen, Memoryfunktionen oder allgemeine Überlegenheitsbehauptung.
+
+8. Voraussetzungen der späteren gesonderten Laufentscheidung
+
+Vorhanden: abgenommener P2-Testanschluss, feste Originalquellen-/Zielstruktur,
+Original-PCM-Hashes, unveränderter Ressourcenvertrag und Implementierung M1–M5.
+Die Paketabnahme erfolgt erst durch den Projektleiter anhand der vollständigen
+Qualifikation. Nicht vorhanden sind eine ausdrückliche Einmallaufentscheidung,
+ein gültiger operativer Freigabedatensatz und dessen unabhängig bestätigter
+Zulassungseintrag. Keine dieser Voraussetzungen wird durch Testfixtures ersetzt.
+
+Nicht durch Ersatzproduktion belegt: Reproduktion der echten Original-PCM-Bytes,
+tatsächliches Generatorverhalten unter der Jobgrenze und reale Herkunftsergebnisse.
+Vor jeder späteren Laufentscheidung müssen endgültige Code-/Runtime-/Quellen-/
+Qualifikationshashes und Gesamtbilanz feststehen. Der konkrete Vorstart prüft
+zusätzlich die weiterhin unbenutzten kanonischen Ablagen und die gemeinsame Bilanz
+aller dann konsumierten Eingaben einschließlich Freigabedokument und Claimreserven.
+Die geschlossene Testbilanz ist keine Vorausmessung des späteren Quellenlaufs.
+Änderungen an gebundenem Code oder Belegen entwerten deren konkrete Bindung.
+
+9. Endgültige technische Qualifikation und Prüffassung (30.09.2026)
+
+226/226 PASS: bisherige 207 plus 19 neue Prüfpflichten Q1–Q7.
+0 Fehler, 0 Fehlschläge, 0 Skips, Exit 0; Vollprüfung 1725,614 Sekunden.
+Code/Laufzeit vor und nach der Vollprüfung identisch; anschließend sämtliche
+76 Codehashes erneut statisch abgeglichen. 72 P2-Codedateien, 68 vorherige
+P2-Nachweisdateien und 2296 historische Dateien unverändert. Keine neue
+unabhängige Gesamtabnahme und keine formale Laufautorisierung.
+
+Endgültige Fassung: s2uc.productive.v1; vollständiges Inventar ist maßgeblich,
+kein behaupteter sauberer Git-Commit. 76 Dateien, 978115 Byte; Codegrenze 1048576,
+verbleibend 70461 Byte. Aktivinventar 15805 / 16384 Byte; Protokoll 17587 / 32768.
+Laufzeit: CPython 3.14.4, C:/Python314/python.exe, Windows x64. Interpreter,
+NumPy-Distributionsbytes, Python-DLL, kernel32.dll, psapi.dll und advapi32.dll
+sind im endgültigen Inventar gebunden. Externe Laufzeit ist kein Projekt-Codebytekonto.
+
+Belegpfade relativ zur Projektwurzel, Größen und SHA256:
+reports/s2uc/p3-implementation-20260930-01/inventory.json
+  15805 Byte; SHA256 c7f5b9c99c86394969912a68e817925f7168cb2b3827da9b82c512e31275fe42
+reports/s2uc/p3-implementation-20260930-01/test-result.json
+  54681 Byte; SHA256 38a0cdac2c779ada26c32bf9005e3ad73380041dda91ff628b62a262d2b645c8
+reports/s2uc/p3-implementation-20260930-01/protocol.json
+  17587 Byte; SHA256 27c0aa07ce0cec9a5b15424e16e10369c6f2b038cae9c7e9df9805fbfe3ff446
+reports/s2uc/p3-implementation-20260930-01/ledger.json
+  12047 Byte; SHA256 a22f04424b506c215116144e992d1d73b4f1bc89c105bba1cb9d00808263f173
+reports/s2uc/p3-implementation-20260930-01/preservation.json
+  23171 Byte; SHA256 e4886babea22b7c3c52dbf29c628b67513d6c62e31d445e7798decf66e2281d5
+reports/s2uc/p3-implementation-20260930-01/REPORT.txt
+  6399 Byte; SHA256 3a946d67f0c7004e3f4e7a00b3b54d10f9abc58c3a272303c497f57eb2a28105
+reports/s2uc/p3-implementation-20260930-01/result.json
+  441 Byte; SHA256 385daa722e6073f5beab5043c56690383c2e55fd7f3e98518734c25b6a3f642e
+
+Vier zusätzliche Codefassungen (übrige 72 Dateien unverändert, siehe Inventar):
+tests/test_s2uc_productive.py
+  16576 Byte; SHA256 b0320e60dc90a75603c87ea3612347ded60f9c8f0e7d796f0f7067d57f40ef26
+tools/_s2uc_productive.py
+  18527 Byte; SHA256 4be15c5e0da915f17f7566b4f00e967dd831d36c4871272ff3569c2f361c0d05
+tools/s2uc_productive_check.py
+  4926 Byte; SHA256 3a809403ce2ba51c3cf0fbdb0a7670b60cd6607e1f6805be1554e394ef0bca04
+tools/s2uc_productive_once.py
+  11396 Byte; SHA256 5a8196b2bc30eb6165ced1a2522e779da576ec3e6064d8854f5e24e4354cc52a
+
+Gemessene gemeinsame Schlussbilanz einschließlich Abschlussbericht:
+  code: 978115 Byte
+  error: 223 Byte
+  metadata: 55432 Byte
+  minimal: 0 Byte
+  record: 2453 Byte
+  staging: 0 Byte
+  static_shared: 936393 Byte
+  terminal: 223 Byte
+  verification: 386 Byte
+  Shared gesamt: 936839 Byte
+  Gesamt: 1973225 / 4194304 Byte
+  Prospektive Abschlussreserve gesamt: 2707220 / 4194304 Byte
+Ist und Reserve erfüllen alle unveränderten P2-Grenzen. Der gespeicherte Fall ist
+ein Originalhash-Negativtest: ein Ersatz-PCM-Aufruf, null Rezeptoranalysen, null
+NJ-Projektionen, NOT_EVALUABLE. Der genaue Testpfad steht in result.json. Dieser
+Testclaim hat weder die reale Identität noch eine ihrer vier Ablagen verbraucht.
+Die vier realen Ablagen wurden nach Abschluss erneut auf Nichtvorhandensein,
+Symlinks und Junctions geprüft; sie bleiben unbenutzt.
+
+Die Bilanz ist die gemessene Schlussbilanz des abgeschlossenen Testpakets, keine
+Vorausmessung echten Quellenverhaltens. Der produktive Vorstart übernimmt alle
+konsumierten Qualifikationsdateien in seine Bilanz und prüft zusätzlich die dann
+vorliegenden operativen Eingaben. Der 640-MiB-Job begrenzt ausschließlich das Kind,
+nicht Elternprozess oder Herkunftsauswertung. Ein erfolgreicher Originalquellenlauf
+und die echten Generatorressourcen bleiben unbewiesen.
+
+Forschungsweg, README und Quellenvergleich sind auf diese fertige Prüffassung
+aktualisiert. Frühere P2- und V9-Stände bleiben als Basis/historische Befunde erhalten.
+Nächster Schritt ist die Projektleiterprüfung des implementierten Pakets anhand
+dieser Belege. Eine anschließende ausdrückliche reale Einmallaufentscheidung bleibt
+separat; dieser Entwurf autorisiert weder ihre Einrichtung noch ihre Ausführung.

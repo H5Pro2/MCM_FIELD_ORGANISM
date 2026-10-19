@@ -1,0 +1,10 @@
+{
+  "sha256": "cd452bee76ea2b1b64c920afdd9c70211e5ba7abc7207049f4e7e280e5703f6c",
+  "bytes": 160000,
+  "recipe_sha256": "bc4cc1bf0f2ea451da18060eea4548e8b1386d3a5a2e27c63a831fc661030ba6",
+  "recipe_preceded_matrix": true,
+  "rows": 10000,
+  "columns": 16,
+  "draws_per_orientation": 8,
+  "selection_attempts": 1
+}

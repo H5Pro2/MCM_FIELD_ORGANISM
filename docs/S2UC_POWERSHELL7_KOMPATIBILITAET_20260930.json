@@ -1,0 +1,72 @@
+{
+  "observed_at": "2026-09-30T12:48:17.586886+00:00",
+  "host": "C:\\Users\\TV\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "version": "7.6.5",
+  "execution_policy": "RemoteSigned",
+  "policy_changed": false,
+  "script": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\docs\\Setup-S2UCRegistry.ps1",
+  "sha256": "83d3024a0c725d8b61f442c84ad023673359c3d3aed1161e00b747783519655e",
+  "checks": [
+    {
+      "mode": "SelfTest",
+      "exit_code": 0,
+      "result": {
+        "native_sddl": true,
+        "rejected_content": 2,
+        "status": "SELFTEST_PASS",
+        "registry_opened": false,
+        "registry_changed": false,
+        "accepted_security": 1,
+        "rejected_security": 5,
+        "native_sa_bytes": 24
+      },
+      "stderr": ""
+    },
+    {
+      "mode": "Inspect",
+      "exit_code": 2,
+      "result": {
+        "keys": [
+          {
+            "path": "SOFTWARE\\MCM_FIELD_ORGANISM",
+            "exists": false,
+            "verified": false
+          },
+          {
+            "path": "SOFTWARE\\MCM_FIELD_ORGANISM\\S2UC",
+            "exists": false,
+            "verified": false
+          },
+          {
+            "path": "SOFTWARE\\MCM_FIELD_ORGANISM\\S2UC\\ApprovedOneShots",
+            "exists": false,
+            "verified": false
+          }
+        ],
+        "status": "MISSING_KEYS",
+        "registry_changed": false,
+        "view": 64,
+        "mode": "Inspect"
+      },
+      "stderr": ""
+    },
+    {
+      "mode": "Install",
+      "exit_code": 1,
+      "result": {
+        "no_automatic_rollback": true,
+        "sources_started": 0,
+        "claims_created": 0,
+        "authorization_values_written": 0,
+        "created": [],
+        "mode": "Install",
+        "error": "ADMINISTRATOR_TOKEN_REQUIRED",
+        "status": "STOPPED"
+      },
+      "stderr": ""
+    }
+  ],
+  "operative_code_hashes_unchanged": 76,
+  "setup_complete": false,
+  "uac_required": true
+}

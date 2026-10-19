@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "workflow": "0f057ea1-94b9-496c-a771-0987161a1186",
+  "audit_bindings": 358,
+  "prestart_sha256": "28a1b008daaa9663a3f7ce3f403dc631526c0f7f78c2cebe82f8d89962e3dc13",
+  "prestart_files": 2995,
+  "prestart_qualification": 98,
+  "cases": 32,
+  "arms_checked": 64,
+  "complete_multisets_equal": true,
+  "missing": 0,
+  "unsupported": 0,
+  "duplicate_records": 0,
+  "multi_assigned_within_arm_targets": 0,
+  "new_mapping_tests": 12,
+  "inherited_semantic_tests": 12,
+  "inherited_tests_rerun": false,
+  "totals_reconciled": true,
+  "historical_preservation": {
+    "zw1-comparison-16h-01/delivery-closure.json": {
+      "files": 155,
+      "sha256": "bad2f49c9f46a5e743767c0ee37091ddde7e254d6b5063050ae1c941965c2731",
+      "status": "UNCHANGED"
+    },
+    "er1-v2-comparison-16h-01/delivery-closure.json": {
+      "files": 139,
+      "sha256": "fc0633293f9c5d92e45e69cca9d1959c546d2252abce2c1daa8c76da90ed4bbd",
+      "status": "UNCHANGED"
+    },
+    "er1-comparison-16h-01/delivery-closure.json": {
+      "files": 43,
+      "sha256": "6e46989d5920a269f3ed2e313e57101b8637950bac4b29f340fb14735a2a56bb",
+      "status": "UNCHANGED"
+    },
+    "er1-v2-witness-audit-20261018-03/delivery-manifest.json": {
+      "files": 41,
+      "sha256": "71eb768ffc30ee15144df276c0f105a4f875bc19a7ec86b8a54e580f36314392",
+      "status": "UNCHANGED"
+    }
+  },
+  "method": "Hash checks and arithmetic reconciliation of audit reports only; no second archive decoding"
+}

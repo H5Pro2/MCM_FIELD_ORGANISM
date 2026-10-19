@@ -1,0 +1,32 @@
+{
+  "status": "COMPLETE_ARCHIVE_DIAGNOSIS",
+  "files": {
+    "chains.json": {
+      "bytes": 202223,
+      "sha256": "ec7d7cdbdf93163af651f6fff3e698bfa501858ac9c4256bc627eff60d224f07"
+    },
+    "decisions.csv": {
+      "bytes": 3089,
+      "sha256": "a87de8f05d9e6572d7907503e052b2ead5f0a2008e6bdf61ff8a91257ffcbc91"
+    },
+    "indistinguishable-prefix.json": {
+      "bytes": 544,
+      "sha256": "c2d5d26bebfc92974285b7ead2091f10528b3c5114f829c258df9a319dfda003"
+    },
+    "REPORT.md": {
+      "bytes": 13296,
+      "sha256": "433fb643efc68b90d2b9d293a72d55a10520fcd0efed833682019ca3e7cbffc9"
+    },
+    "t1-extra-five.json": {
+      "bytes": 18518,
+      "sha256": "5d810ded9e51faf5efa1ec4e4039db1b63c4ce37e0e852f77c5627c9aaafed41"
+    },
+    "verification.json": {
+      "bytes": 839,
+      "sha256": "d986781605504a1323eae950938afff6d1974c1cf3ccac0e0986f8c093d90244"
+    }
+  },
+  "archive_closure_sha256": "85ef6239c3e3fc8e161284c9ffbe19ddbdcb06bc1201e73850f04862c807a769",
+  "replays": 0,
+  "source_materializations": 0
+}

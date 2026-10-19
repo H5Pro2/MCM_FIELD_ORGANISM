@@ -1,5 +1,1505 @@
 # Dokumentationsübersicht
 
+## Aktuell: Exportengpass kuenstlich belegt; getrennte Budgetkorrektur geprueft (2026-10-19)
+
+Die feste kuenstliche Exportlast umfasste2351 Schreiboperationen und417 Nutzdateien.
+Unveraenderte RW1-Budgetverwaltung:214,272s, davon208,428s fuer14106 Scans.
+Getrennte inkrementelle Variante:58,351s fuer dieselbe Schreibfolge plus0,349s
+Initialisierung/Abgleich; acht budgetinterne Scans. Alle417 Nutzdateien bytegleich,
+Buchfuehrung und unabhaengiger Bestand stimmen ueberein.22 gezielte Fehlerpruefungen
+und ein echter Supervisor-/Worker-Schreibtest mit40 Anhaengen bestanden.
+
+Neue Variante unter experiments/rw1_budget: initialer Bestand, gemeinsames Lock,
+dauerhaftes BEGIN/COMMIT-Journal, Grenzen vor Schreiben, Sperre bei Teilfehlern,
+unabhaengiger Schlussabgleich. Historischer RW1-Code und Archive unveraendert.
+Keine Rezeptor-, NJ- oder Policy-Ausfuehrung; keine Forschungsdaten als Testmaterial.
+Alle Diagnoseprozesse blieben unter512MiB/2Prozessen/240sWorker/300sSupervisor.
+Der Vorteil gilt fuer diese synthetische Exportlast; volle RW1-Laufzeit ungeprueft.
+
+Naechster Vorschlag: begrenzte technische Anbindung an alle RW1-Schreiber mit
+kuenstlicher Anschlusspruefung und derselben Start-/Verbrauchssperre. Keine neue
+Forschungsfreigabe. RW1 bleibt TECHNICAL_FAILURE, Berechtigung verbraucht,
+S1-S4 unbewertet. Keine nachtraegliche wissenschaftliche Teilauswertung.
+
+[Diagnose und Vergleich](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/rw1-budget-diagnosis-20261019-01/REPORT.txt).
+Aeltere Abschnitte sind historische Zeitstaende.
+
+
+## Aktuell: RW1 einmalig technisch abgebrochen; Berechtigung verbraucht (2026-10-19)
+
+RW1 endete mit TECHNICAL_FAILURE an der festen Zeitgrenze.390 Rezeptor- und390
+NJ-Aufrufe sind jeweils vollstaendig abgeschlossen; zwei Quellen erzeugt.
+Fuenf Arme und fuenf Referenzen gestartet, vier je Typ regulaer geschlossen.
+Aufnahmezaehler48+48, Prognosezaehler21; vier gespeicherte Armarchive enthalten
+20 Entscheidungen. Der Prognosezaehler ist KEIN Beleg unabhaengiger Pruefung.
+Die vollstaendige unabhaengige Auswertung wurde nicht erreicht: S1-S4,
+neun Kollisionsvergleiche und wissenschaftliches Haupturteil bleiben unbewertet.
+Keine Nutzen- oder Negativnutzenbehauptung aus dem technischen Teilablauf.
+
+Supervisor inklusive technischer Abschlussbindung242,338s (unter300s);
+Worker an240s-Grenze beendet, Prozessressourcen freigegeben. Jobpeak150474752
+Bytes unter512MiB. Verbrauchsmarker und Abschlussbelege gesichert; kein Retry,
+keine Ersatzquellen, keine Codeaenderung oder erneute Ausfuehrung.
+
+Naechster Vorschlag: getrennt beauftragte technische Engpasspruefung der
+Export-/Zaehlerverwaltung mit kuenstlichen Dateien und Mock-I/O. Die Material-
+phase beanspruchte laut Dateizeitstempeln etwa222,65s nach Worker-Eintritt;
+rekursive Dateibaumpruefungen sind ein statischer Verdacht, keine bewiesene Ursache.
+Keine Wiederverwendung dieser Einmalfreigabe; neue Forschungsentscheidung erst
+nach geklaerter technischer Tragfaehigkeit. Historisches UNPROVEN unveraendert.
+
+[RW1-Abbruchbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/rw1-research-01/closure/REPORT.txt).
+Aeltere Abschnitte sind historische Zeitstaende.
+
+
+## Aktuell: RW1 technisch vorbereitet; Forschung weiterhin gesperrt (2026-10-19)
+
+Der abgenommene RW1-Vertrag ist unveraendert umgesetzt: separater ueberwachter
+Forschungseinstieg, Observerauswertung S1-S4 und neun Kollisionspaare,
+unabhaengige Archivrekonstruktion, Freeze-/Zugriffsbelege, N/T-Bank-/Kernvergleich,
+Zaehler, Cleanup und Abschlussbindung. Qualifizierter Auswahlkern unveraendert.
+C1-C6 bestanden im finalen kuenstlichen Prueflauf c1-c6-03 (148 Checks).
+Kleine Adapterfixture:22 Policy- und22 Referenzaufnahmen,10 Entscheidungen;
+Mock-Archivpruefung und unabhaengige Einzelwert-/Urteilspruefung bestanden.
+Ein Fixturefehler im ersten Versuch wurde dokumentiert und korrigiert.
+Keine RW1-PCM-Erzeugung, keine Rezeptor-/NJ-Aufrufe, kein Neutralgesamtversuch
+und kein Forschungslauf. Keine Forschungsberechtigung ausgestellt oder verbraucht.
+
+Naechster Schritt: Projektleiter bewertet die technische Lieferung und entscheidet
+ueber genau einen separat autorisierten RW1-Forschungslauf. Der vorbereitete
+Startbefehl sperrt ohne diese Berechtigung vor Materialerzeugung.
+Historischer Neutralverbrauch unveraendert; UNPROVEN bleibt erhalten.
+Kein Forschungsnutzen, keine allgemeine Verschiebungsrobustheit oder feldinterne
+Memory aus den kuenstlichen Pruefungen abgeleitet. AS480 und Fehlerzweig geschlossen.
+
+[Technischer Bericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/rw1-development-20261019-01/REPORT.txt).
+[Vorbereiteter Start](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/rw1-development-20261019-01/PREPARED_START.txt).
+Aeltere Abschnitte sind historische Zeitstaende.
+
+
+## Aktuell: Forschungspruefvertrag Rasterwiedererkennung vorgelegt (2026-10-19)
+
+Die technische Gesamtqualifikation ist abgenommen. Der neue Vertrag RW1 legt
+zwei neue Quellen, sechs Eigen-/Fremdfaelle bei 0/480/2400 Samples und N gegen T
+mit observerseitiger Persistenz fest. Erfolg erfordert Zusatztreffer in beiden
+verschobenen Eigenfaellen, keine zusaetzliche Fremdzuordnung, erhaltene korrekte
+Kontrollen und strikt geringeren mittleren Hauptzielfehler gegen N und P.
+Hinweiskollisionen, fehlender Zusatznutzen und technische Fehler bleiben getrennt.
+
+Nur Dokumentation erstellt: keine PCM-Erzeugung, neuen Tests oder Laeufe.
+390/390 Aufrufe, 12 Arme plus 12 Referenzen, 132+132 Aufnahmen und 60 Pruefungen
+sind der vorgesehene spaetere Umfang, kein neuer Ausfuehrungsnachweis.
+Naechster Schritt nach Vertragsabnahme: separater Forschungseinstieg und
+Observerauswertung (R1-R3) mit gezielten kuenstlichen Anschlusspruefungen C1-C6.
+Eine Forschungsausfuehrung braucht anschliessend eine eigene Einmalfreigabe.
+Die Neutralberechtigung bleibt verbraucht, historisch bleibt UNPROVEN.
+AS480 abgeschlossen; U unveraendert; Fehlerzweig geschlossen. Keine allgemeine
+Verschiebungsrobustheit, Erfahrungsverdichtung oder feldinterne Memory belegt.
+
+[Vertrag](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/S2UC_RASTERWIEDERERKENNUNG_FORSCHUNGSPRUEFVERTRAG_20261019.txt).
+[Dokumentationsbelege](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/raster-recognition-contract-documentation-20261019-01/REPORT.txt).
+Aeltere Abschnitte sind historische Zeitstaende.
+
+
+## Aktuell: Zeitliche Ausrichtung technisch gesamtqualifiziert (2026-10-19)
+
+Der neue Einmalauftrag6d248902 wurde einmal vollständig neutral ausgeführt:
+390 Rezeptor-/390 NJ-Aufrufe, zwölf Arme und zwölf Referenzen mit je132
+Aufnahmen,60 unabhängige Entscheidungsprüfungen bestanden. Alle geschlossen.
+Die27 bisherigen Entwicklungsprüfungen übernommen; acht neue Anschlussprüfungen
+bestanden. Neuer Start/Verbrauch an finalen Code, Runtime und Neutralrezept gebunden.
+Historischer Verbrauch bleibt UNPROVEN; die neue Berechtigung ist jetzt verbraucht.
+Supervisor einschließlich technischem Abschluss unter41s; Jobpeak151248896 Bytes.
+Produktive Spitzen:63 Vektorslots,76800 Byte Puffer,2991543 Byte Rezeptorarbeitsgebiet.
+Keine Forschungsausführung oder Nutzenbehauptung. Nächster Schritt: technische
+Abnahme und getrennte Entscheidung über einen vorab gebundenen Forschungsprüfvertrag.
+Kein erneuter Neutralablauf. AS480 abgeschlossen; U unverändert, Fehlerzweig geschlossen.
+
+[Qualifikationsbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/temporal-alignment-development-20261019-01/qualification-6d248902/REPORT.txt).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: Zeitliche Ausrichtung implementiert, Größenqualifikation gesperrt (2026-10-19)
+
+Kausaler Samplepuffer, historische Rasterbank, lebenszyklusgebundene Speicherung
+und exakter Zusatzabruf nach ABSTAIN_NO_APPROX_CONTEXT isoliert implementiert.
+27 künstliche Testausführungen bestanden (20+6+1), einschließlich unabhängigem
+Selektorvergleich, Originalbank-Promotion, Mehrdeutigkeit und Zukunftssperre.
+Ein künstliches Nullfenster:1 Rezeptor-/1 NJ-Aufruf; Arbeitsgebiet2993051 Bytes.
+Maximaler Fixture-Jobpeak82083840 Bytes; Worker beendet und Cleanup geprüft.
+Der formale390/390-Größenablauf wurde nicht gestartet. Der aktuelle Auftrag
+setzt einen belegten Nichtverbrauch voraus; die eigene ursprüngliche Freigabe-
+und Verbrauchszuordnung fehlt. Fehlende Dateien sind kein Nichtverbrauchsnachweis.
+Gesamtqualifikation und Forschung bleiben deshalb offen/gesperrt. Nächster
+Schritt ist diese Zuordnung, danach nur zulässige noch offene Ausführung.
+AS480 abgeschlossen; U unverändert und Fehlerbewertungszweig geschlossen.
+
+[Entwicklungsbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/temporal-alignment-development-20261019-01/REPORT.txt).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: Konzept zur historischen zeitlichen Ausrichtung vorgelegt (2026-10-19)
+
+AS480 und seine Archivdiagnose sind abgenommen und abgeschlossen;
+NO_ADDITIONAL_BENEFIT bleibt bestehen. Vorgeschlagen ist ein festes480-Sample-
+Raster vergangener Vierframe-Spuren mit exaktem Zusatzabgleich. Aktuelle Hinweise
+und Vorhersagehorizont bleiben unverändert; Mehrdeutigkeit führt zur Enthaltung.
+Technisch nur bedingt tragfähig: zusätzliche Wahrnehmungsbanken erfordern bis128
+Vektorslots statt20 und neue technische Qualifikation. Kein Versprechen fehlerfreier
+Fremdtrennung. Keine Schwellenoptimierung, Implementierung oder Versuchsausführung.
+Der Konzeptvorschlag budgetiert vergangene Samples, Projektionen, Lebenszyklus,
+Vergleich und Falsifikation. Nächste Sachentscheidung: diese Repräsentations- und
+Budgetänderung annehmen oder den Ansatz bei unveränderter18/20-Grenze verwerfen.
+Eine Forschungsberechtigung entsteht daraus nicht. U bleibt unverändert; der Fehlerzweig bleibt geschlossen.
+
+[Konzept](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/S2UC_ZEITLICHE_AUSRICHTUNG_KONZEPT_20261019.txt).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: AS480-Archivdiagnose abgeschlossen (2026-10-19)
+
+A480 besteht das Signalgate, hat keinen Exaktmatch und überschreitet mit
+Paar-L1=0.0359644722848 am vorgesehenen Offset0 die unveränderte Schwelle τ=0,03125.
+Auch Offset1/2 sind ausgeschlossen. Keine Mehrdeutigkeit; Offset0 hätte einen
+Nachfolger. Alle vier Fälle und sämtliche Kanalbeiträge sind archivbasiert
+gegenübergestellt. Acht künstliche Diagnosefixtures bestanden; keine neuen
+PCM-/Rezeptor-/NJ-/Policy-/Referenzläufe. NO_ADDITIONAL_BENEFIT bleibt bestehen.
+Nächste fachliche Entscheidung: AS480 abschließen und gegebenenfalls zeitliche
+Ausrichtung als getrennten konzeptionellen Ansatz prüfen, ohne Schwellenoptimierung.
+Einmalberechtigung verbraucht; U unverändert. Ältere Abschnitte sind historisch.
+
+[Diagnosebericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/as480-diagnosis-20261019-01/REPORT.md).
+
+
+## Aktuell: AS480 einmalig abgeschlossen – kein Zusatznutzen (2026-10-19)
+
+Die freigegebene Vierfallgegenprobe A0/A480/B0/B480 ist technisch vollständig:
+44 Rezeptor-/NJ-Aufrufe, acht Arme und acht Referenzen mit je88 Aufnahmen,
+40 unabhängige Entscheidungsprüfungen. Urteil NO_ADDITIONAL_BENEFIT.
+S1 falsch, S2 wahr, S3 wahr, S4 falsch. E=N im Hauptzielmittel
+0,0023202510123532727; P=0,00302567864944738. Keine zusätzlichen Fehlabrufe,
+keine Einzelschäden N−E/N−P, keine A/B-Hinweiskollisionen. A480 bleibt ohne Abruf.
+Lauf34,86s; Jobpeak300109824 Bytes unter512MiB, höchstens zwei Prozesse.
+Einmalberechtigung verbraucht; kein Retry, Ersatzmaterial oder Parameterwechsel.
+Vorschlag zur fachlichen Entscheidung: archivbasierte Ursachenanalyse des
+fehlenden A480-Näherungsabrufs, ohne neue Messung oder Regeländerung.
+U unverändert; Fehlerbewertungszweig geschlossen. Frühere Abschnitte historisch.
+
+[Forschungsbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/as480-comparison-01/REPORT.md).
+
+
+## Aktuell: AS480 technisch qualifiziert, Forschung nicht freigegeben (2026-10-19)
+
+Getrennter Material-/Replay-Anschluss und unabhängiges skalares Entscheidungsorakel
+implementiert. 17 künstliche Fixtures bestanden; ein vollständiger neutraler
+Größenablauf mit44 Rezeptor-/NJ-Aufrufen, acht Armen und acht Bestandsreferenzen
+(je88 Aufnahmen) sowie40 Entscheidungsprüfungen erfolgreich. Kein Forschungsfall.
+Lauf31,30s, Jobpeak299634688 Bytes; harte512MiB-/Zweiprozessgrenze eingehalten.
+Erster Fixture-Start vor Tests an OpenBLAS-Allokation gescheitert; numerische
+Bibliotheken danach auf einen Thread gebunden. Fehler- und Abbruchbilanz erhalten.
+Gezielte negative Gates bestanden; erfolgreicher Größenablauf nicht wiederholt.
+Code-/Runtime-/Rezept-/Qualifikationsbindung und genauer späterer Start liegen vor.
+Forschungsberechtigung unausgestellt. Nächster Schritt: technische Abnahme und
+separate Entscheidung über einen Forschungsstart. U unverändert; Fehlerzweig zu.
+
+[Technischer Bericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/as480-neutral-qualification-20261019-01/REPORT.txt).
+Frühere Übersichtsfassungen bytegenau unter as480-neutral-qualification-20261019-01/
+historical-overviews gesichert. Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: AS480-Prüfvertrag erstellt, technische Qualifikation offen (2026-10-19)
+
+Der abgenommene statische Anschluss wird im einzelnen Audiopfad konkretisiert:
+vier frische Fälle A0/A480/B0/B480 mit festem PCM-Fensterversatz +480 Samples.
+Zwei vollständig vorab festgelegte Quellen, Lernfolge A,A, je elf Frames;
+exakter Abruf gegen signal_approx_v1, beide legacy_v1, Persistenz als Baseline.
+Geplant sind 44 Rezeptor-/NJ-Projektionen, acht Vergleichsarme und acht
+Bestandsreferenzen; zusätzlich 40 unabhängige skalare Entscheidungsprüfungen.
+Harte Gesamtgrenzen: 512 MiB gemeinsamer Windows-Job, zwei Prozesse,
+300 Sekunden einschließlich 60 Sekunden Abschlussreserve. Neue neutrale
+Qualifikation zwingend; alte AN-Nachweise ersetzen sie nicht.
+
+Nur der Prüfvertrag ist erstellt. Keine Implementierung, PCM-Erzeugung,
+Rezeptormessung, Tests oder Versuchsausführung. Identifizierbarkeitsgrenze,
+fehlender Zusatznutzen und technischer Fehler bleiben getrennte Urteile.
+Der Fehlerglättungs-/Fehlererhaltzweig bleibt abgeschlossen; U unverändert.
+Das Gesamtprojekt wird fortgesetzt. Nächste Empfehlung: fachliche Vertragsabnahme,
+danach getrennte Implementierung und neutrale Qualifikation Q1–Q5;
+eine Forschungsdurchführung benötigt weiterhin eine separate Einmallauffreigabe.
+
+[Geschlossener AS480-Prüfvertrag](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/S2UC_AS480_AUDIO_FENSTERVERSATZ_PRUEFVERTRAG_20261019.txt).
+Die vorherigen Übersichtsfassungen sind bytegenau in
+reports/s2uc/as480-contract-documentation-20261019-01/historical-overviews/
+gesichert und durch preservation.json zugeordnet. Ältere Abschnitte sind historisch.
+
+
+## Aktuell: Fehlerglättungs-/Fehlererhaltzweig abgeschlossen (2026-10-19)
+
+Der Projektleiter hat FW1 einschließlich Anschlussdiagnose abgenommen und den
+Abschluss dieses Teilzweigs entschieden. U bleibt unverändert; das Gesamtprojekt
+wird fortgesetzt. ULZ1 belegt den begrenzten Stabilitätsnutzen der Fehlerglättung
+gegenüber dem letzten Fehlerpaar bei gleicher Warmverfügbarkeit. Ein früher
+Wechselvorteil von L ist nicht nachgewiesen. FW1 ergänzt den Nutzen des Behaltens
+gegenüber dem definierten Reset; daraus folgt kein isolierter Altersnutzen.
+Keine weitere FW1-/ULZ1-Wiederholung oder Variantenserie ist beauftragt.
+
+Aktueller Auftrag: statischer Abgleich zur Wiedererkennung variierender
+Wahrnehmungsverläufe über den tatsächlichen Rezeptorpfad. Der vorhandene
+AN-EVAL-Nachweis umfasst bereits additive PCM-Störungen vor Rezeptor und NJ,
+mit R3-Fortsetzungsschaden und N3-Identifizierbarkeitsgrenze. Er wird übernommen.
+Ein begrenzter Anschlussvorschlag betrifft ausschließlich den Audiopfad und eine
+feste Verschiebung des Fensterbeginns. Dies ist eine offene Konzeptempfehlung,
+keine Implementierungs-, Materialisierungs-, Mess- oder Versuchsfreigabe.
+
+Belege: [ULZ1-Abschluss](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ulz1-assessment-20261004-01/REPORT.md),
+[FW1-Diagnose](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/fw1-diagnosis-20261019-02/REPORT.txt),
+[AN-EVAL](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/an-eval-analysis-20261001-01/REPORT.txt).
+Die vorherigen Übersichten sind bytegenau unter
+reports/s2uc/research-branch-closure-documentation-20261019-01/historical-overviews/
+gesichert; preservation.json ordnet die bisherigen Lieferbindungen zu.
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: FW1-Anschlussdiagnose abgeschlossen (2026-10-19)
+
+Alle 16352 Ziele überschneidungsfrei eingeordnet; Gesamtbilanz exakt reproduziert.
+2274 Ziele mit unterschiedlicher Warm-/Kaltverfügbarkeit enthalten sämtliche
+1628 Gewinne und 646 Schäden (Fehlerdifferenzsumme KEEP minus RESET -491/2).
+552 Ziele mit gleicher Verfügbarkeit und unterschiedlichen Bewertungen nach
+Feedback zeigen gleiche Vorhersagefehler. 13526 Ziele haben identische Werte.
+47 Kategorie-1-Ziele enthalten kalte und bereits aktualisierte abweichende
+Hypothesen zugleich; keine behauptete Einzelursache. 10917 leere Mengen enthalten.
+15 künstliche Fixtures bestanden, vorhandene Archive ausgewertet; keine Policy-,
+Referenz- oder Bootstrapwiederholung. Ein Formatfehler vor Fallabschluss dokumentiert.
+Historische Bindungen erhalten, bisherige Übersichten bytegenau gesichert.
+Anschlussvorschlag: fachliche Bewertung des Kaltstartbefunds vor neuer Variante.
+
+[Diagnose und Belege](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/fw1-diagnosis-20261019-02/REPORT.txt).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: FW1 abgeschlossen – Behalten gegenüber Reset gestützt (2026-10-18)
+
+Einmaliger gebundener Forschungsversuch TERMINAL_COMPLETE: 16/16 Quellenpaare,
+64 frische Policy-Arme sowie jeweils 64 bestandene Live- und Archivreferenzen.
+Alle 32 Forschungsquellen vor Armstart unabhängig geprüft und versiegelt;
+Paarquittungen, Bestandsidentität und Cleanup vollständig bestätigt.
+Primärwert BEHALTEN minus RESET: -491/32704 = -0,0150134540 MAE.
+Nominales 95%-Intervall: [-0,0162365460; -0,0137750734], vollständig unter null.
+Unabhängige Statistikreferenz stimmt exakt überein; NUTZEN_GESTUETZT für die
+festgelegte gleichgewichtete Quellenmischung, keine allgemeine Überlegenheit.
+Informativ: 2798 wirksame Löschungen, 2790 mit späterer Auswahlgelegenheit.
+Alle 16352 Ziele: 1628 Gewinne, 646 Schäden, 14078 Gleichstände; nichts maskiert.
+Lauf 75,26 min, Jobpeak 226304000 Bytes (215,82 MiB), harte Grenzen eingehalten.
+Keine Zusatzarme oder Wiederholung. Einmallauffreigabe verbraucht, Neustart gesperrt.
+Nächster Vorschlag: unabhängiger Zeugenaudit vorhandener Reset-/Wiederanlernketten
+zu Gewinnen, Schäden und Gleichständen; kein neuer Policy-Lauf erforderlich.
+ZW1 und ER1 samt historischen Lieferungen bleiben erhalten.
+
+[FW1-Ergebnis und vollständige Belege](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/fw1-comparison-16h-01/REPORT.txt).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: FW1-Forschungsvorbereitung abgeschlossen, Start nicht freigegeben (2026-10-18)
+
+Forschungseinstieg mit vollständiger Vorstartprüfung, exklusivem Ziel,
+SHA-gebundener Einmalberechtigung, Verbrauchsschutz und Terminalreserve implementiert.
+Feste 10000x16-Matrix einmal erzeugt, unabhängig geprüft; vollständige Statistik
+mit künstlichen Fehlerdaten und unabhängiger Gegenrechnung bestätigt.
+Festes neutrales Paar r=1 einmal mit vier Armen à 1024 Frames abgeschlossen:
+vier Live-/vier Archivreferenzen, Bestandsidentität und Cleanup bestätigt.
+Jobpeak 83046400 Bytes, 144,06 s; keine Garantie für andere Forschungsquellen.
+Zusätzlich vier kurze Arme à 96 Frames und neun neue Sperrprüfungen bestanden.
+Zwei abschließende Zulassungskorrekturen separat ohne Policy-Arme geprüft;
+Qualifikationsherkunft und historische Lieferungen erhalten.
+Keine Forschungsberechtigung, keine Forschungsquellen und kein Forschungsstart.
+Nächster Schritt: Projektleiter prüft die Vorstartbindung und entscheidet separat
+über den einmaligen Forschungsstart. Kein wissenschaftlicher Nutzenbefund.
+
+[FW1-Vorbereitung und Belege](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/fw1-research-preparation-20261018-01/REPORT.txt).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: FW1 implementiert und neutral qualifiziert (2026-10-18)
+
+Separater KEEP/RESET-Pfad, unabhängige Live-/Archivreferenzen, Quellenbarriere,
+Paarquittungen und Primärstatistik mit unabhängiger Rechnung implementiert.
+18 Prüfkriterien erfüllt; Testhilfenkorrekturen und sämtliche Fehlversuche dokumentiert.
+Fünf Integrationsfälle: 28 kurze Policy-Arme à 96 Frames sowie je 28 bestandene
+Live-/Archivreferenzen; Quellen-, Paar-, Frist- und Schreibbudgetfehler kontrolliert.
+Zusätzlich 13 kurze manuelle Policy-Historien einschließlich Fehlversuchen;
+keine alten Audit-Replays. Gemeinsamer Integrations-Jobpeak 62136320 Bytes.
+Historische Bindungen bestätigt. Separate Unit-Prozesspeaks nicht gemessen;
+kurze Neutralfälle belegen keine Vollgrößenverträglichkeit.
+Keine Forschungsquellen, Forschungs-Matrix, Vorstartbindung oder Forschungsfreigabe.
+Nächster Schritt: Projektleiter prüft die Lieferung und entscheidet über eine
+separate Vorbereitung; Nutzen und Schaden bleiben wissenschaftlich ungeprüft.
+
+[FW1-Paket und vollständige Ausführungsbilanz](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/fw1-neutral-qualification-20261018-01/REPORT.txt).
+Ältere Abschnitte sind historische Zeitstände.
+
+## Aktuell: FW1-Gegenprüfvertrag vollständig festgelegt (2026-10-18)
+
+Abgenommene statische Konzeptprüfung in einen vollständigen Vertrag überführt:
+Behalten gegenüber Reset gültiger Fehlerzellen bei TRACE_CONFIRMED_RECENT.
+Eingriff nach Blockabschluss und Pruning; eingefrorene Vorhersagen bleiben
+innerhalb jedes Arms unverändert. Wahrnehmungsbestände müssen zwischen Armen gleich bleiben.
+Geplant: 16 frische A/B-Quellenpaare, 32 Geschichten, 64 Policy-Arme;
+neuer fester Namensraum MCM-FW1/source/v1, heute keine Quellen erzeugt.
+Einziges Primärmaß: Behalten minus Reset, gleichgewichtet über A/B und alle
+511 Ziele je Geschichte; nominales 95%-Intervall aus 10000 geschichteten Paarziehungen.
+Matrixrezept festgelegt, Erzeugung und Bindung erst in gesonderter Vorbereitung.
+Nutzen ungeprüft; Schaden möglich. Keine Implementierung, Tests oder Forschungsfreigabe.
+Nächster Schritt: Projektleiter entscheidet über das begrenzte Implementierungs-
+und Qualifikationspaket; technische Voraussetzungen stehen im Vertrag.
+ZW1 samt Audit bleibt abgeschlossen und unverändert; ER1 bleibt INCONCLUSIVE.
+
+[FW1-Gegenprüfvertrag mit Fundstellen](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/S2UC_FW1_FEHLERWISSEN_GEGENPRUEFVERTRAG_20261018.txt).
+Ältere Abschnitte sind historische Zeitstände.
+
+## Aktuell: ZW1-Zeugenaudit vollständig bestätigt (2026-10-18)
+
+32/32 Bedingungsarchive mit dem unveränderten qualifizierten unabhängigen
+ER1-Prüfkern geprüft: keine fehlenden, unbelegten oder duplizierten Zeugen.
+12 neue Zuordnungs-/Zähltests bestanden; 12 bestehende Semantiktests unverändert übernommen.
+Erhaltung / eindeutige warme Ziele / lokale Gewinne / Schäden:
+A/E 102/206/91/28; A/F 179/174/78/31; B/E 56/123/69/20; B/F 137/243/138/44.
+Je Gruppe 8176 Zielpositionen, keine Mehrfachzuordnung innerhalb eines Arms.
+Beidseitige Erhaltungs- und Verdrängungswege sowie Nutzen und Schäden bestätigt;
+höhere Zeugenzahlen allein erklären die Interaktion nicht. Kein isolierter Kausalnachweis.
+Audit: 148,67 s, ein Prozess, Jobpeak 48709632 Bytes (46,45 MiB), Grenzen eingehalten.
+Keine Policy-Ausführung, neuen Forschungsquellen oder Bootstrapziehungen.
+ZW1 bleibt NEGATIVE_INTERACTION; ER1 bleibt INCONCLUSIVE; historische Artefakte unverändert.
+Nächster Schritt: Projektleiter bewertet die mechanistische Einordnung und eine
+gegebenenfalls daraus begründbare Gegenprognose. Keine weitere Forschungsserie beauftragt.
+
+[Unabhängiger ZW1-Zeugenaudit](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/zw1-witness-audit-20261018-01/REPORT.md).
+Ältere Abschnitte sind historische Zeitstände.
+
+## Aktuell: ZW1 abgeschlossen – negative gerichtete Interaktion (2026-10-18)
+
+Einmaliger gebundener Forschungsversuch TERMINAL_COMPLETE: 16/16 Quellenpaare,
+64 frische Policy-Arme sowie jeweils 64 bestandene Live- und Archivreferenzen.
+Alle 32 Quellen vor Armstart geprüft und versiegelt; alle Paarquittungen und Cleanup bestätigt.
+Einziger Primärvergleich (E−F)A−(E−F)B: -67/32704 = -0.0020486791;
+95%-Intervall [-123/32704, -11/32704] vollständig negativ. Statistikreferenz exakt gleich.
+Gerichtete Interaktion in dieser Quellenfamilie; kein separater Nachweis eines
+absoluten E-Vorteils in A oder Schadens in B, kein isolierter Auffrischungs-Kausalnachweis.
+Jobpeak 399138816 Bytes (380,65 MiB) unter 512 MiB; Laufzeit 4456,27 s (74,27 min).
+Freigabe verbraucht. Kein Retry, Resume, Ersatzlauf, Tuning oder Umfangszuwachs.
+Historische ER1-Befunde unverändert, ER1 bleibt INCONCLUSIVE.
+Nächster Schritt: Projektleiter bewertet den Befund; vorgeschlagen ist bei Bedarf
+nur ein begrenzter unabhängiger Audit vorhandener ZW1-Archivzeugen, noch nicht freigegeben.
+
+[Ergebnis und Prüfnachweis](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/zw1-comparison-16h-01/REPORT.md).
+Ältere Abschnitte sind historische Zeitstände.
+
+## Aktuell: ZW1-Neutralpaket abgenommen; Forschungsvorbereitung gebunden (2026-10-18)
+
+Tatsächlicher Supervisor-/Worker-Einstieg, Einmalberechtigung, exklusives Ziel,
+Quellenbarriere und vollständige Paarquittungen sind implementiert und neutral geprüft.
+Fünf Integrationsszenarien und 11/11 neue Tests bestanden; frühere unveränderte
+Neutralnachweise übernommen. Neue Ausführung: 28 kurze Arme, 28 Live- und
+24 bestandene Archivreferenzen. Frist- und Schreibbudgetfehler enden kontrolliert.
+Vorstart-SHA `28a1b008daaa9663a3f7ce3f403dc631526c0f7f78c2cebe82f8d89962e3dc13`; vollständige Bindung einschließlich experiments/zw1 geprüft.
+Umfang unverändert 16 Paare/64 Arme. Matrix unverändert. Keine Forschungsberechtigung,
+kein Verbrauchsmarker, kein Forschungsziel und keine Forschungsquellen erzeugt.
+Vollgrößen-Speicherverträglichkeit bleibt offen; Grenze 512 MiB, ER1-Peak 412 MiB.
+Nächster Schritt: Projektleiter prüft die Bindung und entscheidet separat über
+den einmaligen Forschungsstart. ER1 bleibt abgeschlossen mit INCONCLUSIVE.
+
+[Vorbereitungsbericht, SHA und exakter zukünftiger Aufruf](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/zw1-research-preparation-20261018-01/REPORT.md).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: ZW1 implementiert und neutral geprüft; Paketabnahme offen (2026-10-18)
+
+Getrenntes ZW1-Paket: gekoppelte neutrale A/B-Quellen und unabhängige Rekonstruktion,
+Paarquittungen sowie alleiniger Interaktionsvergleich (E−F)A−(E−F)B mit separater
+Statistikreferenz. 20/20 fokussierte Tests und drei Integrationsszenarien bestanden.
+Einmalig erzeugte 10000×16-Matrix unabhängig geprüft und gebunden. Tatsächlich
+16 neutrale 96-Frame-Arme, 16 bestandene Live- und 14 bestandene Archivreferenzen;
+Fehlerpaar bleibt unquittiert, veränderte Quelle stoppt vor dem ersten Arm.
+Keine Forschungsquellen, 1024-Frame-Policyfälle, Berechtigung oder Forschungsserie.
+Umfang bleibt 16 Paare/64 Arme. Vollgrößen-Speicherbedarf bleibt offen; ER1-Peak
+412 MiB ist im Ressourcenplan berücksichtigt, 512-MiB-Grenze unverändert.
+ER1 ist abgeschlossen mit INCONCLUSIVE, Zeugenprüfung abgenommen.
+Nächster Schritt: Projektleiter prüft das Neutralpaket und entscheidet separat
+über Forschungsvorbereitung; noch keine Vorstart- oder Forschungsfreigabe.
+
+[ZW1-Abnahmebericht und Nachweise](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/zw1-neutral-preparation-20261018-01/REPORT.md).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: ER1 abgeschlossen, Zeugenprüfung abgenommen; ZW1-Konzeptfrage offen (2026-10-18)
+
+ER1-v2 bleibt abgeschlossen mit INCONCLUSIVE. Die unabhängige Prüfung sämtlicher
+Erhaltungs- und warmen Nutzungszeugen ist abgenommen; historische Artefakte bleiben
+unverändert. Der neue Konzeptvertrag ZW1 untersucht ausschließlich als ungeprüfte
+Hypothese, ob zeitliche Wiederkehr den vollständigen E−F-Effekt verändert.
+Vorschlag: 16 Quellenpaare mit zwei Bedingungen, insgesamt 64 Policy-Arme sowie
+getrennt 64 Live- und 64 Archivreferenzen. Einziger Primärvergleich ist die gepaarte
+Interaktion (E−F in A) minus (E−F in B), nicht zwei getrennte Signifikanzurteile.
+Die Isolation gilt für Verteilungsgesetze; realisierte Häufigkeiten und zeitliche
+Fortsetzungsabhängigkeiten können abweichen. Diese Grenzen sind ausdrücklich benannt.
+Nur Dokumentation und statische Prüfung durchgeführt. Keine Implementierung,
+Quellen, Archivneuberechnung oder Versuche. Eine Erweiterung auf 32 Paare/128 Arme
+ist nicht Teil des Vorschlags und benötigt eine separate Umfangsentscheidung.
+Nächster Schritt beim Projektleiter: fachliche Prüfung der Isolation und Paarzahl;
+Implementierungsqualifikation und Forschungsstart bleiben getrennte Entscheidungen.
+
+[ZW1-Konzeptvertrag](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/S2UC_ZW1_ZEITLICHE_WIEDERKEHR_KONZEPTVERTRAG_20261018.md).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: ER1-v2-Zeugen unabhängig bestätigt; Primärurteil unverändert (2026-10-18)
+
+Separater Prüfer bestätigt alle 32 Archive ohne bisherige Zeugenfunktion oder
+Observer: E 171 Erhaltungszeugen / 327 warme Nutzungen, F 343 / 320.
+12/12 neutrale Gegenprüfungen bestanden; keine fehlenden, unbelegten oder
+doppelten Zeugen und keine mehrfach zugeordneten warmen Zielpositionen je Arm.
+Originalkontinuität einschließlich Kandidatenpromotion, früheres Feedback gleichen
+Offsets, Gegenopfer und tatsächliche warme Auswahl sind belegt.
+Historische Artefakte unverändert, keine Policy-Ausführung, neuen Quellen oder
+Bootstrapziehungen. INCONCLUSIVE bleibt das alleinige Primärurteil.
+Nächster Vorschlag: Projektleiter nimmt die Prüfung ab und bewertet vorhandene
+Gegenkosten auf eine neue falsifizierbare Gegenprognose; kein neuer Lauf freigegeben.
+
+[Unabhängiger Prüfbericht und Grenzen](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/er1-v2-witness-audit-20261018-03/REPORT.md).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: ER1-v2 vollständig abgeschlossen; globaler E-Vorteil nicht nachgewiesen (2026-10-18)
+
+32/32 Geschichten, genau 64 Policy-Arme sowie getrennt je 64 Live- und Archivreferenzen.
+TERMINAL_COMPLETE, unabhängige Statistik gleich, Cleanup und Workerende bestätigt.
+Primärvergleich E−F über alle 16352 Ziele: −0,0006879892; 95%-Intervall
+[−0,0013606898; +0,0000611546], INCONCLUSIVE. Lokale Erhaltungsnutzen und
+Gegenkosten sind in beiden Richtungen belegt; keine globale Überlegenheit.
+Vorstartbindung `0d67e76c14afa1e74a19dd7190857e68a19062abd26fd2af484c85b761a8f2b7`
+ist verbraucht. Kein Retry, Resume, Ersatzlauf oder Tuning. Der historische
+ER1-Abbruch bleibt unverändert TECHNICAL_ABORT mit verbrauchter Freigabe.
+Nächster Vorschlag: Projektleiter bewertet vorhandene Zeugen und Gegenkosten
+lesend auf eine neue falsifizierbare Gegenprognose; keine neue Ausführung freigegeben.
+
+[Ergebnisbericht und Prüfnachweise](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/er1-v2-comparison-16h-01/REPORT.md).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: ER1-v2 vorbereitet und gebunden, Forschungsentscheidung offen (2026-10-18)
+
+Die abgenommene strukturelle Korrektur ist im getrennten v2-Einstieg integriert.
+8/8 vorhandene Tests bestanden; neutrale 9/10-Integration, synthetische 99/100-Regression
+und vier Fehlerfälle einschließlich erschöpftem Schreibbudget sind belegt.
+Vorstart-SHA: `0d67e76c14afa1e74a19dd7190857e68a19062abd26fd2af484c85b761a8f2b7`. Bindungsvalidator und vollständige Dateiabdeckung geprüft.
+Namensraum `MCM-ER1/source/v2` und neues exklusives Ziel sind gebunden; keine
+Forschungsberechtigung, kein Verbrauchsmarker, kein Forschungsziel und kein neuer
+Forschungslauf. Die Vollgrößenunsicherheit bleibt ausdrücklich bestehen.
+Der alte Versuch bleibt `TECHNICAL_ABORT` mit verbrauchter Freigabe; kein Retry/Resume.
+Nächster Schritt liegt beim Projektleiter: Paketprüfung und gesonderte Forschungsentscheidung.
+
+[Abschlussbericht und Bindungsnachweis](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/er1-v2-preparation-20261018-01/REPORT.md).
+Ältere Abschnitte sind historische Zeitstände.
+
+
+## Aktuell: ER1-Bestandsvergleich separat korrigiert und neutral geprüft (2026-10-17)
+
+Workflow 3d0c238b-1428-4946-b3f0-8631eccfc978 ist als begrenzte Korrektur abgeschlossen.
+10/10 Strukturtests für 9/10, 99/100, JSON-Rundreisen, ungültige Schlüssel und echte
+Bestandsabweichungen bestanden. Ein neutrales 80-Frame-Archiv je Arm besteht beide
+unabhängigen Referenzen; eine falsche Endmarke wird trotz passender Testprüfsummen
+zurückgewiesen. Vollständige Bestände einschließlich Retained-Reihenfolge bleiben geprüft.
+
+Historisch gebundene Dateien, Quellen, Forschungsarchiv, Marker und Abbruchbelege
+sind unverändert. Keine Forschungsarchiv-Neuauswertung, keine Berechtigung, kein
+Retry oder Resume. Der alte Lauf bleibt TECHNICAL_ABORT mit 0/32 quittierten Fällen.
+Nächster Schritt: Projektleiter prüft die Korrektur und entscheidet gesondert über
+Integration; kein neuer Forschungseinstieg aus diesem Auftrag.
+
+[Korrekturbericht, Testnachweise und Ressourcen](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/er1-structural-correction-20261017-01/REPORT.md).
+Ältere Abschnitte sind historische Zeitstände.
+
+## Aktuell: ER1 technisch abgebrochen; keine Geschichte quittiert (2026-10-17)
+
+Der einmalige Forschungsaufruf zur Bindung `8b00f9a27f958307e41673543ae294e8cffe9d2bf36949d2d71b3886b18b5bde`
+ist verbraucht. Alle 32 Quellen waren vor dem ersten Arm versiegelt. In Fall 1
+wurden zwei Policy-Arme mit ihren Live-Referenzen abgeschlossen; die fachliche
+Archivprüfung brach mit `ValueError: ARCHIVE_STOCK` ab. Quittierte Fälle: 0/32.
+Kein Primär- oder Nutzenurteil. Keine weiteren Policy-Arme, kein Retry oder Resume.
+
+Worker beendet, Armcleanup und Dateicleanup bestätigt. Die vorhandenen Daten
+zeigen einen Darstellungsfehler beim Vergleich numerischer und JSON-String-
+Generationsschlüssel; keine nachträgliche Archivfreigabe und kein erneuter Referenzlauf.
+Nächster Vorschlag: begrenzter neutraler Auftrag zur Korrektur des Archivvergleichs
+mit Regressionen 9/10 und 99/100. Keine neue Forschungsausführung daraus ableiten.
+
+[Abbruchbericht und Belege](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/er1-comparison-16h-01/REPORT.md).
+Ältere Abschnitte sind historische Zeitstände.
+
+## Aktuell: ER1-Einmallauf gestartet; Freigabe verbraucht (2026-10-17)
+
+Workflow 261de2b7-68f4-4c2b-996d-d77ebdfb48d8 autorisiert genau den gebundenen
+E/F-Vergleich. Sämtliche 2967 Dateibindungen und 43 Qualifikationsartefakte wurden
+vor Ausführung geprüft. Der exakte gebundene Aufruf wurde einmal gestartet.
+START.json und CONSUMED.json bestätigen den Verbrauch zur Vorstartbindung
+`8b00f9a27f958307e41673543ae294e8cffe9d2bf36949d2d71b3886b18b5bde`.
+Alle 32 Forschungsquellen wurden vor dem ersten Arm unabhängig geprüft und versiegelt.
+
+Die Ausführung läuft unter den gebundenen Grenzen. Noch kein Ergebnisurteil.
+Kein Retry, Resume, Ersatzlauf oder Tuning. Maßgeblicher Fortschritt und erste
+Fehlerursache stehen im reservierten Terminalbericht; nächste Arbeit ist der
+vollständige Abschluss mit Referenz-, Ressourcen- und Cleanupnachweisen.
+
+[Fortschritt und Abschlussstatus](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/er1-comparison-16h-01/terminal.json).
+Ältere Abschnitte sind historische Zeitstände.
+
+## Aktuell: ER1-Forschungseinstieg vorbereitet und gebunden; keine Forschungsfreigabe (2026-10-17)
+
+Workflow 17468e31-58e4-46da-9b73-b3fff84058de ist als Vorbereitung abgeschlossen.
+Der getrennte Einstieg bindet genau 64 einmalig gemessene und protokollierte
+Policy-Arme, 64 Live-Referenzen und 64 Archivrekonstruktionen. Keine zusätzlichen
+Mess-/Capture-Policyarme. 11/11 Integrationsprüfungen bestanden; kurze reale Fälle
+sowie gezielt erschöpfte Administrations-/Exportbudgets sauber abgeschlossen.
+
+Vorstart-SHA: `8b00f9a27f958307e41673543ae294e8cffe9d2bf36949d2d71b3886b18b5bde`.
+Keine Forschungsberechtigung, kein Verbrauchsmarker und kein Forschungsziel
+angelegt; keine Forschungsquellen oder vollständigen 1024-Frame-Policyfälle erzeugt.
+Der Ressourcenplan weist Hochrechnung und Vollgrößenunsicherheit ausdrücklich aus.
+Nächste Entscheidung: Projektleiter prüft das gebundene Paket und entscheidet
+anschließend gesondert über den Forschungseinstieg. Keine automatische Ausführung.
+
+[Vorbereitungsbericht, Bindung und exakter zukünftiger Aufruf](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/er1-research-preparation-20261017-01/REPORT.md).
+Ältere Statusabschnitte darunter sind historisch.
+
+## Aktuell: ER1-Vertrag angenommen; Neutralpaket geprüft und zur Abnahme geliefert (2026-10-17)
+
+Der angenommene E/F-Vertrag ist im begrenzten Neutralpaket umgesetzt. 16/16 Tests,
+drei archivierte Fälle mit 32/32/44 Frames und der gezielte Schreibfehlerabschluss
+sind bestanden. Jeder Arm wurde gegen eine eigene unabhängige Referenz geprüft.
+Erhaltung, warme spätere Nutzung und der Preis verlorener neuerer Erfahrung sind
+mit Originalidentität und zeitlich vorherigem Feedback technisch belegt.
+U-Auswahl und Feedback bleiben unverändert; CR1, K1 und A1 sind deaktiviert.
+
+Kein Forschungsnutzenurteil: Quellenprüfung und Statistik verwendeten ausschließlich
+neutrale bzw. synthetische Daten, Primärnenner 511 Ziele je Geschichte. Keine
+Forschungsquellen, vollständigen 1024-Frame-Policyfälle, Forschungsberechtigung oder
+Forschungsserie. Der Forschungseinstieg ist gesperrt; endgültige Vorstartbindung
+erst nach Paketabnahme. Nächster Schritt ist die fachliche Prüfung dieses Pakets,
+danach gegebenenfalls gesondert beauftragte gebundene Forschungsvorbereitung.
+
+[Paketbericht und Belege](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/er1-preparation-20261017-01/REPORT.md).
+Ältere Statusabschnitte darunter sind historisch.
+
+## Aktuell: ER1-Vertrag angenommen; Implementierung und Neutralprüfung in Arbeit (2026-10-17)
+
+Der Projektleiter hat den ER1-Konzeptvertrag angenommen. Der fortgesetzte Auftrag
+8d1b85cf-cad9-45fd-b0a6-90e43bb95067 umfasst ausschließlich Implementierung und
+neutrale Qualifikation des E/F-Vergleichs. Beim Bestandsabgleich lagen noch keine
+ER1-Implementierung und keine ER1-Prüfergebnisse vor. Die offenen Kriterien werden
+jetzt bearbeitet; eine Paketabnahme wird damit nicht behauptet.
+
+U-Auswahl und Feedback bleiben unverändert; CR1, K1 und A1 bleiben deaktiviert.
+Jeder Arm erhält eine eigene unabhängige Referenz. Primärmaß ist E−F über sämtliche
+511 beobachtbaren Ziele pro Geschichte. Forschungsquellen, vollständige
+1024-Frame-Policyfälle und Forschungsserien sind gesperrt. Endgültige
+Forschungsvorstartbindung erst nach Paketabnahme. Ältere Statusabschnitte sind historisch.
+
+## Aktuell: CR1 abgenommen; ER1-Konzept zur Erfahrungserhaltung geliefert (2026-10-17)
+
+CR1 ist fachlich abgenommen. Sein begrenzter Ausgabevorteil und die
+Einzelhypothesen-Grenze bleiben gültig; kein Nachweis verbesserter Erfahrungsbildung.
+Die Einmallauffreigabe bleibt verbraucht. K1 und A1 bleiben deaktiviert.
+
+Der fortgesetzte Konzeptauftrag zur Erfahrungserhaltung ist dokumentarisch
+abgeschlossen; der konkrete ER1-Vertrag liegt dem Projektleiter zur Abnahme vor.
+Vorhandene T1-/K1-Befunde und der Wiederwahrnehmungsvertrag vom 30.09. wurden
+weiterverwendet. Keine erneute Kandidatenfrist und kein weiterer FIFO-Demonstrationslauf.
+
+Genau ein vorgeschlagener Vergleich: E mit bestehender Reihenfolgeauffrischung
+bei vollständiger Wiederwahrnehmung gegen F ohne diese Umordnung. Beide führen
+dieselben begrenzten Beobachtungsendmarken, dieselbe U-Ausgabe, Feedbackregel,
+Speicherobergrenzen und denselben Informationszugang. Bestandsunterschiede sind
+gewollt und benötigen je Arm eine eigene unabhängige Referenz.
+
+Offene Gegenprognose: Spätere warme Wiederverwendung kann durch Erhaltung helfen;
+der Verlust neuerer oder inzwischen passenderer Erfahrung kann diesen Vorteil
+aufheben oder umkehren. Erhaltung, tatsächliche Nutzung und Prognoseleistung
+werden getrennt geprüft. Einziges Primärmaß: E−F-MAE über alle 511 Ziele je
+Geschichte, gleichgewichtet über 32 frische Geschichten. Alle Quellenanforderungen,
+Entscheidungs- und Ressourcengrenzen stehen im Vertrag; nichts davon wurde ausgeführt.
+
+Nächster konkreter Schritt: Projektleiter prüft ER1 als Vollleistungsvergleich
+jenseits des bereits belegten Bestandsmechanismus. Erst nach Abnahme gegebenenfalls
+getrenntes Implementierungs-/Neutralprüfpaket. Keine Quellenmaterialisierung,
+Archivneuberechnung, Policyänderung oder Versuchsausführung in diesem Auftrag.
+
+[ER1-Konzeptvertrag mit Code- und Berichtsbelegen](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/S2UC_ER1_ERFAHRUNGSERHALTUNG_KONZEPTVERTRAG_20261017.md).
+
+## Aktuell: CR1 vollständig abgeschlossen – begrenzter Ausgabevorteil für C (2026-10-17)
+
+COMPLETE / TERMINAL_COMPLETE: 32 Geschichten, 64 frische C/U-Arme,
+alle Quellen-, Zustands-, Feedback-, Archiv- und Statistikreferenzprüfungen
+bestätigt. Worker beendet, Arm- und Datei-Cleanup bestätigt; keine Fehler.
+Genau ein gebundener Aufruf, kein Retry, Resume, Ersatzlauf oder Tuning.
+Die Freigabe zum Vorstart-SHA
+`336f44aa79d8091991cfdc292e550c01e952e4faf5247e2c1b8613fb858ac1f3`
+ist verbraucht. Ältere Start- und Vorbereitungsstände unten sind historisch.
+
+Einziger Primärvergleich Q129–160, sämtliche 1024 Ziele aus 32 gleichgewichteten
+Geschichten: C-MAE 841/4096 = 0.205322265625; U-MAE 431/2048 = 0.210449218750.
+C−U = −21/4096 = −0.005126953125; nominales 95%-Intervall
+[−17/2048; −7/4096] = [−0.008300781250; −0.001708984375].
+Urteil: **C_EARLY_POST_BETTER** für die festgelegte Quellenfamilie und das
+vorab festgelegte Primärfenster. Weitere Fenster bleiben deskriptiv.
+
+48 Ziele besser, 27 schlechter, 949 gleich; Gewinn 12, Schaden 27/4,
+Netto 21/4. Alle 75 abweichenden Ziele waren vollständig kalt mit genau einer
+berechtigten Hypothese. Deshalb trägt der Befund die kalte Originalausgabe
+gegenüber Persistenz; ein Vorteil der Recency-Rangfolge mehrerer kalter
+Originale ist in diesem Primärfenster nicht nachgewiesen. Gemeinsame Zustände
+bleiben identisch. Die diagnosemotivierte Variantenwahl und die Grenze bleiben
+explizit: **Ein Ausgabevorteil beweist keine verbesserte Erfahrungsbildung.**
+
+Laufzeit 7919.528 s / 131.99 min; gemeinsamer Jobpeak 188317696 Byte unter
+512 MiB, höchstens zwei Prozesse. Finale Exportbilanz einschließlich Vorbereitung
+8816855 Byte. Alle 987 Vorstartbindungen und 32 Quellenhashes nachgeprüft;
+106 Dateien in der finalen Lieferung gebunden. Delivery-SHA:
+`b3978e3eef3605925ae0c6204576d86358b78aec9bf0176d28bde1b805d5c344`.
+
+Nächster konkreter Schritt: Projektleiter nimmt diesen begrenzten Ausgabebefund
+und seine Einzelhypothesen-Grenze ab und formuliert danach eine eigenständige
+mechanistische Gegenprognose zur Erfahrungsbildung. Kein automatischer weiterer
+C/U-Versuch oder Tuning; zusätzliche Entwicklung benötigt einen begrenzten Auftrag.
+
+[Ergebnis- und Prüfnachweis](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-cr1-comparison-16h-01/REPORT.md).
+[Statistik](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-cr1-comparison-16h-01/statistics.json).
+[Finale Lieferung](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-cr1-comparison-16h-01/delivery-closure.json).
+
+## Aktuell: CR1-Einmalvergleich gestartet (2026-10-17)
+
+Workflow-Freigabe `09fde789-5ec0-4a2f-9d30-516d4906d587` zum Vorstart-SHA
+`336f44aa79d8091991cfdc292e550c01e952e4faf5247e2c1b8613fb858ac1f3`.
+Alle 987 Dateibindungen unmittelbar vor Start bestätigt. Einmalberechtigung
+angelegt und gebundener Aufruf genau einmal ausgeführt; Startmarker verbraucht.
+Alle 32 Quellen aus `MCM-URA1-CR1/source/v1` vor dem ersten Arm unabhängig
+rekonstruiert, geprüft und gemeinsam versiegelt. Der Vergleich läuft;
+noch kein Ergebnis oder bestätigter Gesamtabschluss.
+
+Geplant: 64 frische C/U-Arme, einziger Primärkontrast C−U auf sämtlichen
+Q129–160, gleichgewichtet über 32 Geschichten. Alle gebundenen Prüfungen und
+Ressourcenlimits gelten. Kein Retry, Resume, Ersatzlauf oder Tuning.
+Die diagnosemotivierte Variantenwahl bleibt sichtbar; ein Ausgabevorteil
+würde keine verbesserte Erfahrungsbildung nachweisen.
+
+[Startbeleg](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-cr1-comparison-16h-01/START.json).
+[Fortschritt und Abschlussstatus](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-cr1-comparison-16h-01/terminal.json).
+
+## Aktuell: CR1-Vertrag angenommen, Umsetzung neutral geprüft (2026-10-17)
+
+Der Projektleiter hat den [CR1-Konzeptvertrag](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/S2UC_URA1_CR1_KALTAUSWAHL_KONZEPTVERTRAG_20261017.md)
+angenommen und das begrenzte Implementierungs- und Neutralprüfpaket beauftragt
+(Workflow `12411fb6-b054-4fec-808a-bcda26a48dd8`). Dieses Paket ist abgeschlossen;
+seine Abnahme und eine gesonderte Forschungsentscheidung liegen beim Projektleiter.
+Ältere Einreichungs- und Auftragsstände weiter unten sind historische Zeitstände.
+
+C wählt ausschließlich bei nicht leerem, vollständig kaltem H nach der bestehenden
+Originalrecency-Regel. In allen anderen Fällen gilt U. Keine zusätzlichen
+Lernzustände oder Rückmeldungen; ein Receipt. Getrennte C/U-Referenz, Executor,
+Archivsemantik, Quellenreferenz und Statistik sind implementiert. Primärkontrast
+bleibt C−U auf sämtlichen Q129–160, statistische Einheit Geschichte.
+
+29/29 fokussierte Tests bestanden. Zwei echte 32-Frame-C/U-Handfälle mit vier
+frischen Armen: gemeinsame Zustände einschließlich Aufnahme, Promotion und
+Verdrängung sowie Referenzfeedback stimmen überein. Nur Auswahlbytes 202/203
+werden normalisiert und separat geprüft. Absichtlich ausgelöster Budgetfehler
+endet mit TECHNICAL_ABORT, beendetem Worker und bestätigtem Cleanup.
+
+Vorbereitung: 2658052 Byte; G01 10.653 s, Jobpeak 53972992 Byte bei harter
+512-MiB-Grenze. 987 gebundene Dateien, darunter 939 unveränderte Vorgängerbindungen.
+Vorstart-SHA: `336f44aa79d8091991cfdc292e550c01e952e4faf5247e2c1b8613fb858ac1f3`.
+
+Keine Forschungsquellen erzeugt, keine 1024-Frame-Policyfälle oder Forschungsserie.
+Autorisierungsdatei und exklusives Forschungsziel fehlen. Historische Startmarker
+bleiben unverändert. Die neutrale Qualifikation ist kein Wirksamkeitsnachweis;
+Vollgrößenlaufzeit und zusätzlicher Archivprüfaufwand bleiben ungemessen.
+
+Nächster konkreter Schritt: Projektleiter prüft das gebundene Vorbereitungspaket
+und entscheidet danach über einen getrennt autorisierten einmaligen C/U-Vergleich.
+Bis dahin bleibt die Forschung geschlossen; keine neue Varianten- oder Namensraumsuche.
+
+[Ergebnisbericht, Test-IDs und zukünftiger Aufruf](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-cr1-preparation-20261017-01/REPORT.md).
+[Siegelprüfung](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-cr1-preparation-20261017-01/seal-verification.json).
+
+## Aktuelle Archivdiagnose: REV1-Entscheidungswege vollständig zugeordnet (2026-10-16)
+
+Die bestehende REV1-Serie wurde ausschließlich aus gespeicherten Archiven
+für Q129–160 diagnostiziert. Alle 1024 Primärziele sind eindeutig zugeordnet:
+40 ohne berechtigten Kontext, 66 ausschließlich kalt, 220 ohne negative warme
+Bewertung, 0 mit Gleichstand beim besten negativen Wert, 698 eindeutige Kontextwahl.
+
+Die 418 unterschiedlichen U/R-Ausgaben zerfallen in 66 rein kalte Entscheidungen,
+220 Enthaltungen ohne negative warme Bewertung und 132 unterschiedliche
+Kontextwahlen. Summen exakt bestätigt: 222 bessere, 196 schlechtere, 606 gleiche
+Ziele; Gewinn 75.75, Schaden 61.75, Netto +14. Nettobeiträge der drei ungleichen
+Entscheidungsklassen: −3.5, +2.5 und +15. Warm- und Bestandsklassen bleiben
+separate Partitionen; keine Doppelzählung oder neue Signifikanzprüfung.
+
+Alle 201 kalten Hypothesenauftritte (66 rein kalte und 135 gemischte Ziele)
+betreffen 201 Kandidaten-Originale ohne frühere Rückmeldung oder gültige
+Fehlerzelle für denselben Offset. Aufnahme und interne Lebenszyklusbelege
+sind vollständig verknüpft. 194 Originale wurden nach dem Wechsel aufgenommen,
+7 davor. Aktuelle Zielrückmeldung wird nicht als Vorgeschichte gezählt.
+Keine unbelegte Rücksetzung einer bereits warmen Zelle als Erklärung behauptet.
+
+Ein Archiv gleichzeitig, harte Jobgrenze 512 MiB, tatsächlich ein Prozess.
+Extraktion 381.346 s, Jobpeak 47591424 Byte; kompakte Abschlussprüfung 0.341 s.
+Finale Diagnoseausgabe 1424475 Byte, alle Bindungen und Summen geprüft.
+Historische Belege und das Forschungsurteil INCONCLUSIVE bleiben unverändert.
+Keine neuen Quellen, Policy-Läufe, alternativen Ausgaben oder Bootstrapziehungen.
+
+Einzige Anschlussfrage an den Projektleiter: Lässt sich der beobachtete Nachteil
+rein kalter Kandidaten durch einen getrennt vorregistrierten Umgang mit ihrer
+ersten berechtigten Nutzung verringern, während die warme Fehlerauswahl
+unverändert bleibt? Keine automatische Implementierungs- oder Versuchserlaubnis.
+
+[Diagnosebericht mit festen Beispielen und Reproduktionsaufruf](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-rev1-diagnosis-20261016-01/REPORT.md).
+[Quellenbindungen und finale Lieferung](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-rev1-diagnosis-20261016-01/diagnosis-closure.json).
+
+## Aktueller Forschungsabschluss: URA1-REV1 vollständig, Primärvergleich unentschieden (2026-10-15)
+
+COMPLETE / TERMINAL_COMPLETE: 32 Geschichten, 64 frische U/R-Arme,
+alle Fallquittungen, unabhängigen Referenz-/Archiv-/Statistikprüfungen und
+Cleanup bestätigt. Genau ein autorisierter Aufruf; kein Retry oder Resume.
+
+Einziger Primärkontrast Q129–160: U-MAE 0.19140625, R-MAE 0.205078125,
+U−R −0.013671875; nominales 95%-Intervall
+[−0.029541015625; +0.001220703125]. Urteil: INCONCLUSIVE.
+Das Intervall umfasst null: weder früher R-Vorteil noch gesicherter U-Vorteil;
+kein Gleichwertigkeitsnachweis. Deskriptive spätere Fenster ändern dieses Urteil nicht.
+
+Im Primärfenster 222 bessere, 196 schlechtere und 606 gleiche Einzelziele.
+Nettoverbesserung 14; kalte Zustände haben deskriptiv Netto −3.5,
+gemischt warme −0.75, warme +18.25. Genau ein Kandidat hat Netto 0,
+mehrere Kandidaten +14. Keine Kausalattribution oder nachträgliches Tuning.
+
+Gesamtdauer 7148.315 s (119.14 min), Jobpeak 206450688 Byte;
+Gesamtexport einschließlich Vorbereitung und Abschlussbericht 9375336 Byte.
+Ressourcen eingehalten; Worker beendet, interner und Datei-Cleanup bestätigt.
+939 Vorstart-Dateibindungen sowie alle Quellen-/Abschlusshashes geprüft.
+START und Einmalfreigabe für SHA
+`3d05e2fc657a704be3fb5901a302c0c81e519aefaa377909529686a6cf7e650d`
+bleiben verbraucht. Historische Quellen wurden nicht gepoolt.
+
+Nächster Schritt: Projektleiter bewertet Intervall und vorhandene Frühphasen-
+Diagnosen, insbesondere kalte/gemischte Zustände gegenüber warmen Beständen.
+Daraus gegebenenfalls einen eng begrenzten Ursachenauftrag ableiten;
+keine automatische Wiederholung, Vergrößerung oder Änderung der Auswahlregel.
+
+[Vollständiger Forschungsbericht und Belege](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-rev1-comparison-16h-01/REPORT.md).
+[Finale Lieferung mit Größen- und Dateibilanz](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-rev1-comparison-16h-01/delivery-closure.json).
+
+## Historischer Startnachweis: URA1-REV1 einmalig gestartet (2026-10-15)
+
+Die gesonderte Einmalbeauftragung wurde nach Prüfung aller 939 Dateibindungen
+auf Vorstart-SHA `3d05e2fc657a704be3fb5901a302c0c81e519aefaa377909529686a6cf7e650d`
+ausgeführt. START bestätigt `consumed=true`. Alle 32 Forschungsquellen sind
+vor dem ersten Policyarm unabhängig geprüft und gemeinsam versiegelt.
+Erster belegter aktiver Fall: 1; noch kein Ergebnisurteil.
+
+Ziel: `reports/s2uc/ura1-rev1-comparison-16h-01`.
+32 Geschichten / 64 U/R-Arme, unveränderte Regeln und fortlaufender Zustand;
+Kontingenzumkehr nach Block 128. Einziger Primärkontrast U−R über Q129–160.
+Global 57600 s, Worker 54000 s, Abschlussreserve 3600 s innerhalb der Gesamtfrist,
+Job 512 MiB und zwei Prozesse. Kein Retry, Resume, Ersatzlauf oder Tuning.
+
+Nächster Schritt: den bereits autorisierten Versuch bis zu seinem terminalen
+Zustand überwachen und vollständigen Befund samt Integrität, Ressourcen und
+Cleanup übergeben. Keine weitere Startfreigabe erforderlich oder erzeugen.
+Die V4-Freigabe und historischen Bindungen bleiben unverändert.
+
+[Startnachweis](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-rev1-comparison-16h-01/START.json).
+[Quellenmanifest](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-rev1-comparison-16h-01/sources-manifest.json).
+
+## Historische Vorbereitung: URA1-REV1 neutral qualifiziert (2026-10-15)
+
+Der Projektleiter hat den Transfer-Konzeptvertrag angenommen und ausschließlich
+Implementierung sowie fokussierte neutrale Prüfungen beauftragt. Dieses Paket
+ist abgeschlossen: getrennte REV1-Quelle und unabhängige Rekonstruktion,
+ein Primärfenster Q129–160 mit unabhängiger Statistikreferenz und eigener Einstieg.
+Unveränderte U/R-Verfahren; einmalige Forschungs-Kontingenzumkehr nach Block 128.
+
+18/18 fokussierte Tests bestanden. Zwei kurze spiegelbildliche U/R-Handfälle
+bestätigen erhaltenen Zustand und Fehlerzellen über die neutrale Wechselgrenze;
+der integrierte Admin-Grenzfehler endet erwartungsgemäß mit bestätigtem Cleanup.
+Alle 891 übernommenen V4-Dateibindungen stimmen überein. Keine Forschungsquelle,
+kein vollständiger 1024-Frame-Policyfall und keine Forschungsserie ausgeführt.
+
+Aktuelle Vorstart-SHA: `3d05e2fc657a704be3fb5901a302c0c81e519aefaa377909529686a6cf7e650d`.
+939 Dateien gebunden; Vorbereitung 2.802.870 Byte unter der 8-MiB-Grenze.
+Neues exklusives Ziel: `reports/s2uc/ura1-rev1-comparison-16h-01`, nicht angelegt.
+Forschungsberechtigung fehlt absichtlich. Die V4-Einmalfreigabe bleibt verbraucht.
+Der frühere Bindungsentwurf unter `seal-draft-01` ist überholt, keine Startgrundlage.
+
+Nächster Schritt: Projektleiter prüft Vorbereitung und aktuelle Vorstartbindung
+und entscheidet über den gesonderten Einstieg. Bis dahin kein Forschungsstart.
+Ein möglicher früher R-Vorteil bleibt offene Gegenprognose; die binäre Quelle
+begründet keinen pauschalen längeren EMA-Nachlauf.
+
+[Vorbereitung mit Tests, Grenzen und zukünftigem Aufruf](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-rev1-preparation-20261015-01/REPORT.md).
+[Angenommener Konzeptvertrag](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/S2UC_URA1_REV1_TRANSFER_KONZEPTVERTRAG_20261015.md).
+
+## Aktueller Forschungsabschluss: URA1 V4 vollständig bestanden (2026-10-15)
+
+COMPLETE / TERMINAL_COMPLETE: 32 Geschichten, 64 frische U/R-Arme, alle
+Fallquittungen, unabhängige Archiv-/Statistikprüfungen und Cleanup bestätigt.
+Primärvergleich über alle Q-Ziele: U-MAE 0.186279296875,
+R-MAE 0.222808837890625, U−R −0.036529541015625.
+Nominales 95%-Intervall [−0.0430908203125; −0.030029296875].
+Damit Vorteil für U in der gebundenen synthetischen Quellenfamilie;
+keine allgemeine Intelligenz-, Feld-Memory- oder Audio-/Video-Aussage.
+
+Alle 32 Geschichten haben negativen mittleren Q-Kontrast. Dennoch 1422
+verschlechterte Q-Einzelziele; kalte und Ein-Kandidaten-Zustände haben eine
+negative deskriptive Nettobilanz. Kein nachträgliches Tuning oder neuer Lauf.
+Gesamtdauer 6727.411 s, Jobpeak 198234112 Byte, Grenzen eingehalten.
+Workerende, interner Cleanup und Datei-Cleanup bestätigt; keine Fehlerursache.
+START und Einmalfreigabe bleiben verbraucht. Historische Daten nicht einbezogen.
+
+Nächster Schritt: Projektleiter nimmt den vollständigen Befund ab und wertet
+die gelieferten kalten/Ein-Kandidaten-Diagnosen aus, um vor weiterer Forschung
+eine konkrete Gegenprognose für einen späteren Transfervergleich festzulegen.
+
+[Vollständiger Forschungs- und Prüfnachweis](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-comparison-v4-consistent16h/REPORT.md).
+
+## Historischer Startstatus: URA1 V4 einmalig gestartet (2026-10-15)
+
+Die gesonderte Einmalbeauftragung auf Vorstart-SHA
+deaae277655ecf078de791190e840d42b2f42fb113288fc903b54b49342ccee3
+wurde nach vollständiger Bindungsprüfung ausgeführt. Ziel:
+reports/s2uc/ura1-comparison-v4-consistent16h. START.json bestätigt
+consumed=true. Terminalreserve vorhanden; Manifest mit 32 neuen Quellen
+versiegelt. Erster beobachteter aktiver Fall: 1. Noch kein Ergebnisurteil.
+
+Der laufende Versuch benötigt keine weitere Freigabe. Kein Retry, Resume
+oder Ersatzlauf. Maßgeblich für Fortschritt und Abschluss ist terminal.json;
+Primärvergleich erst bei vollständig geprüfter Serie. Historische Quellen
+und Abbruchbelege bleiben getrennt und unverändert.
+
+## Historischer Vorbereitungsstand: URA1 V4 vollständig integriert (2026-10-15)
+
+PASS_PREPARATION_V4: abgenommene gemeinsame Dateierfassung und begrenzte
+Supervisorfehlerdiagnose im tatsächlichen Worker-/Supervisorpfad integriert.
+I01–I08 mit kurzen echten U/R-Fällen und gezielten Fehlern bestanden;
+I09 misst ausschließlich neutrale Dateierfassung. N01–N07 bestanden.
+Regulärer Abschluss und erzwungene Umbenennung bestehen inklusive Decoder
+und Fallquittungen; echte Budgetfehler, Instabilität und Fristende schließen
+terminal ab. Cleanup bei erzwungenem Ende bleibt ausdrücklich unbestätigt.
+
+Neuer Namensraum MCM-URA1/source/v4, exklusives Ziel
+ura1-comparison-v4-consistent16h. V3-Quellen bleiben historische Abbruchbelege;
+keine Wiederverwendung. Neue Forschungsquellen, Berechtigung und Ziel fehlen.
+Keine Forschung gestartet. Vertrag, U/R, Rezept und Statistik unverändert.
+Aktualisierte Zeitplanung einschließlich Erfassung: 14.04 h, Puffer 1.96 h;
+keine Seriengarantie. Höchster Integrations-Jobpeak 52781056 Byte.
+
+Nächster Schritt: Projektleiter prüft die vollständige neue Vorstartbindung
+und entscheidet anschließend gesondert über den Forschungseinstieg.
+
+[Vollständiger integrierter V4-Vorbereitungsbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-v4-preparation-20261015-01/REPORT.md).
+
+## Historischer Korrekturstand: konkurrierende Dateierfassung geprüft (2026-10-15)
+
+PASS_FS_CORRECTION: Historischer list-then-stat-Fehler mit neutralem Worker
+und erzwungener Umbenennung reproduziert. Neue gemeinsame Budgetaufnahme
+verwirft unvollständige Scans, zählt finale Ziele mit und bricht nach spätestens
+acht instabilen Aufnahmen ab. F01–F14 bestanden, einschließlich echter Export-,
+Verwaltungs-/Tempüberschreitung sowie begrenzter Supervisorfehlerdiagnose.
+Höchster Jobpeak der abschließenden Prozessproben: 28057600 Byte.
+
+Getrenntes Korrekturpaket, kein neuer Forschungseinstieg und keine
+Forschungsfreigabe. Historischer V3-Code, Bindung und Abbruchbelege unverändert.
+V3-Start bleibt verbraucht; seine erzeugten Quellen bleiben Abbruchbelege.
+Nächster Schritt: technische Abnahme des Pakets und danach Entscheidung
+über Quellenbehandlung und gegebenenfalls neu gebundenen Einstieg.
+
+[Korrekturbericht, Testnachweise und Grenzen](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-fs-correction-20261015-01/REPORT.md).
+
+## Historischer Abschluss: URA1 V3 technisch abgebrochen (2026-10-15)
+
+Genau ein Versuch auf SHA
+e774d87d8a3df55eaa5e68142d3ca69d8dbfdc979fbdb99731e803c68b412382
+wurde gestartet. START und Freigabe verbraucht. TECHNICAL_ABORT nach 4.396 s:
+Supervisor meldet FileNotFoundError für sources-manifest.json.partial.
+32 neue Quellen und finales Manifest vorhanden, alle Quellenhashes geprüft.
+Null quittierte Fälle, kein aktiver Fall gespeichert, keine Fallarchive.
+Keine Leistungswertung; Primärkontrast, 95%-Intervall und Bilanzen nicht auswertbar.
+
+Workerende und Datei-Cleanup bestätigt; interner Cleanup UNCONFIRMED.
+terminal.json ist der maßgebliche Supervisorbeleg; reguläre Berichte fehlen.
+Jobpeak 44756992 Byte. Kein Retry, Resume, Ersatzfall oder Tuning erfolgt.
+Nächster Vorschlag: begrenzte Korrektur der konkurrierenden Dateierfassung
+mit neutraler Prüfung; kein weiterer Forschungsstart daraus ableitbar.
+
+[Vollständiger technischer Abbruchabschluss](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-comparison-v3-terminal16h/REPORT.md).
+
+## Historischer Vorbereitungsstand: URA1 V3 integriert, Forschungsentscheidung offen (2026-10-15)
+
+PASS_PREPARATION_V3: Neuer gebundener Einstieg verbindet tatsächlichen Worker,
+Ledger, Fallquittungen und reservierten Supervisorabschluss. N01–N06 und
+I01–I04 bestanden: zwei kurze echte U/R-Fälle sowie Export-, Verwaltungs- und
+Fristfehler einschließlich gescheitertem Workerbericht. Interner Cleanup bei
+Fristabbruch ausdrücklich unbestätigt. Alle bisherigen Grenzwerte unverändert.
+
+Neuer Namensraum MCM-URA1/source/v3 und exklusives Ziel
+ura1-comparison-v3-terminal16h vorab festgelegt. Rezept, 32 Geschichten, U/R,
+Primärkontrast und Statistik unverändert; Bootstrapmatrix bytegleich übernommen.
+Neue Forschungsquellen nicht erzeugt oder besichtigt; keine authorization.json,
+kein neues Forschungsziel und kein Forschungsstart. Alter Versuch bleibt
+TECHNICAL_ABORT, seine Freigabe verbraucht; alte Quellen werden nicht wiederverwendet.
+
+Die bisherigen gebundenen Überblicksfassungen sind im Vorbereitungspaket als
+historical-overviews bytegleich gesichert. Neue Standseinordnung ist keine
+Forschungsfreigabe. Nächster Schritt: Projektleiter prüft die vollständige
+Vorstartbindung und entscheidet separat über genau einen neuen Versuch.
+
+[Vollständiger V3-Vorbereitungsbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-v3-preparation-20261015-01/REPORT.md).
+
+## Historischer Stand: URA1-V2-Abnahme zurückgestellt, Versuch beendet (2026-10-15)
+
+Der gestartete Versuch wurde auf Projektleiterauftrag wegen des bestätigten
+terminalen Abschlussfehlers beendet. Worker und Supervisor beendet; alter
+Supervisorabschluss TECHNICAL_ABORT nach 6295.248 s gespeichert. 25 Archive;
+Abschlussfälle mindestens 24 aus sequenziellem Ablauf belegt, exakter Stand
+unbekannt. Keine Partialdateien; interner Cleanup des unterbrochenen Falls
+unbestätigt. 32 Forschungsquellen bereits erzeugt, keine Leistungsbewertung.
+START und Freigabe verbraucht; keine Wiederaufnahme oder neue Forschung.
+
+Getrennte terminale Korrektur mit 16384-Byte-Abschlussreserve innerhalb der
+unveränderten Grenzen. T01–T08 und drei neutrale Prozessfehlerproben bestanden;
+auch gescheiterter Workerbericht führt zum gespeicherten Supervisorabschluss.
+Alte 346-Dateien-Bindung unverändert. Neue Bindung gilt nur dem Korrekturpaket,
+nicht einem erneuten Forschungsstart. Nächster Schritt: technische Prüfung
+und fachliche Entscheidung des Projektleiters zu den bereits erzeugten Quellen.
+
+[Unterbrechungs- und Korrekturbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-terminal-repair-20261015-01/REPORT.md).
+
+## Historischer Vorbereitungsstand: URA1 V2 unter 16-Stunden-Vertrag geprüft (2026-10-15)
+
+PASS_PREPARATION_V2: Quellenrezept nur im neutralen Namensraum unabhängig
+geprüft; rationale Statistik und Referenz am künstlichen vollständigen Schema
+bestätigt. Bootstrapmatrix 320000 Byte erzeugt und unabhängig gebunden.
+P01–P08 sowie Startfehler-/Watchdogproben bestanden; zwei kurze Achtframefälle
+mit frischen U/R-Armen, keine Forschungsquellen oder Grössen-Policy-Läufe.
+
+Neuer ausdrücklich versionierter Gesamtzeitvertrag: 57600 s global,
+Workerende spätestens nach 54000 s ab demselben Beginn, 3600 s Abschlussreserve
+innerhalb der Gesamtfrist. Alle Speicher-/Archiv-/Exportgrenzen unverändert.
+Konservative Planung einschliesslich 25%-Kernreserve und Zusatzkosten:
+12.20 h; verbleibender Puffer 3.80 h. Plausibilität, keine Seriengarantie.
+Vorbereitung: gemeinsamer Kernel-Peak 78356480 Byte, Supervisor 32,913 s.
+Code, Runtime, Vertrag, Matrix und Belege in neuer Vorstartbindung versiegelt.
+
+**Keine Forschungsfreigabe:** authorization.json und Forschungs-START fehlen;
+Forschungsnamensraum bleibt gesperrt. Historische Marker bleiben verbraucht.
+Nächster Schritt: Projektleiter nimmt Vorbereitung und Risiken ab und trifft
+separat die Forschungsentscheidung auf den gebundenen SHA. Keine weitere
+Optimierungsserie oder Quellenbesichtigung aus diesem Vorbereitungspaket.
+
+[Vollständiger Vorbereitungsbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-v2-preparation-20261015-01/REPORT.md).
+
+## Vorheriger Entwicklungsstand: URA1-Laufzeitpaket bestanden, Serie zeitlich offen (2026-10-15)
+
+PASS_RUNTIME_PACKAGE: gebündelte Paar-/Vollständigkeits-/Diagnoseprüfung mit
+Envelopehash und unabhängiger Decoder mit exakter inkrementeller Recordgrösse.
+O01–O04, zwei bestehende Kleinfälle und genau eine Prüfung des vorhandenen
+1024-Frame-Archivs bestanden. Inhalte, Anker, Ereignisse und geprüfte terminale
+Fehler unverändert. Historische Dateien und Marker unverändert; neuer
+Archivprüfmarker ebenfalls verbraucht. Kein neuer Grössen-Policy-Lauf.
+
+Grosse Nachverarbeitung 177,403 s; unabhängiger Decoder 82,408 s statt 329,786 s.
+Archivprüfung insgesamt 262,136 s, Kernel-Job-Peak 81047552 Byte. Keine
+unbelegte Erfassungseinsparung. Konservative 32-Fall-Planungsabschätzung mit
+25 Prozent Reserve: 10.96 Stunden plus noch ungemessene Quellen-,
+Statistik- und Abschlussarbeiten. Keine Serienmessung oder garantierte Schranke.
+SERIES_TIME_NOT_READY: 3600 s bleiben das globale Serienbudget, nicht je Fall.
+Quellen-/Bootstrap-/Statistikprüfung, Serienressourcen und Vorstartbindung offen.
+Nächster Schritt: Projektleiter bewertet die verbleibende Zeitlücke und trifft
+vor weiterer Forschung eine ausdrückliche Entscheidung zum künftigen Zeitvertrag.
+Keine automatische Budgetänderung oder weitere Optimierungsserie.
+
+[Vollständiger Abschlussbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-runtime-development-20261015-01/REPORT.md).
+
+## Vorheriger Planungsstand: URA1-Serienlaufzeit offen (2026-10-15)
+
+Der einzelne Delta-Groessenlauf ist bestanden und seine Einmalfreigabe verbraucht.
+Die Laufzeitmachbarkeit der geplanten 32-Fall-Serie ist weiterhin offen.
+Lineare Abschätzung aus 1193,505 s je vollständigem U/R-Handfall: rund 10,61 h
+für 32 Fälle, noch ohne zusätzliche Serienstatistik; keine Serienmessung.
+3600 s bleiben der Gesamtvertrag, nicht ein Budget je Fall oder Teilstart.
+
+Genau eine Empfehlung: separat beauftragte Optimierung wiederholter kanonischer
+Recordverarbeitung, mit gebündelten Prüfdurchläufen und exakter inkrementeller
+Recordgrössenprüfung im unabhängigen Decoder. Alle Ereignisse, Referenzen,
+Bestands-/Zellprüfungen, Erfassungsanker und unabhängige Archivprüfung bleiben.
+Kein bezifferter Instrumentierungsgewinn belegt; keine Budgetänderung beschlossen.
+Noch offen: Quellenprüfung, Statistik-/Bootstrapprüfung, vollständige
+Serienressourcen und endgültige Vorstartbindung. Keine neue Ausführung freigegeben.
+
+[Machbarkeitsentscheidung mit Codebelegen und Umsetzungspaket](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/S2UC_URA1_SERIENLAUFZEIT_ENTSCHEIDUNG_20261015.md).
+
+## Abgenommener Einzelbefund: URA1-Delta-Groessenlauf bestanden (2026-10-15)
+
+COMPLETE_NEUTRAL_SIZE / PASS_DELTA_INTEGRITY: genau ein separat gebundener
+D_ITEMS-x16-Handfall mit 1024 Frames je U/R-Arm vollstaendig bestanden.
+Sieben Vorbereitungstests und Start-/Fristproben bestanden. 271 Dateien,
+Material, Runtime, Grenzen und Aufruf vorab gebunden; START.json verbraucht.
+Je Arm 3072 aeussere und 11276 interne Ereignisse, 512 Prognosen und 511
+beobachtete Ziele; Ziel 1025 zensiert. Alle Referenz-/Gleichheitspruefungen
+und acht unabhaengige Erfassungsanker bestaetigt. Rekonstruktion: 358862679 Byte.
+Dictionary 901970 Byte, JSON-Format 1029374 Byte, gzip 170176 Byte.
+Gemeinsamer harter 512-MiB-Job: Kernel-Peak 146649088 Byte, Gesamtzeit
+1193,505 s. Cleanup und Workerende bestaetigt, keine Partialdateien.
+
+Erfolg nur fuer diesen periodischen Handfall, keine Forschungsbereitschaft,
+Leistungswertung oder Freigabe weiterer Laeufe. Alter Dictionary-Abbruch
+und Marker unveraendert. Naechster Vorschlag: technische Abnahme durch den
+Projektleiter und Bestimmung des kleinsten noch fehlenden Abnahmekriteriums
+im bestehenden Forschungsauftrag; keine automatische Wiederholung oder Serie.
+
+[Vollstaendiger Abschlussbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-delta-size-neutral-20261015-01/REPORT.md).
+
+## Vorheriger Entwicklungsstand: URA1-Zustandsdifferenzen klein geprüft (2026-10-15)
+
+PASS_SMALL_STATE_DELTA: genau eine gezielte Formatänderung mit vollständigem
+Anfangsrecord, geordneten strukturellen Änderungen und begrenzten Referenztabellen.
+T01–T06, zwei vollständige Archivabnahmen und zwei reguläre Kleinfallintegrationen
+bestanden. Unabhängiger Decoder und Erfassungsanker bestätigen unveränderte
+kanonische Records; U/R, Referenzen und Ereignisprüfungen unverändert.
+Dictionary beider Arme zusammen: 70.451 / 58.471 Byte statt 337.128 / 264.724.
+Dekomprimiertes Format: 78.258 / 64.582 Byte statt 339.990 / 267.066.
+Kein versteckter Rohspool oder innere Kompression; vorherige Records und Tabellen
+sind begrenzt und im harten 512-MiB-Job mitgemessen. Integration: Kernel-Peak
+64.729.088 Byte, 90,645 s. Größenersparnis deutlich, Laufzeitgewinn gering.
+
+Für 1024 Frames je Arm ergeben lineare Abschätzungen rund 1,13 Millionen
+Dictionarybytes (exakt 1.127.216 Byte) und 1.252.128 Byte Format für U/R zusammen;
+dies sind keine Größenmessungen. Keine Forschungsbereitschaft.
+Nächster Vorschlag: Codecstand abnehmen und gegebenenfalls einen neuen einzelnen
+neutralen Größenlauf separat beauftragen und neu binden. Der frühere Marker
+bleibt verbraucht. Hier kein Größenlauf, keine fehlenden Präfixdaten rekonstruiert,
+keine Forschungsquellen, Bootstrapmatrix oder Forschungsausführung.
+
+[Vollständiger Codecbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-delta-development-20261015-01/REPORT.md).
+
+## Vorheriger Ergebnisstand: URA1-Größengrenztest technisch abgebrochen (2026-10-15)
+
+TECHNICAL_ABORT: DICTIONARY_LIMIT. Genau der beauftragte periodische
+1024-Frame-Handfall wurde einmal gestartet; START.json ist verbraucht.
+Kein Retry, Resume oder Ersatzfall. Sieben Vorabtests sowie Start-/Fristproben
+bestanden; Material, 202 Dateien, Runtime, Grenzen und Aufruf vorab gebunden.
+
+U begann Frame 844; 843 Frames waren vollständig referenzgeprüft. R wurde
+nicht gestartet. Dictionary 4.194.282 / 4.194.304 Byte; der nächste Eintrag
+wurde abgewiesen. 2529 äußere / 9278 interne Ereignisse sowie je 421 Prognose-
+und Feedbackrecords aufgenommen. Unabhängige Erfassungsanker liegen nur für
+diesen Präfix vor; kein vollständiges Fallarchiv oder Größen-Decoderergebnis.
+Gemeinsamer Kernel-Job-Peak 121.827.328 Byte bei harter 512-MiB-Grenze;
+Gesamtzeit 236,994 s. Cleanup und Workerende bestätigt, temporäre Dateien 0.
+
+Der Größenlauf ist nicht bestanden. Keine vollständige U/R-Gleichheitsprüfung,
+keine Leistungswertung und keine Forschungsbereitschaft. Nächster Vorschlag:
+begrenzte weitere verlustfreie Zustands-/Metadatenkompaktierung an vorhandenen
+kleinen Belegen mit unabhängigem Decoder und Erfassungsankern. Unveränderte
+Grenzen und Ereignisse; ein weiterer Größenlauf braucht eine neue ausdrückliche
+Beauftragung. Keine Forschungsquellen, Bootstrapmatrix oder Forschungsserie.
+
+[Vollständiger Grenztestbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-size-neutral-20261015-01/REPORT.md).
+
+## Vorheriger Entwicklungsstand: URA1 direkt referenzierend erfasst (2026-10-15)
+
+PASS_BOUNDED_DIRECT_CAPTURE: bestehende 64-/48-Frame-Handfolgen vollständig
+gegen die bisherigen kanonischen Ressourcenrecords geprüft. D01 und sieben
+fokussierte Tests D02–D08 bestanden; numerische Metadatenschlüssel nach einem
+vom Decoder abgewiesenen Entwicklungsversuch korrigiert und regressiv geprüft.
+U/R, Referenzen, Ereignisumfang und ursprüngliche Bindungen unverändert.
+Keine redundante JSONL-Ablage; Tabellen, Kanten, Indizes und Buffer begrenzt.
+Temporärer Peak einschließlich Partialausgabe: 23.491 / 19.210 Byte.
+Gemeinsamer harter 512-MiB-Job: Kernel-Peak 69.181.440 Byte, Laufzeit 94,935 s
+(vorher 75.165.696 Byte / 212,922 s). Vollständige Rekonstruktion unverändert.
+
+Keine Forschungsbereitschaft. Der einzelne vorgeschlagene 1024-Frame-Ablauf
+ist nur als gesondert beauftragter technischer Grenztest bedingt vertretbar:
+lineare Dictionary-/Formatabschätzungen überschreiten 4 MiB; Wiederverwendung
+und tatsächliche Skalierung sind ungeprüft. Die 128-Frame-Kleinfallgrenze bleibt.
+Nächster Vorschlag: genau diesen Grenztest samt gesondertem Einstieg und
+unabhängiger Integritätsbindung bewerten; keine automatische Ausführung.
+Kein Größenablauf, keine Forschungsquellen, Bootstrapmatrix oder Forschung.
+
+[Vollständiger Abschlussbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-direct-development-20261015-01/REPORT.md).
+
+## Vorheriger Entwicklungsstand: URA1-Kleinfallressourcen geprüft (2026-10-14)
+
+PASS_SMALL_RESOURCE_QUALIFICATION: vorhandene 64-/48-Frame-Handfolgen gezielt
+mit vollständigem Ereignistrace, Referenzen, Codec und Cleanup gemessen.
+Supervisor und höchstens ein Worker im gleichen harten 512-MiB-Windows-Job.
+Normaler gemeinsamer Kernel-Peak 75.165.696 Byte; Laufzeit 212,922 s.
+Native Speicherablehnung, Encoder-/Decoderfehler und Cleanup geprüft (R01–R07).
+Vollständige Historienlisten im RAM durch begrenzte fortlaufende Dateierfassung ersetzt.
+Originalbelege und U/R-Kernregeln unverändert; Rekonstruktion verlustfrei.
+Lebenszyklusrecord stimmt auch im kanonischen Hash mit dem alten Beleg überein.
+
+Keine Forschungsbereitschaft. Spooldaten: 19.677.758 / 13.338.998 Byte für die
+kleinen Fälle; der 64-MiB-Spoolrahmen ist ein konkretes Skalierungsrisiko.
+Nächster Vorschlag: vor Größenfreigabe direkt referenzierende Erfassung oder
+frühere verlustfreie Kompaktierung des Spools begrenzt bearbeiten.
+Genau ein späterer 1024-Frame-Größenablauf ist konkret vorgeschlagen, nicht ausgeführt;
+die bestehende 128-Frame-Kleinfallgrenze bleibt unverändert. Keine Forschungsquellen,
+Bootstrapmatrix oder Forschungsausführung. Native Phasenmaxima sind teilweise nur
+gesampelt; der gemeinsame Job-Peak ist kernelgemessen. Details im Bericht.
+
+[Vollständiger Ressourcenbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-resource-development-20261014-01/REPORT.md).
+
+## Vorheriger Entwicklungsstand: URA1-Archivcodec neutral geprüft (2026-10-14)
+
+PASS_CODEC_ONLY: Neun fokussierte Codec-Tests bestanden. Die zwei ursprünglichen
+neutralen Archive und ihre Bindungen bleiben unverändert; keine Policy-Wiederholung.
+Unabhängiger Decoder rekonstruiert sämtliche kanonischen Originalbytes.
+Referenzkodierung identischer JSON-Teilbäume, keine innere Kompression.
+Neue gzip-Größen: 24.408 / 19.732 Byte; dekomprimiertes Archivformat:
+276.323 / 266.560 Byte. Beide Fälle erfüllen 512 KiB gzip und 4 MiB Formatgröße.
+Die vollständig rekonstruierte Historie bleibt 3.860.092 / 13.380.342 Byte groß.
+Fortlaufende Decoderprüfung: Python-Peak 8.589.858 / 8.585.166 Byte;
+mit vollständiger Materialisierung 19.531.679 / 61.950.316 Byte.
+Fehlende/vertauschte Ereignisse, beschädigte Referenzen und Werte werden erkannt.
+
+Der frühere Formatgrößenblocker ist für diese zwei neutralen Fälle gelöst.
+Keine Forschungsbereitschaft: Skalierung, Gesamtprozess-/Beobachterkosten und
+Konstruktortransienten bleiben offen. Kein Größenablauf, keine Forschungsquellen,
+keine Bootstrapmatrix und kein Forschungsversuch. U/R-Regeln unverändert.
+Nächster Vorschlag: Codec abnehmen und die offene Ressourcenbilanz gesondert
+begrenzt beauftragen; daraus folgt kein automatischer Größen- oder Forschungslauf.
+
+[Codec-Abschlussbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-codec-development-20261014-01/REPORT.md).
+
+## Vorheriger Entwicklungsstand: URA1 neutral implementiert und geprüft (2026-10-14)
+
+Der bestehende neutrale URA1-Entwicklungsauftrag ist mit
+PASS_FOCUSED_NEUTRAL_DEVELOPMENT dokumentiert. Zuordnung zur Rückfrage:
+Prüfpaket dda37469-3a5d-4448-abcc-45f05509760e.
+14 vorhandene Tests bestanden; 160 gebundene Vorgängerdateien unverändert.
+R wählt den jüngsten berechtigten Originalnachfolger, mit festem Schlüsselgleichstand;
+Fehlerwerte und Warmstatus steuern seine Auswahl nicht. Eigene unabhängige Referenz.
+Reguläre Nichtäquivalenz bei Ziel 7: U persistiert V(0.5), R gibt Original V(0.25) aus.
+Das ist kein Leistungsnachweis. Bestand, Hypothesen, Tickets und Fehlerzellen sind
+in den neutralen Fällen ereignisweise gleich, einschließlich 552 interner Ereignisse
+je Arm im Lebenszyklusfall. Injektionskontrollen erkennen Bestands-/Feedbackkopplung.
+
+Keine Forschungsbereitschaft: Das expandierte Lebenszyklusarchiv benötigt
+13.380.342 Byte und überschreitet die geplante 4-MiB-Fallgrenze. Ressourcen sind
+für die kleinen Prüffälle belegt; vollständige Prozess-/Größenqualifikation fehlt.
+Kein Größenablauf, keine Forschungsquellen, keine Bootstrapmatrix, kein Forschungsversuch.
+Die Ergebnisübergabe wiederholt keine bereits bestandenen Entwicklungstests.
+Nächster Vorschlag an den Projektleiter: begrenzte verlustfreie Archivkompaktierung
+mit unabhängigem Decoder und unveränderten Grenzen, danach weitere technische
+Vorbereitung nur im gesondert beauftragten Umfang. UFB1 bleibt unbeauftragt;
+historische Einmalfreigaben bleiben verbraucht.
+
+[Vollständiger Abschlussbericht](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/ura1-neutral-development-20261014-01/REPORT.md).
+
+## Historische Konzeptentscheidung: URA1 Auswahlablation bei gleichem Bestand (2026-10-14)
+
+Der folgende Konzeptstand wird durch den obigen neutralen Entwicklungsstand ergänzt; seine damaligen nächsten Schritte sind keine neuen Aufträge.
+
+Die [Konzeptentscheidung mit Ablationsvertrag](S2UC_URA1_AUSWAHLABLATION_KONZEPT_20261014.md) ist ausgearbeitet.
+Die Frage bleibt offen: ULZ1 verglich zwei Fehlerbewertungen; HX1/UF1 hielten
+nicht denselben verfügbaren Spurenbestand fest. Kein erneuter Letztfehlervergleich.
+Geplant sind genau U und R. U unverändert; R wählt die jüngste berechtigte
+Originalfortsetzung ohne Fehlerwerte, Warmstatus oder Häufigkeitsbank zur Auswahl.
+Aufnahme, Bestätigung, Verdrängung, Originalspuren und Feedback bleiben gleich.
+R führt dieselben Fehlerzellen als für die Auswahl ungenutzten Kontrollzustand;
+die Ablation betrifft ihre Nutzung, nicht ihren Speicher- oder Rechenaufwand.
+Codelektüre zeigt keine reguläre Auswahlrückkopplung auf den Bestand. Später
+müssen Bestand, Hypothesen und Fehlerzellen ereignisweise gleich nachgewiesen werden.
+
+Begrenzter Entwurf: 32 neue D-Geschichten, ein Primärkontrast U−R über alle Q-Ziele.
+Gegenprognose, Ausgangsentscheidungen, Referenzen und Abnahmekriterien sind festgelegt.
+Keine Implementierung, Simulation, Quellen-/Matrixerzeugung oder Versuchsausführung.
+UFB1 ist fachlich ausgewertet; seine Erkenntnisse bleiben erhalten. Implementierung
+und Forschungswiederholung sind derzeit NICHT BEAUFTRAGT.
+Nächster Vorschlag: URA1-Vertrag bewerten, danach gegebenenfalls nur R-Auswahl,
+Referenz und Bestands-/Zellgleichheit neutral qualifizieren. Forschung separat.
+UF1 bleibt abgeschlossen; sämtliche historischen Einmalfreigaben bleiben verbraucht.
+
+## Abgeschlossene Konzeptarbeit: UFB1 derzeit nicht zur Umsetzung beauftragt (2026-10-14)
+
+Die folgenden Anschlussvorschläge sind durch die aktuelle URA1-Priorität überholt.
+
+
+Der beauftragte [Konzeptvertrag](S2UC_UFB1_KONZEPTVERTRAG_20261014.md) ist ausgearbeitet.
+Machbarkeitsentscheidung: gemeinsamer externer Informationszugang und vollständige
+Speicherobergrenze konzeptionell möglich; technische Qualifikation steht aus.
+U kennt bereits Index und Vierframe-Segmentierung. F nutzt die Phase gezielt;
+gleicher Zugang bedeutet weder gleichen internen Bestand noch gleiche Nutzung.
+Geplant sind genau U_B/F_B mit unveränderten Kernregeln, gemeinsamer kausaler
+Schnittstelle und je 65.536 Byte vollständig gezähltem Speicher einschließlich
+Originalen, Hülle, Puffern, Ausgaben und Transienten. Kein künstliches Auffüllen,
+keine zusätzlichen U-Fähigkeiten und keine Kürzung von Fs Häufigkeitsspeicher.
+Neue Ausführungs-/Ressourcenvariante; historische Bindungen bleiben unverändert.
+
+32 neue D/N-Paare derselben Familie, ein Primärkontrast über alle Q-Ziele,
+Erfolgsregel, unabhängige Referenzen und Abbruchgrenzen sind konzeptionell festgelegt.
+Keine Quellen, Matrix, Implementierung, Simulation oder Versuchsausführung.
+Ein nicht bindender gemeinsamer Rahmen prüft eine begrenzte Replikationsaussage;
+er isoliert nicht den kausalen Nutzen der Verlaufsspeicherung oder Phasennutzung.
+Nächster Vorschlag: Vertragsabnahme, danach ausschließlich gemeinsame Hülle und
+vollständigen Speicherprüfer neutral qualifizieren. Erst anschließend über den
+Nutzen eines separat freizugebenden Forschungsversuchs entscheiden.
+UF1 ist abgeschlossen; seine Einmalbeauftragung bleibt VERBRAUCHT.
+
+## Abgeschlossener Ergebnisstand: UF1 unabhängig geprüft (2026-10-14)
+
+Der Forschungsversuch vom 2026-10-05 ist COMPLETE; die nachgelagerte Archivprüfung
+ist PASS_ARCHIVE_VERIFICATION. F_VORTEIL_BELEGT unabhängig bestätigt:
+D: U−F = 0.057098388672; nominales 95%-Intervall [0.054504394531; 0.059814453125].
+D-MAE: U 0.186218261719, F 0.129119873047. Ergänzend N: U−F = −0.011047363281,
+Intervall [−0.017975616455; −0.003936767578]; kein zweiter Primärtest.
+32 neue D/N-Paare, 64 Geschichten, 128 Armläufe. 65.536 F-Zustände,
+je 32.704 U-/F-Ausgaben, 640 Armmittelwerte, alle Intervalle und Bilanzen geprüft.
+Keine neuen Quellen und keine Policy-Wiederholung im Abschlussaudit.
+Supervisor 465.861 s; Job-Peak 204697600 Byte; Ressourcen- und Exportgrenzen eingehalten.
+
+[Ergebnisbericht](../reports/s2uc/uf1-assessment-20261005-01/REPORT.md), [Archivprüfung](../reports/s2uc/uf1-assessment-20261005-01/verification.json), [Exportbilanz](../reports/s2uc/uf1-assessment-20261005-01/export-accounting.json).
+Die UF1-Einmalbeauftragung ist VERBRAUCHT: kein Retry, Resume oder Ersatzmaterial.
+Gebundene Verfahren und Archive bleiben unverändert; UH1/UHR1 werden nicht gepoolt.
+U zeigt hier keinen D-Vorteil gegenüber F. F hat Phasenwissen und eine andere
+Speicherrepräsentation; Ursachen und allgemeine Überlegenheit sind damit nicht belegt.
+Nächster Vorschlag: begrenzter Konzeptvertrag für einen Vergleich unter angeglichenem
+Informationszugang und nachvollziehbar abgeglichenem Gesamtbudget, mit genau einer
+falsifizierbaren Frage zum Nutzen der Verlaufserfahrung. Noch nicht ausgeführt.
+
+## Historischer Vorbereitungsstand: UF1 implementiert und neutral qualifiziert (2026-10-05)
+
+F und unabhängige Referenz sind implementiert; N1–N7/G1–G6 bestanden
+(18 Testmethoden plus elf U-Untertests). Genau ein neutraler Größenablauf COMPLETE:
+64 Geschichten, 128 U/F-Armläufe, 131.072 Armverarbeitungen samt Referenzen.
+Archivprüfung PASS: 65.536 F-Zustände und je 32.704 U-/F-Ausgaben rekonstruiert;
+Zählerdiagnosen, alle Intervalle und vollständige Bilanzen unabhängig geprüft.
+159 Vorgängerhashes unverändert; U und seine laufwirksamen Abhängigkeiten unverändert.
+F-Bank 4304 Byte, fokussierte transiente Numerik 96 Byte plus 32 Byte Reserve,
+konservatives numerisches Maximum 4712 unter 5120 Byte. F-Eigenheap im Größenablauf
+4839 Byte, in injizierten Fehlerpfaden höchstens 6753 unter 32768 Byte.
+Supervisor 487.258 s, Job-Peak 126853120 Byte;
+Vorbereitung 4690185 Byte unter 8 MiB. Ressourcen-/Exportgrenzen eingehalten.
+
+[Abschlussbericht](../reports/s2uc/uf1-preparation-assessment-20261005-01/REPORT.md),
+[Vorstartbindung](S2UC_UF1_V1_20261005_VORSTARTBINDUNG.json),
+[späterer Aufruf](S2UC_UF1_V1_20261005_START.md).
+Vorstart-SHA256: `1a2c3bcab967eeed4d6fa422693216f8ba2853bac7aaab389ecc54aa606eb6d7`.
+Keine Forschungsquellen erzeugt oder gesichtet, keine operative Autorisierung.
+Nächster Vorschlag: Umsetzungspaket abnehmen; danach separat über genau einen
+UF1-Forschungsversuch mit dieser Bindung entscheiden. Kein zweiter neutraler Größenablauf.
+F behält Phasenwissen und größeres Budget gegenüber H; dritte Fortsetzung terminal.
+Keine allgemeine Lernfähigkeit behauptet; UH1/UHR1 bleiben getrennte Befunde.
+
+## Historischer Konzeptstand: UF1-Häufigkeitsbaseline spezifiziert (2026-10-05)
+
+Der UHR1-Replikationsbefund ist abgenommen. Vor einem Aufgabenstrukturwechsel
+liegt der [vollständige UF1-Prüfvertrag](S2UC_UF1_PRUEFVERTRAG_20261005.md) zur Abnahme vor:
+U unverändert gegen F mit Hs zwei Hinweisschlüsseln und Phasenwissen, je Hinweis
+höchstens zwei erst nach Feedback gelernte Fortsetzungsvektoren samt Häufigkeiten.
+Strikte Mehrheit vorhersagen, bei Gleichstand/unbekanntem Hinweis Persistenz.
+Dritter verschiedener Fortsetzungswert terminal; keine unbegrenzte Historie.
+F-Bank 4304 Byte, konservative Numerik 4712 Byte bei 5120-Byte-Limit,
+Eigenheap 32768 Byte. Größerer Speicher als H ausdrücklich offengelegt.
+32 neue D/N-Paare derselben Familie, reservierter Namensraum MCM-UF1/source/v1.
+Einziger Primärkontrast U−F in D auf allen Q-Zielen, bisherige Aggregation und
+nominales 95%-Intervall. Analytische MAE-Passung begründet, keine Oraclebehauptung.
+Unabhängige Referenz, neutrale Prüffälle, Ressourcen und Abbruchregeln vollständig.
+Nur Dokumentation: keine Implementierung, Quellen/Matrix oder Versuchsausführung.
+Nächster Vorschlag: Vertragsabnahme und begrenztes F-Implementierungs-/Qualifikationspaket;
+Forschungsfreigabe bleibt separat. UH1/UHR1 bleiben unverändert und getrennt.
+
+## Abgenommener Ergebnisstand: UHR1 abgeschlossen, U-Vorteil repliziert (2026-10-05)
+
+Genau ein autorisierter UHR1-Forschungsversuch COMPLETE: 32 neue D/N-Paare,
+64 Geschichten, 128 frische U/H-Armläufe und 131.072 Armverarbeitungen samt Referenzen.
+Einziger Primärkontrast U−H in D: -0.005799488143; nominales 95%-Intervall
+[-0.009360747140; -0.002299448369], vollständig negativ.
+Urteil U_VORTEIL_REPLIZIERT. D-MAE U 0.185607910156, H 0.191407398300.
+Archivprüfung PASS: 65.536 H-Zustände, je 32.704 U-/H-Ausgaben, alle Intervalle
+und ergänzenden Bilanzen unabhängig geprüft. Supervisor 466.732 s,
+Job-Peak 117858304 Byte; Ressourcen- und Exportgrenzen eingehalten.
+Alle Quellen vor erstem Policy-Aufruf versiegelt; U/H unverändert.
+
+[Ergebnisbericht](../reports/s2uc/uhr1-assessment-20261005-01/REPORT.md),
+[Archivprüfung](../reports/s2uc/uhr1-assessment-20261005-01/verification.json),
+[exakte Auswertung](../reports/s2uc/uhr1-comparison-20261005-01/assessment.json).
+Replikation auf neuen Folgen derselben Aufgabenfamilie; keine Aussage zu anderen
+Aufgaben, Audio/Video oder allgemeiner Kognition. UH1 bleibt getrennt, kein Pooling.
+Einmalbeauftragung VERBRAUCHT, kein Retry/Resume/Ersatzmaterial.
+Die Anschlusspriorität ist durch den Projektleiter geändert: zunächst UF1 mit
+passenderer einfacher Baseline auf derselben Aufgabenfamilie, siehe obersten Stand.
+
+## Historischer Vorbereitungsstand: UHR1 implementiert und neutral qualifiziert (2026-10-05)
+
+Der fachlich abgenommene UHR1-Vertrag ist umgesetzt. N1–N7 und G1–G7 bestanden
+(14 Prüfgruppen plus elf U-Untertests); genau ein neutraler Größenablauf COMPLETE:
+64 Geschichten, 128 U/H-Armläufe, 131.072 Armverarbeitungen samt Referenzen.
+Archivprüfung PASS: 65.536 H-Zustände, je 32.704 U-/H-Ausgaben sowie alle Intervalle
+und ergänzenden Bilanzen unabhängig geprüft. Alle 150 geerbten UH1-Dateihashes
+unverändert; neue Codebindung mit 159 Dateien. U/H-Speicher und H-Phasenwissen unverändert.
+Supervisor 482.526 s, Job-Peak 130.842.624 Byte;
+Vorbereitung 8.212.164 Byte unter 8 MiB. Alle Grenzen des neutralen Größenablaufs eingehalten.
+Keine Forschungsquelle erzeugt oder gesichtet, kein Forschungsversuch ausgeführt.
+Bootstrapmatrix und vollständige Vorstartbindung sind versiegelt.
+
+[Abschlussbericht](../reports/s2uc/uhr1-preparation-assessment-20261005-01/REPORT.md),
+[Vorstartbindung](S2UC_UHR1_V1_20261005_VORSTARTBINDUNG.json),
+[späterer Aufruf](S2UC_UHR1_V1_20261005_START.md).
+Vorstart-SHA256: `91a770a4b5ba5e442807abc50bd458c194e57c6c8cebfc135102bbca304c6355`.
+Nächster Vorschlag: Umsetzungspaket abnehmen; danach gesondert über genau einen
+Forschungsversuch mit dieser Bindung entscheiden. Keine operative Autorisierung
+angelegt. UH1 bleibt abgeschlossen; UHR1 bleibt eine getrennte Wiederholungsprüfung
+auf neuen Folgen derselben Aufgabenfamilie, kein Aufgabentransfer.
+
+## Historischer Konzeptstand: UHR1 vorregistriert (2026-10-05)
+
+Der [vollständige UHR1-Prüfvertrag](S2UC_UHR1_PRUEFVERTRAG_20261005.md) liegt zur fachlichen Abnahme vor.
+32 neue D/N-Paare derselben Aufgabenfamilie; U/H einschließlich Speicher,
+Lernen und H-Phasenwissen unverändert. Neuer reservierter Quellen-Namensraum
+MCM-UHR1/source/v1. Einziger Primärkontrast U−H in D über sämtliche Q-Ziele;
+UH1-Aggregation und geschichtetes Bootstrap mit nominalem 95%-Intervall:
+vollständig negativ = U-Vorteil repliziert, vollständig positiv = H-Vorteil,
+sonst kein eindeutiger Unterschied. Neue Ergebnisse werden getrennt von UH1 beurteilt.
+Quellenrezept, Verfahrensbindung, Ressourcen, Abbruch und Sekundärbilanz festgelegt.
+Keine Quellen oder Bootstrapmatrix erzeugt, keine Implementierung oder Ausführung.
+Aussage ausschließlich zu neuen Folgen derselben Aufgabenfamilie, kein Aufgabentransfer.
+Nächster vorgeschlagener Schritt: nach Vertragsabnahme begrenzte Umsetzung der
+UHR1-Hülle und unabhängigen Rezeptprüfung mit neutraler Qualifikation und neuer
+Vorstartbindung; Forschungsversuch danach weiterhin separat zu beauftragen.
+UH1 bleibt abgeschlossen; seine Einmalfreigabe bleibt verbraucht.
+
+## Vorheriger Abschlussstand: UH1 abgeschlossen, begrenzter U-Vorteil auf bekannten Quellen (2026-10-05)
+
+Der separat beauftragte U/H-Vergleich wurde genau einmal ausgeführt: COMPLETE,
+64 unveränderte Archivquellen, 128 frische Armläufe, 131.072 Frame-Verarbeitungen
+und Referenzfortschritte. Einziger Primärkontrast U−H in D:
+−0,004190908083, nominales 95%-Intervall [−0,007614034809; −0,000909328372].
+Urteil H_ERWARTUNG_WIDERLEGT_U_VORTEIL; U-MAE 0,186340332031,
+H-MAE 0,190531240114. Vollständige Gewinne, Schäden und Verfügbarkeit berichtet.
+
+Untersuchung auf bekannten Quellen, keine unabhängige Replikation.
+Vergleich zweier Gesamtverfahren mit unterschiedlicher Speicherrepräsentation
+und unterschiedlichem Informationszugang; keine isolierte Kausalzuordnung.
+H besaß zwei dauerhaft verfügbare gelernte Hinweise und Phasenwissen.
+Keine allgemeine Überlegenheit von U gegenüber allen einfachen Verfahren behauptet.
+
+Archivprüfung bestanden: 65.536 H-Zustände dekodiert, 32.704 H-Ausgaben unabhängig
+bewertet; alle 32.704 U-Fehler stimmen mit HX1 überein. Primär- und sämtliche
+sekundären Intervalle unabhängig aus dem Archiv nachgerechnet.
+Job-Peak 116.539.392 Byte, Supervisor 457,090 s; alle Ressourcenlimits eingehalten.
+
+[Ergebnisbericht](../reports/s2uc/uh1-assessment-20261005-01/REPORT.md),
+[Archivprüfung](../reports/s2uc/uh1-assessment-20261005-01/verification.json),
+[exakte Auswertung](../reports/s2uc/uh1-comparison-20261004-01/assessment.json).
+Einmalfreigabe VERBRAUCHT; kein Retry, keine Quellenneugenerierung.
+U unverändert, A1/K1 aus; H nicht übernommen. HX1 bleibt abgenommen.
+Der konzeptionelle Anschluss ist jetzt im oben verlinkten UHR1-Vertrag
+als Wiederholung derselben Aufgabenfamilie festgelegt.
+
+
+## Historischer Stand: UH1 neutral qualifiziert, vor Forschungsfreigabe (2026-10-05)
+
+Der freigegebene Profilabsatz ist korrigiert; U verwendet unverändert das
+HX1-Profil 4309cfc91eb99fc2a999fdac99c5a7f1807ee654996e019ec0d94e3900bcbd4b.
+U/H implementiert, H genau zwei Hinweisslots. N1–N7 und 11 U-Untertests bestanden;
+genau ein vollständiger neutraler Größenablauf COMPLETE: 64 Geschichten,
+128 Armläufe, 131.072 Frame-Verarbeitungen und Referenzfortschritte.
+Alle 65.536 H-Zustände unabhängig geprüft und verlustfrei rekonstruiert.
+
+Job-Peak 132.976.640 Byte unter 512 MiB; Supervisor 485,472 s.
+H-eigener Heap 3.991 Byte regulär, höchstens 5.953 Byte in geprüften Fehlerpfaden;
+U-Zusatzheap 5.263 Byte. Unterschiedliche Messgrenzen bleiben ausdrücklich sichtbar.
+Kanonische Vorbereitung einschließlich vorgesehener Autorisierung 7.803.824 Byte
+unter 8 MiB. Gemeinsame verlustfreie Archivpackung gezielt nachqualifiziert;
+kein zweiter Größenablauf, keine Änderung der Replayfunktionen dabei.
+
+[Prüfbericht](../reports/s2uc/uh1-preparation-assessment-20261005-01/REPORT.md),
+[Prüfbilanz](../reports/s2uc/uh1-preparation-assessment-20261005-01/verification.json),
+[Startanleitung](./S2UC_UH1_V1_20261005_START.md).
+Vorstart-SHA256: 49c8118f34cd4b7e13f0de720d3521e164ac3a35cca761d023ca830fe55becc7.
+Alle 139 HX1-Dateien unverändert. Forschungsquellen nur lesend validiert,
+kein Forschungsreplay, keine operative Autorisierung angelegt.
+Nächster Vorschlag beim Projektleiter: technische Abnahme; anschließend
+gegebenenfalls separate Einmalbeauftragung auf bekannten Quellen.
+HX1 bleibt abgenommen und seine Einmalfreigabe verbraucht.
+
+
+## Historischer Stand: UH1 spezifiziert, vor Entwicklungsauftrag (2026-10-04)
+
+HX1 ist fachlich abgenommen; der begrenzte Hinweisnutzen bleibt belegt und
+seine Einmalfreigabe verbraucht. Der angenommene H-Entwurf ist jetzt als
+[verbindlicher U/H-Prüfvertrag](./S2UC_UH1_PRUEFVERTRAG_20261004.md)
+konkretisiert. Genau zwei Hinweisslots, Aufnahme nach Zielbeobachtung,
+explizite Prognosetickets, begrenzte Ressourcen und neutraler Plan N1–N7.
+
+Alle 64 archivierten HX1-Quellen sind mit ihren unveränderten Hashes
+[gebunden](./S2UC_UH1_QUELLENBINDUNG_20261004.json): bekannte Quellen,
+keine Neugenerierung oder Auswahl. Einziger Primärkontrast U−H in D;
+positive Werte sprechen für H. H-Vorteil wäre ein Vergleich der Gesamtverfahren,
+kein isolierter Beleg für Speicherumfang oder Mittelwertbildung.
+
+[Spezifikationsbindung](./S2UC_UH1_SPEZIFIKATIONSBINDUNG_20261004.json).
+Keine Implementierung, Bootstrapmatrix-Erzeugung, neutralen Prüfungen oder
+Replays ausgeführt. Nächster Vorschlag beim Projektleiter: Vertragsabnahme
+und danach begrenzter Entwicklungs-/Qualifikationsauftrag; Forschungsstart
+bleibt anschließend separat zu beauftragen.
+
+
+## Abgenommener Befund: HX1 abgeschlossen, Hinweisnutzen belegt (2026-10-04)
+
+Nach technischer Abnahme des Speicherpunkts wurde genau ein separat beauftragter
+Forschungsdurchlauf ausgeführt: COMPLETE, 64 Quellen, 32 D/N-Paare,
+192 Prädiktorgeschichten, 196.608 Frame-Verarbeitungen und Referenzfortschritte.
+Alle drei notwendigen Primärkontraste belegt (nominale 98⅓%-Intervalle):
+D:U−G −0,064610281192 [−0,067178469119; −0,061997330062],
+D:U−P −0,063659667969 [−0,066345214844; −0,060913085938],
+Interaktion −0,066375732422 [−0,070678710938; −0,061960601807].
+Gesamturteil HINWEISNUTZEN_BELEGT im begrenzten HX1-Vertragsumfang.
+
+Alle 8.192 gepaarten G-Q-Positionen bitgleich; 133 Abschlussdateien hashgeprüft.
+Job-Peak 124.964.864 Byte unter 512 MiB, Supervisor 387,387 s;
+Vorbereitung und Laufexport zusammen 12.735.523 Byte unter 64 MiB.
+U unverändert, A1/K1 aus. Kein Semantik-, Cluster-, Feld-Memory- oder
+Generalisierungsnachweis; keine Überlegenheit gegenüber allen einfachen
+hinweisabhängigen Verfahren behauptet.
+
+[Ergebnisbericht](../reports/s2uc/hx1-assessment-20261004-01/REPORT.md),
+[Archivprüfung](../reports/s2uc/hx1-assessment-20261004-01/verification.json),
+[exakte vollständige Auswertung](../reports/s2uc/hx1-comparison-20261004-01/assessment.json).
+Einmalfreigabe VERBRAUCHT, keine Wiederholung/Wiederaufnahme.
+Nächster Vorschlag beim Projektleiter: Befund abnehmen und einen einfachen
+hinweisabhängigen Mittelwertvergleich konzeptionell spezifizieren;
+keine automatische Implementierungs- oder Lauffreigabe.
+
+
+## Historischer Stand: HX1-Speicherprüfung vor technischer Abnahme (2026-10-04)
+
+Die vorhandenen gezielten Messungen belegen die gemeinsame 512-MiB-Commit-Grenze
+für Supervisor und Worker. Der Windows-Rohzähler PeakJobMemoryUsed steigt auch
+bei abgewiesenen Commit-Anträgen; der historische Fehler-Peak 687.595.520 Byte
+ist deshalb kein Beleg für erfolgreich bereitgestellten Speicher dieser Größe.
+Der absichtliche Fehlerfall bleibt NOT_EVALUABLE. Keine Produktionskorrektur;
+ursprüngliche Code- und Vorstartbindung unverändert und lesend bestätigt.
+Kein erneuter Größenablauf und kein Forschungsstart.
+
+[Abschlussauswertung](../reports/s2uc/hx1-memory-clarification-20261004-02/REPORT.md)
+und [Ergänzungsbindung](./S2UC_HX1_SPEICHERGRENZE_ERGAENZUNGSBINDUNG_20261004.json).
+Nächster Schritt beim Projektleiter: technische Abnahme anhand dieser Belege;
+Forschung bleibt bis zur technischen Entscheidung und gesonderten
+Einmalbeauftragung gesperrt.
+
+
 ## Verbindlicher Einstieg
 
 - [Aktueller verbindlicher Forschungsweg](../AKTUELLER_FORSCHUNGSWEG.md):
@@ -7,7 +1507,65 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-ZU trennt den Testbestand in fuenf fail-closed Tiers
+Historischer Vorbereitungsstand (2026-10-04): **HX1 neutral qualifiziert, damals Forschung gesperrt.**
+Q1–Q7 und genau ein vollständiger neutraler Größenablauf bestanden;
+64 Geschichten, 192 Prädiktorläufe, vollständige Referenzen und G-Gleichheit.
+Windows-Job-Grenze 512 MiB durchgesetzt; erfolgreicher Peak 132.042.752 Byte.
+Alle Arm-, Zeit- und Exportgrenzen eingehalten. U unverändert, A1/K1 aus.
+[Vorbereitungsbericht](../reports/s2uc/hx1-preparation-assessment-20261004-01/REPORT.md),
+[Prüfbilanz](../reports/s2uc/hx1-preparation-assessment-20261004-01/verification.json),
+[Vorstart und Startbefehl](S2UC_HX1_V1_20261004_START.md),
+[offengelegte Entwicklungskorrektur](S2UC_HX1_ENTWICKLUNGSPROTOKOLL_20261004.md).
+Forschungsquellen nicht erzeugt, operative Autorisierung nicht angelegt.
+Nächste Entscheidung: technische Abnahme und separate Einmalbeauftragung.
+
+Historischer Auftrag (2026-10-04): Der HX1-Vertrag ist fachlich abgenommen.
+Implementierung und neutrale Qualifikation Q1–Q7 einschließlich höchstens
+eines vollständigen neutralen Größenablaufs sind beauftragt. U unverändert,
+A1/K1 aus; Forschungsquellen und Forschungsdurchlauf bleiben gesperrt.
+Ergebnis und Vorstartbindung werden nach Abschluss hier eingeordnet.
+
+Historischer Arbeitsstand: Der
+[HX1-Prüfvertrag](S2UC_HX1_PRUEFVERTRAG_20261004.md) ist vollständig spezifiziert:
+32 Paare, D/N und U/G/P, gebundene Quellenströme/Permutationen,
+drei gemeinsam kontrollierte Primärkontraste, positionsweise G-Gleichheit,
+reguläre Speicherknappheit und V0–V3. Ressourcen, Referenzen, neutrale
+Qualifikation und Fehlerabschlüsse festgelegt. Keine Implementierung oder
+Materialisierung; nächste Entscheidung ist der gesonderte Entwicklungsauftrag.
+Der Konzeptentwurf ist fachlich angenommen und seine Kontrollaussage präzisiert.
+
+Historischer Arbeitsstand: Der beauftragte
+[Konzeptentwurf zur hinweisabhängigen Erfahrungsnutzung](S2UC_HINWEISABHAENGIGE_ERFAHRUNG_KONZEPT_20261004.md)
+liegt zur Prüfung vor. Zwei Hinweise, gegensätzliche Fortsetzungsverteilungen,
+unabhängige Kontrolle bei identischer globaler Fortsetzungsfolge und globaler
+lernender Vergleich. Höchstens drei abrufbare Spuren; keine stillschweigende
+Vier-Spuren-Annahme. Keine Implementierung oder Ausführung beauftragt/erfolgt.
+
+Abgenommener Forschungsstand (2026-10-04): **ULZ1 wissenschaftlich abgeschlossen.**
+Die abschließende Archivdiagnose ordnet alle 16.384 Y-Ziele nach U/L-Ausgabe;
+alle Kategorien stimmen exakt mit den bisherigen Gesamtsummen überein.
+Stabiler Primärvorteil belegt; früher Wechselvorteil weiterhin nicht nachgewiesen.
+Entscheidungen, größte Schäden, Zellalter und Promotionen sind rekonstruiert;
+kein eigenständiger Verdrängungsschaden aus zeitlicher Nähe abgeleitet.
+[Diagnosebericht](../reports/s2uc/ulz1-diagnosis-20261004-01/REPORT.md),
+[fachliche Einordnung](../reports/s2uc/ulz1-diagnosis-20261004-01/EINORDNUNG.md),
+[Prüfbilanz](../reports/s2uc/ulz1-diagnosis-20261004-01/verification.json).
+U unverändert; A1/K1 aus; Freigabe verbraucht. Keine neue Studie gestartet.
+Weitere Forschung benötigt eine eigenständige Frage des Projektleiters.
+
+Historischer Kurzstand (2026-10-04): ULZ1-Forschungsdurchlauf COMPLETE.
+Stabiler Primärvorteil U gegenüber L belegt; früher Wechselvorteil L und damit
+die erwartete gemeinsame Abwägung nicht nachgewiesen. Alle64 Fälle/128 Arme
+vollständig, Integrität und Ressourcen innerhalb der Grenzen.
+[Ergebnisbericht](../reports/s2uc/ulz1-assessment-20261004-01/REPORT.md),
+[Prüfbilanz](../reports/s2uc/ulz1-assessment-20261004-01/verification.json),
+[Z-Lebenszyklen](../reports/s2uc/ulz1-assessment-20261004-01/cycles.json).
+Einmalfreigabe VERBRAUCHT; kein Neustart oder Wechsel zu L. U unverändert,
+A1/K1 aus; historische LZ1-/T1-/F-Einordnungen bestehen weiter.
+
+## Historische Dokumenteinordnungen
+
+Historischer Kurzstand: S1-ZU trennt den Testbestand in fuenf fail-closed Tiers
 und bindet nur das versionierte JSON-Reportkorpus sowie drei kanonische
 Browser-Assets als zusaetzlichen LF-Korrekturbestand. Noch wurde nichts
 korrigiert, installiert oder erneut breit ausgefuehrt. Siehe

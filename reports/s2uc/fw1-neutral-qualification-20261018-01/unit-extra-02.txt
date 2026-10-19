@@ -1,0 +1,7 @@
+test_17_nonqualifying_events_and_prewrite_validation (experiments.fw1.test_contract.Contract.test_17_nonqualifying_events_and_prewrite_validation) ... ok
+test_18_old_errors_not_restored (experiments.fw1.test_contract.Contract.test_18_old_errors_not_restored) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.010s
+
+OK

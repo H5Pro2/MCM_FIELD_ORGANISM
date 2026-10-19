@@ -1,0 +1,132 @@
+FW1 – Implementierung und neutrale Qualifikation, 2026-10-18
+Auftrag 54720676-e8f9-42f2-a0fa-868957350104
+Wiederaufnahme a156629c-6075-41eb-9a27-91eb9f13fd70
+
+Ergebnis: Das begrenzte FW1-Paket ist implementiert und neutral qualifiziert.
+Dies ist keine Forschungsfreigabe und kein wissenschaftlicher Nutzenbefund.
+
+Implementierung
+Zwölf Dateien unter experiments/fw1. KEEP verwendet unverändert MultiErrorAdapter
+mit FactorRecencyArm/U. RESET ergänzt nur die Löschung gültiger Retained-Zellen
+der tatsächlich bestätigten Generation nach normalem Abschluss und Pruning.
+Lebende Identität und genau eine geänderte Endmarke werden vorher geprüft.
+Kein neues dauerhaftes Fehlerregister und keine zusätzliche Auswahlregel.
+Live-Referenz erkennt Wiederbeobachtung aus Rohframes; Archivreferenz erkennt sie
+an ihrer eigenen Endmarkentransition. Beide verwenden den unveränderten normalen
+Referenzkern, nicht die produktive Resetfunktion. Unabhängigkeit betrifft den
+produktiven Pfad; die zwei Referenzen teilen den bestehenden Basiskern.
+
+Quellenpfad: ausschließlich MCM-FW1/neutral/v1; getrennte Rekonstruktion,
+vollständige Versiegelung vor Armstart und Hashkontrolle vor Bedingung/Arm.
+Seriell A/KEEP, A/RESET, B/KEEP, B/RESET. Vier frische Arme, zwei geprüfte Archive,
+Bestandsidentität und Cleanup sind Voraussetzungen der Paarquittung.
+Statistik: einziges Primärmaß ist das gleichgewichtete A/B-Mittel KEEP minus RESET,
+mit rationaler Rechnung und geschichteten gemeinsamen Paarindizes. Zweite Rechnung
+verwendet getrennte Armwerte und Häufigkeitsgewichte. Informativität und Entscheidung
+werden ebenfalls unabhängig bestimmt. Keine Ziehungsmatrix wird vom Paket erzeugt.
+Ein Vollgrößen-Statistikpfad verlangt 16 vollständige Paare, 511 Ziele und eine
+SHA-gebundene übergebene 10000x16-Matrix; dieser Pfad wurde nicht ausgeführt.
+Die aktive Laufsteuerung erlaubt ausschließlich kurze neutrale Arme <=128 Frames.
+
+Qualifikation und Belege (Testnummern entsprechen test_contract/test_evidence)
+01 PASS: Generation, Kandidat gleicher Nummer, andere Generation, Offset 0/1/beide/
+   keine Zelle, gültige Nullwerte und alle Vorzeichen des Fehlerunterschieds.
+02 PASS: eingefrorene Metadaten/Originalobjekte/Bank außerhalb Zellbereich erhalten;
+   wiederholte echte Bestätigung, keine Löschung bei vorherigen Promotionen/Hinweisen.
+03 PASS: injizierter Fehler nach Teillöschung führt zum geschlossenen leeren Arm.
+04 PASS: doppelte Aufnahme wird abgewiesen und schließt den Arm.
+05 PASS: unabhängiges neutrales Quellenrezept, Forschungssperre, Rohziehungslimit.
+06 PASS: Quellenmischung statt A/B-Interaktion.
+07 PASS: gleiche Fehler bei wirksamer Löschung zulässig; Schlussreset nicht informativ.
+08 PASS: unvollständiges Paar, falsche Fehlerzahl und falsche Schichtung abgewiesen.
+09 PASS: 16 künstliche Paare mit 511 Zielen, Nenner 32704 einzelne Armfehler.
+10 PASS: keine zusätzlichen dauerhaften Policy-Attribute; zwei Konstruktionen ohne Frames.
+11 PASS: Bestandsidentität auch unmittelbar vor/nach form/close_segment, Feedback,
+   Aufnahme und bei echten Verdrängungen; 2 x 40 Frames.
+12 PASS: falsche Generation im normalen Abschlussereignis bricht geschlossen ab.
+13 PASS: alle fünf tatsächlichen Supervisor-/Worker-Integrationen samt Ressourcen,
+   Paarquittungen, erster Ursache und Cleanup.
+14 PASS der drei semantischen Gegenproben: neu gehashte Archive mit manipulierten
+   Reset-Zellen, Ausgaben oder Beständen werden unabhängig abgewiesen. Die erste
+   gemeinsame Testinvokation scheiterte anschließend an einer fehlerhaften vierten
+   Testannahme über einen unbenutzten Ticketslot; siehe Korrekturbilanz.
+15 PASS: tatsächlich aktives eingefrorenes Ticket im neu gehashten Archiv abgewiesen.
+16 PASS: variable kleine Paarziehungen, unabhängige Intervallrechnung, Nullberührung,
+   Schadenentscheidung, keine wirksamen Resets und fehlende Vollgrößenbindung.
+17 PASS: nicht qualifizierte Ereignisse löschen nicht; doppelte Zellschlüssel werden
+   vor dem ersten Löschzugriff abgewiesen.
+18 PASS: künstlich gesetzte alte Fehler (.75,.25) werden nach Reset durch reguläres
+   Feedback neu als (0,0) gelernt, nicht aus dem eingefrorenen Receipt restauriert.
+
+Protokolle: unit-attempt-01/02/03.txt, unit-extra-01/02.txt,
+evidence-attempt-01/02.txt, statistics-final.txt, execution-ledger.jsonl.
+18 Kriterien erfüllt in 28 unittest-Testinvokationen einschließlich fünf anfänglich
+fehlgeschlagener Testinvokationen. Es wurde kein bereits bestandener alter Audit
+wiederholt. Nach der Statistikergänzung wurden nur betroffene Statistiktests und
+bereits vorhandene kompakte Neutralfehler neu ausgewertet, keine Policy wiederholt.
+
+Integrationssuite – genau ein Durchgang, 28 von höchstens 32 Armen, je 96 Frames
+complete:          8 Policy / 8 Live / 8 Archiv, zwei quittierte Paare, COMPLETE.
+source_failure:    0 / 0 / 0, SOURCE_CHANGED vor erstem Arm, kein quittiertes Paar.
+incomplete_pair:   8 / 8 / 8, PAIR_INCOMPLETE, nur Paar 1 quittiert.
+deadline:          4 / 4 / 4, tatsächliches Worker-Ende nach 30-s-Prüffrist,
+                   WORKER_DEADLINE, nur Paar 1 quittiert, kein lebender Arm beim Kill.
+write_budget:      8 / 8 / 8, PAIR_INCOMPLETE bleibt erste Ursache; anschließende
+                   absichtliche Administrationsüberschreitung verhindert worker.json.
+                   Reservierter Terminalabschluss und Cleanup bleiben nachgewiesen.
+Alle 28 Arme geschlossen, beide Referenzprüfungen aller 28 Arme bestanden.
+Verzeichnisse pass01-* enthalten die Originalbelege, keine Integrationswiederholung.
+
+Zusätzliche Ausführungen, getrennt von der Integrationssuite
+13 kurze manuelle Policy-Historien (höchstens 40 Frames), einschließlich Fehlversuchen;
+10 Live- und 10 Archivzustandsreferenz-Instanzen dazu; keine zusätzlichen Messarme.
+Zwei reine Adapterkonstruktionen ohne Frames. Künstliche Zellfixtures sind keine
+Quellen-/Policy-Historien. Fünf Archivgegenproben ohne Policy: zehn Referenzen
+begonnen, sechs bis zum Ende; vier erwartete semantische Abweisungen.
+Zwölf neutrale Paarerzeugungen und zwölf unabhängige Paarrekonstruktionen;
+24 Bedingungsmaterialprüfungen, davon 20 Quellen als Integrationsdateien gespeichert.
+Statistik: 19 Primärfunktionsaufrufe und 13 Referenzaufrufe einschließlich erwarteter
+Eingabeabweisungen; acht Referenzaufrufe erfolgreich. Ausschließlich kleine feste
+Matrizen und künstliche beziehungsweise bereits gemessene Neutralfehler.
+Keine FW1-Forschungsquelle, Forschungs-Matrix, Vorstartbindung oder Forschungsarme.
+Vor Wiederaufnahme: keine Ausführungsbelege gefunden; übernommene Notiz nennt null.
+Das ist keine lückenlose historische Negativbestätigung außerhalb vorhandener Belege.
+
+Korrekturen und Evidenzgrenzen
+Erster Testversuch: drei Fehler durch Zugriff auf den absichtlich gesperrten Getter
+während ADMITTING; Referenzteardown verdeckte zusätzlich die erste Ausnahme.
+Korrektur prüft direkt die eingefrorene Vorhersage und protokolliert Policy-Cleanup
+vor Referenzteardown. Für diese drei ersten Fälle fehlen die damaligen Cleanup-
+Ledgerzeilen; vorhandene Tracebacks und Code zeigen den Ablauf, keine nachträglich
+erfundene Messung. Zweiter Versuch: ein Fixture hatte bei Ziel 13 kein berechtigtes
+Ticket. Gleichwertige wiederholte Frames schaffen den beabsichtigten Ticketfall.
+Archivgegenprobe: Änderung eines unbenutzten Slots wurde zulässig akzeptiert;
+der korrigierte Test verändert ein nachgewiesen aktives Ticket. Alle ursprünglichen
+Fehlerprotokolle und Archive bleiben erhalten. Produktionscode wurde wegen dieser
+Testhilfenfehler nicht geändert.
+
+Gemessene Ressourcen
+Integrationsdauer zusammen 109.6007495 s. Maximaler gemeinsamer Windows-Jobpeak
+62136320 Bytes (59.26 MiB), Prozesspeak 41820160 Bytes; hartes Limit 512 MiB,
+Supervisor plus ein geerbter Worker, einschließlich Live-/Archivreferenzen.
+Maximaler zusätzlicher Python-Heap 5049 Bytes, Receipt 711, UTF8-Obergrenze 1422,
+Bank 416. Beobachtete Originale 15, bestehende konservative Grenze 18; zwei Ausgaben.
+Dictionary 78296, encoded 82311, gzip 14533, Record 13471 Bytes; 1549 Nodes,
+8950 Edges, 766 Indizes, acht Collections. Details: resources.json.
+Die absichtliche Schreibbudgetüberschreitung ist ein bestandener Abbruchtest,
+keine erfolgreiche Einhaltung dieses injizierten Budgets. Separate Unit-Prozesspeaks
+wurden nicht gemessen. Kurze neutrale Fälle belegen keine Vollgrößenverträglichkeit.
+
+Erhaltung und Lieferung
+3015 vor Beginn gebundene historische Code-/Testdateien unverändert.
+Bestehende Lieferbindungen geprüft: ZW1-Audit 43, ZW1-Lieferung 158 einschließlich
+Zulassungsdateien, ER1-v2-Lieferung 139, ER1-v1-Abbruch 43, ER1-v2-Audit 41,
+ZW1-Vorbereitung 3093 Datei-/Qualifikationsbindungen. Reine SHA-Prüfung, kein Replay.
+Details: inheritance-verification.json. Liefermanifest bindet das neue Paket,
+alle neuen Belege und die drei aktualisierten Projektübersichten.
+
+Nächster fachlicher Schritt
+Projektleiter prüft diese neutrale Lieferung. Anschließend kann ein separat begrenzter
+Vorbereitungsauftrag die Forschungsquellen, Forschungs-Matrix, Vollgrößenressourcen
+und Vorstartbindung behandeln. Ein Forschungsstart benötigt weiterhin eine eigene
+Einmallauffreigabe. Aus dieser Neutralqualifikation folgt kein Nutzen-/Schadenurteil.

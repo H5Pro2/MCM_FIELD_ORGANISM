@@ -1,0 +1,255 @@
+{
+  "partition": "NEUTRAL-DEV",
+  "kind": "DEV",
+  "episodes": {
+    "A": {
+      "seed": 1410001,
+      "frequencies_hz": [
+        370,
+        610,
+        850,
+        1210
+      ],
+      "root": "NEUTRAL-DEV/A",
+      "source_stream": "NEUTRAL-DEV/AC",
+      "source_start_sample": 0,
+      "copy_prefix_from": null
+    },
+    "B": {
+      "seed": 1410007,
+      "frequencies_hz": [
+        510,
+        950,
+        730,
+        1590
+      ],
+      "root": "NEUTRAL-DEV/B",
+      "source_stream": "NEUTRAL-DEV/B",
+      "source_start_sample": 0,
+      "copy_prefix_from": null
+    },
+    "C": {
+      "seed": 1410013,
+      "frequencies_hz": [
+        690,
+        1090,
+        1450,
+        910
+      ],
+      "root": "NEUTRAL-DEV/C",
+      "source_stream": "NEUTRAL-DEV/AC",
+      "source_start_sample": 19200,
+      "copy_prefix_from": null
+    },
+    "D": {
+      "seed": 1410019,
+      "frequencies_hz": [
+        370,
+        610,
+        1810,
+        2090
+      ],
+      "root": "NEUTRAL-DEV/D",
+      "source_stream": "NEUTRAL-DEV/D",
+      "source_start_sample": 0,
+      "copy_prefix_from": "A"
+    }
+  },
+  "noise_R": {
+    "seed": 1410031,
+    "samples": 9600,
+    "amplitude": 0.000244140625
+  },
+  "noise_Z": {
+    "seed": 1410037,
+    "samples": 14400,
+    "amplitude": 0.00048828125
+  },
+  "calibration": {
+    "seed": 1410043,
+    "windows": 8,
+    "amplitudes": [
+      0.000244140625,
+      0.000244140625,
+      0.000244140625,
+      0.000244140625,
+      0.00048828125,
+      0.00048828125,
+      0.00048828125,
+      0.00048828125
+    ]
+  },
+  "small_signal_gain": 0.000244140625,
+  "cases": {
+    "R0": {
+      "learn": [
+        "A",
+        "A"
+      ],
+      "truth": "NEUTRAL-DEV/A",
+      "positive": true,
+      "test_index": 11,
+      "query_start_samples": [
+        0,
+        4800,
+        9600
+      ],
+      "operation": "R0"
+    },
+    "R1": {
+      "learn": [
+        "A",
+        "A"
+      ],
+      "truth": "NEUTRAL-DEV/A",
+      "positive": true,
+      "test_index": 11,
+      "query_start_samples": [
+        0,
+        4800,
+        9600
+      ],
+      "operation": "R1"
+    },
+    "R2": {
+      "learn": [
+        "A",
+        "A"
+      ],
+      "truth": "NEUTRAL-DEV/A",
+      "positive": true,
+      "test_index": 11,
+      "query_start_samples": [
+        0,
+        4800,
+        9600
+      ],
+      "operation": "R2"
+    },
+    "R3": {
+      "learn": [
+        "A",
+        "A"
+      ],
+      "truth": "NEUTRAL-DEV/A",
+      "positive": true,
+      "test_index": 11,
+      "query_start_samples": [
+        0,
+        4800,
+        9600
+      ],
+      "operation": "R3"
+    },
+    "N1": {
+      "learn": [
+        "A",
+        "A"
+      ],
+      "truth": "NEUTRAL-DEV/B",
+      "positive": false,
+      "test_index": 11,
+      "query_start_samples": [
+        0,
+        4800,
+        9600
+      ],
+      "operation": "N1"
+    },
+    "N2": {
+      "learn": [
+        "A",
+        "A"
+      ],
+      "truth": "NEUTRAL-DEV/C",
+      "positive": false,
+      "test_index": 11,
+      "query_start_samples": [
+        0,
+        4800,
+        9600
+      ],
+      "operation": "N2"
+    },
+    "N3": {
+      "learn": [
+        "A",
+        "A"
+      ],
+      "truth": "NEUTRAL-DEV/D",
+      "positive": false,
+      "test_index": 11,
+      "query_start_samples": [
+        0,
+        4800,
+        9600
+      ],
+      "operation": "N3"
+    },
+    "N4": {
+      "learn": [
+        "A",
+        "A",
+        "B",
+        "B"
+      ],
+      "truth": "NEUTRAL-DEV/M",
+      "positive": false,
+      "test_index": 19,
+      "query_start_samples": [
+        0,
+        4800,
+        9600
+      ],
+      "operation": "N4"
+    },
+    "Z0": {
+      "learn": [
+        "A",
+        "A"
+      ],
+      "truth": "NEUTRAL-DEV/ZERO",
+      "positive": false,
+      "test_index": 11,
+      "query_start_samples": [
+        0,
+        4800,
+        9600
+      ],
+      "operation": "Z0"
+    },
+    "Z1": {
+      "learn": [
+        "A",
+        "A"
+      ],
+      "truth": "NEUTRAL-DEV/NOISE",
+      "positive": false,
+      "test_index": 11,
+      "query_start_samples": [
+        0,
+        4800,
+        9600
+      ],
+      "operation": "Z1"
+    },
+    "P0": {
+      "learn": [
+        "A",
+        "A"
+      ],
+      "truth": "NEUTRAL-DEV/A",
+      "positive": true,
+      "test_index": 11,
+      "query_start_samples": [
+        0,
+        4800,
+        9600
+      ],
+      "operation": "P0"
+    }
+  },
+  "output_directory": "reports/s2uc/an-material-qualification-20261001-02/neutral-dev",
+  "windows": 57,
+  "pcm_bytes": 1094400
+}

@@ -1,0 +1,15 @@
+{
+  "ns": 458614610803000,
+  "target": {
+    "working_set": 50704384,
+    "private_commit": 445247488,
+    "os_peak_working_set": 71081984,
+    "os_peak_private_commit": 463753216
+  },
+  "observer": {
+    "working_set": 19464192,
+    "private_commit": 12967936,
+    "os_peak_working_set": 19468288,
+    "os_peak_private_commit": 12967936
+  }
+}

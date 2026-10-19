@@ -1,0 +1,19 @@
+{
+  "status": "COMPLETE",
+  "error": null,
+  "completed_arms": {
+    "constant": [
+      "E",
+      "K",
+      "P"
+    ],
+    "switch_return": [
+      "E",
+      "K",
+      "P"
+    ]
+  },
+  "planned_frames": 1200,
+  "policy_changed": false,
+  "parameters_changed": false
+}

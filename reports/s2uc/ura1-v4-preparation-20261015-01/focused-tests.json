@@ -1,0 +1,16 @@
+{
+  "command": "C:/Python314/python.exe -m unittest tests.test_s2uc_ura1_prepare_v4 -v",
+  "test_ids": [
+    "N01",
+    "N02",
+    "N03",
+    "N04",
+    "N05",
+    "N06",
+    "N07"
+  ],
+  "tests": 7,
+  "status": "PASS",
+  "seconds": 0.076,
+  "research_sources_generated": false
+}

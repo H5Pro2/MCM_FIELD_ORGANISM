@@ -1,0 +1,34 @@
+{
+  "tools\\_s2uc_two_candidates.py": {
+    "bytes": 4741,
+    "sha256": "e75da4a1e63ff1b844f8b9e8de62922cea4fa5f549f6b8b37d7a2774f291995e"
+  },
+  "tools\\s2uc_k2_check.py": {
+    "bytes": 7727,
+    "sha256": "5773fca13edac4b2a82201167d31d640b465f11cd1b6538173f2ab49de550c1d"
+  },
+  "tests\\test_s2uc_two_candidates.py": {
+    "bytes": 3509,
+    "sha256": "bc9e442630c23130115827a368d19d55a4a9a4bbf96a736bd3a3ddccc10dc61d"
+  },
+  "reports\\s2uc\\k2-20260930-01\\preregistration.json": {
+    "bytes": 23814,
+    "sha256": "81616275879ef61e22077782daecc18f2167c15080f13e7637fbc599659b429e"
+  },
+  "reports\\s2uc\\k2-20260930-01\\replay-console.txt": {
+    "bytes": 3372,
+    "sha256": "32f3e83dfb1b27ffe0ce056b96eced6c420e83b7bc9b71f6b0d9c3f4ff3a8020"
+  },
+  "reports\\s2uc\\k2-20260930-01\\REPORT.txt": {
+    "bytes": 4232,
+    "sha256": "0fdcdf36c009201f799daad9cb11d638ddc4ebd44f4b96852969829ece7bdb27"
+  },
+  "reports\\s2uc\\k2-20260930-01\\result.json": {
+    "bytes": 53990,
+    "sha256": "0786356540793d9b356e6ab20eeff586ece798d90b388fe74b930e6ba23d7e47"
+  },
+  "reports\\s2uc\\k2-20260930-01\\tests.txt": {
+    "bytes": 2972,
+    "sha256": "b71ee425331101445f76d93e315e88e5cb761fa0d158b6655937b2407990ef55"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "kind": "ER1_NEUTRAL_STRUCTURAL_CORRECTION",
+  "research_authorized": false,
+  "files": {
+    "tools/_s2uc_er1_stock_structural.py": {
+      "bytes": 2065,
+      "sha256": "d82d43a0a8859a02fb162499d31d92fdef6857c32b55b3bbe0e1e25cfc2f70cd"
+    },
+    "tools/_s2uc_er1_structural_archive.py": {
+      "bytes": 4605,
+      "sha256": "0482094586575e59e0fec85708d5db8afb58f58de531afcba1dc9b2f9bf3d10a"
+    },
+    "tools/s2uc_er1_structural_qualify.py": {
+      "bytes": 5007,
+      "sha256": "3e777c450dd4ad881b25b6566980d9effddfdbbd313827274d39ec483f8eb8ef"
+    },
+    "tests/test_s2uc_er1_stock_structural.py": {
+      "bytes": 4273,
+      "sha256": "71756f81991c5001a6e708867034f1583bb6b5617cc4333d68238298ddc6d201"
+    },
+    "reports/s2uc/er1-structural-correction-20261017-01/capture.json": {
+      "bytes": 2445,
+      "sha256": "3df45ad2852cf102c3c3d5351cd38708adc8eb9a4a72938482649b9954f50ca3"
+    },
+    "reports/s2uc/er1-structural-correction-20261017-01/negative-endmark.gz": {
+      "bytes": 26180,
+      "sha256": "0b894428b47872d00f17583e0a58e13ae533ca053cdf064c836ba2f59e775f87"
+    },
+    "reports/s2uc/er1-structural-correction-20261017-01/neutral-80.gz": {
+      "bytes": 26127,
+      "sha256": "e820a8c4e42e03d19377fc73160d50e0926c1862b04776915b82a2476e0b18a2"
+    },
+    "reports/s2uc/er1-structural-correction-20261017-01/preservation.json": {
+      "bytes": 601,
+      "sha256": "64edac3c4abfd7195fc969c73793bf2af3d3992b4cc9c48178c6a84a8c9f1298"
+    },
+    "reports/s2uc/er1-structural-correction-20261017-01/REPORT.md": {
+      "bytes": 9812,
+      "sha256": "ddb0adeadd2ed7ec0765ecd73f462b9cc4628b5d78ed162172d8a8614107f50c"
+    },
+    "reports/s2uc/er1-structural-correction-20261017-01/result.json": {
+      "bytes": 7720,
+      "sha256": "1e6ebd3459af74c42e99a920b20ff448e0cc4a937190d965aa60e295df7b2697"
+    },
+    "reports/s2uc/er1-structural-correction-20261017-01/tests.log": {
+      "bytes": 1548,
+      "sha256": "db184876b44d9fa1963be183205c73b618d365d1d8cc33b9e775bc0d5fa093f8"
+    }
+  }
+}

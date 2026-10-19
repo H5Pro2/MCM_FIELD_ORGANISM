@@ -1,0 +1,30 @@
+{
+  "status": "PASS_ARCHIVE_DIAGNOSIS",
+  "archive_closure_sha256": "85ef6239c3e3fc8e161284c9ffbe19ddbdcb06bc1201e73850f04862c807a769",
+  "verified_archive_files": 149,
+  "chains": {
+    "T1-1-3": 4,
+    "F7": 15,
+    "F3": 11,
+    "F4": 8
+  },
+  "F7_selected": 10,
+  "F7_selected_gain": 8,
+  "F7_selected_harm": 2,
+  "F7_selected_equal": 0,
+  "extra_T1_occurrences": 5,
+  "decision_table_rows": 20,
+  "checks": [
+    "archive hashes",
+    "causal feedback cutoff",
+    "EMA arithmetic against stored cells",
+    "all five T1 extras",
+    "all F7 line decisions",
+    "F3/F7 exact archived prefix and state collision"
+  ],
+  "replays": 0,
+  "source_materializations": 0,
+  "policy_changes": 0,
+  "threshold_searches": 0,
+  "script_sha256": "14447b485bd2b84f942ff19fa393915f31a8a32ecf0d336e8c5e9ca572fc5b95"
+}

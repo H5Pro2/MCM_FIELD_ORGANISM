@@ -1,0 +1,115 @@
+MCM S2UC - Einmalige synthetische Evaluation - 2026-09-30
+
+ABGESCHLOSSEN: Vorabbindung, einmalige Produktion, Integritaetspruefung und unveraenderte Auswertung. Development unveraendert erhalten. Keine gemeinsame Erfolgsquote.
+
+1. Auftrag und Vorabbindung
+Projektleiter hat die synthetische Evaluation-Produktion und lokale Auswertung ausdruecklich beauftragt. Genau ein Aufruf der Produktion, keine erneute Development-Produktion. Keine Anpassung an Development- oder Evaluation-Ergebnisse.
+Vor Produktion gespeichert: ../known-origin-evaluation-binding-20260930-01/freeze.json. Vollstaendiger Materialplan mit Evaluation-Seeds, Frequenzen, Herkunft, Varianten, Fallmatrix und Parametern, Python-Version/Executable sowie SHA256 von1451 Python-Dateien aus tools und mcm_field_organism. Zusaetzlich51 Development-Artefakte zur Erhaltungspruefung gebunden.
+Plan-SHA256 81c7edb0ece7716789f414ca9ebb02a060080f0e8bc56e4bc0c36a76a253cba7
+Der neue tools/s2uc_known_origin_evaluation.py waehlt ausschliesslich Evaluation-Partition, Ausgabeordner und passende Autorisierungsdatei. Nach Ruecknormalisierung dieser Verwaltungsunterschiede ist der AST des gesamten evaluate-Ablaufs identisch zum Development-Ablauf. Bestehender Generator, Integritaetspruefer, Judge und Systemcode bleiben unveraendert.
+Vorhandene neutrale E2E-Qualifikation und24/24 Regressionen aus ../known-origin-neutral-qualification-20260930-01 wurden als Nachweise der unveraenderten Implementierung verwendet; keine neue Materialproduktion als Test getarnt. Neue Routing-Gleichheit, Syntax und saemtliche Bindungen vor Produktion geprueft.
+
+2. Produktion und Integritaet
+Genau ein produce-Aufruf, Exit0, MATERIAL_COMPLETE; claim und closure in ../known-origin-evaluation-20260930-01. 7 Sequenzen,134400 Samples,537600 PCM-Byte,28 Fenster,28 Rezeptor- und28NJ-Aufrufe.
+Materialausgabe 1169505/4194304 Byte inklusive Abschluss; Reserve262144 Byte.37 Dateien. Observer- und Vorabbindungsdateien liegen separat. Kein harter Prozess-RAM-Nachweis.
+Integritaetspruefung: alle PCM-Laengen/Hashes/Domaenen, Genealogie, A/D-Praefix bitgleich und Fortsetzung verschieden; Gain1/2, bipolares Rauschen und Tailgain bitweise aus gespeichertem A nachgerechnet; keine Regeneration der Basisepisoden.
+Alle28 Projektionen: Profil-, Quellprofil- und Projektionsdigest,48 endliche Werte, Quellintervalle und Snapshots bestaetigt. C startet19200 und endet38400 (Snapshots40/50/60/70); andere Sequenzen0..19200 (Snapshots0/10/20/30). Eigene Replayzeit bleibt von Originalquellzeit getrennt.
+Partitionen: Basiswurzeln und Seeds disjunkt; alle Derivate bleiben bei ihrer Basispartition; keine gemeinsamen PCM-Dateihashes zwischen Development und Evaluation. Gemeinsamer synthetischer Generator bedeutet dennoch keine allgemeine oder statistische Unabhaengigkeit.
+Abschlusspruefung: alle1451 Codebindungen, Plan/Laufzeit,51 Development-Dateien und37 Evaluation-Materialdateien unveraendert. Belege integrity.json und final-verification.json.
+
+3. Acht Evaluation-Pruefziele
+Fall | Ziel | Herkunft | Status | Persistenz-MAE | Kontext-MAE | gepaartes Delta
+T0 | 11 | CORRECT | PREDICTED_RETAINED | 0.00190322160099 | 0 | 0.00190322160099
+P1 | 11 | CORRECT | FACTOR_CONTINUATION_NOT_SPECIFIED | 0.000951610800497 | nicht definiert | nicht definiert
+P2 | 11 | ABSTAIN | ABSTAIN_NO_CONTEXT | 0.00190296533838 | nicht definiert | nicht definiert
+P3 | 11 | CORRECT | PREDICTED_RETAINED | 0.0016085453397 | 0.000800397644625 | 0.000808147695079
+N1 | 11 | ABSTAIN | ABSTAIN_NO_CONTEXT | 0.00223242918444 | nicht definiert | nicht definiert
+N2 | 11 | ABSTAIN | ABSTAIN_NO_CONTEXT | 0.00305599496916 | nicht definiert | nicht definiert
+N3 | 11 | WRONG | PREDICTED_RETAINED | 0.00320635756923 | 0.00319782240875 | 8.53516048695e-06
+N4 | 19 | AMBIGUOUS | AMBIGUOUS_CONTEXT | 0.00320635756923 | nicht definiert | nicht definiert
+
+Herkunft:3 korrekt,1 falsch,1 mehrdeutig,3 Enthaltungen. Einzelzuordnung4/8 (50%); Kontext3/8 (37,5%); Persistenz8/8. Alle vier Einzelzuordnungen retained; keine candidate-Einzelzuordnung an Pruefzielen.
+Positive5:3 korrekt,1 Enthaltung,1 mehrdeutig (korrekt3/5). Negative3:2 korrekte Zurueckweisungen,1 falsche Einzelzuordnung (1/3). N4 positiv bezueglich gespeicherter Herkunft, zugleich Gegenfall gegen Eindeutigkeit. Keine Umklassifikation aus Matchresultaten.
+Gepaarte3 Ziele: Persistenz-MAE 0.00223937483664, Kontext-MAE 0.00133274001779, Delta 0.000906634818854. Besser3,gleich0,schlechter0.
+Alle8 Ziele, festes Observer-Schema Kontext-sonst-Persistenz: Persistenz-MAE 0.00225843529645, Schema-MAE 0.00191844723938, Delta 0.00033998805707. Keine Produkt-Fallbackregel hinzugefuegt.
+
+4. Fehler, Enthaltungen und Schadensfaelle
+N3: falsche Herkunft A statt D trotz identischem A/D-Anfang. Kontext-MAE 0.00319782240875; lediglich 8.53516048695e-06 besser als Persistenz. MAE-Vorteil ersetzt keine richtige Herkunft.
+P2: Rauschvariante wird nicht zugeordnet, positive Enthaltung. P1: richtige Gain-Herkunft, aber FACTOR_CONTINUATION_NOT_SPECIFIED. N4: AMBIGUOUS_CONTEXT bleibt unaufgeloest. P3: richtige Herkunft garantiert keine richtige Fortsetzung; Kontext-MAE 0.000800397644625.
+MAE-Schadensfaelle gegen Persistenz: 0 unter8 Pruefzielen und 0 unter36 Lernzielen. harm_rows und alle Einzelwerte erhalten; keine Auswahl nach Vorzeichen.
+
+5. 36 Lernziele separat
+Diagnostische Definition identisch zu Development: alle anderen erreichbaren Ziele inklusive Uebergang zur Query. Positive Herkunft bedeutet in einer vor dem Hinweispaar abgeschlossenen Vierergruppe vorhanden. Keine dieser Positionen wird in die acht Pruefziele aufgenommen.
+{
+  "total": 36,
+  "origin_counts": {
+    "ABSTAIN": 17,
+    "CORRECT": 13,
+    "WRONG": 5,
+    "AMBIGUOUS": 1
+  },
+  "positive_origin_counts": {
+    "CORRECT": 13,
+    "AMBIGUOUS": 1
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 17,
+    "WRONG": 5
+  },
+  "assignment_coverage": 0.5,
+  "context_coverage": 0.25,
+  "positive_correct_fraction": 0.9285714285714286,
+  "negative_wrong_fraction": 0.22727272727272727,
+  "correct_rejections": 17,
+  "roles": {
+    "candidate": 17,
+    "retained": 1
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 17,
+    "ABSTAIN_NO_SUCCESSOR": 9,
+    "AMBIGUOUS_CONTEXT": 1
+  },
+  "paired": {
+    "count": 9,
+    "persistence_mae": 0.002048014486354839,
+    "context_mae": 0.0003553136009719104,
+    "delta": 0.001692700885382929,
+    "better": 9,
+    "equal": 0,
+    "worse": 0
+  },
+  "full_coverage": {
+    "count": 36,
+    "persistence_mae": 0.0026225485724242856,
+    "observer_hybrid_mae": 0.002199373351078553,
+    "delta": 0.00042317522134573224
+  },
+  "harm_rows": []
+}
+Einzelbewertungen mit Fall/Ziel, Wahrheit, zugeordneter Herkunft, Rollen und MAE stehen vollstaendig in result.json/learning_rows; komplette Systemreceipts in T0/P1/P2/P3/N1/N2/N3/N4.json.
+
+6. Kausalitaet und Ressourcen
+96 Frames pro Partition,44 erreichbare Ziele, davon8 Pruef- und36 Lernziele. Jede Aufnahme genau einmal; Gate erzwingt Prognose vor Abruf des Folgeframes und vor Hinweisaufnahme. Referenzspeicherzustand nach jedem Frame und Abschluss identisch; Prognoseslots freigegeben.
+T0/N3: Prognosen und erste zehn Systemzustaende exakt identisch vor unterschiedlichem Folgeframe. Verborgene Zweigherkunft wird nicht durch Prueferwissen aufgeloest.
+Instrumentierte Spitzen: Frames 12, Ausgabeslots 2, gemeinsamer Peak 13, Python-Ausgabebytes 3642. Details je Fall in final-verification.json. Observerarchive zaehlen nicht als Systemmemory.
+
+7. Development und Evaluation getrennt
+Kennzahl | Development | Evaluation
+Pruefziele | 8 | 8
+Herkunftskategorien | {'CORRECT': 3, 'ABSTAIN': 3, 'WRONG': 1, 'AMBIGUOUS': 1} | {'CORRECT': 3, 'ABSTAIN': 3, 'WRONG': 1, 'AMBIGUOUS': 1}
+Zuordnungsabdeckung | 0.5 | 0.5
+Kontextabdeckung | 0.375 | 0.375
+Gepaarte Persistenz-MAE | 0.0021854682828815956 | 0.0022393748366446105
+Gepaarte Kontext-MAE | 0.0013441559631764263 | 0.0013327400177908318
+Gepaartes Delta | 0.000841312319705169 | 0.0009066348188537786
+Vollabdeckung Persistenz-MAE | 0.0022482798320158158 | 0.0022584352964549878
+Vollabdeckung Schema-MAE | 0.0019327877121263772 | 0.0019184472393848208
+Vollabdeckung Delta | 0.0003154921198894384 | 0.000339988057070167
+Keine Poolingquote, keine Vermischung der Lernziele. Maschinenlesend comparison.json.
+
+8. Einordnung und naechster Vorschlag
+Beobachteter Befund: im vorab gebundenen synthetischen Evaluation-Bestand positive mittlere MAE-Differenz des festen Vollabdeckungsschemas. Der Befund gilt nur fuer diese acht Aufgaben und unveraenderten Regeln; geringe Kontextabdeckung, gemeinsame Generatorfamilie und abhaengige Varianten begrenzen die Aussage.
+Keine allgemeine Wiedererkennung natuerlicher Erfahrungen, keine Semantik und keine Rauschrobustheit nachgewiesen. Herkunft und Prognosenutzen bleiben getrennt. Development und Evaluation sind nun beide ausgewertet; die Evaluation ist fuer kuenftige Anpassungen kein unberuehrter Bestand mehr.
+Empfehlung an Projektleiter: unveraenderte synthetische Pruefung abschliessen. Als naechstes klar begrenztes Entwicklungspaket eine explizite Faktor0,5/2-Fortsetzung fuer bereits eindeutigen Faktorabruf konzipieren; sie adressiert die belegte P1-Prognoseluecke ohne Matchinglockerung. Rauschrobustheit separat entscheiden, N3 als Identifizierbarkeitsgrenze erhalten. Jede geaenderte Regel braucht neue vorab gebundene, unberuehrte Evaluation; keine Wiederholung dieses Bestands als unabhaengiger Erfolg.
+Geaendert/neu: Evaluation-Routingmodul, Evaluation-Autorisierung, Vorabbindung, Material- und Auswertungsartefakte sowie neuer oberster Stand im AKTUELLER_FORSCHUNGSWEG.md. Keine Aenderung vorhandener Systemmodule; kein Commit/Push.

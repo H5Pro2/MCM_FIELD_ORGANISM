@@ -1,0 +1,12 @@
+{
+  "docs/S2UC_URA1_GESAMTZEITVERTRAG_V2_20261015.md": "a3717a975dc364eee137f31092be0a4ae9717097f4c0f9b8f6d83aac9ddf3658",
+  "tests/test_s2uc_ura1_prepare_v2.py": "b6085927c94508b2e085e03258320c1591b9c50855cff01fee23677b2e809939",
+  "tools/_s2uc_ura1_v2_engine.py": "2c4cec89f5e76ea89cd127b71fc87caec7d657a62dd0be85ddef56011beff885",
+  "tools/_s2uc_ura1_v2_fused.py": "09e8c43ed4a13c3ae445afaceb2ecba1d9aec2ae478f9fdd9f9b17b9cecd991d",
+  "tools/_s2uc_ura1_v2_series.py": "f401191213ef7b2a0dc8529c78fbad4165ed348c70a52be887a6a78febbf715e",
+  "tools/_s2uc_ura1_v2_source_reference.py": "34ac1219eba3543e1e1427c10fd5bcea27e7df21d29e2b38c46388882d18197e",
+  "tools/_s2uc_ura1_v2_sources.py": "73fe5f9037f8ac490678f1f0ed09b93476a8f8240b8b34fc8de268d5a9e76d9b",
+  "tools/_s2uc_ura1_v2_stats.py": "520e584ed6880058ff50fe34c8d739bfef6a262a1be803cb8b3c3c04a31f5dc0",
+  "tools/_s2uc_ura1_v2_stats_reference.py": "6998cfc808775d7e5e1bf59eb642a6f12197a55f359c2da4f81b88fcf87f90f2",
+  "tools/s2uc_ura1_prepare_v2.py": "2eeeb52a8cfa7253d06e21a06206441aa13a6fd196b767f150c7e60bbe30a320"
+}

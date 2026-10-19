@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "inventory_after_eviction": [
+    2,
+    3
+  ],
+  "prestate_output_unchanged": true,
+  "context_status": "AMBIGUOUS_CONTEXT",
+  "prestate_provenance": {
+    "status": "ABSTAIN_AMBIGUOUS",
+    "stream": "stream",
+    "owner": "owner",
+    "profile": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+    "input_indices": [
+      3,
+      4
+    ],
+    "source_intervals": [
+      [
+        9600,
+        14400
+      ],
+      [
+        14400,
+        19200
+      ]
+    ],
+    "read_revision": 2,
+    "matches": [
+      {
+        "role": "retained",
+        "generation": 1,
+        "formation": "seed0",
+        "ordinals": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "offset": 0,
+        "factors": [
+          1.0
+        ]
+      },
+      {
+        "role": "candidate",
+        "generation": 3,
+        "formation": "seed4",
+        "ordinals": [
+          17,
+          18,
+          19,
+          20
+        ],
+        "offset": 2,
+        "factors": [
+          1.0
+        ]
+      }
+    ]
+  },
+  "resources": {
+    "frame_peak": 16,
+    "output_slots_peak": 2,
+    "combined_peak": 17,
+    "output_python_bytes_peak": 3642,
+    "samples": 6031
+  },
+  "reset": true,
+  "scope": "Additional bound-vector eviction/resource check, outside five-case metric"
+}

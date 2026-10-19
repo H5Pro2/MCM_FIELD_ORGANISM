@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "checks": [
+    "reversed_frame_order_is_unknown",
+    "duplicate_slot_keys_fail_closed",
+    "known_slot_counter_overflow_fail_closed",
+    "duplicate_input_fail_closed"
+  ],
+  "research_replays": 0,
+  "full_size_runs": 0
+}

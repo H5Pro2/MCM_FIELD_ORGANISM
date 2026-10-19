@@ -1,0 +1,218 @@
+MCM-KI -- Ursachenpruefung: Erstkontakt, Verdraengung, Promotion
+2026-10-03 | ANALYSE/KONZEPT, KEINE IMPLEMENTIERUNG ODER AUSFUEHRUNG
+
+Ergebnis fuer den Projektleiter
+Der abgenommene Befund bleibt unveraendert: technisch korrekte Auswahl,
+negativer Nettonutzen gegen K auf V einschliesslich Kaltstarts. Die drei
+Ursachen sind zu trennen. Ein Rollenwechsel candidate->retained loescht
+teilweise bereits erworbene Erfahrung, obwohl die gespeicherten Frames
+fortbestehen. Das rechtfertigt die Untersuchung einer eng begrenzten
+Mitnahme, aber noch nicht deren Einfuehrung: Gerade B liefert im vorhandenen
+Material ein Gegenargument gegen unbedingtes Vertrauen in erhaltene Erfahrung.
+
+Insbesondere: Ziel19 ist ein Gewinn der VORGEGEBENEN kalten Persistenzwahl.
+Ziel31 nutzt zuvor an19 erworbene B-Fehlererfahrung. Beide Gewinne zusammen
+als erlernten Vorteil zu bezeichnen waere falsch. An31 bestaetigt Erfahrung
+dieselbe Wahl, die auch der kalte Default getroffen haette; der beobachtete
+Gewinn gegen K beweist daher keinen zusaetzlichen Gewinn gegen kalte Persistenz.
+An35/63 aendert vorhandene Erfahrung die Wahl gegenueber diesem Default.
+
+Grundlage und Aussagegrenze
+Gelesen wurden ausschliesslich bestehende Projektdateien:
+- reports/s2uc/ema-stock-counterprobe-20261001-01/E.json:
+  forecasts, error_updates, generation_events, cell_lifetime_events.
+- reports/s2uc/ema-stock-assessment-20261002-01/REPORT.md,
+  single-decisions.json und all-gains-and-harms.json.
+- reports/s2uc/ema-counterprobe-20261001-01/REPORT.txt:
+  frueherer constant-/switch_return-Befund.
+- tools/_s2uc_four_arm.py: CandidateTwoArm.close_segment;
+  tools/_s2uc_perception_recency.py; tools/_s2uc_paired_error_ema.py.
+
+Alle nachstehenden Fehlerdifferenzen sind bereits dokumentierte Einzelwerte,
+keine neuen Quoten, Masken, aggregierten Erfolgsaussagen oder Alternativlaeufe.
+EC/EP bezeichnet das gespeicherte Kontext-/Persistenzfehlerpaar am jeweiligen
+Schluessel (Rolle,Generation,Offset,Qualitaet). Alle hier betrachteten
+auswertbaren Schluessel verwenden Offset0 und EXACT. Neue Analysehypothesen
+sind keine beobachteten Wirkungen einer bisher nicht implementierten Variante.
+Kein Replay, keine Tests, keine Materialerzeugung und keine Zustandsuebertragung.
+Historische Laufartefakte, Bindungen und Abschlussbilanzen bleiben unangetastet.
+
+1. Drei Ursachen und ihre beobachteten Verlaeufe
+
+A -- Erste auswertbare Fehlererfahrung einer Spur
+Vor Ziel7 besitzt A:c1 noch kein Fehlerpaar. Die Spur ist gespeichert, aber
+eine Auswahlbewertung fuer diesen Hinweis/Nachfolger noch nicht vorhanden.
+E waehlt vorgegeben P, verliert0.5 gegen K und lernt danach (0,0.5).
+Entsprechend B:c2 an15: P,Schaden0.5625 gegen K,danach (0,0.5625).
+C:c6 an47: P,Schaden0.125 gegen K,danach (0,0.125).
+Dies sind erste Bewertungen dieser konkreten gespeicherten Spuren; ein
+frueherer wertegleicher, inzwischen ersetzter C-Kandidat ist keine Kontinuitaet.
+Die erste Wahrnehmung selbst ist davon zu unterscheiden: An3/11/27 steht
+noch kein entsprechender nutzbarer Kontext zur Wahl. Dortiges Fehlen eines
+Fehlerpaares ist kein Promotionsverlust.
+
+B -- Echte Verdraengung und spaetere Wiederkehr
+Aufnahme40 entfernt B:r2 samt (0.5625,0). Im verbleibenden Lauf gibt es keinen
+eindeutigen Abruf genau dieser alten B-Spur, an dem daraus ein weiterer
+Auswahlschaden belegt waere. Nicht jede Loeschung ist ein gemessener Schaden.
+Aufnahme48 entfernt A:r1 samt (0,0.5). An51 fehlt A als Quelle: E/K/P waehlen P
+mit Fehler0.5. Das ist Verfuegbarkeitsverlust, kein relativer E-Schaden gegen
+K/P und kein Nachweis, ein weiterhin vorhandener Fehlerwert allein haette
+einen verfuegbaren Kontext geschaffen.
+Aufnahme52 erzeugt A:c7 aus Ordinalen49..52. An55 ist dieser neue Kandidat kalt:
+P und Schaden0.5 gegen K, danach (0,0.5). Das ist ein Neustart nach echter
+Unterbrechung der Spurkontinuitaet, nicht allein ein Rollenwechsel. Die
+Wertegleichheit mit der alten A-Spur erlaubt keine Wiederbelebung ihrer Zelle.
+
+C -- Erfahrungsverlust allein durch Promotion derselben gespeicherten Spur
+Aufnahme8 promoviert A:c1 zu A:r1 und behaelt die Originalframes1..4.
+Die an7 erworbene Zelle (0,0.5) wird trotzdem geloescht. An23 ist A:r1
+darum wieder kalt: P und Schaden0.5 gegen K, ohne vorherige A-Verdraengung.
+Aufnahme16 promoviert B:c2 zu B:r2 mit denselben Originalframes9..12.
+Die an15 erworbene Zelle (0,0.5625) wird geloescht. An19 ist B:r2 kalt und
+P diesmal vorteilhaft: Gewinn0.5625 gegen K. Ein Promotionsreset kann somit
+auch vor inzwischen unpassender Erfahrung schuetzen; sein Effekt ist nicht
+automatisch ein Verlust im Fehlervergleich.
+Aufnahme56 promoviert A:c7 zu A:r5 mit denselben Originalframes49..52.
+Die an55 neu erworbene Zelle (0,0.5) wird geloescht. An59 entsteht ein zweiter
+kalter P-Start mit Schaden0.5 gegen K. Der alte Verlust bei48 erklaert nicht
+diese erneute Loeschung von inzwischen frisch erworbener Erfahrung.
+Bei48 wird zugleich C:c6 zu C:r4 promoviert und dessen Zelle (0,0.125)
+geloescht. Das ist von der gleichzeitigen echten A-Verdraengung zu trennen.
+Eine spaetere auswertbare C-Fortsetzung zur Bezifferung dieser Loeschungsfolge
+liegt im verbleibenden gespeicherten Verlauf nicht vor.
+
+2. Vollstaendige Zuordnung der dokumentierten Unterschiede
+
+Ziel | Beobachteter Unterschied E | Ursache / tatsaechliche Auswahlgrundlage
+ 7   | Schaden0.5 gegen K        | erste A:c1-Bewertung; kalter Default P
+15   | Schaden0.5625 gegen K     | erste B:c2-Bewertung; kalter Default P
+19   | Gewinn0.5625 gegen K      | Reset bei Promotion16; kalter Default P,
+     |                          | KEIN erlernter Auswahlvorteil
+23   | Schaden0.5 gegen K        | Reset bei Promotion8; kalter Default P
+31   | Gewinn0.5625 gegen K      | erhaltenes B:r2-Paar (0.5625,0) aus19;
+     |                          | erfahrungsabhaengige P-Wahl,auch Default P
+35   | Gewinn0.5 gegen P         | erhaltenes A:r1-Paar (0,0.5) aus23;
+     |                          | erfahrungsabhaengige C-Wahl
+47   | Schaden0.125 gegen K      | erste C:c6-Bewertung; kalter Default P
+55   | Schaden0.5 gegen K        | neue Spur nach echter A-Verdraengung;
+     |                          | kalter Default P, keine alte Identitaet
+59   | Schaden0.5 gegen K        | Reset bei Promotion56; kalter Default P
+63   | Gewinn0.5 gegen P         | neues A:r5-Paar (0,0.5) aus59;
+     |                          | erfahrungsabhaengige C-Wahl
+
+Dies sind saemtliche im Abschluss dokumentierten relativen Gewinne/Schaeden;
+an den anderen Zielen sind die beobachteten Fehler von E/K/P gleich.
+An39 begruendet Mehrdeutigkeit die Enthaltung vom Kontext, nicht eine gelernte
+Abwertung von B oder Bp. Kein gueltiges Ticket/Update. Die Loeschung bei40
+ist ein spaeteres Aufnahmeereignis. An51 gilt der oben getrennte
+Verfuegbarkeitsverlust; keine zusaetzliche Schadenszuordnung erfinden.
+Ein Kostenereignis wird nicht zugleich als Verdraengungs- UND Promotions-
+schaden addiert. Die ursachliche Kette48->55->56->59 bleibt getrennt.
+
+3. Kalte Persistenz gegen sofortigen Kontext
+
+Kalte Persistenz verlangt zuerst eigene Fehlerbeobachtung. Sie trifft an19
+zufaellig die fuer die neue Fortsetzung bessere Wahl, verzichtet aber an
+7/15/23/47/55/59 auf bereits verfuegbaren, dort richtigen Kontext. Der
+Default ist eine Vorentscheidung, keine aus diesen Zielen gelernte Vorsicht.
+Sofortiger Kontext vermeidet diese dokumentierten kalten P-Verluste, ist
+aber an19/31 trotz eindeutiger gespeicherter B-Herkunft falsch. Richtiger
+Abruf bedeutet nicht, dass der gegenwaertige Verlauf gleich weitergeht.
+
+Der fruehere switch_return-Befund zeigt dieselbe Grenze bei bereits
+erworbener Erfahrung: An79 ist die zuvor bewaehrte Kontextwahl nach dem
+Fortsetzungswechsel falsch (E0.5,P0). An143 bleibt nach Rueckkehr die zuvor
+bewaehrte Persistenzwahl zunaechst falsch (E0.5,K0). Das sind keine neuen
+Messungen. Sie belegen, dass auch unveraenderte Spuridentitaet keinen Schutz
+vor veraenderter Fortsetzung liefert und Bewaehrung nicht zeitlos ist.
+Ohne weitere Information ist keine der beiden Anfangswahlen allgemein
+ueberlegen. Die feste Auswahl von E nach positiver Erfahrung kann zudem
+verzoegert umschalten. Reine Zellmitnahme loest dieses Problem nicht.
+
+4. Eine moegliche Alternative: begrenzte Mitnahme bei echter Promotion
+
+Konzeptuell vertretbar waere, vorhandene Fehlererfahrung nur an einem
+nachgewiesenen unmittelbaren Promotionsereignis derselben weiterlebenden
+gespeicherten Kandidatenspur dem neuen retained-Schluessel zuzuordnen.
+Das waere eine ausdrueckliche Ausnahme zur heutigen Rollentrennung, keine
+bereits freigegebene Funktion und kein allgemeines Zusammenlegen von Spuren.
+
+Beleg fuer einen engen Identitaetsbegriff: close_segment erzeugt retained
+aus self._candidate.frames, nicht aus den Frames der bestaetigenden neuen
+Beobachtung. Die gespeicherten Ereignisse8/16/56 behalten jeweils dieselben
+Originalordinalen und Wertehashes vor/nach Promotion. Umgekehrt hat c7 bei52
+zwar denselben Wertehash wie das alte A:r1, aber andere Originalordinalen
+und eine durch Verdraengung unterbrochene Lebensgeschichte. Ein Wertehash
+allein reicht daher nicht als Identitaetsnachweis; auch zufaellig gleiche
+Generationsnummern in verschiedenen Rollen reichen nicht.
+
+Erforderliche konzeptionelle Grenzen einer solchen Ausnahme:
+- Nur eine ununterbrochen lebende Kandidatenspur mit eindeutiger Zuordnung
+  zum unmittelbar daraus entstehenden retained-Eintrag. Gleicher Owner,
+  Profil/Stream und gleiche Originalframes/Ordinalen; kein Wertevergleich
+  als Ersatz fuer diese Ereigniszuordnung, kein Wiederfinden im Archiv.
+- Nur bereits vor Promotion gueltig erworbene Fehlerpaare fuer denselben
+  Hinweisoffset, dieselbe Matchqualitaet und unveraenderte Prognose-/Fehler-
+  definition. Keine Bewertung fuer weitere Offsets/Qualitaeten erfinden.
+- Keine Uebernahme eines offenen Tickets oder einer eingefrorenen Wahl;
+  keine rueckwirkende Aenderung einer Prognose. Promotion ist selbst kein
+  neuer Fehlerbeleg und darf keine zusaetzliche Lernstaerke erzeugen.
+- Vorhandene Zellen einmalig verschieben, nicht duplizieren oder mit anderen
+  Zellen mitteln. Alter Schluessel endet, neuer Schluessel wird nachvollziehbar
+  zugeordnet. Konflikte oder nicht belegbare Kontinuitaet erlauben keine
+  Mitnahme. Speichergrenzen muessen unveraendert eingehalten werden.
+- Bei echter Verdraengung, Kandidatenersetzung oder spaeterer Wiederkehr
+  bleibt Loeschung verbindlich. Keine Uebernahme r1->c7; eine Ausnahme c7->r5
+  waere nur fuer die seit52 tatsaechlich weiterlebende neue Spur denkbar.
+- Keine Auswahl nur der vorteilhaften A-Faelle oder einzelner positiver
+  Fehlerpaare. Dieselbe begrenzte Regel muesste auch auf B und negative
+  Erfahrungen anwendbar sein. Keine Ziellabels, Retrospektive oder Orakel.
+
+Risiken und Gegenbeleg im vorhandenen Material
+Bei B wuerde die vor Promotion16 vorhandene Bewertung (0,0.5625) den Kontext
+bevorzugen. Die tatsaechlich beobachtete Fortsetzung an19 widerspricht ihr.
+Das ist eine lokale konzeptionelle Gegenprognose fuer unbedingte Mitnahme,
+kein ausgefuehrter Alternativlauf; ein Gesamtergebnis dieser Alternative
+wird daraus nicht berechnet. Insbesondere spaetere EMA-Verlaeufe und
+Entscheidungen duerfen nicht aus der unveraenderten Variante uebernommen
+und als gemessener Nutzen der Alternative ausgegeben werden.
+Wenige Beobachtungen koennen irrefuehrend sein; eine laenger bestehende
+Kandidatenzelle kann veraltet sein. Promotion bestaetigt einen vergangenen
+Vierer-Verlauf, nicht die Verteilung aller kuenftigen Fortsetzungen nach
+demselben Hinweis. Die EMA-Zelle enthaelt zudem keinen eigenen Nachweis
+fuer Aktualitaet oder statistische Verlaesslichkeit. Identitaetserhalt
+rechtfertigt Zurechnung von Erfahrung, nicht blindes Vertrauen in sie.
+
+5. Genau ein empfohlener naechster Schritt
+
+Empfehlung: einen eng begrenzten, vorab festgelegten Gegenpruefvertrag fuer
+die oben beschriebene Promotionsmitnahme konzeptionell ausarbeiten lassen.
+Erst dieser Vertrag soll ueber eine spaetere technische Untersuchung
+entscheidbar machen; jetzt keine Implementierung, Tests oder Ausfuehrung.
+Bis dahin bleibt paired_error_ema_v1 unveraendert/default disabled.
+
+Hypothese: Bei identitaetserhaltender Promotion kann das Behalten korrekt
+zugeordneter Erfahrung unnoetige erneute Kaltstarts vermeiden, ohne die
+Trennung echt verschiedener/verdraengter Spuren aufzuheben.
+Gegenhypothese: Gerade der Reset entfernt veraltete oder irrefuehrende
+Bewertungen; Mitnahme erhoeht bei geaenderter Fortsetzung den Fehler oder
+verzoegert Anpassung. Der beobachtete B-Uebergang15->16->19 ist der zwingend
+zu beruecksichtigende Gegenfall, nicht ein auszuschliessender Sonderfall.
+
+Abnahmekriterium fuer diesen EINEN naechsten Konzeptschritt:
+Ein geschlossener Vertrag muss (a) die erlaubte direkte Identitaetszuordnung
+und verbotene Uebernahme nach Verdraengung/Wertegleichheit eindeutig festlegen,
+(b) sowohl stabile Fortsetzung als auch Fortsetzungswechsel nach Promotion,
+echte Verdraengung/Wiederkehr und mehrdeutige Hinweise vorab enthalten,
+(c) die bestehende Reset-Variante sowie K und P als unveraenderte Vergleiche
+vorsehen und alle Kaltstart-/Anpassungsverluste ohne nachtraegliche Masken
+ausweisen, und (d) vor Ergebnissen feste Ressourcen, Zielmengen, Abbruch-
+und Nichtnachweiskriterien bestimmen. Ein Nutzenurteil darf nicht allein
+auf eingesparten A-Kaltstarts beruhen; Verschlechterung im Gegenfall muss
+sichtbar bleiben. Reicht der Vertrag nicht fuer diese Trennung, ist er
+nicht abzunehmen und die bestehende Variante bleibt unveraendert.
+
+Diese Empfehlung ist genau ein Konzeptauftrag, keine nachfolgende
+Implementierungs- oder Versuchsgenehmigung. Der bestehende negative
+Nettonutzenbefund wird weder umgedeutet noch durch neue Erfolgsquoten ersetzt.

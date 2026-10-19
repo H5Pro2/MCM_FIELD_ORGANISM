@@ -1,0 +1,114 @@
+P2-Anschlusskorrektur: ausgefuehrter gebundener Supplier
+
+Status: Anschlusskorrektur im genehmigten Testumfang abgeschlossen.
+207/207 PASS auf endgueltigem Code, Exit 0. Unabhaengige P2-Abnahme ausstehend.
+
+Grund der Korrektur:
+Der vorherige P2-Prozess konstruierte den NU-Supplier lediglich. Seine neutrale
+Ausfuehrung verwendete danach einen anderen Supplier. Die damaligen 203 PASS
+belegten deshalb nicht den durchgaengigen Anschluss des gebundenen Suppliers.
+Die damaligen Ergebnisse und der damalige Bericht bleiben unveraendert erhalten;
+ihre Aussagegrenze wird mit diesem Korrekturbericht ausdruecklich festgehalten.
+
+Implementierung (fuenf geaenderte Dateien, keine Aenderung der Memorymethoden):
+- tools/_s2uc_p2_execution.py: Testautorisierung und Quellenidentitaet getrennt;
+  Auswahl zwischen bisherigen synthetischen IDs und vorgesehenen NU-Identitaeten.
+  Das Original-Quellenkontextdokument bleibt unveraendert. Im Testmanifest bleiben
+  IDs, Profile, Zeitfenster, Ereignisfolgen und Zielurspruenge exakt erhalten.
+  Ausschliesslich PCM-Hashes werden fuer die Ersatzdaten separat gebunden.
+  payload_substitution dokumentiert sowohl Original- als auch Testhash je Quelle.
+  Der ausgefuehrte Supplier prueft jeden Testendpunkt vollstaendig und uebergibt
+  den entsprechenden Originalendpunkt an context.prepare_nu_supplier. Dessen
+  unveraenderte Pruefung und WindowSpec-Auswahl bleiben im ausgefuehrten Pfad.
+- tools/s2uc_p2_process.py: tatsaechlicher Aufrufpfad:
+  SourceAdapter -> P2-Endpunktbindung -> vorhandener NU-Supplier -> pcm_window
+  (ersetzte Produktionsschnittstelle) -> Hashpruefung -> Materialisierung.
+  Nur pcm_window wird ersetzt; der eigentliche NU-Generator wird nicht aufgerufen.
+  Getrennte Zaehler und 58 Stream-/Fenster-/Hashbelege weisen die ausgefuehrte
+  Kette nach. Jobmitgliedschaft und Testclaim werden vor Aufrufen geprueft.
+  Acht falsche Endpunkte werden vor dem ersten Produktionsersatzaufruf abgewiesen.
+- tools/_s2uc_p2_appendix.py: der Reader verlangt bei Quellenkontexttests 58
+  gebundene Supplieraufrufe und 58 passende Produktionsersatzbelege. Eine blosse
+  Supplierkonstruktion oder ein Zaehlerstand 0 invalidiert den Nachweis.
+  Herkunftsergebnisse sind ausdruecklich EVALUATED_TEST / BOUND_SOURCE_TEST_P2.
+- tests/test_s2uc_p2.py: vier zusaetzliche Pruefpflichten fuer Quellenidentitaet
+  ohne Laufautoritaet, fehlende Zulassung/Jobaufnahme, fehlerhafte Ersatz-PCM-Hashes
+  und den durchgaengigen 58-Aufrufe-/Sieben-Hints-Abschluss samt Originalbytepruefung.
+- tools/s2uc_p2_check.py: gezielte Anschlussgruppe, vollstaendige 207er-Pruefmenge,
+  aufbewahrter Quellenkontext-Testfall und Pruefung der erhaltenen P2-Vorbefunde.
+
+Kennzeichnung und Grenzen:
+Die Ersatzdaten sind synthetische Nichtnull-PCM-Testdaten. NU-Quellenidentitaeten
+und originale Zeit-/Profilstruktur machen daraus keinen realen Quellenlauf.
+Die Original-PCM-Hashes werden nicht als Hashes der Ersatzdaten ausgegeben.
+Claims, Produktbelege, Fehlerabschluesse und Herkunftsauswertung sind Testbefunde.
+Der oeffentliche Realeinstieg bleibt ohne produktive Autorisierung geschlossen.
+Es wird keine produktive Autorisierung erzeugt oder verwendet. Die Windows-
+Job-Commitgrenze von 640 MiB betrifft ausschliesslich den Kindprozess.
+
+Unveraendert gelten Code 1048576 Byte, Gesamtumfang 4194304 Byte und alle
+genehmigten P2-Teilgrenzen. Der gemeinsame Ledger umfasst den neuen
+Qualifikationsbaum mit allen gleichzeitig vorhandenen Testdateien und den
+gebundenen P1-Eingaben. Kurzlebige Testfaelle werden nach ihrer Pruefung regulaer
+entfernt; gespeicherte gezielte Resultate und der finale Quellenkontext-Testfall
+bleiben im bilanzierten Baum. Die vorherige P2-Qualifikation wird nicht als
+aktuelle Qualifikation ausgegeben oder ueberschrieben. preservation.json sichert
+ihre Originalhashes sowie die sechs damaligen P2-Codefassungen.
+
+Gezielte Anschlusspruefung: focus-01/test-result.json und protocol.json, 4/4 PASS.
+Vollstaendige Einzelresultate und Ressourcenbilanz sind unter final/ gespeichert.
+
+Naechster Schritt nach bestandenem Abschluss: Projektleiter prueft die nun
+tatsaechlich durchlaufene Supplierkette und nimmt die begrenzte Korrektur ab.
+Eine reale Quellenentscheidung bleibt separat.
+
+Abschlussnachweis
+207/207 PASS: bisherige 203 plus vier neue Anschlusspruefpflichten.
+0 Fehler, 0 Fehlschlaege, 0 Skips, Exit 0; Dauer 1560,281 Sekunden.
+Code vor/nach Vollpruefung identisch; keine Codeaenderung nach Vollpruefung.
+4/4 gezielte Pruefungen zuvor bestanden; sie sind in den 207 enthalten.
+Alle 66 bisherigen Kern-/P1-Code-Dateien, 17 P1-Dateien, 2296 historische
+Nachweise und 36 vorherige P2-Ergebnisdateien unveraendert. Die sechs frueheren
+P2-Codefassungen sind mit exakten Bytes/Hashes in preservation.json gesichert.
+
+Aufbewahrter End-to-End-Fall: final/retained-success.
+Quellenidentitaet: BOUND_NU_IDENTITIES_TEST_PCM. Testautorisierung: ONE_P2_TEST_EXECUTION.
+58 SourceAdapter-Aufrufe, 58 Aufrufe des vorhandenen gebundenen NU-Suppliers,
+58 Aufrufe der ersetzten pcm_window-Schnittstelle, 58 Hashpruefungen,
+58 Rezeptoranalysen und 58 NJ-Projektionen. Null reale Produktionsaufrufe.
+Acht falsche Endpunkte vor dem ersten Produktionsersatzaufruf abgewiesen.
+Zeitfolge: native Jobaufnahme < Testzulassung < erster Supplieraufruf
+<= erster Produktionsersatzaufruf. Beleg: observer/facts.json sowie
+observer/child-admission.json. Stream/Fenster/Testhash stimmen fuer alle 58
+Aufrufe mit den gebundenen Endpunkten ueberein.
+Produkt: CLOSED_NEUTRAL_P2_VERIFIED; Nachtrag: CLOSED_NEUTRAL_PROVENANCE.
+Scope BOUND_SOURCE_TEST_P2; test_evidence=true; real_execution_authorized=false.
+7/7 Herkunftsauswertungen. Record, Verifikation und Produktterminal bytegleich
+vor/nach Nachtrag; Originalhashes in appendix/appendix-terminal.json.
+Synthetischer Gewinn g1/24 und getrennte Verluste g1/26, g2/38, g3/67;
+historische Erwartung bei g1/24 weiterhin verletzt. Keine reale Aussage.
+
+Gemeinsame Schlussbilanz inklusive dieses Berichts (gemessene Dateibytes):
+code: 926690 / 1048576
+metadata: 90398 / 131072
+static_shared: 997947 / 1572864
+record: 192989 / 245760
+verification: 77369 / 131072
+error: 0 / 65536
+terminal: 4804 / 32768
+minimal: 0 / 16384
+staging: 0 / 245760
+shared: 1002751 / 1703936
+total: 2290197 / 4194304
+Separat: prospektive Abschlussreserve 2752315 / 4194304 Byte.
+Record-/Verifikationswerte oben nutzen die Reserven 245760/131072; absolute
+Grenzen jeweils 262144 unveraendert. Staging 0 ist der Abschlusszustand.
+Aktives Inventar: 14914 / 16384 Byte.
+Gebundenes Pruefprotokoll: 16413 / 32768 Byte.
+Das zusaetzliche unittest.log ist als static_shared voll mitgezaehlt.
+
+Neue Anschluss-Test-IDs (alle PASS auf finalem Code):
+tests.test_s2uc_p2.P2Tests.test_bound_identity_is_not_production_authority
+tests.test_s2uc_p2.P2Tests.test_bound_missing_admission_or_job_has_no_supplier
+tests.test_s2uc_p2.P2Tests.test_bound_production_substitute_hash_is_still_verified
+tests.test_s2uc_p2.P2Tests.test_bound_supplier_full_58_and_seven_hints

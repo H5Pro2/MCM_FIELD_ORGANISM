@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\s2uc_source_process_once.py", line 123, in <module>
+    child(json.loads(Path(sys.argv[2]).read_text()))
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\s2uc_source_process_once.py", line 34, in child
+    need(bool(job), "V9_JOB_MISSING")
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\s2uc_source_process_once.py", line 21, in need
+    raise ValueError(code)
+ValueError: V9_JOB_MISSING

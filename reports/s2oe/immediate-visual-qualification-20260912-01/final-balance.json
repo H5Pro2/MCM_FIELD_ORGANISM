@@ -1,0 +1,49 @@
+{
+  "version": "s2oe.immediate-final-balance.v1",
+  "status": "NOT_QUALIFIED",
+  "qualification_id": "immediate-visual-qualification-20260912-01",
+  "parts": {
+    "historical_input": 1359778,
+    "sources": 10026,
+    "metadata_before_balance": 42313,
+    "balance_file": 1072,
+    "verification": 0,
+    "supplement": 0,
+    "data": 0
+  },
+  "totals": {
+    "metadata": 43385,
+    "shared": 10026,
+    "total": 1413189
+  },
+  "limits": {
+    "historical_input": 2097152,
+    "metadata": 65536,
+    "sources": 174080,
+    "verification": 262144,
+    "shared": 262144,
+    "total": 4194304
+  },
+  "local_violations": [
+    {
+      "artifact": "qualification.log",
+      "actual": 36578,
+      "limit": 32768,
+      "excess": 3810
+    }
+  ],
+  "overarching_violations": [],
+  "prebound_total": 2094796,
+  "read_bytes": {
+    "prepare_parent": 1359778,
+    "test_parent": 0
+  },
+  "unittest_calls": 1,
+  "test_bodies_reached": 0,
+  "formation_calls": 0,
+  "receptor_calls": 0,
+  "nj_calls": 0,
+  "scan_calls": 0,
+  "main_gate": false,
+  "source_inventory_unchanged": true
+}

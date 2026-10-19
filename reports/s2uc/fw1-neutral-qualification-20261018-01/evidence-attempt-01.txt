@@ -1,0 +1,16 @@
+test_13_five_integrations (__main__.Evidence.test_13_five_integrations) ... ok
+test_14_archive_semantic_corruption (__main__.Evidence.test_14_archive_semantic_corruption) ... FAIL
+
+======================================================================
+FAIL: test_14_archive_semantic_corruption (__main__.Evidence.test_14_archive_semantic_corruption)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\experiments\fw1\test_evidence.py", line 56, in test_14_archive_semantic_corruption
+    with patch.object(archive,'Reference',Counted),self.assertRaisesRegex(ValueError,reason):archive.verify(path.read_bytes(),proof,expected)
+                                                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 2 tests in 14.086s
+
+FAILED (failures=1)

@@ -1,0 +1,576 @@
+{
+  "authorization_created": false,
+  "current_references": {
+    "reports/check_uhd_sequence_once.py": {
+      "bytes": 6409,
+      "kind": "sources",
+      "sha256": "f890d1be80efcd71c50f7b293a269a68c9ebd49138c21e0f248905b5352fb844"
+    },
+    "reports/decoder_isolation_once.py": {
+      "bytes": 6684,
+      "kind": "sources",
+      "sha256": "a43aaebcc846b2a253c045e3af2a1d08880fc2ccad7154311e4a77317f57d15f"
+    },
+    "reports/prepare_direct_media_budget.py": {
+      "bytes": 3944,
+      "kind": "sources",
+      "sha256": "63ffea8c36d9cdce75e363706104a31ac7e62806ce20f321533c29695ef90629"
+    },
+    "reports/prepare_media_admission.py": {
+      "bytes": 2206,
+      "kind": "sources",
+      "sha256": "8d67d9e5145f0a1d0a2510922f699e6cbf52cfe1d83245102628ffb7e1685906"
+    },
+    "reports/prepare_uhd_run_binding.py": {
+      "bytes": 3096,
+      "kind": "sources",
+      "sha256": "57c5ede2a06a4aec739ec652d13643e374c9f7ff5b9f45dc487388082134df55"
+    },
+    "reports/qualify_media_player_once.py": {
+      "bytes": 8345,
+      "kind": "sources",
+      "sha256": "a4094a90939d6e8d8f886f5cc30b7b8fcc0e91c1b806f86b11d60e1789b6a3fc"
+    },
+    "reports/qualify_media_worker_once.py": {
+      "bytes": 9720,
+      "kind": "sources",
+      "sha256": "e232d6630015c776c0ace8f6d22e47074efca79040538b41a1723ab730719404"
+    },
+    "reports/s2oc/KOPIERGRENZE_UND_LOGHUELLE.md": {
+      "bytes": 3220,
+      "kind": "sources",
+      "sha256": "8d5cd2ebd4d26272310bc67cf99c159f39efc2f6024aff5d8d38e76419966769"
+    },
+    "reports/s2oc/QUALIFIKATIONSHUELLE_6607.md": {
+      "bytes": 2171,
+      "kind": "sources",
+      "sha256": "f21312998068050d0937976b4fe39d96e992e21b7ae31cbc2780e88351397d1b"
+    },
+    "reports/s2oc/qualify_shared_copy_once.py": {
+      "bytes": 12698,
+      "kind": "sources",
+      "sha256": "bb9264576a0368a6999578d3f262b342c4062ff8c09b86b852141fd0a20d95c3"
+    },
+    "reports/s2oc/run_bound_session_once.py": {
+      "bytes": 3988,
+      "kind": "sources",
+      "sha256": "a19f52e11d2b8c9558d71de7d484678eb635825cabd35ad91fbefc50a9e78150"
+    },
+    "reports/s2oc/s2oc-shared-closure-qualification-20260910-03/caller-common.json": {
+      "bytes": 2752,
+      "kind": "metadata",
+      "sha256": "7d2f46f5660a275a61a99bb6c2710dcbc226441ea6626396f232c8077ae9c502"
+    },
+    "reports/s2oc/s2oc-shared-closure-qualification-20260910-03/inventory.json": {
+      "bytes": 12442,
+      "kind": "sources",
+      "sha256": "eccd6050b2b34b269488f4b81cc8e5f6f34e8b743a5721ff392095754ef2f7d0"
+    },
+    "reports/s2oc/s2oc-shared-closure-qualification-20260910-03/package.json": {
+      "bytes": 463,
+      "kind": "metadata",
+      "sha256": "d199ad2562612134660d07410ccf93e9a63888c1418ca44819aaf9d87f6d3a05"
+    },
+    "reports/s2oc/s2oc-shared-closure-qualification-20260910-03/qualification.zip": {
+      "bytes": 3125,
+      "kind": "metadata",
+      "sha256": "45d365da8bc0e7e1d06e791a5a10314791d64ecb7c2785d0897ffa45a594d505"
+    },
+    "reports/s2oe/decoder-uhd-sequence-20260911-01/binding.json": {
+      "bytes": 8612,
+      "kind": "metadata",
+      "sha256": "032b72a070caf5799bfa74425e116e51219ea22432d818bcf5ca6f1fa072fb90"
+    },
+    "reports/s2oe/decoder-uhd-sequence-20260911-01/decoder.claim": {
+      "bytes": 28,
+      "kind": "metadata",
+      "sha256": "b80842054eb36a7cba45978188ebc59ddbec25b50c41675f704198dea85db8fb"
+    },
+    "reports/s2oe/decoder-uhd-sequence-20260911-01/qualification.claim": {
+      "bytes": 5,
+      "kind": "metadata",
+      "sha256": "ad06e72726f6d8ff00228160453949c1ceb89571c99332e4815f9edce2acad07"
+    },
+    "reports/s2oe/decoder-uhd-sequence-20260911-01/qualification.json": {
+      "bytes": 158,
+      "kind": "metadata",
+      "sha256": "bc788128dece11faa2eb50a2758dbfffd6abaabedba4ca36863548deae5385df"
+    },
+    "reports/s2oe/decoder-uhd-sequence-20260911-01/qualification.log": {
+      "bytes": 793,
+      "kind": "metadata",
+      "sha256": "7251dad2a03d1b813873f4a0dd710cb612a5a902d4310efb0419845cddb90a82"
+    },
+    "reports/s2oe/decoder-uhd-sequence-20260911-01/record.json": {
+      "bytes": 35184,
+      "kind": "metadata",
+      "sha256": "2082ac5e521aa984c969806bb7d3b0a7f15e0e51db86127a9230dad96123387c"
+    },
+    "reports/s2oe/decoder-uhd-sequence-20260911-01/verification.claim": {
+      "bytes": 15,
+      "kind": "metadata",
+      "sha256": "1c17e19ff7304b56dc8cc6cc1aa26484260e1ea9914660e7f56559cda4779ffd"
+    },
+    "reports/s2oe/decoder-uhd-sequence-20260911-01/verification.json": {
+      "bytes": 957,
+      "kind": "metadata",
+      "sha256": "1f615f9e4e8531d133137a8fcb75496e40e5579dc6b938c52e91a9dd1e330126"
+    },
+    "reports/s2oe/media-player-admission-20260911-02/binding.json": {
+      "bytes": 1424,
+      "kind": "metadata",
+      "sha256": "c6cc169cc121f4fa303be33d60deaac3aaf4d3838d1b8c0ee7c9986849a6cf0c"
+    },
+    "reports/s2oe/media-player-admission-20260911-02/result.json": {
+      "bytes": 2413,
+      "kind": "metadata",
+      "sha256": "1ff69ac269f6b1e010a442a54f6f84964209d78c33e1c104b4c038364d13b90e"
+    },
+    "reports/s2oe/media-player-admission-20260911-02/verification.claim": {
+      "bytes": 4,
+      "kind": "metadata",
+      "sha256": "5392aa8d409984639948b8cf6cdecc878531182eedff66e551da40f373f1fe4a"
+    },
+    "reports/s2oe/media-player-run-binding-20260911-02/inventory.json": {
+      "bytes": 1723,
+      "kind": "sources",
+      "sha256": "6fb747dd2f006daf1b6d1b9d1fbf36613647f7747253a238427fddbfb8bf396c"
+    },
+    "reports/s2oe/media-run-binding-20260911-01/common.json": {
+      "bytes": 8964,
+      "kind": "metadata",
+      "sha256": "e009d3956b48336a1af09413c0676760fedec9d9d8c6a0a218e9f9de4c64aef9"
+    },
+    "reports/s2oe/media-worker-qualification-20260911-01/final-balance.json": {
+      "bytes": 1165,
+      "kind": "metadata",
+      "sha256": "9a0359b07c57776bcbb104c5326a1fd049ffe37b9f692872871a23e525ddf87e"
+    },
+    "reports/s2oe/media-worker-qualification-20260911-01/preregistration.json": {
+      "bytes": 4903,
+      "kind": "metadata",
+      "sha256": "e510a4bbc6ce3b79c22c59e110536937d53f50317571982c7e5c344bc361049a"
+    },
+    "reports/s2oe/media-worker-qualification-20260911-01/result.json": {
+      "bytes": 1721,
+      "kind": "metadata",
+      "sha256": "ba108c52ea6d030878165a4ceb53b34637e3798bc29f79de7c4ae4d9d866da4f"
+    },
+    "reports/s2oe/media-worker-qualification-20260911-01/stderr.txt": {
+      "bytes": 2089,
+      "kind": "metadata",
+      "sha256": "d6535fe96bea699225724fc4475dfe1f1eaf347ab79626623e3a9b5f9b374f22"
+    },
+    "reports/s2oe/media-worker-qualification-20260911-01/stdout.txt": {
+      "bytes": 0,
+      "kind": "metadata",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reports/start_bound_media_player.py": {
+      "bytes": 1072,
+      "kind": "sources",
+      "sha256": "9507dad38d47cecbf499c8c5f30cff3787108f81523fa3acc41c225bf7b65993"
+    },
+    "reports/verify_media_admission.py": {
+      "bytes": 7546,
+      "kind": "sources",
+      "sha256": "550791f3ce3ebc4c734dbfaf10818b12a4fb625b9285b3485be1e17d6aa0f06e"
+    },
+    "reports/verify_uhd_sequence.py": {
+      "bytes": 3583,
+      "kind": "sources",
+      "sha256": "dfa514ef913b664b446028403ed89dc95ba2ed35f72f818519adca6efea8fc8c"
+    },
+    "tests/s2oe_neutral_worker.py": {
+      "bytes": 4176,
+      "kind": "sources",
+      "sha256": "79a0bf74a4a3301cb2aa6fffc38cde07986897f4b86a30e3e84db59932be865f"
+    },
+    "tests/test_s2oc_shared_closure.py": {
+      "bytes": 19646,
+      "kind": "sources",
+      "sha256": "f3f2b12734ad4c9ed27d8faf6168110217f7cb3afa962a18581a4e9d27e85cd0"
+    },
+    "tests/test_s2oe_player.py": {
+      "bytes": 15647,
+      "kind": "sources",
+      "sha256": "ac74befe123aa45da29ff08f3d1bae927d5fbd3d303521873dea121410ffe3c8"
+    },
+    "tests/test_s2oe_uhd_profile.py": {
+      "bytes": 3230,
+      "kind": "sources",
+      "sha256": "19659f4f647da34ff7261d897d94345f9da26ba49c8de9a5248d6705eaf47f82"
+    },
+    "tests/test_s2oe_worker.py": {
+      "bytes": 12082,
+      "kind": "sources",
+      "sha256": "ff9930d1e2591cdb9401ab47c7d31cf07392942c65fa04a1754a9571b2a4b73b"
+    },
+    "tools/_s2ob_private_caller_binding.py": {
+      "bytes": 28585,
+      "kind": "sources",
+      "sha256": "4c58c5adf96c3a6643682a6a6be33e599e4eac5f245b996c18221239543f780d"
+    },
+    "tools/_s2oc_bound_session.py": {
+      "bytes": 7418,
+      "kind": "sources",
+      "sha256": "e0dfd64a107970e91b257088b626e6108e173f5b469d13cdb84b7f6ea1b8941c"
+    },
+    "tools/_s2oc_budget_closure.py": {
+      "bytes": 2251,
+      "kind": "sources",
+      "sha256": "6adeaab52d5b5c8b60970e54a9d274b18fddc648c5919e94d673abd8c593f003"
+    },
+    "tools/_s2oc_qualification_archive.py": {
+      "bytes": 1991,
+      "kind": "sources",
+      "sha256": "e86465284bb3b9779788284b119160fddddbcbd02463b19b3b601ceac01ff444"
+    },
+    "tools/_s2oc_shared_binding.py": {
+      "bytes": 12530,
+      "kind": "sources",
+      "sha256": "2167c68f51e4fd41c3492fd80fcccb8c94ffc171df9724d7f30c09c479705f61"
+    },
+    "tools/_s2oc_shared_verification.py": {
+      "bytes": 10767,
+      "kind": "sources",
+      "sha256": "554c087eb966eefbb0a56bfdf8ef0845910db774509ceeab4daeda86300cf4df"
+    },
+    "tools/_s2oe_decoder_worker.py": {
+      "bytes": 22928,
+      "kind": "sources",
+      "sha256": "834347e9e6aa1399a7d35907e5cb7fab5b5314da1ef2b408194e5dfe67eacd5a"
+    },
+    "tools/_s2oe_isolation_log.py": {
+      "bytes": 520,
+      "kind": "sources",
+      "sha256": "cf43d6e5422fa9776f03322c2a8e6446f0c4dc4d2f9445a54ce5b594db029278"
+    },
+    "tools/_s2oe_local_player.py": {
+      "bytes": 14034,
+      "kind": "sources",
+      "sha256": "2734689376ecd08832405bb9346bea31dd151701b9d3486a7d08453389f73002"
+    },
+    "tools/_s2oe_media_binding.py": {
+      "bytes": 5562,
+      "kind": "sources",
+      "sha256": "47787e4fe56bf430a2a2cf8897f8cb4b115e8b9f7f849d680957c1e639c7c8d4"
+    },
+    "tools/_s2oe_media_decoder.py": {
+      "bytes": 9560,
+      "kind": "sources",
+      "sha256": "76a5fc5a2964e55997598cac5523d5d5195a2f228abd2c4f776336e786db52be"
+    },
+    "tools/_s2oe_media_session.py": {
+      "bytes": 17096,
+      "kind": "sources",
+      "sha256": "e0279b22bbaa85beed56af6335d0f3c26838493f47fc68db1fb92798256d02dd"
+    },
+    "tools/_s2oe_media_verification.py": {
+      "bytes": 6297,
+      "kind": "sources",
+      "sha256": "18908a50c05f49ae9e64e45aee643507f6e7f21b4b03c67989be620b1be107ac"
+    },
+    "tools/_s2oe_uhd_profile.py": {
+      "bytes": 2908,
+      "kind": "sources",
+      "sha256": "18418d0bc051682ac83a54e01628e25a83a33c981df72d189b3d945fcb450282"
+    },
+    "tools/s2oe_player.html": {
+      "bytes": 5054,
+      "kind": "sources",
+      "sha256": "0675448915c2280f794f211257be39c68e86db191b18422079a25af27b712e95"
+    }
+  },
+  "decoder_check_record_sha256": "2082ac5e521aa984c969806bb7d3b0a7f15e0e51db86127a9230dad96123387c",
+  "events": [
+    {
+      "event_id": "media-event-01",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 1,
+      "pass_number": 1,
+      "window_number": 0
+    },
+    {
+      "event_id": "media-event-02",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 2,
+      "pass_number": 1,
+      "window_number": 1
+    },
+    {
+      "event_id": "media-event-03",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 3,
+      "pass_number": 1,
+      "window_number": 2
+    },
+    {
+      "event_id": "media-event-04",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 4,
+      "pass_number": 1,
+      "window_number": 3
+    },
+    {
+      "event_id": "media-event-05",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 5,
+      "pass_number": 1,
+      "window_number": 4
+    },
+    {
+      "event_id": "media-event-06",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 6,
+      "pass_number": 1,
+      "window_number": 5
+    },
+    {
+      "event_id": "media-event-07",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 7,
+      "pass_number": 1,
+      "window_number": 6
+    },
+    {
+      "event_id": "media-event-08",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 8,
+      "pass_number": 1,
+      "window_number": 7
+    },
+    {
+      "event_id": "media-event-09",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 9,
+      "pass_number": 1,
+      "window_number": 8
+    },
+    {
+      "event_id": "media-event-10",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 10,
+      "pass_number": 1,
+      "window_number": 9
+    },
+    {
+      "event_id": "media-event-11",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 11,
+      "pass_number": 2,
+      "window_number": 0
+    },
+    {
+      "event_id": "media-event-12",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 12,
+      "pass_number": 2,
+      "window_number": 1
+    },
+    {
+      "event_id": "media-event-13",
+      "kind": "PARTIAL_AUDITORY_CUE",
+      "ordinal": 13,
+      "pass_number": 2,
+      "window_number": 2
+    },
+    {
+      "event_id": "media-event-14",
+      "kind": "PARTIAL_VISUAL_CUE",
+      "ordinal": 14,
+      "pass_number": 2,
+      "window_number": 2
+    },
+    {
+      "event_id": "media-event-15",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 15,
+      "pass_number": 2,
+      "window_number": 2
+    },
+    {
+      "event_id": "media-event-16",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 16,
+      "pass_number": 2,
+      "window_number": 3
+    },
+    {
+      "event_id": "media-event-17",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 17,
+      "pass_number": 2,
+      "window_number": 4
+    },
+    {
+      "event_id": "media-event-18",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 18,
+      "pass_number": 2,
+      "window_number": 5
+    },
+    {
+      "event_id": "media-event-19",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 19,
+      "pass_number": 2,
+      "window_number": 6
+    },
+    {
+      "event_id": "media-event-20",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 20,
+      "pass_number": 2,
+      "window_number": 7
+    },
+    {
+      "event_id": "media-event-21",
+      "kind": "PARTIAL_AUDITORY_CUE",
+      "ordinal": 21,
+      "pass_number": 2,
+      "window_number": 8
+    },
+    {
+      "event_id": "media-event-22",
+      "kind": "PARTIAL_VISUAL_CUE",
+      "ordinal": 22,
+      "pass_number": 2,
+      "window_number": 8
+    },
+    {
+      "event_id": "media-event-23",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 23,
+      "pass_number": 2,
+      "window_number": 8
+    },
+    {
+      "event_id": "media-event-24",
+      "kind": "COMPLETE_AV_PERCEPTION",
+      "ordinal": 24,
+      "pass_number": 2,
+      "window_number": 9
+    }
+  ],
+  "limitations": [
+    "Session still constructs default 512 MiB worker.",
+    "Historical worker/player source approvals do not cover changed source hashes.",
+    "Source lower bound exceeds unchanged limit; complete final session ledger not approved.",
+    "Resource evidence and independent session verifier need explicit private profile binding."
+  ],
+  "lower_bound": {
+    "previous_reference_sources_current_bytes": 264699,
+    "source_excess": 28985,
+    "source_limit": 262144,
+    "sources_including_current_new_dependencies": 291129
+  },
+  "output": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2oe\\media-memory-video-20260911-02",
+  "output_absent": true,
+  "profile": {
+    "code": {
+      "tools/_s2oe_decoder_worker.py": "834347e9e6aa1399a7d35907e5cb7fab5b5314da1ef2b408194e5dfe67eacd5a",
+      "tools/_s2oe_isolation_log.py": "cf43d6e5422fa9776f03322c2a8e6446f0c4dc4d2f9445a54ce5b594db029278",
+      "tools/_s2oe_media_decoder.py": "76a5fc5a2964e55997598cac5523d5d5195a2f228abd2c4f776336e786db52be",
+      "tools/_s2oe_uhd_profile.py": "18418d0bc051682ac83a54e01628e25a83a33c981df72d189b3d945fcb450282"
+    },
+    "config": {
+      "active_processes": 1,
+      "audio_format": "fltp",
+      "audio_layout": "stereo",
+      "audio_rate": 48000,
+      "audio_window_samples": 4800,
+      "dst_colorspace": 1,
+      "dst_range": "JPEG",
+      "interpolation": "AREA",
+      "job_commit_bytes": 1073741824,
+      "libraries": {
+        "libavcodec": [
+          62,
+          11,
+          100
+        ],
+        "libavdevice": [
+          62,
+          1,
+          100
+        ],
+        "libavfilter": [
+          11,
+          4,
+          100
+        ],
+        "libavformat": [
+          62,
+          3,
+          100
+        ],
+        "libavutil": [
+          60,
+          8,
+          100
+        ],
+        "libswresample": [
+          6,
+          1,
+          100
+        ],
+        "libswscale": [
+          9,
+          1,
+          100
+        ]
+      },
+      "native_log_bytes": 32768,
+      "native_log_level": "ERROR",
+      "native_log_messages": 32,
+      "process_commit_bytes": 1073741824,
+      "pyav": "16.1.0",
+      "queue_capacity": 1,
+      "request_seconds": 30.0,
+      "rgb_format": "rgb24",
+      "rgb_size": [
+        1920,
+        1080
+      ],
+      "slot_bytes": 6240000,
+      "src_colorspace": 1,
+      "src_range": "MPEG",
+      "stop_seconds": 5.0,
+      "video_size": [
+        3840,
+        2160
+      ],
+      "video_threads": 1
+    },
+    "profile_digest": "da95487276bcb8f82a1a75bdcdc9005f7e898c7751af9b8af6c5dc62a284b9bf",
+    "run_id": "media-memory-video-20260911-02",
+    "source": {
+      "audio_stream": 1,
+      "audio_time_base": [
+        1,
+        48000
+      ],
+      "frame_rate": [
+        30000,
+        1001
+      ],
+      "path": "C:\\Users\\TV\\Downloads\\17138816-uhd_3840_2160_30fps.mp4",
+      "sha256": "df0986f384e156c4dfec234e94b6f6baa3d0f8a9cfd7ba81f14aadf0313450aa",
+      "size": 83498438,
+      "video_size": [
+        3840,
+        2160
+      ],
+      "video_stream": 0,
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    "version": "s2oe.file-bound-uhd1024.v1"
+  },
+  "run_id": "media-memory-video-20260911-02",
+  "status": "BLOCKED_NOT_START_READY",
+  "system_limits_unchanged": true
+}

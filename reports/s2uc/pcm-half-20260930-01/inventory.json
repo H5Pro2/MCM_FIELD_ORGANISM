@@ -1,0 +1,34 @@
+{
+  "tools\\s2uc_pcm_half_check.py": {
+    "bytes": 8604,
+    "sha256": "2c3b8649b9b65d466b4c7a92a655c4c93e90c89d974891d47c477dae627eefa0"
+  },
+  "tests\\test_s2uc_pcm_half.py": {
+    "bytes": 1442,
+    "sha256": "eeb1ceab82b7af6ee69f5d5aedbdb7baa9b7b4dd937cd5f34c22ad5310045f38"
+  },
+  "reports\\s2uc\\pcm-half-20260930-01\\half-test-derivative.pcm": {
+    "bytes": 19200,
+    "sha256": "ccd56ad1aec6e20ab290db83289d004a8e28bfd307557e68cac2288c6ef0242e"
+  },
+  "reports\\s2uc\\pcm-half-20260930-01\\preregistration.json": {
+    "bytes": 2507,
+    "sha256": "532326f6a2ba601af2ec2898d850c0eed6f1a3b168de4d09502a4a6922ac5ccb"
+  },
+  "reports\\s2uc\\pcm-half-20260930-01\\replay-console.txt": {
+    "bytes": 32,
+    "sha256": "bb95acb5fd92bc886dddf258eab43c9a1f859369b2e9f2e0366576c052810a57"
+  },
+  "reports\\s2uc\\pcm-half-20260930-01\\REPORT.txt": {
+    "bytes": 18806,
+    "sha256": "ea6afc00eb54355d3b721962903304161e1832d17b7eb99bc4b822ff4663d530"
+  },
+  "reports\\s2uc\\pcm-half-20260930-01\\result.json": {
+    "bytes": 76541,
+    "sha256": "2edd00f8b1a94e20c27029a74dbbf7b56c0d4ed66a7b0ed4f1cce1f6e7409e2d"
+  },
+  "reports\\s2uc\\pcm-half-20260930-01\\tests.txt": {
+    "bytes": 2310,
+    "sha256": "3a8b426f9b7b24f646fe86a7007e077d0c335ec752b7a0e19d45b69920113166"
+  }
+}

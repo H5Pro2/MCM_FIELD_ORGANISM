@@ -1,0 +1,71 @@
+{
+  "normal": {
+    "status": "NORMAL",
+    "events": [
+      {
+        "event": "deadline_established",
+        "monotonic_ns": 862957578542400,
+        "utc": "2026-10-03T14:02:33.786840+00:00",
+        "deadline_monotonic_ns": 862962578542400,
+        "deadline_utc": "2026-10-03T14:02:38.786840+00:00"
+      },
+      {
+        "event": "worker_end_confirmed",
+        "monotonic_ns": 862958163867500,
+        "utc": "2026-10-03T14:02:34.372172+00:00",
+        "exitcode": 0,
+        "alive": false
+      },
+      {
+        "event": "closure_admin_started",
+        "monotonic_ns": 862958163986600,
+        "utc": "2026-10-03T14:02:34.372288+00:00"
+      },
+      {
+        "event": "closure_admin_finished",
+        "monotonic_ns": 862958164035800,
+        "utc": "2026-10-03T14:02:34.372336+00:00",
+        "serialized_bytes": 491
+      }
+    ],
+    "actual_worker_death_time": "NOT_DIRECTLY_MEASURED",
+    "historical_worker_stop": "UNKNOWN_NOT_RECONSTRUCTED"
+  },
+  "timeout": {
+    "status": "TIME_LIMIT",
+    "events": [
+      {
+        "event": "deadline_established",
+        "monotonic_ns": 862958164049500,
+        "utc": "2026-10-03T14:02:34.372350+00:00",
+        "deadline_monotonic_ns": 862959664049500,
+        "deadline_utc": "2026-10-03T14:02:35.872350+00:00"
+      },
+      {
+        "event": "abort_requested",
+        "monotonic_ns": 862959665850200,
+        "utc": "2026-10-03T14:02:35.874178+00:00"
+      },
+      {
+        "event": "worker_end_confirmed",
+        "monotonic_ns": 862959678110600,
+        "utc": "2026-10-03T14:02:35.886436+00:00",
+        "exitcode": -15,
+        "alive": false
+      },
+      {
+        "event": "closure_admin_started",
+        "monotonic_ns": 862959678454000,
+        "utc": "2026-10-03T14:02:35.886773+00:00"
+      },
+      {
+        "event": "closure_admin_finished",
+        "monotonic_ns": 862959678597000,
+        "utc": "2026-10-03T14:02:35.886915+00:00",
+        "serialized_bytes": 603
+      }
+    ],
+    "actual_worker_death_time": "NOT_DIRECTLY_MEASURED",
+    "historical_worker_stop": "UNKNOWN_NOT_RECONSTRUCTED"
+  }
+}

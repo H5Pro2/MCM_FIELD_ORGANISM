@@ -1,0 +1,131 @@
+{
+  "archive_sha256": "962258f470356b88f0b689602740f603a908e9e5339213ed1423686e87c50900",
+  "case": 24,
+  "decoder": {
+    "dictionary_bytes": 895458,
+    "encoded_bytes": 948525,
+    "gzip_bytes": 163950,
+    "record_indices": 10263,
+    "reference_edges": 120468,
+    "table_entries": 13681
+  },
+  "differences": {
+    "duplicate_records": [],
+    "missing": [],
+    "unsupported": [
+      {
+        "keeper": "F",
+        "keeper_victims": [],
+        "last_observation": 628,
+        "newer_keeper_victims": [],
+        "origin": [
+          569,
+          570,
+          571,
+          572
+        ],
+        "other_victim": [
+          569,
+          570,
+          571,
+          572
+        ],
+        "promotion_end": 652,
+        "stage": "retention",
+        "unequal_blocks": [
+          632,
+          636,
+          640,
+          644,
+          648
+        ]
+      },
+      {
+        "keeper": "F",
+        "keeper_victims": [],
+        "last_observation": 672,
+        "newer_keeper_victims": [],
+        "origin": [
+          665,
+          666,
+          667,
+          668
+        ],
+        "other_victim": [
+          665,
+          666,
+          667,
+          668
+        ],
+        "promotion_end": 684,
+        "stage": "retention",
+        "unequal_blocks": [
+          676,
+          680
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "E": {
+      "local_gains": 2,
+      "multi_assigned_targets": {},
+      "retention_events": 3,
+      "unique_gain_targets": 2,
+      "unique_warm_targets": 8,
+      "warm_uses": 8
+    },
+    "F": {
+      "local_gains": 6,
+      "multi_assigned_targets": {},
+      "retention_events": 6,
+      "unique_gain_targets": 6,
+      "unique_warm_targets": 9,
+      "warm_uses": 9
+    }
+  },
+  "rejected_candidates": [
+    {
+      "keeper": "F",
+      "origin": [
+        569,
+        570,
+        571,
+        572
+      ],
+      "promotion_end": 652,
+      "reason": "NO_COMPETITION_PROMOTION"
+    },
+    {
+      "keeper": "F",
+      "origin": [
+        665,
+        666,
+        667,
+        668
+      ],
+      "promotion_end": 684,
+      "reason": "NO_COMPETITION_PROMOTION"
+    }
+  ],
+  "reported": {
+    "E": {
+      "local_gains": 2,
+      "multi_assigned_targets": {},
+      "retention_events": 3,
+      "unique_gain_targets": 2,
+      "unique_warm_targets": 8,
+      "warm_uses": 8
+    },
+    "F": {
+      "local_gains": 6,
+      "multi_assigned_targets": {},
+      "retention_events": 8,
+      "unique_gain_targets": 6,
+      "unique_warm_targets": 9,
+      "warm_uses": 9
+    }
+  },
+  "seconds": 4.429322299984051,
+  "status": "DISCREPANCY"
+}

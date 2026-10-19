@@ -1,0 +1,30 @@
+{
+  "previous_test_count": 117,
+  "current_test_count": 138,
+  "missing_previous_ids": [],
+  "old_suite_files_unchanged": true,
+  "new_ids": [
+    "tests.test_s2uc_execution_v8.V8ExecutionTests.test_binding_rejects_consistently_undercounted_inventory_and_false_roles",
+    "tests.test_s2uc_execution_v8.V8ExecutionTests.test_codec_failure_preserves_connection_error_and_closed_owners",
+    "tests.test_s2uc_execution_v8.V8ExecutionTests.test_constructor_failure_closes_both_registered_owners_and_resets_gate",
+    "tests.test_s2uc_execution_v8.V8ExecutionTests.test_counter_phases_supplier_hash_receptor_and_projection_failures",
+    "tests.test_s2uc_execution_v8.V8ExecutionTests.test_existing_output_and_repeated_use_never_invoke_supplier",
+    "tests.test_s2uc_execution_v8.V8ExecutionTests.test_failed_attempt_58_keeps_57_successes_and_original_error",
+    "tests.test_s2uc_execution_v8.V8ExecutionTests.test_failed_execution_consumes_identity_and_blocks_retry",
+    "tests.test_s2uc_execution_v8.V8ExecutionTests.test_failure_between_arm_calls_preserves_pending_materialization",
+    "tests.test_s2uc_execution_v8.V8ExecutionTests.test_full_58_materializations_share_identical_values_between_both_arms",
+    "tests.test_s2uc_execution_v8.V8ExecutionTests.test_full_source_completion_error_does_not_overwrite_an_aborted_record",
+    "tests.test_s2uc_execution_v8.V8ExecutionTests.test_last_owner_failure_keeps_full_source_completion",
+    "tests.test_s2uc_execution_v8.V8ExecutionTests.test_missing_or_manipulated_receipts_and_full_completion_are_rejected",
+    "tests.test_s2uc_execution_v8.V8ExecutionTests.test_neutral_wrapper_still_rejects_materialized_records",
+    "tests.test_s2uc_execution_v8.V8ExecutionTests.test_owner_close_failure_is_primary_and_cleanup_closes_both",
+    "tests.test_s2uc_execution_v8.V8ExecutionTests.test_process_restart_with_existing_output_remains_closed",
+    "tests.test_s2uc_execution_v8.V8ExecutionTests.test_public_starter_unconditionally_stops_before_supplier_adapter_and_run",
+    "tests.test_s2uc_execution_v8.V8ExecutionTests.test_publication_failures_use_shared_core_and_keep_verification",
+    "tests.test_s2uc_execution_v8.V8ExecutionTests.test_second_story_constructor_failure_preserves_completed_source_prefix",
+    "tests.test_s2uc_execution_v8.V8ExecutionTests.test_staging_cleanup_failure_is_counted_and_no_second_temporary_is_created",
+    "tests.test_s2uc_execution_v8.V8ExecutionTests.test_strict_binding_rejects_development_authorization_identity_and_v7_mix",
+    "tests.test_s2uc_execution_v8.V8ExecutionTests.test_v8_revision_changes_only_code_cap_and_counts_every_bound_suite"
+  ],
+  "version_adjustments_to_old_tests": []
+}

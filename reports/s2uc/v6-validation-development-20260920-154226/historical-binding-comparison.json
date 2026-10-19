@@ -1,0 +1,87 @@
+{
+  "historical_binding": "reports\\s2uc\\closure-preparation\\S2UC_RUN_BINDING_20260920_FINAL_V14.json",
+  "binding_sha256": "7b03764a183e6d571b067a473b420e6ce1d74b51297042f93725de5e6c7a7c84",
+  "read_only": true,
+  "dependencies": [
+    {
+      "path": "tools\\_s2uc_run_binding.py",
+      "bound_bytes": 21689,
+      "bound_sha256": "e1e5e2fca3afcae5fde7dbc27830ce71b5bbc95b9e125dd9c32556fff54692bf",
+      "current_bytes": 31490,
+      "current_sha256": "b7fb03a947fbd959800e59a7e85cbf0c3b390f60e1bbd1541a9e18a72f1bb67a",
+      "matches": false
+    },
+    {
+      "path": "tools\\_s2uc_record_codec.py",
+      "bound_bytes": 8529,
+      "bound_sha256": "43f5532064b11e130535c47afe50a48be418255a054e694253c412c6783ad70f",
+      "current_bytes": 8529,
+      "current_sha256": "43f5532064b11e130535c47afe50a48be418255a054e694253c412c6783ad70f",
+      "matches": true
+    },
+    {
+      "path": "tools\\_s2uc_resource_ledger.py",
+      "bound_bytes": 2705,
+      "bound_sha256": "43e3fe248be3b70d2cd05fe0db4a15d20d88272a7761a9a93204837c3ef110be",
+      "current_bytes": 2705,
+      "current_sha256": "43e3fe248be3b70d2cd05fe0db4a15d20d88272a7761a9a93204837c3ef110be",
+      "matches": true
+    },
+    {
+      "path": "tools\\_s2uc_run_entry.py",
+      "bound_bytes": 13333,
+      "bound_sha256": "ae84f3a4138adab29937578a52e7abca675f710365cab55f11f1f8309c21597f",
+      "current_bytes": 13581,
+      "current_sha256": "1005335a67c6bf089dbc2399fb0b874d062924537b7522982f4c73f030778349",
+      "matches": false
+    },
+    {
+      "path": "tools\\_s2uc_source_adapter.py",
+      "bound_bytes": 1442,
+      "bound_sha256": "011b75a724fab21dd12b66f02e2fb6a4626e7f1d4450ac4612d31fb53e4abead",
+      "current_bytes": 1442,
+      "current_sha256": "011b75a724fab21dd12b66f02e2fb6a4626e7f1d4450ac4612d31fb53e4abead",
+      "matches": true
+    },
+    {
+      "path": "tools\\_s2uc_verification.py",
+      "bound_bytes": 17086,
+      "bound_sha256": "1af8a9e2de68acf29b7ae2755f82330e959e96505867c81b4ba263d0b2f81626",
+      "current_bytes": 17086,
+      "current_sha256": "1af8a9e2de68acf29b7ae2755f82330e959e96505867c81b4ba263d0b2f81626",
+      "matches": true
+    },
+    {
+      "path": "tools\\_s2uc_evaluation.py",
+      "bound_bytes": 2341,
+      "bound_sha256": "50f458bb1e9693227b119a87b0cf0e71ec1076d0f64427c93426397e33125e7a",
+      "current_bytes": 2341,
+      "current_sha256": "50f458bb1e9693227b119a87b0cf0e71ec1076d0f64427c93426397e33125e7a",
+      "matches": true
+    },
+    {
+      "path": "tools\\s2uc_run_bound_once.py",
+      "bound_bytes": 1271,
+      "bound_sha256": "a173834900fe7108ba676c69f46a0cf393f2ca006c8579ef8e9a7834802b45a0",
+      "current_bytes": 1271,
+      "current_sha256": "a173834900fe7108ba676c69f46a0cf393f2ca006c8579ef8e9a7834802b45a0",
+      "matches": true
+    },
+    {
+      "path": "tests\\test_s2uc_neutral_connection.py",
+      "bound_bytes": 11299,
+      "bound_sha256": "e5409715d351d61f232cdc10caa61b7c881d081836d0f1c67fa8d20c667f84d4",
+      "current_bytes": 11299,
+      "current_sha256": "e5409715d351d61f232cdc10caa61b7c881d081836d0f1c67fa8d20c667f84d4",
+      "matches": true
+    },
+    {
+      "path": "tests\\test_s2uc_materialization_connection.py",
+      "bound_bytes": 39324,
+      "bound_sha256": "f019f3b53bfb67e174b93d611527baa0e5d865f29c65818d2c45c61a7daef5d2",
+      "current_bytes": 55723,
+      "current_sha256": "ba25a563f4b020e243ebd074e2a0c84dc2df9997fbc3a5e7220881630b01908a",
+      "matches": false
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "kind": "ER1_PLANNING_NOT_FULL_SIZE_EVIDENCE",
+  "execution_plan": {
+    "stories": 32,
+    "frames_per_story": 1024,
+    "policy": 64,
+    "live_reference": 64,
+    "archive_reference": 64,
+    "extra_policy_measurement": 0,
+    "source_reconstruction": 32,
+    "statistics_reference": 1
+  },
+  "measured_frames_per_pair": [
+    44,
+    32
+  ],
+  "linear_per_story": {
+    "gzip_bytes": 298624,
+    "encoded_bytes": 1375424,
+    "dictionary": 1307456,
+    "nodes": 31680,
+    "edges": 120856,
+    "indices": 10217,
+    "observer_deep": 4322002,
+    "mechanisms_deep": 165344
+  },
+  "linear_all_32_seconds": {
+    "archive_reference_seconds": 318.4556590427052,
+    "policy_and_live_reference_seconds": 1052.8559104204178,
+    "total_seconds": 1670.6407424211502
+  },
+  "linear_archive_total": 9555968,
+  "neutral_source_bytes": 7439,
+  "source_hard_upper_total": 1048576,
+  "limits": {
+    "total_seconds": 57600,
+    "worker_seconds": 54000,
+    "completion_reserve": 3600,
+    "job": 536870912,
+    "preparation": 8388608,
+    "source_total": 2097152,
+    "source_case": 32768,
+    "archives": 33554432,
+    "gzip": 524288,
+    "encoded": 4194304,
+    "dictionary": 4194304,
+    "record": 262144,
+    "nodes": 65536,
+    "edges": 262144,
+    "indices": 65536,
+    "collections": 16,
+    "temp": 67108864,
+    "export": 67108864,
+    "administration": 2097152,
+    "closure": 1048576
+  },
+  "planning_worker_seconds": 13966,
+  "planning_completion_seconds": 3600,
+  "full_size_uncertainty": true,
+  "extra_policy_measurement": 0,
+  "partial_series_verdict": false
+}

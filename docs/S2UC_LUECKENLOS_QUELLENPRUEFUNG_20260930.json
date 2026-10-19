@@ -1,0 +1,27 @@
+{
+  "path": "sources/media/NASA Earthrise Realtime Apollo 8.mp4",
+  "bytes": 13547755,
+  "sha1": "c63198a925ad227950cca597c4a8500656bacdfc",
+  "sha256": "9a061d639c17849e52ace712c8752b5d377123a9eec99df896728098bd783d74",
+  "metadata_method": "Read MP4 moov/trak/mdia/mdhd and hdlr only; no decode",
+  "tracks": [
+    {
+      "timescale": 2997,
+      "duration_ticks": 524700,
+      "duration_seconds": 175.07507507507506,
+      "handler": "vide"
+    },
+    {
+      "timescale": 48000,
+      "duration_ticks": 8403968,
+      "duration_seconds": 175.08266666666665,
+      "handler": "soun"
+    },
+    {
+      "timescale": 2997,
+      "duration_ticks": 524700,
+      "duration_seconds": 175.07507507507506,
+      "handler": "tmcd"
+    }
+  ]
+}

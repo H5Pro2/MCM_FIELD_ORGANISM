@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "neutral_only": true,
+  "proofs": [
+    {
+      "case": 1,
+      "status": "PASS_DELTA_INTEGRITY",
+      "reconstructed_bytes": 8578741,
+      "reconstructed_sha256": "cebd622fbcdcc544522122582c5086596042fa10067c7cbdaf4857ce61152559",
+      "collections": {
+        "/C/events": {
+          "sha256": "b28bda3118164a63d81a710626a445a7b758851768674816cce8e4a62b3de810",
+          "bytes": 730262,
+          "count": 96
+        },
+        "/C/forecasts": {
+          "sha256": "765b076b025bb7b11560f18e8ae6e3a82b31c1f3c4dbb82010be7f334d3d75b3",
+          "bytes": 19412,
+          "count": 16
+        },
+        "/C/internal": {
+          "sha256": "ad60bfb8a12249f026c563db0d0aa34ca727b64251aaa3af6130f43356f559dd",
+          "bytes": 3526253,
+          "count": 372
+        },
+        "/C/rows": {
+          "sha256": "3e3b02c83e4b7c0eb8ace1b42917fa9a704b4a37a817e030e092693ea95d3486",
+          "bytes": 1086,
+          "count": 15
+        },
+        "/U/events": {
+          "sha256": "b28bda3118164a63d81a710626a445a7b758851768674816cce8e4a62b3de810",
+          "bytes": 730262,
+          "count": 96
+        },
+        "/U/forecasts": {
+          "sha256": "a09e570e3038f702e853ba890840e3b16ac570ff5b6257223071aea185c9a914",
+          "bytes": 19362,
+          "count": 16
+        },
+        "/U/internal": {
+          "sha256": "ad60bfb8a12249f026c563db0d0aa34ca727b64251aaa3af6130f43356f559dd",
+          "bytes": 3526253,
+          "count": 372
+        },
+        "/U/rows": {
+          "sha256": "38fee93f5a47a45d4096f57d37d7e13ed4adc9721f78da7120b5c7c8f116da32",
+          "bytes": 1088,
+          "count": 15
+        }
+      },
+      "encoded_bytes": 46875,
+      "gzip_bytes": 9370,
+      "dictionary_bytes": 42618,
+      "table_entries": 1039,
+      "reference_edges": 5158,
+      "record_indices": 998,
+      "cr1_reference_equal": true,
+      "cr1_paired_equal": true
+    },
+    {
+      "case": 2,
+      "status": "PASS_DELTA_INTEGRITY",
+      "reconstructed_bytes": 8578741,
+      "reconstructed_sha256": "b68e3427e1cf6fe51e6ba6c20891de5455bb0a75b81f41f617b5a90b75bbcbfc",
+      "collections": {
+        "/C/events": {
+          "sha256": "3dfa336e3ad8cb04148ae89835810677951dfc0f7cd21df6df714bb49cd2cb96",
+          "bytes": 730262,
+          "count": 96
+        },
+        "/C/forecasts": {
+          "sha256": "765b076b025bb7b11560f18e8ae6e3a82b31c1f3c4dbb82010be7f334d3d75b3",
+          "bytes": 19412,
+          "count": 16
+        },
+        "/C/internal": {
+          "sha256": "9e1167a865697af4363cfb470c1625a2ba928e48bfabfda82c7526debba2adee",
+          "bytes": 3526253,
+          "count": 372
+        },
+        "/C/rows": {
+          "sha256": "7fcf6b270d68931539e547af93a130fdf5507b9945aaa77a8329935d68576f1e",
+          "bytes": 1086,
+          "count": 15
+        },
+        "/U/events": {
+          "sha256": "3dfa336e3ad8cb04148ae89835810677951dfc0f7cd21df6df714bb49cd2cb96",
+          "bytes": 730262,
+          "count": 96
+        },
+        "/U/forecasts": {
+          "sha256": "a09e570e3038f702e853ba890840e3b16ac570ff5b6257223071aea185c9a914",
+          "bytes": 19362,
+          "count": 16
+        },
+        "/U/internal": {
+          "sha256": "9e1167a865697af4363cfb470c1625a2ba928e48bfabfda82c7526debba2adee",
+          "bytes": 3526253,
+          "count": 372
+        },
+        "/U/rows": {
+          "sha256": "86bb419bfaa1bdb6a29377fd66253da632c77652fcea519e649ffa5b5d88eb22",
+          "bytes": 1088,
+          "count": 15
+        }
+      },
+      "encoded_bytes": 46875,
+      "gzip_bytes": 9370,
+      "dictionary_bytes": 42618,
+      "table_entries": 1039,
+      "reference_edges": 5158,
+      "record_indices": 998,
+      "cr1_reference_equal": true,
+      "cr1_paired_equal": true
+    }
+  ],
+  "job": {
+    "limit_bytes": 536870912,
+    "peak_job_committed_bytes": 27488256,
+    "peak_process_committed_bytes": 27488256,
+    "hard_job_limit": true,
+    "members": "supervisor and inherited worker",
+    "measurement": "Windows JobObjectExtendedLimitInformation",
+    "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap."
+  }
+}

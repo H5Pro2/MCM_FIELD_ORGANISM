@@ -1,0 +1,36 @@
+Direkte Promotionsmitnahme -- vorbereiteter Aufruf, NICHT ausgefuehrt
+
+Arbeitsverzeichnis:
+C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace
+
+Nach technischer Abnahme UND gesonderter Ausfuehrungsfreigabe:
+& 'C:\Python314\python.exe' -m tools.s2uc_promotion_qualification run --authorization 'docs/S2UC_PROMOTION_AUTORISIERUNG_20261003.json'
+
+S/W/L sind synthetische Folgen mit regulaerer Aufnahme, getrennt von den
+technischen Fixtures T1-T10. S16,W16,L64 werden in diesem Entwicklungspaket
+nicht erzeugt/ausgefuehrt. Der vorbereitete Einstieg setzt die gesonderte
+Autorisierung voraus; eine PENDING_SEPARATE_AUTHORIZATION-Vorlage genuegt nicht.
+
+Nach spaeterer Freigabe darf eine Kopie von
+docs/S2UC_PROMOTION_AUTORISIERUNG_VORLAGE_20261003.json mit ausschliesslich
+status=AUTHORIZED_ONCE unter dem oben angegebenen Autorisierungspfad erstellt
+werden. Alle anderen Felder/Hashes bleiben gleich. Diese Datei wurde im
+Vorbereitungspaket nicht erstellt. Keine Freigabe aus diesem Dokument ableiten.
+
+Der Einstieg prueft Code,Plan,Vertrag,Laufzeit und Autorisierung und erzeugt
+vor der Materialisierung exklusiv:
+reports/s2uc/promotion-counterprobe-20261003-01
+Ein bestehender Ordner sperrt jede Wiederholung. Teilbeobachtungen und
+Abschluss bleiben bei Fehler/Abbruch erhalten. Keine automatische Wiederholung.
+
+Gebundener Umfang:96 Quellpositionen,S16/W16/L64,je M/E/K/P;384 Arm-Aufnahmen
+plus384 interne Referenzfortschreibungen. Keine Zwischenresets. Alle
+Quell-/Beobachter-/Auswertungsdaten mit Abschluss gemeinsam<=4MiB,
+256KiB Abschlussreserve. Bekannte L-Daten bleiben Entwicklungsregression;
+unabhaengiger Evaluationsnutzen bleibt NICHT_GEPRUEFT.
+
+Endgueltige neutrale Qualifikation:
+& 'C:\Python314\python.exe' -m tools.s2uc_promotion_qualification qualify --output 'reports/s2uc/promotion-neutral-qualification-20261003-01'
+Dieser Ordner wird exklusiv erzeugt. Der Qualifikationsaufruf erzeugt keine
+S/W/L-Folgen. Die gebundenen technischen Fixtures sowie unabhaengige neutrale
+Aufnahmen und bestehende Regressionen werden getrennt dokumentiert.

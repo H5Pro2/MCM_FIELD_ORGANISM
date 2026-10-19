@@ -1,0 +1,38 @@
+{
+  "binding": {
+    "code": {
+      "tools/s2uc_identity_stack_diagnosis.py": "8c52da6e5134eb9d3bce8fad3fbe6a5557912e33115a725b523239d32b97b2b7"
+    },
+    "plan_sha256": "856da99c0d9f108976096d4d7456abd5f4536a21e3a41ab51f8cb16c73d6484f",
+    "references": {
+      "docs\\S2UC_TECHNISCHE_WIEDERHOLUNG_V2_BINDUNG_20261003.json": "d752fc323cae2c440c5de7ce7ef540d4245a605e4583ff84dc5f04306d1ce254",
+      "reports\\s2uc\\technical-repeat-preparation-20261003-02\\closure.json": "f548adef30e2f67fc9a4eeddf32b4718fefd4800c60440134066fb6ee02f1945",
+      "reports/s2uc/runtime-reconciliation-20261003-01/analysis.json": "1bb82b306a59b87b54e3b642bd2de9817c262087093d0d55353f2064cd04f916",
+      "reports/s2uc/runtime-reconciliation-20261003-01/closure.json": "ee01c2dae245563bde1f20708673a82f9d6d34440c68fb6ded6e233b47a6d65c",
+      "reports/s2uc/runtime-reconciliation-20261003-01/REPORT.md": "0dc017a8d819ec405ddebd8d6736296835c34577557b7faa1ebed54603c757ba",
+      "reports/s2uc/runtime-reconciliation-20261003-01/verification.json": "f5b6dc2c1a80e43ee29b7441164f40956725b25d78731ca733290f83d5b24bd1"
+    }
+  },
+  "smoke": {
+    "test_id": "D2X01_COUNTER_AST_AND_SYNTHETIC_SNAPSHOT",
+    "passed": true,
+    "counters": {
+      "trace_events": 1,
+      "event_line": 1,
+      "filename_checks": 2,
+      "stack_frames_checked": 1,
+      "visit_attempts": 57,
+      "unique_object_visits": 10,
+      "sample_visits": 1,
+      "sample_float_identity_sum": 1,
+      "sample_value_slots": 48,
+      "unique_float_visits": 1,
+      "frame_leaf_hits": 1
+    }
+  },
+  "counted_source": "def trace(self, frame, event, arg):\n    counts['trace_events'] += 1\n    counts['event_' + event] += 1\n    counts['filename_checks'] += 1\n    names = {'_s2uc_continuation_adapter.py', '_s2uc_pair_context_adapter.py', '_s2uc_factor_hint.py', '_s2uc_perception_recency.py', '_s2uc_four_arm.py', '_s2uc_provisional_hint.py', '_s2ub_candidate_confirmation.py'}\n    if Path(frame.f_code.co_filename).name not in names:\n        return None\n    seen = set()\n    frames = set()\n    outputs = []\n\n    def visit(x):\n        counts['visit_attempts'] += 1\n        if id(x) in seen:\n            return\n        seen.add(id(x))\n        counts['unique_object_visits'] += 1\n        if type(x) is float:\n            counts['unique_float_visits'] += 1\n        if type(x) is PerceptionSample:\n            counts['sample_visits'] += 1\n            counts['sample_float_identity_sum'] += len({id(v) for v in x.values if type(v) is float})\n            counts['sample_value_slots'] += len(x.values)\n        if isinstance(x, Frame):\n            frames.add(id(x))\n        if scalar_frame_leaf(x):\n            counts['frame_leaf_hits'] += 1\n            return\n        if isinstance(x, ContinuationAdapter):\n            if x.pending_prediction is not None:\n                outputs.append(x.pending_prediction)\n            visit(vars(x))\n        elif isinstance(x, FactorRecencyArm):\n            visit(vars(x))\n        elif isinstance(x, dict):\n            for v in x.values():\n                visit(v)\n        elif isinstance(x, (list, tuple)):\n            for v in x:\n                visit(v)\n        elif dataclasses.is_dataclass(x) and (not isinstance(x, type)):\n            for f in dataclasses.fields(x):\n                visit(getattr(x, f.name))\n    cursor = frame\n    while cursor:\n        counts['stack_frames_checked'] += 1\n        counts['filename_checks'] += 1\n        if Path(cursor.f_code.co_filename).name in names:\n            for x in cursor.f_locals.values():\n                visit(x)\n        cursor = cursor.f_back\n    slots = max((1 + (p.context_values is not None) for p in outputs), default=0)\n    bytecost = max((sys.getsizeof(p) + sys.getsizeof(p.provenance_json) + sum((sys.getsizeof(v) + sum((sys.getsizeof(x) for x in v)) for v in (p.context_values, p.persistence_values) if v is not None)) for p in outputs), default=0)\n    self.frame_peak = max(self.frame_peak, len(frames))\n    self.output_slots_peak = max(self.output_slots_peak, slots)\n    self.combined_peak = max(self.combined_peak, len(frames) + slots)\n    self.output_python_bytes_peak = max(self.output_python_bytes_peak, bytecost)\n    self.samples += 1\n    assert len(frames) <= 18 and slots <= 2 and (len(frames) + slots <= 20)\n    return self.trace",
+  "old_bindings_unchanged": true,
+  "matrix_closure_sha256": "3fadbb69129c16516e6e2163a97a74ac6030fe130f47793c666f26765913c1a2",
+  "total_export_bytes": 480988,
+  "raster_replays": 0
+}

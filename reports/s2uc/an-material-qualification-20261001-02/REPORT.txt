@@ -1,0 +1,98 @@
+MCM S2UC -- PCM-/NJ-Materialanschluss: Implementierung und neutrale Qualifikation
+2026-10-01
+
+ABGESCHLOSSEN: AN1-AN9, 9/9 PASS, 0 Fehler, 0 Fehlschlaege, 0 Skips, Exit 0.
+Endgueltig gebundener Code blieb waehrend der Qualifikation unveraendert.
+Keine Produktion, Kalibration, Parametersuche oder Auswertung von AN-DEV/AN-EVAL.
+Rezeptor, NJ, Abrufalgorithmus, Fortsetzungsregeln und Defaults unveraendert.
+
+GEAENDERTE/NEUE DATEIEN
+Neue Verbindung: tools/s2uc_an_material.py und tools/s2uc_an_compare.py.
+Planbindung/Vorbereitung: tools/s2uc_an_prepare.py.
+Neutrale Qualifikation: tools/s2uc_an_qualify.py, tests/test_s2uc_an_material.py.
+Maschinenplan: docs/S2UC_AUDIO_NJ_MATERIALPLAN_20261001.json.
+Bindung: docs/S2UC_AN_PRODUKTIONSBINDUNG_20261001.json.
+PENDING-Vorlage: docs/S2UC_AN_DEV_AUTORISIERUNG_VORLAGE_20261001.json.
+Vorbereiteter Aufruf: docs/S2UC_AN_DEV_VORBEREITETER_AUFRUF_20261001.txt.
+Aktueller Forschungsweg um den abgeschlossenen Anschluss ergaenzt.
+Keine bestehenden Algorithmusdateien geaendert, kein Commit/Push.
+
+KONKRETE TESTBELEGE
+AN1: vollstaendiger neutraler Development-Export: 76 Dateien,
+2396504 / 4194304 Byte einschliesslich Abschluss;
+1094400 rohe PCM-Byte, genau 57 Rezeptor-/57 NJ-Projektionen.
+Alle sieben neutralen Seeds protokolliert; reservierte AN-Seeds nicht verwendet.
+AN2: unabhaengige Float32-Bytepruefungen fuer R1/R2-Stoerungen, R1/R3-Hinweise,
+A/D-Praefix, R3-Fortsetzung, N4-PCM-Mischung, P0-PCM-Gain, Z0 und Herkunft.
+AN3: drei zusaetzliche, separat gezaehlte echte Kontrollprojektionen von
+N4/P0/R3; alle identisch zum Export. Query-Zeiten0/4800/9600, Snapshot0/10/20,
+C-Quellstart19200, unterschiedliche korrekte Digests bei Retiming gleicher Werte.
+NJ(Misch-PCM) ist hier nachweislich nicht Mittelwert der fertigen NJ-Vektoren.
+AN4: epsilon nur aus acht Development-NJ-Rauschprojektionen. Neutraler Wert:
+3.36927946624862e-05. Dieser Wert wird NICHT auf AN uebertragen.
+Acht verschiedene Messwerte in facts.json; synthetisches epsilon2^-10 nicht
+uebernommen. Neutrale Evaluation genau49 Projektionen, kein Kalibrationsmaterial;
+Kalibrationsaufruf vor Lesen abgewiesen; Nullkalibration abgewiesen.
+AN5: Erfolg, exklusive Wiederholungssperre vor Generatorstart, Ausgabebudget,
+NOT_EVALUABLE nach fuenf Projektionen, Abschlussreserve, keine Ueberschreibung,
+Sperre nach Fehler und Abschluss, Nichtendlich-/Bereichsfehler geprueft.
+AN6: manipulierte Exporthashes, Projektionsdigests und PCM-/Projektionsbindungen
+werden abgewiesen. Unvollstaendiges Material ist nicht auswertbar.
+AN7: unveraenderter Vergleichstreiber mit echter neutraler PCM-/NJ-Ausgabe;
+eine vorgegebene Einstellung tau=1/32, KEINE Parametersuche.
+129 Aufnahmen je Arm, 11 Pruefziele, 48 getrennte Lernziele. Leerer Start je Fall,
+Herkunftslabels erst beobachterseitig; R0 korrekt, N3 falsche A-Zuordnung zu
+wahrer D-Herkunft sichtbar. Identische Vorhersagen R1/R3 und R0/N3 vor Zielzugriff.
+Referenz-Speicherzustand nach jedem Frame identisch, einmalige Aufnahme,
+Future-Gate und Freigabe im wiederverwendeten Vergleichstreiber geprueft.
+R3: Persistenz und exaktes Beobachterschema MAE0; Naeherungsschema
+MAE0.0022848444999000093. Schaden bleibt in Einzelfall und Bericht sichtbar.
+AN8: Code-/Runtime-/Profil-/Planbindung, Abweisung der PENDING-Vorlage,
+unproduzierte AN-Ordner; identische bestehende Auswahlfunktion.
+Auswahltests nur mit handgeschriebenen Resultaten, keine Suche auf PCM-Daten.
+AN9: Evaluation-als-Development-Umbenennung und fremdes Development-epsilon
+werden vor Replay abgewiesen.
+
+RESSOURCEN UND AUSSAGEGRENZEN
+Beobachtete Peaks: 12 Frames, 2 Ausgaben,
+13 gemeinsam; Receipt 555 Byte,
+transiente Receipt-UTF8 968 Byte,
+0 temporaere 48er-Distanzkopien.
+Grenzen18+2 und Receiptgrenzen eingehalten. Das ist beobachtete
+Adapterressourcen-Qualifikation, kein harter Prozess-RAM-Beleg fuer Generator,
+NumPy oder den gesamten beobachterseitigen Export/Ergebnisarchiv.
+Materialbudget gilt je Materialpartition. Vergleichsbericht und negative
+Testkopien liegen separat und werden nicht als Produktionsmaterial gezaehlt.
+Die Kontroll-Reprojektionen sind zusaetzliche Qualifikationspruefungen;
+die vollstaendige neutrale Development-Produktion selbst hat exakt57 Aufrufe.
+
+BINDUNGEN
+Plan SHA256: 71a356d34c49d84377faa3d3618ad644174154483f22a99689bf52c2694a1dbb
+Bindung SHA256: 232795808dd51294907d19b041fd1a12a5c4fc273b34a2910b34f7a19661973d
+46 lokale Code-/Testdateien, Python-Version und Executable-Hash,
+NumPy-Version und Python-/Native-Modulhashes gebunden; NJ-Profil im Plan.
+JSON-Manifeste sichern Dateihashes; Leser prueft PCM-Ableitungen und NJ-Digests,
+ohne bei Auswertung erneut den Rezeptor aufzurufen. Keine allgemeine Aussage
+ueber natuerliche Audio-Wiedererkennung aus neutralen Fixtures.
+
+QUALIFIKATIONSHISTORIE
+Vorheriger neutraler Entwicklungsstand im Ordner ...-01:8/8 PASS.
+Danach zwei ausdrueckliche Kalibrations-/Partitionssperren ergaenzt, Bindung
+aktualisiert und neun Tests in diesem separaten Ordner ausgefuehrt.
+Alte Belege und alte Bindungen sind erhalten. Keine AN-Einmallauffreigabe
+wurde dabei erzeugt oder verbraucht.
+
+BELEGE
+ tests.txt und test-result.json: Test-IDs, Ergebnisse, Exitstatus des Aufrufs.
+ facts.json: Einzelbelege, acht NJ-Kalibrationswerte, Budget-/Fehlerabschluesse.
+ neutral-comparison.json: alle Vorhersagen, Lernziele, Herkunft, MAE, Ressourcen.
+ neutral-dev/ und neutral-eval/: vollstaendige neutrale PCM-/NJ-Exporte.
+ prequalification.json / final-verification.json: Bindungen und Unveraendertheit.
+ inventory.json: Dateihashes aller Abschlussartefakte.
+
+NAECHSTER BEGRENZTER SCHRITT
+Projektleiter prueft dieses Implementierungsergebnis. Danach AN-DEV-Produktion
+und begrenzte Siebener-Auswertung separat beauftragen. Erst daraus epsilon_AUDIO
+bestimmen und tau_AUDIO nach unveraendertem Selector waehlen. AN-EVAL erst nach
+DEV-Entscheidung und Parameterfreeze eigens beauftragen. Keine automatische
+Aktivierung, kein Wechsel des exakten/legacy_v1-Standards, keine Skalierungskombination.

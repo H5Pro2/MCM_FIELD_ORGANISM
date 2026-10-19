@@ -1,0 +1,10 @@
+test_admission_wrong_pin_and_unavailable_reference (tests.test_structure_av_closure.Tests.test_admission_wrong_pin_and_unavailable_reference) ... ok
+test_candidate_visibility_is_not_public_admission (tests.test_structure_av_closure.Tests.test_candidate_visibility_is_not_public_admission) ... ok
+test_direct_assignment_rejected (tests.test_structure_av_closure.Tests.test_direct_assignment_rejected) ... ok
+test_outer_native_entry_negative_reference_and_once (tests.test_structure_av_closure.Tests.test_outer_native_entry_negative_reference_and_once) ... ok
+test_outer_write_failure_retains_primary (tests.test_structure_av_closure.Tests.test_outer_write_failure_retains_primary) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 3.856s
+
+OK

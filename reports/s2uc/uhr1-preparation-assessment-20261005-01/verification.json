@@ -1,0 +1,162 @@
+{
+  "status": "PASS_PREPARATION_NO_RESEARCH",
+  "tests": {
+    "count": 14,
+    "output": "test_G1_research_gate_no_hashing (tests.test_s2uc_uhr1.RecipeTests.test_G1_research_gate_no_hashing) ... ok\ntest_G2_rng_boundaries (tests.test_s2uc_uhr1.RecipeTests.test_G2_rng_boundaries) ... ok\ntest_G3_independent_neutral_recipe_and_quotas (tests.test_s2uc_uhr1.RecipeTests.test_G3_independent_neutral_recipe_and_quotas) ... ok\ntest_G4_manifest_seal_and_tamper (tests.test_s2uc_uhr1.RecipeTests.test_G4_manifest_seal_and_tamper) ... ok\ntest_G5_null_boundaries_and_pair_mapping (tests.test_s2uc_uhr1.RecipeTests.test_G5_null_boundaries_and_pair_mapping) ... ok\ntest_G6_all_sources_before_first_policy (tests.test_s2uc_uhr1.RecipeTests.test_G6_all_sources_before_first_policy) ... ok\ntest_G7_archive_roundtrip_and_corruption (tests.test_s2uc_uhr1.RecipeTests.test_G7_archive_roundtrip_and_corruption) ... ok\ntest_N1_input_bits_and_gate (tests.test_s2uc_uhr1.UHTests.test_N1_input_bits_and_gate) ... ok\ntest_N2_unknown_known_freeze (tests.test_s2uc_uhr1.UHTests.test_N2_unknown_known_freeze) ... ok\ntest_N3_two_slots_third_eviction (tests.test_s2uc_uhr1.UHTests.test_N3_two_slots_third_eviction) ... ok\ntest_N4_rounding_tickets_and_reference_corruption (tests.test_s2uc_uhr1.UHTests.test_N4_rounding_tickets_and_reference_corruption) ... ok\ntest_N5_boundaries_and_fault_cleanup (tests.test_s2uc_uhr1.UHTests.test_N5_boundaries_and_fault_cleanup) ... ok\ntest_N6_U_and_complete_statistics (tests.test_s2uc_uhr1.UHTests.test_N6_U_and_complete_statistics) ... ok\ntest_N7_resources_export_supervisor_and_gates (tests.test_s2uc_uhr1.UHTests.test_N7_resources_export_supervisor_and_gates) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 18.921s\n\nOK\n",
+    "success": true
+  },
+  "U_subtests": {
+    "count": 11,
+    "output": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.060s\n\nOK\n"
+  },
+  "one_neutral_full_run": true,
+  "neutral_full_run": {
+    "H_decoded_frames": 65536,
+    "H_outputs_independently_scored": 32704,
+    "H_replacements": 0,
+    "U_outputs_independently_scored": 32704,
+    "admin_bytes": 168565,
+    "availability": {
+      "D:H_known=False": 64,
+      "D:H_known=True": 8128,
+      "D:V0": 108,
+      "D:V1": 72,
+      "D:V2": 2008,
+      "D:V3": 6004,
+      "N:H_known=False": 64,
+      "N:H_known=True": 8128,
+      "N:V0": 108,
+      "N:V1": 72,
+      "N:V2": 2008,
+      "N:V3": 6004
+    },
+    "case_compressed_max": 226504,
+    "case_expanded_max": 1677623,
+    "case_total_bytes": 14242407,
+    "charged_plus_export_bytes": 23207597,
+    "closure_sha256": "b545b8538d6b0c1ec597fcba5d1f2ef09af7a174010ab0c781f49a0ab2c088c4",
+    "counts": {
+      "Q_targets_per_arm": 16384,
+      "arm_frames": 131072,
+      "arms": 128,
+      "cases": 64,
+      "engine_seconds": 481.3539419999579,
+      "neutral_only": true,
+      "reference_advances": 131072,
+      "source_frames": 65536,
+      "status": "COMPLETE",
+      "targets_per_arm": 32704
+    },
+    "export_bytes": 14818989,
+    "files_verified": 133,
+    "maxima": {
+      "H": {
+        "borrowed_input_object_bytes": 1584,
+        "borrowed_input_payload": 384,
+        "numeric_conservative_upper": 3928,
+        "numeric_limit": 4096,
+        "output_slots": 1,
+        "own_heap_peak": 3991,
+        "packed": 3520,
+        "phase_peaks": {
+          "finish": 3617,
+          "phase0": 3649,
+          "phase1": 3991,
+          "phase2": 3681,
+          "phase3": 3729
+        },
+        "receipt_bytes": 0
+      },
+      "U": {
+        "additional_python_peak": 5263,
+        "boundary_peaks": {
+          "base_arm_bytes": 17151,
+          "original_objects_bytes": 15891,
+          "original_payload_bytes": 5760,
+          "originals": 15,
+          "output_new_payloads": 0,
+          "output_payload_equivalent": 768,
+          "output_slots": 2,
+          "system_reachable_bytes": 20790,
+          "valid_cells": 3
+        },
+        "combined_peak": 0,
+        "combined_upper_bound": 18,
+        "original_frames_peak": 0,
+        "original_frames_upper_bound": 16,
+        "output_slots_peak": 2,
+        "packed": 416,
+        "phase_peaks": {
+          "feedback": {
+            "retained": 2484,
+            "total": 3028,
+            "transient": 688
+          },
+          "finish": {
+            "retained": 2346,
+            "total": 2346,
+            "transient": 56
+          },
+          "perception": {
+            "retained": 1612,
+            "total": 5263,
+            "transient": 3655
+          }
+        },
+        "receipt_bytes_peak": 751,
+        "utf8_upper": 1502
+      },
+      "observer": {
+        "H_trace_bytes": 631962,
+        "U_evidence_bytes": 12164480,
+        "input_object_bytes": 458136,
+        "reference_H_boundary_bytes": 798
+      }
+    },
+    "neutral_only": true,
+    "policy_replays_in_verification": 0,
+    "primary_and_all_secondary_intervals_recomputed": true,
+    "process_memory": {
+      "hard_job_limit": true,
+      "limit_bytes": 536870912,
+      "measurement": "Windows JobObjectExtendedLimitInformation",
+      "members": "supervisor and inherited worker",
+      "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap.",
+      "peak_job_committed_bytes": 130842624,
+      "peak_process_committed_bytes": 86323200
+    },
+    "source_bytes": 391936,
+    "source_materializations": 0,
+    "status": "PASS_ARCHIVE_VERIFICATION",
+    "supervisor_seconds": 482.5260545,
+    "terminal_bytes": 16081
+  },
+  "negative_control_statuses": {
+    "invalid": "NOT_EVALUABLE",
+    "fault-start_error": "NOT_EVALUABLE",
+    "fault-crash": "NOT_EVALUABLE",
+    "fault-worker_error": "NOT_EVALUABLE",
+    "fault-export": "NOT_EVALUABLE",
+    "fault-cancel": "NOT_EVALUABLE",
+    "fault-memory": "NOT_EVALUABLE",
+    "timeout": "NOT_EVALUABLE",
+    "pending": "NOT_EVALUABLE"
+  },
+  "inherited_files_unchanged": 150,
+  "code_bound_files": 159,
+  "qualification_files": 174,
+  "code_binding_sha256": "b595f719d256cefbeb92f419e8ee5b59f884d32a31e86bf1b713b15b4cd0bfb1",
+  "prestart_sha256": "91a770a4b5ba5e442807abc50bd458c194e57c6c8cebfc135102bbca304c6355",
+  "bootstrap_bytes": 320000,
+  "bootstrap_sha256": "f3fe9e2c6159eed9d34b16cf44b5c158226fd3e77176fed9f3afbc659842551a",
+  "qualification_closure_sha256": "4850572aee2acac451edc0bced3a15a4f10d203b06f41a47944627eedbf8f022",
+  "packed_bytes": 6174451,
+  "packed_sha256": "b7a552f055d09e8765b02fd61feea329b05c2ac8dbf8535fc90a6e180bb3b008",
+  "canonical_preparation_bytes_including_future_authorization": 8212164,
+  "preparation_limit": 8388608,
+  "research_materializations": 0,
+  "research_replays": 0,
+  "operative_authorization_exists": false,
+  "final_check": "PASS_UHR1_PRESTART_NO_RESEARCH",
+  "exact_future_command": "C:/Python314/python.exe -m tools.s2uc_uhr1 run --authorization docs/S2UC_UHR1_V1_20261005_AUTORISIERUNG.json"
+}

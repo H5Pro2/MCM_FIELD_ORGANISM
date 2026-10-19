@@ -1,0 +1,520 @@
+{
+  "version": "s2uc.ema.stock.v1",
+  "status": "BOUND_NOT_AUTHORIZED",
+  "execution_authorized": false,
+  "frames": 64,
+  "components": 48,
+  "arms": [
+    "E",
+    "K",
+    "P"
+  ],
+  "hop": 4800,
+  "window": 4800,
+  "recipes": {
+    "A": [
+      "1/8",
+      "1/4",
+      "3/4",
+      "7/8"
+    ],
+    "B": [
+      "3/8",
+      "5/8",
+      "1/16",
+      "13/16"
+    ],
+    "Bp": [
+      "3/8",
+      "5/8",
+      "5/8",
+      "13/16"
+    ],
+    "C": [
+      "7/16",
+      "9/16",
+      "11/16",
+      "15/16"
+    ]
+  },
+  "blocks": [
+    "A",
+    "A",
+    "B",
+    "B",
+    "Bp",
+    "A",
+    "C",
+    "Bp",
+    "A",
+    "Bp",
+    "C",
+    "C",
+    "A",
+    "A",
+    "A",
+    "A"
+  ],
+  "masks": {
+    "V": [
+      19,
+      23,
+      31,
+      35,
+      55,
+      59,
+      63
+    ],
+    "D": [
+      31,
+      35,
+      63
+    ],
+    "M": [
+      19,
+      23,
+      31,
+      35,
+      39,
+      51,
+      55,
+      59,
+      63
+    ],
+    "N": [
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      15,
+      17,
+      21,
+      25,
+      27,
+      29,
+      33,
+      37,
+      41,
+      43,
+      45,
+      47,
+      49,
+      53,
+      57,
+      61
+    ],
+    "Gesamt": [
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      15,
+      17,
+      19,
+      21,
+      23,
+      25,
+      27,
+      29,
+      31,
+      33,
+      35,
+      37,
+      39,
+      41,
+      43,
+      45,
+      47,
+      49,
+      51,
+      53,
+      55,
+      57,
+      59,
+      61,
+      63
+    ]
+  },
+  "expected_stock": [
+    {
+      "frame": 4,
+      "retained": [],
+      "candidate": [
+        "A",
+        1
+      ]
+    },
+    {
+      "frame": 8,
+      "retained": [
+        [
+          "A",
+          1
+        ]
+      ],
+      "candidate": null
+    },
+    {
+      "frame": 12,
+      "retained": [
+        [
+          "A",
+          1
+        ]
+      ],
+      "candidate": [
+        "B",
+        2
+      ]
+    },
+    {
+      "frame": 16,
+      "retained": [
+        [
+          "A",
+          1
+        ],
+        [
+          "B",
+          2
+        ]
+      ],
+      "candidate": null
+    },
+    {
+      "frame": 20,
+      "retained": [
+        [
+          "A",
+          1
+        ],
+        [
+          "B",
+          2
+        ]
+      ],
+      "candidate": [
+        "Bp",
+        3
+      ]
+    },
+    {
+      "frame": 24,
+      "retained": [
+        [
+          "B",
+          2
+        ],
+        [
+          "A",
+          1
+        ]
+      ],
+      "candidate": [
+        "Bp",
+        3
+      ]
+    },
+    {
+      "frame": 28,
+      "retained": [
+        [
+          "B",
+          2
+        ],
+        [
+          "A",
+          1
+        ]
+      ],
+      "candidate": [
+        "C",
+        4
+      ]
+    },
+    {
+      "frame": 32,
+      "retained": [
+        [
+          "B",
+          2
+        ],
+        [
+          "A",
+          1
+        ]
+      ],
+      "candidate": [
+        "Bp",
+        5
+      ]
+    },
+    {
+      "frame": 36,
+      "retained": [
+        [
+          "B",
+          2
+        ],
+        [
+          "A",
+          1
+        ]
+      ],
+      "candidate": [
+        "Bp",
+        5
+      ]
+    },
+    {
+      "frame": 40,
+      "retained": [
+        [
+          "A",
+          1
+        ],
+        [
+          "Bp",
+          3
+        ]
+      ],
+      "candidate": null
+    },
+    {
+      "frame": 44,
+      "retained": [
+        [
+          "A",
+          1
+        ],
+        [
+          "Bp",
+          3
+        ]
+      ],
+      "candidate": [
+        "C",
+        6
+      ]
+    },
+    {
+      "frame": 48,
+      "retained": [
+        [
+          "Bp",
+          3
+        ],
+        [
+          "C",
+          4
+        ]
+      ],
+      "candidate": null
+    },
+    {
+      "frame": 52,
+      "retained": [
+        [
+          "Bp",
+          3
+        ],
+        [
+          "C",
+          4
+        ]
+      ],
+      "candidate": [
+        "A",
+        7
+      ]
+    },
+    {
+      "frame": 56,
+      "retained": [
+        [
+          "C",
+          4
+        ],
+        [
+          "A",
+          5
+        ]
+      ],
+      "candidate": null
+    },
+    {
+      "frame": 60,
+      "retained": [
+        [
+          "C",
+          4
+        ],
+        [
+          "A",
+          5
+        ]
+      ],
+      "candidate": null
+    },
+    {
+      "frame": 64,
+      "retained": [
+        [
+          "C",
+          4
+        ],
+        [
+          "A",
+          5
+        ]
+      ],
+      "candidate": null
+    }
+  ],
+  "expected_targets": {
+    "19": {
+      "matches": [
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "choice": "PERSISTENCE",
+      "context_available": true
+    },
+    "23": {
+      "matches": [
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "choice": "PERSISTENCE",
+      "context_available": true
+    },
+    "31": {
+      "matches": [
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "choice": "PERSISTENCE",
+      "context_available": true
+    },
+    "35": {
+      "matches": [
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "choice": "CONTEXT",
+      "context_available": true
+    },
+    "39": {
+      "matches": [
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          5,
+          0
+        ]
+      ],
+      "choice": "PERSISTENCE",
+      "context_available": false
+    },
+    "51": {
+      "matches": [],
+      "choice": "PERSISTENCE",
+      "context_available": false
+    },
+    "55": {
+      "matches": [
+        [
+          1,
+          7,
+          0
+        ]
+      ],
+      "choice": "PERSISTENCE",
+      "context_available": true
+    },
+    "59": {
+      "matches": [
+        [
+          0,
+          5,
+          0
+        ]
+      ],
+      "choice": "PERSISTENCE",
+      "context_available": true
+    },
+    "63": {
+      "matches": [
+        [
+          0,
+          5,
+          0
+        ]
+      ],
+      "choice": "CONTEXT",
+      "context_available": true
+    }
+  },
+  "expectation_status": "HYPOTHESES_ONLY_NOT_MEASUREMENTS_OR_SYSTEM_INPUTS",
+  "hypothesis_mismatch": "Preserve actual data; distinguish expectation error from implementation error; dependent criteria NOT_EVALUABLE; never repair system to fit table",
+  "policies": {
+    "E": "paired_error_ema_v1",
+    "K": "context_else_persistence",
+    "P": "persistence",
+    "alpha": 0.5,
+    "retrieval": "exact_v1",
+    "continuation": "legacy_v1",
+    "arithmetic": "unchanged ordered mae48",
+    "tie": "PERSISTENCE"
+  },
+  "criteria": {
+    "stock": "identical states/receipts across arms; unique/ambiguous/missing hypotheses observed; atomic target updates; only dead generations pruned at admission",
+    "experience": "own-key prior errors only; opposite A/B evaluations; no update39; no old r1 after48; cold c7/r5;63 learns from59",
+    "benefit": "V availability confirmed and E MAE strictly below BOTH K and P; otherwise SCHADEN/NICHT_NACHGEWIESEN; D diagnostic only",
+    "reporting": "V,D,M,N,Gesamt sums and MAEs; every gain/harm; cold starts; deletion and lost experience; missing evidence never zero"
+  },
+  "limits": {
+    "experimental_admissions": 192,
+    "internal_reference_advances": 192,
+    "raw_numeric_source_bytes": 24576,
+    "retained": 2,
+    "candidate": 1,
+    "frames": 18,
+    "proposal_vectors": 2,
+    "cells": 12,
+    "tickets": 1,
+    "packed_bytes": 416,
+    "additional_python_bytes": 16384,
+    "receipt_bytes": 16384,
+    "transient_utf8_bytes": 32768,
+    "export_bytes": 4194304,
+    "closure_reserve_bytes": 262144
+  },
+  "censored_target": 65,
+  "output_directory": "reports/s2uc/ema-stock-counterprobe-20261001-01",
+  "no_reset": true,
+  "no_direct_memory_mutation": true,
+  "no_protected_trace": true,
+  "failure_policy": "exclusive output directory consumed before materialization; preserve partial export and closure; no retry",
+  "scope": "controlled functional counterprobe, no general learning or cluster-organization claim"
+}

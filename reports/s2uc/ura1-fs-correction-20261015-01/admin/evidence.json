@@ -1,0 +1,43 @@
+{
+  "mode": "admin",
+  "status": "PASS",
+  "terminal": {
+    "active_case": null,
+    "cleanup": "UNCONFIRMED",
+    "completed_cases": [],
+    "first_failure": "InventoryError:budget:admin:C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\ura1-fs-correction-20261015-01\\admin\\data:LIMIT:2097153>2097152",
+    "followup_failures": [],
+    "retry_allowed": false,
+    "seconds": 0.18382569999812404,
+    "status": "TECHNICAL_ABORT",
+    "worker_ended": true,
+    "worker_started": true,
+    "worker_exitcode": 1,
+    "first_diagnostic": {
+      "phase": "monitor",
+      "operation": "budget:admin",
+      "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\ura1-fs-correction-20261015-01\\admin\\data",
+      "exception": "InventoryError:budget:admin:C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\ura1-fs-correction-20261015-01\\admin\\data:LIMIT:2097153>2097152",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\_s2uc_ura1_fs_accounting_v4.py\", line 175, in supervise\n    ledger.check();time.sleep(.01)\n    ~~~~~~~~~~~~^^\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\s2uc_ura1_fs_revision_probe.py\", line 64, in check\n    result=super().check()\n  File \"C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\_s2uc_ura1_fs_accounting_v4.py\", line 126, in check\n    if used>cap:raise InventoryError('budget:'+key,self.folder,f'LIMIT:{used}>{cap}')\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntools._s2uc_ura1_fs_accounting_v4.InventoryError: budget:admin:C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\ura1-fs-correction-20261015-01\\admin\\data:LIMIT:2097153>2097152\n"
+    },
+    "partial_files": [],
+    "file_cleanup_confirmed": true
+  },
+  "accepted_inventory": null,
+  "handshake_steps": 0,
+  "job": {
+    "limit_bytes": 536870912,
+    "peak_job_committed_bytes": 27779072,
+    "peak_process_committed_bytes": 13918208,
+    "hard_job_limit": true,
+    "members": "supervisor and inherited worker",
+    "measurement": "Windows JobObjectExtendedLimitInformation",
+    "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap."
+  },
+  "neutral_post_probe_removals": [
+    {
+      "name": "oversized.txt",
+      "bytes": 2097153
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "primary": {
+    "name": "FW1:mean((KEEP-RESET)A,(KEEP-RESET)B)",
+    "neutral_only": true,
+    "pairs": [
+      "-3/376",
+      "-1/376"
+    ],
+    "mean": "-1/188",
+    "ci": [
+      "-1/188",
+      "-1/188"
+    ],
+    "informative": true,
+    "verdict": "NUTZEN_GESTUETZT",
+    "source_pairs": 2,
+    "condition_target_pairs": 188,
+    "arm_errors": 376
+  },
+  "reference": {
+    "mean": "-1/188",
+    "pairs": [
+      "-3/376",
+      "-1/376"
+    ],
+    "ci": [
+      "-1/188",
+      "-1/188"
+    ],
+    "informative": true,
+    "verdict": "NUTZEN_GESTUETZT"
+  },
+  "matrix": [
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1
+  ],
+  "matrix_sha256": "9d523143304148a2b2d887da817f10830e37f50d7689ca5a9e69f10d7b2eb31f",
+  "policy_executions": 0
+}

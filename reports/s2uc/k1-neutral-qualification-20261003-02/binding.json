@@ -1,0 +1,13 @@
+{
+  "files": {
+    "tools/_s2uc_k1.py": "0a887059c2ad16ac454973779571f040d0468af161232da30a4d917a710b6ab3",
+    "tools/_s2uc_k1_reference.py": "632a9c2baf48b0dee8412a9826028ea0e086f38de75cffbf843b88db7bf91dd5",
+    "tools/_s2uc_k1_probe.py": "4481d9c30c69ea722b3c52973130bff431aaee9cf7db4589b3c97122ec457066",
+    "tools/s2uc_k1_qualify.py": "7ebf52799468c7f74516643a8f2ddf5b640331147f32032790b3b1c7634a14b5",
+    "tests/test_s2uc_k1.py": "3baa4d562e5de61b4a213e2c893eb1c53e1ea1bfb365b9e55879831011eb4575"
+  },
+  "prior_start_binding_sha256": "a1bbd35b1f0e6f618a95e3bd544cd95bc143a6498d686bdf746e54afe04945fe",
+  "contract_sha256": "3f93358da31be4c608132903e37f138b26f7d4f63813937615958edec1146d88",
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "executable_sha256": "7ca24f26d6e3f463419ee4f537ddd3acd312c38fe45e678cce08572f26a8bd1a"
+}

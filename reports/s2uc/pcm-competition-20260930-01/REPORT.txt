@@ -1,0 +1,128 @@
+PCM-KONKURRENZGEGENPROBE -- ABGESCHLOSSEN
+Ausfuehrungskennung pcm-competition-20260930-01.
+A=W1/W2/W3/W4; D=W4/W2/W3/W1 ist synthetische Montage, keine kontinuierliche
+zweite Aufnahme. Bestaetigungen sind Testwiedergaben mit getrennten Ordinalen.
+Vorregistrierung sichert unveraenderte Vorhersagen; keine Ersatzvorhersage
+bei fehlender Halb-W1-Faktorbeziehung. Alle Positionen/Faktoren werden geprueft.
+
+EINGABE UND VERARBEITUNG
+Sechs bestehende Ausgaben aus pcm-temporal-20260930-01 wiederverwendet,
+gegen dessen Inventar und Code-/Laufzeitbindungen geprueft.
+Ausschliesslich Halb-W1 neu aus gespeicherten Samples abgeleitet: 19200 Byte,
+bitexakt rueckverdoppelbar, keine Unterlaeufe/subnormalen Halbwerte.
+Genau ein neuer Rezeptor- und ein NJ-Aufruf, unveraenderte Konfiguration.
+Neue Halb-W1-SHA256: f743ebcf777c0c4aba725e943ad4ae7506997c863b72a7a46e3c1827f5fd4ee0
+48/48 Rohrezeptor- und 48/48 NJ-Werte numerisch und bitexakt halbiert;
+alle Absolut-/ULP-Abweichungen 0. Vollstaendige Werte in band-comparisons.csv
+und result.json. Parent-/Dateibindung in input-binding.json.
+
+VOLLSTAENDIGE TREFFERMENGEN
+A: retained, Generation 1, A-1, Originalordinale [1,2,3,4].
+D: retained, Generation 2, D-1, Originalordinale [9,10,11,12].
+E BC: {A@1,D@1}, ABSTAIN_AMBIGUOUS.
+F BC: {A@1 Faktor 1,D@1 Faktor 1}, ABSTAIN_AMBIGUOUS.
+E halb-BC: {}, ABSTAIN_NO_MATCH.
+F halb-BC: {A@1 Faktor .5,D@1 Faktor .5}, ABSTAIN_AMBIGUOUS.
+E XB: {A@0}, CONFIRMED_RETAINED_MATCH.
+F XB: {A@0 Faktor 1}, CONFIRMED_RETAINED_MATCH.
+E halb-XB: {}, ABSTAIN_NO_MATCH.
+F halb-XB: {A@0 Faktor .5}, CONFIRMED_RETAINED_MATCH.
+Positionszaehlung nullbasiert. Keine weiteren Treffer. Acht von acht
+vorregistrierten Treffermengenvorhersagen bestaetigt, keine verletzt.
+Jeder Fall genau zweimal pro Arm: insgesamt 16 Abfragen; Wiederholungen
+identisch, alle Zustandsbilder unveraendert. Speicheraufbau und Zwischenzustaende
+in E/F identisch, je vier erwartete Kandidaten-/Promotionsuebergaenge.
+Unabhaengige Fraction-Vergleichsrechnung prueft jede Position und jeden Faktor;
+Vorhersagebewertung erfolgt getrennt vom tatsaechlichen Vergleichsergebnis.
+
+PRUEFUNGEN
+21/21 PASS, keine Fehler/Fehlschlaege/Skips; Einzel-IDs in tests.txt.
+4 Konkurrenztests, 5 PCM-Halbtests, 7 Faktorhinweis- und 5 Transferregressionen.
+Tests pruefen insbesondere, dass fehlende/unerwartete Treffer eine verletzte
+Vorhersage bleiben und unerwartete Herkuenfte/Positionen nicht gefiltert werden.
+Bindungen vor/nach Auswertung unveraendert. Keine Aenderung an E/F,
+Bestaetigung oder Wahrnehmungspfad; keine Generatorausfuehrung.
+
+RESSOURCEN
+Bestehende PCM-Dateien 115200 Byte plus neue Halb-W1-Datei 19200 Byte:
+134400 Byte; keine duplizierte Montage als PCM erzeugt.
+Python-Messwerte fuer Laden, Ableitung, Verarbeitung und Bandbeobachter:
+{
+  "reused_evidence_loading": {
+    "elapsed_ns": 7771900,
+    "incremental_python_peak_bytes": 724895,
+    "net_python_bytes": 286937
+  },
+  "derivation": {
+    "elapsed_ns": 61730500,
+    "incremental_python_peak_bytes": 522344,
+    "net_python_bytes": 22433
+  },
+  "processing": {
+    "elapsed_ns": 458039000,
+    "incremental_python_peak_bytes": 10466052,
+    "net_python_bytes": 7603472
+  },
+  "band_observer": {
+    "elapsed_ns": 2167300,
+    "incremental_python_peak_bytes": 69935,
+    "net_python_bytes": 69303
+  },
+  "memory_with_observer_elapsed_ns": 520748600
+}
+Armspeicher und instrumentierte Aufrufkosten:
+{
+  "E": {
+    "whole_trace_comparisons": 4,
+    "hint_positions_checked": 48,
+    "traced_call_ns": 200457100,
+    "roles": {
+      "retained_frames": 8,
+      "candidate_frames": 4,
+      "forming_frames": 4,
+      "trace_frames": 12,
+      "hint_frames": 1
+    },
+    "temporary_trace": 12,
+    "temporary_hint": 2,
+    "temporary_total": 12,
+    "factor_checks": 0,
+    "scalar_factor_checks": 0,
+    "incremental_python_call_peak_bytes": 26200
+  },
+  "F": {
+    "whole_trace_comparisons": 4,
+    "hint_positions_checked": 48,
+    "traced_call_ns": 269253500,
+    "roles": {
+      "retained_frames": 8,
+      "candidate_frames": 4,
+      "forming_frames": 4,
+      "trace_frames": 12,
+      "hint_frames": 1
+    },
+    "temporary_trace": 12,
+    "temporary_hint": 2,
+    "temporary_total": 12,
+    "factor_checks": 144,
+    "scalar_factor_checks": 1284,
+    "incremental_python_call_peak_bytes": 9804
+  }
+}
+Zeitwerte in Nanosekunden, Allokationen in Byte. Python-Peaks nicht addieren;
+kein vollstaendiger nativer NumPy-/Prozess-RAM. Memory-Zeit und Aufrufpeaks
+enthalten Tracing/Beobachter, keinen isolierten unbeobachteten Kern messen.
+PCM, Archivvektoren, Rezeptorarrays und Beobachter liegen ausserhalb des
+16+2-Armspeicherbudgets und werden nicht als kostenlose Frames dargestellt.
+
+BEFUND UND ANSCHLUSS
+Am selben gespeicherten Zustand legt der gemeinsame Hinweis Konkurrenz offen,
+waehrend der kontextunterscheidende Hinweis selektiv A erreicht. Dies gilt bei
+F auch nach PCM-Halbierung. Damit sind Mehrdeutigkeit und selektiver Kontextzugang
+auf den gebundenen PCM-abgeleiteten Bandwerten gemeinsam gezeigt.
+Keine allgemeine Kontextsemantik oder kontinuierliche zweite Wahrnehmung belegt.
+Naechster Vorschlag: statischer Entwurf fuer den Erhalt dieses Kontextzugangs
+nach einer dritten exakt bestaetigten Erfahrung unter derselben FIFO-Grenze.
+Gezielt pruefen, welche Herkunft verloren geht und ob ein zuvor mehrdeutiger
+Hinweis allein durch Vergessen eindeutig wird. Noch keine Umsetzung.
+Registry und Originalquellenlauf unberuehrt.

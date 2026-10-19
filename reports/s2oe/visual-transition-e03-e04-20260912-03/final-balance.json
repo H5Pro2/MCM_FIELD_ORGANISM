@@ -1,0 +1,16 @@
+{
+  "version": "s2oe.visual-diagnostic-final-balance.v1",
+  "bound_reference_files": 159,
+  "bound_reference_bytes": 3479477,
+  "technical_balance_bytes": 350,
+  "report_bytes": 5123,
+  "table_bytes": 104075,
+  "verification_bytes": 616,
+  "final_balance_bytes": 413,
+  "metadata_total": 33033,
+  "total_bytes": 3617201,
+  "metadata_limit": 65536,
+  "total_limit": 4194304,
+  "violations": [],
+  "gates": false
+}

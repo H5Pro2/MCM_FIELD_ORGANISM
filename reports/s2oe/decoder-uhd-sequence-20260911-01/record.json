@@ -1,0 +1,1450 @@
+{
+  "binding_sha256": "032b72a070caf5799bfa74425e116e51219ea22432d818bcf5ca6f1fa072fb90",
+  "counters": {
+    "audio_frames": 432,
+    "audio_samples": 442368,
+    "container_read_bytes": 401434996,
+    "packets": 716,
+    "passes": 2,
+    "selected_windows": 20,
+    "video_frames": 276
+  },
+  "current_event": {
+    "event_id": "media-event-24",
+    "kind": "COMPLETE_AV_PERCEPTION",
+    "ordinal": 24,
+    "pass_number": 2,
+    "window_number": 9
+  },
+  "events": [
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 0,
+      "counters": {
+        "audio_frames": 5,
+        "audio_samples": 5120,
+        "container_read_bytes": 171256136,
+        "packets": 12,
+        "passes": 1,
+        "selected_windows": 1,
+        "video_frames": 3
+      },
+      "event": {
+        "event_id": "media-event-01",
+        "kind": "COMPLETE_AV_PERCEPTION",
+        "ordinal": 1,
+        "pass_number": 1,
+        "window_number": 0
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 570064896,
+        "peak_process_commit": 563486720,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 2002,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "3962713468fb0c379baf084596870a446a4ef2aa3130962e5d8fe14d15432e60",
+      "pts": 1001,
+      "rgb_sha256": "9801f276b2c56af300f50c291e68aa23d5465d91e727661a51228b4708826a35",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 24000,
+      "counters": {
+        "audio_frames": 29,
+        "audio_samples": 29696,
+        "container_read_bytes": 173571842,
+        "packets": 51,
+        "passes": 1,
+        "selected_windows": 2,
+        "video_frames": 18
+      },
+      "event": {
+        "event_id": "media-event-02",
+        "kind": "COMPLETE_AV_PERCEPTION",
+        "ordinal": 2,
+        "pass_number": 1,
+        "window_number": 1
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 604852224,
+        "peak_process_commit": 598274048,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 17017,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "2fa1bc3b028734fcc8794a4918d857ed2ce32f0c1d88588660eb2ae3b2802842",
+      "pts": 16016,
+      "rgb_sha256": "c545e648b08ca27344035c36b72d4960373ecff382159a8c91f7fd655b6fd12f",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 48000,
+      "counters": {
+        "audio_frames": 52,
+        "audio_samples": 53248,
+        "container_read_bytes": 176842262,
+        "packets": 89,
+        "passes": 1,
+        "selected_windows": 3,
+        "video_frames": 33
+      },
+      "event": {
+        "event_id": "media-event-03",
+        "kind": "COMPLETE_AV_PERCEPTION",
+        "ordinal": 3,
+        "pass_number": 1,
+        "window_number": 2
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 604872704,
+        "peak_process_commit": 598294528,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 32032,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "a735fbcf274c7a5d4d8ae1998501f0fd2e0ec74e909374a3d41f87b883b031fd",
+      "pts": 31031,
+      "rgb_sha256": "040ec13d400f1770e45ce1eb59a09c7d5b19771e7527d5fff96c33d8bfa7e94d",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 72000,
+      "counters": {
+        "audio_frames": 75,
+        "audio_samples": 76800,
+        "container_read_bytes": 180029387,
+        "packets": 127,
+        "passes": 1,
+        "selected_windows": 4,
+        "video_frames": 48
+      },
+      "event": {
+        "event_id": "media-event-04",
+        "kind": "COMPLETE_AV_PERCEPTION",
+        "ordinal": 4,
+        "pass_number": 1,
+        "window_number": 3
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 604872704,
+        "peak_process_commit": 598294528,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 47047,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "c5e7066342cce5ce7b0e873f02b431c840329d1e5f7ec33034f49004d3d87dfa",
+      "pts": 46046,
+      "rgb_sha256": "8f745ee59174ab3df92a0cb12011f67af595bc0537bbf2466d093c899de1da52",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 96000,
+      "counters": {
+        "audio_frames": 99,
+        "audio_samples": 101376,
+        "container_read_bytes": 183261929,
+        "packets": 166,
+        "passes": 1,
+        "selected_windows": 5,
+        "video_frames": 63
+      },
+      "event": {
+        "event_id": "media-event-05",
+        "kind": "COMPLETE_AV_PERCEPTION",
+        "ordinal": 5,
+        "pass_number": 1,
+        "window_number": 4
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 604872704,
+        "peak_process_commit": 598294528,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 62062,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "015b72196849bde1c563914df789e5a22492793f94e24517e25ddfb6fdf4c718",
+      "pts": 61061,
+      "rgb_sha256": "9630aeaf70cf13a9cf29e5c78b9cf666dc0d4ca971eaeada62803e4b35a81353",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 120000,
+      "counters": {
+        "audio_frames": 122,
+        "audio_samples": 124928,
+        "container_read_bytes": 186465222,
+        "packets": 204,
+        "passes": 1,
+        "selected_windows": 6,
+        "video_frames": 78
+      },
+      "event": {
+        "event_id": "media-event-06",
+        "kind": "COMPLETE_AV_PERCEPTION",
+        "ordinal": 6,
+        "pass_number": 1,
+        "window_number": 5
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 604872704,
+        "peak_process_commit": 598294528,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 77077,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "ca07f8d8fd81a2cb0b30f19e71d97b56a7aed8d2f20967881576ee42b78db86b",
+      "pts": 76076,
+      "rgb_sha256": "240c99803a67148f20e664706a9d4da8186b39b6bb557ac8521f8a10a087a246",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 144000,
+      "counters": {
+        "audio_frames": 146,
+        "audio_samples": 149504,
+        "container_read_bytes": 191017240,
+        "packets": 243,
+        "passes": 1,
+        "selected_windows": 7,
+        "video_frames": 93
+      },
+      "event": {
+        "event_id": "media-event-07",
+        "kind": "COMPLETE_AV_PERCEPTION",
+        "ordinal": 7,
+        "pass_number": 1,
+        "window_number": 6
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 604872704,
+        "peak_process_commit": 598294528,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 92092,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "d4ed3b6d4db58d6c4a60eceadc699ed4b3e4fe07fe131b89c60884b808e7b15a",
+      "pts": 91091,
+      "rgb_sha256": "284509ee0eb3eda2eeb9b4bca2c26b7b4b7fc547cc4eee1fcbc33b75bb1a4e2b",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 168000,
+      "counters": {
+        "audio_frames": 169,
+        "audio_samples": 173056,
+        "container_read_bytes": 194356215,
+        "packets": 281,
+        "passes": 1,
+        "selected_windows": 8,
+        "video_frames": 108
+      },
+      "event": {
+        "event_id": "media-event-08",
+        "kind": "COMPLETE_AV_PERCEPTION",
+        "ordinal": 8,
+        "pass_number": 1,
+        "window_number": 7
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 605388800,
+        "peak_process_commit": 598810624,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 107107,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "5a9470f40c108e246e977e004710e9e9ca0838b12eae546dc248d4ce590d4425",
+      "pts": 106106,
+      "rgb_sha256": "d288736ff2d4966dcae089ac81fcba57198d2cf61c7862508290018ca664460e",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 192000,
+      "counters": {
+        "audio_frames": 193,
+        "audio_samples": 197632,
+        "container_read_bytes": 197582470,
+        "packets": 320,
+        "passes": 1,
+        "selected_windows": 9,
+        "video_frames": 123
+      },
+      "event": {
+        "event_id": "media-event-09",
+        "kind": "COMPLETE_AV_PERCEPTION",
+        "ordinal": 9,
+        "pass_number": 1,
+        "window_number": 8
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 605401088,
+        "peak_process_commit": 598822912,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 122122,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "e4031f1aca83ea75b9cf2a732acefec8705dac0117ed36b356eb21ecd4d7d186",
+      "pts": 121121,
+      "rgb_sha256": "29915928712760f15b09b66b7e2679324369361659db99c5788901f9744fd5fc",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 216000,
+      "counters": {
+        "audio_frames": 216,
+        "audio_samples": 221184,
+        "container_read_bytes": 200717498,
+        "packets": 358,
+        "passes": 1,
+        "selected_windows": 10,
+        "video_frames": 138
+      },
+      "event": {
+        "event_id": "media-event-10",
+        "kind": "COMPLETE_AV_PERCEPTION",
+        "ordinal": 10,
+        "pass_number": 1,
+        "window_number": 9
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 605401088,
+        "peak_process_commit": 598822912,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 137137,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "2d36805889e795d873d780e34660816039007f21144b2441dcf6cb681a340e62",
+      "pts": 136136,
+      "rgb_sha256": "fe81337251e33ebe3317474f4d7390859fc4e2c9ee87091e3feaeba486891c3d",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 0,
+      "counters": {
+        "audio_frames": 221,
+        "audio_samples": 226304,
+        "container_read_bytes": 371973634,
+        "packets": 370,
+        "passes": 2,
+        "selected_windows": 11,
+        "video_frames": 141
+      },
+      "event": {
+        "event_id": "media-event-11",
+        "kind": "COMPLETE_AV_PERCEPTION",
+        "ordinal": 11,
+        "pass_number": 2,
+        "window_number": 0
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 605401088,
+        "peak_process_commit": 598822912,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 2002,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "3962713468fb0c379baf084596870a446a4ef2aa3130962e5d8fe14d15432e60",
+      "pts": 1001,
+      "rgb_sha256": "9801f276b2c56af300f50c291e68aa23d5465d91e727661a51228b4708826a35",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 24000,
+      "counters": {
+        "audio_frames": 245,
+        "audio_samples": 250880,
+        "container_read_bytes": 374289340,
+        "packets": 409,
+        "passes": 2,
+        "selected_windows": 12,
+        "video_frames": 156
+      },
+      "event": {
+        "event_id": "media-event-12",
+        "kind": "COMPLETE_AV_PERCEPTION",
+        "ordinal": 12,
+        "pass_number": 2,
+        "window_number": 1
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 605401088,
+        "peak_process_commit": 598822912,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 17017,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "2fa1bc3b028734fcc8794a4918d857ed2ce32f0c1d88588660eb2ae3b2802842",
+      "pts": 16016,
+      "rgb_sha256": "c545e648b08ca27344035c36b72d4960373ecff382159a8c91f7fd655b6fd12f",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 48000,
+      "counters": {
+        "audio_frames": 268,
+        "audio_samples": 274432,
+        "container_read_bytes": 377559760,
+        "packets": 447,
+        "passes": 2,
+        "selected_windows": 13,
+        "video_frames": 171
+      },
+      "event": {
+        "event_id": "media-event-13",
+        "kind": "PARTIAL_AUDITORY_CUE",
+        "ordinal": 13,
+        "pass_number": 2,
+        "window_number": 2
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 605401088,
+        "peak_process_commit": 598822912,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 32032,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "a735fbcf274c7a5d4d8ae1998501f0fd2e0ec74e909374a3d41f87b883b031fd",
+      "pts": 31031,
+      "rgb_sha256": "040ec13d400f1770e45ce1eb59a09c7d5b19771e7527d5fff96c33d8bfa7e94d",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 48000,
+      "counters": {
+        "audio_frames": 268,
+        "audio_samples": 274432,
+        "container_read_bytes": 377559760,
+        "packets": 447,
+        "passes": 2,
+        "selected_windows": 13,
+        "video_frames": 171
+      },
+      "event": {
+        "event_id": "media-event-14",
+        "kind": "PARTIAL_VISUAL_CUE",
+        "ordinal": 14,
+        "pass_number": 2,
+        "window_number": 2
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 605401088,
+        "peak_process_commit": 598822912,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 32032,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "a735fbcf274c7a5d4d8ae1998501f0fd2e0ec74e909374a3d41f87b883b031fd",
+      "pts": 31031,
+      "rgb_sha256": "040ec13d400f1770e45ce1eb59a09c7d5b19771e7527d5fff96c33d8bfa7e94d",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 48000,
+      "counters": {
+        "audio_frames": 268,
+        "audio_samples": 274432,
+        "container_read_bytes": 377559760,
+        "packets": 447,
+        "passes": 2,
+        "selected_windows": 13,
+        "video_frames": 171
+      },
+      "event": {
+        "event_id": "media-event-15",
+        "kind": "COMPLETE_AV_PERCEPTION",
+        "ordinal": 15,
+        "pass_number": 2,
+        "window_number": 2
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 605401088,
+        "peak_process_commit": 598822912,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 32032,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "a735fbcf274c7a5d4d8ae1998501f0fd2e0ec74e909374a3d41f87b883b031fd",
+      "pts": 31031,
+      "rgb_sha256": "040ec13d400f1770e45ce1eb59a09c7d5b19771e7527d5fff96c33d8bfa7e94d",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 72000,
+      "counters": {
+        "audio_frames": 291,
+        "audio_samples": 297984,
+        "container_read_bytes": 380746885,
+        "packets": 485,
+        "passes": 2,
+        "selected_windows": 14,
+        "video_frames": 186
+      },
+      "event": {
+        "event_id": "media-event-16",
+        "kind": "COMPLETE_AV_PERCEPTION",
+        "ordinal": 16,
+        "pass_number": 2,
+        "window_number": 3
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 605401088,
+        "peak_process_commit": 598822912,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 47047,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "c5e7066342cce5ce7b0e873f02b431c840329d1e5f7ec33034f49004d3d87dfa",
+      "pts": 46046,
+      "rgb_sha256": "8f745ee59174ab3df92a0cb12011f67af595bc0537bbf2466d093c899de1da52",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 96000,
+      "counters": {
+        "audio_frames": 315,
+        "audio_samples": 322560,
+        "container_read_bytes": 383979427,
+        "packets": 524,
+        "passes": 2,
+        "selected_windows": 15,
+        "video_frames": 201
+      },
+      "event": {
+        "event_id": "media-event-17",
+        "kind": "COMPLETE_AV_PERCEPTION",
+        "ordinal": 17,
+        "pass_number": 2,
+        "window_number": 4
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 605409280,
+        "peak_process_commit": 598831104,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 62062,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "015b72196849bde1c563914df789e5a22492793f94e24517e25ddfb6fdf4c718",
+      "pts": 61061,
+      "rgb_sha256": "9630aeaf70cf13a9cf29e5c78b9cf666dc0d4ca971eaeada62803e4b35a81353",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 120000,
+      "counters": {
+        "audio_frames": 338,
+        "audio_samples": 346112,
+        "container_read_bytes": 387182720,
+        "packets": 562,
+        "passes": 2,
+        "selected_windows": 16,
+        "video_frames": 216
+      },
+      "event": {
+        "event_id": "media-event-18",
+        "kind": "COMPLETE_AV_PERCEPTION",
+        "ordinal": 18,
+        "pass_number": 2,
+        "window_number": 5
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 605835264,
+        "peak_process_commit": 599257088,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 77077,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "ca07f8d8fd81a2cb0b30f19e71d97b56a7aed8d2f20967881576ee42b78db86b",
+      "pts": 76076,
+      "rgb_sha256": "240c99803a67148f20e664706a9d4da8186b39b6bb557ac8521f8a10a087a246",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 144000,
+      "counters": {
+        "audio_frames": 362,
+        "audio_samples": 370688,
+        "container_read_bytes": 391734738,
+        "packets": 601,
+        "passes": 2,
+        "selected_windows": 17,
+        "video_frames": 231
+      },
+      "event": {
+        "event_id": "media-event-19",
+        "kind": "COMPLETE_AV_PERCEPTION",
+        "ordinal": 19,
+        "pass_number": 2,
+        "window_number": 6
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 605835264,
+        "peak_process_commit": 599257088,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 92092,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "d4ed3b6d4db58d6c4a60eceadc699ed4b3e4fe07fe131b89c60884b808e7b15a",
+      "pts": 91091,
+      "rgb_sha256": "284509ee0eb3eda2eeb9b4bca2c26b7b4b7fc547cc4eee1fcbc33b75bb1a4e2b",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 168000,
+      "counters": {
+        "audio_frames": 385,
+        "audio_samples": 394240,
+        "container_read_bytes": 395073713,
+        "packets": 639,
+        "passes": 2,
+        "selected_windows": 18,
+        "video_frames": 246
+      },
+      "event": {
+        "event_id": "media-event-20",
+        "kind": "COMPLETE_AV_PERCEPTION",
+        "ordinal": 20,
+        "pass_number": 2,
+        "window_number": 7
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 606162944,
+        "peak_process_commit": 599584768,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 107107,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "5a9470f40c108e246e977e004710e9e9ca0838b12eae546dc248d4ce590d4425",
+      "pts": 106106,
+      "rgb_sha256": "d288736ff2d4966dcae089ac81fcba57198d2cf61c7862508290018ca664460e",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 192000,
+      "counters": {
+        "audio_frames": 409,
+        "audio_samples": 418816,
+        "container_read_bytes": 398299968,
+        "packets": 678,
+        "passes": 2,
+        "selected_windows": 19,
+        "video_frames": 261
+      },
+      "event": {
+        "event_id": "media-event-21",
+        "kind": "PARTIAL_AUDITORY_CUE",
+        "ordinal": 21,
+        "pass_number": 2,
+        "window_number": 8
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 606253056,
+        "peak_process_commit": 599674880,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 122122,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "e4031f1aca83ea75b9cf2a732acefec8705dac0117ed36b356eb21ecd4d7d186",
+      "pts": 121121,
+      "rgb_sha256": "29915928712760f15b09b66b7e2679324369361659db99c5788901f9744fd5fc",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 192000,
+      "counters": {
+        "audio_frames": 409,
+        "audio_samples": 418816,
+        "container_read_bytes": 398299968,
+        "packets": 678,
+        "passes": 2,
+        "selected_windows": 19,
+        "video_frames": 261
+      },
+      "event": {
+        "event_id": "media-event-22",
+        "kind": "PARTIAL_VISUAL_CUE",
+        "ordinal": 22,
+        "pass_number": 2,
+        "window_number": 8
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 606253056,
+        "peak_process_commit": 599674880,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 122122,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "e4031f1aca83ea75b9cf2a732acefec8705dac0117ed36b356eb21ecd4d7d186",
+      "pts": 121121,
+      "rgb_sha256": "29915928712760f15b09b66b7e2679324369361659db99c5788901f9744fd5fc",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 192000,
+      "counters": {
+        "audio_frames": 409,
+        "audio_samples": 418816,
+        "container_read_bytes": 398299968,
+        "packets": 678,
+        "passes": 2,
+        "selected_windows": 19,
+        "video_frames": 261
+      },
+      "event": {
+        "event_id": "media-event-23",
+        "kind": "COMPLETE_AV_PERCEPTION",
+        "ordinal": 23,
+        "pass_number": 2,
+        "window_number": 8
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 606253056,
+        "peak_process_commit": 599674880,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 122122,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "e4031f1aca83ea75b9cf2a732acefec8705dac0117ed36b356eb21ecd4d7d186",
+      "pts": 121121,
+      "rgb_sha256": "29915928712760f15b09b66b7e2679324369361659db99c5788901f9744fd5fc",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    },
+    {
+      "audio_samples": 4800,
+      "audio_start_sample": 216000,
+      "counters": {
+        "audio_frames": 432,
+        "audio_samples": 442368,
+        "container_read_bytes": 401434996,
+        "packets": 716,
+        "passes": 2,
+        "selected_windows": 20,
+        "video_frames": 276
+      },
+      "event": {
+        "event_id": "media-event-24",
+        "kind": "COMPLETE_AV_PERCEPTION",
+        "ordinal": 24,
+        "pass_number": 2,
+        "window_number": 9
+      },
+      "formats": [
+        "float32",
+        "uint8"
+      ],
+      "job": {
+        "active_process_limit": 1,
+        "flags": 8968,
+        "job_commit_limit": 1073741824,
+        "memory_limit_messages": [],
+        "memory_limit_notification": false,
+        "peak_job_commit": 606253056,
+        "peak_process_commit": 599674880,
+        "process_commit_limit": 1073741824
+      },
+      "next_pts": 137137,
+      "output_bytes": [
+        19200,
+        6220800
+      ],
+      "pcm_sha256": "2d36805889e795d873d780e34660816039007f21144b2441dcf6cb681a340e62",
+      "pts": 136136,
+      "rgb_sha256": "fe81337251e33ebe3317474f4d7390859fc4e2c9ee87091e3feaeba486891c3d",
+      "shapes": [
+        [
+          4800
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ],
+      "video_time_base": [
+        1,
+        30000
+      ]
+    }
+  ],
+  "gates_opened": false,
+  "host_before": {
+    "available_commit_bytes": 14048755712,
+    "commit_limit_bytes": 29784133632,
+    "physical_available_bytes": 7136022528
+  },
+  "phase": {
+    "kind": "phase",
+    "operation": "write_shared_slot",
+    "phase": "OUTPUT",
+    "sequence": 44
+  },
+  "qualification_sha256": "bc788128dece11faa2eb50a2758dbfffd6abaabedba4ca36863548deae5385df",
+  "release_calls": 20,
+  "resources": {
+    "active_process_limit": 1,
+    "decoder_versions": {
+      "ffmpeg": "8.0.1",
+      "libraries": {
+        "libavcodec": [
+          62,
+          11,
+          100
+        ],
+        "libavdevice": [
+          62,
+          1,
+          100
+        ],
+        "libavfilter": [
+          11,
+          4,
+          100
+        ],
+        "libavformat": [
+          62,
+          3,
+          100
+        ],
+        "libavutil": [
+          60,
+          8,
+          100
+        ],
+        "libswresample": [
+          6,
+          1,
+          100
+        ],
+        "libswscale": [
+          9,
+          1,
+          100
+        ]
+      },
+      "pyav": "16.1.0"
+    },
+    "diagnostic_arm": "COMMIT_1024",
+    "flags": 8968,
+    "isolation_version": "s2oe.decoder-isolation.v1",
+    "job_commit_limit": 1073741824,
+    "job_confirmed_before_media": true,
+    "memory_limit_messages": [],
+    "memory_limit_notification": false,
+    "native_log_bytes": 0,
+    "native_log_overflow": false,
+    "native_logs": [],
+    "peak_job_commit": 606253056,
+    "peak_process_commit": 599674880,
+    "private_profile": "s2oe.file-bound-uhd1024.v1",
+    "private_profile_digest": "3b05198bce27158d3feb49aed78fd8e2697573193b6d655a15108c0543496522",
+    "private_run_id": "decoder-uhd-sequence-20260911-01",
+    "process_commit_limit": 1073741824,
+    "queue_capacity": 1,
+    "read_counters_complete": true,
+    "request_seconds": 30.0,
+    "slot_bytes": 6240000,
+    "version": "s2oe.decoder-job.v2-phase-diagnostic",
+    "worker_closed": true,
+    "worker_exit_code": 1
+  },
+  "run_id": "decoder-uhd-sequence-20260911-01",
+  "select_calls": 24,
+  "status": "DECODER_SEQUENCE_COMPLETE",
+  "system_calls": 0
+}

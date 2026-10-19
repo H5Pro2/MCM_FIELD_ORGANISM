@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "D01_full_32_transition_and_324_target_mapping": "PASS",
+    "D02_independent_raw_pair_enumeration": "PASS",
+    "D03_live_matches_and_successors_equal_saved_U": "PASS",
+    "D04_first_break_partition_324": "PASS",
+    "D05_both_eligible_keys_no_pre_target_feedback": "PASS",
+    "D06_both_run_archives_unchanged": "PASS"
+  },
+  "policy_replays": 0,
+  "new_sources": 0,
+  "missing_required_evidence": []
+}

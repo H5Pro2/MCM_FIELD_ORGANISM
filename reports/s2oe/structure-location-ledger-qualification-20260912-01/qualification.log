@@ -1,0 +1,13 @@
+test_alternatives_and_reserve (tests.test_structure_ledger.Tests.test_alternatives_and_reserve) ... ok
+test_class_boundaries (tests.test_structure_ledger.Tests.test_class_boundaries) ... ok
+test_conflicting_reference (tests.test_structure_ledger.Tests.test_conflicting_reference) ... ok
+test_global_boundary (tests.test_structure_ledger.Tests.test_global_boundary) ... ok
+test_historical_limit_unchanged (tests.test_structure_ledger.Tests.test_historical_limit_unchanged) ... ok
+test_reference_class (tests.test_structure_ledger.Tests.test_reference_class) ... ok
+test_reference_counting (tests.test_structure_ledger.Tests.test_reference_counting) ... ok
+test_work_separation (tests.test_structure_ledger.Tests.test_work_separation) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.003s
+
+OK

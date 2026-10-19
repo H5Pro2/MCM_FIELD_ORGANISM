@@ -1,0 +1,9 @@
+{
+  "neutral_source": "integration-complete/case-01.gz:E:frame80",
+  "comparisons": 100,
+  "seconds": 0.2717652000137605,
+  "seconds_per_comparison": 0.002717652000137605,
+  "python_peak": 100733,
+  "extra_policy_arms": 0,
+  "reference_replays": 0
+}

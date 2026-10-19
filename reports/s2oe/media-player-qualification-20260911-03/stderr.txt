@@ -1,0 +1,15 @@
+test_01_private_metadata_limits_everywhere (tests.test_s2oe_player.PlayerQualification.test_01_private_metadata_limits_everywhere) ... ok
+test_02_authorization_required_and_single_use (tests.test_s2oe_player.PlayerQualification.test_02_authorization_required_and_single_use) ... ok
+test_03_projection_is_independent_and_immutable (tests.test_s2oe_player.PlayerQualification.test_03_projection_is_independent_and_immutable) ... ok
+test_04_complete_control_loop_and_one_verification (tests.test_s2oe_player.PlayerQualification.test_04_complete_control_loop_and_one_verification) ... ok
+test_05_early_stop_and_primary_error (tests.test_s2oe_player.PlayerQualification.test_05_early_stop_and_primary_error) ... ok
+test_06_http_origin_token_and_fixed_media (tests.test_s2oe_player.PlayerQualification.test_06_http_origin_token_and_fixed_media) ... ok
+test_07_preview_hash_and_read_account (tests.test_s2oe_player.PlayerQualification.test_07_preview_hash_and_read_account) ... ok
+test_08_browser_desktop_mobile_and_neutral_video (tests.test_s2oe_player.PlayerQualification.test_08_browser_desktop_mobile_and_neutral_video) ... ok
+test_09_native_player_stop_after_one_event (tests.test_s2oe_player.PlayerQualification.test_09_native_player_stop_after_one_event) ... ok
+test_10_binding_hash_and_nonselected_source_rejected (tests.test_s2oe_player.PlayerQualification.test_10_binding_hash_and_nonselected_source_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 16.410s
+
+OK

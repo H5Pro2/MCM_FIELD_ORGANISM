@@ -1,0 +1,17 @@
+test_01_valid_immutable_selected_admission (tests.test_media_restart_real_admission.AdmissionTests.test_01_valid_immutable_selected_admission) ... ok
+test_02_source_fields_rejected_at_both_sites (tests.test_media_restart_real_admission.AdmissionTests.test_02_source_fields_rejected_at_both_sites) ... ok
+test_03_profile_run_manifest_code_at_both_sites (tests.test_media_restart_real_admission.AdmissionTests.test_03_profile_run_manifest_code_at_both_sites) ... ok
+test_04_authorization_and_mode (tests.test_media_restart_real_admission.AdmissionTests.test_04_authorization_and_mode) ... ok
+test_05_neutral_conditions_both_sites (tests.test_media_restart_real_admission.AdmissionTests.test_05_neutral_conditions_both_sites) ... ok
+test_06_real_player_to_session_reaches_post_admission (tests.test_media_restart_real_admission.AdmissionTests.test_06_real_player_to_session_reaches_post_admission) ... ok
+test_07_file_entry_load_binding_and_no_payload (tests.test_media_restart_real_admission.AdmissionTests.test_07_file_entry_load_binding_and_no_payload) ... ok
+test_08_entry_rejects_before_any_launch (tests.test_media_restart_real_admission.AdmissionTests.test_08_entry_rejects_before_any_launch) ... ok
+test_09_file_entry_stage_dispatch_and_single_verification (tests.test_media_restart_real_admission.AdmissionTests.test_09_file_entry_stage_dispatch_and_single_verification) ... ok
+test_10_hash_read_counted_before_decode_even_on_error (tests.test_media_restart_real_admission.AdmissionTests.test_10_hash_read_counted_before_decode_even_on_error) ... ok
+test_11_stage_entry_reaches_both_guards_and_resets_gate (tests.test_media_restart_real_admission.AdmissionTests.test_11_stage_entry_reaches_both_guards_and_resets_gate) ... ok
+test_12_failure_prevents_verify_and_preserves_full_diagnostic (tests.test_media_restart_real_admission.AdmissionTests.test_12_failure_prevents_verify_and_preserves_full_diagnostic) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.360s
+
+OK

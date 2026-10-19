@@ -1,0 +1,10 @@
+{
+  "flags": 8448,
+  "inventory_sha256": "d8cfb6213167d818d33c7c7140361730ae6370107081912b99513b41d634d654",
+  "limit": 671088640,
+  "member": true,
+  "ns": 497379858840600,
+  "peak_job_commit": 19750912,
+  "peak_process_commit": 13185024,
+  "product_numpy_absent": true
+}

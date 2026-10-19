@@ -1,0 +1,9 @@
+{
+  "binding": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\provenance-appendix-development-20260920\\focused-01\\cases\\test_joint_verification_reserve_plus_one_rejects_individually_small_report\\bundle\\execution-binding.json",
+  "case": "success",
+  "folder": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\provenance-appendix-development-20260920\\focused-01\\cases\\test_joint_verification_reserve_plus_one_rejects_individually_small_report\\observer",
+  "inventory_sha256": "d8cfb6213167d818d33c7c7140361730ae6370107081912b99513b41d634d654",
+  "job": "Local\\MCM-V9-e2a37e566a390f2e242c798652912637",
+  "output": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2uc/provenance-appendix-development-20260920/focused-01/cases/test_joint_verification_reserve_plus_one_rejects_individually_small_report/S2UC-V9-NEUTRAL-01a61cf8dfe14c42bf5109dad6c40eb9",
+  "run_id": "S2UC-V9-NEUTRAL-01a61cf8dfe14c42bf5109dad6c40eb9"
+}

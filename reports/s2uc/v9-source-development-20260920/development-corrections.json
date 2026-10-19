@@ -1,0 +1,23 @@
+{
+  "focused_01": {
+    "tests": 17,
+    "passed": 14,
+    "errors": 3,
+    "cause": "Tuple keys in existing TARGETS/EXPECTED cannot be JSON object keys. Explicit story/ordinal string representation added without changing scientific tables.",
+    "correction_tests": {
+      "tests": 9,
+      "passed": 9,
+      "log": "correction-tests.log"
+    }
+  },
+  "evidence_budget_correction": {
+    "problem": "Full developer test-result repeats all IDs in list and status mapping; not admitted as a bounded qualification artifact.",
+    "solution": "Dedicated small qualification-summary.json binds current inventory and a separate exact full-ID PASS protocol tests.log. Reader enforces original individual ceilings and source-preparation accounting includes all read input artifact bytes.",
+    "tests": 2,
+    "passed": 2,
+    "log": "evidence-correction-tests.log"
+  },
+  "final_run": "final-02",
+  "independent_acceptance": "OPEN",
+  "real_execution_authorized": false
+}

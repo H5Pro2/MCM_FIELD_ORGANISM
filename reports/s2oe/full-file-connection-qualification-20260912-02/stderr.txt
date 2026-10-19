@@ -1,0 +1,21 @@
+test_01_selection_and_clocks (tests.test_s2oe_full_file.FullFileChecks.test_01_selection_and_clocks) ... ok
+test_02_frame_selection (tests.test_s2oe_full_file.FullFileChecks.test_02_frame_selection) ... ok
+test_03_mode_mixing (tests.test_s2oe_full_file.FullFileChecks.test_03_mode_mixing) ... ok
+test_04_decoder_limits (tests.test_s2oe_full_file.FullFileChecks.test_04_decoder_limits) ... ok
+test_05_packet_limit (tests.test_s2oe_full_file.FullFileChecks.test_05_packet_limit) ... ok
+test_06_early_eof (tests.test_s2oe_full_file.FullFileChecks.test_06_early_eof) ... ok
+test_07_drain_without_conversion (tests.test_s2oe_full_file.FullFileChecks.test_07_drain_without_conversion) ... ok
+test_08_worker_drain_protocol (tests.test_s2oe_full_file.FullFileChecks.test_08_worker_drain_protocol) ... ok
+test_09_stop_during_drain (tests.test_s2oe_full_file.FullFileChecks.test_09_stop_during_drain) ... ok
+test_10_all_envelopes (tests.test_s2oe_full_file.FullFileChecks.test_10_all_envelopes) ... ok
+test_11_native_full_session (tests.test_s2oe_full_file.FullFileChecks.test_11_native_full_session) ... ok
+test_12_failure_after_formation (tests.test_s2oe_full_file.FullFileChecks.test_12_failure_after_formation) ... ok
+test_13_player_stop_phase (tests.test_s2oe_full_file.FullFileChecks.test_13_player_stop_phase) ... ok
+test_14_qualification_scope_and_boundaries (tests.test_s2oe_full_file.FullFileChecks.test_14_qualification_scope_and_boundaries) ... ok
+test_15_bounded_logs_and_temporary_accounting (tests.test_s2oe_full_file.FullFileChecks.test_15_bounded_logs_and_temporary_accounting) ... ok
+test_16_combined_closure_and_reference_integrity (tests.test_s2oe_full_file.FullFileChecks.test_16_combined_closure_and_reference_integrity) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 30.032s
+
+OK

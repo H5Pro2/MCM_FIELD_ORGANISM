@@ -1,0 +1,206 @@
+MCM: PRUEFVERTRAG WIEDERERKENNUNG UND FORTSETZUNGSNUTZEN
+2026-09-30. PLANUNG. Keine Matchingimplementierung, Materialisierung oder Auswertung.
+Die Zeitabstandskontrollen sind abgeschlossen. Matching bleibt unveraendert.
+
+1. OPERATIONALE FRAGE UND UNABHAENGIGE WAHRHEIT
+Soll eine begrenzte, vorab definierte Veraenderung einer bereits erlebten
+Viererfolge derselben zugrunde liegenden Erfahrung zugeordnet werden koennen,
+ohne andere Erfahrungen faelschlich zuzuordnen? Und senkt eine gespeicherte
+Fortsetzung dabei den Vorhersagefehler gegenueber Persistenz?
+Diese beiden Fragen sind getrennt. Eine erkannte Herkunft ist kein Versprechen
+einer unveraenderten Zukunft. Dieser Vertrag definiert keine semantische oder
+allgemeine psychologische Identitaet.
+
+Eine Basis-Erfahrung E ist fuer diesen kleinen Test eine extern dokumentierte
+Episode: Originalaufnahme plus Quellintervall oder neutraler Erzeugungsauftrag
+mit festem Seed und zeitlichem Ablauf. Ihr Identifikator, Quellenhash, Intervall,
+Ableitungsrezept und Variantenzugehoerigkeit liegen ausschliesslich beim Pruefer.
+Eine Variante wird vor ihrer Verarbeitung ueber diesen Herkunftsgraphen E
+zugeordnet, niemals anhand von MAE, Matching, Lautstaerke oder Ergebnis.
+Unterschiedliche Basisepisoden sind getrennte Erfahrungen. Zwei Abschnitte
+desselben Videos werden nicht allein wegen ihres Abstandes als unabhaengige
+Erfahrungsidentitaeten behandelt. Unterschiedliche Ableitungsrezepte machen
+umgekehrt eine Variante nicht automatisch zu einer neuen Basis-Erfahrung.
+Bei ungeklärter Herkunft lautet das Prueferlabel UNGEKLAERT; der Fall darf
+keine Zuordnungsgenauigkeit belegen und wird vor Ausfuehrung zurueckgestellt.
+
+Der Predictor erhaelt nur regulaere48-Werte-Wahrnehmungen und betriebliche
+Stream-/Profil-/Zeitfelder. Keine Erfahrungs-ID, Variante, Positiv-/Negativ-
+Klasse, Sollfortsetzung, Testfallnummer oder Prüfermetrik im Eingang. Seine
+technischen Herkunftsreceipts werden erst ausserhalb des Systems auf den
+Pruefer-Herkunftsgraphen abgebildet. Technische Framesegmente sind keine Labels.
+
+2. KLEINE FESTE FALLMATRIX
+A=(a1,a2,a3,a4), B=(b1,b2,b3,b4) sind Viererfolgen mit extern bekannter
+Basis-Herkunft. Die nachfolgenden Sollangaben sind Pruefkriterien, keine
+behaupteten oder vorweg berechneten Matchergebnisse. Jede Zeile ist ein
+vorab eigener Stream; Paarphase niemals nach Matchresultat verschieben.
+
+ID | Fall / Prueferwahrheit | Hinweis und Folge | Erwartete sichere Einordnung | Heutiger Stand
+T0 | A identisch wiederholt | a1,a2 -> a3 | A korrekt; technische Positivkontrolle | direkt pruefbar, kein Robustheitsnachweis
+P1 | A globaler Gain1/2, gleiche Basis | v1,v2 -> v3 | Herkunft A; Nutzen separat | Faktorabruf kann exakte1/2-Relation erkennen; Fortsetzung enthaelt sich bei Faktor!=1
+P2 | A mit festem additivem Rauschen, gleiche Basis | n1,n2 -> n3 | Herkunft A waere Robustheitsziel | nur Diagnose mit heutigem Matcher; robuste Leistung nicht implementiert
+P3 | A, nur drittes Fenster Gain1/2, gleiche Basis | a1,a2 -> a3_halb | A korrekt moeglich, Zukunft trotzdem anders | heute pruefbar bei Materialvorlage; korrekte Zuordnung garantiert keinen Nutzen
+N1 | andere Basis B, gleiche nominale Signalstaerke | b1,b2 -> b3 | keine eindeutige Zuordnung zu A | heutiger Matcher pruefbar, andere Herkunft muss extern belegt sein
+N2 | anderer Vorgang zeitlich direkt neben A | c1,c2 -> c3 | keine eindeutige Zuordnung zu A | heutiger Matcher pruefbar; Nachbarschaft allein ist kein Herkunftslabel
+N3 | verschiedene Basisepisoden A/B mit gleichem Hinweis, nur A gespeichert | a1,a2 -> b3 | Hinweis allein identifiziert B nicht; A-Zuordnung waere falsch | heutiger Matcher kann A eindeutig melden; bewusster Gegenfall
+N4 | A/B mit gleichem Hinweis und unterschiedlichen Fortsetzungen, beide gespeichert | a1,a2 -> b3 | Mehrdeutigkeit erhalten, keine sichere Einzelzuordnung | heute mehrdeutiger Abruf pruefbar; keine Auswahl nach Folgeframe
+
+Gemeinsamer Hinweis in N3/N4 bedeutet exakt gleiche zwei Eingangswahrnehmungen,
+aber extern verschiedene vollstaendige Episoden. Beide koennen aus einem
+kontrollierten Ablauf mit gemeinsamem Anfang und verschiedenem spaeterem
+Ereignis stammen. Die Prueferidentitaet bezieht sich auf die vollstaendige
+Episode. Vor der Verzweigung kann kein rein kausales Verfahren mit identischem
+Vorzustand die verborgene Herkunft sicher unterscheiden. N3 ist daher eine
+Grenzpruefung, keine Forderung nach unmoeglicher Vorhersage. Eine sichere
+Zuordnung fuer alle solchen Faelle ist ausdruecklich kein Abnahmekriterium.
+N4 wird auch dann als mehrdeutig gewertet, wenn eine der gespeicherten
+Fortsetzungen spaeter zufaellig exakt stimmt.
+
+3. VORAB BENANNTE VERAENDERUNGEN
+P1: PCM-Gain exakt1/2 auf allen vier Fenstern. Keine Pegeloptimierung.
+P2: auf allen vier Fenstern deterministisches bipolares Rauschen mit Amplitude
+2^-12 im normalisierten PCM-Bereich, festem Generator/Seed vor Produktion.
+P3: ausschliesslich drittes Fenster PCM-Gain1/2, restliche Fenster unveraendert.
+Kein Clipping/Resampling/Neujustieren. Nichtendliche Werte, Domaenenverletzung
+oder Unterlaufvorgaben des gebundenen Profils fuehren zu technischer Ablehnung,
+nicht zum Wechsel auf eine guenstigere Variante. Generator und Seeds vor einem
+Materialauftrag konkret versiegeln. Heute wurden keine Varianten erzeugt.
+Gleiche genealogische Herkunft gilt durch das vorab gewaehlte Invarianzziel,
+nicht weil ein Matcher sie wiederfindet. Rauschrobustheit ist ein vorgeschlagenes
+Leistungsziel zur Entscheidung des Projektleiters, keine vorhandene Faehigkeit.
+N1: zwei getrennte neutrale Basis-Erzeugungsauftraege mit gleicher nominaler
+Amplitude, aber unterschiedlichem zeitlichem Signalverlauf; kein nachtraegliches
+Angleichen anhand der beobachteten Vektoren. Gemessene Beträge nur berichten.
+N2: zwei extern segmentierte Ereignisse mit unabhaengigen Erzeugungs-/Aufnahme-
+marken direkt nacheinander; keine semantischen Grenzen aus dem Vektorabstand.
+
+4. ERFAHRUNGSAUFBAU UND PRUEFPOSITIONEN
+Jede Geschichte startet leer. T0,P1,P2,P3,N1,N2,N3: A-A durch zwei regulaere
+Viereraufnahmen, danach genau ein Hinweis-Paar und ein Folgeframe. Kein direktes
+Schreiben in Memory. Ueber alle erreichbaren Paare waehrend dieses Ablaufs
+Receipts erhalten; Lernphase und fest vorab markierte Pruefposition getrennt
+bilanzieren, keine erfolgreichen Lernpositionen in Prueferfolge umdeuten.
+N4: A-A-B-B, danach dasselbe feste Pruefpaar und ein Folgeframe. Zwei bestaetigte
+Spuren innerhalb bestehender Kapazitaet. Falls tatsaechlicher Aufbau dies nicht
+liefert, als Aufbauabweichung berichten, keine Reparatur durch Vorbelegung.
+Als getrennte Rollenprobe T0 zusaetzlich A einmal regulaer aufnehmen und danach
+pruefen: vorlaeufiger Kandidat statt bestaetigter Erhaltung. Diese technische
+Rollenprobe zaehlt nicht als neue unabhängige Basiserfahrung.
+Feste Paare ab erstem Frame, keine Offsetsuche oder nachtraeglicher Reset.
+Hinweis0/1 und gespeicherter Nachfolger2 sind hier vorab fest; keine Behauptung
+allgemeiner zeitlicher Invarianz. Restframe genau einmal aufnehmen, Abschluss
+wie bestehender Adapter. Keine versteckte Erweiterung von16+2 plus2 Ausgaben.
+
+5. ZUORDNUNGSBEWERTUNG
+Vorhersage- und Zuordnungsreceipts vor Beobachtung der Fortsetzung einfrieren.
+Eindeutige Zuordnung: genau eine vom System ausgegebene Herkunft. KORREKT,
+wenn der externe Basis-ID-Abgleich stimmt, sonst FALSCH. Rollen Kandidat und
+bestaetigte Spur getrennt. Mehrere Matchherkuenfte bleiben MEHRDEUTIG, auch
+wenn sie zufaellig derselben Basis-ID zugeordnet werden koennen; Prueferwissen
+darf die Systementscheidung nicht nachtraeglich vereinfachen. Kein Match ist
+ENTHALTUNG. Korrekte Zurueckweisung bei negativen Faellen getrennt ausweisen;
+Enthaltung bei einem positiven Fall ist fehlende Abdeckung, kein Erfolg.
+Bericht: absolute Zahlen KORREKT/FALSCH/MEHRDEUTIG/ENTHALTUNG nach Fall und
+positiver/negativer Klasse, Zuordnungsabdeckung, korrekte Zuordnungen pro allen
+positiven Positionen, falsche Einzelzuordnungen pro allen negativen Positionen.
+Bei leerem Nenner undefiniert, nicht null Prozent behaupten. Keine Gesamtnote.
+
+6. FORTSETZUNGSNUTZEN UND KAUSALITAET
+Fuer jede festgelegte Zielposition wird Persistenz aus dem zweiten Hinweisframe
+und ggf. konkrete Kontextfortsetzung gebunden, bevor der Folgeframe angefordert
+wird und vor Aufnahme des Hinweispaars. Zugriffsgate an jeder Zielposition.
+Eingang/Folgeframe unveraendert aufnehmen. Herkunftslabel und Sollfolge bleiben
+im getrennten Pruefer. N3/N4 duerfen nicht mit Zukunftswissen aufgeloest werden.
+Nutzung und Erkennung koennen unterschiedliche Abdeckung haben: P1 kann eine
+Herkunft liefern, aber keine vom heutigen Verfahren spezifizierte Fortsetzung.
+
+MAE(p,y)=fsum(abs(p[k]-y[k]))/48. Keine Skalierung, Gewichtung oder Toleranz.
+Auf exakt denselben gemeinsam abgedeckten Zielpositionen:
+Delta=MAE(Persistenz,y)-MAE(Kontext,y); positiv heisst Kontext besser.
+Alle Einzelwerte und Anzahl besser/gleich/schlechter, mittlere MAE beider Arme
+und Delta berichten. Zusaetzlich Persistenz-MAE auf ALLEN festgelegten Zielen,
+Kontext-/Persistenzabdeckung und jede Enthaltungsursache getrennt.
+Bei0 Kontextprognosen Nutzenvergleich undefiniert, kein Nullfehler-Vorteil.
+
+Ergaenzender observerseitiger Vollabdeckungsvergleich: festes Ausgabeschema
+nimmt Kontext, wenn eine zulaessige konkrete Prognose vorliegt, sonst Persistenz.
+Seine MAE gegen reine Persistenz auf allen identischen Zielpositionen berichten.
+Dies ist ausschliesslich ein Auswertungsschema, keine neue Produkt-Fallbackregel
+oder Rueckkopplung. Es verhindert, dass das Auslassen schwieriger Faelle allein
+als Gesamtverbesserung gilt. Zugeordnete Herkunft und Zukunftsfehler nebeneinander
+zeigen, besonders P3. Gleichheit bleibt numerisch exakt, keine neue Schwelle.
+
+Technische Abnahme: Bindungen, Herkunftstrennung, regulaere Aufnahme, kausale
+Gates und identische Speicherzustaende zur Referenz bestehen. Fachlicher
+Nutzenbefund separat: nur wenn auf vorab unberuehrtem Pruefmaterial eine
+positive mittlere MAE-Differenz im Vollabdeckungsschema vorliegt, darf ein
+Nutzen auf diesem kleinen Pruefbestand berichtet werden; Abdeckung und jeder
+Schadensfall bleiben sichtbar. Keine allgemeine Nutzenbehauptung oder
+statistische Generalisierung aus dieser kleinen Fallmatrix. Erkennungsnutzen
+und Vorhersagenutzen duerfen nicht gegeneinander verrechnet werden.
+
+7. VORHANDENES MATERIAL UND KONKRETE LUECKEN
+- reports/s2uc/pcm-temporal-20260930-01/result.json: W1-W4 aus
+  sources/s2uc/temporal-chirp-v1/sequence.pcm, SHA256
+  4774f24ad52ec7e431c360ec1f2d18c663584d1ed3fbffa83fa0f4fe3d5442a6.
+  Technische T0-Kontrolle und bekannte Montagen, explorativ mehrfach benutzt.
+  Keine unabhaengige Abschlusspruefung oder natuerliche Erfahrungsidentitaet.
+- reports/s2uc/context-prediction-20260930-03/result.json: bekannte kontrollierte
+  Fortsetzungs-/Mehrdeutigkeitsfaelle, geeignet zur Wiederverwendung als
+  Entwicklungsregression; keine neue unabhaengige Evidenz durch Wiederholung.
+- reports/s2uc/pcm-temporal-20260930-01/half-W2.pcm und half-W3.pcm:
+  vorhandene Gain-Ableitungen bestimmter Fenster. Kein vollstaendig gebundener
+  Viererbestand fuer alle hier benannten Varianten. Faktorabruftests belegen
+  technische Relationen; sie ersetzen keinen unabhaengigen Herkunftstest.
+- reports/s2uc/nasa-contiguous-materialization-20260930-01/window-001..100.json:
+  unveraenderter explorativer Abschnitt. Nutzbar fuer Observer-/Leserregression;
+  keine extern bekannte Wiederholungsidentitaet oder vorab unberuehrte Pruefung.
+- sources/media/NASA Earthrise Realtime Apollo 8.mp4: bereits bekannte Quelle.
+  Untersuchte Nachbarschaft und getrennte Intervalle liefern fuer sich keine
+  positiven/negativen Erfahrungslabels. Keine neue Dekodierung freigegeben.
+
+Fehlend: zwei vorab getrennte Materialfamilien mit unabhaengigen Basisepisoden,
+versiegeltem Herkunftsmanifest und allen kontrollierten Varianten/Gegenfaellen.
+Minimaler Beschaffungsvorschlag: neutraler Generator mit zwei unabhaengigen
+Basisepisoden pro Familie plus dokumentierter gemeinsamer-Anfang-Verzweigung
+und zeitlich benachbartem getrennten Ereignis. Gleiche Transformationsrezepte,
+aber getrennte Seeds/Auftraege fuer Entwicklungs- und Prueffamilie. Herkunft
+kommt aus dem Erzeugungsprotokoll, nicht aus einem gewuenschten Matchresultat.
+Die genaue Quellen-/Seed-/Versionsbindung fehlt noch und muss vor Produktion
+im separaten Materialauftrag festgelegt werden. Keine Leistungsfaehigkeit auf
+natuerlichen Wiederaufnahmen aus synthetischen Episoden ableiten.
+
+8. ENTWICKLUNG, PRUEFUNG UND HEUTIGE FAEHIGKEIT
+Alle Derivate einer Basisepisode gehoeren zur gleichen Familie/Partition.
+Keine Fenster-/Variantenaufteilung derselben Episode zwischen Entwicklung und
+abschliessender Pruefung. NASA und W1-W4 bleiben ausschliesslich Entwicklung.
+Vor Zugriff auf Pruefwerte: Regel, Parameter, Varianten, Paarphase, Zielindices,
+Herkunftsmanifest und Auswertungscode binden. Pruefer darf Herkunft technisch
+validieren; Entwickler darf aus Pruefresultaten nicht weiter abstimmen und dann
+dieselben Faelle als unabhängigen Erfolg ausgeben. Spaetere Anpassung verbraucht
+diesen Bestand als Entwicklung und benoetigt neue unberuehrte Basisepisoden.
+
+Heute direkt moeglich, soweit Daten vorliegen: exakte technische Wiederholung,
+positionsgleicher Faktorabruf0,5/1/2, vorlaeufige/bestaetigte Rollen,
+Mehrdeutigkeit, Fehlzuordnung bei identischem Hinweis, unveraenderte Faktor1-
+Fortsetzung, Persistenz und observerseitige MAE. Materialherkunft und neue
+Auswertungstabellen erfordern einen kleinen separaten Pruefertreiber, keine
+Aenderung des Organismus. Exakte Bestaetigung bleibt auf identische Viererwerte
+beschraenkt; erkannte Gain-Variante bestaetigt eine Spur heute nicht automatisch.
+Gesonderte fachliche Entscheidung/Implementierung erforderlich fuer robuste
+Rausch-/Zeitverschiebungserkennung, nicht-exakte Bestaetigung, skalierte
+Fortsetzungswerte bei Faktor0,5/2 oder unsicherheitsbewusstes Einzelmatch-
+Enthalten bei unbekannter Zweigherkunft. Keine dieser Erweiterungen ist hier
+beauftragt. P2 darf heute als Diagnose scheitern, ohne Matcherlockerung.
+
+9. MINIMALER UMSETZUNGSVORSCHLAG AN PROJEKTLEITER
+Zuerst einen getrennten Herkunfts-/Bewertungstreiber entwickeln: unveraenderte
+Adapter, private Prueferlabels, Fallmatrix, Kausalitaetsgates, Zuordnungsbilanz
+und gepaarte MAE inklusive festem Vollabdeckungsschema. Mit vorhandenen
+W1-W4-Regressionsdaten nur technisch pruefen; keine neue Forschungsbehauptung.
+Parallel konzeptionell die Herkunfts-/Seedbindung zweier neutraler Familien
+festlegen, ohne Produktion. Danach getrennt ueber Materialisierung und
+Ausfuehrung entscheiden. Erst deren Befunde und ein separat beauftragtes
+Robustheitsziel koennen eine Matchingaenderung begruenden. Keine weitere
+Zeitabstandssuche oder ungefragte neue Quellenverarbeitung.

@@ -1,0 +1,11 @@
+test_abrupt_exit_preserves_native_log (test_s2oe_isolation.IsolationTests.test_abrupt_exit_preserves_native_log) ... ok
+test_default_and_forbidden_stage (test_s2oe_isolation.IsolationTests.test_default_and_forbidden_stage) ... ok
+test_job_message_kinds_remain_distinct (test_s2oe_isolation.IsolationTests.test_job_message_kinds_remain_distinct) ... ok
+test_native_log_bound_is_explicit (test_s2oe_isolation.IsolationTests.test_native_log_bound_is_explicit) ... ok
+test_original_native_exception_and_message (test_s2oe_isolation.IsolationTests.test_original_native_exception_and_message) ... ok
+test_two_native_job_bindings (test_s2oe_isolation.IsolationTests.test_two_native_job_bindings) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.763s
+
+OK

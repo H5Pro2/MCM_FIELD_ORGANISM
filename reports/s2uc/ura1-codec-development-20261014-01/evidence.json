@@ -1,0 +1,44 @@
+{
+  "D_hand_case": {
+    "compact_archive_sha256": "9b92d4f01122e0e8574e21c3974bcf3c77a4826d2215c808eb7ff2f66e5bf6d3",
+    "encoded_bytes": 276323,
+    "gzip_bytes": 24408,
+    "max_depth": 11,
+    "nodes": 2733,
+    "original_archive_sha256": "ce150a5687745797069503062153c431eb55514854d7a83306cf0d8a9a0b17cb",
+    "original_gzip_bytes": 51765,
+    "reconstructed_bytes": 3860092,
+    "reconstructed_sha256": "0218d45a1965c86b52035ea2be38b0b5bba148d556c12073dc914fbfc3eae876",
+    "reconstruction_memory": {
+      "materialized": {
+        "python_current_bytes": 15668267,
+        "python_peak_bytes": 19531679
+      },
+      "stream": {
+        "python_current_bytes": 2128552,
+        "python_peak_bytes": 8589858
+      }
+    }
+  },
+  "lifecycle_trace": {
+    "compact_archive_sha256": "933a24c0d9c189bc5ca745852417cad45e6bc06fc2040ce68422a897be4f4b61",
+    "encoded_bytes": 266560,
+    "gzip_bytes": 19732,
+    "max_depth": 11,
+    "nodes": 2179,
+    "original_archive_sha256": "bedc399d9fd347b3e898430d07040d8648865fde67631b06e2e78998eb2af23d",
+    "original_gzip_bytes": 124396,
+    "reconstructed_bytes": 13380342,
+    "reconstructed_sha256": "940b29d1f24deac9e1dfcf575234089ff6c78d29415aefce7972598fe66996cd",
+    "reconstruction_memory": {
+      "materialized": {
+        "python_current_bytes": 48566654,
+        "python_peak_bytes": 61950316
+      },
+      "stream": {
+        "python_current_bytes": 2050150,
+        "python_peak_bytes": 8585166
+      }
+    }
+  }
+}

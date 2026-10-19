@@ -1,0 +1,1 @@
+{"all_before_policy":true,"entries":[{"path":"ER1-neutral-01-source.json","replicate":1,"sha256":"a493117bf0bc9b488d0175bb992a7591bb74ed7a5508a28f4b0043fcc7fc485e"},{"path":"ER1-neutral-02-source.json","replicate":2,"sha256":"4cac9f668823da28c10b1eba73aa586567c02bfdd454004d5c9aa87a79370f92"}],"namespace":"MCM-ER1/neutral/hand/v1"}

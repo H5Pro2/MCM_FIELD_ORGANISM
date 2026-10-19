@@ -1,0 +1,113 @@
+MCM S2UC -- AR-Generator, Export, Auswertungsanschluss und Auswahlfunktion
+2026-10-01
+
+ABGESCHLOSSEN
+M1-M7:7/7 PASS auf endgueltig gebundenem Code, keine Fehler/Skips.
+Nur neutrale Entwicklungskonfigurationen und handgeschriebene Auswahlresultate.
+AR-DEV und AR-EVAL weiterhin unproduziert; keine Forschungskalibration und
+keine Parametersuche auf AR-Daten. Bisherige Adapter unveraendert, keine
+unveraenderten Adaptervolltests erneut ausgefuehrt.
+
+KALIBRATIONSPRAEZISIERUNG OHNE REZEPTAENDERUNG
+Jede Komponente des vorgesehenen bipolaren Kalibrationsrauschens hat den Betrag
+2^-10. Deshalb betraegt die mittlere Absolutamplitude jedes48er-Frames exakt
+2^-10 und das Maximum ueber acht solche Frames ebenfalls2^-10. Die spaetere
+Kalibration prueft Rezepttreue; sie schaetzt keinen unbekannten Rauschboden.
+Heute wurde nur dieses Rezept an einer separat gebundenen neutralen Konfiguration
+geprueft. Kein AR-Seed wurde zur Erzeugung benutzt. Keine Schwelle aus NASA.
+Der urspruengliche Plan bleibt bytegleich; die Klarstellung steht zusaetzlich
+in der Produktionsbindung und im Exportmanifest.
+
+IMPLEMENTIERUNG
+- tools/s2uc_ar_material.py: Bindungs-/Autorisierungspruefung, feste Synthese,
+  Herkunft, Export, Fehlerabschluss und Integritaetsleser. Kein Matcherzugriff,
+  keine Parametersuche, keine Ersatzdaten. Bestehende xorshift32-Funktion,
+  Hash-/JSON-Funktionen und OutputLedger werden wiederverwendet.
+- tools/s2uc_ar_compare.py: Anschluss an unveraenderten Signal-/Naeherungs-
+  Observer; getrennte reine Auswahlfunktion fuer bereits gelieferte Resultate.
+  Sie startet weder Generator noch Suche oder Evaluation automatisch.
+- tests/test_s2uc_ar_material.py: sieben gezielte technische Pruefgruppen.
+
+BINDUNGEN
+Originalplan SHA256 40410b187f813cb546e44cca01ac353f85bdc70d4b29e5b0fc057ac3f6feb5fd
+Zusatzbindung docs/S2UC_AR_PRODUKTIONSBINDUNG_20261001.json
+SHA256 87306a9ef5e67c47fd99d0643a38513dae40ad7f684ccbae898fff7801f9257e
+Bestehende Code-/Test-/Vertrag-/Laufzeitbindungen werden weiterhin einzeln
+geprueft; neue Bindung ergaenzt Generator, Export, Leser, Observeranschluss,
+Auswahlfunktion, Hilfsfunktionen und Tests. Keine alte Bindung ueberschrieben.
+
+NEUTRALE TESTBELEGE
+M1: voller Produktionspfad, unabhaengige skalare PRNG-/Basis-/Rausch-Nachrechnung,
+bitgebundener JSON-Roundtrip, A/D-Praefix, R1/R3 identische Hinweise, R2-Amplitude,
+Mischherkunft M, Kleinsignal-Gain, Profile/Herkunft und Kalibrationsrezept.
+Zweite eigene neutrale Ausgabe reproduziert dieselben Werte. Originale
+Vorabplaene/Autorisierungen jeder neutralen Ausgabe bleiben erhalten.
+M2: eigener neutraler Evaluationpfad mit null Kalibrationsframes. Draw-Aufrufe
+instrumentiert: reservierter Kalibrationsseed nicht verwendet; Leser sieht
+leere Kalibration. recipe_epsilon verweigert leere Evaluation-Kalibration.
+M3: exklusive Ordneranlage verhindert Wiederholung vor Synthese; Dateianlage
+verhindert Ueberschreiben. Bestehende Datei-/Ordnerhashes bleiben unveraendert.
+M4: reduzierte Ausgabekapazitaet -> NOT_EVALUABLE/OUTPUT_LIMIT mit reserviertem
+Abschluss innerhalb Grenze. Injizierter Exportfehler nach Teilbestand ->
+NOT_EVALUABLE, Teilbestand/Zaehler erhalten. Reader verweigert Auswertung,
+zweiter Produktionsaufruf wird abgewiesen.
+M5: PENDING verweigert; Mengenabweichungen verweigert; Manipulation durch
+Dateihash erkannt. Auch nach Anpassung eines Hashes verhindert der unabhaengige
+Ableitungsabgleich eine geaenderte R1-Folge.
+M6: gesamter neutraler Export durch den Vergleichsadapter:11 Pruefziele,
+48 Lernziele getrennt; beide Arme benutzen legacy_v1. Keine internen
+legacy/scaled-Schluessel in den oeffentlichen Vergleichsstrukturen. R3:
+exakte Prognose undefiniert bei Enthaltung; exaktes Beobachterschema MAE0.
+M7: handgeschriebene Ergebnisfaelle pruefen genau sieben verschiedene tau,
+positionstreue Fehlerregel (kein Verrechnen), Maximierung ausschliesslich
+korrekter R1/R2-Zuordnungen, kleinsten tau bei Gleichstand, unveraenderte
+Referenz, fehlenden Zugewinn und vollstaendige Unzulaessigkeit. Keine Bewertung
+von AR-Material. NO_GAIN_NO_EVALUATION_SELECTION bzw. NO_ELIGIBLE_PARAMETER
+liefern selected_tau=null; keine Auswahl fuer Evaluation.
+Ein technisch zulaessiger Kandidat autorisiert keine Evaluationausfuehrung.
+
+ARTIFAKTE UND RESSOURCEN
+Neutraler DEV-Erfolg:21 Dateien;768 Basiskomponenten,2 Rausch-Hinweisframes,
+3 reine Stoerungsframes und8 Kalibrationsframes;11 Falldateien mit129 Frames.
+Ausgabe 131264/4194304 Byte einschliesslich Abschluss;262144 Byte
+Abschlussreserve. Evaluationexport enthaelt explizit leere Kalibrationsdatei,
+keine Kalibrationsdraws. Generierung durch feste Schleifen/Mengen begrenzt.
+Dateihashes im Manifest, binäre binary64-Wertehashes in Quellen/Faellen,
+Ableitungsabgleich im Leser. Kein Audio-/NJ-Aufruf. Observerarchive liegen
+separat; kein harter Prozess-RAM-Nachweis aus dieser Qualifikation.
+Vollstaendige Test-IDs und Facts: tests.txt/tests.json. Neutraler Vergleich
+liegt unter dem dort gebundenen comparison.path.
+
+EINDEUTIGE AUSWERTUNGSBEZEICHNUNGEN
+Oeffentliche Arme: exact_retrieval = Exakter Abruf,
+signal_approx_retrieval = Signal-/Naeherungsabruf. Beide Fortsetzung legacy_v1.
+Kein factor_scaled_v1-Aufruf. Die Adapterpolicy kann Approximation liefern,
+aber keine neue Faktorfortsetzung wird eingeschaltet. context_mae=null heisst
+keine konkrete Prognose; observer_hybrid_mae/full_rows enthalten ausdruecklich
+Kontext-sonst-Persistenz. Abdeckung, Herkunft, verlorene exakte Zuordnungen,
+zusätzliche Fehlzuordnungen und Prognoseschäden bleiben unterscheidbar.
+Der reine Selector bekommt ausschliesslich Kategorien je Fall/Arm/tau;
+MAE oder Erfolge ausserhalb R1/R2 koennen seine Auswahl nicht beeinflussen.
+
+KONKRETER SPAETERER AR-DEV-AUFRUF, HEUTE NICHT AUSGEFUEHRT
+Arbeitsverzeichnis: C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace
+C:/Python314/python.exe -m tools.s2uc_ar_material produce docs/S2UC_AR_DEV_AUTORISIERUNG_20261001.json
+
+Vorlage: docs/S2UC_AR_DEV_AUTORISIERUNG_VORLAGE_20261001.json, Status PENDING.
+Erst nach separater Beauftragung eine passende AUTHORIZED_ONCE-Datei am
+angegebenen Pfad erstellen. Ausgabe reports/s2uc/signal-approx-material-ar-dev-01.
+Dieser Aufruf produziert nur Material; keine Kalibration oder Suche startet
+automatisch. Erfolg Exit0, Produktionsfehler Exit1 mit Abschluss; kein Retry.
+Ein spaeterer Entwicklungsauftrag kann recipe_epsilon auf die dann autorisierten
+DEV-Kalibrationsframes anwenden, evaluate_export fuer die sieben festen tau
+aufrufen und deren selection_rows an select_parameters uebergeben. Jede
+Auswertung und das Auswahlresultat sind zu speichern; keine Gitterverfeinerung.
+Evaluation-Kalibration bleibt ausgeschlossen; epsilon/tau vor Evaluation binden.
+
+NAECHSTER VORSCHLAG AN PROJEKTLEITER
+Paket technisch abnehmen. Danach einmalige AR-DEV-Produktion und ausdruecklich
+begrenzte Siebener-Suche beauftragen. Ohne zusaetzlichen korrekten R1/R2-Treffer
+oder bei fehlender zulaessiger Einstellung keine Auswahl zur Evaluation.
+AR-EVAL bleibt bis zu dieser Entscheidung unproduziert. Ein technischer PASS
+belegt keinen Robustheitsgewinn; zusaetzliche falsche Einzelzuordnungen auf
+Evaluation verhindern weiterhin die fachliche Abnahme.

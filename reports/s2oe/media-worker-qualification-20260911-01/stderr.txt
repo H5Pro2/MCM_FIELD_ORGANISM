@@ -1,0 +1,19 @@
+test_01_fixed_profile_and_private_limits (tests.test_s2oe_worker.WorkerQualification.test_01_fixed_profile_and_private_limits) ... ok
+test_02_active_job_before_neutral_source_open (tests.test_s2oe_worker.WorkerQualification.test_02_active_job_before_neutral_source_open) ... ok
+test_03_assignment_failure_prevents_source_open (tests.test_s2oe_worker.WorkerQualification.test_03_assignment_failure_prevents_source_open) ... ok
+test_04_child_rejects_missing_job_before_media (tests.test_s2oe_worker.WorkerQualification.test_04_child_rejects_missing_job_before_media) ... ok
+test_05_os_denies_memory_overload (tests.test_s2oe_worker.WorkerQualification.test_05_os_denies_memory_overload) ... ok
+test_06_actual_thirty_second_timeout (tests.test_s2oe_worker.WorkerQualification.test_06_actual_thirty_second_timeout) ... ok
+test_07_single_slot_and_immutable_transfer (tests.test_s2oe_worker.WorkerQualification.test_07_single_slot_and_immutable_transfer) ... ok
+test_08_native_conversion_inside_limited_worker (tests.test_s2oe_worker.WorkerQualification.test_08_native_conversion_inside_limited_worker) ... ok
+test_09_native_full_session_through_worker (tests.test_s2oe_worker.WorkerQualification.test_09_native_full_session_through_worker) ... ok
+test_10_stop_blocked_worker_preserves_formation (tests.test_s2oe_worker.WorkerQualification.test_10_stop_blocked_worker_preserves_formation) ... ok
+test_11_unexpected_worker_exit_preserves_primary (tests.test_s2oe_worker.WorkerQualification.test_11_unexpected_worker_exit_preserves_primary) ... ok
+test_12_message_limits_and_profile_tampering (tests.test_s2oe_worker.WorkerQualification.test_12_message_limits_and_profile_tampering) ... ok
+test_13_full_envelopes_and_budget_boundaries (tests.test_s2oe_worker.WorkerQualification.test_13_full_envelopes_and_budget_boundaries) ... ok
+test_14_hash_rejection_before_neutral_analysis (tests.test_s2oe_worker.WorkerQualification.test_14_hash_rejection_before_neutral_analysis) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 84.258s
+
+OK

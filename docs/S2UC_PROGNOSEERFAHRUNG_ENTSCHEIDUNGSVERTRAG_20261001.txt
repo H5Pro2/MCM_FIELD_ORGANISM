@@ -1,0 +1,219 @@
+MCM -- Entscheidungsvertrag: vergangene Prognosefehler fuer spaetere Auswahl
+2026-10-01 | KONZEPT, KEINE IMPLEMENTIERUNG ODER MATERIALPRODUKTION
+
+1. Ausgangspunkt und genau eine Variante
+
+AN-EVAL ist im dokumentierten Umfang abgenommen. signal_approx_v1 bleibt
+experimentell; exakter Abruf und legacy_v1 bleiben Standard. Die Trennung
+von Herkunft und Fortsetzungsnutzen besteht bereits. R1/R3 lassen sich bei
+identischer Vergangenheit vor dem Ziel nicht sicher unterscheiden.
+
+Neue, begrenzte Hypothese: Zwei gleitende Fehlerwerte vergangener eigener
+Prognosepaare koennen die spaetere Auswahl zwischen Kontext und Persistenz
+verbessern, wenn sich die relative Verlaesslichkeit ueber mehrere Ereignisse
+haelt. Variante: paired_error_ema_v1, ausschliesslich als neuer optionaler
+Auswahlzusatz am bestehenden Fortsetzungsadapter, nicht im Feld/Rezeptor.
+Kein neuer Abruf, keine Aenderung von Spurwerten, Bestaetigung oder Erhaltung.
+
+2. Regel und kausale Reihenfolge
+
+Bei einem einzelnen zulaessigen Abruf mit vorhandenem Nachfolger berechnet
+der bestehende legacy_v1-Pfad unveraendert den Kontextvorschlag C_t.
+P_t ist unveraendert der letzte Hinweisframe als Persistenzvorschlag.
+Pro Schluessel K werden zwei binary64-Werte E_C,E_P und ein Gueltigkeitsbit
+gehalten. Vor Anfordern des Folgeframes wird die Entscheidung eingefroren:
+
+  gueltige Erfahrung und E_C < E_P: Kontext C_t waehlen;
+  sonst: Persistenz P_t waehlen (auch bei Gleichstand oder neuer Spur).
+
+Kein Mindestabstand, keine weitere Schwelle, keine Parametersuche.
+alpha=1/2 fest. Erst wenn der passende t-te Folgeframe Y_t tatsaechlich
+ueber den normalen Wahrnehmungseingang eingetroffen und validiert ist:
+
+  e_C = sum_k(abs(C_t[k]-Y_t[k]))/48
+  e_P = sum_k(abs(P_t[k]-Y_t[k]))/48
+  erste gueltige Paarbeobachtung: E_C=e_C, E_P=e_P, gueltig=true;
+  danach: E_C=0.5*E_C+0.5*e_C, E_P=0.5*E_P+0.5*e_P.
+
+Die Aktualisierung beeinflusst erst spaetere Entscheidungen. Keine Labels,
+Phasen, Wechselzeitpunkte, Trefferurteile oder vorberechneten MAE-Werte aus
+dem externen Auswerter als Eingang. Der Zusatz berechnet beide MAE selbst
+aus seinen eingefrorenen Vorschlaegen und dem eingetroffenen Wahrnehmungsframe.
+Dies ist neu vorgeschlagener Prognosestatus; der heutige getrennte Observer
+wird nicht stillschweigend zur Lernquelle umfunktioniert.
+
+Beide Fehler werden auch dann verglichen, wenn Persistenz ausgewaehlt war.
+C_t bleibt hierzu ein nicht ausgegebener Schattenvorschlag. Andernfalls
+koennte eine einmalige Kontextablehnung ihre eigene spaetere Korrektur sperren.
+Das ist hier moeglich, weil die Prognose den eintreffenden Sensorframe nicht
+beeinflusst; keine Aussage ueber handlungsabhaengige Gegenfakten.
+
+Reihenfolge: Abruf/Vorschlaege/Entscheidung einfrieren -> Folgeframe anfordern
+-> Index/Scope/Werte validieren -> beide Fehler atomar aktualisieren, falls
+K noch lebt -> beide Vorschlagsslots freigeben -> normalen Frame einmal aufnehmen.
+Der bereits bestehende Hinweis-Admission-Pfad kann K zwischen Prognose und
+Ziel bereits verdraengt haben: dann kein Update und keine Wiederbelebung.
+Duplicate, fehlendes Ziel, Abbruch oder falscher Scope: kein Update. Bei
+Ueberlauf/Nichtendlichkeit Fehlerbehandlung/Abbruch, keine Ersatzfehlerwerte.
+
+3. Exakter Erfahrungsbezug und Lebensdauer
+
+K=(Sitzungsscope, Rolle, Generation, Hinweisoffset, Matchqualitaet).
+Scope ist der bestehende Owner/Stream/Profil-Vertrag des Adapters; keine
+Generatorherkunft oder semantische ID. Rolle: candidate oder retained.
+Generation: vorhandene technische Spuridentitaet, innerhalb Rolle/Sitzung
+nicht wiederverwendet. Offset:0 oder1; Offset2 hat keinen Folgeframe in der
+Viererspur und bekommt keine Fehlerzelle. Matchqualitaet:EXACT/APPROXIMATE.
+Beim exakten Abruf ohne entsprechendes Feld gilt EXACT. Abrufkonfiguration
+ist sitzungsfest; kein Vermischen verschiedener epsilon/tau/Policies.
+
+Neue Spur: leere Zellen, zunaechst Persistenz. Candidate->retained wird als
+neue Rollen-/Generationsbindung behandelt: keine Fehleruebernahme. Das ist
+bewusst konservativ und kann bei haeufigen Promotionen Nutzen verhindern.
+Exakte Bestaetigung/FIFO-Aktualisierung derselben erhaltenen Generation:
+Fehler bleiben bestehen; Bestaetigung selbst aendert keinen Fehlerwert.
+Verdrängung, Kandidatenersatz oder Generationstausch: zugehoerige Zellen sofort
+loeschen. Wiederkehrende gleiche Werte in neuer Generation erben nichts.
+Owner-/Stream-/Profilwechsel oder Sitzungsende: kompletter Zusatzstatus leer.
+Keine Persistierung/Checkpoint-Mitnahme in dieser Variante.
+
+Ohne einzelnen Kontext, bei Mehrdeutigkeit, Signal-Enthaltung oder fehlendem
+Nachfolger wird Persistenz gewaehlt; kein Fehlerpaar und kein Update fuer K.
+Ein fehlender Kontextfehler ist weder0 noch ein Misserfolg. Auch Persistenz-
+Einzelfehler solcher Positionen gehen nicht in die paarweisen E_P-Werte ein.
+Keine Aktualisierung aller moeglichen Treffer bei Mehrdeutigkeit.
+Keine zeitliche Verfallsregel: Erfahrung bleibt bis zum naechsten gueltigen
+Paarereignis oder Lebensdauerende bestehen. Lange Luecken koennen sie veralten
+lassen; das wird als Grenze ausgewiesen, nicht durch eine zweite Regel verdeckt.
+
+4. Vollstaendiger zusaetzlicher Zustand und Aufwand
+
+Bestehende Kapazitaet: zwei retained-Spuren plus ein candidate. Je zwei
+nachfolgerfaehige Offsets und zwei Matchqualitaeten: maximal12 Fehlerzellen.
+Je Zelle: zwei binary64-Fehler, uint64-Generation, je ein Byte fuer Rolle,
+Offset, Matchqualitaet und Gueltigkeit;4 Paddingbyte =32 Byte. Gesamt384 Byte.
+Scope wird einmal aus dem vorhandenen Adapter gebunden, nicht je Zelle kopiert.
+Generation muss fuer diese Variante uint64-repraesentierbar sein; kein Wrap.
+
+Ein ausstehendes Update-Ticket: uint64-Generation und Zielindex, vier Bytes
+Rolle/Offset/Matchqualitaet/Auswahl, ein Gueltigkeitsbyte,11 Paddingbyte =32 Byte.
+Zusatz-Nutzdaten insgesamt416 Byte. Keine Zaehler, Historienlisten, IDsammlungen,
+Fehlervektoren, Kopien von Spuren oder zusaetzlichen 48er-Ausgaben.
+Ausgewaehlte Ausgabe ist Alias auf C_t oder P_t; beide bestehenden Slots
+bleiben bis Fehlervergleich/Freigabe belegt. Schattenrechnung ist mitzuzaehlen.
+
+Hoechstens12 Zellpruefungen zur Schluesselsuche/Loeschung je Bestandsschritt,
+zwei MAE ueber48 Komponenten je auswertbarem Ziel, konstante EMA-Arithmetik.
+Eine skalare laufende Summe je Fehler, keine48er-Differenzliste. Gleiches
+arithmetisches Verfahren fuer beide Fehler und alle Baselines festschreiben.
+Pro Entscheidung/Update hoechstens zwei zusaetzliche binary64-Akkumulatoren
+plus feste skalare Metadaten. Kein unbeschraenkter Ereignispuffer.
+
+416 Byte sind geplantes kompaktes Layout, kein gemessener Python-RAM-Wert.
+Spaetere neutrale Qualifikation muss alle zusaetzlichen Python-Container,
+Schluesselobjekte, Ticket und transiente Objekte separat messen; vorgegebene
+Zusatzobergrenze16KiB inklusive transientem EMA-Verwaltungszustand.
+Wenn nicht eingehalten: Konzept/Implementierung nicht technisch abgenommen.
+Bestehende18 Frames+2 Vorschlagsslots bleiben unveraendert; Receipt weiterhin
+max16KiB, transiente Receipt-UTF8 max32KiB. Neue Metadaten darin mitzaehlen.
+Kein Anspruch auf harten Gesamtprozess-RAM aus diesen Teilbudgets.
+
+5. Fortlaufende Gegenprobe und zwei unveraenderte Baselines
+
+Ein neuer begrenzter Versuch, zunaechst direkte kontrollierte48er-Frames zur
+Isolation dieses Zusatzes, keine Wiederholung von AN-DEV/AN-EVAL und kein
+neuer Audio-Robustheitsnachweis. Konkrete Quellenbindung erst nach Konzeptabnahme.
+Zwei vorab feste Geschichten, je200 Frames; je drei Arme mit identischem
+Wahrnehmungsstrom und unveraenderter normaler Memoryfortschreibung:
+
+  E: paired_error_ema_v1-Auswahl;
+  K: vorhandener Kontext, wenn vorhanden, sonst Persistenz;
+  P: immer Persistenz.
+
+Alle verwenden denselben fest gebundenen Abruf und legacy_v1-Kontextvorschlag.
+Fuer diese erste Gegenprobe exact_v1, damit keine weitere Toleranzsuche entsteht.
+APPROXIMATE-Schluesseltrennung wird spaeter neutral technisch qualifiziert;
+dieser Gegenversuch behauptet noch keinen Nutzen des Zusatzes bei Naeherungsabruf.
+Baseline K ist das bisherige feste Beobachterschema, jetzt ausdruecklich als
+Vergleichsausgabe benannt. Kein nachtraeglich guenstiger Fallbackwechsel.
+
+Start je Geschichte: A=(U,V,W,Z) zweimal normal aufnehmen, acht Frames.
+Danach24 Zyklen mit je vier Stoerzwischenframes und vier Queryframes:
+  G_j0,G_j1,G_j2,G_j3; U,V,Y_j,T_j.
+Hauptziel ist jeweils Y_j;24 Hauptziele,75 weitere erreichbare Ziele separat
+(ungerade Zielindizes3..199).200 Frames; Prognose fuer201 bleibt zensiert,
+ohne Ziel/Fehlerupdate freigeben. Keine selektive Entfernung von Fehlerzielen.
+
+Wechselgeschichte: Y_j=W fuer j1..8, Y_j=V fuer j9..16,
+danach Y_j=W fuer j17..24. Kontrolle: alle24 Y_j=W.
+In den stabilen W-Abschnitten soll Kontext nuetzlich sein, im V-Abschnitt
+Persistenz. Das sind Generator-/Auswerterdefinitionen, keine Systemeingaben.
+Die ersten Ziele nach Wechsel bleiben echte Kosten; kein Neustart, kein
+Loeschen der Fehlerzellen oder Speicherreset an Phasengrenzen.
+
+Vorab konstruierbare dyadische Fixture: jede Komponente von U=1/8,V=1/4,
+W=3/4,Z=7/8; T_j=13/16+j/4096; G_jk=15/16+(4*j+k)/8192,
+j1..24,k0..3. Gemeinsame Komponenten sind bewusst einfache technische
+Kontrollwerte, keine Naturdaten oder Labels. Noch nichts davon erzeugt.
+
+Warum Zwischenframes und verschiedene T_j: Ein wiederholter geaenderter
+Viererblock koennte sonst selbst bestaetigt werden und den Abruf mehrdeutig
+machen. Eindeutige Zwischenbloecke ersetzen den vorigen Query-Kandidaten
+auf dem normalen Wahrnehmungsweg; variable T_j verhindern dessen Bestaetigung.
+Die erhaltene A-Spur bleibt; keine direkte Vorbelegung, Sperrung oder Schonung
+von Memory. Diese kuenstliche Begrenzung isoliert den Nutzenzusatz und muss
+offen ausgewiesen werden. Bei unerwarteter Mehrdeutigkeit nichts erzwingen:
+Abweichung berichten; kein nachtraeglicher Quellenwechsel zum Erfolg.
+
+Die vorhandene Vergleichshuelle begrenzt einzelne Replays auf64 Frames.
+Ein spaeterer Anschluss muss deshalb genau200 fortlaufende Frames pro Arm
+erlauben, mit gebundenem Abbruchlimit; keine Aufteilung in Reset-Geschichten.
+Zwei Geschichten x drei Arme x200 =1200 Aufnahmen; keine Materialproduktion
+oder Ausfuehrung durch diesen Konzeptvertrag autorisiert.
+
+6. Abnahmekriterien und Widerlegung
+
+Technisch zwingend: nur eigene Vorschlaege und bereits eingetroffene Ziele;
+Update hoechstens einmal, keine Zukunfts-/Phaseninformation; keine Fehlerwerte
+in Wahrnehmung,Bestaetigung,Abrufranking oder FIFO. Memoryzustaende in E/K/P
+nach jedem Frame identisch. Neue Generationen/Promotion/Verdrängung korrekt
+zurueckgesetzt, keine versehentliche Uebernahme zwischen Offset/Abrufart/Scope.
+Numerische Fehler, fehlende Ziele, Endzensur, Freigabe und alle Budgets pruefen.
+
+Fachlich vorab:
+- Wechselgeschichte: E erzielt ueber dieselben24 Hauptziele strikt kleinere
+  MAE als K UND P; Warmstart/alle75 Nebenziele zusaetzlich separat ausweisen.
+- Stabile Kontrolle: nach dem ersten auswertbaren retained-Schluesselereignis
+  kein Mehrfehler gegen K; der erste Persistenz-Startverlust bleibt in der
+  Vollabdeckung enthalten, nicht aus Gesamtzahlen entfernen.
+- In jedem der drei Wechselabschnitte muss E spaetestens bei dessen drittem
+  Hauptziel zur dort besseren vorhandenen Prognose wechseln und fuer den
+  Rest des Abschnitts dabei bleiben. Wechselverzoegerungen/Kosten ausweisen.
+- Wiederaufnahme von Kontext nach Rueckkehr zu W nachweisen; dauerhafte
+  Kontextunterdrueckung erfuellt das Ziel nicht. E liefert wie K/P an jedem
+  gueltigen Ziel eine48er-Prognose: keine MAE-Verbesserung durch weniger Ziele.
+- Alle Einzelgewinne/-schaeden gegen beide Baselines, volle MAE und gemeinsame
+  Zielmasken berichten. Phasen nur beobachterseitig getrennt darstellen,
+  keine Zusammenrechnung mit alten AN-Familien oder natuerlichen Audiodaten.
+
+Kein Vorteil gegen beide Baselines oder gescheiterte Rueckkehr: Nutzen dieses
+Zusatzes in der Gegenprobe nicht nachgewiesen. Kein nachtraegliches Alpha,
+neue Mindestanzahl, anderer Wechselpunkt oder anderes Quellenrezept zur Rettung.
+Technische Abnahme allein belegt keinen Lernnutzen.
+
+7. Grenzen und naechster begrenzter Schritt
+
+Vergangene Fehler garantieren keine naechste Fortsetzung. Abrupte und schnelle
+Wechsel verursachen Fehlentscheidungen; die EMA kann einer alternierenden
+Folge hinterherlaufen. Neue Spuren und Promotion verlieren Erfahrung;
+lange Pausen konservieren moeglicherweise veraltete Mittelwerte. Gemeinsame
+Hinweise verschiedener Ursachen bleiben ununterscheidbar. Matchqualitaet ist
+keine Herkunftsgarantie; geringere MAE darf N3-artige Verwechslungen nicht heilen.
+Keine Sicherheitseinschaetzung oder probabilistische Konfidenz aus zwei Mittelwerten.
+
+Dies ist die geplante Nutzung eigener Prognoseergebnisse im getrennten Adapter,
+kein Nachweis feldinterner Memory, Semantik oder biologischer Lernmechanismen.
+Naechster Vorschlag: diesen EINEN Vertrag entscheiden; danach optionalen
+Auswahlzusatz und neutralen Kausalitaets-/Lebensdauer-/Budgetnachweis beauftragen.
+Erst anschliessend die vorab gebundene fortlaufende Gegenprobe separat freigeben.
+Heute nur Konzept und Standseinordnung, keine Codeaenderung/Tests/Produktion.

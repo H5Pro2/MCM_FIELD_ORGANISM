@@ -1,0 +1,318 @@
+MCM S2UC -- AR-EVAL einmalige Produktion und feste Evaluation
+2026-10-01
+
+ABGESCHLOSSEN: MATERIAL_COMPLETE, genau ein Produktionsaufruf (Exit0), genau eine Parametereinstellung. Elf Pruefziele und48 Lernziele getrennt. Keine Evaluation-Kalibration oder Parametersuche.
+
+1. Vorabbindung und Herkunft
+epsilon=2^-10=0.0009765625, tau=1/64=0.015625. Beide Werte vor Produktion aus abgenommenem AR-DEV-Ergebnis eingefroren; keine Nachbestimmung anhand Evaluation.
+Plan SHA256 40410b187f813cb546e44cca01ac353f85bdc70d4b29e5b0fc057ac3f6feb5fd
+Produktionsbindung SHA256 87306a9ef5e67c47fd99d0643a38513dae40ad7f684ccbae898fff7801f9257e
+freeze.json enthaelt Plan/Seeds/Profil/Herkunftslabels, Code-/Laufzeitbindungen, Auswertungsrunnerhash sowie38 Development-Dateibindungen. Urspruenglicher Plan und zusaetzliche Bindung unveraendert.
+Autorisierung docs/S2UC_AR_EVAL_AUTORISIERUNG_20261001.json. Einziger Aufruf: C:/Python314/python.exe -m tools.s2uc_ar_material produce docs/S2UC_AR_EVAL_AUTORISIERUNG_20261001.json
+21 Materialdateien in reports/s2uc/signal-approx-material-ar-eval-01. Vier Basisepisoden mit768 Komponenten,2 Rauschhinweisframes,3 reine Stoerungsframes und0 Kalibrationsframes. Elf Fallsequenzen mit129 Frames.
+Materialausgabe 124571/4194304 Byte,262144 Byte Abschlussreserve. Werte-/Dateihashes, Profile, Genealogie, A/D-Praefix, R1/R3-Gleichheit, Mischherkunft und Kleinsignalvarianten bestaetigt.
+Partitionstrennung: disjunkte Seeds und Basisepisoden-Hashes, keine Ableitung zwischen DEV/EVAL. Gemeinsames synthetisches Rezept begrenzt jede Unabhaengigkeitsaussage. Evaluation-Kalibrationsdatei leer; reservierter Seed bleibt gemaess gebundenem Generator unbenutzt.
+
+2. Fachliche Kriterien ohne Neuauswahl
+{
+  "status": "SYNTHETIC_CRITERIA_MET",
+  "additional_wrong": [],
+  "gain_R1_R2": 2,
+  "epsilon": 0.0009765625,
+  "tau": 0.015625,
+  "parameter_search_performed": false,
+  "scope": "Fixed synthetic tasks only; no default-policy change"
+}
+Jede zusaetzliche falsche Einzelzuordnung gegen exakten Abruf haette die Abnahme als verbesserte Wiedererkennung verhindert. Ohne zusaetzlichen korrekten R1/R2-Treffer waere das Robustheitsziel nicht nachgewiesen. MAE ist kein Ersatz fuer diese Herkunftskriterien.
+Verlorene exakte Zuordnungen: []; signalbedingte Verluste: []; verlorene korrekte Exakttreffer: []
+
+3. Elf Pruefziele: Herkunft, Status und konkrete MAE
+Fall | Herkunft exakt/neu | Status exakt/neu | MAE konkret exakt/neu/Persistenz | MAE Beobachterschema exakt/neu
+R0 | CORRECT/CORRECT | PREDICTED_RETAINED/PREDICTED_RETAINED | 0/0/0.0611521402995 | 0/0
+R1 | ABSTAIN/CORRECT | ABSTAIN_NO_CONTEXT/PREDICTED_RETAINED | undefiniert (Enthaltung)/0/0.0612335205078 | 0.0612335205078/0
+R2 | ABSTAIN/CORRECT | ABSTAIN_NO_CONTEXT/PREDICTED_RETAINED | undefiniert (Enthaltung)/0/0.0613149007161 | 0.0613149007161/0
+R3 | ABSTAIN/CORRECT | ABSTAIN_NO_CONTEXT/PREDICTED_RETAINED | undefiniert (Enthaltung)/0.0612335205078/0 | 0/0.0612335205078
+N1 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert (Enthaltung)/undefiniert (Enthaltung)/0.0639139811198 | 0.0639139811198/0.0639139811198
+N2 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert (Enthaltung)/undefiniert (Enthaltung)/0.0532480875651 | 0.0532480875651/0.0532480875651
+N3 | WRONG/WRONG | PREDICTED_RETAINED/PREDICTED_RETAINED | 0.0652262369792/0.0652262369792/0.0719045003255 | 0.0652262369792/0.0652262369792
+N4 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert (Enthaltung)/undefiniert (Enthaltung)/0.0424270629883 | 0.0424270629883/0.0424270629883
+Z0 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert (Enthaltung)/undefiniert (Enthaltung)/0 | 0/0
+Z1 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert (Enthaltung)/undefiniert (Enthaltung)/0.000895182291667 | 0.000895182291667/0.000895182291667
+P0 | ABSTAIN/ABSTAIN | ABSTAIN_NO_CONTEXT/ABSTAIN_NO_CONTEXT | undefiniert (Enthaltung)/undefiniert (Enthaltung)/1.49297217528e-05 | 1.49297217528e-05/1.49297217528e-05
+
+exact_retrieval Herkunft und Abdeckung:
+{
+  "total": 11,
+  "origin_counts": {
+    "CORRECT": 1,
+    "ABSTAIN": 9,
+    "WRONG": 1
+  },
+  "positive_origin_counts": {
+    "CORRECT": 1,
+    "ABSTAIN": 4
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 5,
+    "WRONG": 1
+  },
+  "assignment_coverage": 0.18181818181818182,
+  "context_coverage": 0.18181818181818182,
+  "positive_correct_fraction": 0.2,
+  "negative_wrong_fraction": 0.16666666666666666,
+  "correct_rejections": 5,
+  "roles": {
+    "retained": 2
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 9
+  },
+  "paired": {
+    "count": 2,
+    "persistence_mae": 0.0665283203125,
+    "context_mae": 0.032613118489583336,
+    "delta": 0.03391520182291666,
+    "better": 2,
+    "equal": 0,
+    "worse": 0
+  },
+  "full_coverage": {
+    "count": 11,
+    "persistence_mae": 0.0378276641395959,
+    "observer_hybrid_mae": 0.03166126380815651,
+    "delta": 0.006166400331439392
+  },
+  "harm_rows": []
+}
+
+signal_approx_retrieval Herkunft und Abdeckung:
+{
+  "total": 11,
+  "origin_counts": {
+    "CORRECT": 4,
+    "ABSTAIN": 6,
+    "WRONG": 1
+  },
+  "positive_origin_counts": {
+    "CORRECT": 4,
+    "ABSTAIN": 1
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 5,
+    "WRONG": 1
+  },
+  "assignment_coverage": 0.45454545454545453,
+  "context_coverage": 0.45454545454545453,
+  "positive_correct_fraction": 0.8,
+  "negative_wrong_fraction": 0.16666666666666666,
+  "correct_rejections": 5,
+  "roles": {
+    "retained": 5
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 6
+  },
+  "paired": {
+    "count": 5,
+    "persistence_mae": 0.05112101236979166,
+    "context_mae": 0.025291951497395836,
+    "delta": 0.02582906087239583,
+    "better": 4,
+    "equal": 0,
+    "worse": 1
+  },
+  "full_coverage": {
+    "count": 11,
+    "persistence_mae": 0.0378276641395959,
+    "observer_hybrid_mae": 0.026087181924870518,
+    "delta": 0.011740482214725378
+  },
+  "harm_rows": [
+    {
+      "case_id": "R3",
+      "target": 11,
+      "positive": true,
+      "origin_category": "CORRECT",
+      "assigned_root": "AR-EVAL/A",
+      "true_root": "AR-EVAL/A",
+      "role": "retained",
+      "assignment_covered": true,
+      "correct_rejection": false,
+      "prediction_status": "PREDICTED_RETAINED",
+      "context_covered": true,
+      "persistence_mae": 0.0,
+      "context_mae": 0.0612335205078125,
+      "paired_delta": -0.0612335205078125,
+      "observer_hybrid_mae": 0.0612335205078125,
+      "full_delta": -0.0612335205078125
+    }
+  ]
+}
+
+4. Identische gemeinsame Zielmengen und Schaeden
+Beide Arme verwenden legacy_v1-Fortsetzung. Exakter Abruf bzw. Signal-/Naeherungsabruf bezeichnet ausschliesslich die Abrufpolicy. Null bei context_mae bedeutet Enthaltung, niemals fehlerfreie Prognose.
+signal_approx_retrieval_vs_exact_retrieval: Ziele ['R0', 'N3'], n=2, MAE links/rechts=0.0326131184896/0.0326131184896, Delta=0, besser/gleich/schlechter=(0, 2, 0)
+signal_approx_retrieval_vs_persistence: Ziele ['R0', 'R1', 'R2', 'R3', 'N3'], n=5, MAE links/rechts=0.0252919514974/0.0511210123698, Delta=0.0258290608724, besser/gleich/schlechter=(4, 0, 1)
+exact_retrieval_vs_persistence: Ziele ['R0', 'N3'], n=2, MAE links/rechts=0.0326131184896/0.0665283203125, Delta=0.0339152018229, besser/gleich/schlechter=(2, 0, 0)
+Festes Vollabdeckungsschema auf allen elf Zielen: Kontext falls konkrete Prognose, sonst Persistenz. Ausschliesslich Observer, keine Produkt-Fallbackregel.
+{
+  "persistence": 0.0378276641395959,
+  "exact_retrieval": 0.03166126380815651,
+  "signal_approx_retrieval": 0.026087181924870518,
+  "signal_approx_retrieval_vs_persistence": 0.011740482214725378,
+  "signal_approx_retrieval_vs_exact_retrieval": 0.005574081883285985
+}
+Alle Schaeden gegen Persistenz:
+[
+  {
+    "case_id": "R3",
+    "target": 11,
+    "persistence": 0.0,
+    "exact_retrieval": 0.0,
+    "signal_approx_retrieval": 0.0612335205078125,
+    "signal_approx_retrieval_vs_persistence": -0.0612335205078125,
+    "signal_approx_retrieval_vs_exact_retrieval": -0.0612335205078125
+  }
+]
+Alle Schaeden gegen exaktes Kontext-sonst-Persistenz-Schema:
+[
+  {
+    "case_id": "R3",
+    "target": 11,
+    "persistence": 0.0,
+    "exact_retrieval": 0.0,
+    "signal_approx_retrieval": 0.0612335205078125,
+    "signal_approx_retrieval_vs_persistence": -0.0612335205078125,
+    "signal_approx_retrieval_vs_exact_retrieval": -0.0612335205078125
+  }
+]
+N3 bleibt die kausale Herkunftsgrenze des gemeinsamen Anfangs; ein gleicher Fehler beider Arme ist kein zusaetzlicher Fehler, aber weiterhin ein Herkunftsfehler. R3 prueft unabhaengig von korrekter Herkunft die unpassende Fortsetzung.
+
+5. 48 Lernziele separat
+Nichtprimaere erreichbare Positionen einschliesslich Uebergaengen; keine Erfolgsquote mit den elf Pruefzielen vermischt. Positive Lernherkunft bedeutet Basis in einem vor dem Hinweispaar abgeschlossenen Viererblock vorhanden.
+Neue Lernziel-Fehlzuordnungen: []; verlorene exakte Zuordnungen: []
+exact_retrieval:
+{
+  "total": 48,
+  "origin_counts": {
+    "ABSTAIN": 24,
+    "CORRECT": 17,
+    "WRONG": 7
+  },
+  "positive_origin_counts": {
+    "CORRECT": 17
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 24,
+    "WRONG": 7
+  },
+  "assignment_coverage": 0.5,
+  "context_coverage": 0.25,
+  "positive_correct_fraction": 1.0,
+  "negative_wrong_fraction": 0.22580645161290322,
+  "correct_rejections": 24,
+  "roles": {
+    "candidate": 24
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 24,
+    "ABSTAIN_NO_SUCCESSOR": 12
+  },
+  "paired": {
+    "count": 12,
+    "persistence_mae": 0.061382293701171875,
+    "context_mae": 0.0,
+    "delta": 0.061382293701171875,
+    "better": 12,
+    "equal": 0,
+    "worse": 0
+  },
+  "full_coverage": {
+    "count": 48,
+    "persistence_mae": 0.06879647699598636,
+    "observer_hybrid_mae": 0.0534509035706934,
+    "delta": 0.015345573425292969
+  },
+  "harm_rows": []
+}
+signal_approx_retrieval:
+{
+  "total": 48,
+  "origin_counts": {
+    "ABSTAIN": 24,
+    "CORRECT": 17,
+    "WRONG": 7
+  },
+  "positive_origin_counts": {
+    "CORRECT": 17
+  },
+  "negative_origin_counts": {
+    "ABSTAIN": 24,
+    "WRONG": 7
+  },
+  "assignment_coverage": 0.5,
+  "context_coverage": 0.25,
+  "positive_correct_fraction": 1.0,
+  "negative_wrong_fraction": 0.22580645161290322,
+  "correct_rejections": 24,
+  "roles": {
+    "candidate": 24
+  },
+  "prediction_abstentions": {
+    "ABSTAIN_NO_CONTEXT": 24,
+    "ABSTAIN_NO_SUCCESSOR": 12
+  },
+  "paired": {
+    "count": 12,
+    "persistence_mae": 0.061382293701171875,
+    "context_mae": 0.0,
+    "delta": 0.061382293701171875,
+    "better": 12,
+    "equal": 0,
+    "worse": 0
+  },
+  "full_coverage": {
+    "count": 48,
+    "persistence_mae": 0.06879647699598636,
+    "observer_hybrid_mae": 0.0534509035706934,
+    "delta": 0.015345573425292969
+  },
+  "harm_rows": []
+}
+Lernziel-Schaeden gegen Persistenz:
+[]
+Lernziel-Schaeden gegen exaktes Beobachterschema:
+[]
+Alle48 Einzelwerte und gemeinsamen Masken stehen in result.json/learning_summary.
+
+6. DEV/EVAL getrennt, keine gemeinsame Erfolgsquote
+Kennzahl | AR-DEV bei1/64 | AR-EVAL bei1/64
+persistence (Vollabdeckung) | 0.0383441362417 | 0.0378276641396
+exact_retrieval (Vollabdeckung) | 0.0332745191726 | 0.0316612638082
+signal_approx_retrieval (Vollabdeckung) | 0.027761010058 | 0.0260871819249
+signal_approx_retrieval_vs_persistence (Vollabdeckung) | 0.0105831261837 | 0.0117404822147
+signal_approx_retrieval_vs_exact_retrieval (Vollabdeckung) | 0.00551350911458 | 0.00557408188329
+exact_retrieval konkrete Prognoseabdeckung | 2/11 | 2/11
+signal_approx_retrieval konkrete Prognoseabdeckung | 5/11 | 5/11
+Zusaetzliche Herkunftsfehler | [] | []
+Verlorene exakte Zuordnungen | [] | []
+
+7. Kausalitaet, Zustand und Ressourcen
+Alle Geschichten leer gestartet,129 Frames pro Arm jeweils einmal aufgenommen;59 erreichbare Ziele=11 Pruefziele+48 Lernziele. Speicherzustand nach jedem Frame und Abschluss gegen unveraenderten PairContextAdapter und zwischen Armen identisch.
+R1/R3 und R0/N3 haben identische eingefrorene Prognosen und Vorzustaende vor ihrem unterschiedlichen Zielframe. Keine Zukunftslabels im Abruf. Ausgabeslots nach Verbrauch/Abschluss freigegeben.
+Einmalige Erzeugung und je Arm ein Replay dieses Bestands. Keine zweite Materialproduktion, keine Suche oder Anpassung. Ressourcenbeobachtung veraendert keine Auswahl.
+{
+  "frame_peak": 12,
+  "output_slots_peak": 2,
+  "combined_peak": 13,
+  "receipt_bytes_peak": 548,
+  "receipt_transient_utf8_bytes_peak": 961,
+  "temporary_numeric_vectors_peak": 0,
+  "match_metadata_peak": 1
+}
+Grenzen18 Frames inkl.Hinweise,2 Ausgaben,20 gemeinsam; Receipt16384 Byte, transiente Provenienz32768 Byte. Keine48er-Distanzkopie. Observerarchive getrennt bilanziert, kein harter Prozess-RAM-Nachweis.
+38 DEV-Dateien, Evaluationsmaterial sowie Code-/Plan-/Laufzeitbindungen nach Abschluss unveraendert bestaetigt. partition-verification.json, verification.json und final-verification.json enthalten die Belege.
+
+8. Aussagegrenze und naechster Vorschlag
+Befund ausschliesslich fuer diese vorab festgelegte synthetische Aufgabenklasse. Kein Nachweis allgemeiner Wiedererkennung oder Audio-/NJ-Robustheit. Beide AR-Partitionen sind jetzt bekannt; geaenderte Regeln benoetigen neue unberuehrte Pruefdaten.
+An Projektleiter zur fachlichen Abnahme/Statusentscheidung uebergeben. Empfehlung bei erfuellten Herkunftskriterien: Signal-/Naeherungsabruf als ausdruecklich waehlbare experimentelle Abrufhypothese erhalten, mit R3-Prognoserisiko und N3-Herkunftsgrenze. Exakter Abruf und legacy_v1 bleiben Standard. Keine automatische Aktivierung von Naeherungsabruf oder skalierter Fortsetzung. Bei verletzten Kriterien Ansatz in dieser Fassung nicht als verbesserte Wiedererkennung abnehmen.

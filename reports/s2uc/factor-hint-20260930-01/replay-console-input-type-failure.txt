@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\s2uc_factor_hint_check.py", line 119, in <module>
+    if __name__=='__main__':run()
+                            ~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\s2uc_factor_hint_check.py", line 92, in run
+    result,states=replay(p,name,key,True)
+                  ~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\s2uc_factor_hint_check.py", line 47, in replay
+    receipt=submit(arm,m,p['vectors'][label],f'step{step}',step*10)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\s2uc_k2_check.py", line 66, in submit
+    meter.call(arm,'form',tu.Frame(tuple(value),'a'*64,arm.owner,segment,start+i))
+                          ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 8, in __init__
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2tu_retained_trace.py", line 31, in __post_init__
+    need(len(self.values) == WIDTH and all(type(x) is float and math.isfinite(x) for x in self.values), "FRAME_VALUES_INVALID")
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2tu_retained_trace.py", line 19, in need
+    raise S2TUError(code)
+tools._s2tu_retained_trace.S2TUError: FRAME_VALUES_INVALID

@@ -1,0 +1,25 @@
+test_corrupt_matrix (experiments.zw1.test_package.Matrix.test_corrupt_matrix) ... ok
+test_independent_bytes_and_binding (experiments.zw1.test_package.Matrix.test_independent_bytes_and_binding) ... ok
+test_wrong_stratum (experiments.zw1.test_package.Matrix.test_wrong_stratum) ... ok
+test_all_24_transitions (experiments.zw1.test_package.Sources.test_all_24_transitions) ... ok
+test_draw_exhaustion (experiments.zw1.test_package.Sources.test_draw_exhaustion) ... ok
+test_initial_reference_and_flip (experiments.zw1.test_package.Sources.test_initial_reference_and_flip) ... ok
+test_material_has_no_pair_labels (experiments.zw1.test_package.Sources.test_material_has_no_pair_labels) ... ok
+test_phase_128_129 (experiments.zw1.test_package.Sources.test_phase_128_129) ... ok
+test_research_blocked (experiments.zw1.test_package.Sources.test_research_blocked) ... ok
+test_all_four_arms_resampled_together (experiments.zw1.test_package.Statistics.test_all_four_arms_resampled_together) ... ok
+test_condition_swap (experiments.zw1.test_package.Statistics.test_condition_swap) ... ok
+test_cross_pair_condition (experiments.zw1.test_package.Statistics.test_cross_pair_condition) ... ok
+test_heterogeneous_interaction (experiments.zw1.test_package.Statistics.test_heterogeneous_interaction) ... ok
+test_incomplete_condition_no_receipt (experiments.zw1.test_package.Statistics.test_incomplete_condition_no_receipt) ... ok
+test_missing_arm_error (experiments.zw1.test_package.Statistics.test_missing_arm_error) ... ok
+test_missing_pair (experiments.zw1.test_package.Statistics.test_missing_pair) ... ok
+test_missing_pair_receipt (experiments.zw1.test_package.Statistics.test_missing_pair_receipt) ... ok
+test_missing_target (experiments.zw1.test_package.Statistics.test_missing_target) ... ok
+test_negative_positive_and_reference (experiments.zw1.test_package.Statistics.test_negative_positive_and_reference) ... ok
+test_zero_touch (experiments.zw1.test_package.Statistics.test_zero_touch) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 3.542s
+
+OK

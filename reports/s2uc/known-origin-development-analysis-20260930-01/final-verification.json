@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "all_preproduction_bindings_unchanged": true,
+  "material_hashes_unchanged": true,
+  "evaluation_template_unchanged": true,
+  "resources": {
+    "T0": {
+      "frame_peak": 8,
+      "output_slots_peak": 2,
+      "combined_peak": 9,
+      "output_python_bytes_peak": 3642,
+      "samples": 7438
+    },
+    "P1": {
+      "frame_peak": 8,
+      "output_slots_peak": 2,
+      "combined_peak": 9,
+      "output_python_bytes_peak": 3642,
+      "samples": 7425
+    },
+    "P2": {
+      "frame_peak": 8,
+      "output_slots_peak": 2,
+      "combined_peak": 9,
+      "output_python_bytes_peak": 3642,
+      "samples": 6555
+    },
+    "P3": {
+      "frame_peak": 8,
+      "output_slots_peak": 2,
+      "combined_peak": 9,
+      "output_python_bytes_peak": 3642,
+      "samples": 7438
+    },
+    "N1": {
+      "frame_peak": 8,
+      "output_slots_peak": 2,
+      "combined_peak": 9,
+      "output_python_bytes_peak": 3642,
+      "samples": 6555
+    },
+    "N2": {
+      "frame_peak": 8,
+      "output_slots_peak": 2,
+      "combined_peak": 9,
+      "output_python_bytes_peak": 3642,
+      "samples": 6555
+    },
+    "N3": {
+      "frame_peak": 8,
+      "output_slots_peak": 2,
+      "combined_peak": 9,
+      "output_python_bytes_peak": 3642,
+      "samples": 7438
+    },
+    "N4": {
+      "frame_peak": 12,
+      "output_slots_peak": 2,
+      "combined_peak": 13,
+      "output_python_bytes_peak": 3642,
+      "samples": 16277
+    }
+  }
+}

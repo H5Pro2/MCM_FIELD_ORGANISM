@@ -1,0 +1,75 @@
+AS480 – technischer Anschluss und neutrale Qualifikation
+Auftrag 4f08f99b-59fb-4713-bd6e-dda48328a22e | 2026-10-19
+
+Ergebnis: Q1–Q5 technisch abgeschlossen, Forschung NICHT autorisiert.
+Getrennter Anschluss unter experiments/as480/: common, material, oracle, engine,
+entry, tests. Historische Rezeptor-/NJ-/Abruf-/Fortsetzungsmodule unverändert.
+Festes neutrales Rezept A=[260,620,1040,1580], B=[280,640,2020,2260] Hz,
+Sinusbildung/Amplituden/Phasen wie im Vertrag; vor erster Ausführung im Code
+und request.json gebunden. Keine Frequenzüberschneidung mit Forschungsrezept.
+Das neutrale Ergebnis ist keine wissenschaftliche AS480-Nutzenauswertung.
+
+Q1: feste PCM-Ausschnitte und Randindizes, Wiederholung, logische Zeitachse.
+Q2: tatsächliche achtframeige künstliche Kandidaten-/Promotionsfixture,
+Bestandsreferenz und Zukunftsgate vor Iteratorzugriff. Vollständiger Freeze und
+frische Arme zusätzlich im einmaligen neutralen Größenablauf kontrolliert.
+Q3: tau/epsilon-Grenzen, Null, Exaktpriorität, Mehrdeutigkeit, falscher Offset,
+fehlender Nachfolger, nicht unterstützte Faktorfortsetzung, numerische Enthaltung,
+Manipulation des vorhergesagten Fehlers, S1–S4 und alle vier Ergebnisurteile.
+17/17 kleine künstliche Fixtures bestanden; IDs/Protokoll in fixtures-02/.
+Die Fixtures enthalten einen zusätzlichen neutralen Arm und eine Bestandsreferenz
+mit je8 Aufnahmen, keine Rezeptor-/NJ-Aufrufe. Bestandsreferenz ist keine
+unabhängige Näherungsentscheidung; dafür existiert das getrennte skalare Orakel.
+
+Q4: full-neutral-01 einmal vollständig erfolgreich. Genau44 Rezeptor-/44 NJ-
+Aufrufe,8 frische Arme und8 frische Referenzen, jeweils88 Aufnahmen,40 unabhängige
+skalare Entscheidungsprüfungen. Sämtliche8 Arme/Referenzen beendet, Ausgabeslots
+freigegeben, Material unverändert; Worker beendet, kein Temp-/Teilbestand nötig.
+Die40 Prüfungen rekonstruieren Matches einschließlich aller Offsets/Faktoren,
+Signalzulassung, Mehrdeutigkeit, konkrete Fortsetzung und MAE aus archiviertem
+Vorzustand, ohne produktive Auswahl-/Distanz-/Fehlerfunktionen als Orakel.
+Bestands- und Entscheidungsprüfer haben unterschiedliche Prüfgegenstände.
+
+Erster Fixture-Start fixtures-01: OpenBLAS-Speicheranforderung vom harten Job
+abgewiesen, Worker Exit1 vor Tests/Material/Armen. Windows meldet559681536 Bytes
+Peak inklusive abgewiesener Allokation; dies ist KEIN bestandener Ressourcenlauf.
+Korrektur: OPENBLAS/OMP/MKL/NUMEXPR jeweils ein Thread vor NumPy-Import.
+Erst danach fixtures-02 erfolgreich. Keine Grenzerhöhung, keine Ersatzgrenze.
+Gezielte künstliche Abbrüche: Workerexception, reduzierte1s-Timeoutschwelle,
+prospektiver Materialbudgetüberlauf und injizierter Job-Installationsfehler.
+Alle enden korrekt ohne Material-/Policy-Aufruf. Job-Installationsfehler ist
+Fehlerinjektion; ein echter OS-Installationsfehler wird daraus nicht behauptet.
+Erfolgreichen Größenablauf nicht wiederholt; erneuter Start davor abgewiesen.
+
+Q5: exklusive Ausgabe, Digestabweichung, Mode-/Autorisierungstrennung,
+reservierte Quellenprüfung, Runtime-/Code-/Qualifikationsbindung.
+Forschungsautorisation fehlt; PENDING-Vorlage wird abgewiesen. Keine
+authorization.json, kein research.consumed.json, kein Forschungsziel angelegt.
+Späterer exakt vorbereiteter Start siehe START.txt; erst nach separater Freigabe.
+
+Runtimebindung nach dem Größenablauf enger gefasst: zusätzlich NumPy-Pythondateien
+und externe numpy.libs-Dateien. Alte Einstiegsversion separat erhalten;
+runtime-binding-extension.diff zeigt ausschließlich diese Bindungserweiterung.
+Alle zuvor gebundenen NumPy-Binaries unverändert; die zusätzlichen Hashes sind
+erst bei Lieferung festgestellt, nicht rückwirkend als Vorstartbeleg ausgegeben.
+Material, Engine, Orakel und Tests seit bestandenem Größenablauf unverändert.
+Finale Bindung validiert, Neustart-/Exklusiv-/PENDING-Sperren gezielt geprüft;
+keine neue Materialisierung zum Prüfen der Bindungserweiterung.
+
+Ressourcenrahmen:512MiB gemeinsamer Windows-Job,2 Prozesse, Kill-on-close,
+kein Breakaway; Worker240s/Gesamt300s, Material4MiB, Vorbereitung8MiB,
+Observer3MiB, Abschluss1MiB, Gesamt16MiB. Bibliotheksthreads nun explizit1.
+Die ausgelöste künstliche Timeoutprüfung benutzt eine strengere1s-Grenze.
+Die300s-Grenze zusätzlich mit künstlichen Uhrwerten geprüft, nicht300s gewartet.
+Die tatsächlichen Datei- und Jobwerte stehen in delivery-resources.json.
+
+Historische Archive/Bindungen unverändert. Die drei aktuellen Übersichten werden
+mit bytegenauen Vorgängersnapshots aktualisiert; preservation.json dokumentiert
+die Zuordnung. Alte Forschungs-/Qualifikationsläufe wurden nicht wiederholt.
+
+Empfehlung: technische Lieferung abnehmen; anschließend separat über die
+einmalige AS480-Forschungsausführung entscheiden. Keine Nutzenbehauptung aus
+neutralen Quellen. U und der abgeschlossene Fehlerbewertungszweig unverändert.
+
+Vollständiger neutraler Lauf: 31.295929s; Jobpeak 299634688 Bytes.
+Gesamte tatsächliche Aufrufbilanz dieses Pakets: {"sources": 2, "receptor_started": 44, "receptor_completed": 44, "nj_started": 44, "nj_completed": 44, "arms_started": 9, "arms_completed": 9, "arms_closed": 9, "reference_started": 9, "reference_completed": 9, "reference_closed": 9, "policy_admissions": 96, "reference_admissions": 96, "decisions_started": 40, "decisions_completed": 40}

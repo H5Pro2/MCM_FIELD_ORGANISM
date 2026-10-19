@@ -1,0 +1,107 @@
+[
+  {
+    "phase": 1,
+    "cycles": [
+      1,
+      8
+    ],
+    "wanted": "CONTEXT",
+    "targets": [
+      15,
+      23,
+      31,
+      39,
+      47,
+      55,
+      63,
+      71
+    ],
+    "choices": [
+      "PERSISTENCE",
+      "CONTEXT",
+      "CONTEXT",
+      "CONTEXT",
+      "CONTEXT",
+      "CONTEXT",
+      "CONTEXT",
+      "CONTEXT"
+    ],
+    "stable_from_position": 2,
+    "passed": true,
+    "error_sums": {
+      "E": 0.5,
+      "K": 0.0,
+      "P": 4.0
+    }
+  },
+  {
+    "phase": 2,
+    "cycles": [
+      9,
+      16
+    ],
+    "wanted": "PERSISTENCE",
+    "targets": [
+      79,
+      87,
+      95,
+      103,
+      111,
+      119,
+      127,
+      135
+    ],
+    "choices": [
+      "CONTEXT",
+      "PERSISTENCE",
+      "PERSISTENCE",
+      "PERSISTENCE",
+      "PERSISTENCE",
+      "PERSISTENCE",
+      "PERSISTENCE",
+      "PERSISTENCE"
+    ],
+    "stable_from_position": 2,
+    "passed": true,
+    "error_sums": {
+      "E": 0.5,
+      "K": 4.0,
+      "P": 0.0
+    }
+  },
+  {
+    "phase": 3,
+    "cycles": [
+      17,
+      24
+    ],
+    "wanted": "CONTEXT",
+    "targets": [
+      143,
+      151,
+      159,
+      167,
+      175,
+      183,
+      191,
+      199
+    ],
+    "choices": [
+      "PERSISTENCE",
+      "CONTEXT",
+      "CONTEXT",
+      "CONTEXT",
+      "CONTEXT",
+      "CONTEXT",
+      "CONTEXT",
+      "CONTEXT"
+    ],
+    "stable_from_position": 2,
+    "passed": true,
+    "error_sums": {
+      "E": 0.5,
+      "K": 0.0,
+      "P": 4.0
+    }
+  }
+]

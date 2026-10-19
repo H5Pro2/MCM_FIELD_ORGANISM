@@ -1,0 +1,110 @@
+RW1 – Abschluss des einmaligen Forschungsversuchs
+2026-10-19 | eigener Entwicklerauftrag e7078671-fe40-487c-bbe1-12c975c507cf
+Projektleiterbezug6820c3df-1501-48db-831e-430c006e7c7b
+
+ERGEBNIS: TECHNICAL_FAILURE – ZEITGRENZE, KEIN WISSENSCHAFTLICHES URTEIL
+Der vorbereitete Einstieg wurde genau einmal ausgefuehrt. Der Supervisor meldet
+ValueError:TIME_LIMIT und beendete den Worker. Kein Retry, keine Ersatzquelle,
+keine geaenderten Parameter, kein Zuruecksetzen des Verbrauchs. Der unveraenderte
+Code wurde vor Start und nach Abschluss gegen seine technische Bindung geprueft.
+
+START- UND VERBRAUCHSNACHWEIS
+Technische Bindung:061252093a580c0df3d886888f862481d86a165fb77b623f0c8f3346639ce12c
+Vertrag:f8150752bb0008bafef95dad301c25022f4aae83b523c2ed60d3d3f2f7cc2bfe
+research-authorization.json wurde mit eigener Zustellungs-ID, Quelldigest,
+AUTHORIZED_ONCE/RW1_RESEARCH und geprueften Bindungen erstellt. Der Start schrieb
+research.consumed.json exklusiv vor Worker/Material. Nonce:
+10b49047e774466ba8b53b3a94de3280
+Autorisierungs-SHA256:67bfcdb535ca964b0446a835ec26c16b105b265f6e31919c0ec34459133ec16b
+Verbrauchs-SHA256:c00c68cf490c4caa11d915add3ad6edf4bc33998170670a04326a119b78679be
+Die Freigabe ist verbraucht. Historischer Neutralverbrauch und UNPROVEN bleiben
+unveraendert. Fruehere NOT_AUTHORIZED-Texte im Entwicklungsarchiv sind historische
+Staende; aktuelle Ausfuehrungsbelege stehen in diesen beiden neuen Dateien.
+
+TATSAECHLICH ERREICHTER UMFANG
+Zwei neue Quellen nach festem Rezept;390 Rezeptor- und390 NJ-Aufrufe begonnen
+UND abgeschlossen. Materialmanifest liegt vollstaendig vor. Danach fuenf Policy-
+Arme und fuenf Referenzen gestartet, vier je Typ regulaer geschlossen.
+Letzter dauerhafter Zaehler:48 Policy-/48 Referenzaufnahmen,21 Prognosen.
+Die Aufnahmezaehler werden vor accept inkrementiert; fuer das letzte Ereignis
+liegt kein eigener erfolgreicher Abschlussbeleg vor. Keine stillschweigende
+Umdeutung in48 sicher abgeschlossene Aufnahmen.
+Vier Armdateien enthalten20 Prognosen. Die21. war nur im laufenden Arm/Zaehler,
+dessen Archiv bei Abbruch noch nicht geschrieben war. Der Zaehler decisions
+zaehlt hier aufgezeichnete Prognosen; er ist KEIN Nachweis unabhaengiger Pruefung.
+Die nach allen zwoelf Armen vorgesehene unabhaengige Rekonstruktion wurde nicht
+erreicht. Zahl abgeschlossener unabhaengiger Forschungsentscheidungspruefungen:0.
+
+ALLE SECHS HAUPTFAELLE
+A0:    N/T-Teilarchive vorhanden; Hauptwerte wissenschaftlich nicht ausgewertet.
+A480:  N/T-Teilarchive vorhanden; Hauptwerte wissenschaftlich nicht ausgewertet.
+A2400: N begonnen, kein Armarchiv abgeschlossen; T nicht gestartet.
+B0:    N/T nicht gestartet.
+B480:  N/T nicht gestartet.
+B2400: N/T nicht gestartet.
+Alle sechs Faelle: NOT_EVALUATED_TECHNICAL_FAILURE. Kein Mittelwert aus den
+vorhandenen zwei Fallpaaren als Ersatz fuer die sechs vorregistrierten Faelle.
+
+S1: nicht bewertet. S2: nicht bewertet. S3: nicht bewertet. S4: nicht bewertet.
+Sämtliche Einzelverluste: nicht abschliessend bestimmbar, keine Nullverluste
+behauptet. Die20 vorhandenen Prognosebelege bleiben unveraendert gesichert.
+Alle neun Kollisionsvergleiche sind nicht ausgefuehrt:
+A0/B0, A0/B480, A0/B2400; A480/B0, A480/B480, A480/B2400;
+A2400/B0, A2400/B480, A2400/B2400.
+Kein ADDITIONAL_BENEFIT_ON_GRID, NO_ADDITIONAL_BENEFIT oder IDENTIFIABILITY_LIMIT
+ableitbar. Der technische Abbruch hat gemaess Vertrag Vorrang. Auch ein guenstiger
+Wert in einem Teilarchiv waere kein wissenschaftlicher Teil-Erfolgsnachweis.
+
+RESSOURCEN UND CLEANUP
+Worker an der240s-Grenze beendet; Supervisor meldet241,9543983s bis Terminal.
+Technische Abschlussbindung nach242,3380431s, unter300s. Jobpeak150474752 Bytes,
+Prozesspeak84234240 Bytes; harte Jobgrenze536870912 Bytes, maximal2 Prozesse,
+Kill-on-close, kein Breakaway, Bibliotheksthreads1. Speicherlimit nicht ausgeloest.
+Workerexit1, Prozess-Cleanup=true. Die Ressourcen des abgebrochenen Workers sind
+freigegeben; dies beweist keinen regulaeren Adapterabschluss des fuenften Arms.
+Nur vier regulaere Arm-/Referenzabschluesse sind dauerhaft protokolliert.
+
+Adapterpeaks aus den VIER GESICHERTEN Armen (kein vollstaendiger Laufpeak):
+{"matches": 1, "provenance": 4251, "receipt": 503, "sample_buffer": 76800, "utf8": 900, "vector_slots": 63}
+Der finale Rezeptorarbeitsgebiet-Peak wurde vor dem Abbruch nicht persistiert und
+bleibt unbekannt; keine Uebernahme eines alten Neutralwerts als RW1-Messung.
+Material1544315 Bytes, Observer761351 Bytes zum technischen Abschluss.
+Gesamtexport einschliesslich alter Vorbereitung sowie finaler Dokumentation
+bleibt unter16MiB, einzelne Partitionen bleiben unter ihren Grenzen.
+Exakte Groessen: resource-report.json und die abschliessende Lieferbindung.
+
+INTEGRITAET UND UNABHAENGIGE PRUEFUNG
+403 Dateien der technischen Abschlussbindung wurden per Hash abgeglichen.
+Code, Runtime, Vertrag, Entwicklungsbelege und Start-/Verbrauchszuordnung stimmen.
+Die vollstaendige wissenschaftliche Archivpruefung wurde nicht gestartet,
+weil acht Armarchive fehlen. Integritaetspruefung ist kein Ersatz fuer die60
+unabhaengigen Entscheidungspruefungen und keine erneute Versuchsausfuehrung.
+Technische Abschlussbindung SHA256:
+dd19b26ca664ef9031231f53247e560da2dd3812ca3fb6d93fe983e765a5db3f
+
+TECHNISCHE EINORDNUNG UND NAECHSTER SCHRITT
+Dateizeitstempel lokalisieren das Materialmanifest etwa222,651s nach dem
+persistierten Worker-Eintritt. Die ersten beiden Fallpaare waren etwa229,812s
+und236,675s danach archiviert. Diese Werte sind grobe Phasenlokalisierung aus
+Dateimetadaten, keine Profiler-Messung und nicht die monotone Workeruhr.
+Der reale Material-/Loggingpfad dominiert damit den erreichten Zeitrahmen.
+Statisch auffaellig: Budget.check/preparation_size/total_size scannen bei vielen
+Zaehler-/Dateischreibvorgaengen wiederholt gesamte Verzeichnisbaeume. Dass diese
+Operationen den Engpass verursachen, ist noch nicht gemessen. Ebenso ist kein
+wissenschaftlicher Misserfolg des Rasterabrufs nachgewiesen.
+
+Empfehlung: ein getrenntes kleines Entwicklerpaket zur technischen Engpasspruefung
+mit kuenstlichen Dateien, Zaehlerereignissen und Mock-I/O. Dabei die Export-
+Bilanzierung untersuchen und nur bei belegtem Bedarf inkrementell fuehren,
+mit unabhaengigem abschliessendem Dateiabgleich und unveraenderten harten Grenzen.
+Keine RW1-Quelle erneut erzeugen, keine Projektion oder Policy wiederholen und
+keine Zeitgrenze erhoehen. Eine spaetere Forschungswiederholung benoetigt eine
+neue ausdrueckliche Entscheidung; dieser Vorschlag erteilt sie nicht.
+
+ARTEFAKTE
+observer/request.json, gate.json, worker-entered.json, counts.jsonl;
+material/manifest.json; vier unveraenderte Armarchive;
+closure/terminal.json, completion.json, technical-closure.json;
+closure/execution-balance.json, archive-check.json, resource-report.json;
+closure/preservation.json und verlustfreie Vorgaenger der drei Uebersichten.
+Diese redaktionelle Abschlussphase ist von der gemessenen Supervisorzeit getrennt.

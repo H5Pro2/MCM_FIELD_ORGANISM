@@ -1,0 +1,599 @@
+{
+  "schema": "MCM-UH1-sources-v1",
+  "status": "BOUND_EXISTING_SOURCES_NO_REPLAY_AUTHORIZATION",
+  "known_sources": true,
+  "source_generation_permitted": false,
+  "source_selection_permitted": false,
+  "cases": 64,
+  "primary_pairs": 32,
+  "frames_per_case": 1024,
+  "entries": [
+    {
+      "replicate": 1,
+      "condition": "D",
+      "orientation": 0,
+      "id": "HX1-01-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-01-D-source.json",
+      "bytes": 6194,
+      "sha256": "743f2f1b9f2da643786bb751439bd616a1f0f1739d6d3ff76ecfc7470c595782"
+    },
+    {
+      "replicate": 1,
+      "condition": "N",
+      "orientation": 0,
+      "id": "HX1-01-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-01-N-source.json",
+      "bytes": 6194,
+      "sha256": "4ad46a687279689929c65b5f4f8dc8d31c6c07ceb6711caf35c5f42ce2b1f8c9"
+    },
+    {
+      "replicate": 2,
+      "condition": "D",
+      "orientation": 1,
+      "id": "HX1-02-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-02-D-source.json",
+      "bytes": 6194,
+      "sha256": "1d6c7dd6215defeb5e085e2f0967b8099971283b62146065baf733d5f90d0660"
+    },
+    {
+      "replicate": 2,
+      "condition": "N",
+      "orientation": 1,
+      "id": "HX1-02-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-02-N-source.json",
+      "bytes": 6194,
+      "sha256": "a5803ba9a54ab5187c65e77ab3c70b7ff764bac21306312a3cf32849cd6f68e5"
+    },
+    {
+      "replicate": 3,
+      "condition": "D",
+      "orientation": 0,
+      "id": "HX1-03-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-03-D-source.json",
+      "bytes": 6194,
+      "sha256": "9fe082c70d836ee8fb89564241e74fc504e0d5fa25f6916de7a4737f69c85563"
+    },
+    {
+      "replicate": 3,
+      "condition": "N",
+      "orientation": 0,
+      "id": "HX1-03-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-03-N-source.json",
+      "bytes": 6194,
+      "sha256": "c83261a5903fc315f92fcfdba2a48b9359cc4e17d6dd057ec9c76d7b5db30235"
+    },
+    {
+      "replicate": 4,
+      "condition": "D",
+      "orientation": 1,
+      "id": "HX1-04-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-04-D-source.json",
+      "bytes": 6194,
+      "sha256": "4d14c6385fdc397d2da688c02dd89eea1c33c8bc6b4d3420632b2c686a862262"
+    },
+    {
+      "replicate": 4,
+      "condition": "N",
+      "orientation": 1,
+      "id": "HX1-04-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-04-N-source.json",
+      "bytes": 6194,
+      "sha256": "fe6c42b26e4763f087bc7caeb04aff8757c7e469c9bf84139eccc650425b8ab1"
+    },
+    {
+      "replicate": 5,
+      "condition": "D",
+      "orientation": 0,
+      "id": "HX1-05-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-05-D-source.json",
+      "bytes": 6194,
+      "sha256": "732afcb6d709b44fe56f3727c79d052d67d36f3cd13d1d830f94ee3c5ea73491"
+    },
+    {
+      "replicate": 5,
+      "condition": "N",
+      "orientation": 0,
+      "id": "HX1-05-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-05-N-source.json",
+      "bytes": 6194,
+      "sha256": "17efc21910c6be9d5b180cae743e28f7f0b641c355ce1afebfdb3e37d5c47734"
+    },
+    {
+      "replicate": 6,
+      "condition": "D",
+      "orientation": 1,
+      "id": "HX1-06-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-06-D-source.json",
+      "bytes": 6194,
+      "sha256": "e3bd69bd7c2c1e66f63f8a2155718583916a20b1ee05908c8287448e0e7428b3"
+    },
+    {
+      "replicate": 6,
+      "condition": "N",
+      "orientation": 1,
+      "id": "HX1-06-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-06-N-source.json",
+      "bytes": 6194,
+      "sha256": "e046a714607b5463ad3953626a97bf605595abc36817f3e78d16df3fe0d3c134"
+    },
+    {
+      "replicate": 7,
+      "condition": "D",
+      "orientation": 0,
+      "id": "HX1-07-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-07-D-source.json",
+      "bytes": 6194,
+      "sha256": "da5dbadd3c52f6897c080c4b4158780bcf8356ecb926545afa825b92b96d7a35"
+    },
+    {
+      "replicate": 7,
+      "condition": "N",
+      "orientation": 0,
+      "id": "HX1-07-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-07-N-source.json",
+      "bytes": 6194,
+      "sha256": "55c1a242cdbaebb9a6e48b97934f5edea2850144f755fef9f9e7fdfefd2c9e29"
+    },
+    {
+      "replicate": 8,
+      "condition": "D",
+      "orientation": 1,
+      "id": "HX1-08-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-08-D-source.json",
+      "bytes": 6194,
+      "sha256": "3adbd97e86532b2c43a0ecc0f744d6ec56b0a9516a3cdc86c563540e9d3af0a7"
+    },
+    {
+      "replicate": 8,
+      "condition": "N",
+      "orientation": 1,
+      "id": "HX1-08-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-08-N-source.json",
+      "bytes": 6194,
+      "sha256": "bf329a55358398669337322df8c82390dac7128b4d39cbef80b65e8ecd2db0d9"
+    },
+    {
+      "replicate": 9,
+      "condition": "D",
+      "orientation": 0,
+      "id": "HX1-09-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-09-D-source.json",
+      "bytes": 6194,
+      "sha256": "3af049ceb14c8668ad7dbadd0022542323acabf3c05caec0a900880ffc94670e"
+    },
+    {
+      "replicate": 9,
+      "condition": "N",
+      "orientation": 0,
+      "id": "HX1-09-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-09-N-source.json",
+      "bytes": 6194,
+      "sha256": "f28f63495069faf07aafeda5d7b7492881bc8cab2b11df3b45811bda3175617d"
+    },
+    {
+      "replicate": 10,
+      "condition": "D",
+      "orientation": 1,
+      "id": "HX1-10-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-10-D-source.json",
+      "bytes": 6194,
+      "sha256": "2864ce38031de654c3deaa0edc591c3073481988c9d198ce7a82d03ea03a733b"
+    },
+    {
+      "replicate": 10,
+      "condition": "N",
+      "orientation": 1,
+      "id": "HX1-10-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-10-N-source.json",
+      "bytes": 6194,
+      "sha256": "53fbfec770e358bbc82522df3575a6d4263799f9bce3ceb718aa60211eee819d"
+    },
+    {
+      "replicate": 11,
+      "condition": "D",
+      "orientation": 0,
+      "id": "HX1-11-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-11-D-source.json",
+      "bytes": 6194,
+      "sha256": "a57fb08ef1543c26edec4c8424c1dd10940295c5120c4b90210aa4a12a1f9f62"
+    },
+    {
+      "replicate": 11,
+      "condition": "N",
+      "orientation": 0,
+      "id": "HX1-11-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-11-N-source.json",
+      "bytes": 6194,
+      "sha256": "1e6b56c81398e43f61a767bc91d85d6c348eed8951922d5a8f842ae70a5b03dd"
+    },
+    {
+      "replicate": 12,
+      "condition": "D",
+      "orientation": 1,
+      "id": "HX1-12-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-12-D-source.json",
+      "bytes": 6194,
+      "sha256": "e4805b851870cc4930bfc4ff16c72d7c7dc8e0001b7437cd800ee4842f77c21d"
+    },
+    {
+      "replicate": 12,
+      "condition": "N",
+      "orientation": 1,
+      "id": "HX1-12-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-12-N-source.json",
+      "bytes": 6194,
+      "sha256": "5d775b85787505e3220779b68ecbdf22b489c909e8fbfaac23fac49dd99b35d6"
+    },
+    {
+      "replicate": 13,
+      "condition": "D",
+      "orientation": 0,
+      "id": "HX1-13-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-13-D-source.json",
+      "bytes": 6194,
+      "sha256": "b2c6b17de32e397eeb7f1a56a6a796317a7ed8235b49ed46f3804cf714f672ea"
+    },
+    {
+      "replicate": 13,
+      "condition": "N",
+      "orientation": 0,
+      "id": "HX1-13-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-13-N-source.json",
+      "bytes": 6194,
+      "sha256": "973091e86831d89354c26273d25727863edf080f3104aa7780e4a5e3b990f258"
+    },
+    {
+      "replicate": 14,
+      "condition": "D",
+      "orientation": 1,
+      "id": "HX1-14-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-14-D-source.json",
+      "bytes": 6194,
+      "sha256": "6365ead436cc2060cd2361ed6bb083d31ee6746517b8a0ff35d1be11bbec09bb"
+    },
+    {
+      "replicate": 14,
+      "condition": "N",
+      "orientation": 1,
+      "id": "HX1-14-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-14-N-source.json",
+      "bytes": 6194,
+      "sha256": "7406f0c5800345a99ba0587adc87df68c4b9d12ef63a502378be2a5edd0f62a1"
+    },
+    {
+      "replicate": 15,
+      "condition": "D",
+      "orientation": 0,
+      "id": "HX1-15-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-15-D-source.json",
+      "bytes": 6194,
+      "sha256": "08b4d3dcf6e9ad2b3fec7d02e8c2ba9d8c7059d7549d48118d1755c94ff3a10c"
+    },
+    {
+      "replicate": 15,
+      "condition": "N",
+      "orientation": 0,
+      "id": "HX1-15-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-15-N-source.json",
+      "bytes": 6194,
+      "sha256": "126cd329b04cee1e00cd1447dcbdf70fc3e98aa0286d113a4ef0ef83721c805c"
+    },
+    {
+      "replicate": 16,
+      "condition": "D",
+      "orientation": 1,
+      "id": "HX1-16-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-16-D-source.json",
+      "bytes": 6194,
+      "sha256": "a9869f74bc74168e6bd5b941cb8beba847cbc2558fa22c5e4d8ac8beec14c2cb"
+    },
+    {
+      "replicate": 16,
+      "condition": "N",
+      "orientation": 1,
+      "id": "HX1-16-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-16-N-source.json",
+      "bytes": 6194,
+      "sha256": "7befe94c89b49a40e69d1e2cacb374be3efb6f3a22636e82bf1a95d61028e594"
+    },
+    {
+      "replicate": 17,
+      "condition": "D",
+      "orientation": 0,
+      "id": "HX1-17-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-17-D-source.json",
+      "bytes": 6194,
+      "sha256": "9ecaec817b4ec20d524eae64ad3bde6ca1158b1057a0320ec2b99bc898dfe5b4"
+    },
+    {
+      "replicate": 17,
+      "condition": "N",
+      "orientation": 0,
+      "id": "HX1-17-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-17-N-source.json",
+      "bytes": 6194,
+      "sha256": "7b4b3cbf50d45d7810e5cc6c2e30091fbc3cdb89c5181a942b798ae8327b7981"
+    },
+    {
+      "replicate": 18,
+      "condition": "D",
+      "orientation": 1,
+      "id": "HX1-18-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-18-D-source.json",
+      "bytes": 6194,
+      "sha256": "e87519fe4628cf6e7840a4ca88cbe33723d20b506b8b025f5af084431735d84f"
+    },
+    {
+      "replicate": 18,
+      "condition": "N",
+      "orientation": 1,
+      "id": "HX1-18-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-18-N-source.json",
+      "bytes": 6194,
+      "sha256": "9480be25ac87b348a6db6d910b38a101ae36005616fbec6a76999b3af2715d94"
+    },
+    {
+      "replicate": 19,
+      "condition": "D",
+      "orientation": 0,
+      "id": "HX1-19-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-19-D-source.json",
+      "bytes": 6194,
+      "sha256": "b86b8daf318dd73a0f522f9248ff519e76346f760e100ca9d793fb07c7cee9af"
+    },
+    {
+      "replicate": 19,
+      "condition": "N",
+      "orientation": 0,
+      "id": "HX1-19-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-19-N-source.json",
+      "bytes": 6194,
+      "sha256": "f93a6a6caad6457e1037e671552592094470bf285d0e0575740eff4a2c4e1e82"
+    },
+    {
+      "replicate": 20,
+      "condition": "D",
+      "orientation": 1,
+      "id": "HX1-20-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-20-D-source.json",
+      "bytes": 6194,
+      "sha256": "9b44e5d27705718c06e307114df6572e6b8d6389282d1f6aabe04caf4b5e4a38"
+    },
+    {
+      "replicate": 20,
+      "condition": "N",
+      "orientation": 1,
+      "id": "HX1-20-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-20-N-source.json",
+      "bytes": 6194,
+      "sha256": "f212d8ba5c7329068a6e5846232388e693217134646da6b25fe9c0156e5e79af"
+    },
+    {
+      "replicate": 21,
+      "condition": "D",
+      "orientation": 0,
+      "id": "HX1-21-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-21-D-source.json",
+      "bytes": 6194,
+      "sha256": "6df8752dc3339d080f6e78915bbd0df9e5252b7eab4a6bc42f22868288128b42"
+    },
+    {
+      "replicate": 21,
+      "condition": "N",
+      "orientation": 0,
+      "id": "HX1-21-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-21-N-source.json",
+      "bytes": 6194,
+      "sha256": "3c1f4e3e7475acfa9ceef8cc63475f6cf6b90d42ec2f61572c5de7575c25fa1f"
+    },
+    {
+      "replicate": 22,
+      "condition": "D",
+      "orientation": 1,
+      "id": "HX1-22-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-22-D-source.json",
+      "bytes": 6194,
+      "sha256": "1348fb15ef6875db4daf35fc4c0177789f882b1e66e955aeb328880e2086abf0"
+    },
+    {
+      "replicate": 22,
+      "condition": "N",
+      "orientation": 1,
+      "id": "HX1-22-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-22-N-source.json",
+      "bytes": 6194,
+      "sha256": "3ba3df61aa88f9d08a784a81ba05e4701fb99ad6719527357558b189c6f356ca"
+    },
+    {
+      "replicate": 23,
+      "condition": "D",
+      "orientation": 0,
+      "id": "HX1-23-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-23-D-source.json",
+      "bytes": 6194,
+      "sha256": "40cfb6edf2f2cf9fb3ffe746d0d5c8d457a05acb92d1a568e51477f1fb0efa4e"
+    },
+    {
+      "replicate": 23,
+      "condition": "N",
+      "orientation": 0,
+      "id": "HX1-23-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-23-N-source.json",
+      "bytes": 6194,
+      "sha256": "01db11178fa8dde1ef5f6f05bc66bc1f80c25b8b0beb9a750a58d5ba6b443497"
+    },
+    {
+      "replicate": 24,
+      "condition": "D",
+      "orientation": 1,
+      "id": "HX1-24-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-24-D-source.json",
+      "bytes": 6194,
+      "sha256": "3b5098ddde4509f976df959e97f745c5190cf20ee4c0fd6e4ce4b9f2903295f6"
+    },
+    {
+      "replicate": 24,
+      "condition": "N",
+      "orientation": 1,
+      "id": "HX1-24-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-24-N-source.json",
+      "bytes": 6194,
+      "sha256": "237d8675273a53c52e2f1ac77f4e1f58f02d87b121319a5584f61a9d0d83921f"
+    },
+    {
+      "replicate": 25,
+      "condition": "D",
+      "orientation": 0,
+      "id": "HX1-25-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-25-D-source.json",
+      "bytes": 6194,
+      "sha256": "d586a6b037df0ff44a75a1fe2e0a15608a4b0be55693ce8ce53c1bcf93513702"
+    },
+    {
+      "replicate": 25,
+      "condition": "N",
+      "orientation": 0,
+      "id": "HX1-25-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-25-N-source.json",
+      "bytes": 6194,
+      "sha256": "70d63ccd6f87a6000a9e48e0a8d14981ed64c078e7911b0012297b70d831708e"
+    },
+    {
+      "replicate": 26,
+      "condition": "D",
+      "orientation": 1,
+      "id": "HX1-26-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-26-D-source.json",
+      "bytes": 6194,
+      "sha256": "e652128bab020507faaed137bd2863245282538d7a929c2d0275fbea2a7196b8"
+    },
+    {
+      "replicate": 26,
+      "condition": "N",
+      "orientation": 1,
+      "id": "HX1-26-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-26-N-source.json",
+      "bytes": 6194,
+      "sha256": "4a916d11aa0a41f56b72e2ac11a338c81b87f0a62ee5ad8dfcdce29d1ad65be2"
+    },
+    {
+      "replicate": 27,
+      "condition": "D",
+      "orientation": 0,
+      "id": "HX1-27-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-27-D-source.json",
+      "bytes": 6194,
+      "sha256": "d523552ba9a8f6b30d9b12a6b01ae61bab167b703a0fdb8451a8540ec6ace769"
+    },
+    {
+      "replicate": 27,
+      "condition": "N",
+      "orientation": 0,
+      "id": "HX1-27-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-27-N-source.json",
+      "bytes": 6194,
+      "sha256": "bb56bdfc1399408140d28edcec17ce38b717930bbf732714898a29842f6be358"
+    },
+    {
+      "replicate": 28,
+      "condition": "D",
+      "orientation": 1,
+      "id": "HX1-28-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-28-D-source.json",
+      "bytes": 6194,
+      "sha256": "f837e50623151dae5b7c7b4c7087edab397e92edbbb58021d743a311dd69c392"
+    },
+    {
+      "replicate": 28,
+      "condition": "N",
+      "orientation": 1,
+      "id": "HX1-28-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-28-N-source.json",
+      "bytes": 6194,
+      "sha256": "8066e9998489cf1595c2e74bdcb837d703c7d80ff633722697b993d57c64e043"
+    },
+    {
+      "replicate": 29,
+      "condition": "D",
+      "orientation": 0,
+      "id": "HX1-29-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-29-D-source.json",
+      "bytes": 6194,
+      "sha256": "d76376a147171a87d894444bc41e505e4b90769ba7190c021337fbe0fd781309"
+    },
+    {
+      "replicate": 29,
+      "condition": "N",
+      "orientation": 0,
+      "id": "HX1-29-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-29-N-source.json",
+      "bytes": 6194,
+      "sha256": "305f3a1f9a5de94520d12b10867ec3d20ece87b456af9eb7c445df86eb43bdb0"
+    },
+    {
+      "replicate": 30,
+      "condition": "D",
+      "orientation": 1,
+      "id": "HX1-30-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-30-D-source.json",
+      "bytes": 6194,
+      "sha256": "9d3b7c9218ad0c21feaa062002f7009a92d4d322c479a4d196fb84c5b8bcd7f4"
+    },
+    {
+      "replicate": 30,
+      "condition": "N",
+      "orientation": 1,
+      "id": "HX1-30-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-30-N-source.json",
+      "bytes": 6194,
+      "sha256": "f1d08a480cc5976161567cf2c362016bf94e9d7a919bc3aab15e1ade68dd3c9e"
+    },
+    {
+      "replicate": 31,
+      "condition": "D",
+      "orientation": 0,
+      "id": "HX1-31-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-31-D-source.json",
+      "bytes": 6194,
+      "sha256": "f1acdf49040f798fbbe64b7e994df72f0cc65b653569cfd89456c790cd1b889b"
+    },
+    {
+      "replicate": 31,
+      "condition": "N",
+      "orientation": 0,
+      "id": "HX1-31-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-31-N-source.json",
+      "bytes": 6194,
+      "sha256": "5a0f9da03039102fbc187c7bcf233c3c6b8d09a3de188a9d9185d21ad76bca7f"
+    },
+    {
+      "replicate": 32,
+      "condition": "D",
+      "orientation": 1,
+      "id": "HX1-32-D",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-32-D-source.json",
+      "bytes": 6194,
+      "sha256": "eac31b00de935837007e3d9e80585636a3c21cf5b3424e36c91dd8f1cbdf0ce8"
+    },
+    {
+      "replicate": 32,
+      "condition": "N",
+      "orientation": 1,
+      "id": "HX1-32-N",
+      "path": "reports/s2uc/hx1-comparison-20261004-01/HX1-32-N-source.json",
+      "bytes": 6194,
+      "sha256": "096c6d6f5a1b241dcedf3132efbabf640c98626c2706bd274a0aabe1aff12017"
+    }
+  ],
+  "total_source_bytes": 396416,
+  "anchors": {
+    "reports/s2uc/hx1-comparison-20261004-01/closure.json": {
+      "bytes": 15953,
+      "sha256": "f56ee877c5df6353068cbc3d7b531b609ec9984a8f80f79149e2ed7c411543b7"
+    },
+    "reports/s2uc/hx1-comparison-20261004-01/manifest.json": {
+      "bytes": 8004,
+      "sha256": "a1591f3ed40b0fd3fe4338b62bbb969abb36ad24190a4d429d99ed0e57f24cf6"
+    }
+  }
+}

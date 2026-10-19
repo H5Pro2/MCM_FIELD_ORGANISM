@@ -1,0 +1,50 @@
+{
+  "concept": {
+    "info": {
+      "bytes": 22840,
+      "sha256": "169cb1df3118b58f3e7173a711668df4617a8a8727d8b77f6488a0e6e2e2007e"
+    },
+    "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\docs\\S2UC_ZEITLICHE_AUSRICHTUNG_KONZEPT_20261019.txt"
+  },
+  "files": {
+    "historical-overviews/AKTUELLER_FORSCHUNGSWEG.md.gz": {
+      "bytes": 473202,
+      "sha256": "47abd73412303e25b806d5439007aff37443adc701b2e350482ca8377c1e0c8c"
+    },
+    "historical-overviews/README.md.gz": {
+      "bytes": 57778,
+      "sha256": "a9216df7e786acbd8c5dbb550c524a1fa4abb38837c7b1638ec7a24f11e609e9"
+    },
+    "historical-overviews/docs/README.md.gz": {
+      "bytes": 88914,
+      "sha256": "068de0122c4113ed5c4bb36b29e766ad4283dd238b129f1ee8aa95bd2bfd69e9"
+    },
+    "preservation.json": {
+      "bytes": 1754,
+      "sha256": "ea23b374ff148e7204ef185cc7c0800304338b48f74f5d719912248cb424652a"
+    },
+    "scope.json": {
+      "bytes": 470,
+      "sha256": "74acd32974cfde49334cd7ea78be733b4a8a45e37450fb44cc7c8c158509112c"
+    }
+  },
+  "historical_diagnosis_binding": {
+    "bytes": 2841,
+    "sha256": "203f449a12dd9b66aee3ca3dacf971f0ab0eae3d3c47d8bbb3d1d03f0aee6103"
+  },
+  "overviews": {
+    "AKTUELLER_FORSCHUNGSWEG.md": {
+      "bytes": 1546463,
+      "sha256": "6df46ce1040439a7a8968de8943c7bd4326138f4f756495d324485eee01a1941"
+    },
+    "README.md": {
+      "bytes": 188652,
+      "sha256": "7926ca891d09c9784b4c5a88845e5ac535437ce05af4f27ebcb6c60c926ec2a8"
+    },
+    "docs/README.md": {
+      "bytes": 286501,
+      "sha256": "eefabe51210168c5ae9e21480d80d3359aece71cf12b41f337a5688bcc376c3a"
+    }
+  },
+  "workflow": "5db2e001-9290-4074-a206-feac08383fcd"
+}

@@ -1,0 +1,9 @@
+{
+  "ns": 459565822040800,
+  "member": true,
+  "flags": 8448,
+  "limit": 671088640,
+  "peak_process_commit": 11956224,
+  "peak_job_commit": 18530304,
+  "product_numpy_absent": true
+}

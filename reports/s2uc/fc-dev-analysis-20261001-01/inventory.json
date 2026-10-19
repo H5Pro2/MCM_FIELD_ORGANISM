@@ -1,0 +1,78 @@
+{
+  "AM.json": {
+    "sha256": "27abe5dc5e2baa615ba5c38d05bae8fd0b193bfccd82b6b854fd0488eabb3e16",
+    "bytes": 576276
+  },
+  "candidate-probe.json": {
+    "sha256": "dedc23a97dba53123195c592f42f4337e71532484150aeef49f648a6677b4572",
+    "bytes": 130915
+  },
+  "EN.json": {
+    "sha256": "a827f67060c14b450361d13515fddf3504aa00ead24a68d7c66a342a3910feb5",
+    "bytes": 236458
+  },
+  "F1.json": {
+    "sha256": "7b144f0baa71b2ce1000334f4faac5e81d46b116ebabd0c37795d10ab6dbf21b",
+    "bytes": 238680
+  },
+  "FD.json": {
+    "sha256": "d2c7e467cda341cbb77fc0a16d18e5144ac9806d47854b3af5d36a120d065c04",
+    "bytes": 236545
+  },
+  "FH.json": {
+    "sha256": "983f202c52a51d9863482ab7d1e789cdd2931fca784358cc58f825604f2fb8e5",
+    "bytes": 237994
+  },
+  "GD.json": {
+    "sha256": "a9c8571fbf034258a52d931de3e1717189d94d925ca7648aeaf8150f8746bff1",
+    "bytes": 236756
+  },
+  "GH.json": {
+    "sha256": "47969c8452c6c6b7c24883c85eb3682a0c48f0ae9054b4a1aea5ba09bf716188",
+    "bytes": 237830
+  },
+  "GP.json": {
+    "sha256": "fd7ca11521269a52c6904c89da548ee6e65c868c4ffc9ec1c92e6398f615a7cf",
+    "bytes": 237962
+  },
+  "GR.json": {
+    "sha256": "f0b7985aa9f6f6443c441cad8b02ba3cccf4b5f19ec8c83f10afdfb1a678343f",
+    "bytes": 237916
+  },
+  "NM.json": {
+    "sha256": "1da3c8924b6c2adcc0db6662be79ea4a34166aba86d2537fe223da84201cb6a4",
+    "bytes": 234902
+  },
+  "preanalysis.json": {
+    "sha256": "b21515b6ac1a87994978c65622c70604f182e2177824b68b0af1662b4831fd47",
+    "bytes": 2103
+  },
+  "REPORT.txt": {
+    "sha256": "f0e0ae0ab2f90db125a843805c3ac5a789cb7d0cff1e70519d65c55676e8714b",
+    "bytes": 15500
+  },
+  "resource-ledger.json": {
+    "sha256": "56d24cccdf37658d811451db45d4f814850513b68a6c807249cb829616042624",
+    "bytes": 374
+  },
+  "result.json": {
+    "sha256": "98f58c066cb0aea6c1543b5ab24526ec8122d54ae0b56222c48175919b709d23",
+    "bytes": 115941
+  },
+  "run_analysis.py": {
+    "sha256": "948403f911b93e467871f8341308af36a561a98cac737110089e83087d9b7c48",
+    "bytes": 4034
+  },
+  "verification.json": {
+    "sha256": "34adc712eaae17b8643f5c7c7356bc7c1127488636188922d5a65cdd937ce3ec",
+    "bytes": 8712
+  },
+  "write_report.py": {
+    "sha256": "7e2cb89a1c7c780f3d09104a9afd157204c138a9cb5e3fce9a18a9b508eec2c5",
+    "bytes": 8293
+  },
+  "ZF.json": {
+    "sha256": "1be78b3978d0926fcc296c2df650ff96a9ff6e70784de9f237719be80a8d6e8b",
+    "bytes": 201788
+  }
+}

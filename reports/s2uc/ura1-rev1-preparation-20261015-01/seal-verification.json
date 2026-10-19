@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "prestart_sha256": "3d05e2fc657a704be3fb5901a302c0c81e519aefaa377909529686a6cf7e650d",
+  "bound_files": 939,
+  "bound_dependency_bytes": 15909641,
+  "preparation_bytes_before_this_receipt": 2801938,
+  "preparation_ceiling": 8388608,
+  "inherited_files_unchanged": 891,
+  "binding_validation": true,
+  "missing_authorization_rejected": true,
+  "target_absent": true,
+  "authorization_absent": true,
+  "call": [
+    "C:\\Python314\\python.exe",
+    "-m",
+    "tools.s2uc_ura1_prepare_rev1",
+    "run",
+    "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\ura1-rev1-preparation-20261015-01\\prestart.json",
+    "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2uc\\ura1-rev1-preparation-20261015-01\\authorization.json"
+  ],
+  "note": "This post-seal receipt and mutable overview files are outside prestart to avoid circular hashes.",
+  "preparation_bytes": 2802870
+}

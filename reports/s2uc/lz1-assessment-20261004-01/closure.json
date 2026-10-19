@@ -1,0 +1,39 @@
+{
+  "status": "COMPLETE_ARCHIVE_ASSESSMENT",
+  "run_closure_sha256": "4c04de12a48828669425e72e2b0b9881b739b8b7bb2f3eef7675a1deded9721d",
+  "replays": 0,
+  "files": {
+    "case-mask-means.csv": {
+      "bytes": 51543,
+      "sha256": "46b352911e2841db53fa5e1f2e1dfc65e02a0e358366fd138b4a2774e4f2336b"
+    },
+    "closure.json": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "contrasts.csv": {
+      "bytes": 7361,
+      "sha256": "d04ea5f5dc090bca69062b7e5b468d59c55f094eeeaf8726b6bdd09e0dc0c317"
+    },
+    "cycles.json": {
+      "bytes": 43205,
+      "sha256": "128bcbfd1200ec8bc69b57f993ee692cd202aabd6831012c6b0100733a20b780"
+    },
+    "harms.csv": {
+      "bytes": 3128,
+      "sha256": "798aa5c0c0a0597f301121649439488fe7702dd24fae8344442f155ccc35fdd4"
+    },
+    "REPORT.md": {
+      "bytes": 14283,
+      "sha256": "ac768eb4bb9f4fadfe61b24c35b88020440ee958e037f54efb2ec31921f93e43"
+    },
+    "targets.csv": {
+      "bytes": 4599886,
+      "sha256": "e929697dd386471ae258746e46bc6280553272f82ba510c7c41159b50b6cce7b"
+    },
+    "verification.json": {
+      "bytes": 11594,
+      "sha256": "0dcff9302ccb5ae6b637139268f5b36873d4b75d238dfee5447d30fc7066133e"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "path": "attempt-01/dependency-inventory.json",
+    "bytes": 13909,
+    "sha256": "33d49f3a593ebafb3bacbd6eaf0d2c074a8d42abeda41c569bc8f11521ca8549"
+  },
+  {
+    "path": "attempt-01/preparation/ledger.json",
+    "bytes": 1996,
+    "sha256": "8c2fb4bba2f076786f0daf344dd504c6d1ae9cdd363cf517d0c4caeaebc3d2e4"
+  },
+  {
+    "path": "attempt-01/preparation/preparation.json",
+    "bytes": 1811,
+    "sha256": "9f3309dc4eb5292476427e0fc16aa2ddf5747f35a809813b399a839013f9a692"
+  },
+  {
+    "path": "attempt-01/preparation/protocol.json",
+    "bytes": 16427,
+    "sha256": "d82423d7459bb87f022d36c9e4f77be06c35de396ce4ac9bb6bf8561012d8d4b"
+  },
+  {
+    "path": "attempt-01/preparation/resources.json",
+    "bytes": 401,
+    "sha256": "36813238bf6f11aeb3f6d3f4f1669834733da31fa323ca1e2223419d1481fc1c"
+  },
+  {
+    "path": "attempt-01/preparation/source-context.json",
+    "bytes": 50818,
+    "sha256": "6acb200eb1b70382969cbeb2d1c74f3e8953937d28e708eda83c6ce7a9c4a6f1"
+  },
+  {
+    "path": "attempt-01/preparation-result.json",
+    "bytes": 2114,
+    "sha256": "1139fcc3ed303445342177f163f68335c2eb8e51aa1e229d99ed4abdd3b75daf"
+  },
+  {
+    "path": "attempt-01/test-result.json",
+    "bytes": 1228,
+    "sha256": "aa65a6473585d19b23f8471d3e6f705dddd1d53fb208edd5b6b7b97f753e2d86"
+  },
+  {
+    "path": "attempt-01/unittest.log",
+    "bytes": 712,
+    "sha256": "0aee61b6675102f0a52dab5b863ad126d8117f49aea2418fcbf2554d91a0635b"
+  },
+  {
+    "path": "boundary-regression-corrected.log",
+    "bytes": 598,
+    "sha256": "ec31cfdb40c8cda21d72559d3e910a9a5708c92f50c8733bb0c353f097feb024"
+  },
+  {
+    "path": "boundary-regression-result.json",
+    "bytes": 1164,
+    "sha256": "a34c6b62ccc70fd383ebbab157a82e5f287b8bf42be1bb9424706a432c0e6ebe"
+  },
+  {
+    "path": "boundary-regression.log",
+    "bytes": 1489,
+    "sha256": "e9d0488043f436cf6c63ec3927cad4ba1aceb4c988c302e905b72cb7c4db0392"
+  },
+  {
+    "path": "delivery-check.json",
+    "bytes": 843,
+    "sha256": "eece08bb41cd166a55bc3947335873fe39e10bec7d1b4046ad743754625ac520"
+  },
+  {
+    "path": "preserved-before.json",
+    "bytes": 534852,
+    "sha256": "2bc03c5339a700624ea76f29be16df96fcc68e7e0e822a4315bece9e828a07a5"
+  },
+  {
+    "path": "REPORT.txt",
+    "bytes": 5149,
+    "sha256": "b12741cd95535176e5e3d3e3d1215a0e8e336eb8f8caa127fe3390cf27fcca81"
+  },
+  {
+    "path": "verified-read.json",
+    "bytes": 2114,
+    "sha256": "1139fcc3ed303445342177f163f68335c2eb8e51aa1e229d99ed4abdd3b75daf"
+  }
+]

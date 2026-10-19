@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "stories": 2,
+  "arms_per_story": 3,
+  "experimental_arm_admissions": 1200,
+  "internal_reference_advances": 1200,
+  "distinct_material_frames": 400,
+  "no_midstory_reset": true,
+  "primary_per_story_per_arm": 24,
+  "secondary_per_story_per_arm": 75,
+  "censored_per_story_per_arm": 201,
+  "states_identical_every_frame": true,
+  "updates_only_after_actual": true,
+  "lifetimes_checked": true,
+  "slots_released": true,
+  "bindings_unchanged": true,
+  "parameters_unchanged": true,
+  "A_trace_retained_at_all_primary_targets": true,
+  "peaks": {
+    "additional_python_bytes": 4284,
+    "frame_peak": 12,
+    "output_peak": 2,
+    "combined_peak": 13
+  }
+}

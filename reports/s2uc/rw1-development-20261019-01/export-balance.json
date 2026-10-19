@@ -1,0 +1,17 @@
+{
+  "closure_cap": 1048576,
+  "contract_documentation_bytes": 655020,
+  "final_binding_and_balance_reserve": 131072,
+  "inherited_development_bytes": 4562275,
+  "material_cap": 4194304,
+  "material_manifest_reserve": 845824,
+  "material_static_bound": 3348480,
+  "new_code_bytes": 57747,
+  "observer_cap": 3145728,
+  "observer_reserve": 123392,
+  "observer_static_bound": 3022336,
+  "preparation_bytes_before_final_balance_binding": 7216123,
+  "preparation_cap": 8388608,
+  "preparation_reserved_remaining": 1041413,
+  "total_cap": 16777216
+}

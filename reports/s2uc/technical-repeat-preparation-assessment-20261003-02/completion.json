@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "closure_sha256": "5e894b28d077f515c909da056f899c0335e444fffc554421dcfcb0dce73113d6",
+  "duration_seconds": 602.5121864,
+  "deadline_met": true,
+  "total_bytes_before_terminal_record": 2866717,
+  "terminal_record_own_write_excluded": true
+}

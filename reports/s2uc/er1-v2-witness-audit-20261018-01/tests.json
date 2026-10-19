@@ -1,0 +1,14 @@
+{
+  "count": 8,
+  "ids": [
+    "test_checker.Qualification.test_broken_origin",
+    "test_checker.Qualification.test_duplicate",
+    "test_checker.Qualification.test_false_feedback_time",
+    "test_checker.Qualification.test_false_offset",
+    "test_checker.Qualification.test_missing_countervictim",
+    "test_checker.Qualification.test_omission",
+    "test_checker.Qualification.test_positive",
+    "test_checker.Qualification.test_target_deduplication"
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,7 @@
+{
+  "initial": "01: overly strict simultaneous promotions; 32 archives read, developmental discrepancies, 148.0740501 seconds, peak 49319936 bytes",
+  "second": "02: incorrectly required identical generation across candidate promotion; 27 case reports saved, archive 28 read; REPORT_BUDGET during case-28 write and final result write; no result.json. Hard job 512 MiB active, final peak/time not captured.",
+  "correction": "03: counterpart promotion sufficient; continuous original identity with only legitimate candidate-to-retained generation transition. Compact differences and reserved 16 KiB terminal.",
+  "inspection": "One additional archive-01 schema inspection, no policy or bootstrap.",
+  "earlier_artifacts_preserved": true
+}

@@ -1,0 +1,1 @@
+Superseded preparation binding: functional tests passed; receipt_bytes_peak did not observe exact_v1 base receipt. Revision02 adds explicit receipt measurement and its regression assertion. No real counterprobe executed.

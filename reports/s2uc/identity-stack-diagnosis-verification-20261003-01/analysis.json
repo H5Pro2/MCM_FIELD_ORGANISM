@@ -1,0 +1,86 @@
+{
+  "order": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "replays": 4,
+  "admissions": 320,
+  "reference_advances": 320,
+  "all_fields_checked": true,
+  "semantic_all_equal": true,
+  "meter_all_equal": true,
+  "full_resources_all_equal": false,
+  "resource_differences": {
+    "B": {
+      "full_resources_equal": false,
+      "meter_equal": true,
+      "resource_differences": {
+        "additional_python_peak": {
+          "A": 4316,
+          "other": 2860
+        }
+      },
+      "semantic_equal": true
+    },
+    "C": {
+      "full_resources_equal": false,
+      "meter_equal": true,
+      "resource_differences": {
+        "additional_python_peak": {
+          "A": 4316,
+          "other": 2724
+        }
+      },
+      "semantic_equal": true
+    },
+    "D": {
+      "full_resources_equal": false,
+      "meter_equal": true,
+      "resource_differences": {
+        "additional_python_peak": {
+          "A": 4316,
+          "other": 2724
+        }
+      },
+      "semantic_equal": true
+    }
+  },
+  "full_release": true,
+  "source_digest": "98b976669c4dd61eed894bc510baf2f1b26cc1cbcb393fd4afc15b90b3d62739",
+  "elapsed_until_closure_finished_s": 90.9402782,
+  "budget_seconds": 900,
+  "max_heap": 4316,
+  "heap_limit": 16384,
+  "counters_scope": "Cumulative basisvisitor counts. unique_float_visits is per-callback seen-filtered sum, not live distinct objects; sample_float_identity_sum sums sample-local identity cardinalities.",
+  "effects_seconds": {
+    "wall_ns": {
+      "identity_direct": 4.883463799999998,
+      "identity_integrated": 3.6254565999999997,
+      "stack_shared": 2.6562164999999993,
+      "stack_json": 1.3982093000000013,
+      "interaction": -1.258007199999998,
+      "identity_average": 4.254460199999999,
+      "stack_average": 2.0272129000000003
+    },
+    "cpu_ns": {
+      "identity_direct": 4.796875,
+      "identity_integrated": 3.59375,
+      "stack_shared": 2.671875,
+      "stack_json": 1.46875,
+      "interaction": -1.203125,
+      "identity_average": 4.1953125,
+      "stack_average": 2.0703125
+    }
+  },
+  "workload": {
+    "extra_float_unique_visits": 3578815,
+    "extra_sample_identity_sum": 3574350,
+    "extra_stack_checks": 684450,
+    "extra_stack_frames_per_relevant_event": 9.0
+  },
+  "binding_sha256": "018c498c1a50f3bfc9d8fc37dbdf7070d7052565c5f18b4ed351c9ae14997216",
+  "raster_replays": 0,
+  "operative_optimization": false
+}

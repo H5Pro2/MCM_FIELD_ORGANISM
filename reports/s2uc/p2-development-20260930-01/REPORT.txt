@@ -1,0 +1,109 @@
+Paket 2 - Implementierung und neutrale Anschlussqualifikation
+
+Status: Genehmigter neutraler P2-Entwicklungsumfang abgeschlossen.
+203/203 PASS auf endgueltigem Code, Exit 0; unabhaengige Abnahme ausstehend.
+
+Auftrag: neue P2-Grenzen, gemeinsamer Ledger, neutrale Zulassung und exklusive
+Einmalreservierung, begrenzter Kindprozess, unveraenderte Quellenmaterialisierung,
+Produktabschluss und separater Herkunftsnachtrag. Keine reale Quellenproduktion,
+keine produktive Einmallaufautorisierung, keine neue fachliche Versuchslinie.
+
+Neue Dateien:
+- tools/_s2uc_p2_resources.py: P2-Vertrag; alle angemeldeten Eingaben und alle
+  gleichzeitig vorhandenen Dateien im gemeinsamen Qualifikationsverzeichnis.
+  Unbekannte Dateien, Aliase, geaenderte Eingaben und Ueberlaeufe sperren Erfolg.
+  Gemessene Dateibytes und prospektive Abschlussreserve stehen getrennt.
+- tools/_s2uc_p2_execution.py: gebundene neutrale Vorbereitung, exklusive Claim-
+  Datei vor Prozesszulassung, gemeinsamer Publikationspfad, Quellenabschluss.
+  Wiederverwendung von SourceAdapter, Materialisierungspruefung, Memory-Armen
+  und historischer Entscheidungsauswertung. Kein neuer Memory-Algorithmus.
+- tools/s2uc_p2_process.py: -S-Start ohne Produkt-/NumPy-Import, Windows-Job mit
+  640 MiB Kindprozess-Commitlimit, Codehashpruefung, Zulassung vor Produktimport.
+  Die Mitgliedschaft wird direkt beim Betriebssystem nachgeprueft. Elternprozess
+  und Herkunftsauswertung besitzen dadurch keine 640-MiB-Begrenzung.
+- tools/_s2uc_p2_appendix.py: getrennte Herkunftsauswertung mit unveraenderten
+  Zielurspruengen und Herkunftsalgorithmen; Originaldateien werden nur gelesen.
+- tests/test_s2uc_p2.py: 15 neue Pruefpflichten einschliesslich Fehlerpfaden.
+- tools/s2uc_p2_check.py: alle 188 bisherigen plus 15 neue Pruefpflichten;
+  eindeutige Einzelresultate, kompaktes Protokoll und gemeinsamer Abschlussledger.
+
+Beobachtungsgrenzen:
+Der produktive Einstieg ist geschlossen. Der vorhandene NU-Bedarfssupplier wird
+erst nach nativer Job-Zulassung konstruiert; neutrale Faelle benutzen ausschliesslich
+den Ersatzsupplier. Sein produktiver Aufruf ist in den Testkindern gesperrt und
+wird gezaehlt. Eine Claim-Datei ist ausschliesslich ein neutraler Einmalverbrauch,
+keine produktive Freigabe. Es gibt keinen automatischen Wiederholungsversuch.
+Manuelles Loeschen/Wiederherstellen verbrauchter Laufverzeichnisse liegt ausserhalb
+dieses Einmallaufprotokolls; ein manipulationssicherer Autorisierungsdienst wird
+nicht behauptet. Ein injizierter MemoryError ist kein gemessener Speichermangel.
+
+Evidenzverwaltung:
+focus-01 und focus-02 bleiben samt Fehlbefunden erhalten und werden mitgezaehlt.
+Die erste Gruppe zeigte einen falschen Vergleich des zusaetzlichen Inventarfelds
+category; die zweite einen JSON-Tupel/Listenvergleich und die fehlende kontrollierte
+Abweisung eines noch nicht vorhandenen Nachtrags. Alle drei Fehler wurden korrigiert.
+unittest.log belegt anschliessend den bestandenen gezielten Erfolgs-/Mutationsfall.
+Die endgueltige Pruefung steht unter final/. Kurzlebige Testverzeichnisse werden
+nach ihrem Test regulaer entfernt; solange sie existieren, gehoeren sie zum Ledger.
+Aufbewahrte Versuche und der finale Erfolgsfall liegen im selben bilanzierten Baum.
+P1-Eingaben, Originalnachweise und dessen Auditdateien werden ueber den gebundenen
+Eingabesatz mitgezaehlt, ohne Kopien oder Umetikettierung alter Inventare.
+
+Die bisherigen wissenschaftlichen Erwartungen, einschliesslich des Widerspruchs
+bei g1/24, werden nicht angepasst. Synthetische Gewinne und Verluste belegen keinen
+realen Quellenvergleich und keine allgemeine Ueberlegenheit.
+
+Naechster fachlicher Schritt nach bestandenem Abschluss: unabhaengige Pruefung
+und Abnahme dieses P2-Anschlusses durch den Projektleiter. Eine produktive
+Quellenentscheidung bleibt davon getrennt.
+
+Abschlussbefund
+Alle 188 bisherigen und 15 neuen Pruefpflichten bestanden; 0 Fehler, 0 Fehlschlaege, 0 Skips.
+Testdauer: 1468,455 Sekunden. Alle Test-IDs und Einzelresultate: final/test-result.json.
+Kompaktes Pruefprotokoll: final/protocol.json (16145 Byte / 32768).
+Aktives Codeinventar: final/inventory.json (14894 Byte / 16384).
+unittest.log ist das zusaetzliche Rohdiagnoselog und als static_shared voll mitgezaehlt;
+es ersetzt nicht das kompakte gebundene Pruefprotokoll.
+72 Code-Dateien, davon sechs neu; alle bisherigen 66 Code-Dateien unveraendert.
+17 P1-Dateien und 2296 historische Nachweise sind bytegleich erhalten.
+final/retained-success: CLOSED_NEUTRAL_P2_VERIFIED und CLOSED_NEUTRAL_PROVENANCE.
+58 Supplieraufrufe, 58 Materialisierungen, 0 reale Produktionsaufrufe.
+Sieben Hints auswertbar: Gewinn g1/24; getrennte Verluste g1/26, g2/38, g3/67.
+Die historische TW-Erwartung bei g1/24 bleibt verletzt. Keine Verrechnung.
+Produktrecord, Verifikation und Terminal sind vor/nach dem Nachtrag bytegleich.
+Original-Hashes stehen in final/retained-success/appendix/appendix-terminal.json.
+
+Gemeinsame Schlussbilanz (tatsaechlich vorhandene Bytes, inklusive dieses Berichts):
+code: 913849 / 1048576
+metadata: 84394 / 131072
+static_shared: 995374 / 1572864
+record: 193082 / 245760
+verification: 77574 / 131072
+error: 0 / 65536
+terminal: 4482 / 32768
+minimal: 0 / 16384
+staging: 0 / 245760
+shared: 999856 / 1703936
+total: 2268755 / 4194304
+Getrennte prospektive Abschlussreserve: 2730897 / 4194304 Byte.
+Record-/Verifikationswerte oben verwenden die Reserven 245760/131072; die absoluten
+Grenzen bleiben jeweils 262144. Staging 0 bezeichnet den abgeschlossenen Zustand.
+Staging und Ziel werden vor jeder Publikation gemeinsam mit den uebrigen Dateien
+geprueft; es wird daraus keine Prozessspeichermessung abgeleitet.
+
+Neue P2-Test-IDs (alle PASS):
+tests.test_s2uc_p2.P2Tests.test_appendix_write_failure_preserves_product
+tests.test_s2uc_p2.P2Tests.test_atomic_staging_failure_and_primary_preserved
+tests.test_s2uc_p2.P2Tests.test_binding_and_input_mutations
+tests.test_s2uc_p2.P2Tests.test_budget_boundaries_and_reservations
+tests.test_s2uc_p2.P2Tests.test_child_requires_job_before_supplier
+tests.test_s2uc_p2.P2Tests.test_exclusive_claim_and_no_restart_retry
+tests.test_s2uc_p2.P2Tests.test_external_abort_consumes_claim
+tests.test_s2uc_p2.P2Tests.test_forged_job_receipt_cannot_admit_parent
+tests.test_s2uc_p2.P2Tests.test_late_supplier_failure_is_not_evaluable
+tests.test_s2uc_p2.P2Tests.test_parent_job_setup_failure_consumes_claim
+tests.test_s2uc_p2.P2Tests.test_preparation_and_closed_productive_entry
+tests.test_s2uc_p2.P2Tests.test_simultaneous_retained_files_count
+tests.test_s2uc_p2.P2Tests.test_success_appendix_and_original_byte_mutations
+tests.test_s2uc_p2.P2Tests.test_unclassified_alias_and_inventory_overflow
+tests.test_s2uc_p2.P2Tests.test_wrong_source_hash_stops_before_analysis

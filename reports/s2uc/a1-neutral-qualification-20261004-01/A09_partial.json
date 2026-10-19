@@ -1,0 +1,123 @@
+{
+  "frames": 3,
+  "enabled": true,
+  "trace": false,
+  "rows": [
+    {
+      "target": 3,
+      "error": 0.001953125,
+      "decision": "NO_ELIGIBLE_CONTEXT",
+      "updates": []
+    }
+  ],
+  "forecasts": [
+    {
+      "status": "ABSTAIN_NO_MATCH",
+      "stream": "stream",
+      "owner": "neutral-a1",
+      "profile": "855b2bd98a737a67323c59cd7b60e4ae07b3eb99dc15dc76dce967f1b837a0cf",
+      "input_indices": [
+        1,
+        2
+      ],
+      "source_intervals": [
+        [
+          0,
+          4800
+        ],
+        [
+          4800,
+          9600
+        ]
+      ],
+      "read_revision": 0,
+      "decision": "NO_ELIGIBLE_CONTEXT",
+      "choice": 0,
+      "matches": [],
+      "hypotheses": [],
+      "retained_semantics": "ADMITTED_NOT_FULL_REPEAT_PROOF",
+      "a1_admission": null
+    }
+  ],
+  "states": [
+    {
+      "index": 1,
+      "stock": {
+        "candidate": null,
+        "retained": [],
+        "candidate_serial": 0,
+        "retained_serial": 0,
+        "observation_end": {}
+      },
+      "cells": []
+    },
+    {
+      "index": 2,
+      "stock": {
+        "candidate": null,
+        "retained": [],
+        "candidate_serial": 0,
+        "retained_serial": 0,
+        "observation_end": {}
+      },
+      "cells": []
+    },
+    {
+      "index": 3,
+      "stock": {
+        "candidate": null,
+        "retained": [],
+        "candidate_serial": 0,
+        "retained_serial": 0,
+        "observation_end": {}
+      },
+      "cells": []
+    }
+  ],
+  "resources": {
+    "additional_python_peak": 3162,
+    "original_frames_peak": 0,
+    "output_slots_peak": 1,
+    "combined_peak": 0,
+    "original_frames_upper_bound": 3,
+    "combined_upper_bound": 5,
+    "packed": 416,
+    "receipt_bytes_peak": 374,
+    "utf8_upper": 748,
+    "calls": [
+      {
+        "operation": "perception",
+        "retained": 1468,
+        "transient": 499,
+        "total": 1967
+      },
+      {
+        "operation": "perception",
+        "retained": 1496,
+        "transient": 1666,
+        "total": 3162
+      },
+      {
+        "operation": "feedback",
+        "retained": 2019,
+        "transient": 464,
+        "total": 2483
+      },
+      {
+        "operation": "perception",
+        "retained": 1524,
+        "transient": 499,
+        "total": 2023
+      },
+      {
+        "operation": "finish",
+        "retained": 1552,
+        "transient": 1458,
+        "total": 3010
+      }
+    ]
+  },
+  "reference_equal": true,
+  "cleanup": true,
+  "neutral_only": true
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PENDING_SEPARATE_AUTHORIZATION",
+  "action": "RUN_MULTI_48_ONCE",
+  "plan_sha256": "dec8a09af2ebaeb288dc686c0de92fc19a04c8709a147e1b59c9331e2726d0d9",
+  "binding_sha256": "926817a5ffa4fbfd9e2d6b7450f606b81cae948412d4fcdc42847587a87bc2d7",
+  "output": "reports/s2uc/multi-counterprobe-20261003-01",
+  "arms": [
+    "U",
+    "M",
+    "E",
+    "K",
+    "P"
+  ],
+  "frames": 48
+}

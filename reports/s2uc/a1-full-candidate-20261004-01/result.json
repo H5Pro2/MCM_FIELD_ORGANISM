@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "exact_full_candidate_priority": true,
+  "no_partial_admission": true,
+  "original_identity": true,
+  "receipt": {
+    "status": "ABSTAIN_AMBIGUOUS",
+    "stream": "stream",
+    "owner": "neutral-a1",
+    "profile": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "input_indices": [
+      7,
+      8
+    ],
+    "source_intervals": [
+      [
+        28800,
+        33600
+      ],
+      [
+        33600,
+        38400
+      ]
+    ],
+    "read_revision": 0,
+    "decision": "COLD_ONLY",
+    "choice": 0,
+    "matches": [
+      {
+        "role": "candidate",
+        "generation": 1,
+        "formation": "p1",
+        "ordinals": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "offset": 0,
+        "factors": [
+          1.0
+        ]
+      },
+      {
+        "role": "candidate",
+        "generation": 1,
+        "formation": "p1",
+        "ordinals": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "offset": 2,
+        "factors": [
+          1.0
+        ]
+      }
+    ],
+    "hypotheses": [
+      {
+        "eligible": true,
+        "ticket": 0,
+        "ec": null,
+        "ep": null,
+        "delta": null,
+        "evaluation": "COLD"
+      },
+      {
+        "eligible": false,
+        "reason": "NO_SUCCESSOR"
+      }
+    ],
+    "retained_semantics": "ADMITTED_NOT_FULL_REPEAT_PROOF",
+    "a1_admission": null
+  },
+  "neutral_only": true
+}

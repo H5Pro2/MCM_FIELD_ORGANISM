@@ -1,0 +1,6 @@
+NICHT AUSFÜHREN OHNE SEPARATE FORSCHUNGSFREIGABE
+Arbeitsverzeichnis: C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace
+C:/Python314/python.exe -B experiments/as480/entry.py --mode research --task full --out "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\reports\s2uc\as480-comparison-01" --authorization "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\reports\s2uc\as480-neutral-qualification-20261019-01\authorization.json"
+
+Binding SHA256: 65cc36a2da6c3e558842d0bc0e9d509072fb4cdb6cfd6d35f2445347c651c482
+Vorlage authorization-template.json ist PENDING und keine Berechtigung.

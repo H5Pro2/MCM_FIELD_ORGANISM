@@ -1,0 +1,4 @@
+Administrative Versionsbindung bestanden; keine Funktionswiederholung.
+START/PROGRESS/CLOSE: 131.072 Byte akzeptiert, 131.073 typisiert abgewiesen.
+Qualifikationsmetadaten: 147.160 / 147.456 Byte einschließlich Reserven.
+Historische Befunde unverändert. Kein Medienstart, Gates False.

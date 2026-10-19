@@ -1,0 +1,229 @@
+PCM -> REZEPTOR -> NJ -> SIGNAL-/NAEHERUNGSABRUF
+Begrenzter Pruefvertrag v1, 2026-10-01
+Nur Konzeption. Keine Implementierung, Parameterberechnung oder Produktion.
+
+1. Status und einzige Forschungsfrage
+
+AR-EVAL ist im dokumentierten Umfang abgenommen: Kriterien verbesserter
+Wiedererkennung auf den festgelegten direkten Vektoraufgaben erfuellt.
+signal_approx_v1 bleibt explizit waehlbar und experimentell. Exakter Abruf
+und legacy_v1-Fortsetzung bleiben Standard. factor_scaled_v1 bleibt separat
+experimentell und wird in diesem Versuch NICHT kombiniert oder aktiviert.
+AR-Versuche sind abgeschlossen; keine Wiederholung. R3-Prognoseschaden und
+N3-Herkunftsfehler sind nicht durch den positiven mittleren Befund aufgehoben.
+
+Frage: Liefert dieselbe Signal-/Naeherungsregel auch dann zusaetzliche korrekte
+Herkunftszuordnungen ohne neue falsche Einzelzuordnungen, wenn ausschliesslich
+PCM vor dem unveraenderten Rezeptor gestoert wird?
+Der Versuch prueft einen kontrollierten synthetischen Audiopfad. Er beweist
+keine Robustheit gegen beliebige natuerliche Aufnahmebedingungen.
+
+2. Festgehaltener technischer Pfad
+
+Mono float32 little-endian,48000 Samples/s, Fenster4800 Samples, externer
+Fensterschritt4800. Rezeptorkonfiguration unveraendert:48000Hz,window4800,
+hop480,48 Baender,50..18000Hz; bestehendes Hann-/FFT-/Reduktionsverfahren.
+NJ-Profil s2nj.auditory.hann48.output-half.v1 bleibt unveraendert. Keine
+Filterung, AGC, Pegelnormalisierung, Aenderung von Bandgrenzen oder NJ-Skalierung.
+
+Jedes exportierte Queryfenster passiert project_window aus
+tools/_s2uc_bounded_audio.py mit echten PCM-Bytes, Rezeptor und NJ. Gespeicherte
+48er-Vektoren werden niemals additiv gestoert, gemischt oder skaliert.
+Die Naeherungsregel, Distanz, Signalzulassung, globale numerische Enthaltung
+und exakte Prioritaet bleiben unveraendert. Beide Vergleichsarme ausschliesslich
+legacy_v1-Fortsetzung. Keine zweite Regelentwicklung im selben Paket.
+
+3. Neue bekannte Quellen: kleinste konkrete Generatorfamilien
+
+Neue Familien AN-DEV und AN-EVAL. Vier genealogische Basisepisoden A,B,C,D
+je Familie, je19200 PCM-Samples/vier Fenster. Keine alten Episoden recyceln.
+Bekanntes zweiphasiges Sinusrezept wiederverwenden, aber neue Seeds/Frequenzen:
+
+AN-DEV:
+A Seed1210001, Frequenzen[340,580,820,1180]Hz
+B Seed1210007, Frequenzen[460,920,700,1540]Hz
+C Seed1210013, Frequenzen[640,1060,1420,880]Hz
+D Seed1210019, Frequenzen[340,580,1780,2060]Hz
+R-Stoerung Seed1210031; reine Rauschquery Seed1210037;
+Entwicklungs-Kalibration Seed1210043.
+
+AN-EVAL:
+A Seed1310001, Frequenzen[490,760,1120,1620]Hz
+B Seed1310007, Frequenzen[670,1320,970,1860]Hz
+C Seed1310013, Frequenzen[790,1480,1960,1080]Hz
+D Seed1310019, Frequenzen[490,760,2160,2420]Hz
+R-Stoerung Seed1310031; reine Rauschquery Seed1310037.
+Kein Evaluation-Kalibrationsseed, keine Evaluation-Kalibration.
+
+PRNG: bestehender xorshift32 mit Maskierung nach <<13, >>17, <<5; pro Basis
+eigener Seed. Erste zwei Draws geben Phasen phi=2*pi*draw/2^32.
+Fuer n=0..19199, k=n//4800, t=n%4800:
+cycles=fsum(f[:k])*0.1 + f[k]*t/48000;
+x=(sin(2*pi*cycles+phi0)+sin(2*pi*1.5*cycles+phi1))/16.
+Einmal nach float32-le quantisieren. D[0:9600] anschliessend bitgleich aus
+dem quantisierten A kopieren; D-Fortsetzung bleibt aus eigenem Seed.
+B besitzt gleichen nominalen Amplitudenansatz, nicht nachgemessenen gleichen
+NJ-Pegel. Keine datenabhaengige Pegelanpassung. C ist getrennte Episode direkt
+nach A im gemeinsamen AC-Quellzeitplan: A[0,19200),C[19200,38400).
+Diese Nachbarschaft ist eine synthetische Kontrolle, keine natuerliche Statistik.
+
+4. Stoerungen ausschliesslich vor Rezeptor/NJ
+
+R-Stoerung:9600 Draws, jeder Low-Bit1 ->+1, sonst-1. Auf die ersten beiden
+gespeicherten float32-A-Fenster in binary64 addieren, einmal float32 runden:
+R1-Amplitude beta=2^-12; R2-Amplitude2*beta=2^-11, identische Vorzeichenfolge.
+R3 verwendet bitgenau dieselben ersten9600 PCM-Samples wie R1.
+Rauschquery Z1:14400 eigene Draws aus ihrem eigenen Seed,Amplitude2^-11.
+P0: ganze dreifenstrige A-Query auf PCM-Ebene mit Gain2^-12, float32 einmal.
+N4: sampleweise Mischung (float64(A)+float64(B))/2, dann einmal float32.
+NJ(Misch-PCM) wird NICHT durch Mittelung fertiger NJ-Vektoren ersetzt.
+Z0:14400 Samples positive float32-Null.
+Keine Clippingkorrektur: nichtendliche oder ausserhalb[-1,1] liegende Werte
+beenden die Produktion als NOT_EVALUABLE, ohne neue Seeds oder Ersatzvariante.
+
+5. Elf feste Herkunfts-/Fortsetzungsfaelle
+
+Normal A,A durch acht regulaere Frames lernen, dann Querytriplett, Ziel11.
+N4 lernt A,A,B,B, Ziel19. Feste Paarphase ab1; keine direkte Memory-Vorbelegung.
+Die folgende Tabelle bezieht sich auf PCM-Fenster0/1/2 vor der Projektion.
+
+ID | PCM-Query | Herkunft/Zweck
+R0 | originale A0,A1,A2 | A,exakte Kontrolle
+R1 | A0+n0,A1+n1,A2 mit beta | A,kleine Stoerung
+R2 | A0+2n0,A1+2n1,A2 | A,staerkere vorab feste Stoerung
+R3 | erste zwei Fenster exakt R1; drittes kopiert R1-Fenster1 | A,abweichende Fortsetzung; Persistenz-Gegenfall
+N1 | B0,B1,B2 | B,fremde Erfahrung,gleicher nominaler Pegel
+N2 | C0,C1,C2 | C,zeitlich benachbarte getrennte Erfahrung
+N3 | D0,D1,D2 | D,identischer Anfang,andere Herkunft/Fortsetzung
+N4 | drei sampleweise A/B-Mischfenster | eigene Mischherkunft M,Konkurrenzkontrolle
+Z0 | drei Nullfenster | eigene Herkunft ZERO
+Z1 | drei reine Rauschfenster | eigene Herkunft NOISE
+P0 | A0,A1,A2 mit PCM-Gain2^-12 | A,positive Kleinsignalherkunft
+
+R0/R1/R2/R3/P0 positiv bezueglich gelernter Herkunft. N1/N2/N3/N4/Z0/Z1
+negativ. Labels aus Generatorgenealogie, nie aus Projektionen oder Matches.
+Korrekte Signal-Enthaltung bei P0 bleibt verlorene positive Abdeckung.
+N3 ist eine Identifizierbarkeitsgrenze: gleiche Vorgeschichte/Hinweise koennen
+keine sichere Unterscheidung der verborgenen Herkunft liefern.
+N4 muss nicht zwingend mehrere Treffer erzeugen; Einzelzuordnung zu A/B waere
+falsch, kein Match oder Mehrdeutigkeit bleiben als tatsaechlicher Befund erhalten.
+
+6. Signalgrenze im tatsaechlichen NJ-Werteraum
+
+epsilon=2^-10 aus der direkten Vektorwelt wird NICHT uebernommen. Auch der
+bisherige tau=1/64 ist kein automatisch uebertragbarer Audioparameter.
+
+AN-DEV bekommt acht neue reine PCM-Rauschfenster aus Seed1210043,4800 Samples
+je Fenster. Fortlaufender PRNG; Fenster0..3 Amplitude2^-12, Fenster4..7 Amplitude
+2^-11. Alle acht durch unveraenderten Rezeptor und NJ projizieren. Fuer jede
+NJ-Ausgabe y: a(y)=fsum(abs(y[k]))/48. Einzige epsilon-Regel:
+epsilon_AUDIO=max(a(y0),...,a(y7)). Keine weiteren Faktoren oder Quantile.
+epsilon muss endlich, positiv und normal sein; sonst Kalibrationsabweichung
+melden und anhalten, keinen kuenstlichen Mindestwert einsetzen.
+
+Begruendung: Die Signalzulassung vergleicht mittlere Amplituden der NJ-Frames;
+die Grenze muss deshalb aus den beobachteten NJ-Antworten auf die festgelegten
+PCM-Stoerungen stammen. Gleicher PCM-Betrag legt wegen Fensterung, Spektrum
+und Bandreduktion keine konstante NJ-Absolutamplitude fest. Der Zahlenwert wird
+erst nach autorisierter Materialisierung bekannt. Keine Ableitung allein aus
+der PCM-Amplitude und keine direkte Manipulation der Projektionswerte.
+Diese acht Fenster liefern eine endliche synthetische Stoerungsreferenz, keine
+allgemeine Schaetzung eines Sensorrauschbodens oder garantierte Rauschobergrenze.
+Die separate Z1-Query prueft die Uebertragungsgrenze, ohne nachzukalibrieren.
+
+tau_AUDIO ausschliesslich AN-DEV, unveraendertes Siebener-Gitter:
+0,1/256,1/128,1/64,1/32,1/16,1/8. Jede Einstellung gleiche Geschichten, leerer
+Start, fester epsilon_AUDIO. Zulaessig nur ohne zusaetzliche falsche
+Einzelzuordnungen pro Pruefposition gegen exakten Referenzabruf. Unter diesen
+maximale korrekte R1/R2-Zuordnungen, Gleichstand kleinstes tau. MAE und andere
+Fallerfolge duerfen die Auswahl nicht beeinflussen. Kein Nachverfeinern.
+Ohne mindestens eine zusaetzliche korrekte R1/R2-Zuordnung: selected_tau=null,
+keine automatische Evaluation. Verlorene exakte Zuordnungen bleiben separat.
+
+Vor AN-EVAL epsilon_AUDIO,tau_AUDIO sowie Code, Profil, Herkunft und Auswertung
+einfrieren. Evaluation ohne Kalibration, ohne Suche, ohne neue Parameterwahl.
+
+7. Umfang und notwendige neue Materialisierung
+
+Je Familie vier Basisepisoden vollstaendig projizieren:16 Fenster.
+Jede der elf Querysequenzen mit drei Fenstern als eigene PCM-Sequenz exportieren
+und projizieren:33 weitere Fenster. Damit sind auch wiederholte/retimete PCM-
+Fenster mit ihrer eigenen gueltigen Projektionszeit belegbar; keine gefaelschten
+Projektionsdigests oder Annahme, dass identische Werte identische Herkunft seien.
+DEV zusaetzlich8 Kalibrationsfenster, EVAL keine.
+
+AN-DEV:57 Fenster,273600 Samples,1094400 rohe PCM-Byte.
+AN-EVAL:49 Fenster,235200 Samples,940800 rohe PCM-Byte.
+Als Hex-JSON genau doppelte PCM-Nutzdatenmenge. Pro Partition maximal4MiB
+Materialausgabe einschliesslich256KiB reserviertem Abschluss. Hashes/Projektionen/
+Manifest muessen vor Produktion in diese Grenze passen; neutral qualifizieren.
+Beide Anzahlen unter bestehender100-Aufrufe-Grenze von project_window.
+Je Fenster ein Rezeptor- und ein NJ-Aufruf, keine Audiodekodierung erforderlich.
+Materialisierung jeweils einmal nach separater Freigabe. Exklusiver Claim,
+keine automatische Wiederholung bei Fehler. Entwicklung/Evaluation getrennt.
+
+Originalquellzeiten und Replayzeit unterscheiden: Basis-C beginnt19200;
+B/D eigenstaendige Quellstroeme; Querymontagen beginnen jeweils0, Fensterstart
+0/4800/9600. Jede Ableitung referenziert zusaetzlich Basis-PCM-Hashes und
+urspruengliche Fenster. NJ-Snapshot=start/480, Endzeit=start+4800.
+Technischer Replay weiterhin eigene monotone Fallzeit, keine Zeitluecke als
+Signalfeature. Je Arm/Einstellung129 Aufnahmen,11 Pruefziele,48 Lernziele.
+DEV maximal sieben Einstellungen; EVAL genau eine eingefrorene Einstellung.
+Keine zusaetzliche Kandidatenprobe als Leistungsziel erforderlich; Rollen-
+technik ist bereits neutral geprueft und wird nur bei neuem Anlass regressiert.
+
+8. Wiederverwendung und kleinste neue Verbindung
+
+Wiederverwenden: bestehendes PCM-Basisrezept/xorshift32, project_window und
+OutputLedger, unveraenderter LogSpectralReceptor/NJ, SignalApproxAdapter,
+Herkunftsjudge, Vergleichsbericht mit eindeutigen Abrufnamen und Siebener-Selector.
+Neuer begrenzter Glue-Code nur fuer diesen PCM-Materialplan: Quellen-/Query-
+Montage, volle PCM-Projektionsherkunft, Export/Leser und NJ-Kalibrationsanschluss.
+Keine Aenderung der Analysealgorithmen oder bestehender Produktionsfreigaben.
+Neue Code-/Runtime-/Profil-/Generatorbindungen vor spaeterer Produktion.
+
+Historische NASA-, bekannte Herkunfts-, FC- und AR-Familien sind bekanntes
+Entwicklungs-/Regressionsmaterial. Keine erneute Auswertung als unberuehrte
+Audioevaluation. Neue Seeds allein beweisen keine allgemeine Unabhaengigkeit;
+beide neue Familien teilen das synthetische Rezept und die feste Fallstruktur.
+
+9. Klare technische und fachliche Abnahme
+
+Vor Produktion neutral pruefen: PCM-Domaene/Float32-Rundung/Bytehashes,
+R1/R3 und A/D gemeinsame Anfaenge, Query-Retiming, Misch-/Gain-/Rauschoperationen
+VOR Rezeptor, echte NJ-Digests, Mengen-/Ausgabegrenze, Fehlerabschluss und
+Wiederholungsverweigerung. Kein Test mit den reservierten AN-Seeds.
+
+Technisch: unveraenderte Modul-/Profilbindungen, bekannte Genealogie,
+vor Zukunftsabruf eingefrorene Prognosen, Referenzspeicherzustand nach jedem
+Frame identisch, einmalige Aufnahme und Freigabe. Budget18 Frames inkl.Hinweise
+plus2 Ausgaben,Receiptgrenzen wie qualifiziert; temporare Daten observerseitig
+messen. Kein harter Prozess-RAM-Beleg aus einer blossen Mengenplanung.
+
+Fachlich auf AN-EVAL:
+- Jede zusaetzliche falsche Einzelzuordnung gegen exakten Abruf verhindert
+  Abnahme als verbesserte Wiedererkennung, auch bei hoeherer Abdeckung/kleinerer MAE.
+- Mindestens eine zusaetzliche korrekte R1/R2-Zuordnung ist erforderlich;
+  andernfalls Uebertragungsziel nicht nachgewiesen.
+- Signalbedingte Verluste exakter Zuordnungen, verlorene korrekte Zuordnungen
+  und alle Enthaltungsgruende separat; nicht gegen neue Treffer verrechnen.
+- Konkrete Prognose-MAE auf gemeinsamen Zielmasken sowie beide festen
+  Kontext-sonst-Persistenz-Beobachterschemata auf allen elf Zielen berichten.
+  Jeder Schaden gegen Persistenz und exaktes Schema mit Fall/Delta erhalten.
+  Ein Wiedererkennungsgewinn ist keine Abnahme als schaedigungsfreie Fortsetzung.
+- R1/R3 und R0/N3 muessen vor Folgeframe identische Outputs haben; N3 bleibt
+  sichtbar, selbst wenn bereits die exakte Referenz falsch ist.
+- DEV/EVAL und11 Pruef-/48 Lernziele getrennt, keine gemeinsame Erfolgsquote.
+
+Negativer Befund ist gueltig. Kein stiller Profilwechsel, keine neuen Amplituden,
+Frequenzen oder Episoden, um Erfolg zu erzwingen. Ein positiver Befund erlaubt
+nur die Aussage kontrollierter PCM-Stoerungsrobustheit in diesem synthetischen
+Rezeptor-/NJ-Pfad, nicht allgemeine Wiedererkennung natuerlicher Erfahrungen.
+
+10. Naechster Auftrag zur Entscheidung
+
+Empfehlung: diesen Vertrag fachlich abnehmen und nur den begrenzten PCM-/NJ-
+Generator-/Exportanschluss mit neutraler Qualifikation beauftragen. Danach
+maschinenlesenden Plan samt Code-/Runtimebindung versiegeln und AN-DEV-
+Produktion/Siebener-Auswertung separat freigeben. AN-EVAL erst nach DEV-
+Entscheidung mit eingefrorenem epsilon_AUDIO/tau_AUDIO. Heute keine Ausfuehrung.

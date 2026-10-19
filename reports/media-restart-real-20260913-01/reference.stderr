@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\reports\run_selected_media_restart_once.py", line 197, in <module>
+    main(sys.argv[1:])
+    ~~~~^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\reports\run_selected_media_restart_once.py", line 193, in main
+    execute(*argv[1:5], role=None if argv[0] == "run" else argv[5])
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\reports\run_selected_media_restart_once.py", line 164, in execute
+    stage(data, manifest, admission, output, store, role)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\reports\run_selected_media_restart_once.py", line 122, in stage
+    w.require(status["phase"] == ("SUSPENDED" if role == "suspend19" else "RECORDING_COMPLETE"),
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              "REAL_STAGE_FAILED", status)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_media_restart_work.py", line 24, in require
+    raise RestartError(code, details)
+tools._media_restart_work.RestartError: REAL_STAGE_FAILED

@@ -1,0 +1,123 @@
+FW1 – abgeschlossener gebundener Forschungsversuch
+Auftrag b8b45a61-b629-4624-b2b3-e1ae6fcb53b4
+
+Ergebnis: TERMINAL_COMPLETE, 16/16 Quellenpaare vollständig.
+NUTZEN_GESTUETZT für das Behalten des akkumulierten Fehlerstands gegenüber seinem
+Reset bei vollständiger Wiederbeobachtung in der vertraglich festgelegten Mischung.
+
+Einziges Primärmaß
+BEHALTEN minus RESET, gleichgewichtet über A/B und alle 511 Zielpositionen je
+Geschichte, dann über 16 Quellenpaare:
+J = -491/32704 = -0.015013454011741683 MAE.
+Nominales zweiseitiges 95%-Perzentilintervall aus der gebundenen Matrix:
+[-531/32704, -901/65408] = [-0.016236545988258317, -0.013775073385518592].
+Das gesamte Intervall liegt unter null. Primärrechnung und unabhängige
+Statistikreferenz stimmen bei Paarwerten, Mittel, Intervall, Informativität und
+Entscheidung exakt überein. Alle 16 Paarmittel sind negativ (deskriptiv).
+Statistische Einheit sind 16 Quellenpaare, keine Einzelziel-Unabhängigkeit:
+16352 gepaarte Zielpositionen und 32704 einzelne Armfehler. Es wurden keine Ziele,
+kalten Fälle, Gleichstände oder unbetroffenen Abschnitte herausgefiltert.
+10.000 geschichtete Paarziehungen aus genau der zuvor gebundenen Matrix;
+keine neue Matrix, keine zusätzlichen Signifikanztests, kein Tuning.
+
+Informativität und deskriptive Folgen
+2798 wirksame Löschungen, davon 2790 mit mindestens einer späteren Auswahl für ein
+beobachtetes Ziel. Acht wirksame Löschungen haben keine solche spätere Gelegenheit.
+Alle 2798 Auslöser invalidierten jeweils eine gültige Offset-0-Zelle; kein Auslöser
+traf hier Offset 1, kein beobachteter Auslöser hatte null gültige Zellen.
+Die Serie ist hinsichtlich späterer Vorhersagen informativ. Die neutrale Abdeckung
+beider Offsets bleibt technische Qualifikation; sie ist kein Forschungsbefund zu
+Offset 1 in dieser Serie.
+
+Behalten-Gewinn bedeutet MAE_BEHALTEN < MAE_RESET; Schaden entsprechend größer.
+Bedingung A, 8176 Ziele: 867 Gewinne, 342 Schäden, 6967 Gleichstände.
+Bedingung B, 8176 Ziele: 761 Gewinne, 304 Schäden, 7111 Gleichstände.
+Gesamt: 1628 Gewinne, 646 Schäden, 14078 Gleichstände.
+A: D_A=-75/4672; Gewinnsumme 867/4, Schadenssumme 171/2.
+B: D_B=-457/32704; Gewinnsumme 761/4, Schadenssumme 76.
+Diese A/B-Angaben sind deskriptiv, keine getrennten bestätigten Nutzenhypothesen.
+14078 gleiche und 2274 unterschiedliche beobachtete Ausgaben. Gleiche Ausgaben
+sind zulässige Befunde; sie wurden nicht als technische Fehler behandelt.
+
+A: 1498 wirksame Löschungen, 1495 mit späterer Auswahlgelegenheit.
+B: 1300 wirksame Löschungen, 1295 mit späterer Auswahlgelegenheit.
+Deskriptiv wurden 2274 invalidierte Zellvorkommen durch späteres berechtigtes
+Feedback vor dem nächsten Reset derselben Generation wieder aktualisiert;
+524 hatten bis zum nächsten Reset beziehungsweise Geschichtenende kein solches
+Update. Daraus wird keine ungeprüfte lokale Gewinnursache abgeleitet.
+Details und genaue Zählgrenzen: descriptive.json und Analyseskript.
+
+Ausführungen und Prüfstatus
+Genau ein verbrauchter Start, 16 Quellenpaare/32 Geschichten à 1024 Frames.
+64 frische Policy-Arme: 64 begonnen, 64 abgeschlossen, 64 geschlossen.
+64 Live-Referenzen: 64 begonnen und vollständig bestanden.
+64 unabhängige Arm-Archivrekonstruktionen in 32 Bedingungsarchiven: vollständig.
+16 Quellenpaarerzeugungen, 16 unabhängige Quellenpaarrekonstruktionen und 32
+Bedingungsmaterialprüfungen. Alle Quellen vor dem ersten Arm versiegelt.
+1 Gesamtstatistik und 1 unabhängige Statistikreferenz, beide vollständig.
+Alle 16 Paarquittungen, Bestandsidentität, Arm-/Codec-/Dateicleanup bestätigt.
+Worker beendet mit Exitcode 0; erste Fehlerursache null, keine Folgefehler.
+Keine zusätzlichen Policy-Messarme, kein Retry, Resume, Ersatzlauf oder neuer Test.
+
+Nach terminalem Abschluss wurden die 32 bestehenden Archive ausschließlich für
+Ausgabe-/Wiederanlernzählungen decodiert. Keine erneute Policy-Ausführung,
+semantische Referenzfortschreibung oder Bootstrapauswertung. Die vorhandenen
+Capture-/Lieferhashes sowie Quellen-, Code- und Qualifikationsbindungen wurden
+lesend kontrolliert. Analyseskript: analyses/fw1-research-delivery-20261018/close.py.
+
+Ressourcen
+Lauf einschließlich Quellen, Referenzen, Statistik und terminalem Abschluss:
+4515.8875594 s = 75.2647927 Minuten.
+Gemeinsamer harter Windows-Job: Peak 226304000 Bytes = 215.8203125 MiB;
+Prozesspeak 128339968 Bytes; Limit 536870912 Bytes, höchstens zwei Prozesse.
+Zusatzheap maximal 5516 Bytes, Receipt 791, UTF8-Obergrenze 1582, Bank 416.
+15 Originalframes an gemessenen Grenzen, bestehende konservative Grenze 18;
+zwei Ausgabeslots. Größtes Dictionary 669792, encoded 709286, gzip 116671,
+Record 13529 Bytes; 10323 Nodes, 90664 Edges, 8190 Indizes, acht Collections.
+32 Quellen zusammen 238048 Bytes, 32 Archive zusammen 3596151 Bytes.
+Keine verbleibenden Temporärdateien. Grenzen unverändert eingehalten.
+Deskriptive Nachverarbeitung: 14.0133216 s, eigener harter Job mit einem Prozess,
+Peak 38789120 Bytes. Keine weitere Policy-/Referenzausführung.
+Details: delivery-resources.json, terminal.json und case-*-summary.json.
+
+Bindung und Erhaltung
+Verbrauchte Vorstartbindung:
+e61664694a43c40adc1b74f8c680383e61c8e04b33ba98ecf61cbe056035bc99
+Matrix-SHA256:
+b190d29c63d8650d53875226802a6aaa3218b557e00fb8ef65a046a4ab8c8878
+Vor Armstart versiegeltes Forschungsquellenmanifest:
+a597e91ee58c709e520fa7118d3d6becbd3a52c843fd018a20de407b95a4372f
+Berechtigungsdatei SHA256:
+1fbd00d2d139f7862070fface1a41747feef66e333a496d4637f3f8b88553113
+2996 Code-/Vertrags- und 197 Qualifikationsbindungen unverändert bestätigt.
+Vorbereitungs-Lieferung (92 Dateien) und vorherige Neutral-Lieferung (138 Dateien)
+erhalten; ihre früheren Projektübersichten sind bytegenau als historische Snapshots
+gesichert. Die historischen Nachweisgrenzen bleiben unverändert dokumentiert.
+Die Einmalberechtigung ist verbraucht; Ziel und Verbrauchsmarker sperren Neustart.
+
+Aussagegrenzen
+Gestützt ist der relative Vorteil des Behaltens des gesamten akkumulierten
+Fehlerstands unter diesen festen externen Quellen gegenüber dem festgelegten
+Reset. Die Löschung entfernt auch jüngste Updates; kein isolierter Altersanteil.
+Es gibt reale Schäden und viele Gleichstände. Keine allgemeine Überlegenheit,
+keine allgemeine Lernfähigkeit, keine Semantik oder feldinterne Memory daraus
+ableiten. Keine Übertragung auf geschlossene Aktionskreise oder andere Quellen.
+ZW1 bleibt NEGATIVE_INTERACTION, ER1 bleibt INCONCLUSIVE; keine neue Auswertung
+der historischen Forschungsserien.
+
+Nächster vorgeschlagener Schritt
+Ein begrenzter unabhängiger Zeugenaudit der vorhandenen FW1-Archive soll die
+Reset-/Wiederanlernketten bei Gewinnen, Schäden und Gleichständen prüfen, bevor
+eine neue Variante entwickelt wird. Dafür ist kein weiterer Policy-Lauf nötig.
+Dies ist ein Vorschlag zur Entscheidung des Projektleiters, kein gestarteter
+Folgeauftrag und keine neue Forschungsfreigabe.
+
+Belege
+statistics.json, statistics-reference.json: einziges Primärergebnis/Gegenrechnung.
+terminal.json, result.json, pair-*-receipt.json: terminale Vollständigkeit/Cleanup.
+case-*-capture.json, case-*.gz, case-*-summary.json: 32 geprüfte Bedingungen.
+sources-manifest.json: Quellenbarriere und Quellenbindung vor Armstart.
+verification.json, preservation.json: nachgelagerte lesende Bindungskontrollen.
+descriptive.json: vollständige Gewinn-/Schadens-/Gleichstands- und Resetzählung.
+delivery-resources.json: Lauf- und Nachverarbeitungsressourcen.
+delivery-closure.json: abschließende Lieferbindung einschließlich externer Belege.

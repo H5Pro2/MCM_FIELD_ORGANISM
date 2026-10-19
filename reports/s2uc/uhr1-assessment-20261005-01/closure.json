@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "verdict": "U_VORTEIL_REPLIZIERT",
+  "files": {
+    "export-accounting.json": {
+      "bytes": 375,
+      "sha256": "421bec0b562629413ef1052dc2da6e2ead70ec3a10f1d17f9c02fa5503da6557"
+    },
+    "REPORT.md": {
+      "bytes": 17911,
+      "sha256": "8910bac3a8ee0317aa3fa92e8420948c50f4edd6e469cc867a67ea1c7952cd17"
+    },
+    "verification.json": {
+      "bytes": 128245,
+      "sha256": "0a4956867c8986b19896b3b093e14e219febfe98b3c2270aebfb141757501ff5"
+    },
+    "verify_archive.py": {
+      "bytes": 12697,
+      "sha256": "a90fac9911b0b75f64af1f6c9123ac06360d16b4527bcb933d7de8f78e5ec1e5"
+    }
+  },
+  "research_attempts": 1,
+  "authorization_consumed": true,
+  "policy_replays_in_audit": 0,
+  "source_generations_in_audit": 0
+}

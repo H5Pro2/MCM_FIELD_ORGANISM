@@ -1,0 +1,35 @@
+{
+  "files": {
+    "D_hand_case.dag.json.gz": {
+      "bytes": 24408,
+      "sha256": "9b92d4f01122e0e8574e21c3974bcf3c77a4826d2215c808eb7ff2f66e5bf6d3"
+    },
+    "REPORT.md": {
+      "bytes": 9603,
+      "sha256": "65ac99f904311922f205589e36ff835619e60c139e7548a719dc9050eb7e3261"
+    },
+    "binding.json": {
+      "bytes": 732,
+      "sha256": "c21d8623b0f33ef6cd92eb699267bf9920c0f8f96776364dee39761541985855"
+    },
+    "evidence.json": {
+      "bytes": 1523,
+      "sha256": "5b6e6f73ff6cc65461411265407d3ffc6dcd19e14825232d93f62a43f6bda1b6"
+    },
+    "lifecycle_trace.dag.json.gz": {
+      "bytes": 19732,
+      "sha256": "933a24c0d9c189bc5ca745852417cad45e6bc06fc2040ce68422a897be4f4b61"
+    },
+    "tests.json": {
+      "bytes": 1311,
+      "sha256": "6448ff07340c38f695168ce15dbb5e6003a7fe0aa38e1828b7defd650a03bccc"
+    },
+    "tests.txt": {
+      "bytes": 1274,
+      "sha256": "37981a896d44aeed1f287ed67b16f1fbae8a49e6d8654714e5028720ff210a4a"
+    }
+  },
+  "policy_runs": 0,
+  "research_ready": false,
+  "status": "PASS_CODEC_ONLY"
+}

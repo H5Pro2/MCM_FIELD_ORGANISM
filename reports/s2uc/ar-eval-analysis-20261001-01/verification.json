@@ -1,0 +1,332 @@
+{
+  "status": "PASS",
+  "material_unchanged": true,
+  "code_plan_runtime_unchanged": true,
+  "AR_EVAL_unproduced": false,
+  "material_bytes": 124571,
+  "resources": {
+    "0.015625": {
+      "R0": {
+        "exact_retrieval": {
+          "frame_peak": 8,
+          "output_slots_peak": 2,
+          "combined_peak": 9,
+          "output_python_bytes_peak": 3642,
+          "samples": 7705,
+          "receipt_bytes_peak": 0,
+          "scalar_pair_comparisons": 0,
+          "temporary_numeric_vectors_peak": 0,
+          "match_metadata_peak": 1,
+          "receipt_transient_utf8_bytes_peak": 353,
+          "receipt_python_bytes_peak": 394
+        },
+        "signal_approx_retrieval": {
+          "frame_peak": 8,
+          "output_slots_peak": 2,
+          "combined_peak": 9,
+          "output_python_bytes_peak": 3801,
+          "samples": 7725,
+          "receipt_bytes_peak": 512,
+          "scalar_pair_comparisons": 0,
+          "temporary_numeric_vectors_peak": 0,
+          "match_metadata_peak": 1,
+          "receipt_transient_utf8_bytes_peak": 889,
+          "receipt_python_bytes_peak": 971
+        }
+      },
+      "R1": {
+        "exact_retrieval": {
+          "frame_peak": 8,
+          "output_slots_peak": 2,
+          "combined_peak": 9,
+          "output_python_bytes_peak": 3642,
+          "samples": 6809,
+          "receipt_bytes_peak": 0,
+          "scalar_pair_comparisons": 0,
+          "temporary_numeric_vectors_peak": 0,
+          "match_metadata_peak": 1,
+          "receipt_transient_utf8_bytes_peak": 353,
+          "receipt_python_bytes_peak": 394
+        },
+        "signal_approx_retrieval": {
+          "frame_peak": 8,
+          "output_slots_peak": 2,
+          "combined_peak": 9,
+          "output_python_bytes_peak": 3837,
+          "samples": 6857,
+          "receipt_bytes_peak": 548,
+          "scalar_pair_comparisons": 3,
+          "temporary_numeric_vectors_peak": 0,
+          "match_metadata_peak": 1,
+          "receipt_transient_utf8_bytes_peak": 961,
+          "receipt_python_bytes_peak": 1043
+        }
+      },
+      "R2": {
+        "exact_retrieval": {
+          "frame_peak": 8,
+          "output_slots_peak": 2,
+          "combined_peak": 9,
+          "output_python_bytes_peak": 3642,
+          "samples": 6809,
+          "receipt_bytes_peak": 0,
+          "scalar_pair_comparisons": 0,
+          "temporary_numeric_vectors_peak": 0,
+          "match_metadata_peak": 1,
+          "receipt_transient_utf8_bytes_peak": 353,
+          "receipt_python_bytes_peak": 394
+        },
+        "signal_approx_retrieval": {
+          "frame_peak": 8,
+          "output_slots_peak": 2,
+          "combined_peak": 9,
+          "output_python_bytes_peak": 3837,
+          "samples": 6857,
+          "receipt_bytes_peak": 548,
+          "scalar_pair_comparisons": 3,
+          "temporary_numeric_vectors_peak": 0,
+          "match_metadata_peak": 1,
+          "receipt_transient_utf8_bytes_peak": 961,
+          "receipt_python_bytes_peak": 1043
+        }
+      },
+      "R3": {
+        "exact_retrieval": {
+          "frame_peak": 8,
+          "output_slots_peak": 2,
+          "combined_peak": 9,
+          "output_python_bytes_peak": 3642,
+          "samples": 6809,
+          "receipt_bytes_peak": 0,
+          "scalar_pair_comparisons": 0,
+          "temporary_numeric_vectors_peak": 0,
+          "match_metadata_peak": 1,
+          "receipt_transient_utf8_bytes_peak": 353,
+          "receipt_python_bytes_peak": 394
+        },
+        "signal_approx_retrieval": {
+          "frame_peak": 8,
+          "output_slots_peak": 2,
+          "combined_peak": 9,
+          "output_python_bytes_peak": 3837,
+          "samples": 6857,
+          "receipt_bytes_peak": 548,
+          "scalar_pair_comparisons": 3,
+          "temporary_numeric_vectors_peak": 0,
+          "match_metadata_peak": 1,
+          "receipt_transient_utf8_bytes_peak": 961,
+          "receipt_python_bytes_peak": 1043
+        }
+      },
+      "N1": {
+        "exact_retrieval": {
+          "frame_peak": 8,
+          "output_slots_peak": 2,
+          "combined_peak": 9,
+          "output_python_bytes_peak": 3642,
+          "samples": 6809,
+          "receipt_bytes_peak": 0,
+          "scalar_pair_comparisons": 0,
+          "temporary_numeric_vectors_peak": 0,
+          "match_metadata_peak": 1,
+          "receipt_transient_utf8_bytes_peak": 353,
+          "receipt_python_bytes_peak": 394
+        },
+        "signal_approx_retrieval": {
+          "frame_peak": 8,
+          "output_slots_peak": 2,
+          "combined_peak": 9,
+          "output_python_bytes_peak": 3801,
+          "samples": 6829,
+          "receipt_bytes_peak": 512,
+          "scalar_pair_comparisons": 3,
+          "temporary_numeric_vectors_peak": 0,
+          "match_metadata_peak": 1,
+          "receipt_transient_utf8_bytes_peak": 889,
+          "receipt_python_bytes_peak": 971
+        }
+      },
+      "N2": {
+        "exact_retrieval": {
+          "frame_peak": 8,
+          "output_slots_peak": 2,
+          "combined_peak": 9,
+          "output_python_bytes_peak": 3642,
+          "samples": 6809,
+          "receipt_bytes_peak": 0,
+          "scalar_pair_comparisons": 0,
+          "temporary_numeric_vectors_peak": 0,
+          "match_metadata_peak": 1,
+          "receipt_transient_utf8_bytes_peak": 353,
+          "receipt_python_bytes_peak": 394
+        },
+        "signal_approx_retrieval": {
+          "frame_peak": 8,
+          "output_slots_peak": 2,
+          "combined_peak": 9,
+          "output_python_bytes_peak": 3801,
+          "samples": 6829,
+          "receipt_bytes_peak": 512,
+          "scalar_pair_comparisons": 3,
+          "temporary_numeric_vectors_peak": 0,
+          "match_metadata_peak": 1,
+          "receipt_transient_utf8_bytes_peak": 889,
+          "receipt_python_bytes_peak": 971
+        }
+      },
+      "N3": {
+        "exact_retrieval": {
+          "frame_peak": 8,
+          "output_slots_peak": 2,
+          "combined_peak": 9,
+          "output_python_bytes_peak": 3642,
+          "samples": 7705,
+          "receipt_bytes_peak": 0,
+          "scalar_pair_comparisons": 0,
+          "temporary_numeric_vectors_peak": 0,
+          "match_metadata_peak": 1,
+          "receipt_transient_utf8_bytes_peak": 353,
+          "receipt_python_bytes_peak": 394
+        },
+        "signal_approx_retrieval": {
+          "frame_peak": 8,
+          "output_slots_peak": 2,
+          "combined_peak": 9,
+          "output_python_bytes_peak": 3801,
+          "samples": 7725,
+          "receipt_bytes_peak": 512,
+          "scalar_pair_comparisons": 0,
+          "temporary_numeric_vectors_peak": 0,
+          "match_metadata_peak": 1,
+          "receipt_transient_utf8_bytes_peak": 889,
+          "receipt_python_bytes_peak": 971
+        }
+      },
+      "N4": {
+        "exact_retrieval": {
+          "frame_peak": 12,
+          "output_slots_peak": 2,
+          "combined_peak": 13,
+          "output_python_bytes_peak": 3648,
+          "samples": 13261,
+          "receipt_bytes_peak": 0,
+          "scalar_pair_comparisons": 0,
+          "temporary_numeric_vectors_peak": 0,
+          "match_metadata_peak": 1,
+          "receipt_transient_utf8_bytes_peak": 359,
+          "receipt_python_bytes_peak": 400
+        },
+        "signal_approx_retrieval": {
+          "frame_peak": 12,
+          "output_slots_peak": 2,
+          "combined_peak": 13,
+          "output_python_bytes_peak": 3807,
+          "samples": 13297,
+          "receipt_bytes_peak": 518,
+          "scalar_pair_comparisons": 12,
+          "temporary_numeric_vectors_peak": 0,
+          "match_metadata_peak": 1,
+          "receipt_transient_utf8_bytes_peak": 901,
+          "receipt_python_bytes_peak": 983
+        }
+      },
+      "Z0": {
+        "exact_retrieval": {
+          "frame_peak": 8,
+          "output_slots_peak": 2,
+          "combined_peak": 9,
+          "output_python_bytes_peak": 3642,
+          "samples": 6809,
+          "receipt_bytes_peak": 0,
+          "scalar_pair_comparisons": 0,
+          "temporary_numeric_vectors_peak": 0,
+          "match_metadata_peak": 1,
+          "receipt_transient_utf8_bytes_peak": 353,
+          "receipt_python_bytes_peak": 394
+        },
+        "signal_approx_retrieval": {
+          "frame_peak": 8,
+          "output_slots_peak": 2,
+          "combined_peak": 9,
+          "output_python_bytes_peak": 3801,
+          "samples": 6829,
+          "receipt_bytes_peak": 512,
+          "scalar_pair_comparisons": 0,
+          "temporary_numeric_vectors_peak": 0,
+          "match_metadata_peak": 1,
+          "receipt_transient_utf8_bytes_peak": 889,
+          "receipt_python_bytes_peak": 971
+        }
+      },
+      "Z1": {
+        "exact_retrieval": {
+          "frame_peak": 8,
+          "output_slots_peak": 2,
+          "combined_peak": 9,
+          "output_python_bytes_peak": 3642,
+          "samples": 6809,
+          "receipt_bytes_peak": 0,
+          "scalar_pair_comparisons": 0,
+          "temporary_numeric_vectors_peak": 0,
+          "match_metadata_peak": 1,
+          "receipt_transient_utf8_bytes_peak": 353,
+          "receipt_python_bytes_peak": 394
+        },
+        "signal_approx_retrieval": {
+          "frame_peak": 8,
+          "output_slots_peak": 2,
+          "combined_peak": 9,
+          "output_python_bytes_peak": 3801,
+          "samples": 6829,
+          "receipt_bytes_peak": 512,
+          "scalar_pair_comparisons": 0,
+          "temporary_numeric_vectors_peak": 0,
+          "match_metadata_peak": 1,
+          "receipt_transient_utf8_bytes_peak": 889,
+          "receipt_python_bytes_peak": 971
+        }
+      },
+      "P0": {
+        "exact_retrieval": {
+          "frame_peak": 8,
+          "output_slots_peak": 2,
+          "combined_peak": 9,
+          "output_python_bytes_peak": 3642,
+          "samples": 6809,
+          "receipt_bytes_peak": 0,
+          "scalar_pair_comparisons": 0,
+          "temporary_numeric_vectors_peak": 0,
+          "match_metadata_peak": 1,
+          "receipt_transient_utf8_bytes_peak": 353,
+          "receipt_python_bytes_peak": 394
+        },
+        "signal_approx_retrieval": {
+          "frame_peak": 8,
+          "output_slots_peak": 2,
+          "combined_peak": 9,
+          "output_python_bytes_peak": 3801,
+          "samples": 6829,
+          "receipt_bytes_peak": 512,
+          "scalar_pair_comparisons": 0,
+          "temporary_numeric_vectors_peak": 0,
+          "match_metadata_peak": 1,
+          "receipt_transient_utf8_bytes_peak": 889,
+          "receipt_python_bytes_peak": 971
+        }
+      }
+    }
+  },
+  "elapsed_search_seconds": 69.75786769995466,
+  "primary_frames_per_arm_per_setting": 129,
+  "test_targets_per_arm_per_setting": 11,
+  "learning_targets_per_arm_per_setting": 48,
+  "settings": 1,
+  "closure": {
+    "case_files": 11,
+    "case_frames": 129,
+    "charged_before_closure": 124439,
+    "error": null,
+    "partition": "AR-EVAL",
+    "status": "MATERIAL_COMPLETE"
+  }
+}

@@ -1,0 +1,105 @@
+Faktorgebundene Bestaetigung: neutraler Entwicklungsabschluss
+
+20/20 Tests PASS: sechs neue Tests und14 bestehende Regressionen, keine Fehler/Skips. Replay Exit0.
+Vorregistrierung SHA256 90e5093d1baaa7e1350d98835835ff08d75861e69c6c23ffd5662a41db5176d2
+44/44 Uebergangsvorhersagen,64/64 Hinweisvorhersagen einschliesslich Wiederholungen und16/16 Endzustandsvorhersagen bestaetigt.
+Zwei zusaetzliche Auswertungen der konkurrierenden Herkunftsmengen bestaetigt. Keine Abweichungen.
+Alle sechs gebundenen Vorbedingungen bestanden; unveraenderte Auswahl g1-p1 des synthetischen P2-Datensatzes.
+Keine Eingabe nachselektiert, keine Schwelle angepasst. Alle Referenz- und Wahrnehmungspfad-Hashbindungen unveraendert.
+
+BESTAETIGUNG UND EXAKTER ABRUF GETRENNT
+Fall | E letzter Abschluss | G letzter Abschluss | E/G Erhaltungsursprung | E/G Kandidatenursprung
+AA | TRACE_PROMOTED | TRACE_PROMOTED | step1:[10, 11, 12, 13] / step1:[10, 11, 12, 13] | - / -
+AH | TRACE_CANDIDATE_REPLACED | TRACE_PROMOTED | - / step1:[10, 11, 12, 13] | step2:[20, 21, 22, 23] / -
+HA | TRACE_CANDIDATE_REPLACED | TRACE_PROMOTED | - / step1:[10, 11, 12, 13] | step2:[20, 21, 22, 23] / -
+AR | TRACE_CANDIDATE_REPLACED | TRACE_CANDIDATE_REPLACED | - / - | step2:[20, 21, 22, 23] / step2:[20, 21, 22, 23]
+AL | TRACE_CANDIDATE_REPLACED | TRACE_CANDIDATE_REPLACED | - / - | step2:[20, 21, 22, 23] / step2:[20, 21, 22, 23]
+drift | TRACE_CANDIDATE_REPLACED | TRACE_CANDIDATE_CREATED | - / step1:[10, 11, 12, 13] | step3:[30, 31, 32, 33] / step3:[30, 31, 32, 33]
+retained_collision | TRACE_CANDIDATE_CREATED | ABSTAIN_AMBIGUOUS_CONFIRMATION | step1:[10, 11, 12, 13],step3:[30, 31, 32, 33] / step1:[10, 11, 12, 13],step3:[30, 31, 32, 33] | step5:[50, 51, 52, 53] / -
+candidate_collision | TRACE_CANDIDATE_REPLACED | ABSTAIN_AMBIGUOUS_CONFIRMATION | step1:[10, 11, 12, 13] / step1:[10, 11, 12, 13] | step4:[40, 41, 42, 43] / step3:[30, 31, 32, 33]
+
+Arm | Fall | Hinweisquelle | Entscheidung | komplette Trefferherkunft (Wiederholung identisch)
+E | AA | A | CONFIRMED_RETAINED_MATCH | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0}]
+E | AA | A | CONFIRMED_RETAINED_MATCH | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0}]
+E | AH | A | ABSTAIN_NO_MATCH | []
+E | AH | H | PROVISIONAL_CANDIDATE_MATCH | [{"role": "candidate", "generation": 2, "formation": "step2", "ordinals": [20, 21, 22, 23], "offset": 0}]
+E | HA | H | ABSTAIN_NO_MATCH | []
+E | HA | A | PROVISIONAL_CANDIDATE_MATCH | [{"role": "candidate", "generation": 2, "formation": "step2", "ordinals": [20, 21, 22, 23], "offset": 0}]
+E | AR | A | ABSTAIN_NO_MATCH | []
+E | AR | R | PROVISIONAL_CANDIDATE_MATCH | [{"role": "candidate", "generation": 2, "formation": "step2", "ordinals": [20, 21, 22, 23], "offset": 0}]
+E | AL | A | ABSTAIN_NO_MATCH | []
+E | AL | L | PROVISIONAL_CANDIDATE_MATCH | [{"role": "candidate", "generation": 2, "formation": "step2", "ordinals": [20, 21, 22, 23], "offset": 0}]
+E | drift | A | ABSTAIN_NO_MATCH | []
+E | drift | Q | PROVISIONAL_CANDIDATE_MATCH | [{"role": "candidate", "generation": 3, "formation": "step3", "ordinals": [30, 31, 32, 33], "offset": 0}]
+E | retained_collision | A | CONFIRMED_RETAINED_MATCH | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0}]
+E | retained_collision | H | PROVISIONAL_CANDIDATE_MATCH | [{"role": "candidate", "generation": 3, "formation": "step5", "ordinals": [50, 51, 52, 53], "offset": 0}]
+E | candidate_collision | A | CONFIRMED_RETAINED_MATCH | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0}]
+E | candidate_collision | H | PROVISIONAL_CANDIDATE_MATCH | [{"role": "candidate", "generation": 3, "formation": "step4", "ordinals": [40, 41, 42, 43], "offset": 0}]
+G | AA | A | CONFIRMED_RETAINED_MATCH | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0}]
+G | AA | A | CONFIRMED_RETAINED_MATCH | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0}]
+G | AH | A | CONFIRMED_RETAINED_MATCH | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0}]
+G | AH | H | ABSTAIN_NO_MATCH | []
+G | HA | H | CONFIRMED_RETAINED_MATCH | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0}]
+G | HA | A | ABSTAIN_NO_MATCH | []
+G | AR | A | ABSTAIN_NO_MATCH | []
+G | AR | R | PROVISIONAL_CANDIDATE_MATCH | [{"role": "candidate", "generation": 2, "formation": "step2", "ordinals": [20, 21, 22, 23], "offset": 0}]
+G | AL | A | ABSTAIN_NO_MATCH | []
+G | AL | L | PROVISIONAL_CANDIDATE_MATCH | [{"role": "candidate", "generation": 2, "formation": "step2", "ordinals": [20, 21, 22, 23], "offset": 0}]
+G | drift | A | CONFIRMED_RETAINED_MATCH | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0}]
+G | drift | Q | PROVISIONAL_CANDIDATE_MATCH | [{"role": "candidate", "generation": 2, "formation": "step3", "ordinals": [30, 31, 32, 33], "offset": 0}]
+G | retained_collision | A | CONFIRMED_RETAINED_MATCH | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0}]
+G | retained_collision | H | ABSTAIN_NO_MATCH | []
+G | candidate_collision | A | CONFIRMED_RETAINED_MATCH | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0}]
+G | candidate_collision | H | ABSTAIN_NO_MATCH | []
+
+ZENTRALE BEFUNDE
+AA: beide uebernehmen die urspruengliche Spur. AH/HA: nur G bestaetigt; die gespeicherten Frames bleiben unveraendert aus Schritt1.
+AR (halbiert und zeitlich umgekehrt) sowie AL (nur erster Frame halbiert): beide ohne Promotion, neueste Beobachtung wird Kandidat.
+Drift A-H-Q: G behaelt A/step1 exakt, Q/step3 wird neuer Kandidat. Keine Bestaetigungskette ueber H.
+Exakter Ursprungshinweis trifft G nach AH/HA bestaetigt; Hinweis aus der skalierten Wiederbeobachtung trifft dort nicht.
+Bei E trifft letzterer nur den neuen unbestaetigten Kandidaten. Dies ist kein gleichwertiger Bestaetigungsnachweis.
+
+EXPLIZITE ZUSAETZLICHE ENTSCHEIDUNGSREGEL
+Mehr als ein unter1,1/2,2 passender Speicherinhalt fuehrt zu ABSTAIN_AMBIGUOUS_CONFIRMATION.
+Formende Beobachtung wird verworfen; Kandidat, Erhaltung, Generationszaehler und Reihenfolge bleiben unveraendert.
+Diese konservative Regel ist vorregistriert und neu, keine stillschweigende Fortsetzung einer alten Prioritaet.
+Retained collision A-A-Q-Q-H: H passt zu erhaltenem A/step1 mit Faktor1/2 und erhaltenem Q/step3 mit Faktor2.
+Candidate collision A-A-Q-H: H passt zu erhaltenem A/step1 mit Faktor1/2 und Kandidat Q/step3 mit Faktor2.
+Beide Herkuenfte sind vollstaendig dokumentiert; kein Listenreihenfolgengewinner. Umgekehrte Reihenfolge wurde zusaetzlich getestet.
+
+AUFWAND UND TEMPORAERE OBJEKTE
+Arm/Fall | exakte ganze Spurvergleiche | Faktortests | skalare Faktortests | Hinweispositionen | temporaere Spurframes | Python-Aufrufpeak Byte
+E/AA | 1 | 0 | 0 | 12 | 8 | 27237
+E/AH | 1 | 0 | 0 | 12 | 8 | 6032
+E/HA | 1 | 0 | 0 | 12 | 8 | 6032
+E/AR | 1 | 0 | 0 | 12 | 8 | 6032
+E/AL | 1 | 0 | 0 | 12 | 8 | 6032
+E/drift | 2 | 0 | 0 | 12 | 8 | 6064
+E/retained_collision | 6 | 0 | 0 | 36 | 12 | 7288
+E/candidate_collision | 4 | 0 | 0 | 24 | 12 | 6520
+E/boundary | 9 | 0 | 0 | 9 | 16 | 7312
+G/AA | 0 | 3 | 194 | 12 | 8 | 8516
+G/AH | 0 | 3 | 194 | 12 | 8 | 6384
+G/HA | 0 | 3 | 194 | 12 | 8 | 6360
+G/AR | 0 | 3 | 3 | 12 | 8 | 6000
+G/AL | 0 | 3 | 51 | 12 | 8 | 6000
+G/drift | 0 | 6 | 197 | 24 | 8 | 6416
+G/retained_collision | 0 | 18 | 782 | 24 | 12 | 7752
+G/candidate_collision | 0 | 12 | 585 | 24 | 12 | 7368
+G/boundary | 0 | 27 | 505 | 9 | 16 | 7280
+Ueber acht Hauptfolgen: E17 exakte Spurvergleiche; G51 Faktortests mit2200 skalaren Faktorgleichheitspruefungen. Je132 exakte Hinweispositionen.
+Die Zaehler haben unterschiedliche Einheiten; keine behauptete17-zu2200-Laufzeitrelation.
+Grenztest beider Arme erreicht gleichzeitig16 Spurframes plus2 Hinweisframes. Keine normalisierten Speicherbanken.
+G bildet maximal drei Quellenreferenzeintraege, bis zu drei Faktorwerte je gepruefter Quelle und kleine Herkunftslisten.
+Die Skalierung berechnet jeweils einzelne Zahlenwerte mit ldexp; keine vollstaendige skalierte Vergleichsspur wird angelegt.
+Temporaere Frames werden an Python-Tracepunkten identitaetsbezogen gezaehlt. Keine native Allokationsvollerfassung.
+Tracemalloc-Aufrufpeaks enthalten Beobachter/Tracing, sind inkrementell und kein isolierter Algorithmus- oder Prozess-RAM-Verbrauch.
+Numerische Framekapazitaet beider Arme6912Byte einschliesslich Hinweise. Call-Zeiten enthalten Tracing, kein Geschwindigkeitsbenchmark.
+
+GRENZEN UND FACHLICHER ANSCHLUSS
+Die Regel ist eine eng faktorgebundene Invarianz auf gespeicherten synthetischen Vektoren. Kein Nachweis allgemeiner gleicher Erfahrung.
+Globale Amplitude kann reale Unterschiede tragen. Proportionale Repraesentationen werden unter dieser Regel gleichgesetzt.
+Keine erneute PCM-Verarbeitung, keine Distanzschwelle, kein neuer Wahrnehmungspfad und keine Originalquellenproduktion.
+Der Abruf bleibt exakt: Bestaetigungsinvarianz allein liefert keinen variationsinvarianten Zugang.
+Naechste konkret offene Frage als Vorschlag: statischer Entwurf, ob ein ebenso faktorgebundener Hinweisabruf variierte Hinweise nutzbar macht,
+ohne bei A und A/4 die nun belegte Konkurrenz zu verdecken. Erst getrennte Planung, keine Umsetzung dieses Vorschlags.

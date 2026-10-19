@@ -1,0 +1,245 @@
+FAKTORABHAENGIGE FORTSETZUNG -- AENDERUNGS- UND PRUEFVERTRAG v1
+2026-09-30. KONZEPT, NICHT IMPLEMENTIERT. Keine Tests oder Materialproduktion.
+
+1. Auftrag, Ausgangspunkt und Aussagegrenze
+
+Die abgeschlossene synthetische Evaluation ist abgenommen. Ihre acht Ziele
+zeigten Kontextabdeckung3/8, eine falsche Herkunft bei N3 und keine Erkennung
+der Rauschvariante. Beide bisherigen Partitionen sind bekannt. Sie duerfen
+als Regression dienen, niemals als unberuehrte Evaluation geaenderter Regeln.
+
+Dieses Paket schliesst ausschliesslich die bisher explizit ausgesparte
+Faktorfortsetzung. Hypothese: ein im Hinweis erkannter Pegelfaktor setzt sich
+im naechsten Frame fort. Das ist keine Garantie und keine Herkunftsbestaetigung.
+Keine Aenderung an Matching, Toleranzen, Aufnahme, exakter Viererbestaetigung,
+Auffrischung, Kapazitaet, Verdrängung oder Rezeptor/NJ. Keine Rauschrobustheit.
+
+2. Faktorrichtung und exakte Zulassung
+
+Bezug: tools/_s2uc_factor_hint.py, component_equal/factor_matches/FactorHintArm.hint.
+Bestehend: math.ldexp(stored,e)==incoming fuer alle48 Komponenten beider
+Hinweisframes; e in(-1,0,1), f=2**e in(0.5,1.0,2.0). Damit gilt:
+  Hinweis = gespeicherter Hinweis * f
+  vorgeschlagene Fortsetzung = gespeicherter Nachfolger * f
+Nicht durch f dividieren. Beispiel f0.5: gespeicherte Komponente0.125,
+Hinweis0.0625; gespeicherter Nachfolger0.25 -> Prognose0.125.
+Diese Illustration ist eine Formel, kein ausgefuehrter Test.
+
+Zulassung in dieser Reihenfolge:
+- Kein Match: ABSTAIN_NO_CONTEXT.
+- Mehr als ein Matcheintrag: AMBIGUOUS_CONTEXT. Auch mehrere Offsets derselben
+  genealogischen Herkunft bleiben mehrere Treffer; keine Zusammenfassung mit
+  Prueferlabels. Gleiche Nachfolger loesen Mehrdeutigkeit nicht auf.
+- Genau ein Match, aber mehr als ein Faktor: ABSTAIN_AMBIGUOUS_FACTOR.
+  Nullhinweise koennen alle drei Faktoren tragen; niemals Faktor1 bevorzugen.
+- Leere/ungueltige Faktorenliste oder fremder Faktor: interner Vertragsfehler,
+  AdapterError und bestehender geschlossener Fehlerpfad, keine Ersatzwahl.
+- Genau ein Faktor, aber offset+2>=4: ABSTAIN_NO_SUCCESSOR.
+- Sonst Quelle exakt im Vorzustand nach role/generation/formation/ordinals
+  finden. Keine/eine widerspruechliche Quelle: PRESTATE_SOURCE_MISSING wie bisher.
+- f1: unveraenderter Nachfolger, unveraenderte PREDICTED_CANDIDATE/RETAINED-
+  Statuswerte und numerische Werte. Keine neue Berechnung im Faktor1-Zweig.
+- f0.5/2: nur nach vollstaendig bestandener numerischer Vorpruefung ausgeben;
+  Status PREDICTED_SCALED_CANDIDATE bzw. PREDICTED_SCALED_RETAINED.
+
+Faktor, Matchposition und Herkunft bleiben im vorhandenen provenance_json.
+Die Regelversion wird im externen Laufmanifest gebunden. Kein neuer
+payloadtragender Receipt-Typ und kein zweiter Kontextvektor im selben Adapter.
+
+3. Numerischer Vertrag (binary64, keine stillen Korrekturen)
+
+Fuer f0.5/2 math.ldexp(x,e) verwenden, keine Dezimalrundung, keine Toleranz,
+keine Normalisierung, kein Clipping, kein nachtraeglicher Fit am Zielframe.
+Alle48 Komponenten werden skalar vorgeprueft, bevor ein Ergebnis publiziert wird.
+
+- Eingabekomponenten muessen endliche Python-float-Werte sein; beschaedigter
+  Speicher ist ein Vertragsfehler, keine regulaere Prognoseenthaltung.
+- OverflowError oder nichtendliches Resultat: ganzer Kontext enthaelt sich
+  mit ABSTAIN_SCALE_OVERFLOW, context_values=None. Persistenz bleibt vorhanden.
+- x!=0 und skaliertes Ergebnis0: ABSTAIN_SCALE_UNDERFLOW fuer ganzen Kontext.
+- Nichtnullresultat mit abs(y)<sys.float_info.min: ebenfalls
+  ABSTAIN_SCALE_UNDERFLOW. Diese konservative Regel lehnt auch exakt
+  darstellbare subnormale Ergebnisse ab; sie behauptet nicht, dass jedes
+  subnormale Ergebnis bereits Rundungsverlust ist.
+- Fuer sonstige Resultate muss math.ldexp(y,-e)==x gelten; andernfalls
+  ABSTAIN_SCALE_INEXACT. Kein Restfehler darf als exakte Skalierung erscheinen.
+- Null bleibt Null, einschliesslich Vorzeichen von -0.0; keine Nullersetzung.
+- Negative endliche Werte sind nach bestehendem Adaptervertrag zulaessig.
+  Ein endliches Ergebnis>1 ist ebenfalls eine zulaessige Prognose, kein
+  NJ-Wahrnehmungsframe. Prognosen niemals als profilvalidierte Wahrnehmung
+  ausgeben oder in Memory zurueckfuehren; keine neue [0,1]-Klemmung.
+- Faktor1 bleibt auch fuer bereits zulaessige subnormale Werte unveraendert.
+  Die strengere Regel betrifft ausschliesslich neu berechnete Skalierungen.
+- Bei mehreren numerischen Problemen ist die Meldungsprioritaet fest:
+  OVERFLOW vor UNDERFLOW vor INEXACT, unabhaengig von Kanalreihenfolge.
+  Nur skalare Fehlerflags sammeln; kein teilgueltiger Vektor wird publiziert.
+
+Numerische Enthaltung aendert keine eindeutige Herkunftsbewertung. Fachliche
+Zuordnung und Prognoseabdeckung bleiben zwei verschiedene Ergebnisspalten.
+
+4. Minimale spaetere Codeaenderung
+
+Ziel tools/_s2uc_continuation_adapter.py:
+- Die bisherige Faktor1-Sperre in _receipt ueber eine kleine explizite
+  Ausgabepolicy abbilden. Standard bleibt legacy_v1. Ein gesondert benannter
+  Modus factor_scaled_v1 aktiviert ausschliesslich obige Regeln.
+- Ein privater skalarer Vorpruef-/Skalierungshelfer; nach Vorpruefung direkt
+  einen einzigen48er-Tupel ueber Generatorausdruck bauen. Keine zusaetzliche
+ 48er-Liste, kein Cache, keine zweite unskalierte Kontextkopie.
+- Quellenauflösung, Aufrufzeitpunkt vor _admit, PredictionReceipt,
+  consume_prediction, Freigabe und Fehlerbereinigung beibehalten.
+- Legacy-Zweig liefert fuer identische Eingaben identische bisherige Receipts,
+  Statuswerte und Zustandsfolgen. Faktor1-Zweig beider Policies identisch.
+  Policy wird vor Fallbeginn gesetzt und im Lauf gebunden; kein Wechsel in
+  einer Geschichte und keine Auswahl anhand spaeterer Fehlerwerte.
+
+Keine Aenderung in FactorHintArm, FactorRecencyArm oder PairContextAdapter.
+Observer-Erweiterung: explizite Adapterpolicy injizieren, beide Policies
+separat leer starten, identische feste Eingabefolge abspielen und drei
+Vorhersagen getrennt bewerten. Bisherigen Judge nicht mit Produktlabels koppeln.
+Technische Aenderungspunkte: Adapter, gezielte Tests, separater Vergleichstreiber.
+
+5. Kausalitaet und Ressourcen
+
+Beide Policies erhalten ausschliesslich Werte, Profil, Quelle und Reihenfolge;
+keine Fall-ID, Basis-ID, Sollfortsetzung oder Zukunftsgain. Prueferwissen extern.
+Vor jedem Zielframe muss die jeweilige Prognose unveraenderlich vorliegen,
+bevor die Quelle den Zielframe liefert und bevor das Hinweispaar aufgenommen
+wird. Tatsaechlicher Zielframe bleibt unveraendert. Gleiches Vorzustands-/
+Hinweispaar muss gleiche Prognose erzeugen, auch wenn die Fortsetzung abweicht.
+
+Unveraendertes Budget pro Adapter:16 Memory-Frames+2 Hinweis/Arbeitsframes,
+hoechstens2 getrennte Ausgabeslots (Kontext und Persistenz), zusammen maximal20.
+Skalierte Ausgabe ersetzt den Kontextslot; keine dritte Vektorausgabe.
+Skalare Vorpruefung und Tupelbau einschliesslich transienter lokaler Variablen
+instrumentieren. Bisheriger BudgetObserver allein zaehlt pending_prediction,
+nicht sicher alle temporaeren Skalierungscontainer: Testinstrumentierung muss
+deshalb auch diese erfassen. Keine Aussage allein aus Endzustand ableiten.
+Alten/neuen Adapter fuer Ressourcenmessung getrennt ausfuehren. Observerarchive
+separat bilanzieren; nicht als Produktmemory oder harter Prozess-RAM-Beleg ausgeben.
+Nach Verbrauch, Restabschluss und Fehlern beide Ausgabeslots frei; jede
+Wahrnehmung genau einmal aufgenommen. Speicher nach jedem Frame identisch
+zwischen beiden Policies und PairContextAdapter ohne Prognose.
+
+6. Neue Episoden vor jeder Produktion festlegen
+
+Vorschlag einer kleinen, neuen kontrollierten Vektorwelt unter einem eigenen
+Testprofil factor-continuation.synthetic48.v1. Kein Audio-/NJ-Nachweis aus
+direkt erzeugten Vektoren. Diese Wahl isoliert die Adapteraenderung; ein spaeterer
+Audio-End-to-End-Versuch benoetigt einen eigenen Auftrag und neue Quellenbindung.
+
+Zwei disjunkte Familien FC-DEV und FC-EVAL, je Basisepisoden A,B,D,Z mit je4
+Frames und48 Komponenten. Noch nicht erzeugt. Konkreter Rezeptvorschlag:
+Xorshift32 mit Maskierung nach jedem Schritt (<<13, >>17, <<5); pro Komponente
+ein Draw in Frame-/Kanalreihenfolge; Wert=(1+(draw%1023))/4096 als binary64.
+Die dyadischen Werte erlauben0.5/1/2 ohne normalen Rundungsfehler. Keine Auswahl
+von Episoden nach Matchguete. D-Frames0/1 nach Erzeugung bitgleich von A kopieren,
+Frames2/3 aus eigenem Seed. Z-Frames0/1 exakt+0.0, Frames2/3 aus eigenem Seed.
+Seeds A/B/D/Z: FC-DEV610001/610007/610013/610019;
+FC-EVAL710001/710007/710013/710019. Kein Seed aus frueheren Materialfamilien.
+Keine Ableitung zwischen Familien. Gemeinsames Rezept begrenzt Unabhaengigkeit.
+
+Vor einer spaeteren Produktion verbindlich maschinenlesend versiegeln:
+dieses Rezept, Seeds, Profil, Code-/Runtimehashes, Basiswurzeln, Fallmatrix,
+Transformationsreihenfolge, Zielindices, Produktionsgrenzen und numerische
+Regeln. PENDING ist keine Produktionsfreigabe. Hashes kuenftigen Codes koennen
+heute nicht behauptet werden. Unerwartete zusaetzliche Matches werden als
+Aufbauabweichung erhalten; keine Ersatzseeds oder guenstigere Episode suchen.
+
+7. Kleine Fallmatrix (je Familie identisch, 0-basierte Basisframeindices)
+
+Notation: a0..a3 sind A-Frames; f*a bezeichnet komponentenweise exakte Skalierung.
+Normal lernen A,A durch acht regulaere Aufnahmen; dann zwei Hinweisframes und
+ein Zielframe. Pruefziel11. Konkurrenzfall lernt A,A,D,D, Pruefziel19.
+Keine direkte Memory-Vorbelegung. Feste Paarphase ab1, kein Offsetoptimieren.
+
+ID | Lernfolge | Hinweis | tatsaechliches Ziel | Zweck
+F1 | A,A | a0,a1 | a2 | Faktor1 unveraendert
+FH | A,A | .5*a0,.5*a1 | .5*a2 | durchgehende Halbierung
+FD | A,A | 2*a0,2*a1 | 2*a2 | durchgehende Verdopplung
+GH | A,A | .5*a0,.5*a1 | 2*a2 | Hinweis halbiert, Zukunft verdoppelt
+GD | A,A | 2*a0,2*a1 | .5*a2 | Hinweis verdoppelt, Zukunft halbiert
+GR | A,A | .5*a0,.5*a1 | a2 | Gain kehrt zum Original zurueck
+GP | A,A | .5*a0,.5*a1 | .5*a1 | Persistenz-Gegenfall; gespeicherter Nachfolger unpassend
+AM | A,A,D,D | .5*a0,.5*a1 | .5*d2 | konkurrierende Herkuenfte, keine Aufloesung
+ZF | Z,Z | 0,0 | z2 | Nullhinweis, mehrere Faktoren, Enthaltung
+EN | A,A | .5*a2,.5*a3 | .5*a0 | Offset2 ohne gespeicherten Nachfolger
+NM | A,A | b0,b1 | b2 | fremde Herkunft, kein Match erwartet
+
+Herkunftslabels vorab: A bei F1/FH/FD/GH/GD/GR/GP/EN; D bei AM;
+Z bei ZF; B bei NM. Gainwechsel aendern das vorgegebene Invarianzziel nicht.
+Labels niemals aus Systemmatches korrigieren. NM ist negativ bezueglich
+gelerntem Bestand, die anderen positiv; AM bleibt trotz positiver Bestand-
+herkunft mehrdeutig. Unerwartete Zuordnungen werden als Befund erhalten.
+
+11 Pruefziele pro Familie. Zehn Geschichten mit11 Frames, AM mit19:
+129 Aufnahmen,59 erreichbare Zielpositionen, davon48 Lernziele separat.
+FH/GH/GR/GP haben gleiche Vorgeschichte und Hinweise: ihre eingefrorenen
+Prognosen muessen identisch sein. FD/GD ebenso. Ergebnisvorzeichen nicht erzwingen.
+Bei GP soll Persistenz exakt sein; wenn a1!=a2 und der erwartete Einzelmatch
+vorliegt, muss die skalierte Prognose einen sichtbaren Schaden zeigen.
+Fehlt diese Voraussetzung, Aufbauabweichung melden statt Daten austauschen.
+
+Zusaetzliche technische Rollenprobe ausserhalb dieser11 Leistungsziele:
+A nur einmal lernen, dann FH-Hinweis/Ziel; candidate statt retained, Ziel7.
+Keine neue unabhaengige Erfahrung oder Vermischung mit Primaerquoten.
+
+8. Geplante technische Pruef-IDs, noch nicht ausgefuehrt
+
+Q1 Faktorrichtung0.5/1/2 an exakt darstellbaren Komponenten; keine Division.
+Q2 Faktor1: Werte, Status, Provenienz und Speicherzustand identisch zu legacy.
+Q3 Mehrere Matches/Offsets und mehrere Faktoren: keine Auswahl oder Mittelung.
+Q4 Nullhint mit eindeutigem Ort aber Faktoren[.5,1,2], sowie Nullhint an mehreren
+   Orten; getrennte Enthaltungsgruende nach festgelegter Prioritaet.
+Q5 Fehlender Nachfolger, kein Kontext, defekte Quellreferenz, ungueltiger Faktor.
+Q6 Numerik: max-float*2; min-normal*.5 (auch exakt subnormal -> Enthaltung);
+   kleinste positive Subnormalzahl*.5 ->0; subnormal*2 nach normal zulaessig,
+   sofern Rueckrechnung exakt; f1-Subnormal unveraendert; +/-0; negative Werte;
+   endlicher Wert>1; gemischte Kanalfehler mit stabiler Prioritaet.
+Q7 Vorzustand, Zukunftsgate, FH/GH/GR/GP und FD/GD gleiche Prognose vor Ziel.
+Q8 candidate/retained-Rolle, einmalige Aufnahme und unveraenderte Bestaetigung/
+   Auffrischung. Skalierte Wiederholung allein darf keine neue Promotion erzeugen.
+Q9 Transiente Ressourcen und Freigabe bei Erfolg, numerischer Enthaltung,
+   internem Fehler, Abbruch und unvollstaendigem Rest.
+Q10 Observer: identische Ziele/Masken, Nullabdeckung als undefiniert,
+    GP-Schaden erhalten, Labels erst nach Replay, alle Lernziele separat.
+Numerische Extremfaelle sind kuenftige isolierte technische Fixtures ausserhalb
+beider Materialfamilien. Keine Leistungsbehauptung aus solchen Fixtures.
+
+9. Dreiarmige Auswertung und Abnahme
+
+Arme: N=neue Skalierungspolicy, L=unveraenderte legacy-Policy, P=Persistenz
+des jeweils zweiten Hinweisframes. Identische Zielliste, leere Startzustaende,
+keine Quellenselektion pro Arm. Alle Receipts/Zielwerte behalten.
+
+Je Ziel: externe Herkunft, alle Matches/Faktoren/Rollen, Zuordnungskategorie,
+Status/Enthaltungsgrund pro Policy, Prognoseabdeckung, MAE_N/MAE_L/MAE_P.
+Herkunftskategorien sollten zwischen N/L identisch sein; Unterschiede sind
+technischer Fehler, weil Matching unveraendert bleiben muss.
+
+MAE=fsum(abs(pred[k]-actual[k]))/48. Delta(A gegen B)=MAE_B-MAE_A:
+positiv heisst A besser. Je paarweisem Vergleich N-L,N-P,L-P ausschliesslich
+identische gemeinsam abgedeckte Ziele; Ziel-IDs und Nenner explizit nennen.
+Leere Schnittmenge undefiniert. Keine Mittelwerte unterschiedlicher Masken
+direkt gegeneinander als Nutzen interpretieren.
+
+Zusaetzlich feste Vollabdeckung H_N=N falls vorhanden sonst P und
+H_L=L falls vorhanden sonst P. H_N,H_L,P auf allen11 Pruefzielen vergleichen.
+Keine neue Produkt-Fallbackregel. Besser/gleich/schlechter und MAE je Paar;
+jeder Schaden gegen P und gegen H_L mit Fall-ID, Differenz, Abdeckung und
+Herkunftsfehler einzeln ausweisen. Kein Vorzeichenfilter.48 Lernziele separat.
+Rollenprobe separat. Development/Evaluation niemals poolen.
+
+Technische Abnahme erfordert Q1-Q10, unveraenderte Speicherzustaende/Matching,
+Kausalitaet, Budget und komplette negative Ergebnisse. Positiver Gesamt-MAE-
+Nutzen ist kein technisches Abnahmekriterium. Die Gegenfaelle koennen den
+Gesamtvorteil aufheben; das ist ein gueltiger fachlicher Befund.
+
+10. Fortsetzungsfolge zur Entscheidung des Projektleiters
+
+Jetzt geliefert: ausschliesslich dieser konkrete Vertrag und Standseinordnung.
+Empfohlener naechster Auftrag: Vertrag abnehmen und kleine Policyaenderung plus
+Q1-Q10 mit neutralen Fixtures implementieren/qualifizieren. Danach neuen
+maschinenlesenden Materialplan binden und Produktion getrennt beauftragen.
+Erst Development bearbeiten, dann Code/Regeln einfrieren und separate einmalige
+Evaluation freigeben. Keine heutige Implementierungs- oder Produktionsfreigabe.

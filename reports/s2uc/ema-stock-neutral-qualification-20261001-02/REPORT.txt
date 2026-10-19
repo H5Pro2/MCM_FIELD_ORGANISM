@@ -1,0 +1,112 @@
+MCM-KI: wechselnder Bestand -- Vorbereitung abgeschlossen
+2026-10-01 | PREPARATION_QUALIFIED_REAL_PROBE_NOT_EXECUTED
+
+Ergebnis
+Der freigegebene Vorbereitungsauftrag ist umgesetzt. 12/12 neutrale Tests
+S01-S12 PASS, keine Fehler, Fehlschlaege oder Skips, Exit0. Code vor/nach der
+Qualifikation unveraendert. Keine Materialisierung oder Auswertung der echten
+64-Frame-Geschichte. Keine echte Autorisierungsdatei, kein echter Zielordner.
+
+Gebundene Artefakte
+docs/S2UC_EMA_BESTANDSPLAN_20261001.json
+docs/S2UC_EMA_BESTANDSBINDUNG_20261001.json
+docs/S2UC_EMA_BESTAND_AUTORISIERUNG_VORLAGE_20261001.json
+docs/S2UC_EMA_BESTAND_VORBEREITETER_AUFRUF_20261001.txt
+
+Plan-SHA256:
+0f01704800dcb7fa0301444b277a6a2c8c427f03221096496e98234e022195ab
+Bindungs-SHA256:
+c9a506b34d14da24e5b6ab63a526d3e75a4fa9a401973d4544e8c0b92d2b76dc
+
+46 Python-Dateien einschliesslich vier neuer Dateien sind gebunden. Alle42
+Dateien der bisherigen EMA-Bindung sind hashidentisch. EMA, Abruf, Aufnahme,
+Promotion, Aktualitaet und Verdraengung wurden nicht geaendert. Alpha1/2,
+exact_v1, legacy_v1 und mae48 bleiben gleich. Kein Commit/Push.
+
+Neue Implementierung
+tools/_s2uc_ema_stock_observer.py:
+  Transparente, serielle Beobachterhuelle des unveraenderten Replays.
+  Fehlerzellen vor/nach Zielkonsum getrennt von Aufnahme und deren Loeschung.
+  Vor-/Nachbestand mit Rolle, Generation, Originalordinalen und Wertehash.
+  Neue/entfernte Schluessel, geloeschte Zellen, eingefrorene Wahl, Tickets,
+  atomare Fehlerupdates, Freigabe, Endzensur und Ressourcen protokolliert.
+  Methoden werden jeweils genau einmal aufgerufen; keine Systemmutation
+  durch Erwartungstabellen. Globales Instrumentieren ist nur seriell gedacht.
+tools/_s2uc_ema_stock_assessment.py:
+  V7,D3,M9,N22,Gesamt31 mit Summen,MAE und jedem Gewinn/Schaden gegen K/P.
+  Fehlende Daten werden nicht als Null gewertet. D ersetzt V niemals.
+  Bestand/Kausalitaet, Erfahrungsauswahl und Nettonutzen getrennt beurteilt.
+  Erwartungsabweichungen getrennt von technischen Fehlern; davon abhaengige
+  Kriterien NOT_EVALUABLE. Unveraenderte Beobachtungen bleiben erhalten.
+  Verlust alter r1-Erfahrung, Loeschung und kalte c7/r5-Starts verknuepft.
+tools/s2uc_ema_stock.py:
+  Planbindung, neutrale Qualifikation, gesondert autorisierter Einmaleinstieg.
+  Hash-/Laufzeit-/Autorisierungspruefung vor Quelle; exklusiver Zielordner
+  vor Materialisierung. Gemeinsames Exportledger mit Abschlussreserve.
+  Bei Fehler Teilbeobachtung und Abschluss, kein automatischer Wiederanlauf.
+tests/test_s2uc_ema_stock.py:
+  Unabhaengige neutrale X/Y/Q/Z/W-Folge; echte Materialfunktion in neutralem
+  Export ausdruecklich gesperrt. Keine Suche nach guenstigem Material.
+
+Pruefbelege
+S01: Beobachterergebnisse gegen unveraenderten Replay identisch; vollstaendiger
+     Export samt Quelle, drei Armen, Plan, Auswertung und Abschluss bilanziert.
+S02: Mehrdeutiges neutrales Ziel27 ohne Ticket/Update; Zellen vor/nach gleich.
+     Regulare Aufnahme28 loescht danach retained-Generation2.
+S03: Alte retained-Erfahrung bei36 geloescht; frischer Kandidat an43 kalt;
+     Kandidatenzellen bei Promotion44 geloescht; retained an47 wieder kalt;
+     eigene neue Erfahrung fuehrt an59 zur Kontextwahl.
+S04: Alle fuenf Masken korrekt. Handgefertigte Fehlerdaten: D-MAE0,
+     V-Fehlersumme16 trotz Baselines mit MAE1; Kaltstartkosten bleiben sichtbar.
+S05: Fehlendes Ziel55 ergibt NOT_EVALUABLE und keinen erfundenen Nullfehler.
+S06: Abweichende neutrale Bestandserwartung ergibt Erwartungsabweichungen,
+     keine technischen Fehler und keine Eingriffe; abhaengige Kriterien offen.
+S07: Exportueberschreitung, Ueberschreiben und Schreiben nach Abschluss gesperrt.
+S08: Fehlende Freigabe wird vor Materialfunktion und Export abgewiesen.
+S09: Eingespritzter Fehler bewahrt Teilbeobachtung/Abschluss; keine Wiederholung.
+S10: Besseres D bei schlechterem V ergibt SCHADEN; fehlende V-Verfuegbarkeit
+     ergibt NOT_EVALUABLE.
+S11: Manipuliertes Update ohne Ticket und unzulaessiger Zellentransfer werden
+     ausdruecklich als technische Fehler erkannt.
+S12: Voll ausgeschöpftes normales Exportbudget laesst Abschlussreserve frei.
+
+Maschinenbelege: tests.txt, test-result.json, facts.json und neutral-export/.
+Der neutrale Export verwendet64 Frames in E/K/P:192 Aufnahmen plus192 interne
+Referenzfortschreibungen. S01 fuehrt zum Gleichheitsvergleich zusaetzlich192
+unbeobachtete Replay-Aufnahmen plus192 Referenzfortschreibungen aus. Insgesamt
+damit384+384 in dieser neutralen Qualifikation, keine echte Gegenprobe.
+
+Gemessene Grenzen dieses neutralen Exports
+Gesamt:281530/4194304 Byte;256KiB Abschlussreserve vorab reserviert.
+Frame-Peak16/18; Vorschlaege2/2; gemeinsamer Peak17/20.
+EMA-Python-Zusatz4281/16384 Byte inkl. isoliert gemessener temporaerer
+Allokation; Beobachterdaten ausgeschlossen. Keine Gesamtprozess-RAM-Aussage.
+Receipt457/16384 Byte; transiente UTF8-Obergrenze914/32768 Byte einschliesslich
+einer vollstaendigen Kodierungskopie. Gepackter Kern unveraendert416 Byte.
+Die Bilanz ist ein neutraler Nachweis, keine Vorausmessung der echten Folge.
+Dieselben Grenzen werden im spaeteren echten Export erneut erzwungen.
+
+Korrektur innerhalb der Vorbereitung
+Qualifikation01 bestand funktional, ihr vorhandener Receipt-Zaehler erfasste
+den exact_v1-Basispfad jedoch nicht. Der neue Beobachter misst nun den
+Rueckgabereceipt unmittelbar; S01 prueft einen positiven Zaehler und beide
+Grenzen. Alte Bindung/Dateien sind unter Qualifikation01/superseded-binding
+erhalten. Qualifikation02 ist der endgueltige Nachweis. Plan und42 bisherige
+Module blieben dabei unveraendert. Keine Parameter-/Quellenoptimierung.
+
+Konkreter spaeterer Aufruf, erst nach gesonderter echter Freigabe
+Arbeitsverzeichnis C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace
+& 'C:\Python314\python.exe' -m tools.s2uc_ema_stock run --authorization 'docs/S2UC_EMA_BESTAND_AUTORISIERUNG_20261001.json'
+
+Die gelieferte Vorlage steht auf PENDING_SEPARATE_AUTHORIZATION. Der Aufruf
+wurde nicht ausgefuehrt. Sein fester exklusiver Zielordner ist
+reports/s2uc/ema-stock-counterprobe-20261001-01.
+
+Empfohlener naechster Schritt an den Projektleiter
+Dieses technische Vorbereitungspaket anhand der Bindung und S01-S12 abnehmen.
+Danach gesondert ueber genau eine unveraenderte64-Frame-Gegenprobe in E/K/P
+entscheiden. Deren Nutzen auf V einschliesslich Kaltstarts beurteilen und
+bei abweichender Bestandserwartung zuerst Erwartungsfehler gegen technische
+Fehler abgrenzen. Keine neue Quelle, Parameteranpassung oder Systemerweiterung
+vor diesem Befund. Ein positiver Befund waere weiterhin nur kontrollierter
+Funktionsnutzen, kein allgemeiner Lern-/Clusterorganisationsnachweis.

@@ -1,0 +1,9 @@
+test_bound_identity_is_not_production_authority (tests.test_s2uc_p2.P2Tests.test_bound_identity_is_not_production_authority) ... ok
+test_bound_missing_admission_or_job_has_no_supplier (tests.test_s2uc_p2.P2Tests.test_bound_missing_admission_or_job_has_no_supplier) ... ok
+test_bound_production_substitute_hash_is_still_verified (tests.test_s2uc_p2.P2Tests.test_bound_production_substitute_hash_is_still_verified) ... ok
+test_bound_supplier_full_58_and_seven_hints (tests.test_s2uc_p2.P2Tests.test_bound_supplier_full_58_and_seven_hints) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 147.281s
+
+OK

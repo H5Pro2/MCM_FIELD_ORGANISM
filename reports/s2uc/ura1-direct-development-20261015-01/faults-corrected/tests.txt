@@ -1,0 +1,12 @@
+test_D02_roundtrip_order_metadata_cells (tests.test_s2uc_ura1_direct_archive.DirectTests.test_D02_roundtrip_order_metadata_cells) ... ok
+test_D03_table_edge_dictionary_index_collection_limits (tests.test_s2uc_ura1_direct_archive.DirectTests.test_D03_table_edge_dictionary_index_collection_limits) ... ok
+test_D04_record_and_temporary_limit (tests.test_s2uc_ura1_direct_archive.DirectTests.test_D04_record_and_temporary_limit) ... ok
+test_D05_write_and_encoder_failure_cleanup (tests.test_s2uc_ura1_direct_archive.DirectTests.test_D05_write_and_encoder_failure_cleanup) ... ok
+test_D06_capture_failure_terminates_arm (tests.test_s2uc_ura1_direct_archive.DirectTests.test_D06_capture_failure_terminates_arm) ... ok
+test_D07_immutable_rules_references_and_check_scope (tests.test_s2uc_ura1_direct_archive.DirectTests.test_D07_immutable_rules_references_and_check_scope) ... ok
+test_D08_integer_metadata_key_normalization (tests.test_s2uc_ura1_direct_archive.DirectTests.test_D08_integer_metadata_key_normalization) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.118s
+
+OK

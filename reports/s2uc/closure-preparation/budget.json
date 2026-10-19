@@ -1,0 +1,89 @@
+{
+  "version": "s2uc.closure-budget.v1",
+  "inventory_bytes": 108265.0,
+  "qualification_bytes": 65536,
+  "limits": {
+    "metadata": 65536,
+    "shared": 262144,
+    "record": 262144,
+    "verification": 262144,
+    "total": 4194304
+  },
+  "branches": {
+    "minimal": {
+      "classes": {
+        "metadata": 111435,
+        "shared": 108265,
+        "record": 245760,
+        "verification": 131072,
+        "terminal": 16384
+      },
+      "class_sums": {
+        "metadata": 111435,
+        "shared": 108265,
+        "record": 245760,
+        "verification": 131072,
+        "total": 612916
+      },
+      "limits": {
+        "metadata": 65536,
+        "shared": 262144,
+        "record": 262144,
+        "verification": 262144,
+        "total": 4194304
+      },
+      "within_limits": false,
+      "observed_record": null
+    },
+    "failure": {
+      "classes": {
+        "metadata": 111435,
+        "shared": 108265,
+        "record": 245760,
+        "verification": 131072,
+        "terminal": 16384
+      },
+      "class_sums": {
+        "metadata": 111435,
+        "shared": 108265,
+        "record": 245760,
+        "verification": 131072,
+        "total": 612916
+      },
+      "limits": {
+        "metadata": 65536,
+        "shared": 262144,
+        "record": 262144,
+        "verification": 262144,
+        "total": 4194304
+      },
+      "within_limits": false,
+      "observed_record": null
+    },
+    "success": {
+      "classes": {
+        "metadata": 111435,
+        "shared": 108265,
+        "record": 245760,
+        "verification": 131072,
+        "terminal": 16384
+      },
+      "class_sums": {
+        "metadata": 111435,
+        "shared": 108265,
+        "record": 245760,
+        "verification": 131072,
+        "total": 612916
+      },
+      "limits": {
+        "metadata": 65536,
+        "shared": 262144,
+        "record": 262144,
+        "verification": 262144,
+        "total": 4194304
+      },
+      "within_limits": false,
+      "observed_record": 221622
+    }
+  }
+}

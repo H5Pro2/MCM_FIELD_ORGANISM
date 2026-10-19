@@ -1,0 +1,1080 @@
+[
+  {
+    "phase": "INTERPRETER_BASE",
+    "start_ns": 458623434650500,
+    "end_ns": 458623535504000,
+    "duration_ms": 100.8535,
+    "samples": 10,
+    "sampled_max": {
+      "working_set": 16449536,
+      "private_commit": 10969088
+    }
+  },
+  {
+    "phase": "IMPORTS",
+    "start_ns": 458623535594400,
+    "end_ns": 458623779309500,
+    "duration_ms": 243.7151,
+    "samples": 23,
+    "sampled_max": {
+      "working_set": 33484800,
+      "private_commit": 428732416
+    }
+  },
+  {
+    "phase": "IMPORTED_BASE",
+    "start_ns": 458623779380400,
+    "end_ns": 458623879829200,
+    "duration_ms": 100.4488,
+    "samples": 10,
+    "sampled_max": {
+      "working_set": 33566720,
+      "private_commit": 428732416
+    }
+  },
+  {
+    "phase": "RUN",
+    "start_ns": 458623880137300,
+    "end_ns": 458633109758400,
+    "duration_ms": 9229.6211,
+    "samples": 871,
+    "sampled_max": {
+      "working_set": 70848512,
+      "private_commit": 463392768
+    }
+  },
+  {
+    "phase": "PRESTART_VALIDATION",
+    "start_ns": 458623880175100,
+    "end_ns": 458628967920200,
+    "duration_ms": 5087.7451,
+    "samples": 480,
+    "sampled_max": {
+      "working_set": 70848512,
+      "private_commit": 463392768
+    }
+  },
+  {
+    "phase": "CONNECTION",
+    "start_ns": 458628968852400,
+    "end_ns": 458629386489800,
+    "duration_ms": 417.6374,
+    "samples": 40,
+    "sampled_max": {
+      "working_set": 52600832,
+      "private_commit": 445444096
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458628969030400,
+    "end_ns": 458628979288900,
+    "duration_ms": 10.2585,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51666944,
+      "private_commit": 444792832
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458628979417800,
+    "end_ns": 458628985331700,
+    "duration_ms": 5.9139,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 52129792,
+      "private_commit": 445177856
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458628985474000,
+    "end_ns": 458628992315500,
+    "duration_ms": 6.8415,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458628992425600,
+    "end_ns": 458628999480100,
+    "duration_ms": 7.0545,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51118080,
+      "private_commit": 443252736
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458628999616200,
+    "end_ns": 458629005650400,
+    "duration_ms": 6.0342,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51294208,
+      "private_commit": 443486208
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629005811100,
+    "end_ns": 458629013368300,
+    "duration_ms": 7.5572,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629013471700,
+    "end_ns": 458629019468000,
+    "duration_ms": 5.9963,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51150848,
+      "private_commit": 443285504
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629019561000,
+    "end_ns": 458629026803200,
+    "duration_ms": 7.2422,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 52498432,
+      "private_commit": 445444096
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629026951100,
+    "end_ns": 458629033000200,
+    "duration_ms": 6.0491,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629033111300,
+    "end_ns": 458629038997300,
+    "duration_ms": 5.886,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51167232,
+      "private_commit": 443248640
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629039135100,
+    "end_ns": 458629048421400,
+    "duration_ms": 9.2863,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 52600832,
+      "private_commit": 445431808
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629048608400,
+    "end_ns": 458629055387300,
+    "duration_ms": 6.7789,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629055483900,
+    "end_ns": 458629061350200,
+    "duration_ms": 5.8663,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 50135040,
+      "private_commit": 442265600
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629061444800,
+    "end_ns": 458629070383700,
+    "duration_ms": 8.9389,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51113984,
+      "private_commit": 443265024
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629070534000,
+    "end_ns": 458629076702700,
+    "duration_ms": 6.1687,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51363840,
+      "private_commit": 443637760
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629076795700,
+    "end_ns": 458629082657400,
+    "duration_ms": 5.8617,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629082753000,
+    "end_ns": 458629088625400,
+    "duration_ms": 5.8724,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51380224,
+      "private_commit": 444219392
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629088716700,
+    "end_ns": 458629097379100,
+    "duration_ms": 8.6624,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51363840,
+      "private_commit": 443637760
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629097573000,
+    "end_ns": 458629104297900,
+    "duration_ms": 6.7249,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629104406000,
+    "end_ns": 458629111448400,
+    "duration_ms": 7.0424,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51064832,
+      "private_commit": 443125760
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629111576600,
+    "end_ns": 458629120963000,
+    "duration_ms": 9.3864,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 52592640,
+      "private_commit": 445431808
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629121135700,
+    "end_ns": 458629130225700,
+    "duration_ms": 9.09,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51032064,
+      "private_commit": 443097088
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629130501500,
+    "end_ns": 458629139899500,
+    "duration_ms": 9.398,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51322880,
+      "private_commit": 443543552
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629140128100,
+    "end_ns": 458629148420000,
+    "duration_ms": 8.2919,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629148584900,
+    "end_ns": 458629154991400,
+    "duration_ms": 6.4065,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 50577408,
+      "private_commit": 443285504
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629155093200,
+    "end_ns": 458629164594500,
+    "duration_ms": 9.5013,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51068928,
+      "private_commit": 443125760
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629164724800,
+    "end_ns": 458629171325800,
+    "duration_ms": 6.601,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51359744,
+      "private_commit": 443535360
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629171467600,
+    "end_ns": 458629179819300,
+    "duration_ms": 8.3517,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629179942200,
+    "end_ns": 458629186279900,
+    "duration_ms": 6.3377,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 50638848,
+      "private_commit": 443170816
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629186376400,
+    "end_ns": 458629192394500,
+    "duration_ms": 6.0181,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51273728,
+      "private_commit": 444448768
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629192527400,
+    "end_ns": 458629199086500,
+    "duration_ms": 6.5591,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629199307700,
+    "end_ns": 458629205948000,
+    "duration_ms": 6.6403,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51064832,
+      "private_commit": 443125760
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629206069600,
+    "end_ns": 458629212586100,
+    "duration_ms": 6.5165,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51359744,
+      "private_commit": 443535360
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629212702900,
+    "end_ns": 458629219556000,
+    "duration_ms": 6.8531,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629219656700,
+    "end_ns": 458629226550500,
+    "duration_ms": 6.8938,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51122176,
+      "private_commit": 443285504
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629226649600,
+    "end_ns": 458629232542700,
+    "duration_ms": 5.8931,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 50114560,
+      "private_commit": 442183680
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629232712600,
+    "end_ns": 458629238618700,
+    "duration_ms": 5.9061,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629238712900,
+    "end_ns": 458629244571500,
+    "duration_ms": 5.8586,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 52183040,
+      "private_commit": 445444096
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629244662400,
+    "end_ns": 458629250920100,
+    "duration_ms": 6.2577,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629251164400,
+    "end_ns": 458629259947200,
+    "duration_ms": 8.7828,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51150848,
+      "private_commit": 443285504
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629260068400,
+    "end_ns": 458629266056400,
+    "duration_ms": 5.988,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51101696,
+      "private_commit": 443170816
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629266147100,
+    "end_ns": 458629271989800,
+    "duration_ms": 5.8427,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629272078200,
+    "end_ns": 458629278898000,
+    "duration_ms": 6.8198,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51150848,
+      "private_commit": 443285504
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629278994700,
+    "end_ns": 458629284731300,
+    "duration_ms": 5.7366,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629284851400,
+    "end_ns": 458629290581800,
+    "duration_ms": 5.7304,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629290663900,
+    "end_ns": 458629302886800,
+    "duration_ms": 12.2229,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 50114560,
+      "private_commit": 442175488
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629302990500,
+    "end_ns": 458629308850600,
+    "duration_ms": 5.8601,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 50311168,
+      "private_commit": 443285504
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629308943200,
+    "end_ns": 458629316145600,
+    "duration_ms": 7.2024,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 52281344,
+      "private_commit": 445431808
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629316267800,
+    "end_ns": 458629322198400,
+    "duration_ms": 5.9306,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629322293500,
+    "end_ns": 458629328138000,
+    "duration_ms": 5.8445,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51064832,
+      "private_commit": 443138048
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629328252000,
+    "end_ns": 458629338549900,
+    "duration_ms": 10.2979,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51568640,
+      "private_commit": 444436480
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629338670200,
+    "end_ns": 458629344702500,
+    "duration_ms": 6.0323,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51306496,
+      "private_commit": 443617280
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629344797100,
+    "end_ns": 458629351455500,
+    "duration_ms": 6.6584,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629351744900,
+    "end_ns": 458629358366500,
+    "duration_ms": 6.6216,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51118080,
+      "private_commit": 443191296
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629358493300,
+    "end_ns": 458629364456900,
+    "duration_ms": 5.9636,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629364555100,
+    "end_ns": 458629370789800,
+    "duration_ms": 6.2347,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 50069504,
+      "private_commit": 442150912
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629370957100,
+    "end_ns": 458629379849100,
+    "duration_ms": 8.892,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51138560,
+      "private_commit": 443252736
+    }
+  },
+  {
+    "phase": "MATERIALIZATION",
+    "start_ns": 458629379959600,
+    "end_ns": 458629386359600,
+    "duration_ms": 6.4,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51326976,
+      "private_commit": 443518976
+    }
+  },
+  {
+    "phase": "OWNER_CLEANUP",
+    "start_ns": 458629386521100,
+    "end_ns": 458629386553300,
+    "duration_ms": 0.0322,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "SOURCE_COMPLETION",
+    "start_ns": 458629386573600,
+    "end_ns": 458629386616500,
+    "duration_ms": 0.0429,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "CODEC_ENCODE",
+    "start_ns": 458629386686500,
+    "end_ns": 458629395214300,
+    "duration_ms": 8.5278,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "CODEC_DECODE",
+    "start_ns": 458629395711000,
+    "end_ns": 458629401202000,
+    "duration_ms": 5.491,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 50663424,
+      "private_commit": 442867712
+    }
+  },
+  {
+    "phase": "PUBLISH_record.json",
+    "start_ns": 458629401277500,
+    "end_ns": 458629701998400,
+    "duration_ms": 300.7209,
+    "samples": 28,
+    "sampled_max": {
+      "working_set": 51154944,
+      "private_commit": 443146240
+    }
+  },
+  {
+    "phase": "REREAD_publication.tmp",
+    "start_ns": 458629693320300,
+    "end_ns": 458629701057100,
+    "duration_ms": 7.7368,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "REREAD_record.json",
+    "start_ns": 458629701651900,
+    "end_ns": 458629701894100,
+    "duration_ms": 0.2422,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "REREAD_record.json",
+    "start_ns": 458629702051400,
+    "end_ns": 458629702319100,
+    "duration_ms": 0.2677,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51163136,
+      "private_commit": 443146240
+    }
+  },
+  {
+    "phase": "CODEC_DECODE",
+    "start_ns": 458629702422900,
+    "end_ns": 458629706976700,
+    "duration_ms": 4.5538,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "TECHNICAL_VERIFICATION",
+    "start_ns": 458629991779600,
+    "end_ns": 458630025018700,
+    "duration_ms": 33.2391,
+    "samples": 3,
+    "sampled_max": {
+      "working_set": 51224576,
+      "private_commit": 443146240
+    }
+  },
+  {
+    "phase": "REREAD_record.json",
+    "start_ns": 458630025122400,
+    "end_ns": 458630025360200,
+    "duration_ms": 0.2378,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "EVALUATION",
+    "start_ns": 458630025439700,
+    "end_ns": 458630025503800,
+    "duration_ms": 0.0641,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "PUBLISH_verification.json",
+    "start_ns": 458630025623200,
+    "end_ns": 458630356258800,
+    "duration_ms": 330.6356,
+    "samples": 32,
+    "sampled_max": {
+      "working_set": 51412992,
+      "private_commit": 443494400
+    }
+  },
+  {
+    "phase": "REREAD_publication.tmp",
+    "start_ns": 458630348868400,
+    "end_ns": 458630355528900,
+    "duration_ms": 6.6605,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "REREAD_verification.json",
+    "start_ns": 458630355942700,
+    "end_ns": 458630356163600,
+    "duration_ms": 0.2209,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "PUBLISH_terminal.json",
+    "start_ns": 458630654821100,
+    "end_ns": 458630949417300,
+    "duration_ms": 294.5962,
+    "samples": 29,
+    "sampled_max": {
+      "working_set": 51490816,
+      "private_commit": 443494400
+    }
+  },
+  {
+    "phase": "REREAD_publication.tmp",
+    "start_ns": 458630941343200,
+    "end_ns": 458630948860500,
+    "duration_ms": 7.5173,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "ERROR_CLOSURE",
+    "start_ns": 458630949464900,
+    "end_ns": 458633108949300,
+    "duration_ms": 2159.4844,
+    "samples": 203,
+    "sampled_max": {
+      "working_set": 51499008,
+      "private_commit": 443494400
+    }
+  },
+  {
+    "phase": "PUBLISH_error.json",
+    "start_ns": 458631265754400,
+    "end_ns": 458631583897900,
+    "duration_ms": 318.1435,
+    "samples": 29,
+    "sampled_max": {
+      "working_set": 51499008,
+      "private_commit": 443494400
+    }
+  },
+  {
+    "phase": "REREAD_publication.tmp",
+    "start_ns": 458631570984400,
+    "end_ns": 458631582569800,
+    "duration_ms": 11.5854,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51499008,
+      "private_commit": 443494400
+    }
+  },
+  {
+    "phase": "REREAD_error.json",
+    "start_ns": 458631583420600,
+    "end_ns": 458631583791800,
+    "duration_ms": 0.3712,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "PUBLISH_terminal.json",
+    "start_ns": 458631888815500,
+    "end_ns": 458631888986000,
+    "duration_ms": 0.1705,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "PUBLISH_terminal-minimal.json",
+    "start_ns": 458632197968000,
+    "end_ns": 458632519314800,
+    "duration_ms": 321.3468,
+    "samples": 30,
+    "sampled_max": {
+      "working_set": 51101696,
+      "private_commit": 443248640
+    }
+  },
+  {
+    "phase": "REREAD_publication.tmp",
+    "start_ns": 458632511754500,
+    "end_ns": 458632518587800,
+    "duration_ms": 6.8333,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51101696,
+      "private_commit": 443248640
+    }
+  },
+  {
+    "phase": "REREAD_terminal-minimal.json",
+    "start_ns": 458632519099600,
+    "end_ns": 458632519262200,
+    "duration_ms": 0.1626,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "PUBLICATION_FINISH",
+    "start_ns": 458632519340000,
+    "end_ns": 458633108928400,
+    "duration_ms": 589.5884,
+    "samples": 56,
+    "sampled_max": {
+      "working_set": 51453952,
+      "private_commit": 443494400
+    }
+  },
+  {
+    "phase": "REREAD_terminal.json",
+    "start_ns": 458633107783800,
+    "end_ns": 458633107912700,
+    "duration_ms": 0.1289,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "REREAD_verification.json",
+    "start_ns": 458633108020400,
+    "end_ns": 458633108140000,
+    "duration_ms": 0.1196,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "REREAD_error.json",
+    "start_ns": 458633108243100,
+    "end_ns": 458633108359900,
+    "duration_ms": 0.1168,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "REREAD_terminal.json",
+    "start_ns": 458633108458700,
+    "end_ns": 458633108619700,
+    "duration_ms": 0.161,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "REREAD_terminal-minimal.json",
+    "start_ns": 458633108718300,
+    "end_ns": 458633108835500,
+    "duration_ms": 0.1172,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "OWNER_CLEANUP",
+    "start_ns": 458633109424800,
+    "end_ns": 458633109446100,
+    "duration_ms": 0.0213,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "RESULT_EXPORT",
+    "start_ns": 458633109781300,
+    "end_ns": 458633111457400,
+    "duration_ms": 1.6761,
+    "samples": 0,
+    "sampled_max": {
+      "working_set": null,
+      "private_commit": null
+    }
+  },
+  {
+    "phase": "FINAL_HOLD",
+    "start_ns": 458633111505900,
+    "end_ns": 458633120573200,
+    "duration_ms": 9.0673,
+    "samples": 1,
+    "sampled_max": {
+      "working_set": 51085312,
+      "private_commit": 443146240
+    }
+  }
+]

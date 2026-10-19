@@ -1,0 +1,166 @@
+{
+  "contract": {
+    "bytes": 24353,
+    "sha256": "f8150752bb0008bafef95dad301c25022f4aae83b523c2ed60d3d3f2f7cc2bfe"
+  },
+  "files": {
+    "PREPARED_START.txt": {
+      "bytes": 1957,
+      "sha256": "c01f7757aa4a743fe0594635a635a5cd172219c3673bd39ceb6d75907ef606f5"
+    },
+    "REPORT.txt": {
+      "bytes": 6530,
+      "sha256": "6b7d38ce7022a259f96b02dc04a883b51f5f4d25c38b465a3cc5ba91df16292c"
+    },
+    "archive-check.json": {
+      "bytes": 1374,
+      "sha256": "3b327a609d80d63a2df4eb75b096c6511643218c695e0875431c52098fe159fc"
+    },
+    "binding.json": {
+      "bytes": 248384,
+      "sha256": "061252093a580c0df3d886888f862481d86a165fb77b623f0c8f3346639ce12c"
+    },
+    "binding.sha256": {
+      "bytes": 65,
+      "sha256": "aa17d6683962e7d5e4fd6aeec800ddfb70a308c85f48d014dd77b5df65433447"
+    },
+    "c1-c6-01/closure/completion.json": {
+      "bytes": 154,
+      "sha256": "3fe8168920b49f9c88f15ea200b33244f02aaa3739c986d2b2f5e5f8d57c8773"
+    },
+    "c1-c6-01/closure/technical-closure.json": {
+      "bytes": 490,
+      "sha256": "a00055e09049fac22eda4ee03a5028fc24dffdffce7791f5fe4777db5304fa96"
+    },
+    "c1-c6-01/closure/terminal.json": {
+      "bytes": 1817,
+      "sha256": "811e174efed485ab03d39a5e1c7d68b51b9a46899d3b23435e8d1effe67c6963"
+    },
+    "c1-c6-01/observer/gate.json": {
+      "bytes": 57,
+      "sha256": "29e12633c8ed864fe133f1af758caf7b81e94a7b05a9f7e84b17306ef132bb08"
+    },
+    "c1-c6-01/observer/request.json": {
+      "bytes": 245636,
+      "sha256": "baf5fb6fd108bf6159203dfc4b60ef3fa7c18c6523dfb20ef18bab7a96fb8f58"
+    },
+    "c1-c6-01/observer/worker-error.json": {
+      "bytes": 1074,
+      "sha256": "d736e7db8f08b341ba4c7cc2c6b39c06ecae7be30d28f82993074f47c090ff70"
+    },
+    "c1-c6-02/closure/completion.json": {
+      "bytes": 144,
+      "sha256": "76005d14eaea258444a0e83257af46a986aff928d17c036a7a08eb35f7c78430"
+    },
+    "c1-c6-02/closure/technical-closure.json": {
+      "bytes": 866,
+      "sha256": "4a509966237565fbf9a6b549358495a1060a4f8709cf884f8d032c6de4f1335a"
+    },
+    "c1-c6-02/closure/terminal.json": {
+      "bytes": 582,
+      "sha256": "39e6104d73b5831ae0137bc24d75e2c76f511c9d31f5d9d3f3e4c5032ab7183f"
+    },
+    "c1-c6-02/fixture-evidence/golden-evaluation.json": {
+      "bytes": 118795,
+      "sha256": "40609f1817399ac5abca621ac9b30d329b5d3b0e9c372d39b279a21173677e56"
+    },
+    "c1-c6-02/fixture-evidence/mini-adapters.json": {
+      "bytes": 36369,
+      "sha256": "7ff67218159b823db95ba6c2a8d70c45c53c2674e4c0b5418c7943bf89432f13"
+    },
+    "c1-c6-02/observer/gate.json": {
+      "bytes": 58,
+      "sha256": "1eb5fd3e3f626d700a199f005f544f40faefee5976b0e369fd911ae92a422047"
+    },
+    "c1-c6-02/observer/request.json": {
+      "bytes": 245634,
+      "sha256": "a75eb32adbb2366ffdfefa1bdf2ae0627b14c360a89fd932a68786a804f04925"
+    },
+    "c1-c6-02/observer/tests.json": {
+      "bytes": 1110,
+      "sha256": "2095be7dc1560609f24719919cd8070d071c830b7f5f20ca2acf525b2ecbb05d"
+    },
+    "c1-c6-02/observer/worker-result.json": {
+      "bytes": 22,
+      "sha256": "495bcf791e66f2e43d002cc8568cd6bdf79457a4493abeec886eb7c8b1c28d89"
+    },
+    "c1-c6-03/closure/completion.json": {
+      "bytes": 145,
+      "sha256": "56d7fc40d7c6707437f36714268c5032e33eed6da22e318f298c42689f77c10f"
+    },
+    "c1-c6-03/closure/technical-closure.json": {
+      "bytes": 866,
+      "sha256": "da16bbd52219ff753a271fbfc4ce6e8a3f58c220e33d0ca925bc0f1d83999e34"
+    },
+    "c1-c6-03/closure/terminal.json": {
+      "bytes": 582,
+      "sha256": "6151548eb94e0b7d195bd93c1fa44dedb79621890670665d87a555c41ac030cd"
+    },
+    "c1-c6-03/fixture-evidence/golden-evaluation.json": {
+      "bytes": 118795,
+      "sha256": "40609f1817399ac5abca621ac9b30d329b5d3b0e9c372d39b279a21173677e56"
+    },
+    "c1-c6-03/fixture-evidence/mini-adapters.json": {
+      "bytes": 36369,
+      "sha256": "7ff67218159b823db95ba6c2a8d70c45c53c2674e4c0b5418c7943bf89432f13"
+    },
+    "c1-c6-03/observer/gate.json": {
+      "bytes": 58,
+      "sha256": "7c3dc4c607ff074c1ff567fb0fca95c1f885a00b7eb2b2d8998212fafb6d172e"
+    },
+    "c1-c6-03/observer/request.json": {
+      "bytes": 245636,
+      "sha256": "6bae595d23dfc48507625042ba20a596f4e3e12a92f8f52eb66ae03378e28300"
+    },
+    "c1-c6-03/observer/tests.json": {
+      "bytes": 1110,
+      "sha256": "1715046a7ea8d701bcb4cf63578eace35f52451c56fa9cbfc121c49c1bd4ac71"
+    },
+    "c1-c6-03/observer/worker-result.json": {
+      "bytes": 22,
+      "sha256": "495bcf791e66f2e43d002cc8568cd6bdf79457a4493abeec886eb7c8b1c28d89"
+    },
+    "export-balance.json": {
+      "bytes": 543,
+      "sha256": "0a5881a074df90eda125e450ec1a8db3f8a9523e20da0d43344cab80af3248d5"
+    },
+    "historical-overviews/AKTUELLER_FORSCHUNGSWEG.md.gz": {
+      "bytes": 474703,
+      "sha256": "404b5b0f0033e0cf4755006585de401d2c1a10a05da4d4673d467d062cf3b990"
+    },
+    "historical-overviews/README.md.gz": {
+      "bytes": 59325,
+      "sha256": "a331207f55a91357d352023f5f0576034f9f8fe76c6dd43c1da7394b1ce535a1"
+    },
+    "historical-overviews/docs/README.md.gz": {
+      "bytes": 90459,
+      "sha256": "5b045ceabbf995b061ce8421d47dbd261b147b26551aa8edf43b1ae9a1179d75"
+    },
+    "permission-status.json": {
+      "bytes": 250,
+      "sha256": "fd4499b7abfc9d26cb26c6ad988142277d9dd22f9ec86327f43d9a5a605f30a2"
+    },
+    "preservation.json": {
+      "bytes": 1643,
+      "sha256": "cf038b03cf92609b1b653800789fed3d8991f3c4a532ab5c129f19de4c08c11c"
+    }
+  },
+  "inherited_delivery_sha256": "cccadae5a649066941246dbd6cbe2179c4d8c36d7db28109cbd83042c57285c8",
+  "overviews": {
+    "AKTUELLER_FORSCHUNGSWEG.md": {
+      "bytes": 1552123,
+      "sha256": "1b9d01d1f8a52c64915503e90f01ccf2ce2351fd8e2c7430712991542fb797e5"
+    },
+    "README.md": {
+      "bytes": 194312,
+      "sha256": "57cc68bff09a60667435a81e9225531225d2cbbb78e7bcdd7acd187e5d60f8a0"
+    },
+    "docs/README.md": {
+      "bytes": 292161,
+      "sha256": "1b5f49b3d87c07e2b9a9b6996bf5fcc0d4dae8355ee182024432f8d7b21a8d85"
+    }
+  },
+  "status": "TECHNICAL_READY_RESEARCH_NOT_AUTHORIZED",
+  "technical_binding_sha256": "061252093a580c0df3d886888f862481d86a165fb77b623f0c8f3346639ce12c",
+  "workflow": "a179a252-51ec-48fa-be65-e5f32d41f858"
+}

@@ -1,0 +1,59 @@
+B2-V: Abschluss der begrenzten neutralen Entwicklungspruefung
+
+Geaendert: neue ProvisionalHintArm-Unterklasse ueberschreibt ausschliesslich hint().
+Bildung, Bestaetigung, Ersetzung, Lebensdauer, Reihenfolge und Loeschung bleiben geerbt.
+Neue Dateien: tools/_s2uc_provisional_hint.py, tools/s2uc_b2v_check.py, tests/test_s2uc_provisional_hint.py.
+Keine Originalquellenproduktion, keine Registry-Arbeiten, keine Erweiterung der Kandidatenhaltung.
+
+Pruefungen: 14/14 PASS (5 neue B2-V-Tests, 9 Vierarmregressionen), keine Fehler oder Skips; Replay Exit 0.
+Vorregistrierung SHA256 e7ac027b4ab860a498637fc5a060622d223f3090583ca959afaa9733a4665ce6
+Gebundene Referenzdateien und Eingaben unveraendert.
+Zaehler: {"transitions": 11, "original_hints": 7, "read_only_pairs": 14, "equal_input_frames": 72}
+14/14 Vorhersagezeilen bestaetigt: sieben Originalhinweise, fuenf Zusatzhinweise, zwei Wiederholungen.
+Zusaetzliche Mehrpositionspruefung: [1,2,1,2] mit [1,2] liefert Position0 und2;
+sowohl als Kandidat als auch nach Bestaetigung erhalten: ABSTAIN_AMBIGUOUS, kein ausgewaehlter Einzelgewinner.
+Zustandspruefung umfasst evidence(), Kandidaten- und Erhaltungsgenerationszaehler; nach jedem abgeschlossenen Hinweispaar identisch.
+Alle elf Abschlussreceipts entsprechen sowohl dem unveraenderten B2 als auch dem historischen Vierarmresultat.
+Die sieben Originalhinweise vergleichen Statusabbildung und vollstaendige Treffermenge separat.
+
+ERGEBNISSE: Positionen nullbasiert; Rolle und Generation gehoeren zur Herkunft.
+Kennung | B2 | B2-V | vollstaendige B2-V-Treffermenge | Vorhersage
+g1/12 | TRACE_MATCH | CONFIRMED_RETAINED_MATCH | retained/1 g1-p1 Frames[1, 2, 3, 4] @1 | CONFIRMED
+P1 | ABSTAIN_NO_RETAINED_TRACE | PROVISIONAL_CANDIDATE_MATCH | candidate/2 g1-p3 Frames[13, 14, 15, 16] @0 | CONFIRMED
+P1-repeat | ABSTAIN_NO_RETAINED_TRACE | PROVISIONAL_CANDIDATE_MATCH | candidate/2 g1-p3 Frames[13, 14, 15, 16] @0 | CONFIRMED
+N1 | ABSTAIN_NO_RETAINED_TRACE | ABSTAIN_NO_MATCH | - | CONFIRMED
+K1 | TRACE_MATCH | ABSTAIN_AMBIGUOUS | retained/1 g1-p1 Frames[1, 2, 3, 4] @0; candidate/3 g1-p4 Frames[18, 19, 20, 21] @0 | CONFIRMED
+g1/24 | TRACE_MATCH | CONFIRMED_RETAINED_MATCH | retained/1 g1-p1 Frames[1, 2, 3, 4] @2 | CONFIRMED
+g1/26 | ABSTAIN_NO_RETAINED_TRACE | ABSTAIN_NO_MATCH | - | CONFIRMED
+P2 | ABSTAIN_NO_RETAINED_TRACE | PROVISIONAL_CANDIDATE_MATCH | candidate/1 g2-p1 Frames[27, 28, 29, 30] @1 | CONFIRMED
+P2-repeat | ABSTAIN_NO_RETAINED_TRACE | PROVISIONAL_CANDIDATE_MATCH | candidate/1 g2-p1 Frames[27, 28, 29, 30] @1 | CONFIRMED
+N2 | ABSTAIN_NO_RETAINED_TRACE | ABSTAIN_NO_MATCH | - | CONFIRMED
+g2/38 | ABSTAIN_NO_RETAINED_TRACE | ABSTAIN_NO_MATCH | - | CONFIRMED
+g3/60 | TRACE_MATCH | CONFIRMED_RETAINED_MATCH | retained/1 g3-p1 Frames[44, 45, 46, 47] @2 | CONFIRMED
+g3/67 | TRACE_MATCH | CONFIRMED_RETAINED_MATCH | retained/1 g3-p1 Frames[44, 45, 46, 47] @2 | CONFIRMED
+g3/69 | TRACE_MATCH | CONFIRMED_RETAINED_MATCH | retained/2 g3-p3 Frames[54, 55, 56, 57] @0 | CONFIRMED
+
+BUDGET UND ZUGRIFFSGRENZE
+Unveraendert: ein Kandidat, zwei Erhaltungsspuren, vier Bildungsframes, zwei Hinweisframes.
+Rollenmaxima nach Rueckkehr: {"retained_frames": 8, "candidate_frames": 4, "forming_frames": 4, "trace_frames": 12, "hint_frames": 1}
+Temporaere Frame-Spitzen im gespeicherten Replay: {"trace": 12, "hint": 2, "total": 12}
+Der Grenztest test_full_budget_and_provenance_no_payload_copy prueft gleichzeitig 16 Spurframes und2 Hinweisframes.
+Numerische Obergrenze 18*48*8 = 6912 Byte ist keine RAM-Messung.
+Der bestehende temporaere Beobachter wurde lokal fuer die Unterklasse angepasst; keine Ressourcenplattform.
+Provenienz gibt ausschliesslich vorhandene Spurenmetadaten aus, keine numerischen Payloadkopien.
+Das Eingabearchiv liegt ausschliesslich im Pruefer. Der Abruf bekommt nur einzelne Frames und besitzt keinen Archivzugriff.
+Neue lokale Hinweisordinale 1000..1003 und eigene probe/Kennungen veraendern keine historischen Ereignisse.
+
+NUTZEN UND KONFLIKT
+P1/P2 erschliessen noch vorhandene einmalige Erfahrung vorlaeufig. Wiederholte Hinweise bestaetigen und verlaengern nichts.
+N1/N2 zeigen keine Wiederherstellung nach Ersetzung. g1/26 und g2/38 bleiben ohne Treffer.
+K1 verschlechtert die Eindeutigkeit: B2 waehlt korrekt die einzige durchsuchte Erhaltungsspur g1-p1;
+B2-V findet zusaetzlich Kandidat g1-p4 und enthaelt sich. Beide Herkuenfte bleiben sichtbar.
+Das ist ein Zugangsgewinn mit zusaetzlichem Mehrdeutigkeitsrisiko, keine allgemeine Verbesserung oder laengere Erinnerung.
+
+NAECHSTER BEGRUENDETER VORSCHLAG
+Den Zugriffspfad als gepruefte lokale Variante beibehalten; diese abgeschlossene Gegenprobe nicht erneut wiederholen.
+Als naechsten getrennten Fachschritt einen statischen Vertrag zur Kandidatenhaltung unter Unterbrechung entwerfen:
+A-B-A gegen A-B-C bei explizit konstanter Ressourcenbilanz und einfacher FIFO-Baseline.
+Er soll die bislang offene Festigung trotz Zwischeneindruecken pruefbar machen, ohne Abruf als Bestaetigung zu verwenden.
+Hierfuer wurde weder Kandidatenhaltung erweitert noch weitere Ausfuehrung vorgenommen.

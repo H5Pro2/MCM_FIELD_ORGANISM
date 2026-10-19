@@ -1,0 +1,49 @@
+K1/K2 FIFO-Kandidatenkapazitaet: neutraler Entwicklungsabschluss
+
+K1 ist unveraendertes B2-V. K2 erweitert auf zwei Kandidaten; zwei Erhaltungsplaetze, FIFO und Abrufentscheidung bleiben gleich.
+Neue Dateien: tools/_s2uc_two_candidates.py, tools/s2uc_k2_check.py, tests/test_s2uc_two_candidates.py.
+20/20 Tests PASS (6 neue, 14 Referenzregressionen), keine Fehler/Skips; Replay Exit0.
+Vorregistrierung SHA256 81616275879ef61e22077782daecc18f2167c15080f13e7637fbc599659b429e
+Konkrete 48D-Vektoren, Folgen, Hinweise und Herkunftserwartungen vor Auswertung gesichert.
+36/36 Hinweisvorhersagen, 6/6 FIFO-Herkunftsfolgen und 2/2 Promotionsherkuenfte bestaetigt; 0 Abweichungen.
+Zusaetzliche Grenzpruefungen K1 16+2 und K2 20+2 bestanden, anschliessende FIFO-Verdrangung ebenfalls geprueft.
+Alle fuenf Folgen je Arm mit und ohne Hinweise wiedergegeben; saemtliche Zustandsbilder und Uebergangsreceipts identisch.
+Alle Referenz-Hashbindungen unveraendert. Keine Produktgrenzenaenderung oder Originalquellenproduktion.
+
+ERGEBNISSE
+Nach A: beide vorlaeufig A1 (step1, Frames10..13).
+Nach A-B: K1 ohne Treffer; K2 vorlaeufig A1, Kandidatenreihenfolge A1,B.
+Nach A-B-A: K1 vorlaeufig neues A2 (step3, Frames30..33); K2 bestaetigt A1 (Frames10..13).
+K2-Promotion: receipt candidate_generation=1, retained generation=1; Schritt3/Frames30..33 sind Wiederholungsbeleg.
+Nach A-B-C: A1 in beiden Armen entfernt; A-Hinweis erfolglos. K2-Kandidaten B,C.
+Nach A-B-C-A: beide vorlaeufig neues A2 (step4, Frames40..43), keine Erhaltung und keine Herkunftsuebernahme von A1.
+K2-Kandidaten danach C,A2. FIFO hat B verdrangt, keine nachtraegliche Wiederherstellung.
+Wiederholte Hinweise nach A-B: K2 bleibt vorlaeufig, A1 wird beim anschliessenden C unveraendert verdrangt.
+Konflikt A=[1,2,3,4], B=[1,2,7,8]: K1 eindeutiger vorlaeufiger B-Treffer;
+K2 ABSTAIN_AMBIGUOUS mit A/step1 und B/step2, jeweils Position0. Kein gewaehlter Gewinner.
+
+TATSAECHLICHE BELEGUNG UND VERGLEICHSAUFWAND
+Fall | K1/K2 ganze Spurvergleiche | K1/K2 gepruefte Hinweispositionen | K1/K2 temporaeres Spurmaximum
+ABA | 2/2 | 9/15 | 8/12
+ABC | 2/3 | 9/15 | 8/12
+ABCA | 3/5 | 12/21 | 8/12
+repeat_control | 2/3 | 18/33 | 8/12
+conflict | 1/1 | 6/9 | 8/8
+Gesamt ueber diese fuenf Folgen: 10/14 ganze Spurvergleiche und 54/93 Hinweispositionen.
+Ganze Spurvergleiche sind beobachtete _same_values-Aufrufe. Hinweispositionen sind die vollstaendig durchsuchten drei Positionen je vorhandener Spur.
+Dies sind keine Skalarvergleichszaehler. Gespeicherte Aufrufzeiten enthalten Tracing und sind kein Geschwindigkeitsbenchmark.
+Grenztest: zwei bestaetigte Spuren D und E, dann Kandidaten A,B und vollstaendig bildendes C.
+K1: 8 Erhaltungs-, 4 Kandidaten-, 4 Bildungsframes, gleichzeitig2 Hinweisframes =18.
+K2: 8 Erhaltungs-, 8 Kandidaten-, 4 Bildungsframes, gleichzeitig2 Hinweisframes =22.
+Gemessene temporaere Maxima sind16+2 bzw20+2; keine zusaetzlichen eindeutigen Frameobjekte in den beobachteten Speicherfunktionen.
+Messgrenze: Python-Tracepunkte, eindeutige Frameidentitaeten; Referenzaliase sind keine Payloadkopien. Keine native Allokationsvollerfassung.
+Numerische Kapazitaetsnutzlast: K1 6912Byte, K2 8448Byte; Mehrbedarf1536Byte plus Verwaltungsobjekte. Keine RAM-Messung.
+Die Hauptfolgen erreichen meist8 gegen12 Spurframes. Rollenmaxima sind separat in result.json gespeichert.
+
+INTERPRETATION UND NAECHSTER VORSCHLAG
+Gewinn: zusaetzliche Kandidatenkapazitaet erlaubt Bestaetigung der urspruenglichen A-Erfahrung nach genau einem Zwischeneindruck.
+Kosten: vier zusaetzliche Frameplaetze, mehr Sucharbeit und im Konfliktfall Verlust einer eindeutigen vorlaeufigen Antwort.
+Die Ersetzungsregel bleibt FIFO. Keine allgemeine Ueberlegenheit, bessere Ersetzungsstrategie oder unbeschraenkte Unterbrechungsfestigkeit nachgewiesen.
+Naechster vorgeschlagener Fachschritt: gesonderten statischen Vergleich gleicher Gesamtbudgets entwerfen (2K/1R gegen1K/2R bei16+2).
+Dabei den erwarteten Gewinn bei unterbrochener Bestaetigung gegen Verlust bestaetigter Erfahrungen unter Konkurrenz bilanzieren.
+Dies waere ausdruecklich ein Speicheraufteilungsvergleich, kein isolierter FIFO-Effekt. Noch keine Umsetzung oder Ausfuehrung dieses Vorschlags.

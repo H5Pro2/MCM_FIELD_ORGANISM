@@ -1,0 +1,130 @@
+{
+  "stable_control": {
+    "first_usable_retained_outcome": 15,
+    "passed": true,
+    "scope": "all subsequent scored positions, not just primary targets",
+    "first_and_warm_losses_included": true
+  },
+  "switch_better_than_both": {
+    "passed": true,
+    "primary_mae": {
+      "E": 0.0625,
+      "K": 0.16666666666666666,
+      "P": 0.3333333333333333
+    }
+  },
+  "adaptation_by_third": {
+    "passed": true,
+    "phases": [
+      {
+        "phase": 1,
+        "cycles": [
+          1,
+          8
+        ],
+        "wanted": "CONTEXT",
+        "targets": [
+          15,
+          23,
+          31,
+          39,
+          47,
+          55,
+          63,
+          71
+        ],
+        "choices": [
+          "PERSISTENCE",
+          "CONTEXT",
+          "CONTEXT",
+          "CONTEXT",
+          "CONTEXT",
+          "CONTEXT",
+          "CONTEXT",
+          "CONTEXT"
+        ],
+        "stable_from_position": 2,
+        "passed": true,
+        "error_sums": {
+          "E": 0.5,
+          "K": 0.0,
+          "P": 4.0
+        }
+      },
+      {
+        "phase": 2,
+        "cycles": [
+          9,
+          16
+        ],
+        "wanted": "PERSISTENCE",
+        "targets": [
+          79,
+          87,
+          95,
+          103,
+          111,
+          119,
+          127,
+          135
+        ],
+        "choices": [
+          "CONTEXT",
+          "PERSISTENCE",
+          "PERSISTENCE",
+          "PERSISTENCE",
+          "PERSISTENCE",
+          "PERSISTENCE",
+          "PERSISTENCE",
+          "PERSISTENCE"
+        ],
+        "stable_from_position": 2,
+        "passed": true,
+        "error_sums": {
+          "E": 0.5,
+          "K": 4.0,
+          "P": 0.0
+        }
+      },
+      {
+        "phase": 3,
+        "cycles": [
+          17,
+          24
+        ],
+        "wanted": "CONTEXT",
+        "targets": [
+          143,
+          151,
+          159,
+          167,
+          175,
+          183,
+          191,
+          199
+        ],
+        "choices": [
+          "PERSISTENCE",
+          "CONTEXT",
+          "CONTEXT",
+          "CONTEXT",
+          "CONTEXT",
+          "CONTEXT",
+          "CONTEXT",
+          "CONTEXT"
+        ],
+        "stable_from_position": 2,
+        "passed": true,
+        "error_sums": {
+          "E": 0.5,
+          "K": 0.0,
+          "P": 4.0
+        }
+      }
+    ]
+  },
+  "context_return": {
+    "passed": true
+  },
+  "status": "CONTROLLED_FUNCTION_CRITERIA_MET"
+}

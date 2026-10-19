@@ -1,0 +1,115 @@
+{
+  "implementation_bindings": {
+    "tools/_s2uc_bounded_audio.py": "d71cab9b5daef66710316084939e6d39d14d16bc32306f41dbd605f3be7c2519",
+    "tools/_s2nj_private_auditory_output_projection.py": "e052cc76cf4c9678e11673d95390dea21634bba8082187567a760faaaf4904e5",
+    "mcm_field_organism/log_spectral_receptor.py": "26a6bd8f2d190db60c75ad29f275b3bd8b09b6d26d4ad54e4396176c4a36d2b0",
+    "mcm_field_organism/broadband_hearing_path.py": "a20456b24c04d099ba5ee2da6250e3d83dc657392603c41d816b13ca68a37fb7"
+  },
+  "python_runtime": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "python_executable_sha256": "7ca24f26d6e3f463419ee4f537ddd3acd312c38fe45e678cce08572f26a8bd1a",
+  "version": "s2uc.known-origin.material.v1",
+  "status": "NEUTRAL_QUALIFICATION_ONLY",
+  "sample_rate": 48000,
+  "samples_per_episode": 19200,
+  "window": 4800,
+  "external_hop": 4800,
+  "profile": "s2nj.auditory.hann48.output-half.v1",
+  "partitions": {
+    "qualification": {
+      "episodes": {
+        "A": {
+          "seed": 510001,
+          "frequencies_hz": [
+            260,
+            620,
+            940,
+            1220
+          ],
+          "root": "qualification/A",
+          "copy_prefix_from": null,
+          "source_stream": "qualification/AC",
+          "source_start_sample": 0
+        },
+        "B": {
+          "seed": 510007,
+          "frequencies_hz": [
+            380,
+            860,
+            1420,
+            1660
+          ],
+          "root": "qualification/B",
+          "copy_prefix_from": null,
+          "source_stream": "qualification/B",
+          "source_start_sample": 0
+        },
+        "C": {
+          "seed": 510013,
+          "frequencies_hz": [
+            540,
+            1180,
+            1580,
+            2020
+          ],
+          "root": "qualification/C",
+          "copy_prefix_from": null,
+          "source_stream": "qualification/AC",
+          "source_start_sample": 19200
+        },
+        "D": {
+          "seed": 510019,
+          "frequencies_hz": [
+            260,
+            620,
+            2180,
+            2540
+          ],
+          "root": "qualification/D",
+          "copy_prefix_from": "A",
+          "source_stream": "qualification/D",
+          "source_start_sample": 0
+        }
+      },
+      "derivatives": {
+        "A_half": {
+          "root": "qualification/A",
+          "base": "A",
+          "operation": "gain_all",
+          "gain": 0.5
+        },
+        "A_noise": {
+          "root": "qualification/A",
+          "base": "A",
+          "operation": "noise",
+          "amplitude": 0.000244140625,
+          "seed": 510031
+        },
+        "A_tailhalf": {
+          "root": "qualification/A",
+          "base": "A",
+          "operation": "gain_window_3",
+          "gain": 0.5
+        }
+      },
+      "cases": {}
+    }
+  },
+  "bounds": {
+    "partitions_per_call": 1,
+    "sequences_per_partition": 7,
+    "pcm_bytes_per_partition": 537600,
+    "pcm_hex_bytes_per_partition": 1075200,
+    "windows_per_partition": 28,
+    "max_outputs_bytes_per_partition": 4194304,
+    "closure_reserve_bytes": 262144
+  },
+  "recipe": {
+    "prng": "xorshift32: x^=(x<<13)&0xffffffff; x^=x>>17; x^=(x<<5)&0xffffffff; mask32 each step; initial nonzero seed",
+    "base": "two phase draws u=x/2**32; phase=2*pi*u; each window frequency f[k], continuous accumulated cycles; y=(sin(2*pi*cycles+phase1)+sin(2*pi*1.5*cycles+phase2))/16; quantize once float32-le",
+    "shared_prefix": "D first9600 samples copied bit-for-bit from same-partition A; D tail from own seeded recipe",
+    "variants": "transform stored float32 A samples in binary64 then round float32 once; noise draws +/-2**-12 by low PRNG bit; never clip; reject nonfinite/outside[-1,1]",
+    "timing": "A then C are distinct scripted episodes in joint AC source timeline; C starts19200; B and D independent scripted episodes; D has explicitly shared prefix ancestry",
+    "comparison": "learn complete4-frame sequences as listed; query first3 frames; evaluate target11 except N4 target19; all other reachable targets learning-only; cold start each case; paired phase from1"
+  },
+  "qualification": "Synthetic controlled identity only; different seeds/recipes do not prove general independence; no natural-world or held-out success claim from known regression material"
+}

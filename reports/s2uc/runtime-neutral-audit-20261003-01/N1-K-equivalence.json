@@ -1,0 +1,12 @@
+{
+  "case": "N1",
+  "arm": "K",
+  "on_off_equal": true,
+  "anchor_equal": null,
+  "semantic_sha256": "d2e33a508f5d1878f7ee860118c38defc96c8b05f71cbe2a270d9a5140aac389",
+  "competing_forecasts": 0,
+  "frames": 80,
+  "reference_advances": 80,
+  "censored_target": 81,
+  "complete_release": true
+}

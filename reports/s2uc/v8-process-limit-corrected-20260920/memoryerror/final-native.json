@@ -1,0 +1,22 @@
+{
+  "target": {
+    "working_set": 51187712,
+    "private_commit": 443125760,
+    "os_peak_working_set": 71114752,
+    "os_peak_private_commit": 463839232
+  },
+  "observer": {
+    "working_set": 19316736,
+    "private_commit": 13549568,
+    "os_peak_working_set": 19546112,
+    "os_peak_private_commit": 13635584
+  },
+  "job": {
+    "ns": 459649097749900,
+    "member": true,
+    "flags": 8448,
+    "limit": 671088640,
+    "peak_process_commit": 463839232,
+    "peak_job_commit": 470417408
+  }
+}

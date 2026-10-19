@@ -1,0 +1,166 @@
+{
+  "corpus_inventory_sha256": "f675ebaffa330ef64a6f1689e0fcd23cba3e76263bcfc6cb23c70e71507f0baa",
+  "targets": [
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21,
+    23,
+    25,
+    27,
+    29,
+    31,
+    33,
+    35,
+    37,
+    39,
+    41,
+    43,
+    45,
+    47,
+    49,
+    51,
+    53,
+    55,
+    57,
+    59,
+    61,
+    63,
+    65,
+    67,
+    69,
+    71,
+    73,
+    75,
+    77,
+    79,
+    81,
+    83,
+    85,
+    87,
+    89,
+    91,
+    93,
+    95,
+    97,
+    99
+  ],
+  "terminal": 101,
+  "frames": 100,
+  "pairs": 50,
+  "seed": "EMPTY",
+  "rules": "UNCHANGED",
+  "runtime": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "files": [
+    {
+      "path": "tests/test_s2uc_nasa_comparison.py",
+      "sha256": "dbe16305467e4ea9099ae2c11d0406f1c751a72c385527234e53b513697f0f9b"
+    },
+    {
+      "path": "tools/_s2tu_retained_trace.py",
+      "sha256": "bf530380f93c8a1bf0eeae5a4169e81bc99aee10050872e3e5ddc7bfdb88f3f6"
+    },
+    {
+      "path": "tools/_s2tw_exact_confirmation.py",
+      "sha256": "90470980a329d0424bec9ba430adbbccaf72bb82145edfefd6e491b6fcec7be9"
+    },
+    {
+      "path": "tools/_s2ub_candidate_confirmation.py",
+      "sha256": "4178198b43fbbefd3cd550307ec114540c2167a3ae066e22bde01f5223f0ca8a"
+    },
+    {
+      "path": "tools/_s2uc_allocation.py",
+      "sha256": "e333866a96d5924672d9e71d1abb67a23e18578babc56f01583e3b17fcbbebd1"
+    },
+    {
+      "path": "tools/_s2uc_continuation_adapter.py",
+      "sha256": "b9d04587f8fd63081515f855f89390d4a584b06ecbd5f101c1dfdbd9157c43cb"
+    },
+    {
+      "path": "tools/_s2uc_factor_hint.py",
+      "sha256": "f1fdd62043d7939cd7b144eae797f84c94ff3196979d1028798d2af546220e19"
+    },
+    {
+      "path": "tools/_s2uc_factor_recency.py",
+      "sha256": "0eba81b522edbb628507d372091829e657ce5ee1bb20f44a0f78e34ef80c06e1"
+    },
+    {
+      "path": "tools/_s2uc_four_arm.py",
+      "sha256": "214805475c8794663026798b95f88f4b6e5cd6455d474a4eb75b1ee2c5e5a16b"
+    },
+    {
+      "path": "tools/_s2uc_pair_context_adapter.py",
+      "sha256": "791b9a60b18426626d5e9761dcb122733ca5f73853a7b6201725fc332d9f3ab1"
+    },
+    {
+      "path": "tools/_s2uc_perception_recency.py",
+      "sha256": "816d0eebfe1815764ddcbcd4b47ccb57584005ca973bde74be7eb2d7ae2ae86c"
+    },
+    {
+      "path": "tools/_s2uc_provisional_hint.py",
+      "sha256": "3fcf1c358548c85ddbec462028a43a96e3ec24a6bffd2948ad87da502f802c8e"
+    },
+    {
+      "path": "tools/_s2uc_record_codec.py",
+      "sha256": "43f5532064b11e130535c47afe50a48be418255a054e694253c412c6783ad70f"
+    },
+    {
+      "path": "tools/_s2uc_two_candidates.py",
+      "sha256": "e75da4a1e63ff1b844f8b9e8de62922cea4fa5f549f6b8b37d7a2774f291995e"
+    },
+    {
+      "path": "tools/s2uc_allocation_check.py",
+      "sha256": "9b403df9d6f2a2f4186c78e1d74e2298f023f8b0a420860995112333398bd4e8"
+    },
+    {
+      "path": "tools/s2uc_b2v_check.py",
+      "sha256": "446e999e309d807acf3ac0e50e7778b8ab43ad4ea8e6032d65b81f8a71eaa593"
+    },
+    {
+      "path": "tools/s2uc_context_prediction_check.py",
+      "sha256": "79a4c8d3fa547556077da3c7161e1bfce16b6ee02a06238c4aa322ced461c5db"
+    },
+    {
+      "path": "tools/s2uc_continuous_comparison.py",
+      "sha256": "1e864341ce77fea1a17bc754080bf2d6f6cc5fa2f502569dcc311d888ef3ee50"
+    },
+    {
+      "path": "tools/s2uc_factor_hint_check.py",
+      "sha256": "f765ba126a9c9d8a9de80c42865a09428628fbe048dab7532bd71f94284649ec"
+    },
+    {
+      "path": "tools/s2uc_factor_recency_check.py",
+      "sha256": "1abab1a41cd2d1e6f5841524cb67abfaf536de1f3644e0c3251b2772fdbf3ab3"
+    },
+    {
+      "path": "tools/s2uc_four_arm_check.py",
+      "sha256": "ba0566f18f54790b5d9e57deb1e067eb38a6b21f2fcb4dc5d4521a7e6c2afc67"
+    },
+    {
+      "path": "tools/s2uc_k2_check.py",
+      "sha256": "5773fca13edac4b2a82201167d31d640b465f11cd1b6538173f2ab49de550c1d"
+    },
+    {
+      "path": "tools/s2uc_nasa_comparison.py",
+      "sha256": "b08d7adaaca5b48beca17cede326ac4a1a7f556041fefc06c1e0155e44f4d24f"
+    },
+    {
+      "path": "tools/s2uc_pair_context_check.py",
+      "sha256": "751784fed0b8a30dbe4a20b3ba5701dee8c3a3cad7b9b3cd705f80cc68245c8f"
+    },
+    {
+      "path": "tools/s2uc_pcm_half_check.py",
+      "sha256": "2c3b8649b9b65d466b4c7a92a655c4c93e90c89d974891d47c477dae627eefa0"
+    },
+    {
+      "path": "tools/s2uc_pcm_temporal_check.py",
+      "sha256": "f975af4fac222ac6c3c005351c76d872ba26ec6fd538129c7bd3b02d78298ea5"
+    }
+  ]
+}

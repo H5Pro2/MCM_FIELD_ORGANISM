@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "plan_sha256": "40410b187f813cb546e44cca01ac353f85bdc70d4b29e5b0fc057ac3f6feb5fd",
+  "all_code_test_bindings_verified": true,
+  "previous_core_bindings_unchanged": true,
+  "AR_DEV_unproduced": true,
+  "AR_EVAL_unproduced": true,
+  "parameter_search_not_run": true,
+  "selected_epsilon": null,
+  "selected_tau": null
+}

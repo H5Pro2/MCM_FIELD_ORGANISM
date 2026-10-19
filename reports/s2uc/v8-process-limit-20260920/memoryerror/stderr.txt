@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\reports\s2uc\v8-process-limit-20260920\limit.py", line 199, in <module>
+    if mode=='child': child(load(Path(sys.argv[2])))
+                      ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\reports\s2uc\v8-process-limit-20260920\limit.py", line 77, in child
+    from tools import _s2uc_execution_v8 as e
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_execution_v8.py", line 9, in <module>
+    from tools import _s2uc_source_adapter as adapter
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_source_adapter.py", line 4, in <module>
+    from tools import _s2ty_audio_materialization as ty
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ty_audio_materialization.py", line 7, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'

@@ -1,0 +1,18 @@
+{
+  "status": "PENDING_SEPARATE_AUTHORIZATION",
+  "action": "RUN_PROMOTION_SWL_ONCE",
+  "plan_sha256": "f889c062ea1177ceef66a3d7e68425ba2bf205fbcc24320728a42380d4a3e9e6",
+  "binding_sha256": "c6491dd5d494f315338c263eb90c4f2c9d8ec4f495bfb1917a1662684b03ab91",
+  "stories": [
+    "S",
+    "W",
+    "L"
+  ],
+  "arms": [
+    "M",
+    "E",
+    "K",
+    "P"
+  ],
+  "output": "reports/s2uc/promotion-counterprobe-20261003-01"
+}

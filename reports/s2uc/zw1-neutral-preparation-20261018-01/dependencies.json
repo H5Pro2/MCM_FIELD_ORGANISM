@@ -1,0 +1,27 @@
+{
+  "files": {
+    "experiments/zw1/integration.py": "5f5136f6fd93bcaefc610649eeb643a650fe08eaf7a1d73a749a7a8b2cfa9ba7",
+    "experiments/zw1/matrix.py": "845c4a14da2f0b294d3c068e3a253832fdc1af147368ba8cca3f0ca30ec693e3",
+    "experiments/zw1/MATRIX_RECIPE.md": "bc4cc1bf0f2ea451da18060eea4548e8b1386d3a5a2e27c63a831fc661030ba6",
+    "experiments/zw1/qualify.py": "f254d73aa5efe386b937279a45c2414205d0f3f96608678d995466283e739765",
+    "experiments/zw1/sources.py": "4895188632aee8746c746c9567934eeed48b5cade76dd6e8f27d0c438736f528",
+    "experiments/zw1/statistics.py": "28bcad562304cfff7bc49b40738a6ec42a920dc28e79348b79aaba604c38bfcf",
+    "experiments/zw1/test_package.py": "c684b7996472675a7634516a540d458cf89077ff45f0c4c5b13754eb07549c03",
+    "docs/S2UC_ZW1_ZEITLICHE_WIEDERKEHR_KONZEPTVERTRAG_20261018.md": "dc3ef2762c5ec4f1cad7e5c183f6ce45d879f00943a0c2d13fdded94823557fc",
+    "reports/s2uc/er1-v2-preparation-20261018-01/prestart.json": "0d67e76c14afa1e74a19dd7190857e68a19062abd26fd2af484c85b761a8f2b7",
+    "reports/s2uc/er1-v2-comparison-16h-01/delivery-closure.json": "fc0633293f9c5d92e45e69cca9d1959c546d2252abce2c1daa8c76da90ed4bbd",
+    "reports/s2uc/er1-v2-witness-audit-20261018-03/delivery-manifest.json": "71eb768ffc30ee15144df276c0f105a4f875bc19a7ec86b8a54e580f36314392"
+  },
+  "runtime": {
+    "executable": "C:\\Python314\\python.exe",
+    "executable_sha256": "7ca24f26d6e3f463419ee4f537ddd3acd312c38fe45e678cce08572f26a8bd1a",
+    "version": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "architecture": "AMD64",
+    "dlls": {
+      "python3.dll": "1dd696f02326e32e67b52c25b249b3acce3238176212d16e8fb1a050a1455ae9",
+      "python314.dll": "a07f7d09c3121492bb066535c6d0811df5fbc2090cbca7031a97bb47ce1480c9"
+    }
+  },
+  "scope": "neutral implementation acceptance, not research prestart"
+}

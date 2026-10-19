@@ -1,0 +1,132 @@
+FW1 – begrenzte Forschungsvorbereitung, 2026-10-18
+Auftrag 78f0955c-59d2-4444-9d74-08f9d078b620
+
+Ergebnis: Vorbereitung technisch abgeschlossen, Forschungsstart nicht freigegeben.
+Forschungsberechtigung, Forschungsquellen und Forschungsausführungen: jeweils null.
+
+Forschungseinstieg
+Separates Paket experiments/fw1_prepare; das abgenommene experiments/fw1 bleibt
+unverändert. entry.py prüft den festen Konfigurationspfad, SHA-Siegel, vollständige
+Codeabdeckung, Qualifikationsdateien, Matrix, Python-Laufzeit und feste Ressourcen.
+Der spätere exklusive Zielpfad ist reports/s2uc/fw1-comparison-16h-01.
+Er existiert noch nicht. Eine passende FW1_RESEARCH_ONCE-Berechtigung muss den
+exakten Vorstart-SHA, Zielpfad und allow_research=true enthalten; sie wurde nicht
+angelegt. Der Einstieg stellt selbst keine Forschungsberechtigung aus.
+Vorhandenes Ziel oder Verbrauchsmarker sperren jeden erneuten Start. Terminal-
+reserve wird vor Verbrauch und Workerstart angelegt. Ein Schreibfehler zwischen
+Verbrauch und START-Eintrag erhält die erste Ursache im reservierten Terminal;
+ein verbrauchter Start wird nicht repariert oder wiederholt.
+
+Erst ein zugelassener Worker darf einen Forschungs-Quellenpermit erhalten.
+Neutrale Berechtigungen können diesen Permit ausdrücklich nicht erzeugen.
+Der Forschungsworker erzeugt dann 16 vollständige Quellenpaare aus dem festen
+Namensraum MCM-FW1/source/v1, rekonstruiert sie unabhängig und versiegelt alle
+32 Bedingungen vor dem ersten Arm. Manifest und Quellenhashes werden vor jeder
+Bedingung und jedem Arm geprüft. Keine On-demand-Quelle und keine Quellenauswahl.
+Seriell A/KEEP, A/RESET, B/KEEP, B/RESET; Paarquittung nach vier frischen Armen,
+beiden unabhängigen Archivprüfungen, Bestandsidentität und Cleanup. Insgesamt später
+64 Policy-, 64 Live- und 64 Archivreferenzarme, keine zusätzlichen Messarme.
+Alle Startzähler werden dauerhaft vor der jeweiligen Ausführung geschrieben.
+
+Matrix und vollständige Statistik
+Einmal erzeugt: 10000 x 16 Bytes, 160000 Bytes insgesamt.
+SHA256: b190d29c63d8650d53875226802a6aaa3218b557e00fb8ef65a046a4ab8c8878
+Rezept MCM-FW1/bootstrap/v1 mit row/column gemäß Vertrag. Unabhängige zweite
+Berechnung prüfte sämtliche Bytes; keine zweite Matrixdatei und keine Auswahl.
+Die gebundene Matrix wurde genau einmal mit 16 künstlichen Paaren, jeweils A/B
+und KEEP/RESET mit 511 Fehlerwerten, durch die vollständige Primärstatistik und
+die unabhängige Gegenrechnung verarbeitet. Mittel, Paarwerte, Intervall,
+Informativität und Entscheidungszweig stimmen überein. Dies sind künstliche
+Prüfdaten und kein wissenschaftlicher FW1-Befund.
+Belege: matrix-binding.json, artificial-errors.json, artificial-statistics.json.
+
+Einmaliges neutrales Vollgrößenpaar
+Fest vorgegeben r=1, MCM-FW1/neutral/v1, A/B je 1024 Frames. Genau ein Start,
+vier Policy-Arme, vier begleitende Live- und vier unabhängige Archivreferenzen.
+Keine Wiederholung oder Ersatzquelle. Quellen und Testkonfiguration wurden vor
+Start vollständig gebunden; Vollgrößen-Konfigurations-SHA:
+2247c2b2f15de3b404063e8883e7e7ba900801716a7976ef137cd6b4be371e11
+Quelle A: 3659458916675ed3f69f4e495eac01a3488027b62c92db71220737c4e9b9dc71
+Quelle B: b7b0999a4cd267801a52e54a2662e28c8efe7e55a147cba60e66bddcd8afe9b0
+
+TERMINAL_COMPLETE, ein vollständiges Paar quittiert, alle vier Arme geschlossen,
+beide Archive unabhängig bestätigt, Bestandsidentität und Dateicleanup bestätigt.
+Je Bedingung 511 vollständige Zielpositionen; Schlussziel 1025 bleibt zensiert.
+Laufzeit 144.0629413 s; Windows-Jobpeak 83046400 Bytes (79.20 MiB), Prozesspeak
+61353984 Bytes. Harter gemeinsamer 512-MiB-Job, Supervisor plus ein Worker,
+einschließlich Referenzarbeit und Abschluss. Keine statistische Auswertung oder
+Forschungsentscheidung aus dem Vollgrößenpaar.
+Belege: reports/s2uc/fw1-neutral-fullsize-20261018-01, insbesondere terminal.json,
+pair-01-receipt.json, beide case-*-summary.json und closure.json.
+
+Neue Sperrprüfungen und kurze Integration
+G01 PASS: vollständige kurze Konfiguration, Quellenbindung und neutrale Berechtigung.
+G02 PASS: falscher Berechtigungstyp, boolescher Wert, SHA, Ziel und Zusatzfeld abgewiesen.
+G03 PASS: Code-, Laufzeit-, Matrix- und Quellenabweichungen abgewiesen.
+G04 PASS: fehlende Berechtigung verhindert Zielanlage und Workerstart.
+G05 PASS: bestehendes Ziel und Verbrauchsmarker verhindern erneuten Start.
+G06 PASS: Forschungsquellen ohne gültigen Permit gesperrt; echte Berechtigung fehlt.
+G07 PASS: Messengine und Archivsemantik entsprechen dem qualifizierten FW1-Kern;
+          nur Importpfade, Versionskennung und zugelassene Rahmengröße erweitert.
+G08 PASS: neutrale Zulassung kann keinen Forschungs-Quellenpermit erzeugen.
+G09 PASS: injizierter START-Schreibfehler bewahrt Terminaldiagnose und Verbrauch;
+          kein Worker und kein Policy-Arm gestartet.
+
+Ein kurzer tatsächlicher Einstieg: vier Arme à 96 Frames, je vier bestandene
+Live-/Archivreferenzen, COMPLETE/Cleanup. Damit vier von zusätzlich höchstens
+16 kurzen Armen verbraucht. Laufzeit 14.4084036 s; Jobpeak 60858368 Bytes.
+Nach beiden tatsächlichen Neutralstarts wurde der jeweilige Verbrauchsschutz
+nochmals aufgerufen und vor jeder neuen Ausführung abgewiesen: AUTH_CONSUMED.
+Die endgültige Forschungsbindung wurde vollständig geprüft und ein Start ohne
+Forschungsberechtigung vor jeder Zielanlage abgewiesen: MISSING_RESEARCH_AUTH.
+Kein fehlgeschlagener Policy-/Referenzlauf; kontrollierte Gate-/Schreibfehler sind
+Teil der neuen technischen Prüfungen. Neue Unit-Prozesspeaks wurden diesmal unter
+hartem Joblimit erfasst; die historischen fehlenden Messungen bleiben unergänzt.
+
+Nachträgliche eng begrenzte Einstiegskorrekturen
+Nach dem erfolgreichen Vollgrößenpaar wurden ausschließlich zwei Zulassungslücken
+geschlossen: ausdrückliche Forschungsmodusprüfung bei Quellenpermit-Vergabe und
+Terminaldiagnose bei Fehler vor Workerstart. G08/G09 prüfen diese Änderungen ohne
+Policy-Arme. Die beim kurzen und Vollgrößenlauf verwendeten entry.py/sources.py
+sind unter qualified-code erhalten; qualification-lineage.json bindet Alt-/Neu-SHA
+und exakten Diff. Messengine, Reset, Referenzen, Archivpfad, Statistik und
+Quellenmathematik blieben dabei unverändert. Kein Vollgrößen-Replay.
+
+Ressourcen und Grenzen
+Maximal beim Vollgrößenpaar: Zusatzheap 5526 Bytes, Receipt 786 Bytes, UTF8 1572,
+Bank 416, 15 beobachtete Originalframes, zwei Ausgabeslots. Dictionary 662913,
+encoded 702493, gzip 116496, Record 13525 Bytes; 10337 Nodes, 89376 Edges,
+8190 Indizes, acht Collections. Run-Dateien: Quellen 14878, Archive 228252,
+Administration 57207, Closure 18433 Bytes; keine verbliebenen Temporärdateien.
+Alle gemessenen Grenzen eingehalten. Matrix/Statistik-Jobpeak 17764352 Bytes.
+Details und weitere Testprozesspeaks: resource-verification.json sowie
+*-preparation-resource.json, gate-tests.json und revision-tests.json.
+Ein bestandenes neutrales Paar garantiert keine Ressourcenverträglichkeit jeder
+Forschungsquelle. Die bisherigen harten Grenzen gelten unverändert im Einstieg.
+Keine Anhebung, keine ausgelassene Referenzprüfung, kein Retry/Resume/Ersatzlauf.
+
+Ausführungsbilanz
+4 Vollgrößen-Policyarme + 4 kurze Policyarme; 8 Live- und 8 Archivreferenzen,
+alle vollständig. 2 neutrale Paarerzeugungen und 2 unabhängige Paarrekonstruktionen,
+4 Bedingungsmaterialprüfungen. 1 Matrixerzeugung, 1 unabhängige Rezeptprüfung,
+1 vollständige künstliche Statistik und 1 unabhängige Statistikreferenz.
+9 neue Unitprüfungen bestanden, 2 reale Verbrauchsabweisungen und 1 abschließende
+Abweisung fehlender Forschungsberechtigung. 0 alte Auditreplays, 0 Forschungsarme.
+Dauerhafte Bilanz ab Beginn: execution-ledger.jsonl und execution-balance.json;
+Policy-/Referenzanfänge zusätzlich im jeweiligen reservierten Terminal.
+
+Bindung, Erhaltung und nächster Schritt
+Vorstart-SHA256: e61664694a43c40adc1b74f8c680383e61c8e04b33ba98ecf61cbe056035bc99
+2996 Code-/Vertragsdateien und 197 Qualifikationsdateien gebunden. Laufzeitbindung:
+Python-Executable, Version, Plattform/Architektur und Python-DLL-Hashes; projektinterne
+Abhängigkeiten vollständig durch die Codebindung erfasst. Kein externer KI-Dienst.
+Der genaue spätere Aufruf steht in START_CALL.txt und prestart.json.
+Historische FW1-Lieferung mit 138 Dateien bestätigt; frühere Übersichtsstände sind
+unter historical-overviews bytegenau gesichert. Historische Nachweisgrenzen bleiben:
+drei fehlende Cleanup-Ledgerzeilen und ungemessene damalige Unit-Prozesspeaks.
+Keine unveränderte historische Prüfung wiederholt.
+
+Die Vorbereitung endet hier. Projektleiter prüft die gebundene Lieferung und
+entscheidet separat über eine SHA-gebundene Einmallauffreigabe. Erst danach darf
+der gebundene Einstieg die Forschungsquellen erzeugen und den Forschungsversuch
+beginnen. Bis dahin bleiben authorization.json und Forschungsziel abwesend.

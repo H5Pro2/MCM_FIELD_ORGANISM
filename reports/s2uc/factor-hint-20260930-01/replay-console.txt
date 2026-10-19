@@ -1,0 +1,2 @@
+E cases 12 factor checks 0
+F cases 12 factor checks 288

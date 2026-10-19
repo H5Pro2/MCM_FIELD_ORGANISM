@@ -1,0 +1,60 @@
+{
+  "constant": {
+    "primary": {
+      "K": [
+        {
+          "target": 15,
+          "E": 0.5,
+          "baseline": 0.0,
+          "mae_increase": 0.5
+        }
+      ]
+    },
+    "secondary": {
+      "K": [
+        {
+          "target": 7,
+          "E": 0.5,
+          "baseline": 0.0,
+          "mae_increase": 0.5
+        }
+      ]
+    }
+  },
+  "switch_return": {
+    "primary": {
+      "K": [
+        {
+          "target": 15,
+          "E": 0.5,
+          "baseline": 0.0,
+          "mae_increase": 0.5
+        },
+        {
+          "target": 143,
+          "E": 0.5,
+          "baseline": 0.0,
+          "mae_increase": 0.5
+        }
+      ],
+      "P": [
+        {
+          "target": 79,
+          "E": 0.5,
+          "baseline": 0.0,
+          "mae_increase": 0.5
+        }
+      ]
+    },
+    "secondary": {
+      "K": [
+        {
+          "target": 7,
+          "E": 0.5,
+          "baseline": 0.0,
+          "mae_increase": 0.5
+        }
+      ]
+    }
+  }
+}

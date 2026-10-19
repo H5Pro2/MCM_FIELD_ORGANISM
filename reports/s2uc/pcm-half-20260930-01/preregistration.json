@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-09-30T14:39:36.480214+00:00",
+  "source": "sources/s2ob/caller-av-basic/window.pcm",
+  "expected_sha256": "f1080644e18dac7583d73cd300f9b0dda45ad123c96ba66f4740a5a17a1e6df4",
+  "bytes": 19200,
+  "pcm": "4800 mono little-endian float32 at48000Hz",
+  "derivation": "decode stored float32 values; multiply by0.5; repack little-endian float32; no signal generator",
+  "preconditions": [
+    "bound hash and length",
+    "finite samples within[-1,1]",
+    "no half overflow/underflow or new subnormal values",
+    "doubling packed half restores all original float32 bits"
+  ],
+  "config": {
+    "sample_rate": 48000,
+    "window_size": 4800,
+    "hop_size": 480,
+    "min_frequency": 50.0,
+    "max_frequency": 18000.0,
+    "band_count": 48
+  },
+  "processing": "fresh LogSpectralReceptor per input; analyze full4800 window, raw snapshot0 start0 end4800; project_auditory_half_v1 with RAW_PROFILE_DIGEST",
+  "comparison": "all48 raw/NJ bands: actual half-input output versus original output*0.5; numerical equality, bits, absolute and ULP distance separately; no threshold",
+  "hypothesis": "exact factor may hold; mismatches are valid scientific results, not failed acceptance",
+  "memory": "each arm exact-confirms repetitive original NJ vector x4 twice, distinct ordinals; half-input NJ vector repeated twice as hint, two identical queries; no state change",
+  "expected_conditional": "if all48 values satisfy exact half and original vector nonzero: E no match, F retained origin at offsets0,1,2 factor0.5 => ambiguous, not unique recall",
+  "limits": "memory16+2; PCM/receptor/observer overhead separate; no generic PCM invariance claim",
+  "bindings": {
+    "sources/s2ob/caller-av-basic/window.pcm": "f1080644e18dac7583d73cd300f9b0dda45ad123c96ba66f4740a5a17a1e6df4",
+    "mcm_field_organism/log_spectral_receptor.py": "26a6bd8f2d190db60c75ad29f275b3bd8b09b6d26d4ad54e4396176c4a36d2b0",
+    "mcm_field_organism/broadband_hearing_path.py": "a20456b24c04d099ba5ee2da6250e3d83dc657392603c41d816b13ca68a37fb7",
+    "tools/_s2nj_private_auditory_output_projection.py": "e052cc76cf4c9678e11673d95390dea21634bba8082187567a760faaaf4904e5",
+    "tools/_s2uc_provisional_hint.py": "3fcf1c358548c85ddbec462028a43a96e3ec24a6bffd2948ad87da502f802c8e",
+    "tools/_s2uc_factor_hint.py": "f1fdd62043d7939cd7b144eae797f84c94ff3196979d1028798d2af546220e19",
+    "tools/_s2uc_four_arm.py": "214805475c8794663026798b95f88f4b6e5cd6455d474a4eb75b1ee2c5e5a16b"
+  }
+}

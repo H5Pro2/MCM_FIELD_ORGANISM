@@ -1,0 +1,190 @@
+{
+  "success": {
+    "version": "s2uc.resource-ledger.v8",
+    "contract_id": "s2uc.resources.separate-code-artifacts.v8",
+    "kind": "reservation",
+    "phase": "success",
+    "limits": {
+      "code": 720896,
+      "metadata": 65536,
+      "static_shared": 196608,
+      "shared": 262144,
+      "record": 262144,
+      "verification": 262144,
+      "error": 16384,
+      "terminal": 16384,
+      "minimal": 16384,
+      "staging": 245760,
+      "total": 4194304
+    },
+    "reserves": {
+      "record": 245760,
+      "verification": 131072
+    },
+    "reserved": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26866,
+        "static_shared": 96872,
+        "record": 245760,
+        "verification": 131072,
+        "error": 0,
+        "terminal": 16384,
+        "minimal": 0,
+        "staging": 245760
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26866,
+        "record": 245760,
+        "verification": 131072,
+        "staging": 245760,
+        "shared": 113256
+      },
+      "total_bytes": 1461767,
+      "violations": [],
+      "within_limits": true
+    }
+  },
+  "failure_before_publication": {
+    "version": "s2uc.resource-ledger.v8",
+    "contract_id": "s2uc.resources.separate-code-artifacts.v8",
+    "kind": "reservation",
+    "phase": "failure_before_publication",
+    "limits": {
+      "code": 720896,
+      "metadata": 65536,
+      "static_shared": 196608,
+      "shared": 262144,
+      "record": 262144,
+      "verification": 262144,
+      "error": 16384,
+      "terminal": 16384,
+      "minimal": 16384,
+      "staging": 245760,
+      "total": 4194304
+    },
+    "reserves": {
+      "record": 245760,
+      "verification": 131072
+    },
+    "reserved": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26866,
+        "static_shared": 96872,
+        "record": 0,
+        "verification": 0,
+        "error": 16384,
+        "terminal": 16384,
+        "minimal": 0,
+        "staging": 245760
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26866,
+        "record": 0,
+        "verification": 0,
+        "staging": 245760,
+        "shared": 129640
+      },
+      "total_bytes": 1101319,
+      "violations": [],
+      "within_limits": true
+    }
+  },
+  "failure_after_publication": {
+    "version": "s2uc.resource-ledger.v8",
+    "contract_id": "s2uc.resources.separate-code-artifacts.v8",
+    "kind": "reservation",
+    "phase": "failure_after_publication",
+    "limits": {
+      "code": 720896,
+      "metadata": 65536,
+      "static_shared": 196608,
+      "shared": 262144,
+      "record": 262144,
+      "verification": 262144,
+      "error": 16384,
+      "terminal": 16384,
+      "minimal": 16384,
+      "staging": 245760,
+      "total": 4194304
+    },
+    "reserves": {
+      "record": 245760,
+      "verification": 131072
+    },
+    "reserved": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26866,
+        "static_shared": 96872,
+        "record": 245760,
+        "verification": 131072,
+        "error": 16384,
+        "terminal": 16384,
+        "minimal": 0,
+        "staging": 245760
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26866,
+        "record": 245760,
+        "verification": 131072,
+        "staging": 245760,
+        "shared": 129640
+      },
+      "total_bytes": 1478151,
+      "violations": [],
+      "within_limits": true
+    }
+  },
+  "minimal_with_terminal": {
+    "version": "s2uc.resource-ledger.v8",
+    "contract_id": "s2uc.resources.separate-code-artifacts.v8",
+    "kind": "reservation",
+    "phase": "failure_after_publication",
+    "limits": {
+      "code": 720896,
+      "metadata": 65536,
+      "static_shared": 196608,
+      "shared": 262144,
+      "record": 262144,
+      "verification": 262144,
+      "error": 16384,
+      "terminal": 16384,
+      "minimal": 16384,
+      "staging": 245760,
+      "total": 4194304
+    },
+    "reserves": {
+      "record": 245760,
+      "verification": 131072
+    },
+    "reserved": {
+      "categories": {
+        "code": 699053,
+        "metadata": 26866,
+        "static_shared": 96872,
+        "record": 245760,
+        "verification": 131072,
+        "error": 16384,
+        "terminal": 16384,
+        "minimal": 16384,
+        "staging": 245760
+      },
+      "main_accounts": {
+        "code": 699053,
+        "metadata": 26866,
+        "record": 245760,
+        "verification": 131072,
+        "staging": 245760,
+        "shared": 146024
+      },
+      "total_bytes": 1494535,
+      "violations": [],
+      "within_limits": true
+    }
+  }
+}

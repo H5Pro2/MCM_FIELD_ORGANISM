@@ -1,0 +1,109 @@
+test_codec_failure_closes_owners_and_gate (tests.test_s2uc_source_execution.SourceExecutionTests.test_codec_failure_closes_owners_and_gate) ... ok
+test_failure_58_retains_57_and_primary (tests.test_s2uc_source_execution.SourceExecutionTests.test_failure_58_retains_57_and_primary) ... ok
+test_fixed_sources_targets_profiles_and_order (tests.test_s2uc_source_execution.SourceExecutionTests.test_fixed_sources_targets_profiles_and_order) ... ERROR
+test_inventory_complete_tools_and_limits_unchanged (tests.test_s2uc_source_execution.SourceExecutionTests.test_inventory_complete_tools_and_limits_unchanged) ... ok
+test_neutral_binder_rejects_resealed_real_manifest_and_stale_inventory (tests.test_s2uc_source_execution.SourceExecutionTests.test_neutral_binder_rejects_resealed_real_manifest_and_stale_inventory) ... ok
+test_neutral_binding_rejects_real_null_legacy_and_missing_authorization (tests.test_s2uc_source_execution.SourceExecutionTests.test_neutral_binding_rejects_real_null_legacy_and_missing_authorization) ... ok
+test_nonzero_58_receipts_five_vectors_same_arm_values (tests.test_s2uc_source_execution.SourceExecutionTests.test_nonzero_58_receipts_five_vectors_same_arm_values) ... ok
+test_nonzero_codec_vectors_flags_and_boundary (tests.test_s2uc_source_execution.SourceExecutionTests.test_nonzero_codec_vectors_flags_and_boundary) ... ok
+test_payload_hash_mismatch_before_receptor (tests.test_s2uc_source_execution.SourceExecutionTests.test_payload_hash_mismatch_before_receptor) ... ok
+test_prepared_supplier_is_lazy_fixed_five_uncached_no_copy (tests.test_s2uc_source_execution.SourceExecutionTests.test_prepared_supplier_is_lazy_fixed_five_uncached_no_copy) ... ERROR
+test_public_real_entry_unconditionally_closed (tests.test_s2uc_source_execution.SourceExecutionTests.test_public_real_entry_unconditionally_closed) ... ERROR
+test_qualification_fixture_and_mutations_never_authorize (tests.test_s2uc_source_execution.SourceExecutionTests.test_qualification_fixture_and_mutations_never_authorize) ... ok
+test_limited_memoryerror_58_is_not_evaluable (tests.test_s2uc_source_process_guard.SourceProcessTests.test_limited_memoryerror_58_is_not_evaluable) ... ok
+test_limited_nonzero_success_before_imports (tests.test_s2uc_source_process_guard.SourceProcessTests.test_limited_nonzero_success_before_imports) ... ok
+test_missing_or_false_admission_stops_before_imports (tests.test_s2uc_source_process_guard.SourceProcessTests.test_missing_or_false_admission_stops_before_imports) ... ok
+test_missing_parent_or_child_inventory_prevents_process (tests.test_s2uc_source_process_guard.SourceProcessTests.test_missing_parent_or_child_inventory_prevents_process) ... ok
+test_public_cli_has_no_real_mode (tests.test_s2uc_source_process_guard.SourceProcessTests.test_public_cli_has_no_real_mode) ... ok
+
+======================================================================
+ERROR: test_fixed_sources_targets_profiles_and_order (tests.test_s2uc_source_execution.SourceExecutionTests.test_fixed_sources_targets_profiles_and_order)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_source_execution.py", line 87, in test_fixed_sources_targets_profiles_and_order
+    value = context.source_context()
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_source_context_v9.py", line 23, in source_context
+    return json.loads(science.canonical({
+                      ~~~~~~~~~~~~~~~~~^^
+        "version": "s2uc.source-context.v9", "scope": "STRUCTURE_ONLY_NO_AUTHORIZATION",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        "targets": run_binding.TARGETS, "expectations": evaluation.EXPECTED,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        "candidate_gain_loss_status": "NOT_MEASURED", "real_execution_authorized": False}))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_source_binding.py", line 28, in canonical
+    return json.dumps(value, allow_nan=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+TypeError: keys must be str, int, float, bool or None, not tuple
+when serializing dict item 'expectations'
+
+======================================================================
+ERROR: test_prepared_supplier_is_lazy_fixed_five_uncached_no_copy (tests.test_s2uc_source_execution.SourceExecutionTests.test_prepared_supplier_is_lazy_fixed_five_uncached_no_copy)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_source_execution.py", line 115, in test_prepared_supplier_is_lazy_fixed_five_uncached_no_copy
+    value = context.source_context()
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_source_context_v9.py", line 23, in source_context
+    return json.loads(science.canonical({
+                      ~~~~~~~~~~~~~~~~~^^
+        "version": "s2uc.source-context.v9", "scope": "STRUCTURE_ONLY_NO_AUTHORIZATION",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        "targets": run_binding.TARGETS, "expectations": evaluation.EXPECTED,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        "candidate_gain_loss_status": "NOT_MEASURED", "real_execution_authorized": False}))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_source_binding.py", line 28, in canonical
+    return json.dumps(value, allow_nan=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+TypeError: keys must be str, int, float, bool or None, not tuple
+when serializing dict item 'expectations'
+
+======================================================================
+ERROR: test_public_real_entry_unconditionally_closed (tests.test_s2uc_source_execution.SourceExecutionTests.test_public_real_entry_unconditionally_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2uc_source_execution.py", line 106, in test_public_real_entry_unconditionally_closed
+    value = context.source_context()
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_source_context_v9.py", line 23, in source_context
+    return json.loads(science.canonical({
+                      ~~~~~~~~~~~~~~~~~^^
+        "version": "s2uc.source-context.v9", "scope": "STRUCTURE_ONLY_NO_AUTHORIZATION",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        "targets": run_binding.TARGETS, "expectations": evaluation.EXPECTED,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        "candidate_gain_loss_status": "NOT_MEASURED", "real_execution_authorized": False}))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2uc_source_binding.py", line 28, in canonical
+    return json.dumps(value, allow_nan=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+TypeError: keys must be str, int, float, bool or None, not tuple
+when serializing dict item 'expectations'
+
+----------------------------------------------------------------------
+Ran 17 tests in 247.077s
+
+FAILED (errors=3)

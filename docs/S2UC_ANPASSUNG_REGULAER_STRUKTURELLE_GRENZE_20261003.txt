@@ -1,0 +1,174 @@
+MCM-KI -- Anpassung nach Erwartungsfehler unter regulaerer Aufnahme
+2026-10-03 | STATISCHE CODEPRUEFUNG UND KONZEPT | KEIN LAUF
+
+1. Abnahmeergebnis
+
+STRUKTURELLE_GRENZE fuer den unten festgelegten reinen Wechsel-/Rueckkehrfall.
+Der bestehende Pfad kann den ersten Widerspruch bewerten, sperrt danach aber
+bei konkurrierenden passenden Spuren sowohl Kontextwahl als auch weitere
+Fehleraktualisierung. Ein ausfuehrbarer Anpassungsnachweis mit unveraenderten
+Mechanismen wird deshalb nicht zur Ausfuehrung empfohlen. Dies ist kein
+allgemeiner Unmoeglichkeitsbeweis fuer beliebige Wahrnehmungsfolgen.
+
+S/W/L ist als begrenzter Stabilitaetsvorteil mit Wechselschaden abgenommen.
+Die fehlende Information vor dem ersten Unterschied ist geklaert; hierzu
+keine weitere Untersuchung. EMA und Mitnahme bleiben default disabled.
+Heute nur bestehende Dateien gelesen und dieses Konzept dokumentiert:
+keine Materialerzeugung, Simulation, Tests, Implementierung oder Ausfuehrung.
+
+2. Genau eine festgelegte synthetische Folge
+
+V(x) bezeichnet 48 identische binary64-Komponenten float(x).
+X = [V(3/16),V(5/16),V(13/16),V(15/16)].
+Y = [V(3/16),V(5/16),V(5/16),V(15/16)].
+Folge: X,X,X,X,Y,Y,Y,Y,X,X,X,X. Insgesamt 48 Positionen.
+Stabil 1..16, Wechsel 17..32, Rueckkehr 33..48. Diese Begriffe und
+Blockbuchstaben sind nur Beobachterbeschreibung, niemals Systemeingang.
+Ein Scope, start_sample=0, first_ordinal=1, hop=window=4800; kontinuierliche
+regulaere Aufnahme aller Positionen. Keine Schutzfolge, Zusatzspur,
+Fehlerzellinjektion, Zwischenresets oder ausgelassene Aufnahme.
+exact_v1, legacy_v1, mae48 und EMA-alpha=1/2 bleiben unveraendert.
+Die Folge ist ein offengelegter Entwicklungskontrast, keine Evaluation.
+
+3. Statische Ableitung aus dem vorhandenen Code
+
+a) tools/_s2uc_factor_recency.py bindet FactorHintArm.hint unveraendert ein.
+tools/_s2uc_factor_hint.py:hint scannt retained UND candidate, jeweils
+Offsets 0..2 und Faktoren 1/2,1,2. Es gibt keine Vorrangwahl nach Aktualitaet.
+Fuer den Hinweis (3/16,5/16) passen X und Y jeweils exakt an Offset0 mit
+Faktor1. Andere Offsets dieser zwei Bloecke liefern keinen solchen Treffer.
+
+b) tools/_s2uc_four_arm.py:CandidateTwoArm.close_segment bestaetigt volle
+gleiche retained-Spuren zuerst. Ein anderer voller Block wird Kandidat;
+seine Wiederholung promoviert ihn. Verdrangung erfolgt erst bei Promotion
+in bereits zwei retained-Slots. tools/_s2uc_perception_recency.py aktualisiert
+bei Bestaetigung Reihenfolge/Beobachtungsende, entfernt aber keine zweite Spur.
+
+c) tools/_s2uc_continuation_adapter.py:54 setzt bei len(matches)>1
+AMBIGUOUS_CONTEXT; context_values bleibt None. Schon hier endet die
+Fortsetzungsausgabe, unabhaengig von vorhandenen EMA-Werten.
+tools/_s2uc_paired_error_ema.py:144 (_freeze_choice) kehrt bei fehlendem
+Kontext zurueck. Kein Ticket. consume_feedback ab172 aktualisiert nur
+bei gueltigem Ticket und lebendem Schluessel. selected_values liefert
+ohne Ticket P. Die Mehrdeutigkeit verhindert also auch neues Fehlerlernen.
+tools/_s2uc_promotion_ema.py aendert nur direkte Promotionszuordnung;
+es umgeht diese Abruf-/Ticketbedingungen nicht.
+
+d) Kausale Reihenfolge: tools/_s2uc_pair_context_adapter.py:accept_perception
+liest nach dem zweiten Hinweisframe vor dessen Paaraufnahme. Feedback
+erfolgt erst beim naechsten Ziel. spaeteres close_segment kann die bereits
+eingefrorene Entscheidung nicht rueckwirkend rechtfertigen.
+
+Hieraus folgt fuer die festgelegte Folge, NICHT als neue Messung:
+- Bei4 entsteht X:c1, bei8 Promotion X:r1. Ziel7 liefert erste Fehlerwerte
+  (EC,EP)=(0,1/2); M erhaelt sie, E verliert sie bei8.
+- M waehlt an11 C; E noch kalt P. Nach11 besitzen beide (0,1/2), an15 C.
+- Ziel19 ist der erste nicht vorhersagbare Fortsetzungswechsel. Hinweis17/18
+  ist unveraendert, nur X:r1 vorhanden: M/E waehlen C. Erst Ziel19 liefert
+  Fehler (1/2,0), daraus EMA (1/4,1/4). Das ist eine echte Aktualisierung,
+  aber noch keine spaetere angepasste Entscheidung.
+- Bei20 wird Y:c2 aufgenommen. An23 passen X:r1 und Y:c2: kein Kontext,
+  kein Ticket, kein Update. P trifft zwar Y, ist aber keine gelernte Wahl.
+- Bei24 wird Y:r2 promoviert. Beide retained-Slots bleiben belegt, ohne
+  dritte Spur und ohne Verdraengung. An27/31 weiter zwei Treffer, kein Update.
+- Ziel35 ist die erste Rueckkehrabweichung gegen die bisher richtige P-
+  Ausgabe. Auch hier zwei Treffer; kein Ticket und keine Fehleraktualisierung.
+  Bei36 wird X:r1 bestaetigt/aktualisiert, nicht Y:r2 entfernt. An39/43/47
+  bleibt die Mehrdeutigkeit bestehen. P verfehlt jeweils X um1/2.
+
+Die Paarhinweise am Ende der X/Y-Bloecke aendern diese Schlussfolgerung
+nicht: passende letzte Zweierpaare liegen an Offset2 ohne Nachfolger.
+Sie schaffen keine weitere nutzbare Fehlerzelle fuer Offset0.
+
+4. Abgleich mit gespeicherter Evidenz und Reichweitengrenze
+
+reports/s2uc/promotion-assessment-20261003-01/REPORT.md dokumentiert W11:
+echtes Fehlerupdate nach falschem C; W15: P ohne auswaehlbaren Kontext.
+Der oben abgeleitete Mechanismus ist dort bereits an einem Wechsel belegt.
+L31 belegt, dass ein fortlebender eindeutiger Schluessel nach Fehler19
+bewertet werden kann. Der Gleichstand fuehrt dort zu P, ohne Zusatzgewinn
+gegen E oder P. L ist keine saubere Wechsel-/Rueckkehr-Anpassungsprobe.
+
+tools/s2uc_ema_qualification.py:plan kennzeichnet die fruehere geschuetzte
+Probe selbst: eindeutige guards ersetzen Abfragekandidaten, variable Enden
+verhindern Promotion. Ihre regulaeren Einzelaufnahmen aendern nichts daran,
+dass die Folge den Bestand absichtlich schuetzt. Dieses Hilfsmittel hier
+erneut einzusetzen wuerde die beauftragte Luecke nicht schliessen.
+
+Die Grenze gilt fuer koexistierende Fortsetzungen mit gleichem Zweierhinweis.
+Bei zusaetzlich unterscheidenden Hinweisen oder natuerlicher Verdraengung
+kann wieder Eindeutigkeit entstehen; daraus folgt aber noch keine Anpassung
+derselben Erfahrung. Keine solche Zusatzgeschichte wird hier konstruiert.
+
+5. Vorab fixierter Pruefrahmen, keine Laufempfehlung
+
+Arme: M bestehende Mitnahme-EMA; E bestehende Reset-EMA;
+K eindeutiger Kontext sonst P; P stets Persistenz. Keine neue Mitnahmevariante.
+Alle Arme erhalten identische Aufnahme, getrennte Zustaende und gleiche
+Parameter. K/P haben keine aktive Fehlerauswahl. Kalter Default/Gleichstand P.
+
+Feste Mengen:
+G={3,5,7,...,47} (23 Ziele, alle beobachtbaren Vorhersagen).
+H={7,11,15,19,23,27,31,35,39,43,47} (11 wiederkehrende Hinweisziele).
+N=G ohne H (12); keine nachtraegliche Verschiebung zwischen Mengen.
+F={19,35}: erste Abweichung bei Wechsel bzw. Rueckkehr, separat berichten.
+A_W={23,27,31}; A_R={39,43,47}: spaetere Anpassungsgelegenheiten.
+Ziel49 zensiert, kein kuenstliches Endfeedback.
+
+Anpassung nur dann BELEGT, wenn in BEIDEN Phasen spaetestens am zweiten
+Ziel der jeweiligen A-Menge (27 bzw.43) und danach die bessere verfuegbare
+Alternative gewaehlt wird, mit vor Ziel eingefrorener Wahl und nachgewiesener
+Abhaengigkeit von vorherigem Fehlerfeedback dieser Phase. Jede gewertete
+Wahl verlangt gueltigen Kontext, lebenden Schluessel und nichtkalte Erfahrung.
+Ein Fehlerupdate allein, fehlender Kontext, mehrdeutige Enthaltung, kaltes P
+oder ein richtiger Treffer ohne erfahrungsabhaengige Auswahl genuegt nicht.
+Gleichstand-P ist als Gleichstand offenzulegen, nicht als strikte Praeferenz.
+Nach aktuellem Code scheitert schon die Kontextvoraussetzung beider A-Mengen:
+STRUKTURELL_BLOCKIERT, keinesfalls ein positiver Anpassungsbefund.
+
+Nutzen getrennt von Anpassung: Fehlersumme/MAE pro Arm auf G,H,N,F,A_W,A_R;
+jede Einzeldifferenz M-E/M-K/M-P samt Gewinn UND Schaden. Ein Nettonutzen
+auf H verlangt M strikt besser als E,K,P; sonst nicht nachgewiesen bzw.
+Schaden relativ zur betreffenden Baseline. Kein Weglassen der kalten Ziele
+oder ersten Abweichungen aus H/G. Unabhaengige Evaluation NICHT_GEPRUEFT.
+Unerwartete Abrufzustaende sind Befunde gegen diese statische Ableitung,
+keine Erlaubnis zu Quellen-, Masken- oder Parametersuche.
+
+Falls spaeter separat als Grenzregression freigegeben: genau48 Positionen
+je4 Arme =192 Arm-Aufnahmen, bei bestehendem Referenzanschluss zusaetzlich
+192 interne Referenzfortschreibungen. Kein Wiederholungs-/Ersatzlauf.
+Bestehende Grenzen:2 retained+1 candidate,18 Originalframes,2 Vorschlags-
+vektoren,zusammen20;12 Zellen+1 Ticket=416 gepackte Byte; maximal16384 Byte
+zusaetzlicher Python-Heap inkl. temporaerer Systemobjekte. Receipt<=16384
+Byte,transiente UTF8<=32768 Byte; gesamtes neues Pruefpaket inkl. etwaiger
+Qualifikation/Beobachter/Abschluss<=4MiB mit256KiB Abschlussreserve.
+Keine Behauptung, diese Grenzen seien fuer neue Mechanismen qualifiziert.
+Kein Gesamtprozess-RAM-Beleg. Heute kein Aufruf und keine Autorisierung.
+
+6. Genau ein begruendeter konzeptioneller Aenderungsvorschlag
+
+Begrenzte getrennte Fehlerbewertung konkurrierender Fortsetzungen auch bei
+mehrdeutiger Herkunft zulassen, statt den gesamten Fehlerpfad zu sperren.
+Die Herkunft bleibt mehrdeutig; jede Hypothese behaelt Rolle,Generation,
+Offset,Qualitaet. Vor Ziel nur bereits vorhandene Bewertungen fuer eine
+Fortsetzungsentscheidung nutzen; nach Ziel die zuvor festgehaltenen,
+weiterhin berechtigten Hypothesen getrennt bewerten. Keine Zellverschmelzung,
+keine nachtraegliche Hypothesenaufnahme, keine Zielinformation in der Wahl.
+
+Das ist eine zusammenhaengende Aenderung der Schnittstelle zwischen Abruf
+und Fehlerbewertung, keine weitere Promotionsregel. Nur die Auswahl zu
+oeffnen reicht nicht: ohne Feedback auf konkurrierende Hypothesen blieben
+kalte oder veraltete Bewertungen bestehen. Nur Feedback zu oeffnen reicht
+ebenfalls nicht, solange jede spaetere Wahl bedingungslos gesperrt bleibt.
+
+Dieser Vorschlag ist weder implementiert noch vollstaendig qualifiziert.
+Der heutige Einzelticketvertrag kann mehrere Hypothesen nicht einfach tragen.
+Die naechste Konzeptentscheidung muss deshalb genau diesen einen Mechanismus
+mit kausaler Begrenzung, Umgang mit kalten/gleichen Bewertungen, Verlust
+zwischen Abruf/Feedback und den obigen unvergroesserten Ressourcen verbinden.
+Keine Erfolgszusage: konkurrierende Prognosen koennen weiter falsch sein.
+
+Empfohlener naechster Schritt: Projektleiter entscheidet ueber diese eng
+begrenzte Mehrhypothesen-Fehlerbewertung als Konzeptaenderung. Erst danach
+deren geschlossener technischer Vertrag; kein unveraenderter Anpassungslauf,
+der die bereits belegte Abrufsperre nur wiederholt.

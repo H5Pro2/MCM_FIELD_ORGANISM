@@ -1,0 +1,17 @@
+{
+  "ids": [
+    "tests.test_s2uc_repeat_prepare_v2.IntegrationTests.test_I01_frozen_policy_limits_and_qualified_dependencies",
+    "tests.test_s2uc_repeat_prepare_v2.IntegrationTests.test_I02_authorization_gate_before_any_start",
+    "tests.test_s2uc_repeat_prepare_v2.IntegrationTests.test_I03_watchdog_actual_closure_and_exclusive_start",
+    "tests.test_s2uc_repeat_prepare_v2.IntegrationTests.test_I04_two_neutral_sources_integrated_full_path",
+    "tests.test_s2uc_repeat_prepare_v2.IntegrationTests.test_I05_integrated_resource_guards",
+    "tests.test_s2uc_repeat_prepare_v2.IntegrationTests.test_I06_known_data_evidence_and_time_reserve",
+    "tests.test_s2uc_repeat_prepare_v2.IntegrationTests.test_I07_early_join_return_does_not_abort"
+  ],
+  "count": 7,
+  "success": true,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "output": "test_I01_frozen_policy_limits_and_qualified_dependencies (tests.test_s2uc_repeat_prepare_v2.IntegrationTests.test_I01_frozen_policy_limits_and_qualified_dependencies) ... ok\ntest_I02_authorization_gate_before_any_start (tests.test_s2uc_repeat_prepare_v2.IntegrationTests.test_I02_authorization_gate_before_any_start) ... ok\ntest_I03_watchdog_actual_closure_and_exclusive_start (tests.test_s2uc_repeat_prepare_v2.IntegrationTests.test_I03_watchdog_actual_closure_and_exclusive_start) ... ok\ntest_I04_two_neutral_sources_integrated_full_path (tests.test_s2uc_repeat_prepare_v2.IntegrationTests.test_I04_two_neutral_sources_integrated_full_path) ... ok\ntest_I05_integrated_resource_guards (tests.test_s2uc_repeat_prepare_v2.IntegrationTests.test_I05_integrated_resource_guards) ... ok\ntest_I06_known_data_evidence_and_time_reserve (tests.test_s2uc_repeat_prepare_v2.IntegrationTests.test_I06_known_data_evidence_and_time_reserve) ... ok\ntest_I07_early_join_return_does_not_abort (tests.test_s2uc_repeat_prepare_v2.IntegrationTests.test_I07_early_join_return_does_not_abort) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 2.945s\n\nOK\n"
+}

@@ -1,0 +1,74 @@
+E/F faktorgebundener Hinweisabruf: abgeschlossene begrenzte Gegenprobe
+
+21/21 Tests PASS:7 neue und14 Referenzregressionen, keine Fehler/Skips; korrigierter Replay Exit0.
+48/48 Entscheidungen und48/48 vollstaendige Treffermengen bestaetigt (12 Faelle x2 Arme x2 Wiederholungen). Keine wissenschaftlichen Abweichungen.
+Vorregistrierung SHA256 28db350d0b23afbd53aaefc7ff0fde5b1a440871fec71c5f6cffb67a9e02cde9
+Alle gebundenen Werte, Herkuenfte, Faktoren und Erwartungen unveraendert. Alle Referenzdateihashes unveraendert.
+Nur hint ueberschrieben; exakte Bestaetigung und alle anderen Speicherfunktionen werden unveraendert geerbt.
+Die zusaetzliche Enthaltungsregel des frueheren Bestaetigungsversuchs ist ausgeschlossen; dessen Modul wurde im Vergleich nicht importiert.
+
+ALLE ZWOELF FAELLE: VOLLSTAENDIGE TREFFER, WIEDERHOLUNGEN IDENTISCH
+Fall | Arm | Entscheidung | Treffermenge inklusive Rolle, Generation, Ursprung, Position und Faktoren
+01_exact | E | CONFIRMED_RETAINED_MATCH | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0, "factors": [1.0]}]
+01_exact | F | CONFIRMED_RETAINED_MATCH | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0, "factors": [1.0]}]
+02_half | E | ABSTAIN_NO_MATCH | []
+02_half | F | CONFIRMED_RETAINED_MATCH | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0, "factors": [0.5]}]
+03_double | E | ABSTAIN_NO_MATCH | []
+03_double | F | CONFIRMED_RETAINED_MATCH | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0, "factors": [2.0]}]
+04_candidate | E | ABSTAIN_NO_MATCH | []
+04_candidate | F | PROVISIONAL_CANDIDATE_MATCH | [{"role": "candidate", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0, "factors": [0.5]}]
+05_reverse | E | ABSTAIN_NO_MATCH | []
+05_reverse | F | ABSTAIN_NO_MATCH | []
+06_mixed | E | ABSTAIN_NO_MATCH | []
+06_mixed | F | ABSTAIN_NO_MATCH | []
+07_retained_conflict | E | ABSTAIN_NO_MATCH | []
+07_retained_conflict | F | ABSTAIN_AMBIGUOUS | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0, "factors": [0.5]}, {"role": "retained", "generation": 2, "formation": "step3", "ordinals": [30, 31, 32, 33], "offset": 0, "factors": [2.0]}]
+08_role_conflict | E | ABSTAIN_NO_MATCH | []
+08_role_conflict | F | ABSTAIN_AMBIGUOUS | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0, "factors": [0.5]}, {"role": "candidate", "generation": 2, "formation": "step3", "ordinals": [30, 31, 32, 33], "offset": 0, "factors": [2.0]}]
+09_exact_no_priority | E | CONFIRMED_RETAINED_MATCH | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0, "factors": [1.0]}]
+09_exact_no_priority | F | ABSTAIN_AMBIGUOUS | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0, "factors": [1.0]}, {"role": "candidate", "generation": 2, "formation": "step3", "ordinals": [30, 31, 32, 33], "offset": 0, "factors": [2.0]}]
+10_positions | E | ABSTAIN_NO_MATCH | []
+10_positions | F | ABSTAIN_AMBIGUOUS | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0, "factors": [0.5]}, {"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 2, "factors": [0.5]}]
+11_zero_single | E | CONFIRMED_RETAINED_MATCH | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0, "factors": [1.0]}]
+11_zero_single | F | CONFIRMED_RETAINED_MATCH | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0, "factors": [0.5, 1.0, 2.0]}]
+12_zero_origins | E | ABSTAIN_AMBIGUOUS | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0, "factors": [1.0]}, {"role": "candidate", "generation": 2, "formation": "step3", "ordinals": [30, 31, 32, 33], "offset": 0, "factors": [1.0]}]
+12_zero_origins | F | ABSTAIN_AMBIGUOUS | [{"role": "retained", "generation": 1, "formation": "step1", "ordinals": [10, 11, 12, 13], "offset": 0, "factors": [0.5, 1.0, 2.0]}, {"role": "candidate", "generation": 2, "formation": "step3", "ordinals": [30, 31, 32, 33], "offset": 0, "factors": [0.5, 1.0, 2.0]}]
+
+ZUSTAND UND FOLGEUEBERGAENGE
+Alle12 Anfangszustaende entstehen pro Arm durch dieselben Eingabefolgen mit exakter Bestaetigung.
+Nach jedem Hinweis bleiben evidence, Kandidaten-/Erhaltungsgenerationszaehler und Reihenfolge unveraendert.
+An jeden Fall schliessen B-B-C-C an. Insgesamt76 Abschlussuebergaenge pro Arm sind zwischen E/F identisch, ebenso die Zustandsbilder.
+Jeder Fall wurde je Arm auch ohne Hinweise wiedergegeben; saemtliche Uebergaenge und Zustandsbilder stimmen ueberein.
+Die Speicher erlangen durch Hinweise keine Bestaetigung und keine Verjuengung.
+
+RESSOURCEN UND AUFWAND
+Grenzfall: erhaltenes A und Q, Kandidat H, vier bildende B-Frames, zwei Hinweisframes.
+Beide Arme erreichen gleichzeitig8 Erhaltungs-,4 Kandidaten-,4 Bildungs- und2 Hinweisframes =16+2.
+E liefert dort eindeutigen Kandidat H; F drei Treffer (A, Q, H) und Enthaltung. Anschliessender Abschluss bleibt budgetkonform.
+Ueber12 Hauptfaelle einschliesslich Wiederholungen: E/F je96 durchsuchte Positionen; F288 Faktortests mit5334 skalaren Faktorgleichheitspruefungen.
+Die unveraenderte Bestaetigung benoetigt in beiden Armen115 ganze Spurvergleiche einschliesslich Folgeuebergaengen.
+F sucht je Position alle drei Faktoren. Faktoren desselben Schluessels werden zusammengefasst; Herkuenfte und Positionen niemals.
+Temporaere Metadaten: maximal3 Quellenreferenzen,9 Trefferschluessel,3 Faktoren je Schluessel,4 Herkunftsordinale je Treffer.
+Keine skalierten Vektorkopien oder normalisierten Speicherbanken; pro Skalarvergleich wird ein einzelner ldexp-Wert berechnet.
+Groesste serialisierte Trefferliste der12 Faelle: E245Byte, F265Byte; dies ist Ausgabeumfang, kein RAM-Mass.
+Inkrementeller tracemalloc-Aufrufpeak der12 Faelle: E26437Byte, F8644Byte; einschliesslich Tracing/Beobachter und Initialisierung, kein Beleg fuer weniger F-RAM.
+Temporaere Framezaehlung an Python-Tracepunkten, keine native Allokationsvollerfassung. Numerische Budgetnutzlast je6912Byte, kein Prozess-RAM.
+
+ENTWICKLUNGSKORREKTUR
+Die erste Auswertung stoppte beim Nullfall: JSON-Nullzahlen lagen als int vor, Frame verlangt float.
+Einlesung konvertiert jetzt alle gebundenen Zahlen wertgleich in float. Vorregistrierung und Erwartungen blieben unveraendert.
+Gezielter Null-Decodiertest bestanden. Fehlerprotokoll erhalten als replay-console-input-type-failure.txt.
+
+NUTZEN UND KONFLIKT GETRENNT
+Eindeutiger Zugangsgewinn:02_half,03_double,04_candidate. Zwei bestaetigte und ein vorlaeufiger Zugang.
+Neue Mehrdeutigkeit:07_retained_conflict,08_role_conflict,09_exact_no_priority,10_positions.
+Bei09 geht eine bisher eindeutige bestaetigte Antwort verloren; Faktor1 besitzt keinen Vorrang.
+Bei07/08/10 werden zuvor fehlende Treffer zu sichtbarer Konkurrenz, nicht zu eindeutiger Erinnerung.
+Nullfall11: ein Schluessel mit Faktoren1/2,1,2, kein kuenstliches Dreifachmatch. Nullfall12: zwei Herkuenfte bleiben mehrdeutig.
+Nulltreffer sind technische Randfaelle, kein Nachweis unterscheidungskraeftiger Wahrnehmung.
+Umkehrung und gemischte Frameskalierung bleiben erfolglos. Ein gemeinsamer Faktor gilt fuer alle96 Komponenten.
+
+ABSCHLUSS
+Diese begrenzte Abrufgegenprobe ist abgeschlossen. Keine automatische Zusammenfuehrung mit skalierter Bestaetigung.
+Keine Aussage allgemeiner Erfahrungsgleichheit, semantischer Erinnerung oder Originalquellenwirksamkeit.
+Keine Registry-Arbeit, adaptive Speicherstrategie oder Originalquellenproduktion.

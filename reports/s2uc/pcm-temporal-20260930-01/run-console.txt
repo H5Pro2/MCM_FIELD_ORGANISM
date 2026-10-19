@@ -1,0 +1,76 @@
+EVALUATED_SYNTHETIC_TEMPORAL_PCM
+{
+  "E": {
+    "original": {
+      "decision": "CONFIRMED_RETAINED_MATCH",
+      "matches": [
+        {
+          "role": "retained",
+          "generation": 1,
+          "formation": "origin-1",
+          "ordinals": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "offset": 1
+        }
+      ]
+    },
+    "half": {
+      "decision": "ABSTAIN_NO_MATCH",
+      "matches": []
+    },
+    "reverse": {
+      "decision": "ABSTAIN_NO_MATCH",
+      "matches": []
+    }
+  },
+  "F": {
+    "original": {
+      "decision": "CONFIRMED_RETAINED_MATCH",
+      "matches": [
+        {
+          "role": "retained",
+          "generation": 1,
+          "formation": "origin-1",
+          "ordinals": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "offset": 1,
+          "factors": [
+            1.0
+          ]
+        }
+      ]
+    },
+    "half": {
+      "decision": "CONFIRMED_RETAINED_MATCH",
+      "matches": [
+        {
+          "role": "retained",
+          "generation": 1,
+          "formation": "origin-1",
+          "ordinals": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "offset": 1,
+          "factors": [
+            0.5
+          ]
+        }
+      ]
+    },
+    "reverse": {
+      "decision": "ABSTAIN_NO_MATCH",
+      "matches": []
+    }
+  }
+}

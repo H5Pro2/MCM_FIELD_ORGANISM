@@ -1,0 +1,129 @@
+MCM -- paired_error_ema_v1: Implementierung und neutrale Qualifikation
+2026-10-01
+
+ABGESCHLOSSEN
+E1-E12:12/12 PASS,0 Fehler,0 Fehlschlaege,0 Skips,Exit0.
+Endgueltiger Code waehrend der Qualifikation unveraendert.
+Keine Ausfuehrung oder Materialproduktion der beiden geplanten200-Frame-
+Gegenproben. Ein separater neutraler200-Frame-Monotonstrom qualifiziert
+nur den fortlaufenden Anschluss, nicht den behaupteten Lernnutzen.
+
+IMPLEMENTIERUNG
+Neue Dateien:
+ tools/_s2uc_paired_error_ema.py -- optionaler Adapter und feste Fehlerpuffer;
+ tools/_s2uc_paired_error_replay.py -- begrenzter Vergleichsanschluss;
+ tests/test_s2uc_paired_error_ema.py -- neutrale Pruefungen;
+ tools/s2uc_ema_qualification.py -- Planbindung/Qualifikationshülle.
+Numerik: docs/S2UC_EMA_NUMERIK_20261001.txt.
+Gegenprobenplan: docs/S2UC_EMA_GEGENPROBENPLAN_20261001.json.
+Bindung: docs/S2UC_EMA_IMPLEMENTIERUNGSBINDUNG_20261001.json.
+Forschungsstand aktualisiert. Bestehende Rezeptor-/NJ-/Abruf-/Memorymodule
+unveraendert; vorherige AN-Codebindungen weiterhin gueltig. Kein Commit/Push.
+
+AUSDRUECKLICHE WAHL UND KAUSALITAET
+PairedErrorAdapter(...,selection_policy='paired_error_ema_v1') schaltet den
+Zusatz ein. Default selection_policy='disabled' fuehrt den bisherigen Pfad
+fort; keine automatische Aktivierung. Nur legacy_v1-Fortsetzung zugelassen.
+Kontext/Persistenz bleiben zwei eingefrorene vorhandene Vorschlaege.
+selected_values ist ausschliesslich Alias auf einen davon, keine dritte Kopie.
+consume_feedback(sample) prueft Typ,Index,Scope,Werte,Start-/Endzeit und
+Ordinalbedingungen vollstaendig, bevor beide Fehler berechnet werden.
+Erst nach beiden gueltigen Ergebnissen wird eine gepackte Fehlerzelle atomar
+veroeffentlicht; danach Vorschlaege/Ticket freigegeben, normale Aufnahme folgt.
+Doppelte/falsche Eingaben terminieren ohne weiteres Update. Fehlendes Endziel
+wird zensiert, niemals als0-Fehler gewertet. Auch nicht ausgewaehlter Kontext
+wird nach dem eingetroffenen Ziel bewertet, damit Rueckkehr moeglich bleibt.
+
+REGEL UND NUMERIK
+Genau eine Regel: Kontext nur bei gueltigem E_C<E_P; sonst Persistenz.
+Erstbeobachtung direkt, danach (0.5*alt)+(0.5*neu), alpha1/2 ohne neue Schwelle.
+MAE48: skalare binary64-Summe links nach rechts,k0..47,danach /48.
+Eine gemeinsame Funktion mae48 fuer internen Fehler und Baselines E/K/P.
+Historische fsum-Auswertungen bleiben unveraendert und werden nicht damit
+vermischt. Nichtendliche Differenz/Summe und ungueltige Fehler brechen ab,
+bevor einer der beiden Werte veroeffentlicht wird.
+Aktiver Zusatz begrenzt Zeit-/Ordinalmetadaten auf Werte<2^63 und Generation
+auf positive uint64; kein Wrap. Diese Verwaltungsgrenze haelt temporare
+Metadatenobjekte endlich, kein zusaetzlicher Signalparameter. Deaktivierter
+Altpfad unveraendert. Numerik/Metadatengrenzen sind vor Endpruefung gebunden.
+
+LEBENSDAUER
+Zwoelf getrennte Zellen: bis3 lebende Spuren x2 Offsets x2 Matchqualitaeten.
+Rolle/Generation im Schluessel; Owner/Stream/Profil samt Zeitkonfiguration
+sitzungsgebunden. Neue Spur/Promotion startet ohne uebernommene Fehler.
+Exakte Bestaetigung derselben Generation behaelt Fehler. Verdrängung,
+Kandidatenersatz und Sitzungsende loeschen Status. Bereits ausstehende Tickets
+koennen geloeschte Generationen nicht wiederbeleben. Offset2 ohne Nachfolger,
+fehlender/eindeutig nicht bestimmbarer Kontext: kein Fehlerpaar/Ticket.
+
+TESTBELEGE
+E1: explizite Wahl, erste retained-Entscheidung Persistenz, keine fruehe
+Aktualisierung, Schattenbewertung und spaetere Kontextwahl.
+E2: Gleichstand,alpha1/2, eindeutig gepruefte Summationsreihenfolge;
+neue Vergleichsbaselines verwenden dieselbe Funktionsidentitaet.
+E3:11 ungueltige Eingangsvarianten inklusive falscher Zeiten/Typen,
+Scopewechsel,Doppeleingang; Update nicht vor vollstaendiger Validierung.
+E4: Differenz-/Summenueberlauf,NaN/Inf/negative Fehler; kein halbes EMA-Paar.
+E5:12 Schluesselzellen,Rolle/Generation/Offset/Qualitaet getrennt;
+tatsaechliche normale Kandidatenpromotion entfernt bisherige Fehler.
+E6: altes Ticket nach Generationstausch ohne Wiederbelebung;
+Bestaetigung behaelt Fehler, echte FIFO-Verdrängung entfernt sie.
+E7: fehlender Kontext und fehlendes Endziel; deaktivierter Pfad samt
+Vorhersagen/Speicherzustand identisch zum bisherigen Adapter.
+E8: anderer neutraler200-Frame-Strom fortlaufend ohne Reset,99 bewertete Ziele,
+Ziel201 zensiert, alle200 Frames einmal aufgenommen, Zustand nach jedem Frame
+gegen bisherigen Referenzpfad gleich. Alte64-Grenze weiterhin aktiv;
+200 nur bei ausdruecklichem bounded_contract='paired_error_ema_200_v1',
+201 ausgeschlossen. K/P technisch auf separaten kurzen Neutralfolgen geprueft.
+E9: zusaetzlichen Python-Verwaltungsspeicher inklusive temporärer Objekte
+bei voller Zellbelegung,Ticket,MAE/EMA,Pruning,JSON-Schluesselableitung,
+maximalen zugelassenen Metadaten und Fehlerabschluss tatsaechlich gemessen.
+E10: echte Naeherungsabfrage erzeugt getrennten APPROXIMATE-Schluessel;
+EXACT bleibt leer, ausgewaehlte Ausgabe ist Referenz auf vorhandenen Vorschlag.
+E11: aktive Fehlererfahrung mit Kontextwahl, Zustand nach jedem Frame identisch
+zur bisherigen Referenz; bestehende Frame-/Ausgabegrenzen beobachtet.
+E12: aktive Metadatengrenzen,Offset ohne Nachfolger und Generationsueberlauf.
+
+RESSOURCENBELEG
+Kompakte Puffer:12x32+32 =416 Byte.
+Konservativ gezaehlter bestehender Python-Zusatz inkl.Instanzdict/Scopeobjekten,
+plus tracemalloc-Spitze neuer Allokationen ab Funktionsbeginn:
+maximal 5518 /16384 Byte. Alle einzelnen Messungen in facts.json/E9.
+Gezählt sind Zell-/Ticketpuffer,Scope,Pythonobjekte,temporäre JSON-/Schluessel-
+objekte,Packbytes,Fehlerarithmetik und der gemessene Fehlerabschluss.
+Vorhandene Wahrnehmungs-/Vorschlagsvektoren werden nicht als Zusatzkopien
+gezählt. Kein neuer48er-Differenzvektor;ausgewaehlte Ausgabe nur Alias.
+Python-Heap-Messung auf den gebundenen neutralen Pfaden, kein harter RSS-/
+Native-Stack-Beleg des Gesamtprozesses. Observerarchivierung separat.
+Im16-Frame-Integrationsfall gemessen:Framepeak8,
+Ausgaben2,gemeinsam9.
+Bestehende18+2-Grenzen nicht angehoben; bei zwei Vorschlaegen unveraendert.
+
+GEBUNDENER GEGENPROBENPLAN -- NICHT AUSGEFUEHRT
+Zwei200-Frame-Geschichten constant/switch_return; drei Arme E/K/P,
+alpha1/2,exact_v1,legacy_v1,24 Hauptziele und75 Nebenziele je Geschichte.
+Warmstart A zweimal; danach24 Bloecke aus vier Zwischenframes und vier
+Queryframes. A bleibt durch absichtlich entworfene Zwischenbloecke/Tails
+verfuegbar. Das ist eine sichtbare Versuchsbedingung, keine allgemeine
+Faehigkeit zur Erhaltung wichtiger Spuren. Keine direkte Memoryvorbelegung.
+Kein Phasenlabel/Wechselzeitpunkt im System; Hauptziele sind Auswertermetadaten.
+Plan und 42 Code-/Testdateien samt Pythonruntime gebunden.
+Plan SHA256:36e12eb361be0b88811a82e692fdd23ffceb8d2fbb9d65b27b55458358714e13
+Bindung SHA256:721da476a3bfce6f4e69265b76a7f4462db7559bda7348cc642cc06951ae5347
+Status BOUND_NOT_AUTHORIZED; Zielordner ema-counterprobe-20261001-01 existiert
+nicht. Kein Generator fuer die zwei Geschichten ausgefuehrt.
+
+QUALIFIKATIONSHISTORIE
+Erster neutraler Stand:10 Tests bestanden; ein Ressourcenbeobachter griff
+waehrend unvollstaendiger Konstruktion auf pending_prediction zu und brach
+diese Testmessung ab. Messstart auf initialisierte Adapter korrigiert.
+Zusaetzlich aktive Metadatengrenzen und deren Fehler-/Speicherfaelle gebunden;
+endgueltig12/12 PASS im separaten Ordner ...-02. Fruehe Belege erhalten.
+Keine Gegenprobenausfuehrung als Teil dieser Fehlerbehebung.
+
+NAECHSTER BEGRENZTER SCHRITT
+Projektleiter prueft Implementierung und neutrale Belege. Danach die beiden
+bereits gebundenen fortlaufenden Gegenproben gesondert beauftragen.
+Ergebnisse waeren zunaechst ein kontrollierter Funktionsnachweis; technische
+Qualifikation, mehr Enthaltung oder gezielt erhaltene A-Spur belegen keinen
+allgemeinen Lernnutzen. Keine weiteren Varianten oder Parametersuche vorgesehen.

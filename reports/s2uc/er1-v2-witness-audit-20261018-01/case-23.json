@@ -1,0 +1,95 @@
+{
+  "archive_sha256": "71b8fd44a9057eb86f2d3817ef58059d5a536467b7526d4e635351c4854d0db9",
+  "case": 23,
+  "decoder": {
+    "dictionary_bytes": 925301,
+    "encoded_bytes": 978520,
+    "gzip_bytes": 165491,
+    "record_indices": 10247,
+    "reference_edges": 123664,
+    "table_entries": 13903
+  },
+  "differences": {
+    "duplicate_records": [],
+    "missing": [],
+    "unsupported": [
+      {
+        "keeper": "F",
+        "keeper_victims": [],
+        "last_observation": 828,
+        "newer_keeper_victims": [],
+        "origin": [
+          805,
+          806,
+          807,
+          808
+        ],
+        "other_victim": [
+          805,
+          806,
+          807,
+          808
+        ],
+        "promotion_end": 848,
+        "stage": "retention",
+        "unequal_blocks": [
+          832,
+          836,
+          840,
+          844
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "E": {
+      "local_gains": 0,
+      "multi_assigned_targets": {},
+      "retention_events": 2,
+      "unique_gain_targets": 0,
+      "unique_warm_targets": 0,
+      "warm_uses": 0
+    },
+    "F": {
+      "local_gains": 2,
+      "multi_assigned_targets": {},
+      "retention_events": 7,
+      "unique_gain_targets": 2,
+      "unique_warm_targets": 2,
+      "warm_uses": 2
+    }
+  },
+  "rejected_candidates": [
+    {
+      "keeper": "F",
+      "origin": [
+        805,
+        806,
+        807,
+        808
+      ],
+      "promotion_end": 848,
+      "reason": "NO_COMPETITION_PROMOTION"
+    }
+  ],
+  "reported": {
+    "E": {
+      "local_gains": 0,
+      "multi_assigned_targets": {},
+      "retention_events": 2,
+      "unique_gain_targets": 0,
+      "unique_warm_targets": 0,
+      "warm_uses": 0
+    },
+    "F": {
+      "local_gains": 2,
+      "multi_assigned_targets": {},
+      "retention_events": 8,
+      "unique_gain_targets": 2,
+      "unique_warm_targets": 2,
+      "warm_uses": 2
+    }
+  },
+  "seconds": 4.569572200009134,
+  "status": "DISCREPANCY"
+}

@@ -1,0 +1,8 @@
+test_public_real_entry_unconditionally_closed (tests.test_s2uc_source_execution.SourceExecutionTests.test_public_real_entry_unconditionally_closed) ... ok
+test_source_preparation_reader_has_no_authority (tests.test_s2uc_source_execution.SourceExecutionTests.test_source_preparation_reader_has_no_authority) ... ok
+test_qualification_fixture_and_mutations_never_authorize (tests.test_s2uc_source_execution.SourceExecutionTests.test_qualification_fixture_and_mutations_never_authorize) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 44.388s
+
+OK

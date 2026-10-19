@@ -1,0 +1,276 @@
+{
+  "mode": "native",
+  "exitcode": 0,
+  "records": [
+    {
+      "stage": "ready",
+      "pid": 12344,
+      "memory": {
+        "private": 13340672,
+        "pagefile": 13340672,
+        "peak_pagefile": 15220736,
+        "working_set": 19013632
+      },
+      "job": {
+        "flags": 512,
+        "job_limit": 536870912,
+        "process_limit": 0,
+        "peak_job": 29691904,
+        "peak_process": 15220736,
+        "pids": [
+          2712,
+          12344
+        ],
+        "supervisor_member": true,
+        "worker_member": true,
+        "supervisor": {
+          "private": 14471168,
+          "pagefile": 14471168,
+          "peak_pagefile": 14729216,
+          "working_set": 20193280
+        },
+        "worker": {
+          "private": 13348864,
+          "pagefile": 13348864,
+          "peak_pagefile": 15220736,
+          "working_set": 19058688
+        }
+      }
+    },
+    {
+      "stage": "small_committed",
+      "pid": 12344,
+      "memory": {
+        "private": 21753856,
+        "pagefile": 21753856,
+        "peak_pagefile": 21753856,
+        "working_set": 19075072
+      },
+      "region": {
+        "size": 8388608,
+        "state": 4096,
+        "protect": 4,
+        "type": 131072
+      },
+      "job": {
+        "flags": 512,
+        "job_limit": 536870912,
+        "process_limit": 0,
+        "peak_job": 36225024,
+        "peak_process": 21753856,
+        "pids": [
+          2712,
+          12344
+        ],
+        "supervisor_member": true,
+        "worker_member": true,
+        "supervisor": {
+          "private": 14471168,
+          "pagefile": 14471168,
+          "peak_pagefile": 14729216,
+          "working_set": 20197376
+        },
+        "worker": {
+          "private": 21753856,
+          "pagefile": 21753856,
+          "peak_pagefile": 21753856,
+          "working_set": 19075072
+        }
+      }
+    },
+    {
+      "stage": "reserved",
+      "pid": 12344,
+      "memory": {
+        "private": 21880832,
+        "pagefile": 21880832,
+        "peak_pagefile": 21880832,
+        "working_set": 19116032
+      },
+      "request": 629145600,
+      "region": {
+        "size": 629145600,
+        "state": 8192,
+        "protect": 0,
+        "type": 131072
+      },
+      "job": {
+        "flags": 512,
+        "job_limit": 536870912,
+        "process_limit": 0,
+        "peak_job": 36352000,
+        "peak_process": 21880832,
+        "pids": [
+          2712,
+          12344
+        ],
+        "supervisor_member": true,
+        "worker_member": true,
+        "supervisor": {
+          "private": 14471168,
+          "pagefile": 14471168,
+          "peak_pagefile": 14729216,
+          "working_set": 20197376
+        },
+        "worker": {
+          "private": 21880832,
+          "pagefile": 21880832,
+          "peak_pagefile": 21880832,
+          "working_set": 19116032
+        }
+      }
+    },
+    {
+      "stage": "commit_attempt",
+      "pid": 12344,
+      "memory": {
+        "private": 21782528,
+        "pagefile": 21782528,
+        "peak_pagefile": 650928128,
+        "working_set": 19181568
+      },
+      "request": 629145600,
+      "returned_nonnull": false,
+      "winerror": 1455,
+      "before": {
+        "private": 21880832,
+        "pagefile": 21880832,
+        "peak_pagefile": 21880832,
+        "working_set": 19116032
+      },
+      "region": {
+        "size": 629145600,
+        "state": 8192,
+        "protect": 0,
+        "type": 131072
+      },
+      "system_before": {
+        "total_bytes": 10717925376,
+        "limit_bytes": 19449368576,
+        "available_bytes": 8731443200
+      },
+      "job": {
+        "flags": 512,
+        "job_limit": 536870912,
+        "process_limit": 0,
+        "peak_job": 665399296,
+        "peak_process": 650928128,
+        "pids": [
+          2712,
+          12344
+        ],
+        "supervisor_member": true,
+        "worker_member": true,
+        "supervisor": {
+          "private": 14471168,
+          "pagefile": 14471168,
+          "peak_pagefile": 14729216,
+          "working_set": 20201472
+        },
+        "worker": {
+          "private": 21790720,
+          "pagefile": 21790720,
+          "peak_pagefile": 650928128,
+          "working_set": 19189760
+        }
+      }
+    },
+    {
+      "stage": "small_recovery",
+      "pid": 12344,
+      "memory": {
+        "private": 25993216,
+        "pagefile": 25993216,
+        "peak_pagefile": 650928128,
+        "working_set": 19193856
+      },
+      "region": {
+        "size": 4194304,
+        "state": 4096,
+        "protect": 4,
+        "type": 131072
+      },
+      "remaining": {
+        "size": 624951296,
+        "state": 8192,
+        "protect": 0,
+        "type": 131072
+      },
+      "job": {
+        "flags": 512,
+        "job_limit": 536870912,
+        "process_limit": 0,
+        "peak_job": 665399296,
+        "peak_process": 650928128,
+        "pids": [
+          2712,
+          12344
+        ],
+        "supervisor_member": true,
+        "worker_member": true,
+        "supervisor": {
+          "private": 14471168,
+          "pagefile": 14471168,
+          "peak_pagefile": 14729216,
+          "working_set": 20267008
+        },
+        "worker": {
+          "private": 25993216,
+          "pagefile": 25993216,
+          "peak_pagefile": 650928128,
+          "working_set": 19193856
+        }
+      }
+    },
+    {
+      "stage": "released",
+      "pid": 12344,
+      "memory": {
+        "private": 13385728,
+        "pagefile": 13385728,
+        "peak_pagefile": 650928128,
+        "working_set": 19193856
+      },
+      "job": {
+        "flags": 512,
+        "job_limit": 536870912,
+        "process_limit": 0,
+        "peak_job": 665399296,
+        "peak_process": 650928128,
+        "pids": [
+          2712,
+          12344
+        ],
+        "supervisor_member": true,
+        "worker_member": true,
+        "supervisor": {
+          "private": 14471168,
+          "pagefile": 14471168,
+          "peak_pagefile": 14729216,
+          "working_set": 20267008
+        },
+        "worker": {
+          "private": 13385728,
+          "pagefile": 13385728,
+          "peak_pagefile": 650928128,
+          "working_set": 19193856
+        }
+      }
+    }
+  ],
+  "layout": {
+    "extended": 144,
+    "basic": 64,
+    "io": 48,
+    "counters": 80,
+    "region": 48,
+    "offsets": {
+      "basic": 0,
+      "io": 64,
+      "process_limit": 112,
+      "job_limit": 120,
+      "peak_process": 128,
+      "peak_job": 136
+    }
+  }
+}

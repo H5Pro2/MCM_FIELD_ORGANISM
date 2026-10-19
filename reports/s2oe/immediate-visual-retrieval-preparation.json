@@ -1,0 +1,46 @@
+{
+  "version": "s2oe.immediate-run-preparation.v1",
+  "status": "BLOCKED_NOT_EXECUTABLE",
+  "run_id": "immediate-visual-retrieval-20260912-01",
+  "output_directory": "reports/s2oe/immediate-visual-retrieval-20260912-01",
+  "output_absence_checked": true,
+  "parent": {
+    "byte_count": 1359778,
+    "config_digest": "55f1de8602c945749728ce17c74cdff8320d1b5fc72c800f239bc86737db1a1e",
+    "event_digest": "5aad3ee0dc8c4026a729ff71e04a13431843a8ce41bb3703dc2a0c80ab4464ed",
+    "neutral": false,
+    "path": "reports/s2oe/media-memory-video-20260912-01/record.json",
+    "sha256": "4da6485b12ce98dca625fe5998130d1f2c0f9225d78a0fefb9c4bcf18298f3e7",
+    "version": "s2oe.immediate-historical-input.v1"
+  },
+  "event_order": [
+    "immediate-visual-empty",
+    "immediate-visual-form",
+    "immediate-visual-after"
+  ],
+  "presentation_version": "s2oe.frozen-presentation.v1",
+  "entry": "reports/run_immediate_visual_once.py",
+  "entry_sha256": "617a6b5310e0bc659508d9ce97195739ea27b0105539f1ae3afbcdc4d780eac2",
+  "inventory": "reports/s2oe/immediate-verification-qualification-20260912-01/inventory.json",
+  "inventory_sha256": "37e2aed320b67dfb2738cd5c41a97a2b67c8a0644279fe08052ac2f61e5fbfce",
+  "qualifications": [
+    "reports/s2oe/immediate-visual-qualification-20260912-04/result.json",
+    "reports/s2oe/immediate-verification-qualification-20260912-01/result.json"
+  ],
+  "blockers": [
+    "Enforce physical shared ledger before publication and for final alternatives",
+    "Preserve partial evidence and progress from inner control exceptions"
+  ],
+  "planned_parent_read_operations": 3,
+  "planned_parent_read_bytes": 4079334,
+  "limits": {
+    "metadata": 65536,
+    "sources": 174080,
+    "verification": 262144,
+    "shared": 262144,
+    "historical_input": 2097152,
+    "total": 4194304
+  },
+  "functional_predictions_separate": true,
+  "authorized": false
+}

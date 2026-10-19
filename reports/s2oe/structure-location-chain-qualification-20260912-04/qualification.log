@@ -1,0 +1,24 @@
+test_bank_isolation (tests.test_structure_ppb_chain.Tests.test_bank_isolation) ... ok
+test_bounded_error_primary_and_progress (tests.test_structure_ppb_chain.Tests.test_bounded_error_primary_and_progress) ... ok
+test_clock_binding (tests.test_structure_ppb_chain.Tests.test_clock_binding) ... ok
+test_error_progress (tests.test_structure_ppb_chain.Tests.test_error_progress) ... ok
+test_extracted_verifier_independent (tests.test_structure_ppb_chain.Tests.test_extracted_verifier_independent) ... ok
+test_extraction_ast_and_shared_import (tests.test_structure_ppb_chain.Tests.test_extraction_ast_and_shared_import) ... ok
+test_extraction_equivalence_boundary (tests.test_structure_ppb_chain.Tests.test_extraction_equivalence_boundary) ... ok
+test_extraction_error_equivalence (tests.test_structure_ppb_chain.Tests.test_extraction_error_equivalence) ... ok
+test_finally_failure_preserves_primary (tests.test_structure_ppb_chain.Tests.test_finally_failure_preserves_primary) ... ok
+test_format_bound (tests.test_structure_ppb_chain.Tests.test_format_bound) ... ok
+test_generation (tests.test_structure_ppb_chain.Tests.test_generation) ... ok
+test_native_and_sizes (tests.test_structure_ppb_chain.Tests.test_native_and_sizes) ... ok
+test_negative_evaluation_and_no_replay (tests.test_structure_ppb_chain.Tests.test_negative_evaluation_and_no_replay) ... ok
+test_order (tests.test_structure_ppb_chain.Tests.test_order) ... ok
+test_output_limit_and_equality (tests.test_structure_ppb_chain.Tests.test_output_limit_and_equality) ... ok
+test_overlong_unknown_error (tests.test_structure_ppb_chain.Tests.test_overlong_unknown_error) ... ok
+test_temporary_class_and_no_duplicate_destination (tests.test_structure_ppb_chain.Tests.test_temporary_class_and_no_duplicate_destination) ... ok
+test_values_mutation (tests.test_structure_ppb_chain.Tests.test_values_mutation) ... ok
+test_write_failure_preserves_primary (tests.test_structure_ppb_chain.Tests.test_write_failure_preserves_primary) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.404s
+
+OK

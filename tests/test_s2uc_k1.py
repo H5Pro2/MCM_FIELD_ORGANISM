@@ -1,0 +1,175 @@
+import dataclasses
+import json
+import unittest
+from pathlib import Path
+from tools import _s2uc_k1 as k
+from tools._s2uc_k1_probe import probe
+from tools._s2uc_multi_error import MultiErrorAdapter, POLICY as MULTI
+from tools._s2uc_factor_recency import FactorRecencyArm
+from tools._s2uc_pair_context_adapter import PerceptionSample, AdapterError
+from tools._s2tu_retained_trace import Frame
+
+OUTPUT = None
+FACTS = {}
+
+
+def v(i):
+    # Neutral qualification family, distinct from the reserved F1-F8 formula.
+    return tuple(.25+(i+1)/256+j/65536 for j in range(48))
+
+
+def block(*indices):
+    return [v(i) for i in indices]
+
+
+P=block(0,1,2,3)
+Q=block(4,5,6,7)
+R=block(8,9,10,11)
+
+
+def admit(arm, vectors, start):
+    frames=[]
+    for n,values in enumerate(vectors,start):
+        frame=Frame(values,'1'*64,'owner','s'+str(start),n)
+        arm.form(frame);frames.append(frame)
+    return arm.close_segment('s'+str(start)),frames
+
+
+def check_probe(name, sequence, *, enabled=True, trace=False):
+    result=probe([v for b in sequence for v in b],enabled=enabled,trace=trace)
+    FACTS[name]=dict(frames=result['frames'],resources=result['resources'],reference_equal=result['reference_equal'],cleanup=result['cleanup'])
+    if OUTPUT:
+        (OUTPUT/(name+'.json')).write_bytes((json.dumps(result,indent=2)+'\n').encode())
+    return result
+
+
+class K1Tests(unittest.TestCase):
+    def test_K01_hold_without_hidden_new_trace(self):
+        arm=k.K1Arm('1'*64,'owner');fields=set(vars(arm))
+        admit(arm,P,1);original=arm._candidate
+        event,discarded=admit(arm,Q,5)
+        self.assertEqual(event['action'],'TRACE_CANDIDATE_HELD')
+        self.assertIs(arm._candidate,original)
+        self.assertEqual(arm._candidate_generation,1)
+        self.assertEqual(set(vars(arm)),fields)
+        self.assertFalse(arm._forming or arm._hints)
+        seen=set();reachable=set()
+        def visit(x):
+            if id(x) in seen:return
+            seen.add(id(x))
+            if isinstance(x,Frame):reachable.add(id(x));return
+            if isinstance(x,dict):
+                for value in x.values():visit(value)
+            elif isinstance(x,(list,tuple)):
+                for value in x:visit(value)
+            elif dataclasses.is_dataclass(x):
+                for field in dataclasses.fields(x):visit(getattr(x,field.name))
+        visit(vars(arm))
+        self.assertTrue(reachable.isdisjoint(map(id,discarded)))
+        arm.close_owner()
+        check_probe('K01_hold',[P,Q,R])
+
+    def test_K02_second_close_replaces_without_extension(self):
+        arm=k.K1Arm('1'*64,'owner')
+        admit(arm,P,1);admit(arm,Q,5);event,frames=admit(arm,R,9)
+        self.assertEqual(event['action'],'TRACE_CANDIDATE_REPLACED')
+        self.assertEqual(arm._candidate_generation,2)
+        self.assertEqual(arm._candidate.frames,tuple(frames));arm.close_owner()
+
+    def test_K03_exact_promotion_before_and_at_deadline(self):
+        for middle in ([],[Q]):
+            arm=k.K1Arm('1'*64,'owner');admit(arm,P,1);original=arm._candidate.frames
+            if middle:admit(arm,Q,5)
+            event,_=admit(arm,P,9 if middle else 5)
+            self.assertEqual(event['action'],'TRACE_PROMOTED')
+            self.assertIs(arm._retained_many[0].frames,original)
+            self.assertIsNone(arm._candidate);arm.close_owner()
+        check_probe('K03_deadline_promotion',[P,Q,P,Q])
+
+    def test_K04_expiry_during_retained_confirmation_loses_U_candidate(self):
+        a=check_probe('K04_expiry_K1',[P,P,Q,P,P],enabled=True)
+        u=check_probe('K04_expiry_U',[P,P,Q,P,P],enabled=False)
+        self.assertIsNone(a['admissions'][-1]['after']['candidate'])
+        self.assertEqual(u['admissions'][-1]['after']['candidate']['ordinals'],[9,10,11,12])
+        self.assertEqual(a['admissions'][-1]['after']['observation_end'],{1:20})
+
+    def test_K05_pending_dead_key_never_revived(self):
+        repeating=block(0,1,0,1)
+        result=check_probe('K05_pending_expiry',[repeating,repeating,P,repeating,repeating,Q])
+        update=next(x for x in result['updates'] if x['target']==21)
+        dead=[h for h in update['hypotheses'] if h['key'][:2]==[1,2]]
+        self.assertTrue(dead);self.assertTrue(all(not x['live'] for x in dead))
+        self.assertFalse(any(x['role']==1 and x['generation']==2 for x in update['cells']))
+        # Replacement with a ticket referring to the old original.
+        result=check_probe('K05_pending_replacement',[block(0,0,0,0),P,block(4,5,0,0),Q])
+        update=next(x for x in result['updates'] if x['target']==13)
+        self.assertTrue(any(not x['live'] for x in update['hypotheses']))
+
+    def test_K06_promotion_cells_and_frozen_ticket(self):
+        z=block(0,0,0,0)
+        result=check_probe('K06_promotion',[z,z,Q])
+        promoted=result['admissions'][7]['cells']
+        self.assertEqual(len(promoted),2)
+        self.assertTrue(all(x['role']==0 and x['generation']==1 and x['ec']==x['ep']==0 for x in promoted))
+        after=next(x for x in result['updates'] if x['target']==9)
+        self.assertTrue(all(x['key'][0]==1 and not x['live'] for x in after['hypotheses']))
+        self.assertEqual(after['cells'],promoted)
+
+    def test_K07_defaults_scope_incomplete_and_generation_limits(self):
+        default=k.create('1'*64,'owner','stream')
+        self.assertIs(type(default),MultiErrorAdapter);self.assertIsNone(default.bank)
+        self.assertIs(type(default.arm),FactorRecencyArm);default.finish_story()
+        arm=k.K1Arm('1'*64,'owner');event,_=admit(arm,P[:2],1)
+        self.assertEqual(event['action'],'TRACE_DISCARDED_INCOMPLETE');self.assertIsNone(arm._candidate)
+        arm._candidate_generation=2**64-1
+        with self.assertRaisesRegex(ValueError,'K1_GENERATION_LIMIT'):admit(arm,Q,5)
+        arm.close_owner()
+        arm=k.K1Arm('1'*64,'owner');admit(arm,P,1);arm._retained_generation=2**64-1
+        with self.assertRaisesRegex(ValueError,'K1_GENERATION_LIMIT'):admit(arm,P,5)
+        arm.close_owner()
+        for index,profile in [(2,'1'*64),(1,'wrong')]:
+            a=k.create('1'*64,'owner','stream',candidate_policy=k.POLICY,multi_policy=MULTI)
+            with self.assertRaises(AdapterError):a.accept_perception(PerceptionSample(v(0),profile,'owner','stream',index,0,4800))
+            self.assertTrue(a.closed);self.assertFalse(any(a.bank))
+        with self.assertRaises(AdapterError):k.create('1'*64,'owner','stream',candidate_policy='unknown')
+        check_probe('K07_partial_story',[P[:2]])
+
+    def test_K08_full_stock_resources_and_cleanup(self):
+        a,b,c=block(0,0,0,1),block(0,0,0,2),block(0,0,0,3)
+        sequence=[a,a,b,b,c,c,P,P]
+        heap=check_probe('K08_full_heap',sequence)
+        traced=check_probe('K08_full_trace',sequence,trace=True)
+        self.assertEqual(heap['outputs'],traced['outputs'])
+        self.assertTrue(any(len(x['after']['retained'])==2 and x['after']['candidate'] for x in heap['admissions']))
+        self.assertEqual(max(sum(h['eligible'] for h in f['hypotheses']) for f in heap['forecasts']),6)
+        self.assertLessEqual(heap['resources']['additional_python_peak'],16384)
+        self.assertLessEqual(traced['resources']['original_frames_peak'],18)
+        self.assertLessEqual(traced['resources']['output_slots_peak'],2)
+        self.assertEqual(heap['resources']['packed'],416)
+        self.assertGreater(traced['resources']['original_frames_peak'],0)
+
+    def test_K09_neutral_harm_and_lost_new_experience(self):
+        prefix=block(0,1,2,12);reversal=block(0,1,0,14)
+        a=check_probe('K09_harm_K1',[P,prefix,reversal],enabled=True)
+        u=check_probe('K09_harm_U',[P,prefix,reversal],enabled=False)
+        ar=next(x for x in a['outputs'] if x['target']==11)
+        ur=next(x for x in u['outputs'] if x['target']==11)
+        self.assertEqual(ar['decision'],'SELECTED_BY_ERROR')
+        self.assertEqual(ar['error']-ur['error'],1/256)
+        lost=check_probe('K09_new_lost_K1',[P,Q,Q],enabled=True)
+        old=check_probe('K09_new_lost_U',[P,Q,Q],enabled=False)
+        self.assertFalse(lost['admissions'][-1]['after']['retained'])
+        self.assertEqual(old['admissions'][-1]['after']['retained'][0]['ordinals'],[5,6,7,8])
+
+    def test_K10_inherited_policy_and_independent_reference(self):
+        for method in ('_receipt','consume_feedback','_admit','_promote','_prune','selected_values','accept_perception'):
+            self.assertIs(getattr(k.K1Adapter,method),getattr(MultiErrorAdapter,method))
+        self.assertIs(k.K1Arm.hint,FactorRecencyArm.hint)
+        self.assertEqual(set(vars(k.K1Arm('p','o'))),set(vars(FactorRecencyArm('p','o'))))
+        result=check_probe('K10_reference_divergence',[P,Q,R,P,Q,R],enabled=True)
+        self.assertTrue(result['reference_equal'])
+        for forecast in result['forecasts']:
+            self.assertEqual(forecast['input_indices'][1]-forecast['input_indices'][0],1)
+
+
+if __name__=='__main__':unittest.main()

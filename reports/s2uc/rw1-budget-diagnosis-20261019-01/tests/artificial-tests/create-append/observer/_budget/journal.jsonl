@@ -1,0 +1,4 @@
+{"append":true,"bytes":14,"kind":"BEGIN","name":"observer/log.jsonl","previous":"0000000000000000000000000000000000000000000000000000000000000000","role":"supervisor","seq":1}
+{"kind":"COMMIT","previous":"d4a81f4b40287d290e07d93d88018527a2d50db3f1f5dec3074e2230a0b43298","seq":1,"stamp":{"bytes":14,"mtime":1792432064603394000}}
+{"append":true,"bytes":14,"kind":"BEGIN","name":"observer/log.jsonl","previous":"ecbce2127193bab91f1b820e64b6425542eb872d32803a1bd843dcd8fed95bb9","role":"worker","seq":2}
+{"kind":"COMMIT","previous":"4064c0bad226e5b1d442fd9e43257f2024a0ab1d2104e9c3dffc709a187e4781","seq":2,"stamp":{"bytes":28,"mtime":1792432064629088700}}

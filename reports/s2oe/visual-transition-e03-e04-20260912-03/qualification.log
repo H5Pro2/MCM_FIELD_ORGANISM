@@ -1,0 +1,18 @@
+test_changed_file (tests.test_s2oe_visual_diagnostic_reference.ReferenceTests.test_changed_file) ... ok
+test_contradictory_token (tests.test_s2oe_visual_diagnostic_reference.ReferenceTests.test_contradictory_token) ... ok
+test_full_failure_report_budget (tests.test_s2oe_visual_diagnostic_reference.ReferenceTests.test_full_failure_report_budget) ... ok
+test_global_boundary_and_overflow (tests.test_s2oe_visual_diagnostic_reference.ReferenceTests.test_global_boundary_and_overflow) ... ok
+test_immutable_resolution (tests.test_s2oe_visual_diagnostic_reference.ReferenceTests.test_immutable_resolution) ... ok
+test_metadata_boundary_and_overflow (tests.test_s2oe_visual_diagnostic_reference.ReferenceTests.test_metadata_boundary_and_overflow) ... ok
+test_missing_file (tests.test_s2oe_visual_diagnostic_reference.ReferenceTests.test_missing_file) ... ok
+test_missing_token (tests.test_s2oe_visual_diagnostic_reference.ReferenceTests.test_missing_token) ... ok
+test_native_digest_not_replaced (tests.test_s2oe_visual_diagnostic_reference.ReferenceTests.test_native_digest_not_replaced) ... ok
+test_native_expansion_and_digest (tests.test_s2oe_visual_diagnostic_reference.ReferenceTests.test_native_expansion_and_digest) ... ok
+test_nested_source_changed (tests.test_s2oe_visual_diagnostic_reference.ReferenceTests.test_nested_source_changed) ... ok
+test_nested_source_missing (tests.test_s2oe_visual_diagnostic_reference.ReferenceTests.test_nested_source_missing) ... ok
+test_source_conflict (tests.test_s2oe_visual_diagnostic_reference.ReferenceTests.test_source_conflict) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.684s
+
+OK

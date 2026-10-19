@@ -1,0 +1,109 @@
+{
+  "measured_peaks": {
+    "dictionary": 78296,
+    "nodes": 1549,
+    "edges": 8950,
+    "indices": 766,
+    "collections": 8,
+    "record_peak": 13471,
+    "temp_peak": 14533,
+    "encoded_bytes": 82311,
+    "gzip_bytes": 14533,
+    "additional_python_peak": 5049,
+    "receipt_bytes_peak": 711,
+    "utf8_upper": 1422,
+    "packed": 416,
+    "combined_upper_bound": 18,
+    "whole_conservative_peak": 26213,
+    "originals_boundary": 15,
+    "output_slots_boundary": 2,
+    "job": 62136320,
+    "process": 41820160
+  },
+  "limits": {
+    "dictionary": 4194304,
+    "nodes": 65536,
+    "edges": 262144,
+    "indices": 65536,
+    "collections": 16,
+    "record_peak": 262144,
+    "encoded_bytes": 4194304,
+    "gzip_bytes": 524288,
+    "additional_python_peak": 16384,
+    "receipt_bytes_peak": 16384,
+    "utf8_upper": 32768,
+    "packed": 416,
+    "originals_boundary": 18,
+    "output_slots_boundary": 2,
+    "job": 536870912
+  },
+  "integrations": {
+    "pass01-complete": {
+      "seconds": 26.64043919998221,
+      "job": {
+        "hard_job_limit": true,
+        "limit_bytes": 536870912,
+        "measurement": "Windows JobObjectExtendedLimitInformation",
+        "members": "supervisor and inherited worker",
+        "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap.",
+        "peak_job_committed_bytes": 62136320,
+        "peak_process_committed_bytes": 41820160
+      },
+      "status": "TERMINAL_COMPLETE"
+    },
+    "pass01-deadline": {
+      "seconds": 30.02735180000309,
+      "job": {
+        "hard_job_limit": true,
+        "limit_bytes": 536870912,
+        "measurement": "Windows JobObjectExtendedLimitInformation",
+        "members": "supervisor and inherited worker",
+        "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap.",
+        "peak_job_committed_bytes": 57511936,
+        "peak_process_committed_bytes": 39165952
+      },
+      "status": "TECHNICAL_ABORT"
+    },
+    "pass01-incomplete_pair": {
+      "seconds": 26.131529500009492,
+      "job": {
+        "hard_job_limit": true,
+        "limit_bytes": 536870912,
+        "measurement": "Windows JobObjectExtendedLimitInformation",
+        "members": "supervisor and inherited worker",
+        "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap.",
+        "peak_job_committed_bytes": 61861888,
+        "peak_process_committed_bytes": 41111552
+      },
+      "status": "TECHNICAL_ABORT"
+    },
+    "pass01-source_failure": {
+      "seconds": 0.8705618000240065,
+      "job": {
+        "hard_job_limit": true,
+        "limit_bytes": 536870912,
+        "measurement": "Windows JobObjectExtendedLimitInformation",
+        "members": "supervisor and inherited worker",
+        "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap.",
+        "peak_job_committed_bytes": 40648704,
+        "peak_process_committed_bytes": 26697728
+      },
+      "status": "TECHNICAL_ABORT"
+    },
+    "pass01-write_budget": {
+      "seconds": 25.93086719996063,
+      "job": {
+        "hard_job_limit": true,
+        "limit_bytes": 536870912,
+        "measurement": "Windows JobObjectExtendedLimitInformation",
+        "members": "supervisor and inherited worker",
+        "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap.",
+        "peak_job_committed_bytes": 61939712,
+        "peak_process_committed_bytes": 41455616
+      },
+      "status": "TECHNICAL_ABORT"
+    }
+  },
+  "integration_total_seconds": 109.60074949997943,
+  "scope": "Measured integration supervisor and inherited worker include live/archive references. Unit-process peak not measured. Deliberate administrative overflow is expected, not a successful-budget claim. No full-size qualification."
+}

@@ -1,0 +1,17 @@
+{
+  "measured": false,
+  "both_arms_included": true,
+  "basis_frames_per_arm": 64,
+  "target_frames_per_arm": 1024,
+  "factor": 16,
+  "estimates": {
+    "dictionary_bytes": 1127216,
+    "encoded_bytes": 1252128,
+    "gzip_bytes": 223056,
+    "table_entries": 24944,
+    "reference_edges": 161776,
+    "record_indices": 31072,
+    "seconds": 850.3,
+    "reconstructed_bytes": 315653808
+  }
+}

@@ -1,0 +1,30 @@
+RW1 vorbereiteter Start – NICHT ausfuehren ohne separate Einmalfreigabe
+Arbeitsverzeichnis: C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace
+
+C:/Python314/python.exe -B experiments/rw1/entry.py --research --authorization reports/s2uc/rw1-development-20261019-01/research-authorization.json
+
+research-authorization.json existiert absichtlich nicht. Es wurde weder eine
+Forschungsberechtigung ausgestellt noch research.consumed.json geschrieben.
+Der fehlende Berechtigungsbeleg sperrt vor Bindungspruefung, Zielverzeichnis,
+Workerstart und Materialerzeugung. Kein --force, Reset oder automatischer Retry.
+Die technische Bindung allein autorisiert keinen Lauf.
+
+Eine spaetere ausdrueckliche Ausfuehrungsentscheidung muss einen neuen Auftrag
+(eine andere ID als der Entwicklungsauftrag) sowie dessen dauerhafte Quelle
+binden. Der Einstieg kann keine solche Entscheidung oder Berechtigung ausstellen.
+Die zukuenftige Berechtigungsdatei muss exakt folgende Felder haben:
+status, mode, execution_order, execution_source_sha256, chat, project,
+binding_sha256, contract_sha256, recipe_sha256, target.
+Zulaessiger Modus ist RW1_RESEARCH, Status nach ausdruecklicher Entscheidung
+AUTHORIZED_ONCE; Ziel ist ausschliesslich reports/s2uc/rw1-research-01.
+Alle Hashes und Empfaenger-/Projektangaben werden gegen die finale technische
+Bindung, den festen Vertrag und die neue Auftragsquelle geprueft.
+Es liegt heute KEINE vorausgefuellte autorisierte Vorlage vor.
+
+Technische Bindung SHA256: 061252093a580c0df3d886888f862481d86a165fb77b623f0c8f3346639ce12c
+Vertrag SHA256: f8150752bb0008bafef95dad301c25022f4aae83b523c2ed60d3d3f2f7cc2bfe
+
+Nach spaeter autorisiertem Start: exklusive Verbrauchsmarkierung vor Worker und
+Material; PID/Nonce/Parent/Job-Pruefung; einmaliger Worker-Eintritt. Auch fehlender
+Abschluss erlaubt keinen Wiederverbrauch. Historischer Neutralzugang bleibt
+unveraendert und wird durch diesen Befehl nicht aufgerufen.

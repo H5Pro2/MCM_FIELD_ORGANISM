@@ -1,0 +1,48 @@
+{
+  "status": "COMPLETE",
+  "technical_verdict": "PASS",
+  "research_verdict": "HINWEISNUTZEN_BELEGT",
+  "authorization_consumed": true,
+  "research_start_invocations": 1,
+  "resume_permitted": false,
+  "archive_verifier_attempts": 2,
+  "archive_verifier_correction": "Local report-only pre/pre_path variable collision; no production changes or research retry.",
+  "files": {
+    "reports/s2uc/hx1-assessment-20261004-01/REPORT.md": {
+      "bytes": 31741,
+      "sha256": "eda429ca2419d4c20caf8e377175ab56d67d400f4f5e215467d206a803c74a2e"
+    },
+    "reports/s2uc/hx1-assessment-20261004-01/verification.json": {
+      "bytes": 32550,
+      "sha256": "8535fda61f9689717e96ca053f52e5556515944290e2f7148ff5299e10156ad9"
+    },
+    "reports/s2uc/hx1-assessment-20261004-01/verify_archive.py": {
+      "bytes": 17509,
+      "sha256": "cf867f36011ddc232f6b6fbc3ec6f6b1d1df7cb93f9cb136c0d5f48213414fd9"
+    },
+    "reports/s2uc/hx1-comparison-20261004-01/closure.json": {
+      "bytes": 15953,
+      "sha256": "f56ee877c5df6353068cbc3d7b531b609ec9984a8f80f79149e2ed7c411543b7"
+    },
+    "docs/S2UC_HX1_V1_20261004_AUTORISIERUNG.json": {
+      "bytes": 394,
+      "sha256": "8a38b46bd44fd0622dc6ef10a3e8dfa4163c4290f9f29eff2c31cc39ce5ed098"
+    },
+    "docs/S2UC_HX1_SPEICHERGRENZE_ERGAENZUNGSBINDUNG_20261004.json": {
+      "bytes": 3231,
+      "sha256": "b134eb66d8c633debc46901be0ea7ea0c518dd18f004cdb52491e9b6362af580"
+    },
+    "README.md": {
+      "bytes": 100799,
+      "sha256": "328acaf5682546feb96248308ab936988df9b40ef86fc6f0fd42d43527b91d8d"
+    },
+    "AKTUELLER_FORSCHUNGSWEG.md": {
+      "bytes": 1458610,
+      "sha256": "c1a3f0c2fa8b846f06e213d71c5995f080f6db57ff43b1c90e6239fcb3f11f0a"
+    },
+    "docs/README.md": {
+      "bytes": 198661,
+      "sha256": "0598d53365518d7534ad859b9a1caa91ab77fe610ae738ae3f010ee6120e1d0c"
+    }
+  }
+}

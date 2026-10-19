@@ -1,0 +1,15 @@
+{
+  "output": "reports/s2uc/t1-transfer-20261003-02",
+  "claim_cap": 1024,
+  "accounting_cap": 524288,
+  "terminal_cap": 524288,
+  "preparation_cap": 8388608,
+  "external_report_reserve": 524288,
+  "export_limit": 67108864,
+  "closure_reserve": 1048576,
+  "total_seconds": 3600,
+  "worker_seconds": 3540,
+  "closure_seconds": 60,
+  "source_policy_assessment": "UNCHANGED_T1_V2",
+  "status": "PENDING_SEPARATE_AUTHORIZATION"
+}

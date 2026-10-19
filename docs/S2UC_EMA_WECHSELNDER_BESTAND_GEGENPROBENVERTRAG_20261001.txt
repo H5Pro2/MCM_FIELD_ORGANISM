@@ -1,0 +1,193 @@
+MCM -- Erfahrungsmechanismus bei Konkurrenz, Verdrängung und Wiederkehr
+2026-10-01 | KONZEPT, KEINE IMPLEMENTIERUNG/MATERIALPRODUKTION/LAEUFE
+
+1. Auftrag und unveraenderter Vergleich
+
+Die bisherigen EMA-Gegenproben sind im dokumentierten Umfang abgenommen.
+paired_error_ema_v1 bleibt experimentell/default disabled. Kein Nachweis
+von Clusterbildung oder geaenderter Gedaechtnisorganisation.
+Neue Frage: Bleiben Fehlererfahrungen bei normalem Bestandswechsel korrekt
+getrennt, und welcher Auswahlvorteil bleibt nach Kosten verlorener Erfahrung?
+
+Eine einzige Geschichte mit64 fortlaufenden Frames, drei Arme E/K/P:
+E=paired_error_ema_v1, K=Kontext-sonst-Persistenz, P=reine Persistenz.
+alpha1/2, exact_v1-Abruf, legacy_v1 und gemeinsame mae48 unveraendert.
+Alle Arme gleicher Strom, leerer Anfang, normale Aufnahme jedes Frames.
+Kein Zwischenreset, direkte Speicherbelegung/-mutation, Spuren-Schutz oder
+Sonderkommando. Der getrennte Beobachter darf Zustaende lesend protokollieren.
+Abschnitte, A/B/C-Bezeichnungen und Zielmasken nur im Generator/Auswerter.
+
+2. Vollstaendig festgelegte Quelle
+
+V(x) bezeichnet einen48er-Frame, dessen Komponenten alle float(x) sind.
+Alle folgenden Werte sind exakt dyadisch darstellbar; keine Seeds/Suche.
+
+ A = [V(1/8),  V(1/4),  V(3/4),  V(7/8)]
+ B = [V(3/8),  V(5/8),  V(1/16), V(13/16)]
+ Bp= [V(3/8),  V(5/8),  V(5/8),  V(13/16)]
+ C = [V(7/16), V(9/16), V(11/16),V(15/16)]
+
+Bp teilt den Hinweis B0/B1, folgt aber mit B1 fort: Persistenz ist dort
+besser als der gespeicherte B-Nachfolger B2. Bei A ist A2 die verlaessliche
+Kontextfortsetzung; Persistenz A1 weicht ab. Vollstaendige normale Episoden,
+keine eigens eindeutigen Guardframes oder variablen Enden zur Schonung von A.
+Es gibt auch keine Regel, nach der A/B wichtiger waeren als C oder Bp.
+
+Feste Blockfolge, jeder Block vier Frames:
+ A,A,B,B,Bp,A,C,Bp,A,Bp,C,C,A,A,A,A
+
+Indexierung1..64, externer Schritt/Fenster4800 wie bisher. Paare ab1:
+Vorhersagen fuer3,5,...,65. Beobachtete Ziele3..63 =31;
+Ziel65 bleibt ohne eingetroffenen Frame zensiert, niemals Fehlerupdate.
+Die64er-Grenze des bestehenden Anschlusses reicht; keine Erweiterung noetig.
+
+3. Erwartete normale Speicheruebergaenge (statische Ableitung, kein Messbefund)
+
+R=[...] listet retained von aeltestem zu juengstem. rX bezeichnet dessen
+Generation; cX die separate Kandidatengeneration. Diese technischen Nummern
+sind erwartete Kontrollwerte des bestehenden Ablaufs, keine Systemeingaben.
+
+Block Frames  Quelle Ziel*  Erwarteter Zustand nach Blockschluss
+ 1     1-4     A       3    R=[],         candidate A:c1
+ 2     5-8     A       7    Promotion A:r1, R=[A:r1], candidate leer
+ 3     9-12    B      11    R=[A:r1],     candidate B:c2
+ 4    13-16    B      15    Promotion B:r2, R=[A:r1,B:r2], candidate leer
+ 5    17-20    Bp     19    R=[A:r1,B:r2], candidate Bp:c3
+ 6    21-24    A      23    A normal bestaetigt/aufgefrischt: R=[B:r2,A:r1]; c3 bleibt
+ 7    25-28    C      27    R=[B:r2,A:r1], candidate C:c4 ersetzt Bp:c3
+ 8    29-32    Bp     31    R=[B:r2,A:r1], candidate Bp:c5 ersetzt C:c4
+ 9    33-36    A      35    A normal bestaetigt: R=[B:r2,A:r1]; c5 bleibt
+10    37-40    Bp     39    Bp:c5 promoviert zu Bp:r3, B:r2 verdraengt;
+                             R=[A:r1,Bp:r3], candidate leer
+11    41-44    C      43    R=[A:r1,Bp:r3], candidate C:c6
+12    45-48    C      47    C:c6 promoviert zu C:r4, A:r1 verdraengt;
+                             R=[Bp:r3,C:r4], candidate leer
+13    49-52    A      51    R=[Bp:r3,C:r4], candidate A:c7
+14    53-56    A      55    A:c7 promoviert zu A:r5, Bp:r3 verdraengt;
+                             R=[C:r4,A:r5], candidate leer
+15    57-60    A      59    A:r5 normal bestaetigt; R=[C:r4,A:r5]
+16    61-64    A      63    A:r5 normal bestaetigt; R=[C:r4,A:r5]
+
+Ziel* ist die dritte Position des Blocks. Weitere Paarziele an Blockgrenzen
+werden normal verarbeitet und ausgewertet, nicht herausgeschnitten.
+Das einmalige C in Block7 ersetzt Bp als Kandidaten und ermoeglicht einen
+weiteren eindeutigen B-Abruf; spaetere C-Wiederholung verdraengt A tatsaechlich.
+Dies ist eine konstruierte Reihenfolge, keine geschuetzte A-Spur. Die gewoehnliche
+Bestaetigungs-/Aktualitaetsregel beeinflusst die FIFO-Reihenfolge sichtbar.
+Abweichungen von dieser Ableitung protokollieren, niemals per Eingriff reparieren.
+
+4. Neun Hauptziele und festgelegte Erwartungen
+
+Ziel  Abruf vor Ziel                 Erfahrung/Auswahl und Pruefzweck
+19    eindeutig B:r2,Offset0         Neuer retained-Schluessel: E waehlt P.
+                                     Nach Ziel: B-Kontextfehler>Persistenzfehler.
+23    eindeutig A:r1,Offset0         Neuer retained-Schluessel: E waehlt P.
+                                     Nach Ziel: A-Kontextfehler<Persistenzfehler.
+31    eindeutig B:r2,Offset0         Trotz gleichzeitig positiver A-Erfahrung
+                                     E weiterhin P; nur B-Zelle aktualisieren.
+35    eindeutig A:r1,Offset0         Trotz schlechter B-Kontexterfahrung E C;
+                                     nur A-Zelle aktualisieren.
+39    B:r2 UND candidate Bp:c5       Mehrdeutig. Kein konkreter Kontext;
+                                     E/K waehlen P. Kein Ticket/Fehlerpaar fuer
+                                     einen der Treffer. Bp darf nicht nach
+                                     Rueckschau als passende Herkunft gewaehlt werden.
+51    kein A-Treffer                A:r1 seit48 verdraengt, neuer A-Kandidat
+                                     erst nach52. E/K/P Persistenz; kein Nutzen-
+                                     kriterium, Verlust der Verfuegbarkeit ausweisen.
+55    eindeutig candidate A:c7      Gleiche Werte wie frueher,neuer Schluessel:
+                                     E beginnt mit P, keine Fehleruebernahme r1.
+59    eindeutig retained A:r5       Promotion erneut ohne Kandidatenfehler:
+                                     E beginnt mit P, trotz Fehlererfahrung bei55.
+63    eindeutig retained A:r5       Eigene neue Erfahrung aus59: E wieder C.
+
+An19/23/31/35 sind A:r1 und B:r2 beide erhalten. Die zwei Fehlerzellen
+muessen gleichzeitig unterschiedliche Bewertungen tragen. Vor-/Nachwerte
+beider Zellen ausweisen; an31 darf A, an35 darf B nicht mitaktualisiert werden.
+Alle Schluessel hier EXACT,Offset0; keine Uebertragung nach Wertegleichheit.
+
+Mehrdeutigkeitspruefung an39 zeitlich trennen: vor/hinter Zielkonsum muss die
+Fehlertabelle identisch bleiben, weil kein gueltiges Fehlerpaar existiert.
+Die spaetere Promotion/Verdrängung bei40 darf dagegen B:r2-Zellen regulaer
+loeschen. Loeschung ist keine verbotene Rueckmeldung aus dem Ziel39.
+
+A:r1-Fehler existieren vor48, muessen bei Verdrängung verschwinden und
+an51/55/59 unauffindbar bleiben. Kandidat c7 startet leer, lernt aus55,
+verliert diese Zellen bei Promotion56; retained r5 startet erneut leer.
+Die endgueltige Kontextwahl63 muss aus59 folgen, nicht aus alter r1-Erfahrung.
+
+5. Feste Zielmasken, Kriterien und moeglicher negativer Nutzenbefund
+
+Hauptziele M={19,23,31,35,39,51,55,59,63} (9).
+Nebenziele N={3,5,7,9,11,13,15,17,21,25,27,29,33,37,41,43,45,47,
+              49,53,57,61} (22).
+Zusammen genau alle31 eingetroffenen Paarziele. Kaltstart-/Lernziele7/15/47
+und alle Zwischenpositionen bleiben in N sichtbar. Keine nachtraegliche Maske.
+
+Drei unabhaengige Urteile, keine pauschale Erfolgsformel:
+
+BESTAND/KAUSALITAET KORREKT:
+Alle erwarteten eindeutigen/mehrdeutigen/fehlenden Abrufe nachweisen.
+E/K/P identische Memoryzustaende nach jedem Frame,gleiche Matchreceipts vor
+Auswahl; EMA darf weder Herkunft bestimmen noch Abruf umsortieren.
+An39 keine Kontextauswahl oder Aktualisierung moeglicher Treffer; an51 kein
+kuenstlicher Treffer. Alle echten Updates erst nach validiertem Ziel;
+Generationstrennung,Loeschung,Endzensur und Ressourcenfreigabe wie oben.
+Technische Abweichung macht die jeweilige Interpretation nicht auswertbar;
+vollstaendige Daten und konkrete Ursache erhalten,kein Ersatzmaterial.
+
+ERFAHRUNGSAUSWAHL KORREKT:
+An31 Persistenz fuer B,an35 Kontext fuer A,an55 und59 kalter Persistenzstart,
+an63 Kontext aus neuer r5-Erfahrung. Ausschliesslich richtige Zelle updaten.
+Hieraus folgt korrektes Funktionieren unter Konkurrenz/Vergessen, noch kein
+positiver Gesamtfehlervergleich. Beide Kaltstarts nach Wiederkehr sind Kosten.
+
+NETTONUTZEN BEI VERFUEGBAREM KONTEXT:
+Vorab festes V={19,23,31,35,55,59,63}. Diese sieben Hauptziele besitzen
+laut Ableitung eindeutigen Kontext und enthalten ALLE dortigen Kaltstarts.
+Nur falls die Verfuegbarkeitsannahme tatsaechlich bestaetigt ist, E-MAE auf V
+gegen K/P pruefen. Status NETTONUTZEN_BELEGT nur bei strikt kleinerer E-MAE
+als BEIDE Baselines auf V; sonst NICHT_NACHGEWIESEN bzw.SCHADEN dokumentieren.
+Keine Forderung eines Vorteils an39 (mehrdeutig) oder51 (kein Kontext).
+Diese Positionen trotzdem in M und Gesamt31 voll mitwerten.
+
+Als getrennte Funktionsdiagnose D={31,35,63} fuer bereits bewertete eindeutige
+Schluessel ausweisen; diese kleinere Maske darf Kaltstartkosten in V/M/Gesamt
+nicht ersetzen und keinen fehlenden Nettonutzen verdecken.
+Berichte MAE/Fehlersummen fuer V,D,M,N und Gesamt31,Abdeckung/Mehrdeutigkeit,
+jede Wahl,beide Fehler-EMA vor/nach,jeden Einzelgewinn/-schaden gegen K/P.
+Verlorene Erfahrung: letzte r1-Werte vor48,Loeschung,leere c7/r5-Starts und
+Neulernen explizit verbinden. Kein Bonus/Strafwert fuer fehlende Vergleiche.
+Mischbefund ist zulaessig: technisch korrekte Erfahrungsauswahl kann wegen
+Vergessen und Kaltstartkosten trotzdem schlechter als sofortiger Kontext sein.
+Keine Aenderung von Alpha,Rezepten,Masken oder Reihenfolge nach Kenntnis des Befunds.
+
+6. Festes Ausfuehrungs- und Ressourcenlimit
+
+Eine Geschichte x64 Frames x3 Arme =192 Versuchsarm-Aufnahmen; jeder Arm
+genau einmal,keine Zwischenresets. Eine Materialisierung mit64x48 binary64-
+Werten (24576 rohe Zahlenbyte),keine Audio-/NJ-Produktion oder Kalibration.
+Der qualifizierte Replay benoetigt ggf.zusaetzlich192 interne Referenz-
+Fortschreibungen derselben Samples; separat zaehlen,keine neuen Quellframes.
+31 bewertete Ziele je Arm,ein zensiertes Endziel65. Keine200er-Erweiterung.
+
+Unveraenderte Grenzen: maximal2 retained+1 candidate,18 Frames inkl.Hinweise,
+2 vorhandene Vorschlagsvektoren,gewaehlte Ausgabe nur Alias. Max12 Fehlerzellen
+und1 Ticket,416 gepackte Byte; zusaetzliche Python-Verwaltung inkl.Temporaer-
+objekten<=16384 Byte messen. Receipt<=16384 Byte,transiente UTF8<=32768 Byte.
+Quellen und kompletter Beobachterexport zusammen<=4MiB,256KiB davon vorab
+fuer Abschluss reservieren. Einmaliger exklusiver Zielordner,nach Fehler
+Teilbestand/Abschluss erhalten,keine automatische Wiederholung/Ersatzgeschichte.
+Keine Quelle/Parameter-Suche. Operator kann abbrechen; ein Abbruch rechtfertigt
+keinen ungefragten Neustart. Keine harte Prozess-RAM-Aussage aus Teilbudgets.
+
+7. Naechster Schritt und Aussagegrenze
+
+Konzept entscheiden; danach nur die maschinenlesende Bindung/Beobachter-
+Erweiterung fuer diese64er-Folge neutral qualifizieren und den Aufruf vorbereiten.
+Ausfuehrung erst gesondert beauftragen. Vorher Plan,Code,Runtime,Materialrezept,
+Zielmasken und Kriterien einfrieren. Der vorhandene EMA-Mechanismus bleibt gleich.
+Heute keine Tests,Simulation,Materialerzeugung oder Auswertung dieser Folge.
+
+Auch ein positiver Befund waere ein kontrollierter Funktions-/Nutzenbefund
+bei einer bewusst konstruierten Reihenfolge. Keine Clusterbildung,kein
+allgemeiner Lernnutzen und keine geaenderte Gedaechtnisorganisation behaupten.

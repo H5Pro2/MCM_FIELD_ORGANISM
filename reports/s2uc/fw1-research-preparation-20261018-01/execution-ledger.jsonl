@@ -1,0 +1,32 @@
+{"event": "preparation_started", "workflow": "78f0955c-59d2-4444-9d74-08f9d078b620", "research_sources": 0, "research_authorization": false}
+{"columns": 16, "event": "matrix_generation_started", "rows": 10000}
+{"bytes": 160000, "event": "matrix_generation_completed", "sha256": "b190d29c63d8650d53875226802a6aaa3218b557e00fb8ef65a046a4ab8c8878"}
+{"event": "matrix_reference_started"}
+{"bytes_compared": 160000, "event": "matrix_reference_completed"}
+{"arm_errors": 32704, "artificial": true, "event": "full_statistics_primary_started"}
+{"event": "full_statistics_primary_completed"}
+{"artificial": true, "event": "full_statistics_reference_started"}
+{"event": "full_statistics_reference_completed"}
+{"blocks": 24, "event": "neutral_source_pair_generation_started", "mode": "short", "pair": 1}
+{"event": "neutral_source_pair_generation_completed", "mode": "short"}
+{"event": "neutral_source_pair_reference_started", "mode": "short"}
+{"conditions": 2, "event": "neutral_source_pair_reference_completed", "mode": "short"}
+{"event": "gate_tests_started", "policy": 0}
+{"errors": 0, "event": "gate_tests_completed", "failures": 0, "policy": 0, "tests": 7}
+{"event": "short_integration_launch", "frames": 96, "policy_limit": 4}
+{"cleanup": "CONFIRMED", "event": "short_integration_completed", "executions": {"archive_completed": 4, "archive_started": 4, "live_completed": 4, "live_started": 4, "policy_completed": 4, "policy_started": 4, "source_conditions_verified": 0, "source_pairs_generated": 0, "source_pairs_reconstructed": 0, "statistics_reference_completed": 0, "statistics_reference_started": 0}}
+{"event": "actual_consumption_rejection_started", "policy": 0}
+{"event": "actual_consumption_rejection_completed", "policy": 0, "reason": "AUTH_CONSUMED"}
+{"blocks": 256, "event": "neutral_source_pair_generation_started", "mode": "fullsize", "pair": 1}
+{"event": "neutral_source_pair_generation_completed", "mode": "fullsize"}
+{"event": "neutral_source_pair_reference_started", "mode": "fullsize"}
+{"conditions": 2, "event": "neutral_source_pair_reference_completed", "mode": "fullsize"}
+{"config_sha256": "2247c2b2f15de3b404063e8883e7e7ba900801716a7976ef137cd6b4be371e11", "event": "fullsize_once_launch", "frames": 1024, "no_retry": true, "policy_limit": 4, "sources": [{"condition": "A", "pair": 1, "path": "reports/s2uc/fw1-research-preparation-20261018-01/fullsize-A-source.json", "sha256": "3659458916675ed3f69f4e495eac01a3488027b62c92db71220737c4e9b9dc71"}, {"condition": "B", "pair": 1, "path": "reports/s2uc/fw1-research-preparation-20261018-01/fullsize-B-source.json", "sha256": "b7b0999a4cd267801a52e54a2662e28c8efe7e55a147cba60e66bddcd8afe9b0"}]}
+{"cleanup": "CONFIRMED", "event": "fullsize_once_completed", "executions": {"archive_completed": 4, "archive_started": 4, "live_completed": 4, "live_started": 4, "policy_completed": 4, "policy_started": 4, "source_conditions_verified": 0, "source_pairs_generated": 0, "source_pairs_reconstructed": 0, "statistics_reference_completed": 0, "statistics_reference_started": 0}, "job": {"hard_job_limit": true, "limit_bytes": 536870912, "measurement": "Windows JobObjectExtendedLimitInformation", "members": "supervisor and inherited worker", "note": "Peak can include an allocation attempt rejected by the job; successful runs must remain below cap.", "peak_job_committed_bytes": 83046400, "peak_process_committed_bytes": 61353984}, "seconds": 144.06294129998423}
+{"event": "fullsize_consumption_rejection_started", "policy": 0}
+{"event": "fullsize_consumption_rejection_completed", "policy": 0, "reason": "AUTH_CONSUMED"}
+{"event": "revision_tests_started", "policy": 0}
+{"errors": 0, "event": "revision_tests_completed", "failures": 0, "policy": 0, "tests": 2}
+{"archive_references": 8, "event": "preparation_execution_balance", "full_statistics_primary": 1, "full_statistics_reference": 1, "fullsize_policy": 4, "gate_tests_passed": 9, "live_references": 8, "matrix_generations": 1, "matrix_references": 1, "neutral_pair_generations": 2, "neutral_pair_reconstructions": 2, "research_policy": 0, "research_sources": 0, "short_policy": 4}
+{"event": "final_research_admission_without_auth_started", "policy": 0}
+{"event": "final_research_admission_without_auth_completed", "policy": 0, "status": "PASS"}

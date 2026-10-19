@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\reports\diagnose_visual_transition_v2_once.py", line 143, in <module>
+    if __name__=='__main__':{'prepare':prepare,'qualify':qualify,'run':run}[sys.argv[1]]()
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\reports\diagnose_visual_transition_v2_once.py", line 59, in prepare
+    for kind,path,size,digest in common['references']:add(path,[digest,size])
+                                                      ~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\reports\diagnose_visual_transition_v2_once.py", line 52, in add
+    r.need(expected is None or actual==expected,'PREPARE_REFERENCE_CHANGED')
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2oe_visual_diagnostic_reference.py", line 19, in need
+    raise ReferenceError(code)
+tools._s2oe_visual_diagnostic_reference.ReferenceError: PREPARE_REFERENCE_CHANGED
